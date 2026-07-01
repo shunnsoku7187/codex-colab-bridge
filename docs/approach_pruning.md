@@ -97,4 +97,7 @@ Reporting caveat:
 
 Next focused job:
 
-- `reproduce_lightweight_lgbm_family_001`: rerun the notebook cell 7 candidate and close LightGBM/tree variants using the same 8-feature setup.
+- `search_record_breakers_001`: try to beat the 11.1146 GFLOPs `lightweight_lgbm` record via:
+  - stronger variants of the current 8-feature LightGBM approach,
+  - Histogram of Oriented Gradients features,
+  - LightGBM soft-target learning.
