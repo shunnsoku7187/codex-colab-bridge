@@ -1,0 +1,7 @@
+{
+  "id": "run_intermediate_notebook_001",
+  "status": "failed",
+  "error": "Unknown job type: notebook",
+  "traceback": "Traceback (most recent call last):\n  File \"/tmp/ipykernel_1946/1425110469.py\", line 196, in execute_job\n    raise ValueError(f\"Unknown job type: {job_type}\")\nValueError: Unknown job type: notebook\n",
+  "finished_at": "2026-07-01T10:19:25.984319+00:00"
+}
