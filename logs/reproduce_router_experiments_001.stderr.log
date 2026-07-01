@@ -42,3 +42,4 @@
   1%|          | 1.31M/169M [00:19<34:27, 81.1kB/s]
   1%|          | 1.34M/169M [00:19<36:29, 76.6kB/s]
   1%|          | 1.38M/169M [00:20<38:43, 72.1kB/s]
+stderr is merged into stdout by the Colab runner to avoid pipe deadlocks.
