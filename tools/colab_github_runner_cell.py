@@ -16,8 +16,8 @@ from pathlib import Path
 from google.colab import userdata
 
 
-OWNER = "<owner>"
-REPO = "<repo>"
+OWNER = "shunnsoku7187"
+REPO = "codex-colab-bridge"
 BRANCH = "main"
 TOKEN = userdata.get("GITHUB_TOKEN")
 
