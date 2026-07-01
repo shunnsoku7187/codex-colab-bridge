@@ -1,1 +1,2 @@
 {"time": "2026-07-01T22:02:23.993207+00:00", "event": "job_running", "job_file": "jobs/validate_record_breakers_cv_001.json"}
+{"time": "2026-07-01T22:02:25.352203+00:00", "event": "process_prepared", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.validate_record_breakers_cv", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 3600}
