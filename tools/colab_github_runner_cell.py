@@ -43,7 +43,10 @@ def utc_now():
 
 
 def run(command, cwd=None, check=True):
-    print(f"$ {command}")
+    display_command = command
+    if TOKEN:
+        display_command = display_command.replace(TOKEN, "***")
+    print(f"$ {display_command}")
     completed = subprocess.run(
         command,
         cwd=str(cwd) if cwd else None,
