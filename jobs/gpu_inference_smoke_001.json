@@ -1,8 +1,10 @@
 {
   "id": "gpu_inference_smoke_001",
-  "status": "pending",
+  "status": "running",
   "type": "shell",
   "cwd": ".",
   "command": "python -m scripts.gpu_inference_smoke",
-  "max_runtime_sec": 300
+  "max_runtime_sec": 300,
+  "updated_at": "2026-07-01T15:00:31.336051+00:00",
+  "started_at": "2026-07-01T15:00:31.336028+00:00"
 }
