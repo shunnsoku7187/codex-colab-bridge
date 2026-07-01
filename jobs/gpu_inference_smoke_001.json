@@ -1,10 +1,13 @@
 {
   "id": "gpu_inference_smoke_001",
-  "status": "running",
+  "status": "done",
   "type": "shell",
   "cwd": ".",
   "command": "python -m scripts.gpu_inference_smoke",
   "max_runtime_sec": 300,
-  "updated_at": "2026-07-01T15:00:31.336051+00:00",
-  "started_at": "2026-07-01T15:00:31.336028+00:00"
+  "updated_at": "2026-07-01T15:00:37.269598+00:00",
+  "started_at": "2026-07-01T15:00:31.336028+00:00",
+  "returncode": 0,
+  "finished_at": "2026-07-01T15:00:37.269123+00:00",
+  "result_file": "results/gpu_inference_smoke_001.json"
 }
