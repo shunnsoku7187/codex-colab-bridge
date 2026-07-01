@@ -1,8 +1,10 @@
 {
   "id": "validate_pruned_candidates_001",
-  "status": "pending",
+  "status": "running",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.validate_pruned_candidates",
-  "max_runtime_sec": 3600
+  "max_runtime_sec": 3600,
+  "updated_at": "2026-07-01T16:36:39.141718+00:00",
+  "started_at": "2026-07-01T16:36:39.141698+00:00"
 }
