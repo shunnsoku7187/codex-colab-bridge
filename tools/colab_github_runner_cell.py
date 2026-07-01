@@ -117,7 +117,7 @@ def update_status(job_path, job, status, **extra):
     write_json(job_path, job)
 
 
-def run_job_process(job_id, command, cwd):
+def run_job_process(job_id, command, cwd, max_runtime_sec=None):
     stdout_path = LOGS_DIR / f"{job_id}.stdout.log"
     stderr_path = LOGS_DIR / f"{job_id}.stderr.log"
 
@@ -136,6 +136,11 @@ def run_job_process(job_id, command, cwd):
         )
 
         while True:
+            if max_runtime_sec is not None and time.time() - started_at > max_runtime_sec:
+                process.kill()
+                append_log(job_id, "process_timeout", max_runtime_sec=max_runtime_sec)
+                break
+
             stdout_line = process.stdout.readline()
             if stdout_line:
                 print(stdout_line, end="")
@@ -159,6 +164,8 @@ def run_job_process(job_id, command, cwd):
                 break
 
     duration_sec = round(time.time() - started_at, 3)
+    if process.returncode is None:
+        process.returncode = 124
     append_log(job_id, "process_end", returncode=process.returncode, duration_sec=duration_sec)
     return process.returncode, stdout_path, stderr_path, duration_sec
 
@@ -215,7 +222,12 @@ def execute_job(job_path):
         else:
             raise ValueError(f"Unknown job type: {job_type}")
 
-        returncode, stdout_path, stderr_path, duration_sec = run_job_process(job_id, command, cwd)
+        max_runtime_sec = job.get("max_runtime_sec")
+        if max_runtime_sec is not None:
+            max_runtime_sec = int(max_runtime_sec)
+        append_log(job_id, "process_prepared", command=command, cwd=str(cwd), max_runtime_sec=max_runtime_sec)
+        push_updates(f"colab: prepared {job_id}")
+        returncode, stdout_path, stderr_path, duration_sec = run_job_process(job_id, command, cwd, max_runtime_sec=max_runtime_sec)
         finished_at = utc_now()
         status = "done" if returncode == 0 else "failed"
         result_path = RESULTS_DIR / f"{job_id}.json"

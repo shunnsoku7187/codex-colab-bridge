@@ -1,10 +1,11 @@
 {
   "id": "run_intermediate_notebook_004",
-  "status": "running",
+  "status": "abandoned",
   "type": "notebook",
   "notebook": "notebooks/intermediate_experiment.ipynb",
   "output_name": "intermediate_experiment_004_executed.ipynb",
   "timeout": -1,
   "updated_at": "2026-07-01T10:29:21.587347+00:00",
-  "started_at": "2026-07-01T10:29:21.587328+00:00"
+  "started_at": "2026-07-01T10:29:21.587328+00:00",
+  "note": "Abandoned after the Colab process showed no visible progress for over 30 minutes. Superseded by diagnostic cell-range jobs."
 }
