@@ -544,4 +544,385 @@ Wrote HOG feature cache: /content/drive/MyDrive/Research_Experiment/record_break
     },
     {
       "name": "Variance",
-      "impor
+      "importance_pct": 12.53716388898267
+    },
+    {
+      "name": "Edge Mean",
+      "importance_pct": 12.011572936748415
+    },
+    {
+      "name": "Color Variance",
+      "importance_pct": 11.674696077215172
+    },
+    {
+      "name": "Edge Density",
+      "importance_pct": 11.341526824241
+    },
+    {
+      "name": "Extreme Pixels",
+      "importance_pct": 10.192798823052314
+    }
+  ]
+}
+=== record-breaker candidate: current_lgbm_less_constrained ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "current_lgbm_less_constrained",
+  "protocol": "notebook-compatible full-fit search; not cross-validation",
+  "score_kind": "classifier",
+  "samples": 10000,
+  "feature_count": 8,
+  "high_accuracy": 89.85,
+  "target_accuracy": 88.85,
+  "best": {
+    "threshold": 0.48700951682258603,
+    "avg_cost": 4.4977374,
+    "accuracy": 88.93,
+    "to_low": 7574,
+    "to_high": 2426,
+    "easy_saved_ratio": 99.98594518622629
+  },
+  "routing_details": {
+    "true_easy_to_low": 6893,
+    "true_inverse_to_low": 221,
+    "true_impossible_to_low": 147,
+    "true_hard_to_low": 313,
+    "true_easy_to_high": 1,
+    "true_hard_to_high": 1778
+  },
+  "top_feature_importances": [
+    {
+      "name": "Total Variation",
+      "importance_pct": 14.003310110669844
+    },
+    {
+      "name": "Flatness",
+      "importance_pct": 13.99341406510364
+    },
+    {
+      "name": "Center-Surround",
+      "importance_pct": 13.749814629033297
+    },
+    {
+      "name": "Edge Density",
+      "importance_pct": 13.102374844313351
+    },
+    {
+      "name": "Edge Mean",
+      "importance_pct": 12.59604658208162
+    },
+    {
+      "name": "Variance",
+      "importance_pct": 11.593731185789474
+    },
+    {
+      "name": "Color Variance",
+      "importance_pct": 11.259811698900894
+    },
+    {
+      "name": "Extreme Pixels",
+      "importance_pct": 9.70149688410788
+    }
+  ]
+}
+=== record-breaker candidate: soft_safe_binary_lgbm ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "soft_safe_binary_lgbm",
+  "protocol": "notebook-compatible full-fit search; not cross-validation",
+  "score_kind": "classifier",
+  "samples": 10000,
+  "feature_count": 8,
+  "high_accuracy": 89.85,
+  "target_accuracy": 88.85,
+  "best": {
+    "threshold": 0.7864463908000463,
+    "avg_cost": 8.158205800000001,
+    "accuracy": 88.87,
+    "to_low": 5458,
+    "to_high": 4542,
+    "easy_saved_ratio": 66.64792691496838
+  },
+  "routing_details": {
+    "true_easy_to_low": 4597,
+    "true_inverse_to_low": 145,
+    "true_impossible_to_low": 473,
+    "true_hard_to_low": 243,
+    "true_easy_to_high": 2297,
+    "true_hard_to_high": 1848
+  },
+  "top_feature_importances": [
+    {
+      "name": "Flatness",
+      "importance_pct": 16.70782144793201
+    },
+    {
+      "name": "Center-Surround",
+      "importance_pct": 14.42081428273185
+    },
+    {
+      "name": "Total Variation",
+      "importance_pct": 12.983988527491006
+    },
+    {
+      "name": "Edge Mean",
+      "importance_pct": 12.172052372379383
+    },
+    {
+      "name": "Variance",
+      "importance_pct": 12.015158785554473
+    },
+    {
+      "name": "Edge Density",
+      "importance_pct": 11.415991829893052
+    },
+    {
+      "name": "Extreme Pixels",
+      "importance_pct": 10.241322947246616
+    },
+    {
+      "name": "Color Variance",
+      "importance_pct": 10.042849806771606
+    }
+  ]
+}
+=== record-breaker candidate: soft_category_regressor ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+{
+  "name": "soft_category_regressor",
+  "protocol": "notebook-compatible full-fit search; not cross-validation",
+  "score_kind": "regressor",
+  "samples": 10000,
+  "feature_count": 8,
+  "high_accuracy": 89.85,
+  "target_accuracy": 88.85,
+  "best": {
+    "threshold": 0.732943254003927,
+    "avg_cost": 8.4211506,
+    "accuracy": 88.96,
+    "to_low": 5306,
+    "to_high": 4694,
+    "easy_saved_ratio": 66.14195361911455
+  },
+  "routing_details": {
+    "true_easy_to_low": 4555,
+    "true_inverse_to_low": 151,
+    "true_impossible_to_low": 360,
+    "true_hard_to_low": 240,
+    "true_easy_to_high": 2339,
+    "true_hard_to_high": 1851
+  },
+  "top_feature_importances": [
+    {
+      "name": "Flatness",
+      "importance_pct": 17.04037814399691
+    },
+    {
+      "name": "Center-Surround",
+      "importance_pct": 14.20178180712009
+    },
+    {
+      "name": "Total Variation",
+      "importance_pct": 13.180030656752631
+    },
+    {
+      "name": "Edge Density",
+      "importance_pct": 11.805331884134285
+    },
+    {
+      "name": "Edge Mean",
+      "importance_pct": 11.746483676146696
+    },
+    {
+      "name": "Variance",
+      "importance_pct": 11.71515575859191
+    },
+    {
+      "name": "Color Variance",
+      "importance_pct": 10.480392607077743
+    },
+    {
+      "name": "Extreme Pixels",
+      "importance_pct": 9.830445466179736
+    }
+  ]
+}
+=== record-breaker candidate: soft_category_conservative_regressor ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+{
+  "name": "soft_category_conservative_regressor",
+  "protocol": "notebook-compatible full-fit search; not cross-validation",
+  "score_kind": "regressor",
+  "samples": 10000,
+  "feature_count": 8,
+  "high_accuracy": 89.85,
+  "target_accuracy": 88.85,
+  "best": {
+    "threshold": 0.6471469139272563,
+    "avg_cost": 8.5076456,
+    "accuracy": 88.87,
+    "to_low": 5256,
+    "to_high": 4744,
+    "easy_saved_ratio": 65.87491215741392
+  },
+  "routing_details": {
+    "true_easy_to_low": 4527,
+    "true_inverse_to_low": 160,
+    "true_impossible_to_low": 311,
+    "true_hard_to_low": 258,
+    "true_easy_to_high": 2367,
+    "true_hard_to_high": 1833
+  },
+  "top_feature_importances": [
+    {
+      "name": "Flatness",
+      "importance_pct": 17.17167784532092
+    },
+    {
+      "name": "Total Variation",
+      "importance_pct": 14.149462191128283
+    },
+    {
+      "name": "Center-Surround",
+      "importance_pct": 13.472045415865479
+    },
+    {
+      "name": "Edge Mean",
+      "importance_pct": 12.042941966990192
+    },
+    {
+      "name": "Variance",
+      "importance_pct": 11.883229558676343
+    },
+    {
+      "name": "Edge Density",
+      "importance_pct": 10.984601791833786
+    },
+    {
+      "name": "Color Variance",
+      "importance_pct": 10.324179741127049
+    },
+    {
+      "name": "Extreme Pixels",
+      "importance_pct": 9.971861489057948
+    }
+  ]
+}
+=== record-breaker candidate: hog4x4_lgbm ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "hog4x4_lgbm",
+  "protocol": "notebook-compatible full-fit search; not cross-validation",
+  "score_kind": "classifier",
+  "samples": 10000,
+  "feature_count": 576,
+  "high_accuracy": 89.85,
+  "target_accuracy": 88.85,
+  "best": {
+    "threshold": 0.5605445933029578,
+    "avg_cost": 4.5548241,
+    "accuracy": 88.94,
+    "to_low": 7541,
+    "to_high": 2459,
+    "easy_saved_ratio": 100.0
+  },
+  "routing_details": {
+    "true_easy_to_low": 6894,
+    "true_inverse_to_low": 221,
+    "true_impossible_to_low": 114,
+    "true_hard_to_low": 312,
+    "true_easy_to_high": 0,
+    "true_hard_to_high": 1779
+  },
+  "top_feature_importances": [
+    {
+      "name": "HOG_r2_c0_b4",
+      "importance_pct": 0.7670920126880164
+    },
+    {
+      "name": "HOG_r1_c4_b7",
+      "importance_pct": 0.6272469220956527
+    },
+    {
+      "name": "HOG_r1_c5_b6",
+      "importance_pct": 0.5712907458730575
+    },
+    {
+      "name": "HOG_r0_c5_b5",
+      "importance_pct": 0.5194846847369435
+    },
+    {
+      "name": "HOG_r7_c0_b0",
+      "importance_pct": 0.5048097353436702
+    },
+    {
+      "name": "HOG_r4_c0_b5",
+      "importance_pct": 0.5037659210641822
+    },
+    {
+      "name": "HOG_r3_c7_b4",
+      "importance_pct": 0.46623705804438065
+    },
+    {
+      "name": "HOG_r7_c6_b0",
+      "importance_pct": 0.42959348534496783
+    },
+    {
+      "name": "HOG_r6_c7_b5",
+      "importance_pct": 0.42630734827031247
+    },
+    {
+      "name": "HOG_r5_c7_b7",
+      "importance_pct": 0.42288427152190344
+    },
+    {
+      "name": "HOG_r3_c5_b1",
+      "importance_pct": 0.4154136174284468
+    },
+    {
+      "name": "HOG_r3_c4_b4",
+      "importance_pct": 0.41254516803584657
+    },
+    {
+      "name": "HOG_r0_c7_b0",
+      "importance_pct": 0.3980570735743984
+    },
+    {
+      "name": "HOG_r2_c2_b6",
+      "importance_pct": 0.38924493992064707
+    },
+    {
+      "name": "HOG_r6_c0_b6",
+      "importance_pct": 0.3878470164139316
+    },
+    {
+      "name": "HOG_r5_c0_b4",
+      "importance_pct": 0.3768983509360022
+    },
+    {
+      "name": "HOG_r4_c4_b5",
+      "importance_pct": 0.3748963654479018
+    },
+    {
+      "name": "HOG_r0_c5_b6",
+      "importance_pct": 0.3748651990001374
+    },
+    {
+      "name": "HOG_r5_c0_b6",
+      "importance_pct": 0.3671657356836351
+    },
+    {
+      "name": "HOG_r5_c1_b5",
+      "importance_pct": 0.3605090203160874
+    }
+  ]
+}
+=== record-breaker candidate: hog4x4_soft_category_regressor ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+{
