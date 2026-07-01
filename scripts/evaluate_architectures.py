@@ -29,7 +29,12 @@ def add_low_confidence(data, output_path, batch_size):
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}", flush=True)
-    model = torch.hub.load("chenyaofo/pytorch-cifar-models", "cifar100_mobilenetv2_x1_0", pretrained=True)
+    model = torch.hub.load(
+        "chenyaofo/pytorch-cifar-models",
+        "cifar100_mobilenetv2_x1_0",
+        pretrained=True,
+        trust_repo=True,
+    )
     model = model.to(device).eval()
     transform_low = transforms.Compose([
         transforms.ToTensor(),
