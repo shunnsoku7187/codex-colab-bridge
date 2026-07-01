@@ -46,4 +46,52 @@ Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-pack
 [lightweight_lgbm] loading feature cache: /content/drive/MyDrive/Research_Experiment/router_features_lightweight_full.npz
 Loading HOG feature cache: /content/drive/MyDrive/Research_Experiment/record_breaker_features_hog4x4_full.npz
 === strict-CV record-breaker validation: cv_current_lgbm_less_constrained ===
-/
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "cv_current_lgbm_less_constrained",
+  "protocol": "5-fold stratified CV by difficulty category",
+  "score_kind": "classifier",
+  "target": "low_correct",
+  "feature_set": "lightweight",
+  "samples": 10000,
+  "feature_count": 8,
+  "high_accuracy": 89.85,
+  "target_accuracy": 88.85,
+  "best": {
+    "threshold": 0.9330255755167701,
+    "avg_cost": 16.267977,
+    "accuracy": 88.86,
+    "to_low": 770,
+    "to_high": 9230,
+    "easy_saved_ratio": 8.671820098383696
+  },
+  "routing_details": {
+    "true_easy_to_low": 602,
+    "true_inverse_to_low": 15,
+    "true_impossible_to_low": 39,
+    "true_hard_to_low": 114,
+    "true_easy_to_high": 6292,
+    "true_hard_to_high": 1977
+  }
+}
+=== strict-CV record-breaker validation: cv_current_lgbm_deeper_margin ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
