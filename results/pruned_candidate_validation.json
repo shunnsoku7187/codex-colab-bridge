@@ -1,0 +1,123 @@
+{
+  "status": "ok",
+  "decision_context": "Validate only candidates that remain plausible after pruning grid/raw/RF branches.",
+  "results": [
+    {
+      "name": "lightweight_lgbm_cv_original",
+      "samples": 10000,
+      "feature_count": 8,
+      "protocol": "5-fold stratified cross_val_predict",
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.8300000000000001,
+        "avg_cost": 16.3181441,
+        "accuracy": 88.92,
+        "to_low": 741,
+        "to_high": 9259,
+        "easy_saved_ratio": 8.559381588193956
+      },
+      "same_split_comparison": {
+        "cascade_same_split_cost": 16.59684,
+        "parallel_same_split_cost_alpha_0_10": 16.727256,
+        "router_margin_vs_cascade_same_split": 0.2786958999999989,
+        "router_margin_vs_parallel_same_split": 0.4091118999999992
+      }
+    },
+    {
+      "name": "lightweight_lgbm_cv_regularized",
+      "samples": 10000,
+      "feature_count": 8,
+      "protocol": "5-fold stratified cross_val_predict",
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.81,
+        "avg_cost": 16.3389029,
+        "accuracy": 88.93,
+        "to_low": 729,
+        "to_high": 9271,
+        "easy_saved_ratio": 8.418833450456782
+      },
+      "same_split_comparison": {
+        "cascade_same_split_cost": 16.61796,
+        "parallel_same_split_cost_alpha_0_10": 16.746264,
+        "router_margin_vs_cascade_same_split": 0.2790570999999993,
+        "router_margin_vs_parallel_same_split": 0.40736109999999925
+      }
+    },
+    {
+      "name": "lightweight_lgbm_cv_tiny",
+      "samples": 10000,
+      "feature_count": 8,
+      "protocol": "5-fold stratified cross_val_predict",
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.79,
+        "avg_cost": 16.3752308,
+        "accuracy": 88.92,
+        "to_low": 708,
+        "to_high": 9292,
+        "easy_saved_ratio": 8.081517919887562
+      },
+      "same_split_comparison": {
+        "cascade_same_split_cost": 16.65492,
+        "parallel_same_split_cost_alpha_0_10": 16.779528000000003,
+        "router_margin_vs_cascade_same_split": 0.27968919999999997,
+        "router_margin_vs_parallel_same_split": 0.404297200000002
+      }
+    },
+    {
+      "name": "lightweight_tree_cv_depth4",
+      "samples": 10000,
+      "feature_count": 8,
+      "protocol": "5-fold stratified cross_val_predict",
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.835,
+        "avg_cost": 16.335443100000003,
+        "accuracy": 88.89,
+        "to_low": 731,
+        "to_high": 9269,
+        "easy_saved_ratio": 8.334504567814477
+      },
+      "same_split_comparison": {
+        "cascade_same_split_cost": 16.61444,
+        "parallel_same_split_cost_alpha_0_10": 16.743096,
+        "router_margin_vs_cascade_same_split": 0.27899689999999566,
+        "router_margin_vs_parallel_same_split": 0.40765289999999865
+      }
+    },
+    {
+      "name": "lightweight_tree_cv_depth6",
+      "samples": 10000,
+      "feature_count": 8,
+      "protocol": "5-fold stratified cross_val_predict",
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.865,
+        "avg_cost": 16.5655198,
+        "accuracy": 88.94,
+        "to_low": 598,
+        "to_high": 9402,
+        "easy_saved_ratio": 6.5917076598735065
+      },
+      "same_split_comparison": {
+        "cascade_same_split_cost": 16.84852,
+        "parallel_same_split_cost_alpha_0_10": 16.953768000000004,
+        "router_margin_vs_cascade_same_split": 0.28300020000000004,
+        "router_margin_vs_parallel_same_split": 0.38824820000000315
+      }
+    }
+  ],
+  "ranked_by_avg_cost": [
+    "lightweight_lgbm_cv_original",
+    "lightweight_tree_cv_depth4",
+    "lightweight_lgbm_cv_regularized",
+    "lightweight_lgbm_cv_tiny",
+    "lightweight_tree_cv_depth6"
+  ]
+}
