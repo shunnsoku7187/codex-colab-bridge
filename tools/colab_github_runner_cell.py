@@ -31,6 +31,7 @@ JOBS_DIR = REPO_DIR / "jobs"
 LOGS_DIR = REPO_DIR / "logs"
 RESULTS_DIR = REPO_DIR / "results"
 ARTIFACTS_DIR = REPO_DIR / "artifacts"
+EXECUTED_NOTEBOOKS_DIR = REPO_DIR / "executed_notebooks"
 
 GIT_USER_NAME = "colab-runner"
 GIT_USER_EMAIL = "colab-runner@example.invalid"
@@ -68,7 +69,7 @@ def setup_repo():
         run(f"git remote set-url origin {shlex.quote(REPO_URL)}", cwd=REPO_DIR)
     run(f"git config user.name {shlex.quote(GIT_USER_NAME)}", cwd=REPO_DIR)
     run(f"git config user.email {shlex.quote(GIT_USER_EMAIL)}", cwd=REPO_DIR)
-    for directory in [JOBS_DIR, LOGS_DIR, RESULTS_DIR, ARTIFACTS_DIR]:
+    for directory in [JOBS_DIR, LOGS_DIR, RESULTS_DIR, ARTIFACTS_DIR, EXECUTED_NOTEBOOKS_DIR]:
         directory.mkdir(parents=True, exist_ok=True)
 
 
@@ -79,7 +80,7 @@ def pull_latest():
 
 
 def push_updates(message):
-    run("git add jobs logs results artifacts", cwd=REPO_DIR)
+    run("git add jobs logs results artifacts executed_notebooks", cwd=REPO_DIR)
     diff = run("git diff --cached --quiet", cwd=REPO_DIR, check=False)
     if diff.returncode == 0:
         return
@@ -191,6 +192,24 @@ def execute_job(job_path):
             code_path = REPO_DIR / f"_{job_id}.py"
             code_path.write_text(job["code"], encoding="utf-8")
             command = "python " + shlex.quote(str(code_path))
+            cwd = REPO_DIR
+        elif job_type == "notebook":
+            notebook = Path(job["notebook"])
+            if not notebook.is_absolute():
+                notebook = REPO_DIR / notebook
+            output_name = job.get("output_name", f"{notebook.stem}_executed.ipynb")
+            timeout = int(job.get("timeout", -1))
+            command = (
+                "python -m jupyter nbconvert --to notebook --execute "
+                + shlex.quote(str(notebook))
+                + " --output "
+                + shlex.quote(output_name)
+                + " --output-dir "
+                + shlex.quote(str(EXECUTED_NOTEBOOKS_DIR))
+                + " --ExecutePreprocessor.kernel_name=python3"
+                + " --ExecutePreprocessor.timeout="
+                + shlex.quote(str(timeout))
+            )
             cwd = REPO_DIR
         else:
             raise ValueError(f"Unknown job type: {job_type}")

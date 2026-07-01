@@ -15,13 +15,15 @@ runtime.
 ## Layout
 
 ```text
-src/        Python code executed on Colab
-configs/    Experiment configs
-jobs/       Pending/running/done job definitions
-logs/       JSONL events plus stdout/stderr logs from Colab
-results/    Machine-readable result summaries
-artifacts/  Small artifacts only; keep large files out of GitHub
-tools/      Colab runner cell and helper scripts
+src/                 Python code executed on Colab
+configs/             Experiment configs
+notebooks/           Notebook sources edited by Codex and executed by Colab
+jobs/                Pending/running/done job definitions
+logs/                JSONL events plus stdout/stderr logs from Colab
+results/             Machine-readable result summaries
+executed_notebooks/  Executed notebook outputs returned by Colab
+artifacts/           Small artifacts only; keep large files out of GitHub
+tools/               Colab runner cell and helper scripts
 ```
 
 ## First smoke test
@@ -43,3 +45,23 @@ results/gpu_smoke_test.json
 
 After the first run, Codex can create new job files and inspect results without
 copying logs by hand.
+
+## Running a Codex-authored notebook on Colab
+
+Codex edits notebooks under `notebooks/`. To run one on Colab, copy the template
+job and change `"status"` from `"template"` to `"pending"`:
+
+```json
+{
+  "id": "run_intermediate_notebook_001",
+  "status": "pending",
+  "type": "notebook",
+  "notebook": "notebooks/intermediate_experiment.ipynb",
+  "output_name": "intermediate_experiment_executed.ipynb",
+  "timeout": -1
+}
+```
+
+When you press the Colab runner cell, it executes the notebook on the Colab
+runtime and pushes the executed notebook to `executed_notebooks/`, plus logs and
+result metadata to `logs/` and `results/`.
