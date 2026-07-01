@@ -1,10 +1,13 @@
 {
   "id": "reproduce_router_experiments_001",
-  "status": "running",
+  "status": "done",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.reproduce_router_experiments",
   "max_runtime_sec": 7200,
-  "updated_at": "2026-07-01T15:46:14.788868+00:00",
-  "started_at": "2026-07-01T15:46:14.788850+00:00"
+  "updated_at": "2026-07-01T16:22:31.593232+00:00",
+  "started_at": "2026-07-01T15:46:14.788850+00:00",
+  "returncode": 0,
+  "finished_at": "2026-07-01T16:22:31.592625+00:00",
+  "result_file": "results/reproduce_router_experiments_001.json"
 }

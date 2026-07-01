@@ -1,0 +1,15 @@
+{
+  "mode": "raw_lgbm",
+  "samples": 10000,
+  "feature_count": 192,
+  "high_accuracy": 89.85,
+  "target_accuracy": 88.85,
+  "best": {
+    "threshold": 0.85,
+    "avg_cost": 16.205700600000004,
+    "accuracy": 88.94,
+    "to_low": 806,
+    "to_high": 9194,
+    "easy_saved_ratio": 9.458889669711876
+  }
+}

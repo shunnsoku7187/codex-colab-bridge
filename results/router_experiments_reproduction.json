@@ -1,0 +1,255 @@
+{
+  "status": "ok",
+  "modes": [
+    "lightweight_rf",
+    "lightweight_lgbm",
+    "ultimate_lgbm",
+    "robust_lgbm",
+    "raw_lgbm"
+  ],
+  "results": [
+    {
+      "mode": "lightweight_rf",
+      "samples": 10000,
+      "feature_count": 8,
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.75,
+        "avg_cost": 14.7473949,
+        "accuracy": 88.94,
+        "to_low": 1649,
+        "to_high": 8351,
+        "easy_saved_ratio": 20.857343640196767
+      },
+      "feature_importances": [
+        {
+          "name": "Flatness",
+          "importance_pct": 16.851955958590622
+        },
+        {
+          "name": "Color Variance",
+          "importance_pct": 13.2214793502574
+        },
+        {
+          "name": "Total Variation",
+          "importance_pct": 12.805721662784588
+        },
+        {
+          "name": "Edge Density",
+          "importance_pct": 12.620173927383767
+        },
+        {
+          "name": "Extreme Pixels",
+          "importance_pct": 12.43868427121482
+        },
+        {
+          "name": "Variance",
+          "importance_pct": 11.42169475815123
+        },
+        {
+          "name": "Edge Mean",
+          "importance_pct": 10.722876910405567
+        },
+        {
+          "name": "Center-Surround",
+          "importance_pct": 9.91741316121201
+        }
+      ]
+    },
+    {
+      "mode": "lightweight_lgbm",
+      "samples": 10000,
+      "feature_count": 8,
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.725,
+        "avg_cost": 11.1146049,
+        "accuracy": 88.95,
+        "to_low": 3749,
+        "to_high": 6251,
+        "easy_saved_ratio": 49.079409697821504
+      },
+      "feature_importances": [
+        {
+          "name": "Flatness",
+          "importance_pct": 15.538544847785786
+        },
+        {
+          "name": "Total Variation",
+          "importance_pct": 14.302063010160253
+        },
+        {
+          "name": "Variance",
+          "importance_pct": 13.190729818045776
+        },
+        {
+          "name": "Center-Surround",
+          "importance_pct": 12.191858262505926
+        },
+        {
+          "name": "Edge Mean",
+          "importance_pct": 11.785468040683703
+        },
+        {
+          "name": "Edge Density",
+          "importance_pct": 11.553797106830759
+        },
+        {
+          "name": "Extreme Pixels",
+          "importance_pct": 10.74794244225985
+        },
+        {
+          "name": "Color Variance",
+          "importance_pct": 10.689596471727947
+        }
+      ]
+    },
+    {
+      "mode": "ultimate_lgbm",
+      "samples": 10000,
+      "feature_count": 72,
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.875,
+        "avg_cost": 16.2800863,
+        "accuracy": 88.89,
+        "to_low": 763,
+        "to_high": 9237,
+        "easy_saved_ratio": 8.685874912157415
+      },
+      "feature_names": [
+        "Global_Variance",
+        "Global_EdgeMean",
+        "Global_EdgeDensity",
+        "Global_ColorVar",
+        "Global_ExtremePix",
+        "Global_TV",
+        "Global_CenterSurround",
+        "Global_Flatness",
+        "Grid_0_0_Var",
+        "Grid_0_0_Edge",
+        "Grid_0_0_TV",
+        "Grid_0_0_HighFreq",
+        "Grid_0_1_Var",
+        "Grid_0_1_Edge",
+        "Grid_0_1_TV",
+        "Grid_0_1_HighFreq",
+        "Grid_0_2_Var",
+        "Grid_0_2_Edge",
+        "Grid_0_2_TV",
+        "Grid_0_2_HighFreq",
+        "Grid_0_3_Var",
+        "Grid_0_3_Edge",
+        "Grid_0_3_TV",
+        "Grid_0_3_HighFreq",
+        "Grid_1_0_Var",
+        "Grid_1_0_Edge",
+        "Grid_1_0_TV",
+        "Grid_1_0_HighFreq",
+        "Grid_1_1_Var",
+        "Grid_1_1_Edge",
+        "Grid_1_1_TV",
+        "Grid_1_1_HighFreq",
+        "Grid_1_2_Var",
+        "Grid_1_2_Edge",
+        "Grid_1_2_TV",
+        "Grid_1_2_HighFreq",
+        "Grid_1_3_Var",
+        "Grid_1_3_Edge",
+        "Grid_1_3_TV",
+        "Grid_1_3_HighFreq",
+        "Grid_2_0_Var",
+        "Grid_2_0_Edge",
+        "Grid_2_0_TV",
+        "Grid_2_0_HighFreq",
+        "Grid_2_1_Var",
+        "Grid_2_1_Edge",
+        "Grid_2_1_TV",
+        "Grid_2_1_HighFreq",
+        "Grid_2_2_Var",
+        "Grid_2_2_Edge",
+        "Grid_2_2_TV",
+        "Grid_2_2_HighFreq",
+        "Grid_2_3_Var",
+        "Grid_2_3_Edge",
+        "Grid_2_3_TV",
+        "Grid_2_3_HighFreq",
+        "Grid_3_0_Var",
+        "Grid_3_0_Edge",
+        "Grid_3_0_TV",
+        "Grid_3_0_HighFreq",
+        "Grid_3_1_Var",
+        "Grid_3_1_Edge",
+        "Grid_3_1_TV",
+        "Grid_3_1_HighFreq",
+        "Grid_3_2_Var",
+        "Grid_3_2_Edge",
+        "Grid_3_2_TV",
+        "Grid_3_2_HighFreq",
+        "Grid_3_3_Var",
+        "Grid_3_3_Edge",
+        "Grid_3_3_TV",
+        "Grid_3_3_HighFreq"
+      ]
+    },
+    {
+      "mode": "robust_lgbm",
+      "samples": 10000,
+      "feature_count": 24,
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.84,
+        "avg_cost": 16.304304899999998,
+        "accuracy": 88.91,
+        "to_low": 749,
+        "to_high": 9251,
+        "easy_saved_ratio": 8.432888264230499
+      },
+      "feature_names": [
+        "Global_Variance",
+        "Global_EdgeMean",
+        "Global_EdgeDensity",
+        "Global_ColorVar",
+        "Global_ExtremePix",
+        "Global_TV",
+        "Global_CenterSurround",
+        "Global_Flatness",
+        "Grid_0_0_Var",
+        "Grid_0_0_Edge",
+        "Grid_0_0_TV",
+        "Grid_0_0_HighFreq",
+        "Grid_0_1_Var",
+        "Grid_0_1_Edge",
+        "Grid_0_1_TV",
+        "Grid_0_1_HighFreq",
+        "Grid_1_0_Var",
+        "Grid_1_0_Edge",
+        "Grid_1_0_TV",
+        "Grid_1_0_HighFreq",
+        "Grid_1_1_Var",
+        "Grid_1_1_Edge",
+        "Grid_1_1_TV",
+        "Grid_1_1_HighFreq"
+      ]
+    },
+    {
+      "mode": "raw_lgbm",
+      "samples": 10000,
+      "feature_count": 192,
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.85,
+        "avg_cost": 16.205700600000004,
+        "accuracy": 88.94,
+        "to_low": 806,
+        "to_high": 9194,
+        "easy_saved_ratio": 9.458889669711876
+      }
+    }
+  ]
+}
