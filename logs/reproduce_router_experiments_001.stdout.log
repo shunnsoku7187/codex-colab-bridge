@@ -5485,4 +5485,117 @@ Extracting ultimate_lgbm features:  36%|███▌      | 3614/10000 [00:15<00
 Extracting ultimate_lgbm features:  53%|█████▎    | 5283/10000 [00:20<00:16, 283.33it/s]
 Extracting ultimate_lgbm features:  76%|███████▌  | 7570/10000 [00:25<00:07, 346.02it/s]
 Extracting ultimate_lgbm features: 100%|██████████| 10000/10000 [00:29<00:00, 344.71it/s]
+[ultimate_lgbm] wrote feature cache: /content/drive/MyDrive/Research_Experiment/router_features_ultimate_full.npz
+[ultimate_lgbm] running 5-fold cross-val prediction
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+[ultimate_lgbm] evaluating routing thresholds
+{
+  "mode": "ultimate_lgbm",
+  "samples": 10000,
+  "feature_count": 72,
+  "high_accuracy": 89.85,
+  "target_accuracy": 88.85,
+  "best": {
+    "threshold": 0.875,
+    "avg_cost": 16.2800863,
+    "accuracy": 88.89,
+    "to_low": 763,
+    "to_high": 9237,
+    "easy_saved_ratio": 8.685874912157415
+  },
+  "feature_names": [
+    "Global_Variance",
+    "Global_EdgeMean",
+    "Global_EdgeDensity",
+    "Global_ColorVar",
+    "Global_ExtremePix",
+    "Global_TV",
+    "Global_CenterSurround",
+    "Global_Flatness",
+    "Grid_0_0_Var",
+    "Grid_0_0_Edge",
+    "Grid_0_0_TV",
+    "Grid_0_0_HighFreq",
+    "Grid_0_1_Var",
+    "Grid_0_1_Edge",
+    "Grid_0_1_TV",
+    "Grid_0_1_HighFreq",
+    "Grid_0_2_Var",
+    "Grid_0_2_Edge",
+    "Grid_0_2_TV",
+    "Grid_0_2_HighFreq",
+    "Grid_0_3_Var",
+    "Grid_0_3_Edge",
+    "Grid_0_3_TV",
+    "Grid_0_3_HighFreq",
+    "Grid_1_0_Var",
+    "Grid_1_0_Edge",
+    "Grid_1_0_TV",
+    "Grid_1_0_HighFreq",
+    "Grid_1_1_Var",
+    "Grid_1_1_Edge",
+    "Grid_1_1_TV",
+    "Grid_1_1_HighFreq",
+    "Grid_1_2_Var",
+    "Grid_1_2_Edge",
+    "Grid_1_2_TV",
+    "Grid_1_2_HighFreq",
+    "Grid_1_3_Var",
+    "Grid_1_3_Edge",
+    "Grid_1_3_TV",
+    "Grid_1_3_HighFreq",
+    "Grid_2_0_Var",
+    "Grid_2_0_Edge",
+    "Grid_2_0_TV",
+    "Grid_2_0_HighFreq",
+    "Grid_2_1_Var",
+    "Grid_2_1_Edge",
+    "Grid_2_1_TV",
+    "Grid_2_1_HighFreq",
+    "Grid_2_2_Var",
+    "Grid_2_2_Edge",
+    "Grid_2_2_TV",
+    "Grid_2_2_HighFreq",
+    "Grid_2_3_Var",
+    "Grid_2_3_Edge",
+    "Grid_2_3_TV",
+    "Grid_2_3_HighFreq",
+    "Grid_3_0_Var",
+    "Grid_3_0_Edge",
+    "Grid_3_0_TV",
+    "Grid_3_0_HighFreq",
+    "Grid_3_1_Var",
+    "Grid_3_1_Edge",
+    "Grid_3_1_TV",
+    "Grid_3_1_HighFreq",
+    "Grid_3_2_Var",
+    "Grid_3_2_Edge",
+    "Grid_3_2_TV",
+    "Grid_3_2_HighFreq",
+    "Grid_3_3_Var",
+    "Grid_3_3_Edge",
+    "Grid_3_3_TV",
+    "Grid_3_3_HighFreq"
+  ]
+}
+=== finished router mode: ultimate_lgbm ===
+=== start router mode: robust_lgbm ===
+[robust_lgbm] loading difficulty labels from /content/drive/MyDrive/Research_Experiment/cifar100_difficulty_labels.json
+[robust_lgbm] feature cache not found: /content/drive/MyDrive/Research_Experiment/router_features_robust_full.npz
+[robust_lgbm] loading CIFAR-100 test images under /content/drive/MyDrive/Research_Experiment/data
+[robust_lgbm] CIFAR-100 ready; extracting 10000 samples
+
+Extracting robust_lgbm features:   0%|          | 0/10000 [00:00<?, ?it/s]
+Extracting robust_lgbm features:  25%|██▌       | 2516/10000 [00:05<00:14, 503.09it/s]
+Extracting robust_lgbm features:  63%|██████▎   | 6339/10000 [00:10<00:05, 656.90it/s]
+Extracting robust_lgbm features: 100%|██████████| 10000/10000 [00:14<00:00, 670.17it/s]
 [
