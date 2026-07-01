@@ -6,6 +6,8 @@ __pycache__/
 # Keep heavy outputs out of GitHub.
 artifacts/*
 !artifacts/.gitkeep
+!artifacts/research_experiment/
+!artifacts/research_experiment/**
 results/local_*.json
 *.pt
 *.pth
