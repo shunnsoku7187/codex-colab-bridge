@@ -1,9 +1,12 @@
 {
   "id": "gpu_smoke_test",
-  "status": "running",
+  "status": "done",
   "type": "shell",
   "cwd": ".",
   "command": "python src/train.py --config configs/config.yaml --out results/gpu_smoke_test_train_output.json",
-  "updated_at": "2026-07-01T09:48:46.687690+00:00",
-  "started_at": "2026-07-01T09:48:46.687670+00:00"
+  "updated_at": "2026-07-01T09:48:55.390225+00:00",
+  "started_at": "2026-07-01T09:48:46.687670+00:00",
+  "returncode": 0,
+  "finished_at": "2026-07-01T09:48:55.389668+00:00",
+  "result_file": "results/gpu_smoke_test.json"
 }
