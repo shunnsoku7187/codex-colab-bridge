@@ -1,8 +1,10 @@
 {
   "id": "verify_drive_difficulty_labels_001",
-  "status": "pending",
+  "status": "running",
   "type": "shell",
   "cwd": ".",
   "command": "python -m scripts.summarize_difficulty_labels",
-  "max_runtime_sec": 300
+  "max_runtime_sec": 300,
+  "updated_at": "2026-07-01T14:55:52.807982+00:00",
+  "started_at": "2026-07-01T14:55:52.807965+00:00"
 }
