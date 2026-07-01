@@ -48,15 +48,26 @@ copying logs by hand.
 
 ## Persistent Colab Cache
 
-The runner mounts Google Drive and stores reusable downloads under:
+The runner mounts Google Drive and stores reusable downloads inside the existing
+experiment folder:
 
 ```text
-/content/drive/MyDrive/codex_colab_bridge_cache
+/content/drive/MyDrive/Research_Experiment
+```
+
+Reusable cache locations:
+
+```text
+/content/drive/MyDrive/Research_Experiment/data
+/content/drive/MyDrive/Research_Experiment/.colab_cache/pip
+/content/drive/MyDrive/Research_Experiment/.colab_cache/torch
+/content/drive/MyDrive/Research_Experiment/.colab_cache/huggingface
+/content/drive/MyDrive/Research_Experiment/.colab_cache/matplotlib
 ```
 
 This keeps CIFAR-100, Torch Hub weights, Hugging Face model files, and pip cache
 outside Git while avoiding repeated downloads across Colab sessions. Git should
-only receive small logs, result summaries, and compact experiment artifacts.
+only receive small logs and result summaries.
 
 Existing experiment artifacts are read from:
 
@@ -67,6 +78,21 @@ Existing experiment artifacts are read from:
 That folder already contains `cifar100_difficulty_labels.json`, so the label
 preparation job should not be rerun unless the labels intentionally need to be
 regenerated.
+
+Download necessity audit:
+
+| Item | Needed for | Current status |
+| --- | --- | --- |
+| `cifar100_difficulty_labels.json` | Category summaries, most notebook plots, router targets | Already in Drive; do not recompute by default |
+| `cifar100_simulation_data.json` | Existing simulation analyses | Already in Drive |
+| `difficulty_venn_diagram.png`, `step2_difficulty_venn.png`, related PNGs | Report figures | Already in Drive |
+| CIFAR-100 image dataset | Router feature extraction and any image-based rerun | Download only if absent; store under `Research_Experiment/data` |
+| Torch Hub MobileNet weights | Rerunning low-model confidence or label generation | Download only if absent; store under `.colab_cache/torch` |
+| Hugging Face ViT weights | Regenerating difficulty labels | Download only if absent; store under `.colab_cache/huggingface` |
+| pip packages | Missing Colab packages only | Use Drive pip cache; most are preinstalled |
+
+Use `jobs/audit_drive_inputs_001.json` to verify the current Drive contents
+without downloading anything.
 
 ## Running a Codex-authored notebook on Colab
 

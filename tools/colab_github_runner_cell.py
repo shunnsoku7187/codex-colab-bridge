@@ -40,8 +40,8 @@ GIT_USER_EMAIL = "colab-runner@example.invalid"
 
 USE_GOOGLE_DRIVE_CACHE = True
 DRIVE_MOUNT_POINT = Path("/content/drive")
-DRIVE_CACHE_ROOT = DRIVE_MOUNT_POINT / "MyDrive" / "codex_colab_bridge_cache"
 DRIVE_ARTIFACT_DIR = DRIVE_MOUNT_POINT / "MyDrive" / "Research_Experiment"
+DRIVE_CACHE_ROOT = DRIVE_ARTIFACT_DIR / ".colab_cache"
 
 
 def utc_now():
@@ -90,7 +90,7 @@ def setup_persistent_cache():
 
     cache_dirs = {
         "CODEX_COLAB_CACHE_ROOT": cache_root,
-        "CODEX_COLAB_DATA_DIR": cache_root / "data",
+        "CODEX_COLAB_DATA_DIR": DRIVE_ARTIFACT_DIR / "data" if USE_GOOGLE_DRIVE_CACHE else cache_root / "data",
         "CODEX_COLAB_ARTIFACT_DIR": DRIVE_ARTIFACT_DIR if USE_GOOGLE_DRIVE_CACHE else REPO_DIR / "artifacts" / "research_experiment",
         "TORCH_HOME": cache_root / "torch",
         "HF_HOME": cache_root / "huggingface",
@@ -98,6 +98,7 @@ def setup_persistent_cache():
         "TRANSFORMERS_CACHE": cache_root / "huggingface" / "transformers",
         "XDG_CACHE_HOME": cache_root / "xdg",
         "PIP_CACHE_DIR": cache_root / "pip",
+        "MPLCONFIGDIR": cache_root / "matplotlib",
     }
     for key, path in cache_dirs.items():
         path.mkdir(parents=True, exist_ok=True)

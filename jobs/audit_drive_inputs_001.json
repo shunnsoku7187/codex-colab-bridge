@@ -1,0 +1,8 @@
+{
+  "id": "audit_drive_inputs_001",
+  "status": "pending",
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m scripts.audit_drive_inputs",
+  "max_runtime_sec": 300
+}
