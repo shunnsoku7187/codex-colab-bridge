@@ -1,0 +1,43 @@
+{
+  "artifact_dir": "/content/drive/MyDrive/Research_Experiment",
+  "data_dir": "/content/drive/MyDrive/Research_Experiment/data",
+  "cache_root": "/content/drive/MyDrive/Research_Experiment/.colab_cache",
+  "artifacts": {
+    "cifar100_difficulty_labels.json": {
+      "path": "/content/drive/MyDrive/Research_Experiment/cifar100_difficulty_labels.json",
+      "exists": true,
+      "size": 1605266
+    },
+    "cifar100_simulation_data.json": {
+      "path": "/content/drive/MyDrive/Research_Experiment/cifar100_simulation_data.json",
+      "exists": true,
+      "size": 2187144
+    },
+    "difficulty_venn_diagram.png": {
+      "path": "/content/drive/MyDrive/Research_Experiment/difficulty_venn_diagram.png",
+      "exists": true,
+      "size": 43451
+    },
+    "step2_difficulty_venn.png": {
+      "path": "/content/drive/MyDrive/Research_Experiment/step2_difficulty_venn.png",
+      "exists": true,
+      "size": 62858
+    },
+    "tiny_router_cifar100_cls.pth": {
+      "path": "/content/drive/MyDrive/Research_Experiment/tiny_router_cifar100_cls.pth",
+      "exists": true,
+      "size": 1389735
+    }
+  },
+  "cifar100_extracted": {
+    "path": "/content/drive/MyDrive/Research_Experiment/data/cifar-100-python",
+    "exists": false,
+    "size": null
+  },
+  "cache_dirs": {
+    "pip": 0,
+    "torch": 0,
+    "huggingface": 0,
+    "matplotlib": 0
+  }
+}
