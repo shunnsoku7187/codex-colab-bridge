@@ -1,0 +1,178 @@
+{
+  "status": "ok",
+  "purpose": "Credibility check for record-breaker full-fit results.",
+  "oracle_cost_at_target_accuracy": 3.362923,
+  "full_fit_best_cost": 3.3715725,
+  "results": [
+    {
+      "name": "cv_current_lgbm_less_constrained",
+      "protocol": "5-fold stratified CV by difficulty category",
+      "score_kind": "classifier",
+      "target": "low_correct",
+      "feature_set": "lightweight",
+      "samples": 10000,
+      "feature_count": 8,
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.9330255755167701,
+        "avg_cost": 16.267977,
+        "accuracy": 88.86,
+        "to_low": 770,
+        "to_high": 9230,
+        "easy_saved_ratio": 8.671820098383696
+      },
+      "routing_details": {
+        "true_easy_to_low": 602,
+        "true_inverse_to_low": 15,
+        "true_impossible_to_low": 39,
+        "true_hard_to_low": 114,
+        "true_easy_to_high": 6292,
+        "true_hard_to_high": 1977
+      }
+    },
+    {
+      "name": "cv_current_lgbm_deeper_margin",
+      "protocol": "5-fold stratified CV by difficulty category",
+      "score_kind": "classifier",
+      "target": "low_correct",
+      "feature_set": "lightweight",
+      "samples": 10000,
+      "feature_count": 8,
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.8542190727451118,
+        "avg_cost": 16.292195600000003,
+        "accuracy": 88.87,
+        "to_low": 756,
+        "to_high": 9244,
+        "easy_saved_ratio": 8.446943078004216
+      },
+      "routing_details": {
+        "true_easy_to_low": 584,
+        "true_inverse_to_low": 17,
+        "true_impossible_to_low": 40,
+        "true_hard_to_low": 115,
+        "true_easy_to_high": 6310,
+        "true_hard_to_high": 1976
+      }
+    },
+    {
+      "name": "cv_hog4x4_lgbm",
+      "protocol": "5-fold stratified CV by difficulty category",
+      "score_kind": "classifier",
+      "target": "low_correct",
+      "feature_set": "hog4x4",
+      "samples": 10000,
+      "feature_count": 576,
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.8528573901674248,
+        "avg_cost": 16.250678,
+        "accuracy": 88.89,
+        "to_low": 780,
+        "to_high": 9220,
+        "easy_saved_ratio": 8.573436401967674
+      },
+      "routing_details": {
+        "true_easy_to_low": 586,
+        "true_inverse_to_low": 24,
+        "true_impossible_to_low": 50,
+        "true_hard_to_low": 120,
+        "true_easy_to_high": 6308,
+        "true_hard_to_high": 1971
+      }
+    },
+    {
+      "name": "cv_hog4x4_soft_category_regressor",
+      "protocol": "5-fold stratified CV by difficulty category",
+      "score_kind": "regressor",
+      "target": "category_soft",
+      "feature_set": "hog4x4",
+      "samples": 10000,
+      "feature_count": 576,
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.8389430100527406,
+        "avg_cost": 16.3804205,
+        "accuracy": 88.89,
+        "to_low": 705,
+        "to_high": 9295,
+        "easy_saved_ratio": 7.702037947997189
+      },
+      "routing_details": {
+        "true_easy_to_low": 530,
+        "true_inverse_to_low": 18,
+        "true_impossible_to_low": 43,
+        "true_hard_to_low": 114,
+        "true_easy_to_high": 6364,
+        "true_hard_to_high": 1977
+      }
+    },
+    {
+      "name": "cv_lightweight_hog_lgbm",
+      "protocol": "5-fold stratified CV by difficulty category",
+      "score_kind": "classifier",
+      "target": "low_correct",
+      "feature_set": "lightweight_plus_hog4x4",
+      "samples": 10000,
+      "feature_count": 584,
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.8570360386793798,
+        "avg_cost": 16.2229996,
+        "accuracy": 88.88,
+        "to_low": 796,
+        "to_high": 9204,
+        "easy_saved_ratio": 9.037245256500352
+      },
+      "routing_details": {
+        "true_easy_to_low": 628,
+        "true_inverse_to_low": 15,
+        "true_impossible_to_low": 41,
+        "true_hard_to_low": 112,
+        "true_easy_to_high": 6266,
+        "true_hard_to_high": 1979
+      }
+    },
+    {
+      "name": "cv_lightweight_hog_soft_category_regressor",
+      "protocol": "5-fold stratified CV by difficulty category",
+      "score_kind": "regressor",
+      "target": "category_soft",
+      "feature_set": "lightweight_plus_hog4x4",
+      "samples": 10000,
+      "feature_count": 584,
+      "high_accuracy": 89.85,
+      "target_accuracy": 88.85,
+      "best": {
+        "threshold": 0.8455069507164858,
+        "avg_cost": 16.4980537,
+        "accuracy": 88.88,
+        "to_low": 637,
+        "to_high": 9363,
+        "easy_saved_ratio": 6.8025298664792695
+      },
+      "routing_details": {
+        "true_easy_to_low": 471,
+        "true_inverse_to_low": 13,
+        "true_impossible_to_low": 43,
+        "true_hard_to_low": 110,
+        "true_easy_to_high": 6423,
+        "true_hard_to_high": 1981
+      }
+    }
+  ],
+  "ranked_by_avg_cost": [
+    "cv_lightweight_hog_lgbm",
+    "cv_hog4x4_lgbm",
+    "cv_current_lgbm_less_constrained",
+    "cv_current_lgbm_deeper_margin",
+    "cv_hog4x4_soft_category_regressor",
+    "cv_lightweight_hog_soft_category_regressor"
+  ]
+}
