@@ -8,7 +8,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import cross_val_predict
 from tqdm import tqdm
 
-from src.experiment_paths import DATA_DIR, DIFFICULTY_LABELS_PATH, RESULTS_DIR, ensure_dirs
+from src.experiment_paths import ARTIFACT_DIR, DATA_DIR, DIFFICULTY_LABELS_PATH, RESULTS_DIR, ensure_dirs
 from src.research_features import extract_grid_features, extract_lightweight_features, extract_raw_pixel_features
 
 
@@ -17,36 +17,84 @@ FLOPS_HIGH = 17.6
 FLOPS_ROUTER = 0.0
 
 
+def cache_key(mode, max_samples):
+    suffix = str(max_samples) if max_samples else "full"
+    return ARTIFACT_DIR / f"router_features_{mode}_{suffix}.npz"
+
+
+def feature_mode(mode):
+    if mode in {"lightweight_rf", "lightweight_lgbm"}:
+        return "lightweight"
+    if mode == "ultimate_lgbm":
+        return "ultimate"
+    if mode == "robust_lgbm":
+        return "robust"
+    if mode == "raw_lgbm":
+        return "raw"
+    raise ValueError(mode)
+
+
 def build_dataset(mode, max_samples):
     data = json.loads(DIFFICULTY_LABELS_PATH.read_text(encoding="utf-8"))
     if max_samples:
         data = data[:max_samples]
+    cache_path = cache_key(feature_mode(mode), max_samples)
+    if cache_path.exists():
+        cached = np.load(cache_path, allow_pickle=True)
+        x_values = cached["x_values"]
+        y_values = cached["y_values"]
+        feature_names = cached["feature_names"].tolist()
+        if not feature_names:
+            feature_names = None
+        return data, x_values, y_values, feature_names
+
     cifar = torchvision.datasets.CIFAR100(root=str(DATA_DIR), train=False, download=True, transform=None)
 
     features = []
     feature_names = None
     for item in tqdm(data, desc=f"Extracting {mode} features"):
         img_pil, _ = cifar[item["index"]]
-        if mode == "lightweight_rf":
+        mode_for_features = feature_mode(mode)
+        if mode_for_features == "lightweight":
             feats = extract_lightweight_features(img_pil)
-        elif mode == "ultimate_lgbm":
+        elif mode_for_features == "ultimate":
             feats, names = extract_grid_features(img_pil, grid_size=4)
             feature_names = feature_names or names
-        elif mode == "robust_lgbm":
+        elif mode_for_features == "robust":
             feats, names = extract_grid_features(img_pil, grid_size=2)
             feature_names = feature_names or names
-        elif mode == "raw_lgbm":
+        elif mode_for_features == "raw":
             feats = extract_raw_pixel_features(img_pil)
         else:
             raise ValueError(mode)
         features.append(feats)
     labels = [1 if item["low_correct"] else 0 for item in data]
-    return data, np.array(features), np.array(labels), feature_names
+    x_values = np.array(features)
+    y_values = np.array(labels)
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    np.savez_compressed(
+        cache_path,
+        x_values=x_values,
+        y_values=y_values,
+        feature_names=np.array(feature_names or [], dtype=object),
+    )
+    print(f"Wrote feature cache: {cache_path}", flush=True)
+    return data, x_values, y_values, feature_names
 
 
 def classifier_for(mode):
     if mode == "lightweight_rf":
         return RandomForestClassifier(n_estimators=100, max_depth=6, random_state=42)
+    if mode == "lightweight_lgbm":
+        return lgb.LGBMClassifier(
+            n_estimators=100,
+            max_depth=6,
+            num_leaves=63,
+            learning_rate=0.05,
+            random_state=42,
+            n_jobs=-1,
+            importance_type="gain",
+        )
     if mode == "ultimate_lgbm":
         return lgb.LGBMClassifier(n_estimators=200, max_depth=6, num_leaves=63, learning_rate=0.05, random_state=42, n_jobs=-1, verbose=-1)
     if mode == "robust_lgbm":
@@ -80,14 +128,14 @@ def evaluate_routing(data, confidences):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mode", choices=["lightweight_rf", "ultimate_lgbm", "robust_lgbm", "raw_lgbm"], required=True)
+    parser.add_argument("--mode", choices=["lightweight_rf", "lightweight_lgbm", "ultimate_lgbm", "robust_lgbm", "raw_lgbm"], required=True)
     parser.add_argument("--max-samples", type=int, default=None)
     args = parser.parse_args()
 
     ensure_dirs()
     data, x_values, y_values, feature_names = build_dataset(args.mode, args.max_samples)
     clf = classifier_for(args.mode)
-    if args.mode == "lightweight_rf":
+    if args.mode in {"lightweight_rf", "lightweight_lgbm"}:
         clf.fit(x_values, y_values)
         confidences = clf.predict_proba(x_values)[:, 1]
     else:
@@ -102,6 +150,24 @@ def main():
         "target_accuracy": target_accuracy,
         "best": best,
     }
+    if hasattr(clf, "feature_importances_") and args.mode in {"lightweight_rf", "lightweight_lgbm"}:
+        names = feature_names or [
+            "Variance",
+            "Edge Mean",
+            "Edge Density",
+            "Color Variance",
+            "Extreme Pixels",
+            "Total Variation",
+            "Center-Surround",
+            "Flatness",
+        ]
+        importances = np.asarray(clf.feature_importances_, dtype=float)
+        if importances.sum() > 0:
+            importances = 100.0 * importances / importances.sum()
+        output["feature_importances"] = [
+            {"name": name, "importance_pct": float(value)}
+            for name, value in sorted(zip(names, importances), key=lambda item: item[1], reverse=True)
+        ]
     if feature_names:
         output["feature_names"] = feature_names
     output_path = RESULTS_DIR / f"router_eval_{args.mode}.json"
