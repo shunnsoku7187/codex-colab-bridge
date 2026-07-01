@@ -1,8 +1,10 @@
 {
   "id": "audit_drive_inputs_001",
-  "status": "pending",
+  "status": "running",
   "type": "shell",
   "cwd": ".",
   "command": "python -m scripts.audit_drive_inputs",
-  "max_runtime_sec": 300
+  "max_runtime_sec": 300,
+  "updated_at": "2026-07-01T14:55:48.974934+00:00",
+  "started_at": "2026-07-01T14:55:48.974917+00:00"
 }
