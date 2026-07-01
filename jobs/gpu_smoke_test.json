@@ -1,0 +1,7 @@
+{
+  "id": "gpu_smoke_test",
+  "status": "pending",
+  "type": "shell",
+  "cwd": ".",
+  "command": "python src/train.py --config configs/config.yaml --out results/gpu_smoke_test_train_output.json"
+}

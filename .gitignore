@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+
+# Keep heavy outputs out of GitHub.
+artifacts/*
+!artifacts/.gitkeep
+results/local_*.json
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.bin
+*.parquet
+*.zip
+*.tar
+*.tar.gz
