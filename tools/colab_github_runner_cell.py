@@ -34,6 +34,8 @@ RESULTS_DIR = REPO_DIR / "results"
 ARTIFACTS_DIR = REPO_DIR / "artifacts"
 
 POLL_SECONDS = 10
+MAX_IDLE_SECONDS = 300
+PRINT_IDLE_EVERY_SECONDS = 60
 GIT_USER_NAME = "colab-runner"
 GIT_USER_EMAIL = "colab-runner@example.invalid"
 
@@ -241,15 +243,24 @@ def execute_job(job_path):
 setup_repo()
 print(f"Watching GitHub repo: {OWNER}/{REPO}:{BRANCH}")
 print(f"Pending jobs directory: {JOBS_DIR}")
+print(f"Runner will stop after {MAX_IDLE_SECONDS} seconds with no pending jobs.")
 
-while True:
+idle_started_at = time.time()
+last_idle_print_at = 0
+
+while time.time() - idle_started_at < MAX_IDLE_SECONDS:
     try:
         pull_latest()
         ran_any = False
         for job_path in sorted(JOBS_DIR.glob("*.json")):
             ran_any = execute_job(job_path) or ran_any
-        if not ran_any:
+        if ran_any:
+            idle_started_at = time.time()
+        elif time.time() - last_idle_print_at >= PRINT_IDLE_EVERY_SECONDS:
             print(f"{utc_now()} no pending jobs")
+            last_idle_print_at = time.time()
     except Exception:
         print(traceback.format_exc())
     time.sleep(POLL_SECONDS)
+
+print(f"{utc_now()} no pending jobs for {MAX_IDLE_SECONDS} seconds; runner stopped.")
