@@ -69,6 +69,14 @@ Decision:
 
 For an independent router to beat the measured cascade cost, it must route roughly the same number of samples to the low model as cascade does, while avoiding the cascade double-inference penalty on high-routed samples. The current handcrafted CV routers route only about 600-741 samples to low, versus 5248 for cascade, so their signal is far too weak.
 
-Next remaining candidate:
+Rejected direction:
 
-- `train_tiny_image_router_001`: a tiny CNN binary router trained with strict CV to predict whether MobileNet is sufficient from the image itself.
+- Tiny CNN / image-learned independent routers. If the router itself becomes a learned image model, the proposal loses the main hardware argument and starts to look like "just use cascade."
+
+Notebook reproduction target:
+
+- `reproduce_notebook_tree_router_001`: reproduce notebook cell 6, the 8-feature RandomForest/decision-tree based router that produced the 14.747 GFLOPs result.
+
+Reporting caveat:
+
+- The 14.747 GFLOPs result is the original notebook-compatible full-fit result, not strict cross-validation. It is still the target to reproduce when matching the notebook, but strict-CV results should remain separate.
