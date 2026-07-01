@@ -3,6 +3,6 @@
   "status": "template",
   "type": "shell",
   "cwd": ".",
-  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.prepare_difficulty_labels --force --batch-size 50 && python -m scripts.summarize_difficulty_labels",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.prepare_difficulty_labels --batch-size 50 && python -m scripts.summarize_difficulty_labels",
   "max_runtime_sec": 7200
 }

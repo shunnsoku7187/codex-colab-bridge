@@ -1,8 +1,9 @@
 {
   "id": "prepare_difficulty_labels_smoke_003",
-  "status": "pending",
+  "status": "abandoned",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.prepare_difficulty_labels --force --max-samples 500 --batch-size 50 && python -m scripts.summarize_difficulty_labels",
-  "max_runtime_sec": 1800
+  "max_runtime_sec": 1800,
+  "note": "Existing full difficulty labels are available in Google Drive Research_Experiment."
 }

@@ -4,7 +4,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = Path(os.environ.get("CODEX_COLAB_DATA_DIR", REPO_ROOT / "data")).expanduser()
-ARTIFACT_DIR = REPO_ROOT / "artifacts" / "research_experiment"
+ARTIFACT_DIR = Path(os.environ.get("CODEX_COLAB_ARTIFACT_DIR", REPO_ROOT / "artifacts" / "research_experiment")).expanduser()
 RESULTS_DIR = REPO_ROOT / "results"
 LOGS_DIR = REPO_ROOT / "logs"
 

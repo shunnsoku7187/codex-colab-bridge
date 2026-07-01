@@ -58,6 +58,16 @@ This keeps CIFAR-100, Torch Hub weights, Hugging Face model files, and pip cache
 outside Git while avoiding repeated downloads across Colab sessions. Git should
 only receive small logs, result summaries, and compact experiment artifacts.
 
+Existing experiment artifacts are read from:
+
+```text
+/content/drive/MyDrive/Research_Experiment
+```
+
+That folder already contains `cifar100_difficulty_labels.json`, so the label
+preparation job should not be rerun unless the labels intentionally need to be
+regenerated.
+
 ## Running a Codex-authored notebook on Colab
 
 Codex edits notebooks under `notebooks/`, but Colab should be used only for the
