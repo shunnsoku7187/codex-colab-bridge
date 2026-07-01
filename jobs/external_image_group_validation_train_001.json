@@ -1,10 +1,13 @@
 {
   "id": "external_image_group_validation_train_001",
-  "status": "running",
+  "status": "failed",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.external_image_group_validation --split train --max-samples 10000 --batch-size 64 --seed 123",
   "max_runtime_sec": 7200,
-  "updated_at": "2026-07-01T20:02:19.684014+00:00",
-  "started_at": "2026-07-01T20:02:19.683984+00:00"
+  "updated_at": "2026-07-01T22:02:22.577529+00:00",
+  "started_at": "2026-07-01T20:02:19.683984+00:00",
+  "returncode": -9,
+  "finished_at": "2026-07-01T22:02:22.573333+00:00",
+  "result_file": "results/external_image_group_validation_train_001.json"
 }
