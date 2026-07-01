@@ -1,9 +1,11 @@
 {
   "id": "run_intermediate_cell0_diagnostic_001",
-  "status": "pending",
+  "status": "running",
   "type": "notebook",
   "notebook": "notebooks/intermediate_experiment_cell0_diagnostic.ipynb",
   "output_name": "intermediate_experiment_cell0_diagnostic_001_executed.ipynb",
   "timeout": 600,
-  "max_runtime_sec": 900
+  "max_runtime_sec": 900,
+  "updated_at": "2026-07-01T11:00:42.178976+00:00",
+  "started_at": "2026-07-01T11:00:42.178960+00:00"
 }
