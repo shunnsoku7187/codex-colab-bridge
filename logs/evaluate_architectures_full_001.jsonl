@@ -1,1 +1,2 @@
 {"time": "2026-07-01T16:36:23.751564+00:00", "event": "job_running", "job_file": "jobs/evaluate_architectures_full_001.json"}
+{"time": "2026-07-01T16:36:24.957077+00:00", "event": "process_prepared", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.evaluate_architectures --batch-size 128", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 7200}
