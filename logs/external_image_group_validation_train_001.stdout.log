@@ -53,3 +53,8 @@ Downloading: "https://github.com/chenyaofo/pytorch-cifar-models/releases/downloa
 100%|██████████| 3.29M/3.29M [00:00<00:00, 47.9MB/s]
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 200/200 [00:00<00:00, 12213.16it/s]
+
+External train inference:   0%|          | 0/157 [00:00<?, ?it/s]
+External train inference:   1%|          | 1/157 [00:59<2:34:49, 59.55s/it]
