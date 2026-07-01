@@ -48,8 +48,14 @@ copying logs by hand.
 
 ## Running a Codex-authored notebook on Colab
 
-Codex edits notebooks under `notebooks/`. Heavy preparation that does not need
-to be inside a notebook lives under `scripts/`.
+Codex edits notebooks under `notebooks/`, but Colab should be used only for the
+heavy experiment jobs. Keep notebook execution for final inspection or
+visualization. The normal loop is:
+
+1. Codex prepares scripts, configs, and pending job JSON in Git.
+2. You press the Colab runner cell once.
+3. Colab runs only pending jobs and pushes logs, results, and small artifacts.
+4. Codex pulls the result files and decides the next job.
 
 Before running the analysis notebook, prepare the difficulty-label artifact:
 
@@ -66,6 +72,18 @@ jobs/prepare_difficulty_labels_smoke_001.json
 It runs only 500 CIFAR-100 samples. After that succeeds, copy
 `jobs/prepare_difficulty_labels_full_template.json` and change `"status"` to
 `"pending"` for the full 10,000-sample run.
+
+After the label artifact exists, use these Git-prepared jobs instead of running
+the notebook cells directly:
+
+```text
+jobs/evaluate_architectures_smoke_001.json
+jobs/evaluate_router_smoke_template.json
+```
+
+`evaluate_architectures.py` covers the cascade/parallel MobileNet confidence
+evaluation. `evaluate_router.py` covers the lightweight-feature and LightGBM
+router experiments. Both write machine-readable summaries under `results/`.
 
 To run a notebook on Colab, copy the template job and change `"status"` from
 `"template"` to `"pending"`:
