@@ -94,6 +94,15 @@ Download necessity audit:
 Use `jobs/audit_drive_inputs_001.json` to verify the current Drive contents
 without downloading anything.
 
+If Colab raises `MessageError: credential propagation was unsuccessful` while
+mounting Drive, run this once in a separate Colab cell, approve the prompt, and
+then rerun the bootstrap runner:
+
+```python
+from google.colab import drive
+drive.mount('/content/drive', force_remount=True)
+```
+
 ## Running a Codex-authored notebook on Colab
 
 Codex edits notebooks under `notebooks/`, but Colab should be used only for the

@@ -81,9 +81,38 @@ def setup_repo():
     setup_persistent_cache()
 
 
+def is_drive_mounted():
+    return (DRIVE_MOUNT_POINT / "MyDrive").exists()
+
+
+def mount_google_drive():
+    if is_drive_mounted():
+        print(f"Google Drive already mounted at {DRIVE_MOUNT_POINT}")
+        return
+    try:
+        drive.mount(str(DRIVE_MOUNT_POINT), force_remount=False, timeout_ms=120000)
+    except Exception as exc:
+        if is_drive_mounted():
+            print(f"Google Drive mount reported an error, but MyDrive is available: {exc}")
+            return
+        raise RuntimeError(
+            "Google Drive mount failed. In Colab, run this once in a separate cell, "
+            "approve the prompt, then rerun the bootstrap runner:\n\n"
+            "from google.colab import drive\n"
+            "drive.mount('/content/drive', force_remount=True)\n\n"
+            f"Original error: {exc}"
+        ) from exc
+    if not is_drive_mounted():
+        raise RuntimeError(
+            "Google Drive mount finished, but /content/drive/MyDrive is not visible. "
+            "Please run drive.mount('/content/drive', force_remount=True) manually, "
+            "then rerun the bootstrap runner."
+        )
+
+
 def setup_persistent_cache():
     if USE_GOOGLE_DRIVE_CACHE:
-        drive.mount(str(DRIVE_MOUNT_POINT), force_remount=False)
+        mount_google_drive()
         cache_root = DRIVE_CACHE_ROOT
     else:
         cache_root = ROOT / "cache"
