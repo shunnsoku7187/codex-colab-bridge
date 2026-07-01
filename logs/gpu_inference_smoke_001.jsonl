@@ -1,1 +1,2 @@
 {"time": "2026-07-01T15:00:31.336747+00:00", "event": "job_running", "job_file": "jobs/gpu_inference_smoke_001.json"}
+{"time": "2026-07-01T15:00:32.528707+00:00", "event": "process_prepared", "command": "python -m scripts.gpu_inference_smoke", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 300}
