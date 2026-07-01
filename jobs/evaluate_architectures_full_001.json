@@ -1,8 +1,10 @@
 {
   "id": "evaluate_architectures_full_001",
-  "status": "pending",
+  "status": "running",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.evaluate_architectures --batch-size 128",
-  "max_runtime_sec": 7200
+  "max_runtime_sec": 7200,
+  "updated_at": "2026-07-01T16:36:23.751124+00:00",
+  "started_at": "2026-07-01T16:36:23.751107+00:00"
 }
