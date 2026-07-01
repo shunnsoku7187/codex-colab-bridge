@@ -171,3 +171,33 @@ Loading HOG feature cache: /content/drive/MyDrive/Research_Experiment/record_bre
 /usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
   warnings.warn(
 {
+  "name": "cv_hog4x4_soft_category_regressor",
+  "protocol": "5-fold stratified CV by difficulty category",
+  "score_kind": "regressor",
+  "target": "category_soft",
+  "feature_set": "hog4x4",
+  "samples": 10000,
+  "feature_count": 576,
+  "high_accuracy": 89.85,
+  "target_accuracy": 88.85,
+  "best": {
+    "threshold": 0.8389430100527406,
+    "avg_cost": 16.3804205,
+    "accuracy": 88.89,
+    "to_low": 705,
+    "to_high": 9295,
+    "easy_saved_ratio": 7.702037947997189
+  },
+  "routing_details": {
+    "true_easy_to_low": 530,
+    "true_inverse_to_low": 18,
+    "true_impossible_to_low": 43,
+    "true_hard_to_low": 114,
+    "true_easy_to_high": 6364,
+    "true_hard_to_high": 1977
+  }
+}
+=== strict-CV record-breaker validation: cv_lightweight_hog_lgbm ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/
