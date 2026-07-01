@@ -73,10 +73,28 @@ Rejected direction:
 
 - Tiny CNN / image-learned independent routers. If the router itself becomes a learned image model, the proposal loses the main hardware argument and starts to look like "just use cascade."
 
-Notebook reproduction target:
+Current primary candidate family:
+
+- `lightweight_lgbm` / notebook cell 7.
+- 8 FPGA-streamable lightweight statistics.
+- LightGBM/tree-ensemble decision logic with zero-DSP-style routing assumption.
+
+Best current notebook-compatible result:
+
+| method | features | avg cost | accuracy | to low | easy saved |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `lightweight_lgbm` | 8 | 11.1146 | 88.95% | 3749 | 49.08% |
+
+This is currently the strongest direction to reproduce and refine. It is close to the original decision-tree/RF idea, but materially better than the RF cell.
+
+Nearby comparison target:
 
 - `reproduce_notebook_tree_router_001`: reproduce notebook cell 6, the 8-feature RandomForest/decision-tree based router that produced the 14.747 GFLOPs result.
 
 Reporting caveat:
 
-- The 14.747 GFLOPs result is the original notebook-compatible full-fit result, not strict cross-validation. It is still the target to reproduce when matching the notebook, but strict-CV results should remain separate.
+- The 11.1146 and 14.747 GFLOPs results are original notebook-compatible full-fit results, not strict cross-validation. They are the right targets when reproducing and refining the notebook, while strict-CV results should remain separate.
+
+Next focused job:
+
+- `reproduce_lightweight_lgbm_family_001`: rerun the notebook cell 7 candidate and close LightGBM/tree variants using the same 8-feature setup.

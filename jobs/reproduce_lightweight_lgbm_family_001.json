@@ -1,0 +1,8 @@
+{
+  "id": "reproduce_lightweight_lgbm_family_001",
+  "status": "pending",
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.reproduce_lightweight_lgbm_family",
+  "max_runtime_sec": 1800
+}
