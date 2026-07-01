@@ -1,0 +1,41 @@
+{
+  "mode": "robust_lgbm",
+  "samples": 10000,
+  "feature_count": 24,
+  "high_accuracy": 89.85,
+  "target_accuracy": 88.85,
+  "best": {
+    "threshold": 0.84,
+    "avg_cost": 16.304304899999998,
+    "accuracy": 88.91,
+    "to_low": 749,
+    "to_high": 9251,
+    "easy_saved_ratio": 8.432888264230499
+  },
+  "feature_names": [
+    "Global_Variance",
+    "Global_EdgeMean",
+    "Global_EdgeDensity",
+    "Global_ColorVar",
+    "Global_ExtremePix",
+    "Global_TV",
+    "Global_CenterSurround",
+    "Global_Flatness",
+    "Grid_0_0_Var",
+    "Grid_0_0_Edge",
+    "Grid_0_0_TV",
+    "Grid_0_0_HighFreq",
+    "Grid_0_1_Var",
+    "Grid_0_1_Edge",
+    "Grid_0_1_TV",
+    "Grid_0_1_HighFreq",
+    "Grid_1_0_Var",
+    "Grid_1_0_Edge",
+    "Grid_1_0_TV",
+    "Grid_1_0_HighFreq",
+    "Grid_1_1_Var",
+    "Grid_1_1_Edge",
+    "Grid_1_1_TV",
+    "Grid_1_1_HighFreq"
+  ]
+}
