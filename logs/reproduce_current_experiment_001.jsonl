@@ -1,2 +1,4 @@
 {"time": "2026-07-01T15:06:17.810325+00:00", "event": "job_running", "job_file": "jobs/reproduce_current_experiment_001.json"}
 {"time": "2026-07-01T15:06:18.951405+00:00", "event": "process_prepared", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.reproduce_current_experiment", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 600}
+{"time": "2026-07-01T15:06:20.105888+00:00", "event": "process_start", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.reproduce_current_experiment", "cwd": "/content/codex_colab_bridge/codex-colab-bridge"}
+{"time": "2026-07-01T15:06:26.092488+00:00", "event": "process_end", "returncode": 0, "duration_sec": 5.986}
