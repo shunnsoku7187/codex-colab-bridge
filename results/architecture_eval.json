@@ -1,0 +1,21 @@
+{
+  "samples": 10000,
+  "high_accuracy": 89.85,
+  "target_accuracy": 88.85,
+  "cascade": {
+    "mode": "cascade",
+    "threshold": 0.975,
+    "avg_cost": 8.664520000000001,
+    "accuracy": 88.88,
+    "to_low": 5248,
+    "to_high": 4752
+  },
+  "parallel": {
+    "mode": "parallel",
+    "threshold": 0.975,
+    "avg_cost": 9.588168000000001,
+    "accuracy": 88.88,
+    "to_low": 5248,
+    "to_high": 4752
+  }
+}

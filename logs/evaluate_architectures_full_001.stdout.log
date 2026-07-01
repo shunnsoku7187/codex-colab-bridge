@@ -63,3 +63,158 @@ The repository chenyaofo_pytorch-cifar-models does not belong to the list of tru
     response = input(
                ^^^^^^
 EOFError: EOF when reading a line
+Requirement already satisfied: matplotlib-venn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 1)) (1.1.2)
+Requirement already satisfied: torchinfo in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 2)) (1.8.0)
+Requirement already satisfied: transformers in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 3)) (5.12.1)
+Requirement already satisfied: opencv-python-headless in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 4)) (4.13.0.92)
+Requirement already satisfied: scikit-learn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 5)) (1.6.1)
+Requirement already satisfied: lightgbm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 6)) (4.6.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 7)) (4.67.3)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 1)) (3.10.0)
+Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 1)) (2.0.2)
+Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 1)) (1.16.3)
+Requirement already satisfied: huggingface-hub<2.0,>=1.5.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (1.20.1)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (26.2)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (6.0.3)
+Requirement already satisfied: regex>=2025.10.22 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (2025.11.3)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (0.22.2)
+Requirement already satisfied: typer in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (0.25.1)
+Requirement already satisfied: safetensors>=0.4.3 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (0.8.0)
+Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 5)) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 5)) (3.6.0)
+Requirement already satisfied: click>=8.4.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (8.4.2)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (3.29.4)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (2025.3.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.5.1 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (1.5.1)
+Requirement already satisfied: httpx<1,>=0.23.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (0.28.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (4.15.0)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 3)) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 3)) (13.9.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 3)) (0.0.4)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (4.63.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (1.5.0)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (11.3.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (2.9.0.post0)
+Requirement already satisfied: anyio in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (4.14.0)
+Requirement already satisfied: certifi in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (2026.6.17)
+Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (1.0.9)
+Requirement already satisfied: idna in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (3.18)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/dist-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (0.16.0)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.7->matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (1.17.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (0.1.2)
+Using device: cuda
+Downloading: "https://github.com/chenyaofo/pytorch-cifar-models/zipball/master" to /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/master.zip
+Downloading: "https://github.com/chenyaofo/pytorch-cifar-models/releases/download/mobilenetv2/cifar100_mobilenetv2_x1_0-1311f9ff.pt" to /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/checkpoints/cifar100_mobilenetv2_x1_0-1311f9ff.pt
+
+  0%|          | 0.00/9.21M [00:00<?, ?B/s]
+ 57%|█████▋    | 5.25M/9.21M [00:00<00:00, 54.4MB/s]
+100%|██████████| 9.21M/9.21M [00:00<00:00, 60.7MB/s]
+
+Low confidence inference:   0%|          | 0/79 [00:00<?, ?it/s]
+Low confidence inference:   1%|▏         | 1/79 [00:00<01:15,  1.03it/s]
+Low confidence inference:   3%|▎         | 2/79 [00:01<00:37,  2.04it/s]
+Low confidence inference:   4%|▍         | 3/79 [00:01<00:25,  3.01it/s]
+Low confidence inference:   5%|▌         | 4/79 [00:01<00:19,  3.84it/s]
+Low confidence inference:   6%|▋         | 5/79 [00:01<00:16,  4.43it/s]
+Low confidence inference:   8%|▊         | 6/79 [00:01<00:14,  4.93it/s]
+Low confidence inference:   9%|▉         | 7/79 [00:01<00:13,  5.42it/s]
+Low confidence inference:  10%|█         | 8/79 [00:02<00:12,  5.78it/s]
+Low confidence inference:  11%|█▏        | 9/79 [00:02<00:11,  6.01it/s]
+Low confidence inference:  13%|█▎        | 10/79 [00:02<00:11,  6.19it/s]
+Low confidence inference:  14%|█▍        | 11/79 [00:02<00:10,  6.29it/s]
+Low confidence inference:  15%|█▌        | 12/79 [00:02<00:10,  6.47it/s]
+Low confidence inference:  16%|█▋        | 13/79 [00:02<00:10,  6.37it/s]
+Low confidence inference:  18%|█▊        | 14/79 [00:02<00:10,  6.23it/s]
+Low confidence inference:  19%|█▉        | 15/79 [00:03<00:09,  6.70it/s]
+Low confidence inference:  20%|██        | 16/79 [00:03<00:10,  5.96it/s]
+Low confidence inference:  22%|██▏       | 17/79 [00:03<00:10,  6.07it/s]
+Low confidence inference:  23%|██▎       | 18/79 [00:03<00:10,  5.96it/s]
+Low confidence inference:  24%|██▍       | 19/79 [00:03<00:09,  6.10it/s]
+Low confidence inference:  25%|██▌       | 20/79 [00:03<00:09,  6.06it/s]
+Low confidence inference:  27%|██▋       | 21/79 [00:04<00:09,  6.38it/s]
+Low confidence inference:  28%|██▊       | 22/79 [00:04<00:08,  6.53it/s]
+Low confidence inference:  29%|██▉       | 23/79 [00:04<00:08,  6.58it/s]
+Low confidence inference:  30%|███       | 24/79 [00:04<00:08,  6.51it/s]
+Low confidence inference:  32%|███▏      | 25/79 [00:04<00:08,  6.45it/s]
+Low confidence inference:  33%|███▎      | 26/79 [00:04<00:08,  6.47it/s]
+Low confidence inference:  34%|███▍      | 27/79 [00:05<00:08,  6.47it/s]
+Low confidence inference:  35%|███▌      | 28/79 [00:05<00:08,  6.17it/s]
+Low confidence inference:  37%|███▋      | 29/79 [00:05<00:08,  5.84it/s]
+Low confidence inference:  38%|███▊      | 30/79 [00:05<00:08,  5.93it/s]
+Low confidence inference:  39%|███▉      | 31/79 [00:05<00:07,  6.10it/s]
+Low confidence inference:  41%|████      | 32/79 [00:05<00:07,  6.39it/s]
+Low confidence inference:  42%|████▏     | 33/79 [00:05<00:07,  6.52it/s]
+Low confidence inference:  43%|████▎     | 34/79 [00:06<00:06,  6.70it/s]
+Low confidence inference:  44%|████▍     | 35/79 [00:06<00:06,  6.67it/s]
+Low confidence inference:  46%|████▌     | 36/79 [00:06<00:06,  6.40it/s]
+Low confidence inference:  47%|████▋     | 37/79 [00:06<00:06,  6.47it/s]
+Low confidence inference:  48%|████▊     | 38/79 [00:06<00:06,  6.56it/s]
+Low confidence inference:  49%|████▉     | 39/79 [00:06<00:06,  6.54it/s]
+Low confidence inference:  51%|█████     | 40/79 [00:07<00:05,  6.67it/s]
+Low confidence inference:  52%|█████▏    | 41/79 [00:07<00:05,  6.60it/s]
+Low confidence inference:  53%|█████▎    | 42/79 [00:07<00:05,  6.62it/s]
+Low confidence inference:  54%|█████▍    | 43/79 [00:07<00:05,  6.56it/s]
+Low confidence inference:  56%|█████▌    | 44/79 [00:07<00:05,  6.63it/s]
+Low confidence inference:  57%|█████▋    | 45/79 [00:07<00:05,  6.70it/s]
+Low confidence inference:  58%|█████▊    | 46/79 [00:07<00:05,  6.57it/s]
+Low confidence inference:  59%|█████▉    | 47/79 [00:08<00:04,  6.68it/s]
+Low confidence inference:  61%|██████    | 48/79 [00:08<00:04,  6.86it/s]
+Low confidence inference:  62%|██████▏   | 49/79 [00:08<00:04,  7.34it/s]
+Low confidence inference:  63%|██████▎   | 50/79 [00:08<00:04,  6.81it/s]
+Low confidence inference:  65%|██████▍   | 51/79 [00:08<00:03,  7.07it/s]
+Low confidence inference:  66%|██████▌   | 52/79 [00:08<00:03,  7.11it/s]
+Low confidence inference:  67%|██████▋   | 53/79 [00:08<00:03,  6.68it/s]
+Low confidence inference:  68%|██████▊   | 54/79 [00:09<00:04,  6.23it/s]
+Low confidence inference:  70%|██████▉   | 55/79 [00:09<00:03,  6.29it/s]
+Low confidence inference:  71%|███████   | 56/79 [00:09<00:03,  6.32it/s]
+Low confidence inference:  72%|███████▏  | 57/79 [00:09<00:03,  6.35it/s]
+Low confidence inference:  73%|███████▎  | 58/79 [00:09<00:03,  6.21it/s]
+Low confidence inference:  75%|███████▍  | 59/79 [00:09<00:03,  6.29it/s]
+Low confidence inference:  76%|███████▌  | 60/79 [00:10<00:02,  6.35it/s]
+Low confidence inference:  77%|███████▋  | 61/79 [00:10<00:02,  6.39it/s]
+Low confidence inference:  78%|███████▊  | 62/79 [00:10<00:02,  6.41it/s]
+Low confidence inference:  80%|███████▉  | 63/79 [00:10<00:02,  6.52it/s]
+Low confidence inference:  81%|████████  | 64/79 [00:10<00:02,  6.53it/s]
+Low confidence inference:  82%|████████▏ | 65/79 [00:10<00:02,  6.54it/s]
+Low confidence inference:  84%|████████▎ | 66/79 [00:11<00:02,  6.49it/s]
+Low confidence inference:  85%|████████▍ | 67/79 [00:11<00:01,  6.50it/s]
+Low confidence inference:  86%|████████▌ | 68/79 [00:11<00:01,  6.22it/s]
+Low confidence inference:  87%|████████▋ | 69/79 [00:11<00:01,  6.57it/s]
+Low confidence inference:  89%|████████▊ | 70/79 [00:11<00:01,  6.97it/s]
+Low confidence inference:  90%|████████▉ | 71/79 [00:11<00:01,  6.92it/s]
+Low confidence inference:  91%|█████████ | 72/79 [00:11<00:00,  7.09it/s]
+Low confidence inference:  92%|█████████▏| 73/79 [00:12<00:00,  7.17it/s]
+Low confidence inference:  94%|█████████▎| 74/79 [00:12<00:00,  7.00it/s]
+Low confidence inference:  95%|█████████▍| 75/79 [00:12<00:00,  6.79it/s]
+Low confidence inference:  96%|█████████▌| 76/79 [00:12<00:00,  6.73it/s]
+Low confidence inference:  97%|█████████▋| 77/79 [00:12<00:00,  6.81it/s]
+Low confidence inference:  99%|█████████▊| 78/79 [00:12<00:00,  6.90it/s]
+Low confidence inference: 100%|██████████| 79/79 [00:12<00:00,  6.58it/s]
+Low confidence inference: 100%|██████████| 79/79 [00:12<00:00,  6.11it/s]
+Wrote 10000 enriched records to /content/drive/MyDrive/Research_Experiment/cifar100_low_confidence_x1_0.json
+{
+  "samples": 10000,
+  "high_accuracy": 89.85,
+  "target_accuracy": 88.85,
+  "cascade": {
+    "mode": "cascade",
+    "threshold": 0.975,
+    "avg_cost": 8.664520000000001,
+    "accuracy": 88.88,
+    "to_low": 5248,
+    "to_high": 4752
+  },
+  "parallel": {
+    "mode": "parallel",
+    "threshold": 0.975,
+    "avg_cost": 9.588168000000001,
+    "accuracy": 88.88,
+    "to_low": 5248,
+    "to_high": 4752
+  }
+}
