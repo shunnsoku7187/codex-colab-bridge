@@ -8,7 +8,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import cross_val_predict
 from tqdm import tqdm
 
-from src.experiment_paths import DIFFICULTY_LABELS_PATH, RESULTS_DIR, ensure_dirs
+from src.experiment_paths import DATA_DIR, DIFFICULTY_LABELS_PATH, RESULTS_DIR, ensure_dirs
 from src.research_features import extract_grid_features, extract_lightweight_features, extract_raw_pixel_features
 
 
@@ -21,7 +21,7 @@ def build_dataset(mode, max_samples):
     data = json.loads(DIFFICULTY_LABELS_PATH.read_text(encoding="utf-8"))
     if max_samples:
         data = data[:max_samples]
-    cifar = torchvision.datasets.CIFAR100(root="./data", train=False, download=True, transform=None)
+    cifar = torchvision.datasets.CIFAR100(root=str(DATA_DIR), train=False, download=True, transform=None)
 
     features = []
     feature_names = None

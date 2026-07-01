@@ -6,6 +6,7 @@
 # 3. Run this cell in a GPU runtime whenever you want to process queued jobs.
 
 import json
+import os
 import shlex
 import subprocess
 import time
@@ -13,7 +14,7 @@ import traceback
 from datetime import datetime, timezone
 from pathlib import Path
 
-from google.colab import userdata
+from google.colab import drive, userdata
 
 
 OWNER = "shunnsoku7187"
@@ -36,6 +37,10 @@ EXECUTED_NOTEBOOKS_DIR = REPO_DIR / "executed_notebooks"
 
 GIT_USER_NAME = "colab-runner"
 GIT_USER_EMAIL = "colab-runner@example.invalid"
+
+USE_GOOGLE_DRIVE_CACHE = True
+DRIVE_MOUNT_POINT = Path("/content/drive")
+DRIVE_CACHE_ROOT = DRIVE_MOUNT_POINT / "MyDrive" / "codex_colab_bridge_cache"
 
 
 def utc_now():
@@ -72,6 +77,30 @@ def setup_repo():
     run(f"git config user.email {shlex.quote(GIT_USER_EMAIL)}", cwd=REPO_DIR)
     for directory in [JOBS_DIR, LOGS_DIR, RESULTS_DIR, ARTIFACTS_DIR, EXECUTED_NOTEBOOKS_DIR]:
         directory.mkdir(parents=True, exist_ok=True)
+    setup_persistent_cache()
+
+
+def setup_persistent_cache():
+    if USE_GOOGLE_DRIVE_CACHE:
+        drive.mount(str(DRIVE_MOUNT_POINT), force_remount=False)
+        cache_root = DRIVE_CACHE_ROOT
+    else:
+        cache_root = ROOT / "cache"
+
+    cache_dirs = {
+        "CODEX_COLAB_CACHE_ROOT": cache_root,
+        "CODEX_COLAB_DATA_DIR": cache_root / "data",
+        "TORCH_HOME": cache_root / "torch",
+        "HF_HOME": cache_root / "huggingface",
+        "HUGGINGFACE_HUB_CACHE": cache_root / "huggingface" / "hub",
+        "TRANSFORMERS_CACHE": cache_root / "huggingface" / "transformers",
+        "XDG_CACHE_HOME": cache_root / "xdg",
+        "PIP_CACHE_DIR": cache_root / "pip",
+    }
+    for key, path in cache_dirs.items():
+        path.mkdir(parents=True, exist_ok=True)
+        os.environ[key] = str(path)
+    print(f"Persistent cache root: {cache_root}")
 
 
 def pull_latest():

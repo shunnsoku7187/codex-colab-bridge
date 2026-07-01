@@ -9,7 +9,7 @@ from torch.utils.data import DataLoader, Subset
 from tqdm import tqdm
 from transformers import ViTForImageClassification
 
-from src.experiment_paths import DIFFICULTY_LABELS_PATH, ensure_dirs
+from src.experiment_paths import DATA_DIR, DIFFICULTY_LABELS_PATH, ensure_dirs
 
 
 def custom_collate(batch):
@@ -47,7 +47,7 @@ def run_inference(output_path, batch_size, max_samples):
     ])
 
     print("Preparing CIFAR-100 test set...", flush=True)
-    dataset = torchvision.datasets.CIFAR100(root="./data", train=False, download=True, transform=None)
+    dataset = torchvision.datasets.CIFAR100(root=str(DATA_DIR), train=False, download=True, transform=None)
     if max_samples is not None:
         dataset = Subset(dataset, range(min(max_samples, len(dataset))))
     loader = DataLoader(dataset, batch_size=batch_size, shuffle=False, collate_fn=custom_collate)

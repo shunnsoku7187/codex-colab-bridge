@@ -8,7 +8,7 @@ import torchvision
 import torchvision.transforms as transforms
 from tqdm import tqdm
 
-from src.experiment_paths import ARTIFACT_DIR, DIFFICULTY_LABELS_PATH, RESULTS_DIR, ensure_dirs
+from src.experiment_paths import ARTIFACT_DIR, DATA_DIR, DIFFICULTY_LABELS_PATH, RESULTS_DIR, ensure_dirs
 
 
 FLOPS_LOW = 0.301
@@ -35,7 +35,7 @@ def add_low_confidence(data, output_path, batch_size):
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.5071, 0.4867, 0.4408], std=[0.2675, 0.2565, 0.2761]),
     ])
-    dataset = torchvision.datasets.CIFAR100(root="./data", train=False, download=True, transform=None)
+    dataset = torchvision.datasets.CIFAR100(root=str(DATA_DIR), train=False, download=True, transform=None)
 
     enriched = [dict(item) for item in data]
     with torch.no_grad():

@@ -46,6 +46,18 @@ results/gpu_smoke_test.json
 After the first run, Codex can create new job files and inspect results without
 copying logs by hand.
 
+## Persistent Colab Cache
+
+The runner mounts Google Drive and stores reusable downloads under:
+
+```text
+/content/drive/MyDrive/codex_colab_bridge_cache
+```
+
+This keeps CIFAR-100, Torch Hub weights, Hugging Face model files, and pip cache
+outside Git while avoiding repeated downloads across Colab sessions. Git should
+only receive small logs, result summaries, and compact experiment artifacts.
+
 ## Running a Codex-authored notebook on Colab
 
 Codex edits notebooks under `notebooks/`, but Colab should be used only for the
