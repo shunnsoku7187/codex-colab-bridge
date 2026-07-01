@@ -64,6 +64,8 @@ def setup_repo():
     ROOT.mkdir(parents=True, exist_ok=True)
     if not REPO_DIR.exists():
         run(f"git clone --branch {shlex.quote(BRANCH)} {shlex.quote(REPO_URL)} {shlex.quote(str(REPO_DIR))}")
+    else:
+        run(f"git remote set-url origin {shlex.quote(REPO_URL)}", cwd=REPO_DIR)
     run(f"git config user.name {shlex.quote(GIT_USER_NAME)}", cwd=REPO_DIR)
     run(f"git config user.email {shlex.quote(GIT_USER_EMAIL)}", cwd=REPO_DIR)
     for directory in [JOBS_DIR, LOGS_DIR, RESULTS_DIR, ARTIFACTS_DIR]:
