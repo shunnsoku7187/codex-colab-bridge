@@ -1,0 +1,8 @@
+{
+  "id": "validate_record_breakers_cv_001",
+  "status": "pending",
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.validate_record_breakers_cv",
+  "max_runtime_sec": 3600
+}
