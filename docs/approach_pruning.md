@@ -41,3 +41,34 @@ Run:
 - `validate_pruned_candidates_001`: strict 5-fold CV for only the remaining lightweight candidates.
 
 After those finish, keep only candidates that beat or clearly approach the measured cascade/parallel cost at the same target accuracy.
+
+## Updated Verdict After Full Baselines
+
+Measured baselines:
+
+| method | avg cost | accuracy | to low |
+| --- | ---: | ---: | ---: |
+| Cascade, MobileNet confidence | 8.6645 | 88.88% | 5248 |
+| Parallel, MobileNet confidence, alpha=0.10 | 9.5882 | 88.88% | 5248 |
+
+Strict-CV handcrafted routers:
+
+| method | avg cost | accuracy | to low |
+| --- | ---: | ---: | ---: |
+| `lightweight_lgbm_cv_original` | 16.3181 | 88.92% | 741 |
+| `lightweight_lgbm_cv_regularized` | 16.3389 | 88.93% | 729 |
+| `lightweight_lgbm_cv_tiny` | 16.3752 | 88.92% | 708 |
+| `lightweight_tree_cv_depth4` | 16.3354 | 88.89% | 731 |
+| `lightweight_tree_cv_depth6` | 16.5655 | 88.94% | 598 |
+
+Decision:
+
+- Cut handcrafted global/grid/raw/lightweight-statistics routers as primary claims.
+- Keep cascade and parallel as strong baselines.
+- Keep only learned image-based pre-routing or early-exit style methods as plausible challengers.
+
+For an independent router to beat the measured cascade cost, it must route roughly the same number of samples to the low model as cascade does, while avoiding the cascade double-inference penalty on high-routed samples. The current handcrafted CV routers route only about 600-741 samples to low, versus 5248 for cascade, so their signal is far too weak.
+
+Next remaining candidate:
+
+- `train_tiny_image_router_001`: a tiny CNN binary router trained with strict CV to predict whether MobileNet is sufficient from the image itself.
