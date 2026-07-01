@@ -7,6 +7,7 @@
 
 import json
 import os
+import select
 import shlex
 import subprocess
 import time
@@ -42,6 +43,7 @@ USE_GOOGLE_DRIVE_CACHE = True
 DRIVE_MOUNT_POINT = Path("/content/drive")
 DRIVE_ARTIFACT_DIR = DRIVE_MOUNT_POINT / "MyDrive" / "Research_Experiment"
 DRIVE_CACHE_ROOT = DRIVE_ARTIFACT_DIR / ".colab_cache"
+HEARTBEAT_INTERVAL_SEC = 120
 
 
 def utc_now():
@@ -185,44 +187,57 @@ def run_job_process(job_id, command, cwd, max_runtime_sec=None):
 
     append_log(job_id, "process_start", command=command, cwd=str(cwd))
     started_at = time.time()
+    next_heartbeat_at = started_at + HEARTBEAT_INTERVAL_SEC
+    env = os.environ.copy()
+    env["PYTHONUNBUFFERED"] = "1"
 
     with stdout_path.open("a", encoding="utf-8") as stdout_handle, stderr_path.open("a", encoding="utf-8") as stderr_handle:
+        stderr_handle.write("stderr is merged into stdout by the Colab runner to avoid pipe deadlocks.\n")
+        stderr_handle.flush()
         process = subprocess.Popen(
             command,
             cwd=str(cwd),
             shell=True,
             stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
             text=True,
-            bufsize=1,
+            bufsize=0,
+            env=env,
         )
 
         while True:
-            if max_runtime_sec is not None and time.time() - started_at > max_runtime_sec:
+            now = time.time()
+            elapsed_sec = round(now - started_at, 3)
+            if max_runtime_sec is not None and elapsed_sec > max_runtime_sec:
                 process.kill()
                 append_log(job_id, "process_timeout", max_runtime_sec=max_runtime_sec)
+                process.wait()
                 break
 
-            stdout_line = process.stdout.readline()
-            if stdout_line:
-                print(stdout_line, end="")
-                stdout_handle.write(stdout_line)
-                stdout_handle.flush()
+            readable, _, _ = select.select([process.stdout], [], [], 1.0)
+            if readable:
+                chunk = process.stdout.read(1)
+                if chunk:
+                    print(chunk, end="", flush=True)
+                    stdout_handle.write(chunk)
+                    stdout_handle.flush()
 
-            stderr_line = process.stderr.readline()
-            if stderr_line:
-                print(stderr_line, end="")
-                stderr_handle.write(stderr_line)
+            if time.time() >= next_heartbeat_at:
+                append_log(job_id, "process_heartbeat", elapsed_sec=round(time.time() - started_at, 3))
+                stdout_handle.flush()
                 stderr_handle.flush()
+                try:
+                    push_updates(f"colab: heartbeat {job_id}")
+                except Exception as exc:
+                    print(f"Heartbeat push failed: {exc}", flush=True)
+                    append_log(job_id, "heartbeat_push_failed", error=str(exc))
+                next_heartbeat_at = time.time() + HEARTBEAT_INTERVAL_SEC
 
             if process.poll() is not None:
-                remaining_stdout, remaining_stderr = process.communicate()
+                remaining_stdout = process.stdout.read()
                 if remaining_stdout:
-                    print(remaining_stdout, end="")
+                    print(remaining_stdout, end="", flush=True)
                     stdout_handle.write(remaining_stdout)
-                if remaining_stderr:
-                    print(remaining_stderr, end="")
-                    stderr_handle.write(remaining_stderr)
                 break
 
     duration_sec = round(time.time() - started_at, 3)

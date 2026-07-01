@@ -1,5 +1,6 @@
 import argparse
 import json
+import sys
 
 import lightgbm as lgb
 import numpy as np
@@ -35,11 +36,13 @@ def feature_mode(mode):
 
 
 def build_dataset(mode, max_samples):
+    print(f"[{mode}] loading difficulty labels from {DIFFICULTY_LABELS_PATH}", flush=True)
     data = json.loads(DIFFICULTY_LABELS_PATH.read_text(encoding="utf-8"))
     if max_samples:
         data = data[:max_samples]
     cache_path = cache_key(feature_mode(mode), max_samples)
     if cache_path.exists():
+        print(f"[{mode}] loading feature cache: {cache_path}", flush=True)
         cached = np.load(cache_path, allow_pickle=True)
         x_values = cached["x_values"]
         y_values = cached["y_values"]
@@ -48,11 +51,14 @@ def build_dataset(mode, max_samples):
             feature_names = None
         return data, x_values, y_values, feature_names
 
+    print(f"[{mode}] feature cache not found: {cache_path}", flush=True)
+    print(f"[{mode}] loading CIFAR-100 test images under {DATA_DIR}", flush=True)
     cifar = torchvision.datasets.CIFAR100(root=str(DATA_DIR), train=False, download=True, transform=None)
+    print(f"[{mode}] CIFAR-100 ready; extracting {len(data)} samples", flush=True)
 
     features = []
     feature_names = None
-    for item in tqdm(data, desc=f"Extracting {mode} features"):
+    for item in tqdm(data, desc=f"Extracting {mode} features", file=sys.stdout, mininterval=5):
         img_pil, _ = cifar[item["index"]]
         mode_for_features = feature_mode(mode)
         if mode_for_features == "lightweight":
@@ -78,7 +84,7 @@ def build_dataset(mode, max_samples):
         y_values=y_values,
         feature_names=np.array(feature_names or [], dtype=object),
     )
-    print(f"Wrote feature cache: {cache_path}", flush=True)
+    print(f"[{mode}] wrote feature cache: {cache_path}", flush=True)
     return data, x_values, y_values, feature_names
 
 
@@ -136,11 +142,14 @@ def main():
     data, x_values, y_values, feature_names = build_dataset(args.mode, args.max_samples)
     clf = classifier_for(args.mode)
     if args.mode in {"lightweight_rf", "lightweight_lgbm"}:
+        print(f"[{args.mode}] fitting in-sample classifier", flush=True)
         clf.fit(x_values, y_values)
         confidences = clf.predict_proba(x_values)[:, 1]
     else:
+        print(f"[{args.mode}] running 5-fold cross-val prediction", flush=True)
         confidences = cross_val_predict(clf, x_values, y_values, cv=5, method="predict_proba", n_jobs=-1)[:, 1]
 
+    print(f"[{args.mode}] evaluating routing thresholds", flush=True)
     high_accuracy, target_accuracy, best = evaluate_routing(data, confidences)
     output = {
         "mode": args.mode,
