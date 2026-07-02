@@ -1,0 +1,186 @@
+{
+  "status": "ok",
+  "purpose": "Broad process trace for LOW/HIGH decisions across all difficulty categories.",
+  "samples": 800,
+  "device": "cuda",
+  "rows_jsonl": "/content/drive/MyDrive/Research_Experiment/model_process_traces/model_process_trace_balanced_002_rows.jsonl",
+  "low_hook_layers": [
+    "features.0",
+    "features.3",
+    "features.7",
+    "features.10",
+    "features.14",
+    "features.18"
+  ],
+  "high_hidden_layers_requested": [
+    0,
+    3,
+    6,
+    9,
+    12
+  ],
+  "notes": [
+    "This is an analysis artifact, not a runtime-claimable router feature set.",
+    "Use these traces to identify where LOW begins to diverge from HIGH and which errors are confidence/margin/attention-like failures."
+  ],
+  "category_summary": {
+    "Hard": {
+      "count": 200,
+      "low_true_rank_mean": 5.585,
+      "high_true_rank_mean": 1.0,
+      "low_margin_mean": 1.5133031988143921,
+      "high_margin_mean": 6.213514782190323,
+      "low_entropy_mean": 0.23897716838400812,
+      "high_entropy_mean": 0.0468255499569932
+    },
+    "Inverse": {
+      "count": 200,
+      "low_true_rank_mean": 1.0,
+      "high_true_rank_mean": 3.26,
+      "low_margin_mean": 2.2760936880111693,
+      "high_margin_mean": 2.4474784338474276,
+      "low_entropy_mean": 0.1690749921623501,
+      "high_entropy_mean": 0.14545561910781543
+    },
+    "Easy": {
+      "count": 200,
+      "low_true_rank_mean": 1.0,
+      "high_true_rank_mean": 1.0,
+      "low_margin_mean": 5.763123683929443,
+      "high_margin_mean": 8.025410659313202,
+      "low_entropy_mean": 0.05773510026626411,
+      "high_entropy_mean": 0.009819087189389392
+    },
+    "Impossible": {
+      "count": 200,
+      "low_true_rank_mean": 7.525,
+      "high_true_rank_mean": 4.43,
+      "low_margin_mean": 1.933192150592804,
+      "high_margin_mean": 3.098345683813095,
+      "low_entropy_mean": 0.2157000860606786,
+      "high_entropy_mean": 0.14885442312806846
+    }
+  },
+  "top_hard_low_confusions": [
+    {
+      "confusion": "bowl -> plate",
+      "count": 4
+    },
+    {
+      "confusion": "rose -> tulip",
+      "count": 3
+    },
+    {
+      "confusion": "shrew -> mouse",
+      "count": 3
+    },
+    {
+      "confusion": "flatfish -> ray",
+      "count": 3
+    },
+    {
+      "confusion": "cockroach -> beetle",
+      "count": 2
+    },
+    {
+      "confusion": "tractor -> lawn_mower",
+      "count": 2
+    },
+    {
+      "confusion": "shrew -> porcupine",
+      "count": 2
+    },
+    {
+      "confusion": "cattle -> camel",
+      "count": 2
+    },
+    {
+      "confusion": "seal -> otter",
+      "count": 2
+    },
+    {
+      "confusion": "mouse -> beaver",
+      "count": 2
+    },
+    {
+      "confusion": "willow_tree -> forest",
+      "count": 2
+    },
+    {
+      "confusion": "chair -> couch",
+      "count": 2
+    },
+    {
+      "confusion": "road -> mountain",
+      "count": 1
+    },
+    {
+      "confusion": "shark -> turtle",
+      "count": 1
+    },
+    {
+      "confusion": "otter -> mountain",
+      "count": 1
+    },
+    {
+      "confusion": "beetle -> cockroach",
+      "count": 1
+    },
+    {
+      "confusion": "house -> caterpillar",
+      "count": 1
+    },
+    {
+      "confusion": "castle -> mountain",
+      "count": 1
+    },
+    {
+      "confusion": "possum -> hamster",
+      "count": 1
+    },
+    {
+      "confusion": "rabbit -> crocodile",
+      "count": 1
+    },
+    {
+      "confusion": "girl -> baby",
+      "count": 1
+    },
+    {
+      "confusion": "pear -> ray",
+      "count": 1
+    },
+    {
+      "confusion": "pine_tree -> couch",
+      "count": 1
+    },
+    {
+      "confusion": "tank -> cockroach",
+      "count": 1
+    },
+    {
+      "confusion": "flatfish -> bear",
+      "count": 1
+    },
+    {
+      "confusion": "wolf -> dolphin",
+      "count": 1
+    },
+    {
+      "confusion": "squirrel -> kangaroo",
+      "count": 1
+    },
+    {
+      "confusion": "fox -> tiger",
+      "count": 1
+    },
+    {
+      "confusion": "mushroom -> lobster",
+      "count": 1
+    },
+    {
+      "confusion": "table -> clock",
+      "count": 1
+    }
+  ]
+}
