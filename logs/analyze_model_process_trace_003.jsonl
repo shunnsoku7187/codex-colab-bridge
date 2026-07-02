@@ -1,1 +1,2 @@
 {"time": "2026-07-02T14:38:58.463362+00:00", "event": "job_running", "job_file": "jobs/analyze_model_process_trace_003.json"}
+{"time": "2026-07-02T14:38:59.929390+00:00", "event": "process_prepared", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.analyze_model_process_trace --input-prefix model_process_trace_balanced_002 --output-name model_process_trace_balanced_002_analysis.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 900}
