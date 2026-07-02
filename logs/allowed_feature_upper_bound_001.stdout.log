@@ -764,4 +764,222 @@ Loading cheap spectrum feature cache: /content/drive/MyDrive/Research_Experiment
           "no_feasible_threshold"
         ],
         "valid_for_claim": false,
-        "recommended_action": "discard_o
+        "recommended_action": "discard_or_reformulate_threshold_search"
+      }
+    },
+    {
+      "target_margin_pct": 1.0,
+      "overall": null,
+      "guardrails": {
+        "baselines": {
+          "all_low": {
+            "accuracy": 71.15,
+            "avg_cost": 0.301,
+            "meets_target": false
+          },
+          "all_high": {
+            "accuracy": 89.85,
+            "avg_cost": 17.6,
+            "meets_target": true
+          },
+          "oracle": {
+            "counts": {
+              "Easy": 6894,
+              "Hard": 2091,
+              "Impossible": 794,
+              "Inverse": 221
+            },
+            "high_accuracy": 89.85,
+            "low_accuracy": 71.15,
+            "target_accuracy": 88.85,
+            "all_low_meets_target": false,
+            "oracle_low": 8230,
+            "oracle_high": 1770,
+            "oracle_low_rate": 0.823,
+            "oracle_high_rate": 0.177,
+            "oracle_cost": 3.3629230000000003,
+            "hard_low_allowed_at_target": 321
+          }
+        },
+        "candidate": null,
+        "flags": [
+          "no_feasible_threshold"
+        ],
+        "valid_for_claim": false,
+        "recommended_action": "discard_or_reformulate_threshold_search"
+      }
+    },
+    {
+      "target_margin_pct": 1.25,
+      "overall": null,
+      "guardrails": {
+        "baselines": {
+          "all_low": {
+            "accuracy": 71.15,
+            "avg_cost": 0.301,
+            "meets_target": false
+          },
+          "all_high": {
+            "accuracy": 89.85,
+            "avg_cost": 17.6,
+            "meets_target": true
+          },
+          "oracle": {
+            "counts": {
+              "Easy": 6894,
+              "Hard": 2091,
+              "Impossible": 794,
+              "Inverse": 221
+            },
+            "high_accuracy": 89.85,
+            "low_accuracy": 71.15,
+            "target_accuracy": 88.6,
+            "all_low_meets_target": false,
+            "oracle_low": 8255,
+            "oracle_high": 1745,
+            "oracle_low_rate": 0.8255,
+            "oracle_high_rate": 0.1745,
+            "oracle_cost": 3.3196755000000007,
+            "hard_low_allowed_at_target": 346
+          }
+        },
+        "candidate": null,
+        "flags": [
+          "no_feasible_threshold"
+        ],
+        "valid_for_claim": false,
+        "recommended_action": "discard_or_reformulate_threshold_search"
+      }
+    },
+    {
+      "target_margin_pct": 1.5,
+      "overall": null,
+      "guardrails": {
+        "baselines": {
+          "all_low": {
+            "accuracy": 71.15,
+            "avg_cost": 0.301,
+            "meets_target": false
+          },
+          "all_high": {
+            "accuracy": 89.85,
+            "avg_cost": 17.6,
+            "meets_target": true
+          },
+          "oracle": {
+            "counts": {
+              "Easy": 6894,
+              "Hard": 2091,
+              "Impossible": 794,
+              "Inverse": 221
+            },
+            "high_accuracy": 89.85,
+            "low_accuracy": 71.15,
+            "target_accuracy": 88.35,
+            "all_low_meets_target": false,
+            "oracle_low": 8280,
+            "oracle_high": 1720,
+            "oracle_low_rate": 0.828,
+            "oracle_high_rate": 0.172,
+            "oracle_cost": 3.276428,
+            "hard_low_allowed_at_target": 371
+          }
+        },
+        "candidate": null,
+        "flags": [
+          "no_feasible_threshold"
+        ],
+        "valid_for_claim": false,
+        "recommended_action": "discard_or_reformulate_threshold_search"
+      }
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "no_feasible_calibration_threshold"
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "no_feasible_calibration_threshold"
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "no_feasible_calibration_threshold"
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct
