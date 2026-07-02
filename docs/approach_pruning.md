@@ -156,10 +156,20 @@ Decision:
 
 ## Claimable Record-Breaker Search
 
-The next goal is not merely to label results as usable/unusable. The goal is to
-find a route-selection approach that can beat the notebook-compatible
-`lightweight_lgbm` record of 11.1146 GFLOPs under conditions that are safe enough
-to present.
+The next goal is not merely to label results as usable/unusable. The primary
+goal is to approach the measured cascade baseline while preserving almost all of
+the high-only accuracy. Beating the notebook-compatible `lightweight_lgbm` record
+of 11.1146 GFLOPs is now a secondary milestone.
+
+Primary target:
+
+- Cascade baseline: 8.6645 GFLOPs at 88.88% accuracy.
+
+Defense line:
+
+- Even if the fixed router is slightly above cascade cost, it has bounded
+  real-time latency because routing is decided before either model runs.
+- Cascade has data-dependent latency because some samples run LOW and then HIGH.
 
 Claimable search conditions:
 
@@ -170,10 +180,14 @@ Claimable search conditions:
   and HIGH branches, preventing all-LOW/all-HIGH escapes.
 - Candidate outputs include guardrails for degenerate benchmarks, all-LOW escape,
   all-HIGH escape, and near-oracle suspicious costs.
+- Runtime router is a fixed discriminator. Confidence/logits/intermediate
+  features may be used during offline parameter search, but not at runtime.
+- HOG is allowed only if its FPGA implementation can be hidden under image-load
+  latency.
 
 Active job:
 
-- `search_claimable_record_breakers_001`
+- `search_claimable_record_breakers_002`
 
 Candidate approaches in this job:
 
@@ -184,5 +198,12 @@ Candidate approaches in this job:
 - Cheap spectrum/color/DCT/gradient feature variants.
 - Conservative soft-category regression variants.
 
-Only candidates that meet target accuracy, pass guardrails, and beat 11.1146
-GFLOPs in this stricter protocol should be treated as record-breaking candidates.
+`search_claimable_record_breakers_001` completed under a fixed 1.0% accuracy-drop
+target. Its best claimable candidate was
+`claim_lightweight_spectrum_lgbm_hard_penalty`, but it reached only 16.0708
+GFLOPs at 88.86% accuracy, so it does not approach cascade enough.
+
+`search_claimable_record_breakers_002` therefore sweeps target margins of
+0.5%, 0.75%, 1.0%, 1.25%, and 1.5% from the high-only model. The important output
+is the Pareto frontier: for each accuracy-drop budget, how close the fixed
+zero-latency router can get to the 8.6645 GFLOPs cascade baseline.

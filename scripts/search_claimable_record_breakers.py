@@ -20,6 +20,9 @@ from src.experiment_paths import ARTIFACT_DIR, DATA_DIR, RESULTS_DIR, ensure_dir
 
 
 RECORD_TO_BEAT = 11.1146049
+CASCADE_BASELINE_COST = 8.6645
+PARALLEL_BASELINE_COST = 9.5882
+TARGET_MARGIN_PCTS = [0.5, 0.75, 1.0, 1.25, 1.5]
 
 
 def category_strata(records):
@@ -172,11 +175,11 @@ def score_model(model, x_values, score_kind):
     raise ValueError(score_kind)
 
 
-def best_threshold_on_calibration(records, scores, min_high_rate=0.05, min_low_rate=0.05):
+def best_threshold_on_calibration(records, scores, target_margin_pct, min_high_rate=0.05, min_low_rate=0.05):
     scores = np.asarray(scores, dtype=float)
     total = len(records)
     high_accuracy = 100 * sum(item["high_correct"] for item in records) / total
-    target_accuracy = high_accuracy - 1.0
+    target_accuracy = high_accuracy - target_margin_pct
     best = None
     thresholds = np.linspace(float(np.nanmin(scores)), float(np.nanmax(scores)), 301)
     for threshold in thresholds:
@@ -227,7 +230,11 @@ def claimable_cv_eval(name, model, feature_set_name, x_values, target_name, scor
     print(f"=== claimable record-breaker search: {name} ===", flush=True)
     outer = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
     fold_outputs = []
-    route_decisions = np.zeros(len(records), dtype=bool)
+    route_decisions_by_margin = {
+        target_margin_pct: np.zeros(len(records), dtype=bool)
+        for target_margin_pct in TARGET_MARGIN_PCTS
+    }
+    fold_success_by_margin = {target_margin_pct: 0 for target_margin_pct in TARGET_MARGIN_PCTS}
 
     for fold_id, (train_calib_idx, eval_idx) in enumerate(outer.split(np.zeros(len(strata)), strata), start=1):
         train_calib_strata = strata[train_calib_idx]
@@ -243,42 +250,98 @@ def claimable_cv_eval(name, model, feature_set_name, x_values, target_name, scor
 
         calib_records = [records[i] for i in calib_idx]
         calib_scores = score_model(fold_model, x_values[calib_idx], score_kind)
-        threshold_result = best_threshold_on_calibration(calib_records, calib_scores)
-        if threshold_result is None:
-            fold_outputs.append({"fold": fold_id, "status": "no_feasible_calibration_threshold"})
-            continue
-
         eval_records = [records[i] for i in eval_idx]
         eval_scores = score_model(fold_model, x_values[eval_idx], score_kind)
-        eval_result = apply_threshold(eval_records, eval_scores, threshold_result["threshold"])
-        route_decisions[eval_idx] = eval_scores >= threshold_result["threshold"]
+
+        margin_outputs = []
+        for target_margin_pct in TARGET_MARGIN_PCTS:
+            threshold_result = best_threshold_on_calibration(calib_records, calib_scores, target_margin_pct)
+            if threshold_result is None:
+                margin_outputs.append({
+                    "target_margin_pct": target_margin_pct,
+                    "status": "no_feasible_calibration_threshold",
+                })
+                continue
+            eval_result = apply_threshold(eval_records, eval_scores, threshold_result["threshold"])
+            route_decisions_by_margin[target_margin_pct][eval_idx] = eval_scores >= threshold_result["threshold"]
+            fold_success_by_margin[target_margin_pct] += 1
+            margin_outputs.append({
+                "target_margin_pct": target_margin_pct,
+                "status": "ok",
+                "calibration_best": threshold_result,
+                "eval": eval_result,
+            })
+
         fold_outputs.append({
             "fold": fold_id,
             "status": "ok",
-            "calibration_best": threshold_result,
-            "eval": eval_result,
+            "margins": margin_outputs,
         })
 
-    valid_folds = [fold for fold in fold_outputs if fold["status"] == "ok"]
-    if len(valid_folds) != outer.get_n_splits():
-        overall = None
-        guardrails = guardrail_report(records, None, FLOPS_LOW, FLOPS_HIGH, FLOPS_ROUTER)
-    else:
+    overall_by_margin = []
+    for target_margin_pct in TARGET_MARGIN_PCTS:
+        if fold_success_by_margin[target_margin_pct] != outer.get_n_splits():
+            overall = None
+            guardrails = guardrail_report(
+                records,
+                None,
+                FLOPS_LOW,
+                FLOPS_HIGH,
+                FLOPS_ROUTER,
+                target_margin_pct=target_margin_pct,
+            )
+            overall_by_margin.append({
+                "target_margin_pct": target_margin_pct,
+                "overall": overall,
+                "guardrails": guardrails,
+            })
+            continue
+
         total = len(records)
+        route_decisions = route_decisions_by_margin[target_margin_pct]
         to_low = int(np.sum(route_decisions))
         to_high = total - to_low
         correct = 0
         for item, low_branch in zip(records, route_decisions):
             correct += bool(item["low_correct"]) if low_branch else bool(item["high_correct"])
+        avg_cost = (total * FLOPS_ROUTER + to_low * FLOPS_LOW + to_high * FLOPS_HIGH) / total
+        high_accuracy = 100 * sum(item["high_correct"] for item in records) / total
         overall = {
-            "avg_cost": float((total * FLOPS_ROUTER + to_low * FLOPS_LOW + to_high * FLOPS_HIGH) / total),
+            "avg_cost": float(avg_cost),
             "accuracy": float(100 * correct / total),
             "to_low": to_low,
             "to_high": to_high,
-            "target_accuracy": float(100 * sum(item["high_correct"] for item in records) / total - 1.0),
-            "beats_record_to_beat": bool((total * FLOPS_ROUTER + to_low * FLOPS_LOW + to_high * FLOPS_HIGH) / total < RECORD_TO_BEAT),
+            "high_accuracy": float(high_accuracy),
+            "target_margin_pct": target_margin_pct,
+            "target_accuracy": float(high_accuracy - target_margin_pct),
+            "beats_record_to_beat": bool(avg_cost < RECORD_TO_BEAT),
+            "beats_cascade_baseline": bool(avg_cost < CASCADE_BASELINE_COST),
+            "beats_parallel_baseline": bool(avg_cost < PARALLEL_BASELINE_COST),
+            "cost_gap_vs_cascade": float(avg_cost - CASCADE_BASELINE_COST),
+            "cost_gap_vs_parallel": float(avg_cost - PARALLEL_BASELINE_COST),
+            "cost_gap_vs_record_to_beat": float(avg_cost - RECORD_TO_BEAT),
         }
-        guardrails = guardrail_report(records, overall, FLOPS_LOW, FLOPS_HIGH, FLOPS_ROUTER)
+        guardrails = guardrail_report(
+            records,
+            overall,
+            FLOPS_LOW,
+            FLOPS_HIGH,
+            FLOPS_ROUTER,
+            target_margin_pct=target_margin_pct,
+        )
+        overall_by_margin.append({
+            "target_margin_pct": target_margin_pct,
+            "overall": overall,
+            "guardrails": guardrails,
+        })
+
+    claimable_margins = [
+        item for item in overall_by_margin
+        if item["overall"] is not None
+        and item["overall"]["accuracy"] >= item["overall"]["target_accuracy"]
+        and item["guardrails"]["valid_for_claim"]
+    ]
+    best_claimable_margin = min(claimable_margins, key=lambda item: item["overall"]["avg_cost"]) if claimable_margins else None
 
     result = {
         "name": name,
@@ -289,8 +352,8 @@ def claimable_cv_eval(name, model, feature_set_name, x_values, target_name, scor
         "sample_weighting": weighting,
         "samples": len(records),
         "feature_count": int(x_values.shape[1]),
-        "overall": overall,
-        "guardrails": guardrails,
+        "overall_by_target_margin": overall_by_margin,
+        "best_claimable_margin": best_claimable_margin,
         "folds": fold_outputs,
     }
     print(json.dumps(result, ensure_ascii=False, indent=2), flush=True)
@@ -334,31 +397,81 @@ def main():
             claimable_cv_eval(name, model, feature_set_name, x_values, target_name, score_kind, weighting, records, strata)
         )
 
-    feasible = [
-        item for item in results
-        if item["overall"] is not None
-        and item["overall"]["accuracy"] >= item["overall"]["target_accuracy"]
-        and item["guardrails"]["valid_for_claim"]
-    ]
+    feasible = []
+    for item in results:
+        for margin_item in item["overall_by_target_margin"]:
+            overall = margin_item["overall"]
+            if (
+                overall is not None
+                and overall["accuracy"] >= overall["target_accuracy"]
+                and margin_item["guardrails"]["valid_for_claim"]
+            ):
+                feasible.append({
+                    "candidate": item["name"],
+                    "feature_set": item["feature_set"],
+                    "target": item["target"],
+                    "score_kind": item["score_kind"],
+                    "sample_weighting": item["sample_weighting"],
+                    "target_margin_pct": margin_item["target_margin_pct"],
+                    "overall": overall,
+                    "guardrails": margin_item["guardrails"],
+                })
     ranked = sorted(feasible, key=lambda item: item["overall"]["avg_cost"])
+    best_by_margin = {}
+    for target_margin_pct in TARGET_MARGIN_PCTS:
+        margin_feasible = [item for item in feasible if item["target_margin_pct"] == target_margin_pct]
+        best_by_margin[str(target_margin_pct)] = min(
+            margin_feasible,
+            key=lambda item: item["overall"]["avg_cost"],
+        ) if margin_feasible else None
+
     summary = {
         "status": "ok",
-        "purpose": "Search for approaches that can beat the notebook-compatible 11.1146 GFLOPs record under claimable validation conditions.",
-        "record_to_beat": {
+        "purpose": "Search for fixed zero-latency router approaches that approach the cascade baseline while preserving accuracy close to the high-only model.",
+        "baselines": {
+            "cascade_mobile_net_confidence": {
+                "avg_cost": CASCADE_BASELINE_COST,
+                "claim_role": "primary target; may still have variable latency because high-routed samples run LOW then HIGH",
+            },
+            "parallel_mobile_net_confidence_alpha_0_10": {
+                "avg_cost": PARALLEL_BASELINE_COST,
+                "claim_role": "secondary reference",
+            },
+        },
+        "notebook_record_to_beat": {
             "name": "lightweight_lgbm_notebook_full_fit",
             "avg_cost": RECORD_TO_BEAT,
-            "claimability": "reference only; original number used full-fit evaluation",
+            "claim_role": "secondary milestone; original number used full-fit evaluation",
         },
+        "target_margin_pcts": TARGET_MARGIN_PCTS,
         "claimable_conditions": [
             "outer evaluation fold is never used for model fitting",
             "outer evaluation fold is never used for threshold selection",
             "threshold is selected on an inner calibration split",
             "both LOW and HIGH branches must receive at least 5% of calibration samples",
             "all-low/all-high escape and degenerate benchmark conditions are rejected by guardrails",
+            "runtime router must be a fixed image-statistics discriminator; model logits/confidence are allowed only during offline parameter search",
         ],
+        "runtime_assumptions": {
+            "router_form": "fixed discriminator compiled from offline search",
+            "allowed_runtime_inputs": "image-derived zero-latency statistics only",
+            "offline_only_inputs": "intermediate features, confidence, logits, and model predictions may be used only to choose labels, thresholds, and parameters",
+            "hog_status": "allowed only if its FPGA implementation can be hidden under image-load latency",
+            "defense_line": "even when cost is slightly above cascade, fixed routing gives bounded latency unlike cascade's data-dependent second inference",
+        },
         "results": results,
-        "ranked_claimable_by_avg_cost": [item["name"] for item in ranked],
-        "best_claimable": ranked[0] if ranked else None,
+        "ranked_claimable_by_avg_cost": [
+            {
+                "candidate": item["candidate"],
+                "target_margin_pct": item["target_margin_pct"],
+                "avg_cost": item["overall"]["avg_cost"],
+                "accuracy": item["overall"]["accuracy"],
+                "cost_gap_vs_cascade": item["overall"]["cost_gap_vs_cascade"],
+            }
+            for item in ranked
+        ],
+        "best_claimable_by_target_margin": best_by_margin,
+        "best_claimable_overall": ranked[0] if ranked else None,
     }
     output_path = RESULTS_DIR / "claimable_record_breaker_search.json"
     output_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
