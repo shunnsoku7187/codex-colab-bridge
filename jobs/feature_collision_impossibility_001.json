@@ -1,10 +1,13 @@
 {
   "id": "feature_collision_impossibility_001",
-  "status": "running",
+  "status": "done",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.feature_collision_impossibility",
   "max_runtime_sec": 1800,
-  "updated_at": "2026-07-02T12:10:10.184298+00:00",
-  "started_at": "2026-07-02T12:10:10.184266+00:00"
+  "updated_at": "2026-07-02T12:11:27.417275+00:00",
+  "started_at": "2026-07-02T12:10:10.184266+00:00",
+  "returncode": 0,
+  "finished_at": "2026-07-02T12:11:27.409377+00:00",
+  "result_file": "results/feature_collision_impossibility_001.json"
 }
