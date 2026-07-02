@@ -30,3 +30,5 @@
 {"time": "2026-07-02T06:54:54.017435+00:00", "event": "process_heartbeat", "elapsed_sec": 3285.284}
 {"time": "2026-07-02T06:56:55.483449+00:00", "event": "process_heartbeat", "elapsed_sec": 3406.75}
 {"time": "2026-07-02T06:58:57.195413+00:00", "event": "process_heartbeat", "elapsed_sec": 3528.462}
+{"time": "2026-07-02T07:00:08.801840+00:00", "event": "process_timeout", "max_runtime_sec": 3600}
+{"time": "2026-07-02T07:00:08.808498+00:00", "event": "process_end", "returncode": -9, "duration_sec": 3600.075}
