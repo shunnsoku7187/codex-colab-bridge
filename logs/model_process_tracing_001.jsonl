@@ -1,2 +1,4 @@
 {"time": "2026-07-02T13:14:13.479272+00:00", "event": "job_running", "job_file": "jobs/model_process_tracing_001.json"}
 {"time": "2026-07-02T13:14:14.631600+00:00", "event": "process_prepared", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.model_process_tracing --batch-size 64 --output-prefix model_process_trace_001", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 3600}
+{"time": "2026-07-02T13:14:15.687404+00:00", "event": "process_start", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.model_process_tracing --batch-size 64 --output-prefix model_process_trace_001", "cwd": "/content/codex_colab_bridge/codex-colab-bridge"}
+{"time": "2026-07-02T13:16:15.838096+00:00", "event": "process_heartbeat", "elapsed_sec": 120.15}
