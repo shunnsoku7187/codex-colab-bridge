@@ -328,3 +328,5 @@ or fails.
 5. `conditional_win_scenario_eval_001`
 
 Only after these should another router architecture search be run.
+
+Experiment findings are summarized in `docs/feasibility_findings.md`.
