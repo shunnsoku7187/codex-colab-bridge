@@ -7,6 +7,7 @@ import torchvision
 from tqdm import tqdm
 
 from scripts.evaluate_router import FLOPS_HIGH, FLOPS_LOW, FLOPS_ROUTER, build_dataset
+from scripts.routing_guardrails import guardrail_report
 from src.experiment_paths import ARTIFACT_DIR, DATA_DIR, DIFFICULTY_LABELS_PATH, RESULTS_DIR, ensure_dirs
 
 
@@ -150,8 +151,9 @@ def regressor(params=None):
     return lgb.LGBMRegressor(**merged)
 
 
-def evaluate_scores(data, scores):
+def evaluate_scores(data, scores, min_high_rate=0.0, min_low_rate=0.0):
     scores = np.asarray(scores, dtype=float)
+    total = len(data)
     high_accuracy = 100 * sum(item["high_correct"] for item in data) / len(data)
     target_accuracy = high_accuracy - 1.0
     best = None
@@ -159,6 +161,8 @@ def evaluate_scores(data, scores):
     for threshold in thresholds:
         to_low = [item for item, score in zip(data, scores) if score >= threshold]
         to_high = [item for item, score in zip(data, scores) if score < threshold]
+        if len(to_low) / total < min_low_rate or len(to_high) / total < min_high_rate:
+            continue
         avg_cost = (len(data) * FLOPS_ROUTER + len(to_low) * FLOPS_LOW + len(to_high) * FLOPS_HIGH) / len(data)
         correct = sum(item["low_correct"] for item in to_low) + sum(item["high_correct"] for item in to_high)
         accuracy = 100 * correct / len(data)
@@ -209,6 +213,7 @@ def run_candidate(name, model, x_values, feature_names, y_values, data, score_ki
     else:
         raise ValueError(score_kind)
     high_accuracy, target_accuracy, best = evaluate_scores(data, scores)
+    _, _, best_constrained = evaluate_scores(data, scores, min_high_rate=0.05, min_low_rate=0.05)
     result = {
         "name": name,
         "protocol": "notebook-compatible full-fit search; not cross-validation",
@@ -219,6 +224,10 @@ def run_candidate(name, model, x_values, feature_names, y_values, data, score_ki
         "target_accuracy": target_accuracy,
         "best": best,
         "routing_details": route_details(data, scores, best["threshold"]) if best else None,
+        "guardrails": guardrail_report(data, best, FLOPS_LOW, FLOPS_HIGH, FLOPS_ROUTER),
+        "best_constrained_5pct_each_branch": best_constrained,
+        "constrained_routing_details": route_details(data, scores, best_constrained["threshold"]) if best_constrained else None,
+        "constrained_guardrails": guardrail_report(data, best_constrained, FLOPS_LOW, FLOPS_HIGH, FLOPS_ROUTER),
         "top_feature_importances": importances_for(model, feature_names),
     }
     print(json.dumps(result, ensure_ascii=False, indent=2), flush=True)
@@ -255,8 +264,27 @@ def main():
         results.append(result)
 
     ranked = sorted([item for item in results if item["best"] is not None], key=lambda item: item["best"]["avg_cost"])
+    ranked_constrained = sorted(
+        [item for item in results if item["best_constrained_5pct_each_branch"] is not None],
+        key=lambda item: item["best_constrained_5pct_each_branch"]["avg_cost"],
+    )
     summary = {
         "status": "ok",
+        "guardrail_policy": {
+            "purpose": "Detect overfit or degenerate routing results before treating them as claims.",
+            "constrained_threshold_search": "Also reports best_constrained_5pct_each_branch, requiring at least 5% of samples on both LOW and HIGH branches.",
+            "reject_flags": [
+                "benchmark_degenerate_all_low_meets_target",
+                "benchmark_degenerate_oracle_routes_no_high",
+                "candidate_all_low_escape",
+                "candidate_all_high_escape",
+            ],
+            "warning_flags": [
+                "candidate_near_all_low_escape",
+                "candidate_near_all_high_escape",
+                "candidate_near_oracle_cost_requires_heldout_validation",
+            ],
+        },
         "record_to_beat": {
             "name": "lightweight_lgbm",
             "avg_cost": 11.1146049,
@@ -272,6 +300,7 @@ def main():
         "protocol_note": "Notebook-compatible full-fit search; strict-CV should be run later only for finalists.",
         "results": results,
         "ranked_by_avg_cost": [item["name"] for item in ranked],
+        "ranked_by_constrained_avg_cost": [item["name"] for item in ranked_constrained],
     }
     output_path = RESULTS_DIR / "record_breaker_search.json"
     output_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

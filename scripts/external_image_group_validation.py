@@ -22,6 +22,7 @@ from scripts.search_record_breakers import (
     regressor,
     route_details,
 )
+from scripts.routing_guardrails import guardrail_report, oracle_at_target
 from src.experiment_paths import ARTIFACT_DIR, DATA_DIR, RESULTS_DIR, ensure_dirs
 from src.research_features import extract_lightweight_features
 
@@ -261,6 +262,7 @@ def fit_and_external_eval(name, feature_set_name, model, target_name, score_kind
         "target_accuracy": target_accuracy,
         "best": best,
         "routing_details": route_details(external_data, scores, best["threshold"]) if best else None,
+        "guardrails": guardrail_report(external_data, best, FLOPS_LOW, FLOPS_HIGH, FLOPS_ROUTER),
     }
     print(json.dumps(result, ensure_ascii=False, indent=2), flush=True)
     return result
@@ -294,6 +296,20 @@ def main():
     summary = {
         "status": "ok",
         "purpose": "External image-group validation for overfitting check.",
+        "guardrail_policy": {
+            "purpose": "Reject degenerate external benchmarks and all-low/all-high routing escapes.",
+            "reject_flags": [
+                "benchmark_degenerate_all_low_meets_target",
+                "benchmark_degenerate_oracle_routes_no_high",
+                "candidate_all_low_escape",
+                "candidate_all_high_escape",
+            ],
+            "warning_flags": [
+                "candidate_near_all_low_escape",
+                "candidate_near_all_high_escape",
+                "candidate_near_oracle_cost_requires_heldout_validation",
+            ],
+        },
         "important_caveat": (
             "CIFAR-100 train split is a different image group from the router source labels, "
             "but it may overlap with the base classifiers' original training data. Treat this as an overfitting stress test, not a final external benchmark."
@@ -301,7 +317,7 @@ def main():
         "split": args.split,
         "max_samples": args.max_samples,
         "seed": args.seed,
-        "external_oracle": oracle_report(external_data),
+        "external_oracle": oracle_at_target(external_data, FLOPS_LOW, FLOPS_HIGH, FLOPS_ROUTER),
         "results": results,
         "ranked_by_avg_cost": [item["name"] for item in ranked],
     }

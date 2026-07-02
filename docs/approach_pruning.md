@@ -153,3 +153,36 @@ Decision:
 - If a separate-image benchmark is needed, use a dataset/protocol where the base
   classifiers are not being evaluated on their training distribution, such as a
   corrupted/augmented CIFAR-100 test protocol with clearly stated limitations.
+
+## Claimable Record-Breaker Search
+
+The next goal is not merely to label results as usable/unusable. The goal is to
+find a route-selection approach that can beat the notebook-compatible
+`lightweight_lgbm` record of 11.1146 GFLOPs under conditions that are safe enough
+to present.
+
+Claimable search conditions:
+
+- Outer evaluation folds are never used to fit the router.
+- Outer evaluation folds are never used to choose the routing threshold.
+- Each outer fold uses an inner calibration split to choose the threshold.
+- The calibration threshold search requires at least 5% of samples on both LOW
+  and HIGH branches, preventing all-LOW/all-HIGH escapes.
+- Candidate outputs include guardrails for degenerate benchmarks, all-LOW escape,
+  all-HIGH escape, and near-oracle suspicious costs.
+
+Active job:
+
+- `search_claimable_record_breakers_001`
+
+Candidate approaches in this job:
+
+- Regularized 8-feature LightGBM.
+- Hard-sample-penalized 8-feature LightGBM.
+- Safe-low binary objective.
+- HOG-only and lightweight+HOG variants.
+- Cheap spectrum/color/DCT/gradient feature variants.
+- Conservative soft-category regression variants.
+
+Only candidates that meet target accuracy, pass guardrails, and beat 11.1146
+GFLOPs in this stricter protocol should be treated as record-breaking candidates.

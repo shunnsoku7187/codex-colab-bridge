@@ -13,7 +13,8 @@ from scripts.search_record_breakers import (
     regressor,
     route_details,
 )
-from scripts.evaluate_router import build_dataset
+from scripts.evaluate_router import FLOPS_HIGH, FLOPS_LOW, FLOPS_ROUTER, build_dataset
+from scripts.routing_guardrails import guardrail_report
 from src.experiment_paths import RESULTS_DIR, ensure_dirs
 
 
@@ -103,6 +104,7 @@ def run_candidate(name, feature_set_name, model, target_name, score_kind, featur
         "target_accuracy": target_accuracy,
         "best": best,
         "routing_details": route_details(data, scores, best["threshold"]) if best else None,
+        "guardrails": guardrail_report(data, best, FLOPS_LOW, FLOPS_HIGH, FLOPS_ROUTER),
     }
     print(json.dumps(result, ensure_ascii=False, indent=2), flush=True)
     return result
@@ -123,6 +125,20 @@ def main():
     summary = {
         "status": "ok",
         "purpose": "Credibility check for record-breaker full-fit results.",
+        "guardrail_policy": {
+            "purpose": "Reject search-tree overfit and degenerate all-low/all-high routing escapes.",
+            "reject_flags": [
+                "benchmark_degenerate_all_low_meets_target",
+                "benchmark_degenerate_oracle_routes_no_high",
+                "candidate_all_low_escape",
+                "candidate_all_high_escape",
+            ],
+            "warning_flags": [
+                "candidate_near_all_low_escape",
+                "candidate_near_all_high_escape",
+                "candidate_near_oracle_cost_requires_heldout_validation",
+            ],
+        },
         "oracle_cost_at_target_accuracy": 3.362923,
         "full_fit_best_cost": 3.3715725,
         "results": results,
