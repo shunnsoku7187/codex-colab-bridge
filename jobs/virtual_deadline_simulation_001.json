@@ -1,0 +1,8 @@
+{
+  "id": "virtual_deadline_simulation_001",
+  "status": "pending",
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.virtual_deadline_simulation --output-name virtual_deadline_simulation_001.json",
+  "max_runtime_sec": 1800
+}
