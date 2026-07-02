@@ -3,3 +3,4 @@
 {"time": "2026-07-02T10:37:38.976948+00:00", "event": "process_start", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.allowed_feature_upper_bound --targets cascade_teacher_margin_0.5,cascade_teacher_margin_1.0,cascade_teacher_margin_1.5 --models logistic_l2_balanced,sgd_log_loss_balanced --output-name allowed_upper_teacher_linear_002.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge"}
 {"time": "2026-07-02T10:39:38.981181+00:00", "event": "process_heartbeat", "elapsed_sec": 120.004}
 {"time": "2026-07-02T10:41:40.669981+00:00", "event": "process_heartbeat", "elapsed_sec": 241.693}
+{"time": "2026-07-02T10:43:25.209657+00:00", "event": "process_end", "returncode": 0, "duration_sec": 346.232}
