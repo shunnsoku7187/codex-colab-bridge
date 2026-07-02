@@ -2323,3 +2323,138 @@ Loading cheap spectrum feature cache: /content/drive/MyDrive/Research_Experiment
             "to_low": 142,
             "to_high": 1858
           }
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8200449934301037,
+            "avg_cost": 16.1555335,
+            "accuracy": 88.85,
+            "to_low": 167,
+            "to_high": 1833
+          },
+          "eval": {
+            "avg_cost": 16.250678,
+            "accuracy": 89.05,
+            "to_low": 156,
+            "to_high": 1844
+          }
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8131780758249376,
+            "avg_cost": 15.731708000000001,
+            "accuracy": 88.6,
+            "to_low": 216,
+            "to_high": 1784
+          },
+          "eval": {
+            "avg_cost": 15.852801000000001,
+            "accuracy": 88.65,
+            "to_low": 202,
+            "to_high": 1798
+          }
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8112160993663188,
+            "avg_cost": 15.593316000000002,
+            "accuracy": 88.35,
+            "to_low": 232,
+            "to_high": 1768
+          },
+          "eval": {
+            "avg_cost": 15.705759500000003,
+            "accuracy": 88.55,
+            "to_low": 219,
+            "to_high": 1781
+          }
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8249093766343008,
+            "avg_cost": 16.4323175,
+            "accuracy": 89.15,
+            "to_low": 135,
+            "to_high": 1865
+          },
+          "eval": {
+            "avg_cost": 16.4842145,
+            "accuracy": 89.15,
+            "to_low": 129,
+            "to_high": 1871
+          }
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8160388531322568,
+            "avg_cost": 16.025791,
+            "accuracy": 88.9,
+            "to_low": 182,
+            "to_high": 1818
+          },
+          "eval": {
+            "avg_cost": 16.008492,
+            "accuracy": 88.7,
+            "to_low": 184,
+            "to_high": 1816
+          }
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8130820119649088,
+            "avg_cost": 15.835502,
+            "accuracy": 88.7,
+            "to_low": 204,
+            "to_high": 1796
+          },
+          "eval": {
+            "avg_cost": 15.844151500000002,
+            "accuracy": 88.65,
+            "to_low": 203,
+            "to_high": 1797
+          }
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8101251707975607,
+            "avg_cost": 15.6538625,
+            "accuracy": 88.55,
+            "to_low": 225,
+            "to_high": 1775
+          },
+          "eval": {
+            "avg_cost": 15.714409,
+            "accuracy": 88.6,
+            "to_low": 218,
+            "to_high": 1782
+          }
+        }
+      ]
+    }
+  ]
+}
+=== allowed-feature upper bound: lightgbm_upper_bound / safe_low_actual ===
+/
