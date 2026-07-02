@@ -704,4 +704,384 @@ Wrote cheap spectrum feature cache: /content/drive/MyDrive/Research_Experiment/c
   warnings.warn(
 /usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
   warnings.warn(
-/
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "claim_lightweight_hog_lgbm_hard_penalty",
+  "protocol": "5-fold outer CV; threshold selected only on inner calibration split; evaluation fold never used for fitting or threshold search",
+  "feature_set": "lightweight_plus_hog4x4",
+  "target": "low_correct",
+  "score_kind": "classifier",
+  "sample_weighting": "penalize_hard",
+  "samples": 10000,
+  "feature_count": 584,
+  "overall": {
+    "avg_cost": 16.048279700000002,
+    "accuracy": 88.63,
+    "to_low": 897,
+    "to_high": 9103,
+    "target_accuracy": 88.85,
+    "beats_record_to_beat": false
+  },
+  "guardrails": {
+    "baselines": {
+      "all_low": {
+        "accuracy": 71.15,
+        "avg_cost": 0.301,
+        "meets_target": false
+      },
+      "all_high": {
+        "accuracy": 89.85,
+        "avg_cost": 17.6,
+        "meets_target": true
+      },
+      "oracle": {
+        "counts": {
+          "Easy": 6894,
+          "Hard": 2091,
+          "Impossible": 794,
+          "Inverse": 221
+        },
+        "high_accuracy": 89.85,
+        "low_accuracy": 71.15,
+        "target_accuracy": 88.85,
+        "all_low_meets_target": false,
+        "oracle_low": 8230,
+        "oracle_high": 1770,
+        "oracle_low_rate": 0.823,
+        "oracle_high_rate": 0.177,
+        "oracle_cost": 3.3629230000000003,
+        "hard_low_allowed_at_target": 321
+      }
+    },
+    "candidate": {
+      "to_low_rate": 0.0897,
+      "to_high_rate": 0.9103,
+      "cost_margin_vs_all_low": 15.747279700000002,
+      "cost_margin_vs_all_high": -1.5517202999999995,
+      "cost_margin_vs_oracle": 12.685356700000002
+    },
+    "flags": [],
+    "valid_for_claim": true,
+    "recommended_action": "eligible_after_heldout_or_cv_validation"
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6315450962824096,
+        "avg_cost": 15.4981715,
+        "accuracy": 88.85,
+        "to_low": 243,
+        "to_high": 1757
+      },
+      "eval": {
+        "avg_cost": 15.437625000000002,
+        "accuracy": 88.15,
+        "to_low": 250,
+        "to_high": 1750
+      }
+    },
+    {
+      "fold": 2,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6598448083250089,
+        "avg_cost": 15.991193,
+        "accuracy": 88.9,
+        "to_low": 186,
+        "to_high": 1814
+      },
+      "eval": {
+        "avg_cost": 16.103636500000004,
+        "accuracy": 88.6,
+        "to_low": 173,
+        "to_high": 1827
+      }
+    },
+    {
+      "fold": 3,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6754544920884771,
+        "avg_cost": 16.449616500000005,
+        "accuracy": 88.85,
+        "to_low": 133,
+        "to_high": 1867
+      },
+      "eval": {
+        "avg_cost": 16.536111500000004,
+        "accuracy": 89.2,
+        "to_low": 123,
+        "to_high": 1877
+      }
+    },
+    {
+      "fold": 4,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6644167380934529,
+        "avg_cost": 16.164183,
+        "accuracy": 88.85,
+        "to_low": 166,
+        "to_high": 1834
+      },
+      "eval": {
+        "avg_cost": 16.164183,
+        "accuracy": 88.6,
+        "to_low": 166,
+        "to_high": 1834
+      }
+    },
+    {
+      "fold": 5,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6614507475466522,
+        "avg_cost": 15.921997000000001,
+        "accuracy": 88.85,
+        "to_low": 194,
+        "to_high": 1806
+      },
+      "eval": {
+        "avg_cost": 15.999842500000003,
+        "accuracy": 88.6,
+        "to_low": 185,
+        "to_high": 1815
+      }
+    }
+  ]
+}
+=== claimable record-breaker search: claim_spectrum_lgbm_hard_penalty ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "claim_spectrum_lgbm_hard_penalty",
+  "protocol": "5-fold outer CV; threshold selected only on inner calibration split; evaluation fold never used for fitting or threshold search",
+  "feature_set": "cheap_spectrum",
+  "target": "low_correct",
+  "score_kind": "classifier",
+  "sample_weighting": "penalize_hard",
+  "samples": 10000,
+  "feature_count": 172,
+  "overall": {
+    "avg_cost": 15.9479455,
+    "accuracy": 88.79,
+    "to_low": 955,
+    "to_high": 9045,
+    "target_accuracy": 88.85,
+    "beats_record_to_beat": false
+  },
+  "guardrails": {
+    "baselines": {
+      "all_low": {
+        "accuracy": 71.15,
+        "avg_cost": 0.301,
+        "meets_target": false
+      },
+      "all_high": {
+        "accuracy": 89.85,
+        "avg_cost": 17.6,
+        "meets_target": true
+      },
+      "oracle": {
+        "counts": {
+          "Easy": 6894,
+          "Hard": 2091,
+          "Impossible": 794,
+          "Inverse": 221
+        },
+        "high_accuracy": 89.85,
+        "low_accuracy": 71.15,
+        "target_accuracy": 88.85,
+        "all_low_meets_target": false,
+        "oracle_low": 8230,
+        "oracle_high": 1770,
+        "oracle_low_rate": 0.823,
+        "oracle_high_rate": 0.177,
+        "oracle_cost": 3.3629230000000003,
+        "hard_low_allowed_at_target": 321
+      }
+    },
+    "candidate": {
+      "to_low_rate": 0.0955,
+      "to_high_rate": 0.9045,
+      "cost_margin_vs_all_low": 15.6469455,
+      "cost_margin_vs_all_high": -1.652054500000002,
+      "cost_margin_vs_oracle": 12.5850225
+    },
+    "flags": [],
+    "valid_for_claim": true,
+    "recommended_action": "eligible_after_heldout_or_cv_validation"
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6776532694604417,
+        "avg_cost": 16.0517395,
+        "accuracy": 88.85,
+        "to_low": 179,
+        "to_high": 1821
+      },
+      "eval": {
+        "avg_cost": 16.043090000000003,
+        "accuracy": 89.15,
+        "to_low": 180,
+        "to_high": 1820
+      }
+    },
+    {
+      "fold": 2,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6798945888214507,
+        "avg_cost": 16.112286,
+        "accuracy": 88.85,
+        "to_low": 172,
+        "to_high": 1828
+      },
+      "eval": {
+        "avg_cost": 15.904698,
+        "accuracy": 88.6,
+        "to_low": 196,
+        "to_high": 1804
+      }
+    },
+    {
+      "fold": 3,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6653195539633737,
+        "avg_cost": 16.146884000000004,
+        "accuracy": 88.85,
+        "to_low": 168,
+        "to_high": 1832
+      },
+      "eval": {
+        "avg_cost": 16.181482000000003,
+        "accuracy": 88.85,
+        "to_low": 164,
+        "to_high": 1836
+      }
+    },
+    {
+      "fold": 4,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6369345631363321,
+        "avg_cost": 15.636563500000001,
+        "accuracy": 88.85,
+        "to_low": 227,
+        "to_high": 1773
+      },
+      "eval": {
+        "avg_cost": 15.7749555,
+        "accuracy": 88.9,
+        "to_low": 211,
+        "to_high": 1789
+      }
+    },
+    {
+      "fold": 5,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.651516406024784,
+        "avg_cost": 15.697110000000002,
+        "accuracy": 88.9,
+        "to_low": 220,
+        "to_high": 1780
+      },
+      "eval": {
+        "avg_cost": 15.835502,
+        "accuracy": 88.45,
+        "to_low": 204,
+        "to_high": 1796
+      }
+    }
+  ]
+}
+=== claimable record-breaker search: claim_lightweight_spectrum_lgbm_hard_penalty ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "claim_lightweight_spectrum_lgbm_hard_penalty",
+  "protocol": "5-fold outer CV; threshold selected only on inner calibration split; evaluation fold never used for fitting or threshold search",
+  "feature_set": "lightweight_plus_spectrum",
+  "target": "low_correct",
+  "score_kind": "classifier",
+  "sample_weighting": "penalize_hard",
+  "samples": 10000,
+  "feature_count": 180,
+  "overall": {
+    "avg_cost": 16.070768400000002,
+    "accuracy": 88.86,
+    "to_low": 884,
+    "to_high": 9116,
+    "target_accuracy": 88.85,
+    "beats_record_to_beat": false
+  },
+  "guardrails": {
+    "baselines": {
+      "all_low": {
+        "accuracy": 71.15,
+        "avg_cost": 0.301,
+        "meets_target": false
+      },
+      "all_high": {
+        "accuracy": 89.85,
+        "avg_cost": 17.6,
+        "meets_target": true
+      },
+      "oracle": {
+        "coun
