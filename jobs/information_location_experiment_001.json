@@ -1,8 +1,10 @@
 {
   "id": "information_location_experiment_001",
-  "status": "pending",
+  "status": "running",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.information_location_experiment --include-embedding",
-  "max_runtime_sec": 3600
+  "max_runtime_sec": 3600,
+  "updated_at": "2026-07-02T12:11:28.659153+00:00",
+  "started_at": "2026-07-02T12:11:28.659088+00:00"
 }
