@@ -367,4 +367,22 @@ Loading cheap spectrum feature cache: /content/drive/MyDrive/Research_Experiment
   ],
   "notes": "Raw low-resolution image probe. Not a cheap streaming statistic; tests whether image content itself carries signal."
 }
-D
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+
+  0%|          | 0.00/44.7M [00:00<?, ?B/s]
+  5%|▌         | 2.25M/44.7M [00:00<00:01, 23.2MB/s]
+ 13%|█▎        | 5.62M/44.7M [00:00<00:01, 30.2MB/s]
+ 20%|██        | 9.12M/44.7M [00:00<00:01, 33.1MB/s]
+ 28%|██▊       | 12.4M/44.7M [00:00<00:01, 27.9MB/s]
+ 34%|███▍      | 15.2M/44.7M [00:00<00:01, 27.8MB/s]
+ 40%|████      | 18.0M/44.7M [00:00<00:00, 28.0MB/s]
+ 49%|████▉     | 22.0M/44.7M [00:00<00:00, 31.9MB/s]
+ 56%|█████▋    | 25.1M/44.7M [00:00<00:00, 29.8MB/s]
+ 63%|██████▎   | 28.1M/44.7M [00:01<00:00, 29.1MB/s]
+ 69%|██████▉   | 31.0M/44.7M [00:01<00:00, 28.9MB/s]
+ 78%|███████▊  | 35.0M/44.7M [00:01<00:00, 32.5MB/s]
+ 86%|████████▌ | 38.2M/44.7M [00:01<00:00, 30.0MB/s]
+ 92%|█████████▏| 41.2M/44.7M [00:01<00:00, 29.5MB/s]
+ 99%|█████████▉| 44.1M/44.7M [00:01<00:00, 28.6MB/s]
+100%|██████████| 44.7M/44.7M [00:01<00:00, 29.3MB/s]
+/
