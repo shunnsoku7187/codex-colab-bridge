@@ -1,0 +1,8 @@
+{
+  "id": "allowed_upper_low_correct_lgbm_002",
+  "status": "pending",
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.allowed_feature_upper_bound --targets low_correct --models lightgbm_upper_bound --output-name allowed_upper_low_correct_lgbm_002.json",
+  "max_runtime_sec": 3600
+}

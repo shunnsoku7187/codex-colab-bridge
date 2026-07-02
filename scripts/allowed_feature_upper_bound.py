@@ -1,3 +1,4 @@
+import argparse
 import json
 
 import lightgbm as lgb
@@ -121,6 +122,12 @@ def model_zoo():
     }
 
 
+def parse_csv(value):
+    if value is None:
+        return None
+    return [item.strip() for item in value.split(",") if item.strip()]
+
+
 def predict_positive(model, x_values):
     if hasattr(model, "predict_proba"):
         return model.predict_proba(x_values)[:, 1]
@@ -235,27 +242,7 @@ def evaluate_model_target(name, model, x_values, records, strata, target_name):
     return result
 
 
-def main():
-    ensure_dirs()
-    records, lightweight_x, _, _ = build_dataset("lightweight_lgbm", max_samples=None)
-    records = add_low_confidence(records, ARTIFACT_DIR / "cifar100_low_confidence_x1_0.json", batch_size=128)
-    feature_sets = load_allowed_feature_space(records, lightweight_x)
-    x_values, feature_names = feature_sets["allowed_full"]
-    strata = strata_for(records)
-    teacher_thresholds = {
-        str(margin): cascade_teacher_threshold(records, margin)
-        for margin in TARGET_MARGIN_PCTS
-    }
-
-    targets = ["safe_low_actual", "low_correct"] + [
-        f"cascade_teacher_margin_{margin}" for margin in TARGET_MARGIN_PCTS
-    ]
-    results = []
-    models = model_zoo()
-    for target_name in targets:
-        for model_name, model in models.items():
-            results.append(evaluate_model_target(model_name, model, x_values, records, strata, target_name))
-
+def build_summary(records, x_values, feature_names, targets, models, teacher_thresholds, results, status):
     feasible = []
     for result in results:
         for margin_row in result["overall_by_target_margin"]:
@@ -281,7 +268,7 @@ def main():
         best_by_margin[str(margin)] = min(subset, key=lambda item: item["overall"]["avg_cost"]) if subset else None
 
     summary = {
-        "status": "ok",
+        "status": status,
         "purpose": "Upper-bound feasibility check for the allowed zero-latency feature space using strong models and offline teacher labels.",
         "samples": len(records),
         "feature_set": "allowed_full",
@@ -317,7 +304,68 @@ def main():
             "negative": "If all strong models remain far below 37.5% LOW, the allowed feature space likely lacks the information needed to match the notebook record, parallel, or cascade baselines.",
         },
     }
-    output_path = RESULTS_DIR / "allowed_feature_upper_bound.json"
+    return summary
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--targets", help="Comma-separated target names. Defaults to all targets.")
+    parser.add_argument("--models", help="Comma-separated model names. Defaults to all models.")
+    parser.add_argument("--output-name", default="allowed_feature_upper_bound.json")
+    args = parser.parse_args()
+
+    ensure_dirs()
+    records, lightweight_x, _, _ = build_dataset("lightweight_lgbm", max_samples=None)
+    records = add_low_confidence(records, ARTIFACT_DIR / "cifar100_low_confidence_x1_0.json", batch_size=128)
+    feature_sets = load_allowed_feature_space(records, lightweight_x)
+    x_values, feature_names = feature_sets["allowed_full"]
+    strata = strata_for(records)
+    teacher_thresholds = {
+        str(margin): cascade_teacher_threshold(records, margin)
+        for margin in TARGET_MARGIN_PCTS
+    }
+
+    all_targets = ["safe_low_actual", "low_correct"] + [
+        f"cascade_teacher_margin_{margin}" for margin in TARGET_MARGIN_PCTS
+    ]
+    all_models = model_zoo()
+    targets = parse_csv(args.targets) or all_targets
+    requested_models = parse_csv(args.models) or list(all_models.keys())
+    unknown_targets = sorted(set(targets) - set(all_targets))
+    unknown_models = sorted(set(requested_models) - set(all_models.keys()))
+    if unknown_targets:
+        raise ValueError(f"Unknown targets: {unknown_targets}; available={all_targets}")
+    if unknown_models:
+        raise ValueError(f"Unknown models: {unknown_models}; available={list(all_models.keys())}")
+
+    models = {name: all_models[name] for name in requested_models}
+    output_path = RESULTS_DIR / args.output_name
+    results = []
+    for target_name in targets:
+        for model_name, model in models.items():
+            results.append(evaluate_model_target(model_name, model, x_values, records, strata, target_name))
+            checkpoint = build_summary(
+                records,
+                x_values,
+                feature_names,
+                targets,
+                models,
+                teacher_thresholds,
+                results,
+                status="partial",
+            )
+            output_path.write_text(json.dumps(checkpoint, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    summary = build_summary(
+        records,
+        x_values,
+        feature_names,
+        targets,
+        models,
+        teacher_thresholds,
+        results,
+        status="ok",
+    )
     output_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False, indent=2), flush=True)
 
