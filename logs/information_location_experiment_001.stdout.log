@@ -280,4 +280,91 @@ Loading cheap spectrum feature cache: /content/drive/MyDrive/Research_Experiment
   warnings.warn(
 /usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
   warnings.warn(
-/
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "lowres_16x16_raw_rgb",
+  "observation_level": "image_content_upper_probe",
+  "safe_vs_hard_auc": 0.547964323254011,
+  "purity_at_k": [
+    {
+      "target": "current_strict_best_low_1389",
+      "to_low": 1389,
+      "counts_in_low": {
+        "Easy": 1053,
+        "Hard": 244,
+        "Impossible": 63,
+        "Inverse": 29
+      },
+      "hard_to_low_minus_inverse_to_low": 215,
+      "allowed_hard_minus_inverse_at_1p5pct": 150,
+      "meets_1p5pct_margin": false,
+      "accuracy": 87.7,
+      "accuracy_drop_from_high": 2.1499999999999915,
+      "avg_cost": 15.197168900000001
+    },
+    {
+      "target": "notebook_record_low_3749",
+      "to_low": 3749,
+      "counts_in_low": {
+        "Easy": 2748,
+        "Hard": 694,
+        "Impossible": 232,
+        "Inverse": 75
+      },
+      "hard_to_low_minus_inverse_to_low": 619,
+      "allowed_hard_minus_inverse_at_1p5pct": 150,
+      "meets_1p5pct_margin": false,
+      "accuracy": 83.66,
+      "accuracy_drop_from_high": 6.189999999999998,
+      "avg_cost": 11.1146049
+    },
+    {
+      "target": "cascade_like_low_5248",
+      "to_low": 5248,
+      "counts_in_low": {
+        "Easy": 3781,
+        "Hard": 985,
+        "Impossible": 366,
+        "Inverse": 116
+      },
+      "hard_to_low_minus_inverse_to_low": 869,
+      "allowed_hard_minus_inverse_at_1p5pct": 150,
+      "meets_1p5pct_margin": false,
+      "accuracy": 81.16,
+      "accuracy_drop_from_high": 8.689999999999998,
+      "avg_cost": 8.521484800000001
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_positive_rate": 0.791,
+      "eval_positive_rate": 0.7905
+    },
+    {
+      "fold": 2,
+      "train_positive_rate": 0.790875,
+      "eval_positive_rate": 0.791
+    },
+    {
+      "fold": 3,
+      "train_positive_rate": 0.790875,
+      "eval_positive_rate": 0.791
+    },
+    {
+      "fold": 4,
+      "train_positive_rate": 0.790875,
+      "eval_positive_rate": 0.791
+    },
+    {
+      "fold": 5,
+      "train_positive_rate": 0.790875,
+      "eval_positive_rate": 0.791
+    }
+  ],
+  "notes": "Raw low-resolution image probe. Not a cheap streaming statistic; tests whether image content itself carries signal."
+}
+D
