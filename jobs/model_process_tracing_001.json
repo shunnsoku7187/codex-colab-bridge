@@ -1,10 +1,13 @@
 {
   "id": "model_process_tracing_001",
-  "status": "running",
+  "status": "failed",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.model_process_tracing --batch-size 64 --output-prefix model_process_trace_001",
   "max_runtime_sec": 3600,
-  "updated_at": "2026-07-02T13:14:13.478504+00:00",
-  "started_at": "2026-07-02T13:14:13.478471+00:00"
+  "updated_at": "2026-07-02T14:14:16.024327+00:00",
+  "started_at": "2026-07-02T13:14:13.478471+00:00",
+  "returncode": -9,
+  "finished_at": "2026-07-02T14:14:16.022282+00:00",
+  "result_file": "results/model_process_tracing_001.json"
 }
