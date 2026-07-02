@@ -389,4 +389,21 @@ Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /con
   warnings.warn(
 /usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
   warnings.warn(
-/
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "resnet18_imagenet_embedding",
+  "observation_level": "pretrained_semantic_embedding",
+  "safe_vs_hard_auc": 0.6019479772270891,
+  "purity_at_k": [
+    {
+      "target": "current_strict_best_low_1389",
+      "to_low": 1389,
+      "counts_in_low": {
+        "Easy": 1169,
+        "Hard": 140,
+      

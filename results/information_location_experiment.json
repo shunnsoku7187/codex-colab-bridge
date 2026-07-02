@@ -1,0 +1,402 @@
+{
+  "status": "ok",
+  "purpose": "Information-location experiment: test whether LOW/HIGH routing information is present in streaming statistics, semantic labels, model-internal signals, or richer image representations.",
+  "samples": 10000,
+  "category_counts": {
+    "Easy": 6894,
+    "Hard": 2091,
+    "Impossible": 794,
+    "Inverse": 221
+  },
+  "target_definition": "safe=not Hard; Hard means LOW wrong and HIGH correct.",
+  "interpretation_rule": {
+    "statistics_weak_semantic_or_model_strong": "The issue is likely information level: cheap statistics do not expose the needed semantic/model-capacity signal.",
+    "statistics_and_positive_controls_weak": "The LOW/HIGH difference may be intrinsically difficult to predict before running the models.",
+    "statistics_strong": "A zero-latency statistical router remains plausible."
+  },
+  "results": [
+    {
+      "name": "allowed_full_streaming_statistics",
+      "observation_level": "resource_bounded_streaming_statistics",
+      "safe_vs_hard_auc": 0.5576875202680611,
+      "purity_at_k": [
+        {
+          "target": "current_strict_best_low_1389",
+          "to_low": 1389,
+          "counts_in_low": {
+            "Easy": 1059,
+            "Hard": 202,
+            "Impossible": 100,
+            "Inverse": 28
+          },
+          "hard_to_low_minus_inverse_to_low": 174,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": false,
+          "accuracy": 88.11,
+          "accuracy_drop_from_high": 1.7399999999999949,
+          "avg_cost": 15.197168900000001
+        },
+        {
+          "target": "notebook_record_low_3749",
+          "to_low": 3749,
+          "counts_in_low": {
+            "Easy": 2761,
+            "Hard": 625,
+            "Impossible": 269,
+            "Inverse": 94
+          },
+          "hard_to_low_minus_inverse_to_low": 531,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": false,
+          "accuracy": 84.54,
+          "accuracy_drop_from_high": 5.309999999999988,
+          "avg_cost": 11.1146049
+        },
+        {
+          "target": "cascade_like_low_5248",
+          "to_low": 5248,
+          "counts_in_low": {
+            "Easy": 3765,
+            "Hard": 968,
+            "Impossible": 391,
+            "Inverse": 124
+          },
+          "hard_to_low_minus_inverse_to_low": 844,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": false,
+          "accuracy": 81.41,
+          "accuracy_drop_from_high": 8.439999999999998,
+          "avg_cost": 8.521484800000001
+        }
+      ],
+      "folds": [
+        {
+          "fold": 1,
+          "train_positive_rate": 0.791,
+          "eval_positive_rate": 0.7905
+        },
+        {
+          "fold": 2,
+          "train_positive_rate": 0.790875,
+          "eval_positive_rate": 0.791
+        },
+        {
+          "fold": 3,
+          "train_positive_rate": 0.790875,
+          "eval_positive_rate": 0.791
+        },
+        {
+          "fold": 4,
+          "train_positive_rate": 0.790875,
+          "eval_positive_rate": 0.791
+        },
+        {
+          "fold": 5,
+          "train_positive_rate": 0.790875,
+          "eval_positive_rate": 0.791
+        }
+      ],
+      "notes": "Claimable-ish statistical observation class; no model logits/confidence at runtime."
+    },
+    {
+      "name": "true_class_label_prior",
+      "observation_level": "semantic_oracle",
+      "safe_vs_hard_auc": 0.6089608548796844,
+      "purity_at_k": [
+        {
+          "target": "current_strict_best_low_1389",
+          "to_low": 1389,
+          "counts_in_low": {
+            "Easy": 1174,
+            "Hard": 147,
+            "Impossible": 53,
+            "Inverse": 15
+          },
+          "hard_to_low_minus_inverse_to_low": 132,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": true,
+          "accuracy": 88.53,
+          "accuracy_drop_from_high": 1.3199999999999932,
+          "avg_cost": 15.197168900000001
+        },
+        {
+          "target": "notebook_record_low_3749",
+          "to_low": 3749,
+          "counts_in_low": {
+            "Easy": 2933,
+            "Hard": 548,
+            "Impossible": 205,
+            "Inverse": 63
+          },
+          "hard_to_low_minus_inverse_to_low": 485,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": false,
+          "accuracy": 85.0,
+          "accuracy_drop_from_high": 4.849999999999994,
+          "avg_cost": 11.1146049
+        },
+        {
+          "target": "cascade_like_low_5248",
+          "to_low": 5248,
+          "counts_in_low": {
+            "Easy": 3982,
+            "Hard": 844,
+            "Impossible": 324,
+            "Inverse": 98
+          },
+          "hard_to_low_minus_inverse_to_low": 746,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": false,
+          "accuracy": 82.39,
+          "accuracy_drop_from_high": 7.459999999999994,
+          "avg_cost": 8.521484800000001
+        }
+      ],
+      "folds": [
+        {
+          "fold": 1,
+          "known_classes": 100
+        },
+        {
+          "fold": 2,
+          "known_classes": 100
+        },
+        {
+          "fold": 3,
+          "known_classes": 100
+        },
+        {
+          "fold": 4,
+          "known_classes": 100
+        },
+        {
+          "fold": 5,
+          "known_classes": 100
+        }
+      ],
+      "notes": "Uses true CIFAR-100 class label as a semantic information upper-bound; not available to the runtime router."
+    },
+    {
+      "name": "low_model_confidence",
+      "observation_level": "model_internal_signal",
+      "safe_vs_hard_auc": 0.7956917758730815,
+      "purity_at_k": [
+        {
+          "target": "current_strict_best_low_1389",
+          "to_low": 1389,
+          "counts_in_low": {
+            "Easy": 1376,
+            "Hard": 5,
+            "Impossible": 5,
+            "Inverse": 3
+          },
+          "hard_to_low_minus_inverse_to_low": 2,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": true,
+          "accuracy": 89.83,
+          "accuracy_drop_from_high": 0.01999999999999602,
+          "avg_cost": 15.197168900000001
+        },
+        {
+          "target": "notebook_record_low_3749",
+          "to_low": 3749,
+          "counts_in_low": {
+            "Easy": 3570,
+            "Hard": 102,
+            "Impossible": 62,
+            "Inverse": 15
+          },
+          "hard_to_low_minus_inverse_to_low": 87,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": true,
+          "accuracy": 88.98,
+          "accuracy_drop_from_high": 0.8699999999999903,
+          "avg_cost": 11.1146049
+        },
+        {
+          "target": "cascade_like_low_5248",
+          "to_low": 5248,
+          "counts_in_low": {
+            "Easy": 4746,
+            "Hard": 329,
+            "Impossible": 126,
+            "Inverse": 47
+          },
+          "hard_to_low_minus_inverse_to_low": 282,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": false,
+          "accuracy": 87.03,
+          "accuracy_drop_from_high": 2.819999999999993,
+          "avg_cost": 8.521484800000001
+        }
+      ],
+      "notes": "Cascade-like positive control. It is not allowed for a zero-latency pre-router because LOW has already run."
+    },
+    {
+      "name": "lowres_16x16_raw_rgb",
+      "observation_level": "image_content_upper_probe",
+      "safe_vs_hard_auc": 0.547964323254011,
+      "purity_at_k": [
+        {
+          "target": "current_strict_best_low_1389",
+          "to_low": 1389,
+          "counts_in_low": {
+            "Easy": 1053,
+            "Hard": 244,
+            "Impossible": 63,
+            "Inverse": 29
+          },
+          "hard_to_low_minus_inverse_to_low": 215,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": false,
+          "accuracy": 87.7,
+          "accuracy_drop_from_high": 2.1499999999999915,
+          "avg_cost": 15.197168900000001
+        },
+        {
+          "target": "notebook_record_low_3749",
+          "to_low": 3749,
+          "counts_in_low": {
+            "Easy": 2748,
+            "Hard": 694,
+            "Impossible": 232,
+            "Inverse": 75
+          },
+          "hard_to_low_minus_inverse_to_low": 619,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": false,
+          "accuracy": 83.66,
+          "accuracy_drop_from_high": 6.189999999999998,
+          "avg_cost": 11.1146049
+        },
+        {
+          "target": "cascade_like_low_5248",
+          "to_low": 5248,
+          "counts_in_low": {
+            "Easy": 3781,
+            "Hard": 985,
+            "Impossible": 366,
+            "Inverse": 116
+          },
+          "hard_to_low_minus_inverse_to_low": 869,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": false,
+          "accuracy": 81.16,
+          "accuracy_drop_from_high": 8.689999999999998,
+          "avg_cost": 8.521484800000001
+        }
+      ],
+      "folds": [
+        {
+          "fold": 1,
+          "train_positive_rate": 0.791,
+          "eval_positive_rate": 0.7905
+        },
+        {
+          "fold": 2,
+          "train_positive_rate": 0.790875,
+          "eval_positive_rate": 0.791
+        },
+        {
+          "fold": 3,
+          "train_positive_rate": 0.790875,
+          "eval_positive_rate": 0.791
+        },
+        {
+          "fold": 4,
+          "train_positive_rate": 0.790875,
+          "eval_positive_rate": 0.791
+        },
+        {
+          "fold": 5,
+          "train_positive_rate": 0.790875,
+          "eval_positive_rate": 0.791
+        }
+      ],
+      "notes": "Raw low-resolution image probe. Not a cheap streaming statistic; tests whether image content itself carries signal."
+    },
+    {
+      "name": "resnet18_imagenet_embedding",
+      "observation_level": "pretrained_semantic_embedding",
+      "safe_vs_hard_auc": 0.6019479772270891,
+      "purity_at_k": [
+        {
+          "target": "current_strict_best_low_1389",
+          "to_low": 1389,
+          "counts_in_low": {
+            "Easy": 1169,
+            "Hard": 140,
+            "Impossible": 54,
+            "Inverse": 26
+          },
+          "hard_to_low_minus_inverse_to_low": 114,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": true,
+          "accuracy": 88.71,
+          "accuracy_drop_from_high": 1.1400000000000006,
+          "avg_cost": 15.197168900000001
+        },
+        {
+          "target": "notebook_record_low_3749",
+          "to_low": 3749,
+          "counts_in_low": {
+            "Easy": 2947,
+            "Hard": 535,
+            "Impossible": 190,
+            "Inverse": 77
+          },
+          "hard_to_low_minus_inverse_to_low": 458,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": false,
+          "accuracy": 85.27,
+          "accuracy_drop_from_high": 4.579999999999998,
+          "avg_cost": 11.1146049
+        },
+        {
+          "target": "cascade_like_low_5248",
+          "to_low": 5248,
+          "counts_in_low": {
+            "Easy": 3982,
+            "Hard": 850,
+            "Impossible": 314,
+            "Inverse": 102
+          },
+          "hard_to_low_minus_inverse_to_low": 748,
+          "allowed_hard_minus_inverse_at_1p5pct": 150,
+          "meets_1p5pct_margin": false,
+          "accuracy": 82.37,
+          "accuracy_drop_from_high": 7.47999999999999,
+          "avg_cost": 8.521484800000001
+        }
+      ],
+      "folds": [
+        {
+          "fold": 1,
+          "train_positive_rate": 0.791,
+          "eval_positive_rate": 0.7905
+        },
+        {
+          "fold": 2,
+          "train_positive_rate": 0.790875,
+          "eval_positive_rate": 0.791
+        },
+        {
+          "fold": 3,
+          "train_positive_rate": 0.790875,
+          "eval_positive_rate": 0.791
+        },
+        {
+          "fold": 4,
+          "train_positive_rate": 0.790875,
+          "eval_positive_rate": 0.791
+        },
+        {
+          "fold": 5,
+          "train_positive_rate": 0.790875,
+          "eval_positive_rate": 0.791
+        }
+      ],
+      "notes": "High-level pretrained representation probe; not runtime-claimable, used to locate information."
+    }
+  ]
+}
