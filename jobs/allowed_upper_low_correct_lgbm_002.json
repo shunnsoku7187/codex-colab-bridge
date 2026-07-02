@@ -1,10 +1,13 @@
 {
   "id": "allowed_upper_low_correct_lgbm_002",
-  "status": "running",
+  "status": "done",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.allowed_feature_upper_bound --targets low_correct --models lightgbm_upper_bound --output-name allowed_upper_low_correct_lgbm_002.json",
   "max_runtime_sec": 3600,
-  "updated_at": "2026-07-02T10:14:31.169949+00:00",
-  "started_at": "2026-07-02T10:14:31.169930+00:00"
+  "updated_at": "2026-07-02T10:36:33.560464+00:00",
+  "started_at": "2026-07-02T10:14:31.169930+00:00",
+  "returncode": 0,
+  "finished_at": "2026-07-02T10:36:33.558047+00:00",
+  "result_file": "results/allowed_upper_low_correct_lgbm_002.json"
 }
