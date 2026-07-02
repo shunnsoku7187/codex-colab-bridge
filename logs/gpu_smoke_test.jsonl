@@ -1,3 +1,0 @@
-{"time": "2026-07-01T09:48:46.688081+00:00", "event": "job_running", "job_file": "jobs/gpu_smoke_test.json"}
-{"time": "2026-07-01T09:48:48.161628+00:00", "event": "process_start", "command": "python src/train.py --config configs/config.yaml --out results/gpu_smoke_test_train_output.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge"}
-{"time": "2026-07-01T09:48:55.389431+00:00", "event": "process_end", "returncode": 0, "duration_sec": 7.228}

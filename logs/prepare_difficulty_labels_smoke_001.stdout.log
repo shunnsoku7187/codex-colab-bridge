@@ -1,5 +1,0 @@
-Requirement already satisfied: matplotlib-venn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 1)) (1.1.2)
-Collecting torchinfo (from -r requirements-colab.txt (line 2))
-  Downloading torchinfo-1.8.0-py3-none-any.whl.metadata (21 kB)
-Requirement already satisfied: transformers in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 3)) (5.12.1)
-Requirement already satisfied: opencv-python-headless in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 4)) (4.13.0.92)

@@ -1,4 +1,0 @@
-{"time": "2026-07-01T14:24:50.379323+00:00", "event": "job_running", "job_file": "jobs/prepare_difficulty_labels_smoke_001.json"}
-{"time": "2026-07-01T14:24:51.531397+00:00", "event": "process_prepared", "command": "python -m pip install -r requirements-colab.txt && python scripts/prepare_difficulty_labels.py --force --max-samples 500 --batch-size 50 && python scripts/summarize_difficulty_labels.py", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 1800}
-{"time": "2026-07-01T14:24:52.673952+00:00", "event": "process_start", "command": "python -m pip install -r requirements-colab.txt && python scripts/prepare_difficulty_labels.py --force --max-samples 500 --batch-size 50 && python scripts/summarize_difficulty_labels.py", "cwd": "/content/codex_colab_bridge/codex-colab-bridge"}
-{"time": "2026-07-01T14:25:19.126043+00:00", "event": "process_end", "returncode": 1, "duration_sec": 26.452}

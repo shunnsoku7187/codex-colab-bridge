@@ -1,2 +1,0 @@
-{"time": "2026-07-01T10:19:24.824773+00:00", "event": "job_running", "job_file": "jobs/run_intermediate_notebook_001.json"}
-{"time": "2026-07-01T10:19:25.984103+00:00", "event": "job_exception", "error": "Unknown job type: notebook", "traceback": "Traceback (most recent call last):\n  File \"/tmp/ipykernel_1946/1425110469.py\", line 196, in execute_job\n    raise ValueError(f\"Unknown job type: {job_type}\")\nValueError: Unknown job type: notebook\n"}
