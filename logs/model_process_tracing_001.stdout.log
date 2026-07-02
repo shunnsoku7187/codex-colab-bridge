@@ -48,3 +48,9 @@ Using cache found in /content/drive/MyDrive/Research_Experiment/.colab_cache/tor
 Loading HIGH model...
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 200/200 [00:00<00:00, 11182.28it/s]
+LOW hook layers: ['features.0', 'features.3', 'features.7', 'features.10', 'features.14', 'features.18']
+
+Tracing model process:   0%|          | 0/157 [00:00<?, ?it/s]
+Tracing model process:   1%|          | 1/157 [01:07<2:55:31, 67.51s/it]
