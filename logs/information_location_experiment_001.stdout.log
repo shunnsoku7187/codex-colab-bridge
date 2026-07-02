@@ -42,4 +42,11 @@ Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packag
 Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (4.2.0)
 Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (2.20.0)
 Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (0.1.2)
-[
+[lightweight_lgbm] loading difficulty labels from /content/drive/MyDrive/Research_Experiment/cifar100_difficulty_labels.json
+[lightweight_lgbm] loading feature cache: /content/drive/MyDrive/Research_Experiment/router_features_lightweight_full.npz
+Using cached low-confidence artifact: /content/drive/MyDrive/Research_Experiment/cifar100_low_confidence_x1_0.json
+Loading HOG feature cache: /content/drive/MyDrive/Research_Experiment/record_breaker_features_hog4x4_full.npz
+Loading cheap spectrum feature cache: /content/drive/MyDrive/Research_Experiment/claimable_features_cheap_spectrum_full.npz
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/
