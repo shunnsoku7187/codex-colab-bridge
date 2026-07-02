@@ -1,5 +1,13 @@
 # Approach Pruning Notes
 
+Current feasibility plan:
+
+- See `docs/feasibility_experiment_plan.md`.
+- The next phase is not another broad router search. It is a mechanistic
+  feasibility study: determine whether the information needed for LOW/HIGH
+  routing is observable in zero-latency image statistics, or whether it mainly
+  lives in semantic/model-internal signals.
+
 ## Current Cut
 
 Drop these branches for now:
