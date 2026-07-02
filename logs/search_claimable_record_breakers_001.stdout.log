@@ -406,4 +406,302 @@ Wrote cheap spectrum feature cache: /content/drive/MyDrive/Research_Experiment/c
   warnings.warn(
 /usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
   warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "claim_lightweight_safe_low",
+  "protocol": "5-fold outer CV; threshold selected only on inner calibration split; evaluation fold never used for fitting or threshold search",
+  "feature_set": "lightweight",
+  "target": "safe_low_binary",
+  "score_kind": "classifier",
+  "sample_weighting": "penalize_hard",
+  "samples": 10000,
+  "feature_count": 8,
+  "overall": {
+    "avg_cost": 16.179752100000005,
+    "accuracy": 88.68,
+    "to_low": 821,
+    "to_high": 9179,
+    "target_accuracy": 88.85,
+    "beats_record_to_beat": false
+  },
+  "guardrails": {
+    "baselines": {
+      "all_low": {
+        "accuracy": 71.15,
+        "avg_cost": 0.301,
+        "meets_target": false
+      },
+      "all_high": {
+        "accuracy": 89.85,
+        "avg_cost": 17.6,
+        "meets_target": true
+      },
+      "oracle": {
+        "counts": {
+          "Easy": 6894,
+          "Hard": 2091,
+          "Impossible": 794,
+          "Inverse": 221
+        },
+        "high_accuracy": 89.85,
+        "low_accuracy": 71.15,
+        "target_accuracy": 88.85,
+        "all_low_meets_target": false,
+        "oracle_low": 8230,
+        "oracle_high": 1770,
+        "oracle_low_rate": 0.823,
+        "oracle_high_rate": 0.177,
+        "oracle_cost": 3.3629230000000003,
+        "hard_low_allowed_at_target": 321
+      }
+    },
+    "candidate": {
+      "to_low_rate": 0.0821,
+      "to_high_rate": 0.9179,
+      "cost_margin_vs_all_low": 15.878752100000005,
+      "cost_margin_vs_all_high": -1.4202478999999961,
+      "cost_margin_vs_oracle": 12.816829100000005
+    },
+    "flags": [],
+    "valid_for_claim": true,
+    "recommended_action": "eligible_after_heldout_or_cv_validation"
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.5639796148040315,
+        "avg_cost": 16.242028500000004,
+        "accuracy": 88.85,
+        "to_low": 157,
+        "to_high": 1843
+      },
+      "eval": {
+        "avg_cost": 16.008492,
+        "accuracy": 89.0,
+        "to_low": 184,
+        "to_high": 1816
+      }
+    },
+    {
+      "fold": 2,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.5949197561380921,
+        "avg_cost": 16.5188125,
+        "accuracy": 88.85,
+        "to_low": 125,
+        "to_high": 1875
+      },
+      "eval": {
+        "avg_cost": 16.562060000000002,
+        "accuracy": 89.15,
+        "to_low": 120,
+        "to_high": 1880
+      }
+    },
+    {
+      "fold": 3,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.5781711550628958,
+        "avg_cost": 16.2074305,
+        "accuracy": 88.9,
+        "to_low": 161,
+        "to_high": 1839
+      },
+      "eval": {
+        "avg_cost": 16.3112245,
+        "accuracy": 88.45,
+        "to_low": 149,
+        "to_high": 1851
+      }
+    },
+    {
+      "fold": 4,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.574443991791974,
+        "avg_cost": 15.904698,
+        "accuracy": 88.85,
+        "to_low": 196,
+        "to_high": 1804
+      },
+      "eval": {
+        "avg_cost": 16.172832500000002,
+        "accuracy": 88.55,
+        "to_low": 165,
+        "to_high": 1835
+      }
+    },
+    {
+      "fold": 5,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.5617885431340746,
+        "avg_cost": 15.7922545,
+        "accuracy": 88.85,
+        "to_low": 209,
+        "to_high": 1791
+      },
+      "eval": {
+        "avg_cost": 15.844151500000002,
+        "accuracy": 88.25,
+        "to_low": 203,
+        "to_high": 1797
+      }
+    }
+  ]
+}
+=== claimable record-breaker search: claim_hog4x4_lgbm_hard_penalty ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "claim_hog4x4_lgbm_hard_penalty",
+  "protocol": "5-fold outer CV; threshold selected only on inner calibration split; evaluation fold never used for fitting or threshold search",
+  "feature_set": "hog4x4",
+  "target": "low_correct",
+  "score_kind": "classifier",
+  "sample_weighting": "penalize_hard",
+  "samples": 10000,
+  "feature_count": 576,
+  "overall": null,
+  "guardrails": {
+    "baselines": {
+      "all_low": {
+        "accuracy": 71.15,
+        "avg_cost": 0.301,
+        "meets_target": false
+      },
+      "all_high": {
+        "accuracy": 89.85,
+        "avg_cost": 17.6,
+        "meets_target": true
+      },
+      "oracle": {
+        "counts": {
+          "Easy": 6894,
+          "Hard": 2091,
+          "Impossible": 794,
+          "Inverse": 221
+        },
+        "high_accuracy": 89.85,
+        "low_accuracy": 71.15,
+        "target_accuracy": 88.85,
+        "all_low_meets_target": false,
+        "oracle_low": 8230,
+        "oracle_high": 1770,
+        "oracle_low_rate": 0.823,
+        "oracle_high_rate": 0.177,
+        "oracle_cost": 3.3629230000000003,
+        "hard_low_allowed_at_target": 321
+      }
+    },
+    "candidate": null,
+    "flags": [
+      "no_feasible_threshold"
+    ],
+    "valid_for_claim": false,
+    "recommended_action": "discard_or_reformulate_threshold_search"
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6471058329783352,
+        "avg_cost": 15.818203,
+        "accuracy": 88.85,
+        "to_low": 206,
+        "to_high": 1794
+      },
+      "eval": {
+        "avg_cost": 15.809553500000002,
+        "accuracy": 88.7,
+        "to_low": 207,
+        "to_high": 1793
+      }
+    },
+    {
+      "fold": 2,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6676257381332764,
+        "avg_cost": 16.103636500000004,
+        "accuracy": 88.85,
+        "to_low": 173,
+        "to_high": 1827
+      },
+      "eval": {
+        "avg_cost": 16.319874000000002,
+        "accuracy": 88.75,
+        "to_low": 148,
+        "to_high": 1852
+      }
+    },
+    {
+      "fold": 3,
+      "status": "no_feasible_calibration_threshold"
+    },
+    {
+      "fold": 4,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6527623814076797,
+        "avg_cost": 16.008492,
+        "accuracy": 88.9,
+        "to_low": 184,
+        "to_high": 1816
+      },
+      "eval": {
+        "avg_cost": 16.1382345,
+        "accuracy": 88.7,
+        "to_low": 169,
+        "to_high": 1831
+      }
+    },
+    {
+      "fold": 5,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6462163029698285,
+        "avg_cost": 15.6019655,
+        "accuracy": 88.85,
+        "to_low": 231,
+        "to_high": 1769
+      },
+      "eval": {
+        "avg_cost": 15.6538625,
+        "accuracy": 88.3,
+        "to_low": 225,
+        "to_high": 1775
+      }
+    }
+  ]
+}
+=== claimable record-breaker search: claim_lightweight_hog_lgbm_hard_penalty ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
 /
