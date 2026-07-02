@@ -101,3 +101,55 @@ Next focused job:
   - stronger variants of the current 8-feature LightGBM approach,
   - Histogram of Oriented Gradients features,
   - LightGBM soft-target learning.
+
+## Record-Breaker Credibility Check
+
+The full-fit record-breaker search produced extremely low apparent costs, with the
+best HOG + soft-target variant reaching about 3.3716 GFLOPs. That number is too
+close to the oracle lower bound at the target accuracy, so it must not be treated
+as a credible result without held-out validation.
+
+Strict 5-fold CV invalidated those full-fit gains:
+
+| method | avg cost | accuracy | to low | easy saved |
+| --- | ---: | ---: | ---: | ---: |
+| `cv_lightweight_hog_lgbm` | 16.2230 | 88.88% | 796 | 9.04% |
+| `cv_hog4x4_lgbm` | 16.2507 | 88.89% | 780 | 8.57% |
+| `cv_current_lgbm_less_constrained` | 16.2680 | 88.86% | 770 | 8.67% |
+| `cv_current_lgbm_deeper_margin` | 16.2922 | 88.87% | 756 | 8.45% |
+| `cv_hog4x4_soft_category_regressor` | 16.3804 | 88.89% | 705 | 7.70% |
+| `cv_lightweight_hog_soft_category_regressor` | 16.4981 | 88.88% | 637 | 6.80% |
+
+Decision:
+
+- Do not claim the 3.37 GFLOPs full-fit result.
+- Treat HOG and soft-target LGBM as overfit under the current protocol.
+- Keep the 11.1146 GFLOPs `lightweight_lgbm` result only as notebook-compatible
+  reproduction, not as a held-out/generalization claim.
+
+## External Train Split Check
+
+`external_image_group_validation_train_002` completed on 2,000 CIFAR-100 train
+images, but it is not a valid independent benchmark for the router claim.
+
+Observed external train split oracle:
+
+| split | samples | High acc | target acc | oracle low | oracle high | oracle cost |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| CIFAR-100 train subset | 2000 | 99.70% | 98.70% | 2000 | 0 | 0.301 |
+
+All tested routers selected `to_low = 2000` and `to_high = 0`, reaching
+`avg_cost = 0.301` and `accuracy = 98.9%`. This does not show that the router
+generalizes. It shows that this split is far easier for the base classifiers,
+likely because CIFAR-100 train overlaps the base classifiers' own training
+distribution.
+
+Decision:
+
+- Do not use CIFAR-100 train split numbers in the presentation as evidence that
+  the router generalizes.
+- Use strict CV on the original CIFAR-100 test-derived difficulty labels as the
+  current credibility check.
+- If a separate-image benchmark is needed, use a dataset/protocol where the base
+  classifiers are not being evaluated on their training distribution, such as a
+  corrupted/augmented CIFAR-100 test protocol with clearly stated limitations.
