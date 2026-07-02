@@ -1,0 +1,409 @@
+Requirement already satisfied: matplotlib-venn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 1)) (1.1.2)
+Collecting torchinfo (from -r requirements-colab.txt (line 2))
+  Using cached torchinfo-1.8.0-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: transformers in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 3)) (5.12.1)
+Requirement already satisfied: opencv-python-headless in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 4)) (4.13.0.92)
+Requirement already satisfied: scikit-learn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 5)) (1.6.1)
+Requirement already satisfied: lightgbm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 6)) (4.6.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 7)) (4.67.3)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 1)) (3.10.0)
+Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 1)) (2.0.2)
+Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 1)) (1.16.3)
+Requirement already satisfied: huggingface-hub<2.0,>=1.5.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (1.20.1)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (26.2)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (6.0.3)
+Requirement already satisfied: regex>=2025.10.22 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (2025.11.3)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (0.22.2)
+Requirement already satisfied: typer in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (0.25.1)
+Requirement already satisfied: safetensors>=0.4.3 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (0.8.0)
+Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 5)) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 5)) (3.6.0)
+Requirement already satisfied: click>=8.4.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (8.4.2)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (3.29.4)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (2025.3.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.5.1 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (1.5.1)
+Requirement already satisfied: httpx<1,>=0.23.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (0.28.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (4.15.0)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 3)) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 3)) (13.9.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 3)) (0.0.4)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (4.63.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (1.5.0)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (11.3.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (2.9.0.post0)
+Requirement already satisfied: anyio in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (4.14.0)
+Requirement already satisfied: certifi in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (2026.6.17)
+Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (1.0.9)
+Requirement already satisfied: idna in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (3.18)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/dist-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (0.16.0)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.7->matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (1.17.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (0.1.2)
+Using cached torchinfo-1.8.0-py3-none-any.whl (23 kB)
+Installing collected packages: torchinfo
+Successfully installed torchinfo-1.8.0
+[lightweight_lgbm] loading difficulty labels from /content/drive/MyDrive/Research_Experiment/cifar100_difficulty_labels.json
+[lightweight_lgbm] loading feature cache: /content/drive/MyDrive/Research_Experiment/router_features_lightweight_full.npz
+Loading HOG feature cache: /content/drive/MyDrive/Research_Experiment/record_breaker_features_hog4x4_full.npz
+Extracting cheap spectrum features into cache: /content/drive/MyDrive/Research_Experiment/claimable_features_cheap_spectrum_full.npz
+Wrote cheap spectrum feature cache: /content/drive/MyDrive/Research_Experiment/claimable_features_cheap_spectrum_full.npz
+=== claimable record-breaker search: claim_lightweight_lgbm_regularized ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "claim_lightweight_lgbm_regularized",
+  "protocol": "5-fold outer CV; threshold selected only on inner calibration split; evaluation fold never used for fitting or threshold search",
+  "feature_set": "lightweight",
+  "target": "low_correct",
+  "score_kind": "classifier",
+  "sample_weighting": "none",
+  "samples": 10000,
+  "feature_count": 8,
+  "overall": {
+    "avg_cost": 16.2091604,
+    "accuracy": 88.68,
+    "to_low": 804,
+    "to_high": 9196,
+    "target_accuracy": 88.85,
+    "beats_record_to_beat": false
+  },
+  "guardrails": {
+    "baselines": {
+      "all_low": {
+        "accuracy": 71.15,
+        "avg_cost": 0.301,
+        "meets_target": false
+      },
+      "all_high": {
+        "accuracy": 89.85,
+        "avg_cost": 17.6,
+        "meets_target": true
+      },
+      "oracle": {
+        "counts": {
+          "Easy": 6894,
+          "Hard": 2091,
+          "Impossible": 794,
+          "Inverse": 221
+        },
+        "high_accuracy": 89.85,
+        "low_accuracy": 71.15,
+        "target_accuracy": 88.85,
+        "all_low_meets_target": false,
+        "oracle_low": 8230,
+        "oracle_high": 1770,
+        "oracle_low_rate": 0.823,
+        "oracle_high_rate": 0.177,
+        "oracle_cost": 3.3629230000000003,
+        "hard_low_allowed_at_target": 321
+      }
+    },
+    "candidate": {
+      "to_low_rate": 0.0804,
+      "to_high_rate": 0.9196,
+      "cost_margin_vs_all_low": 15.908160399999998,
+      "cost_margin_vs_all_high": -1.3908396000000032,
+      "cost_margin_vs_oracle": 12.846237399999998
+    },
+    "flags": [],
+    "valid_for_claim": true,
+    "recommended_action": "eligible_after_heldout_or_cv_validation"
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.8195292041689438,
+        "avg_cost": 16.043090000000003,
+        "accuracy": 88.85,
+        "to_low": 180,
+        "to_high": 1820
+      },
+      "eval": {
+        "avg_cost": 15.913347500000002,
+        "accuracy": 88.85,
+        "to_low": 195,
+        "to_high": 1805
+      }
+    },
+    {
+      "fold": 2,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.8393212915867454,
+        "avg_cost": 16.4323175,
+        "accuracy": 88.85,
+        "to_low": 135,
+        "to_high": 1865
+      },
+      "eval": {
+        "avg_cost": 16.397719500000004,
+        "accuracy": 88.85,
+        "to_low": 139,
+        "to_high": 1861
+      }
+    },
+    {
+      "fold": 3,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.8334114745230208,
+        "avg_cost": 16.2074305,
+        "accuracy": 88.85,
+        "to_low": 161,
+        "to_high": 1839
+      },
+      "eval": {
+        "avg_cost": 16.458266000000002,
+        "accuracy": 88.65,
+        "to_low": 132,
+        "to_high": 1868
+      }
+    },
+    {
+      "fold": 4,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.83531367613078,
+        "avg_cost": 16.2074305,
+        "accuracy": 88.9,
+        "to_low": 161,
+        "to_high": 1839
+      },
+      "eval": {
+        "avg_cost": 16.250678,
+        "accuracy": 88.8,
+        "to_low": 156,
+        "to_high": 1844
+      }
+    },
+    {
+      "fold": 5,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.8268140857437245,
+        "avg_cost": 15.878749500000001,
+        "accuracy": 88.9,
+        "to_low": 199,
+        "to_high": 1801
+      },
+      "eval": {
+        "avg_cost": 16.025791,
+        "accuracy": 88.25,
+        "to_low": 182,
+        "to_high": 1818
+      }
+    }
+  ]
+}
+=== claimable record-breaker search: claim_lightweight_lgbm_hard_penalty ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "claim_lightweight_lgbm_hard_penalty",
+  "protocol": "5-fold outer CV; threshold selected only on inner calibration split; evaluation fold never used for fitting or threshold search",
+  "feature_set": "lightweight",
+  "target": "low_correct",
+  "score_kind": "classifier",
+  "sample_weighting": "penalize_hard",
+  "samples": 10000,
+  "feature_count": 8,
+  "overall": {
+    "avg_cost": 16.197051100000003,
+    "accuracy": 88.68,
+    "to_low": 811,
+    "to_high": 9189,
+    "target_accuracy": 88.85,
+    "beats_record_to_beat": false
+  },
+  "guardrails": {
+    "baselines": {
+      "all_low": {
+        "accuracy": 71.15,
+        "avg_cost": 0.301,
+        "meets_target": false
+      },
+      "all_high": {
+        "accuracy": 89.85,
+        "avg_cost": 17.6,
+        "meets_target": true
+      },
+      "oracle": {
+        "counts": {
+          "Easy": 6894,
+          "Hard": 2091,
+          "Impossible": 794,
+          "Inverse": 221
+        },
+        "high_accuracy": 89.85,
+        "low_accuracy": 71.15,
+        "target_accuracy": 88.85,
+        "all_low_meets_target": false,
+        "oracle_low": 8230,
+        "oracle_high": 1770,
+        "oracle_low_rate": 0.823,
+        "oracle_high_rate": 0.177,
+        "oracle_cost": 3.3629230000000003,
+        "hard_low_allowed_at_target": 321
+      }
+    },
+    "candidate": {
+      "to_low_rate": 0.0811,
+      "to_high_rate": 0.9189,
+      "cost_margin_vs_all_low": 15.896051100000003,
+      "cost_margin_vs_all_high": -1.4029488999999984,
+      "cost_margin_vs_oracle": 12.834128100000003
+    },
+    "flags": [],
+    "valid_for_claim": true,
+    "recommended_action": "eligible_after_heldout_or_cv_validation"
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.5472375882513942,
+        "avg_cost": 16.21608,
+        "accuracy": 88.85,
+        "to_low": 160,
+        "to_high": 1840
+      },
+      "eval": {
+        "avg_cost": 16.008492,
+        "accuracy": 88.65,
+        "to_low": 184,
+        "to_high": 1816
+      }
+    },
+    {
+      "fold": 2,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.6030369477836588,
+        "avg_cost": 16.527462000000003,
+        "accuracy": 88.85,
+        "to_low": 124,
+        "to_high": 1876
+      },
+      "eval": {
+        "avg_cost": 16.596657999999998,
+        "accuracy": 89.15,
+        "to_low": 116,
+        "to_high": 1884
+      }
+    },
+    {
+      "fold": 3,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.5651898617050728,
+        "avg_cost": 16.164183,
+        "accuracy": 88.85,
+        "to_low": 166,
+        "to_high": 1834
+      },
+      "eval": {
+        "avg_cost": 16.397719500000004,
+        "accuracy": 88.7,
+        "to_low": 139,
+        "to_high": 1861
+      }
+    },
+    {
+      "fold": 4,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.5611699926383354,
+        "avg_cost": 15.870100000000003,
+        "accuracy": 88.9,
+        "to_low": 200,
+        "to_high": 1800
+      },
+      "eval": {
+        "avg_cost": 16.0171415,
+        "accuracy": 88.5,
+        "to_low": 183,
+        "to_high": 1817
+      }
+    },
+    {
+      "fold": 5,
+      "status": "ok",
+      "calibration_best": {
+        "threshold": 0.5538155645647078,
+        "avg_cost": 15.947945500000001,
+        "accuracy": 88.9,
+        "to_low": 191,
+        "to_high": 1809
+      },
+      "eval": {
+        "avg_cost": 15.9652445,
+        "accuracy": 88.4,
+        "to_low": 189,
+        "to_high": 1811
+      }
+    }
+  ]
+}
+=== claimable record-breaker search: claim_lightweight_safe_low ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/
