@@ -1,0 +1,256 @@
+{
+  "status": "ok",
+  "purpose": "Quantify where Hard-vs-rest signal appears in the saved LOW/HIGH process trace.",
+  "rows_path": "/content/drive/MyDrive/Research_Experiment/model_process_traces/model_process_trace_balanced_002_rows.jsonl",
+  "samples": 800,
+  "category_counts": {
+    "Easy": 200,
+    "Hard": 200,
+    "Impossible": 200,
+    "Inverse": 200
+  },
+  "category_metric_summary": {
+    "Easy": {
+      "count": 200,
+      "low_margin_mean": 5.763123683929443,
+      "low_entropy_mean": 0.05773510026626411,
+      "low_top1_prob_mean": 0.9185522996634244,
+      "high_margin_mean": 8.025410659313202,
+      "high_entropy_mean": 0.009819087189389392
+    },
+    "Hard": {
+      "count": 200,
+      "low_margin_mean": 1.5133031988143921,
+      "low_entropy_mean": 0.23897716838400812,
+      "low_top1_prob_mean": 0.6361055463552475,
+      "high_margin_mean": 6.213514782190323,
+      "high_entropy_mean": 0.0468255499569932
+    },
+    "Impossible": {
+      "count": 200,
+      "low_margin_mean": 1.933192150592804,
+      "low_entropy_mean": 0.2157000860606786,
+      "low_top1_prob_mean": 0.6874463807046414,
+      "high_margin_mean": 3.098345683813095,
+      "high_entropy_mean": 0.14885442312806846
+    },
+    "Inverse": {
+      "count": 200,
+      "low_margin_mean": 2.2760936880111693,
+      "low_entropy_mean": 0.1690749921623501,
+      "low_top1_prob_mean": 0.7383648301661014,
+      "high_margin_mean": 2.4474784338474276,
+      "high_entropy_mean": 0.14545561910781543
+    }
+  },
+  "feature_group_results": [
+    {
+      "group": "low_output_all",
+      "feature_count": 8,
+      "logistic": {
+        "hard_auc": 0.8336333333333332,
+        "hard_accuracy": 0.74375
+      },
+      "random_forest": {
+        "hard_auc": 0.8504666666666667,
+        "hard_accuracy": 0.76
+      }
+    },
+    {
+      "group": "all_trace_runtime",
+      "feature_count": 91,
+      "logistic": {
+        "hard_auc": 0.7625916666666667,
+        "hard_accuracy": 0.7125
+      },
+      "random_forest": {
+        "hard_auc": 0.7837916666666667,
+        "hard_accuracy": 0.76
+      }
+    },
+    {
+      "group": "high_output_runtime",
+      "feature_count": 4,
+      "logistic": {
+        "hard_auc": 0.6358916666666667,
+        "hard_accuracy": 0.59375
+      },
+      "random_forest": {
+        "hard_auc": 0.6540333333333334,
+        "hard_accuracy": 0.64
+      }
+    },
+    {
+      "group": "low_output_runtime",
+      "feature_count": 4,
+      "logistic": {
+        "hard_auc": 0.6800333333333333,
+        "hard_accuracy": 0.55375
+      },
+      "random_forest": {
+        "hard_auc": 0.6443375,
+        "hard_accuracy": 0.615
+      }
+    },
+    {
+      "group": "low_layer:features.18",
+      "feature_count": 8,
+      "logistic": {
+        "hard_auc": 0.6124333333333334,
+        "hard_accuracy": 0.54625
+      },
+      "random_forest": {
+        "hard_auc": 0.5787333333333333,
+        "hard_accuracy": 0.63
+      }
+    },
+    {
+      "group": "all_low_layers",
+      "feature_count": 48,
+      "logistic": {
+        "hard_auc": 0.6081,
+        "hard_accuracy": 0.57
+      },
+      "random_forest": {
+        "hard_auc": 0.5741083333333334,
+        "hard_accuracy": 0.68625
+      }
+    },
+    {
+      "group": "high_layer:hidden_12",
+      "feature_count": 7,
+      "logistic": {
+        "hard_auc": 0.56135,
+        "hard_accuracy": 0.5675
+      },
+      "random_forest": {
+        "hard_auc": 0.5581416666666666,
+        "hard_accuracy": 0.67
+      }
+    },
+    {
+      "group": "low_layer:features.10",
+      "feature_count": 8,
+      "logistic": {
+        "hard_auc": 0.5430916666666666,
+        "hard_accuracy": 0.52625
+      },
+      "random_forest": {
+        "hard_auc": 0.5504166666666667,
+        "hard_accuracy": 0.675
+      }
+    },
+    {
+      "group": "all_high_layers",
+      "feature_count": 35,
+      "logistic": {
+        "hard_auc": 0.5524666666666667,
+        "hard_accuracy": 0.5625
+      },
+      "random_forest": {
+        "hard_auc": 0.534075,
+        "hard_accuracy": 0.6925
+      }
+    },
+    {
+      "group": "low_layer:features.7",
+      "feature_count": 8,
+      "logistic": {
+        "hard_auc": 0.5155833333333334,
+        "hard_accuracy": 0.5125
+      },
+      "random_forest": {
+        "hard_auc": 0.5195500000000001,
+        "hard_accuracy": 0.655
+      }
+    },
+    {
+      "group": "high_layer:hidden_0",
+      "feature_count": 7,
+      "logistic": {
+        "hard_auc": 0.4655916666666666,
+        "hard_accuracy": 0.5025
+      },
+      "random_forest": {
+        "hard_auc": 0.518675,
+        "hard_accuracy": 0.6325
+      }
+    },
+    {
+      "group": "low_layer:features.14",
+      "feature_count": 8,
+      "logistic": {
+        "hard_auc": 0.5383666666666667,
+        "hard_accuracy": 0.50875
+      },
+      "random_forest": {
+        "hard_auc": 0.512775,
+        "hard_accuracy": 0.66375
+      }
+    },
+    {
+      "group": "high_layer:hidden_3",
+      "feature_count": 7,
+      "logistic": {
+        "hard_auc": 0.49158750000000007,
+        "hard_accuracy": 0.475
+      },
+      "random_forest": {
+        "hard_auc": 0.507925,
+        "hard_accuracy": 0.64125
+      }
+    },
+    {
+      "group": "high_layer:hidden_9",
+      "feature_count": 7,
+      "logistic": {
+        "hard_auc": 0.49322499999999997,
+        "hard_accuracy": 0.48625
+      },
+      "random_forest": {
+        "hard_auc": 0.4999166666666667,
+        "hard_accuracy": 0.62125
+      }
+    },
+    {
+      "group": "low_layer:features.3",
+      "feature_count": 8,
+      "logistic": {
+        "hard_auc": 0.5024083333333333,
+        "hard_accuracy": 0.525
+      },
+      "random_forest": {
+        "hard_auc": 0.49935833333333335,
+        "hard_accuracy": 0.62125
+      }
+    },
+    {
+      "group": "high_layer:hidden_6",
+      "feature_count": 7,
+      "logistic": {
+        "hard_auc": 0.5029666666666666,
+        "hard_accuracy": 0.505
+      },
+      "random_forest": {
+        "hard_auc": 0.479025,
+        "hard_accuracy": 0.645
+      }
+    },
+    {
+      "group": "low_layer:features.0",
+      "feature_count": 8,
+      "logistic": {
+        "hard_auc": 0.4586166666666667,
+        "hard_accuracy": 0.4925
+      },
+      "random_forest": {
+        "hard_auc": 0.39920833333333333,
+        "hard_accuracy": 0.6275
+      }
+    }
+  ],
+  "notes": [
+    "LOW/HIGH output and layer features are diagnostic signals, not claimable zero-latency pre-router inputs.",
+    "The key question is whether Hard becomes visible only after substantial LOW/HIGH processing."
+  ]
+}
