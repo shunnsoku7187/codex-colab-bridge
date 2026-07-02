@@ -1,1 +1,2 @@
 {"time": "2026-07-02T10:14:31.170339+00:00", "event": "job_running", "job_file": "jobs/allowed_upper_low_correct_lgbm_002.json"}
+{"time": "2026-07-02T10:14:32.245929+00:00", "event": "process_prepared", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.allowed_feature_upper_bound --targets low_correct --models lightgbm_upper_bound --output-name allowed_upper_low_correct_lgbm_002.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 3600}
