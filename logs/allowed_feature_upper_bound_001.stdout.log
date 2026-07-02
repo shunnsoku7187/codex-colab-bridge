@@ -5981,4 +5981,125 @@ Loading cheap spectrum feature cache: /content/drive/MyDrive/Research_Experiment
           },
           "eval": {
             "avg_cost": 16.112286,
-            "accu
+            "accuracy": 88.85,
+            "to_low": 172,
+            "to_high": 1828
+          }
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.752004577276147,
+            "avg_cost": 15.714409,
+            "accuracy": 88.6,
+            "to_low": 218,
+            "to_high": 1782
+          },
+          "eval": {
+            "avg_cost": 15.878749500000001,
+            "accuracy": 88.6,
+            "to_low": 199,
+            "to_high": 1801
+          }
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.7457371457688845,
+            "avg_cost": 15.472223,
+            "accuracy": 88.35,
+            "to_low": 246,
+            "to_high": 1754
+          },
+          "eval": {
+            "avg_cost": 15.6538625,
+            "accuracy": 88.5,
+            "to_low": 225,
+            "to_high": 1775
+          }
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.758204316465347,
+            "avg_cost": 16.527462000000003,
+            "accuracy": 89.15,
+            "to_low": 124,
+            "to_high": 1876
+          },
+          "eval": {
+            "avg_cost": 16.4669155,
+            "accuracy": 89.0,
+            "to_low": 131,
+            "to_high": 1869
+          }
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.7475038586711896,
+            "avg_cost": 16.250678,
+            "accuracy": 88.9,
+            "to_low": 156,
+            "to_high": 1844
+          },
+          "eval": {
+            "avg_cost": 16.103636500000004,
+            "accuracy": 88.9,
+            "to_low": 173,
+            "to_high": 1827
+          }
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.7394785153255716,
+            "avg_cost": 15.9652445,
+            "accuracy": 88.7,
+            "to_low": 189,
+            "to_high": 1811
+          },
+          "eval": {
+            "avg_cost": 15.7749555,
+            "accuracy": 88.55,
+            "to_low": 211,
+            "to_high": 1789
+          }
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.734128286428493,
+            "avg_cost": 15.714409,
+            "accuracy": 88.45,
+            "to_low": 218,
+            "to_high": 1782
+          },
+          "eval": {
+            "avg_cost": 15.524120000000003,
+            "accuracy": 88.55,
+            "to_low": 240,
+            "to_high": 1760
+          }
+        }
+      ]
+    }
+  ]
+}
+=== allowed-feature upper bound: lightgbm_upper_bound / low_correct ===
+/
