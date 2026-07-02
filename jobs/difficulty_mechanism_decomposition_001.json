@@ -1,8 +1,10 @@
 {
   "id": "difficulty_mechanism_decomposition_001",
-  "status": "pending",
+  "status": "running",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.difficulty_mechanism_decomposition",
-  "max_runtime_sec": 3600
+  "max_runtime_sec": 3600,
+  "updated_at": "2026-07-02T05:49:53.521008+00:00",
+  "started_at": "2026-07-02T05:49:53.520977+00:00"
 }
