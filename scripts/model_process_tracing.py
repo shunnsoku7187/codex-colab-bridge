@@ -14,8 +14,22 @@ from scripts.prepare_difficulty_labels import load_high_model, load_low_model
 from src.experiment_paths import ARTIFACT_DIR, DATA_DIR, DIFFICULTY_LABELS_PATH, RESULTS_DIR, ensure_dirs
 
 
-def load_records(max_samples):
+def load_records(max_samples, max_per_category, seed):
     records = json.loads(DIFFICULTY_LABELS_PATH.read_text(encoding="utf-8"))
+    if max_per_category:
+        rng = np.random.default_rng(seed)
+        grouped = defaultdict(list)
+        for record in records:
+            grouped[record.get("category", category_of(record))].append(record)
+        selected = []
+        for category in sorted(grouped):
+            items = grouped[category]
+            if len(items) > max_per_category:
+                indices = rng.choice(len(items), size=max_per_category, replace=False)
+                selected.extend(items[int(index)] for index in indices)
+            else:
+                selected.extend(items)
+        records = sorted(selected, key=lambda item: int(item["index"]))
     return records[:max_samples] if max_samples else records
 
 
@@ -164,16 +178,21 @@ def aggregate(rows):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--max-samples", type=int, default=None)
+    parser.add_argument("--max-per-category", type=int, default=None)
+    parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--low-hook-layers", type=int, default=6)
     parser.add_argument("--high-hidden-layers", default="0,3,6,9,12")
     parser.add_argument("--output-prefix", default="model_process_trace_001")
+    parser.add_argument("--require-cuda", action="store_true")
     args = parser.parse_args()
 
     ensure_dirs()
-    records = load_records(args.max_samples)
+    records = load_records(args.max_samples, args.max_per_category, args.seed)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"device={device} samples={len(records)}", flush=True)
+    if args.require_cuda and device.type != "cuda":
+        raise RuntimeError("CUDA is required for this trace job. In Colab, select a GPU runtime before running.")
 
     dataset = torchvision.datasets.CIFAR100(root=str(DATA_DIR), train=False, download=True, transform=None)
     class_names = dataset.classes
@@ -267,6 +286,7 @@ def main():
                     }
                     writer.write(json.dumps(row, ensure_ascii=False) + "\n")
                     rows.append(row)
+                writer.flush()
 
     for handle in handles:
         handle.remove()
