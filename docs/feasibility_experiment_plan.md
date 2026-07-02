@@ -330,3 +330,9 @@ or fails.
 Only after these should another router architecture search be run.
 
 Experiment findings are summarized in `docs/feasibility_findings.md`.
+
+Implementation note:
+
+- `allowed_feature_upper_bound_001` also includes cascade-teacher targets, so it
+  partially covers the cascade-policy distillation question before a dedicated
+  distillation job is needed.
