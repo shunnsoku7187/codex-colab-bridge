@@ -82,3 +82,222 @@ External train inference:  81%|████████▏ | 26/32 [21:50<05:00,
 External train inference:  84%|████████▍ | 27/32 [22:39<04:09, 49.99s/it]
 External train inference:  88%|████████▊ | 28/32 [23:32<03:23, 50.77s/it]
 External train inference:  91%|█████████ | 29/32 [24:22<02:31, 50.64s/it]
+External train inference:  94%|█████████▍| 30/32 [25:13<01:41, 50.54s/it]
+External train inference:  97%|█████████▋| 31/32 [26:03<00:50, 50.50s/it]
+External train inference: 100%|██████████| 32/32 [26:16<00:00, 39.18s/it]
+External train inference: 100%|██████████| 32/32 [26:16<00:00, 49.26s/it]
+Wrote external labels: /content/drive/MyDrive/Research_Experiment/external_train_difficulty_labels_2000_seed123.json
+
+External train lightweight features:   0%|          | 0/2000 [00:00<?, ?it/s]
+External train lightweight features:   0%|          | 1/2000 [00:00<03:32,  9.41it/s]
+External train lightweight features:   3%|▎         | 63/2000 [00:00<00:05, 358.77it/s]
+External train lightweight features:   5%|▌         | 101/2000 [00:00<00:05, 365.81it/s]
+External train lightweight features:   7%|▋         | 140/2000 [00:00<00:04, 374.03it/s]
+External train lightweight features:   9%|▉         | 178/2000 [00:00<00:04, 370.33it/s]
+External train lightweight features:  11%|█         | 216/2000 [00:00<00:04, 361.09it/s]
+External train lightweight features:  13%|█▎        | 253/2000 [00:00<00:04, 362.93it/s]
+External train lightweight features:  15%|█▌        | 301/2000 [00:00<00:04, 399.16it/s]
+External train lightweight features:  18%|█▊        | 352/2000 [00:00<00:03, 432.35it/s]
+External train lightweight features:  20%|██        | 402/2000 [00:01<00:03, 451.73it/s]
+External train lightweight features:  23%|██▎       | 460/2000 [00:01<00:03, 489.45it/s]
+External train lightweight features:  27%|██▋       | 540/2000 [00:01<00:02, 581.79it/s]
+External train lightweight features:  31%|███       | 622/2000 [00:01<00:02, 652.56it/s]
+External train lightweight features:  34%|███▍      | 688/2000 [00:01<00:02, 610.81it/s]
+External train lightweight features:  38%|███▊      | 750/2000 [00:01<00:02, 599.81it/s]
+External train lightweight features:  41%|████      | 811/2000 [00:01<00:02, 552.83it/s]
+External train lightweight features:  43%|████▎     | 869/2000 [00:01<00:02, 558.27it/s]
+External train lightweight features:  46%|████▋     | 926/2000 [00:01<00:01, 557.92it/s]
+External train lightweight features:  49%|████▉     | 983/2000 [00:02<00:01, 532.87it/s]
+External train lightweight features:  52%|█████▏    | 1037/2000 [00:02<00:01, 488.33it/s]
+External train lightweight features:  54%|█████▍    | 1087/2000 [00:02<00:01, 464.88it/s]
+External train lightweight features:  57%|█████▋    | 1136/2000 [00:02<00:01, 470.53it/s]
+External train lightweight features:  59%|█████▉    | 1184/2000 [00:02<00:01, 444.08it/s]
+External train lightweight features:  62%|██████▏   | 1231/2000 [00:02<00:01, 449.94it/s]
+External train lightweight features:  64%|██████▍   | 1277/2000 [00:02<00:01, 421.59it/s]
+External train lightweight features:  66%|██████▌   | 1320/2000 [00:02<00:01, 367.23it/s]
+External train lightweight features:  68%|██████▊   | 1359/2000 [00:03<00:01, 331.36it/s]
+External train lightweight features:  70%|██████▉   | 1394/2000 [00:03<00:01, 321.98it/s]
+External train lightweight features:  72%|███████▏  | 1431/2000 [00:03<00:01, 332.08it/s]
+External train lightweight features:  73%|███████▎  | 1468/2000 [00:03<00:01, 341.91it/s]
+External train lightweight features:  76%|███████▌  | 1510/2000 [00:03<00:01, 361.77it/s]
+External train lightweight features:  78%|███████▊  | 1559/2000 [00:03<00:01, 397.19it/s]
+External train lightweight features:  80%|████████  | 1607/2000 [00:03<00:00, 417.39it/s]
+External train lightweight features:  83%|████████▎ | 1657/2000 [00:03<00:00, 440.99it/s]
+External train lightweight features:  85%|████████▌ | 1706/2000 [00:03<00:00, 454.27it/s]
+External train lightweight features:  88%|████████▊ | 1752/2000 [00:03<00:00, 428.80it/s]
+External train lightweight features:  90%|█████████ | 1806/2000 [00:04<00:00, 456.95it/s]
+External train lightweight features:  95%|█████████▍| 1891/2000 [00:04<00:00, 569.09it/s]
+External train lightweight features:  97%|█████████▋| 1949/2000 [00:04<00:00, 524.66it/s]
+External train lightweight features: 100%|██████████| 2000/2000 [00:04<00:00, 453.48it/s]
+Wrote external lightweight cache: /content/drive/MyDrive/Research_Experiment/external_train_lightweight_features_2000_seed123.npz
+
+External train HOG features:   0%|          | 0/2000 [00:00<?, ?it/s]
+External train HOG features:   1%|          | 17/2000 [00:00<00:11, 169.62it/s]
+External train HOG features:   2%|▏         | 41/2000 [00:00<00:09, 205.00it/s]
+External train HOG features:   3%|▎         | 62/2000 [00:00<00:09, 201.21it/s]
+External train HOG features:   4%|▍         | 84/2000 [00:00<00:09, 205.18it/s]
+External train HOG features:   5%|▌         | 105/2000 [00:00<00:09, 205.25it/s]
+External train HOG features:   6%|▋         | 128/2000 [00:00<00:08, 209.91it/s]
+External train HOG features:   7%|▋         | 149/2000 [00:00<00:09, 196.21it/s]
+External train HOG features:   9%|▊         | 172/2000 [00:00<00:09, 202.80it/s]
+External train HOG features:  10%|▉         | 194/2000 [00:00<00:08, 206.26it/s]
+External train HOG features:  11%|█         | 216/2000 [00:01<00:08, 208.60it/s]
+External train HOG features:  12%|█▏        | 237/2000 [00:01<00:09, 195.87it/s]
+External train HOG features:  13%|█▎        | 257/2000 [00:01<00:08, 195.09it/s]
+External train HOG features:  14%|█▍        | 277/2000 [00:01<00:09, 185.31it/s]
+External train HOG features:  15%|█▍        | 296/2000 [00:01<00:09, 179.32it/s]
+External train HOG features:  16%|█▌        | 315/2000 [00:01<00:09, 180.99it/s]
+External train HOG features:  17%|█▋        | 334/2000 [00:01<00:09, 168.76it/s]
+External train HOG features:  18%|█▊        | 363/2000 [00:01<00:08, 201.16it/s]
+External train HOG features:  19%|█▉        | 384/2000 [00:01<00:08, 196.80it/s]
+External train HOG features:  20%|██        | 405/2000 [00:02<00:08, 194.22it/s]
+External train HOG features:  22%|██▏       | 431/2000 [00:02<00:07, 210.39it/s]
+External train HOG features:  23%|██▎       | 454/2000 [00:02<00:07, 215.68it/s]
+External train HOG features:  24%|██▍       | 479/2000 [00:02<00:06, 225.06it/s]
+External train HOG features:  25%|██▌       | 502/2000 [00:02<00:06, 226.00it/s]
+External train HOG features:  26%|██▋       | 526/2000 [00:02<00:06, 228.79it/s]
+External train HOG features:  28%|██▊       | 552/2000 [00:02<00:06, 236.51it/s]
+External train HOG features:  29%|██▉       | 576/2000 [00:02<00:06, 223.34it/s]
+External train HOG features:  31%|███       | 612/2000 [00:02<00:05, 259.02it/s]
+External train HOG features:  33%|███▎      | 651/2000 [00:03<00:04, 295.78it/s]
+External train HOG features:  34%|███▍      | 685/2000 [00:03<00:04, 307.32it/s]
+External train HOG features:  36%|███▌      | 721/2000 [00:03<00:03, 321.26it/s]
+External train HOG features:  38%|███▊      | 754/2000 [00:03<00:03, 320.98it/s]
+External train HOG features:  39%|███▉      | 787/2000 [00:03<00:03, 312.11it/s]
+External train HOG features:  42%|████▏     | 836/2000 [00:03<00:03, 359.06it/s]
+External train HOG features:  44%|████▎     | 873/2000 [00:03<00:03, 311.73it/s]
+External train HOG features:  46%|████▌     | 919/2000 [00:03<00:03, 347.89it/s]
+External train HOG features:  48%|████▊     | 956/2000 [00:03<00:03, 320.03it/s]
+External train HOG features:  50%|████▉     | 990/2000 [00:04<00:03, 300.06it/s]
+External train HOG features:  51%|█████     | 1021/2000 [00:04<00:03, 280.42it/s]
+External train HOG features:  52%|█████▎    | 1050/2000 [00:04<00:03, 261.10it/s]
+External train HOG features:  54%|█████▍    | 1077/2000 [00:04<00:03, 250.20it/s]
+External train HOG features:  56%|█████▌    | 1115/2000 [00:04<00:03, 279.34it/s]
+External train HOG features:  57%|█████▋    | 1144/2000 [00:04<00:03, 270.71it/s]
+External train HOG features:  59%|█████▊    | 1172/2000 [00:04<00:03, 253.26it/s]
+External train HOG features:  60%|█████▉    | 1198/2000 [00:04<00:03, 228.69it/s]
+External train HOG features:  61%|██████    | 1222/2000 [00:05<00:03, 230.82it/s]
+External train HOG features:  63%|██████▎   | 1251/2000 [00:05<00:03, 245.26it/s]
+External train HOG features:  64%|██████▍   | 1277/2000 [00:05<00:03, 239.56it/s]
+External train HOG features:  65%|██████▌   | 1302/2000 [00:05<00:02, 232.89it/s]
+External train HOG features:  66%|██████▋   | 1326/2000 [00:05<00:02, 226.67it/s]
+External train HOG features:  68%|██████▊   | 1357/2000 [00:05<00:02, 247.30it/s]
+External train HOG features:  69%|██████▉   | 1383/2000 [00:05<00:02, 241.55it/s]
+External train HOG features:  70%|███████   | 1408/2000 [00:05<00:02, 236.76it/s]
+External train HOG features:  72%|███████▏  | 1432/2000 [00:05<00:02, 231.60it/s]
+External train HOG features:  73%|███████▎  | 1456/2000 [00:06<00:02, 222.86it/s]
+External train HOG features:  74%|███████▍  | 1479/2000 [00:06<00:02, 219.75it/s]
+External train HOG features:  75%|███████▌  | 1502/2000 [00:06<00:02, 219.31it/s]
+External train HOG features:  76%|███████▌  | 1524/2000 [00:06<00:02, 216.92it/s]
+External train HOG features:  78%|███████▊  | 1550/2000 [00:06<00:01, 226.32it/s]
+External train HOG features:  79%|███████▉  | 1580/2000 [00:06<00:01, 246.56it/s]
+External train HOG features:  80%|████████  | 1607/2000 [00:06<00:01, 251.27it/s]
+External train HOG features:  82%|████████▏ | 1633/2000 [00:06<00:01, 243.69it/s]
+External train HOG features:  83%|████████▎ | 1658/2000 [00:06<00:01, 243.52it/s]
+External train HOG features:  84%|████████▍ | 1683/2000 [00:07<00:01, 233.25it/s]
+External train HOG features:  85%|████████▌ | 1707/2000 [00:07<00:01, 224.90it/s]
+External train HOG features:  87%|████████▋ | 1740/2000 [00:07<00:01, 252.20it/s]
+External train HOG features:  89%|████████▉ | 1777/2000 [00:07<00:00, 283.66it/s]
+External train HOG features:  90%|█████████ | 1806/2000 [00:07<00:00, 266.81it/s]
+External train HOG features:  92%|█████████▏| 1834/2000 [00:07<00:00, 265.70it/s]
+External train HOG features:  94%|█████████▎| 1870/2000 [00:07<00:00, 291.07it/s]
+External train HOG features:  95%|█████████▌| 1900/2000 [00:07<00:00, 277.93it/s]
+External train HOG features:  96%|█████████▋| 1929/2000 [00:07<00:00, 254.68it/s]
+External train HOG features:  98%|█████████▊| 1956/2000 [00:08<00:00, 235.88it/s]
+External train HOG features:  99%|█████████▉| 1981/2000 [00:08<00:00, 209.02it/s]
+External train HOG features: 100%|██████████| 2000/2000 [00:08<00:00, 241.02it/s]
+Wrote external HOG cache: /content/drive/MyDrive/Research_Experiment/external_train_hog4x4_features_2000_seed123.npz
+=== external image-group validation: current_lgbm_cell7_record ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "current_lgbm_cell7_record",
+  "protocol": "train router on original CIFAR-100 test labels; evaluate on separate CIFAR-100 split images",
+  "feature_set": "lightweight",
+  "target": "low_correct",
+  "score_kind": "classifier",
+  "samples": 2000,
+  "feature_count": 8,
+  "high_accuracy": 99.7,
+  "target_accuracy": 98.7,
+  "best": {
+    "threshold": 0.39877561189035576,
+    "avg_cost": 0.301,
+    "accuracy": 98.9,
+    "to_low": 2000,
+    "to_high": 0,
+    "easy_saved_ratio": 100.0
+  },
+  "routing_details": {
+    "true_easy_to_low": 1973,
+    "true_inverse_to_low": 5,
+    "true_impossible_to_low": 1,
+    "true_hard_to_low": 21,
+    "true_easy_to_high": 0,
+    "true_hard_to_high": 0
+  }
+}
+=== external image-group validation: current_lgbm_less_constrained ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "current_lgbm_less_constrained",
+  "protocol": "train router on original CIFAR-100 test labels; evaluate on separate CIFAR-100 split images",
+  "feature_set": "lightweight",
+  "target": "low_correct",
+  "score_kind": "classifier",
+  "samples": 2000,
+  "feature_count": 8,
+  "high_accuracy": 99.7,
+  "target_accuracy": 98.7,
+  "best": {
+    "threshold": 0.13274485945320802,
+    "avg_cost": 0.301,
+    "accuracy": 98.9,
+    "to_low": 2000,
+    "to_high": 0,
+    "easy_saved_ratio": 100.0
+  },
+  "routing_details": {
+    "true_easy_to_low": 1973,
+    "true_inverse_to_low": 5,
+    "true_impossible_to_low": 1,
+    "true_hard_to_low": 21,
+    "true_easy_to_high": 0,
+    "true_hard_to_high": 0
+  }
+}
+=== external image-group validation: current_lgbm_deeper_margin ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
+  "name": "current_lgbm_deeper_margin",
+  "protocol": "train router on original CIFAR-100 test labels; evaluate on separate CIFAR-100 split images",
+  "feature_set": "lightweight",
+  "target": "low_correct",
+  "score_kind": "classifier",
+  "samples": 2000,
+  "feature_count": 8,
+  "high_accuracy": 99.7,
+  "target_accuracy": 98.7,
+  "best": {
+    "threshold": 0.34456537993825,
+    "avg_cost": 0.301,
+    "accuracy": 98.9,
+    "to_low": 2000,
+    "to_high": 0,
+    "easy_saved_ratio": 100.0
+  },
+  "routing_details": {
+    "true_easy_to_low": 1973,
+    "true_inverse_to_low": 5,
+    "true_impossible_to_low": 1,
+    "true_hard_to_low": 21,
+    "true_easy_to_high": 0,
+    "true_hard_to_high": 0
+  }
+}
+=== external image-group validation: hog4x4_lgbm ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+{
