@@ -274,4 +274,6 @@ Loading cheap spectrum feature cache: /content/drive/MyDrive/Research_Experiment
   ],
   "notes": "Cascade-like positive control. It is not allowed for a zero-latency pre-router because LOW has already run."
 }
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
 /
