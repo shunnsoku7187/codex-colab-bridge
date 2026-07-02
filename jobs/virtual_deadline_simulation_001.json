@@ -1,10 +1,13 @@
 {
   "id": "virtual_deadline_simulation_001",
-  "status": "running",
+  "status": "done",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.virtual_deadline_simulation --output-name virtual_deadline_simulation_001.json",
   "max_runtime_sec": 1800,
-  "updated_at": "2026-07-02T17:30:30.636972+00:00",
-  "started_at": "2026-07-02T17:30:30.636955+00:00"
+  "updated_at": "2026-07-02T17:31:28.944127+00:00",
+  "started_at": "2026-07-02T17:30:30.636955+00:00",
+  "returncode": 0,
+  "finished_at": "2026-07-02T17:31:28.942503+00:00",
+  "result_file": "results/virtual_deadline_simulation_001.json"
 }
