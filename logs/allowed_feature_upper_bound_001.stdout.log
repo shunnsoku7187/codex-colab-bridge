@@ -3675,4 +3675,967 @@ Loading cheap spectrum feature cache: /content/drive/MyDrive/Research_Experiment
           },
           "eval": {
             "avg_cost": 16.475565,
-            "accuracy"
+            "accuracy": 88.85,
+            "to_low": 130,
+            "to_high": 1870
+          }
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.9343422041563401,
+            "avg_cost": 16.328523500000003,
+            "accuracy": 88.65,
+            "to_low": 147,
+            "to_high": 1853
+          },
+          "eval": {
+            "avg_cost": 16.363121500000002,
+            "accuracy": 88.6,
+            "to_low": 143,
+            "to_high": 1857
+          }
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.9274319609601298,
+            "avg_cost": 15.939296000000002,
+            "accuracy": 88.35,
+            "to_low": 192,
+            "to_high": 1808
+          },
+          "eval": {
+            "avg_cost": 16.025791,
+            "accuracy": 88.4,
+            "to_low": 182,
+            "to_high": 1818
+          }
+        }
+      ]
+    }
+  ]
+}
+=== allowed-feature upper bound: logistic_l2_balanced / low_correct ===
+{
+  "model": "logistic_l2_balanced",
+  "target": "low_correct",
+  "target_positive_rate": 0.7115,
+  "auc_for_target": 0.5368450231465975,
+  "overall_by_target_margin": [
+    {
+      "target_margin_pct": 0.5,
+      "overall": null,
+      "guardrails": {
+        "baselines": {
+          "all_low": {
+            "accuracy": 71.15,
+            "avg_cost": 0.301,
+            "meets_target": false
+          },
+          "all_high": {
+            "accuracy": 89.85,
+            "avg_cost": 17.6,
+            "meets_target": true
+          },
+          "oracle": {
+            "counts": {
+              "Easy": 6894,
+              "Hard": 2091,
+              "Impossible": 794,
+              "Inverse": 221
+            },
+            "high_accuracy": 89.85,
+            "low_accuracy": 71.15,
+            "target_accuracy": 89.35,
+            "all_low_meets_target": false,
+            "oracle_low": 8180,
+            "oracle_high": 1820,
+            "oracle_low_rate": 0.818,
+            "oracle_high_rate": 0.182,
+            "oracle_cost": 3.449418,
+            "hard_low_allowed_at_target": 271
+          }
+        },
+        "candidate": null,
+        "flags": [
+          "no_feasible_threshold"
+        ],
+        "valid_for_claim": false,
+        "recommended_action": "discard_or_reformulate_threshold_search"
+      }
+    },
+    {
+      "target_margin_pct": 0.75,
+      "overall": null,
+      "guardrails": {
+        "baselines": {
+          "all_low": {
+            "accuracy": 71.15,
+            "avg_cost": 0.301,
+            "meets_target": false
+          },
+          "all_high": {
+            "accuracy": 89.85,
+            "avg_cost": 17.6,
+            "meets_target": true
+          },
+          "oracle": {
+            "counts": {
+              "Easy": 6894,
+              "Hard": 2091,
+              "Impossible": 794,
+              "Inverse": 221
+            },
+            "high_accuracy": 89.85,
+            "low_accuracy": 71.15,
+            "target_accuracy": 89.1,
+            "all_low_meets_target": false,
+            "oracle_low": 8205,
+            "oracle_high": 1795,
+            "oracle_low_rate": 0.8205,
+            "oracle_high_rate": 0.1795,
+            "oracle_cost": 3.4061705,
+            "hard_low_allowed_at_target": 296
+          }
+        },
+        "candidate": null,
+        "flags": [
+          "no_feasible_threshold"
+        ],
+        "valid_for_claim": false,
+        "recommended_action": "discard_or_reformulate_threshold_search"
+      }
+    },
+    {
+      "target_margin_pct": 1.0,
+      "overall": null,
+      "guardrails": {
+        "baselines": {
+          "all_low": {
+            "accuracy": 71.15,
+            "avg_cost": 0.301,
+            "meets_target": false
+          },
+          "all_high": {
+            "accuracy": 89.85,
+            "avg_cost": 17.6,
+            "meets_target": true
+          },
+          "oracle": {
+            "counts": {
+              "Easy": 6894,
+              "Hard": 2091,
+              "Impossible": 794,
+              "Inverse": 221
+            },
+            "high_accuracy": 89.85,
+            "low_accuracy": 71.15,
+            "target_accuracy": 88.85,
+            "all_low_meets_target": false,
+            "oracle_low": 8230,
+            "oracle_high": 1770,
+            "oracle_low_rate": 0.823,
+            "oracle_high_rate": 0.177,
+            "oracle_cost": 3.3629230000000003,
+            "hard_low_allowed_at_target": 321
+          }
+        },
+        "candidate": null,
+        "flags": [
+          "no_feasible_threshold"
+        ],
+        "valid_for_claim": false,
+        "recommended_action": "discard_or_reformulate_threshold_search"
+      }
+    },
+    {
+      "target_margin_pct": 1.25,
+      "overall": {
+        "avg_cost": 15.9669744,
+        "accuracy": 88.48,
+        "to_low": 944,
+        "to_high": 9056,
+        "high_accuracy": 89.85,
+        "target_margin_pct": 1.25,
+        "target_accuracy": 88.6,
+        "cost_gap_vs_cascade": 7.3024743999999995,
+        "cost_gap_vs_parallel": 6.378774399999999,
+        "cost_gap_vs_record_to_beat": 4.8523695,
+        "beats_cascade_baseline": false,
+        "beats_parallel_baseline": false,
+        "beats_record_to_beat": false
+      },
+      "guardrails": {
+        "baselines": {
+          "all_low": {
+            "accuracy": 71.15,
+            "avg_cost": 0.301,
+            "meets_target": false
+          },
+          "all_high": {
+            "accuracy": 89.85,
+            "avg_cost": 17.6,
+            "meets_target": true
+          },
+          "oracle": {
+            "counts": {
+              "Easy": 6894,
+              "Hard": 2091,
+              "Impossible": 794,
+              "Inverse": 221
+            },
+            "high_accuracy": 89.85,
+            "low_accuracy": 71.15,
+            "target_accuracy": 88.6,
+            "all_low_meets_target": false,
+            "oracle_low": 8255,
+            "oracle_high": 1745,
+            "oracle_low_rate": 0.8255,
+            "oracle_high_rate": 0.1745,
+            "oracle_cost": 3.3196755000000007,
+            "hard_low_allowed_at_target": 346
+          }
+        },
+        "candidate": {
+          "to_low_rate": 0.0944,
+          "to_high_rate": 0.9056,
+          "cost_margin_vs_all_low": 15.6659744,
+          "cost_margin_vs_all_high": -1.6330256000000016,
+          "cost_margin_vs_oracle": 12.6472989
+        },
+        "flags": [],
+        "valid_for_claim": true,
+        "recommended_action": "eligible_after_heldout_or_cv_validation"
+      }
+    },
+    {
+      "target_margin_pct": 1.5,
+      "overall": {
+        "avg_cost": 15.781875100000002,
+        "accuracy": 88.31,
+        "to_low": 1051,
+        "to_high": 8949,
+        "high_accuracy": 89.85,
+        "target_margin_pct": 1.5,
+        "target_accuracy": 88.35,
+        "cost_gap_vs_cascade": 7.117375100000002,
+        "cost_gap_vs_parallel": 6.193675100000002,
+        "cost_gap_vs_record_to_beat": 4.667270200000003,
+        "beats_cascade_baseline": false,
+        "beats_parallel_baseline": false,
+        "beats_record_to_beat": false
+      },
+      "guardrails": {
+        "baselines": {
+          "all_low": {
+            "accuracy": 71.15,
+            "avg_cost": 0.301,
+            "meets_target": false
+          },
+          "all_high": {
+            "accuracy": 89.85,
+            "avg_cost": 17.6,
+            "meets_target": true
+          },
+          "oracle": {
+            "counts": {
+              "Easy": 6894,
+              "Hard": 2091,
+              "Impossible": 794,
+              "Inverse": 221
+            },
+            "high_accuracy": 89.85,
+            "low_accuracy": 71.15,
+            "target_accuracy": 88.35,
+            "all_low_meets_target": false,
+            "oracle_low": 8280,
+            "oracle_high": 1720,
+            "oracle_low_rate": 0.828,
+            "oracle_high_rate": 0.172,
+            "oracle_cost": 3.276428,
+            "hard_low_allowed_at_target": 371
+          }
+        },
+        "candidate": {
+          "to_low_rate": 0.1051,
+          "to_high_rate": 0.8949,
+          "cost_margin_vs_all_low": 15.480875100000002,
+          "cost_margin_vs_all_high": -1.818124899999999,
+          "cost_margin_vs_oracle": 12.505447100000001
+        },
+        "flags": [],
+        "valid_for_claim": true,
+        "recommended_action": "eligible_after_heldout_or_cv_validation"
+      }
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8741631309252518,
+            "avg_cost": 16.717751,
+            "accuracy": 89.2,
+            "to_low": 102,
+            "to_high": 1898
+          },
+          "eval": {
+            "avg_cost": 16.475565,
+            "accuracy": 88.8,
+            "to_low": 130,
+            "to_high": 1870
+          }
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8489151070667629,
+            "avg_cost": 16.302575,
+            "accuracy": 88.85,
+            "to_low": 150,
+            "to_high": 1850
+          },
+          "eval": {
+            "avg_cost": 16.043090000000003,
+            "accuracy": 88.55,
+            "to_low": 180,
+            "to_high": 1820
+          }
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8331350921552073,
+            "avg_cost": 16.060389000000004,
+            "accuracy": 88.6,
+            "to_low": 178,
+            "to_high": 1822
+          },
+          "eval": {
+            "avg_cost": 15.800904000000003,
+            "accuracy": 88.35,
+            "to_low": 208,
+            "to_high": 1792
+          }
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.823667083208274,
+            "avg_cost": 15.878749500000001,
+            "accuracy": 88.4,
+            "to_low": 199,
+            "to_high": 1801
+          },
+          "eval": {
+            "avg_cost": 15.627914,
+            "accuracy": 88.4,
+            "to_low": 228,
+            "to_high": 1772
+          }
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8581106953553123,
+            "avg_cost": 16.4842145,
+            "accuracy": 88.85,
+            "to_low": 129,
+            "to_high": 1871
+          },
+          "eval": {
+            "avg_cost": 16.337173,
+            "accuracy": 88.75,
+            "to_low": 146,
+            "to_high": 1854
+          }
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.835851011642919,
+            "avg_cost": 16.1382345,
+            "accuracy": 88.6,
+            "to_low": 169,
+            "to_high": 1831
+          },
+          "eval": {
+            "avg_cost": 15.973894000000001,
+            "accuracy": 88.6,
+            "to_low": 188,
+            "to_high": 1812
+          }
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8231311923786943,
+            "avg_cost": 15.921997000000001,
+            "accuracy": 88.45,
+            "to_low": 194,
+            "to_high": 1806
+          },
+          "eval": {
+            "avg_cost": 15.7749555,
+            "accuracy": 88.35,
+            "to_low": 211,
+            "to_high": 1789
+          }
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8749796386932804,
+            "avg_cost": 16.717751,
+            "accuracy": 89.35,
+            "to_low": 102,
+            "to_high": 1898
+          },
+          "eval": {
+            "avg_cost": 16.665854000000003,
+            "accuracy": 88.8,
+            "to_low": 108,
+            "to_high": 1892
+          }
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8528338258322383,
+            "avg_cost": 16.423668000000003,
+            "accuracy": 89.15,
+            "to_low": 136,
+            "to_high": 1864
+          },
+          "eval": {
+            "avg_cost": 16.285276000000003,
+            "accuracy": 88.65,
+            "to_low": 152,
+            "to_high": 1848
+          }
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8465064507290836,
+            "avg_cost": 16.267977000000002,
+            "accuracy": 88.85,
+            "to_low": 154,
+            "to_high": 1846
+          },
+          "eval": {
+            "avg_cost": 16.1555335,
+            "accuracy": 88.5,
+            "to_low": 167,
+            "to_high": 1833
+          }
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8243606378680417,
+            "avg_cost": 15.878749500000001,
+            "accuracy": 88.6,
+            "to_low": 199,
+            "to_high": 1801
+          },
+          "eval": {
+            "avg_cost": 15.800904000000003,
+            "accuracy": 88.1,
+            "to_low": 208,
+            "to_high": 1792
+          }
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.818033262764887,
+            "avg_cost": 15.749007,
+            "accuracy": 88.35,
+            "to_low": 214,
+            "to_high": 1786
+          },
+          "eval": {
+            "avg_cost": 15.679811,
+            "accuracy": 88.1,
+            "to_low": 222,
+            "to_high": 1778
+          }
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8777500045658807,
+            "avg_cost": 16.7091015,
+            "accuracy": 89.1,
+            "to_low": 103,
+            "to_high": 1897
+          },
+          "eval": {
+            "avg_cost": 16.786947000000005,
+            "accuracy": 89.15,
+            "to_low": 94,
+            "to_high": 1906
+          }
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8587682911361995,
+            "avg_cost": 16.458266000000002,
+            "accuracy": 88.85,
+            "to_low": 132,
+            "to_high": 1868
+          },
+          "eval": {
+            "avg_cost": 16.4842145,
+            "accuracy": 88.95,
+            "to_low": 129,
+            "to_high": 1871
+          }
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8239684831817838,
+            "avg_cost": 15.956595000000002,
+            "accuracy": 88.6,
+            "to_low": 190,
+            "to_high": 1810
+          },
+          "eval": {
+            "avg_cost": 15.973894000000001,
+            "accuracy": 88.55,
+            "to_low": 188,
+            "to_high": 1812
+          }
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8144776264669432,
+            "avg_cost": 15.7922545,
+            "accuracy": 88.35,
+            "to_low": 209,
+            "to_high": 1791
+          },
+          "eval": {
+            "avg_cost": 15.826852500000003,
+            "accuracy": 88.4,
+            "to_low": 205,
+            "to_high": 1795
+          }
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8723604326760802,
+            "avg_cost": 16.510163000000002,
+            "accuracy": 88.6,
+            "to_low": 126,
+            "to_high": 1874
+          },
+          "eval": {
+            "avg_cost": 16.285276000000003,
+            "accuracy": 88.8,
+            "to_low": 152,
+            "to_high": 1848
+          }
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.8531515412761516,
+            "avg_cost": 16.242028500000004,
+            "accuracy": 88.35,
+            "to_low": 157,
+            "to_high": 1843
+          },
+          "eval": {
+            "avg_cost": 15.999842500000003,
+            "accuracy": 88.3,
+            "to_low": 185,
+            "to_high": 1815
+          }
+        }
+      ]
+    }
+  ]
+}
+=== allowed-feature upper bound: sgd_log_loss_balanced / low_correct ===
+{
+  "model": "sgd_log_loss_balanced",
+  "target": "low_correct",
+  "target_positive_rate": 0.7115,
+  "auc_for_target": 0.5281816554232216,
+  "overall_by_target_margin": [
+    {
+      "target_margin_pct": 0.5,
+      "overall": null,
+      "guardrails": {
+        "baselines": {
+          "all_low": {
+            "accuracy": 71.15,
+            "avg_cost": 0.301,
+            "meets_target": false
+          },
+          "all_high": {
+            "accuracy": 89.85,
+            "avg_cost": 17.6,
+            "meets_target": true
+          },
+          "oracle": {
+            "counts": {
+              "Easy": 6894,
+              "Hard": 2091,
+              "Impossible": 794,
+              "Inverse": 221
+            },
+            "high_accuracy": 89.85,
+            "low_accuracy": 71.15,
+            "target_accuracy": 89.35,
+            "all_low_meets_target": false,
+            "oracle_low": 8180,
+            "oracle_high": 1820,
+            "oracle_low_rate": 0.818,
+            "oracle_high_rate": 0.182,
+            "oracle_cost": 3.449418,
+            "hard_low_allowed_at_target": 271
+          }
+        },
+        "candidate": null,
+        "flags": [
+          "no_feasible_threshold"
+        ],
+        "valid_for_claim": false,
+        "recommended_action": "discard_or_reformulate_threshold_search"
+      }
+    },
+    {
+      "target_margin_pct": 0.75,
+      "overall": null,
+      "guardrails": {
+        "baselines": {
+          "all_low": {
+            "accuracy": 71.15,
+            "avg_cost": 0.301,
+            "meets_target": false
+          },
+          "all_high": {
+            "accuracy": 89.85,
+            "avg_cost": 17.6,
+            "meets_target": true
+          },
+          "oracle": {
+            "counts": {
+              "Easy": 6894,
+              "Hard": 2091,
+              "Impossible": 794,
+              "Inverse": 221
+            },
+            "high_accuracy": 89.85,
+            "low_accuracy": 71.15,
+            "target_accuracy": 89.1,
+            "all_low_meets_target": false,
+            "oracle_low": 8205,
+            "oracle_high": 1795,
+            "oracle_low_rate": 0.8205,
+            "oracle_high_rate": 0.1795,
+            "oracle_cost": 3.4061705,
+            "hard_low_allowed_at_target": 296
+          }
+        },
+        "candidate": null,
+        "flags": [
+          "no_feasible_threshold"
+        ],
+        "valid_for_claim": false,
+        "recommended_action": "discard_or_reformulate_threshold_search"
+      }
+    },
+    {
+      "target_margin_pct": 1.0,
+      "overall": null,
+      "guardrails": {
+        "baselines": {
+          "all_low": {
+            "accuracy": 71.15,
+            "avg_cost": 0.301,
+            "meets_target": false
+          },
+          "all_high": {
+            "accuracy": 89.85,
+            "avg_cost": 17.6,
+            "meets_target": true
+          },
+          "oracle": {
+            "counts": {
+              "Easy": 6894,
+              "Hard": 2091,
+              "Impossible": 794,
+              "Inverse": 221
+            },
+            "high_accuracy": 89.85,
+            "low_accuracy": 71.15,
+            "target_accuracy": 88.85,
+            "all_low_meets_target": false,
+            "oracle_low": 8230,
+            "oracle_high": 1770,
+            "oracle_low_rate": 0.823,
+            "oracle_high_rate": 0.177,
+            "oracle_cost": 3.3629230000000003,
+            "hard_low_allowed_at_target": 321
+          }
+        },
+        "candidate": null,
+        "flags": [
+          "no_feasible_threshold"
+        ],
+        "valid_for_claim": false,
+        "recommended_action": "discard_or_reformulate_threshold_search"
+      }
+    },
+    {
+      "target_margin_pct": 1.25,
+      "overall": null,
+      "guardrails": {
+        "baselines": {
+          "all_low": {
+            "accuracy": 71.15,
+            "avg_cost": 0.301,
+            "meets_target": false
+          },
+          "all_high": {
+            "accuracy": 89.85,
+            "avg_cost": 17.6,
+            "meets_target": true
+          },
+          "oracle": {
+            "counts": {
+              "Easy": 6894,
+              "Hard": 2091,
+              "Impossible": 794,
+              "Inverse": 221
+            },
+            "high_accuracy": 89.85,
+            "low_accuracy": 71.15,
+            "target_accuracy": 88.6,
+            "all_low_meets_target": false,
+            "oracle_low": 8255,
+            "oracle_high": 1745,
+            "oracle_low_rate": 0.8255,
+            "oracle_high_rate": 0.1745,
+            "oracle_cost": 3.3196755000000007,
+            "hard_low_allowed_at_target": 346
+          }
+        },
+        "candidate": null,
+        "flags": [
+          "no_feasible_threshold"
+        ],
+        "valid_for_claim": false,
+        "recommended_action": "discard_or_reformulate_threshold_search"
+      }
+    },
+    {
+      "target_margin_pct": 1.5,
+      "overall": null,
+      "guardrails": {
+        "baselines": {
+          "all_low": {
+            "accuracy": 71.15,
+            "avg_cost": 0.301,
+            "meets_target": false
+          },
+          "all_high": {
+            "accuracy": 89.85,
+            "avg_cost": 17.6,
+            "meets_target": true
+          },
+          "oracle": {
+            "counts": {
+              "Easy": 6894,
+              "Hard": 2091,
+              "Impossible": 794,
+              "Inverse": 221
+            },
+            "high_accuracy": 89.85,
+            "low_accuracy": 71.15,
+            "target_accuracy": 88.35,
+            "all_low_meets_target": false,
+            "oracle_low": 8280,
+            "oracle_high": 1720,
+            "oracle_low_rate": 0.828,
+            "oracle_high_rate": 0.172,
+            "oracle_cost": 3.276428,
+            "hard_low_allowed_at_target": 371
+          }
+        },
+        "candidate": null,
+        "flags": [
+          "no_feasible_threshold"
+        ],
+        "valid_for_claim": false,
+        "recommended_action": "discard_or_reformulate_threshold_search"
+      }
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.9966658929892143,
+            "avg_cost": 16.319874000000002,
+            "accuracy": 88.55,
+            "to_low": 148,
+            "to_high": 1852
+          },
+          "eval": {
+            "avg_cost": 16.21608,
+            "accuracy": 88.2,
+            "to_low": 160,
+            "to_high": 1840
+          }
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.9966662507577515,
+            "avg_cost": 16.1209355,
+            "accuracy": 88.35,
+            "to_low": 171,
+            "to_high": 1829
+          },
+          "eval": {
+            "avg_cost": 15.887399000000004,
+            "accuracy": 88.3,
+            "to_low": 198,
+            "to_high": 1802
+          }
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "margins": [
+        {
+          "target_margin_pct": 0.5,
+          "status": "no_feasible_calibration_threshold"
+        },
+        {
+          "target_margin_pct": 0.75,
+          "status": "no_feasible_calibration_thr
