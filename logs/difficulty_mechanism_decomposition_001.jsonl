@@ -1,1 +1,2 @@
 {"time": "2026-07-02T05:49:53.524174+00:00", "event": "job_running", "job_file": "jobs/difficulty_mechanism_decomposition_001.json"}
+{"time": "2026-07-02T05:49:54.955935+00:00", "event": "process_prepared", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.difficulty_mechanism_decomposition", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 3600}
