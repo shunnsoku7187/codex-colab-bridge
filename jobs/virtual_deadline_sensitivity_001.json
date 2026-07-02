@@ -1,9 +1,11 @@
 {
   "id": "virtual_deadline_sensitivity_001",
-  "status": "pending",
+  "status": "running",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.virtual_deadline_sensitivity --output-name virtual_deadline_sensitivity_001.json",
   "max_runtime_sec": 1800,
-  "result_file": "results/virtual_deadline_sensitivity_001.json"
+  "result_file": "results/virtual_deadline_sensitivity_001.json",
+  "updated_at": "2026-07-02T17:48:59.693272+00:00",
+  "started_at": "2026-07-02T17:48:59.693255+00:00"
 }
