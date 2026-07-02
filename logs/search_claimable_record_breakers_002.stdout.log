@@ -2906,4 +2906,85 @@ Loading cheap spectrum feature cache: /content/drive/MyDrive/Research_Experiment
           "target_margin_pct": 0.75,
           "status": "ok",
           "calibration_best": {
-            "threshold": 0.
+            "threshold": 0.6751571806460197,
+            "avg_cost": 16.198781,
+            "accuracy": 89.1,
+            "to_low": 162,
+            "to_high": 1838
+          },
+          "eval": {
+            "avg_cost": 16.302575,
+            "accuracy": 88.95,
+            "to_low": 150,
+            "to_high": 1850
+          }
+        },
+        {
+          "target_margin_pct": 1.0,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.6462163029698285,
+            "avg_cost": 15.6019655,
+            "accuracy": 88.85,
+            "to_low": 231,
+            "to_high": 1769
+          },
+          "eval": {
+            "avg_cost": 15.6538625,
+            "accuracy": 88.3,
+            "to_low": 225,
+            "to_high": 1775
+          }
+        },
+        {
+          "target_margin_pct": 1.25,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.6395376388907075,
+            "avg_cost": 15.4289755,
+            "accuracy": 88.6,
+            "to_low": 251,
+            "to_high": 1749
+          },
+          "eval": {
+            "avg_cost": 15.506821000000002,
+            "accuracy": 88.25,
+            "to_low": 242,
+            "to_high": 1758
+          }
+        },
+        {
+          "target_margin_pct": 1.5,
+          "status": "ok",
+          "calibration_best": {
+            "threshold": 0.6350851961712933,
+            "avg_cost": 15.2905835,
+            "accuracy": 88.4,
+            "to_low": 267,
+            "to_high": 1733
+          },
+          "eval": {
+            "avg_cost": 15.368429,
+            "accuracy": 88.25,
+            "to_low": 258,
+            "to_high": 1742
+          }
+        }
+      ]
+    }
+  ]
+}
+=== claimable record-breaker search: claim_lightweight_hog_lgbm_hard_penalty ===
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/
