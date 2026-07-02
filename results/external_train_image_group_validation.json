@@ -1,0 +1,224 @@
+{
+  "status": "ok",
+  "purpose": "External image-group validation for overfitting check.",
+  "important_caveat": "CIFAR-100 train split is a different image group from the router source labels, but it may overlap with the base classifiers' original training data. Treat this as an overfitting stress test, not a final external benchmark.",
+  "split": "train",
+  "max_samples": 2000,
+  "seed": 123,
+  "external_oracle": {
+    "counts": {
+      "Easy": 1973,
+      "Hard": 21,
+      "Impossible": 1,
+      "Inverse": 5
+    },
+    "high_accuracy": 99.7,
+    "target_accuracy": 98.7,
+    "oracle_low": 2000,
+    "oracle_high": 0,
+    "oracle_low_rate": 1.0,
+    "oracle_high_rate": 0.0,
+    "oracle_cost": 0.301,
+    "hard_low_allowed_at_target": 21
+  },
+  "results": [
+    {
+      "name": "current_lgbm_cell7_record",
+      "protocol": "train router on original CIFAR-100 test labels; evaluate on separate CIFAR-100 split images",
+      "feature_set": "lightweight",
+      "target": "low_correct",
+      "score_kind": "classifier",
+      "samples": 2000,
+      "feature_count": 8,
+      "high_accuracy": 99.7,
+      "target_accuracy": 98.7,
+      "best": {
+        "threshold": 0.39877561189035576,
+        "avg_cost": 0.301,
+        "accuracy": 98.9,
+        "to_low": 2000,
+        "to_high": 0,
+        "easy_saved_ratio": 100.0
+      },
+      "routing_details": {
+        "true_easy_to_low": 1973,
+        "true_inverse_to_low": 5,
+        "true_impossible_to_low": 1,
+        "true_hard_to_low": 21,
+        "true_easy_to_high": 0,
+        "true_hard_to_high": 0
+      }
+    },
+    {
+      "name": "current_lgbm_less_constrained",
+      "protocol": "train router on original CIFAR-100 test labels; evaluate on separate CIFAR-100 split images",
+      "feature_set": "lightweight",
+      "target": "low_correct",
+      "score_kind": "classifier",
+      "samples": 2000,
+      "feature_count": 8,
+      "high_accuracy": 99.7,
+      "target_accuracy": 98.7,
+      "best": {
+        "threshold": 0.13274485945320802,
+        "avg_cost": 0.301,
+        "accuracy": 98.9,
+        "to_low": 2000,
+        "to_high": 0,
+        "easy_saved_ratio": 100.0
+      },
+      "routing_details": {
+        "true_easy_to_low": 1973,
+        "true_inverse_to_low": 5,
+        "true_impossible_to_low": 1,
+        "true_hard_to_low": 21,
+        "true_easy_to_high": 0,
+        "true_hard_to_high": 0
+      }
+    },
+    {
+      "name": "current_lgbm_deeper_margin",
+      "protocol": "train router on original CIFAR-100 test labels; evaluate on separate CIFAR-100 split images",
+      "feature_set": "lightweight",
+      "target": "low_correct",
+      "score_kind": "classifier",
+      "samples": 2000,
+      "feature_count": 8,
+      "high_accuracy": 99.7,
+      "target_accuracy": 98.7,
+      "best": {
+        "threshold": 0.34456537993825,
+        "avg_cost": 0.301,
+        "accuracy": 98.9,
+        "to_low": 2000,
+        "to_high": 0,
+        "easy_saved_ratio": 100.0
+      },
+      "routing_details": {
+        "true_easy_to_low": 1973,
+        "true_inverse_to_low": 5,
+        "true_impossible_to_low": 1,
+        "true_hard_to_low": 21,
+        "true_easy_to_high": 0,
+        "true_hard_to_high": 0
+      }
+    },
+    {
+      "name": "hog4x4_lgbm",
+      "protocol": "train router on original CIFAR-100 test labels; evaluate on separate CIFAR-100 split images",
+      "feature_set": "hog4x4",
+      "target": "low_correct",
+      "score_kind": "classifier",
+      "samples": 2000,
+      "feature_count": 576,
+      "high_accuracy": 99.7,
+      "target_accuracy": 98.7,
+      "best": {
+        "threshold": 0.37525809503175617,
+        "avg_cost": 0.301,
+        "accuracy": 98.9,
+        "to_low": 2000,
+        "to_high": 0,
+        "easy_saved_ratio": 100.0
+      },
+      "routing_details": {
+        "true_easy_to_low": 1973,
+        "true_inverse_to_low": 5,
+        "true_impossible_to_low": 1,
+        "true_hard_to_low": 21,
+        "true_easy_to_high": 0,
+        "true_hard_to_high": 0
+      }
+    },
+    {
+      "name": "hog4x4_soft_category_regressor",
+      "protocol": "train router on original CIFAR-100 test labels; evaluate on separate CIFAR-100 split images",
+      "feature_set": "hog4x4",
+      "target": "category_soft",
+      "score_kind": "regressor",
+      "samples": 2000,
+      "feature_count": 576,
+      "high_accuracy": 99.7,
+      "target_accuracy": 98.7,
+      "best": {
+        "threshold": 0.45867616513967563,
+        "avg_cost": 0.301,
+        "accuracy": 98.9,
+        "to_low": 2000,
+        "to_high": 0,
+        "easy_saved_ratio": 100.0
+      },
+      "routing_details": {
+        "true_easy_to_low": 1973,
+        "true_inverse_to_low": 5,
+        "true_impossible_to_low": 1,
+        "true_hard_to_low": 21,
+        "true_easy_to_high": 0,
+        "true_hard_to_high": 0
+      }
+    },
+    {
+      "name": "lightweight_hog_lgbm",
+      "protocol": "train router on original CIFAR-100 test labels; evaluate on separate CIFAR-100 split images",
+      "feature_set": "lightweight_plus_hog4x4",
+      "target": "low_correct",
+      "score_kind": "classifier",
+      "samples": 2000,
+      "feature_count": 584,
+      "high_accuracy": 99.7,
+      "target_accuracy": 98.7,
+      "best": {
+        "threshold": 0.43011071643720006,
+        "avg_cost": 0.301,
+        "accuracy": 98.9,
+        "to_low": 2000,
+        "to_high": 0,
+        "easy_saved_ratio": 100.0
+      },
+      "routing_details": {
+        "true_easy_to_low": 1973,
+        "true_inverse_to_low": 5,
+        "true_impossible_to_low": 1,
+        "true_hard_to_low": 21,
+        "true_easy_to_high": 0,
+        "true_hard_to_high": 0
+      }
+    },
+    {
+      "name": "lightweight_hog_soft_category_regressor",
+      "protocol": "train router on original CIFAR-100 test labels; evaluate on separate CIFAR-100 split images",
+      "feature_set": "lightweight_plus_hog4x4",
+      "target": "category_soft",
+      "score_kind": "regressor",
+      "samples": 2000,
+      "feature_count": 584,
+      "high_accuracy": 99.7,
+      "target_accuracy": 98.7,
+      "best": {
+        "threshold": 0.4321005135092199,
+        "avg_cost": 0.301,
+        "accuracy": 98.9,
+        "to_low": 2000,
+        "to_high": 0,
+        "easy_saved_ratio": 100.0
+      },
+      "routing_details": {
+        "true_easy_to_low": 1973,
+        "true_inverse_to_low": 5,
+        "true_impossible_to_low": 1,
+        "true_hard_to_low": 21,
+        "true_easy_to_high": 0,
+        "true_hard_to_high": 0
+      }
+    }
+  ],
+  "ranked_by_avg_cost": [
+    "current_lgbm_cell7_record",
+    "current_lgbm_less_constrained",
+    "current_lgbm_deeper_margin",
+    "hog4x4_lgbm",
+    "hog4x4_soft_category_regressor",
+    "lightweight_hog_lgbm",
+    "lightweight_hog_soft_category_regressor"
+  ]
+}
