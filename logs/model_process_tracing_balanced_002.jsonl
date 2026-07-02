@@ -1,1 +1,2 @@
 {"time": "2026-07-02T14:23:12.729064+00:00", "event": "job_running", "job_file": "jobs/model_process_tracing_balanced_002.json"}
+{"time": "2026-07-02T14:23:13.887912+00:00", "event": "process_prepared", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.model_process_tracing --require-cuda --max-per-category 200 --batch-size 128 --output-prefix model_process_trace_balanced_002", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 3600}
