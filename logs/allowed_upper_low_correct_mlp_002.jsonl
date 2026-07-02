@@ -1,1 +1,2 @@
 {"time": "2026-07-02T10:36:34.833348+00:00", "event": "job_running", "job_file": "jobs/allowed_upper_low_correct_mlp_002.json"}
+{"time": "2026-07-02T10:36:36.201301+00:00", "event": "process_prepared", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.allowed_feature_upper_bound --targets low_correct --models mlp_small --output-name allowed_upper_low_correct_mlp_002.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 2700}
