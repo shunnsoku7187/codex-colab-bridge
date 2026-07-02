@@ -1,8 +1,10 @@
 {
   "id": "search_claimable_record_breakers_002",
-  "status": "pending",
+  "status": "running",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.search_claimable_record_breakers",
-  "max_runtime_sec": 3600
+  "max_runtime_sec": 3600,
+  "updated_at": "2026-07-02T03:26:37.532324+00:00",
+  "started_at": "2026-07-02T03:26:37.532298+00:00"
 }
