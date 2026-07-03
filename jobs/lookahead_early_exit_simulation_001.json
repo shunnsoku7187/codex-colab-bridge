@@ -1,0 +1,11 @@
+{
+  "id": "lookahead_early_exit_simulation_001",
+  "status": "deferred",
+  "backend": "cpu",
+  "deferred_reason": "Run after early_exit_checkpoint_trace_001 has produced artifacts/early_exit_checkpoint_trace_001.npz.",
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m scripts.simulate_lookahead_early_exit --trace artifacts/early_exit_checkpoint_trace_001.npz --output-name lookahead_early_exit_simulation_001.json",
+  "max_runtime_sec": 300,
+  "result_file": "results/lookahead_early_exit_simulation_001.json"
+}
