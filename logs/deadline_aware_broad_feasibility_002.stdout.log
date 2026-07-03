@@ -231,4 +231,282 @@ Wrote feature cache: /content/drive/MyDrive/Research_Experiment/deadline_aware_b
 {"group": "low_output_runtime", "cost_class": "after_low", "feature_count": 4, "best_at_0.99": {"model": "random_forest", "hard_auc": 0.8332814821681274, "threshold": 0.8304581642150879, "selected": 335, "selected_rate": 0.0335, "low_correct_retention": 0.9901616303583978, "low_correct_selected": 70, "hard_recovery": 0.0899091343854615, "hard_selected": 188, "impossible_selected_rate": 0.09697732997481108, "selected_easy": 61, "selected_hard": 188, "selected_impossible": 77, "selected_inverse": 9, "selected_high_correct": 249, "precision_hard_among_selected": 0.5611940298507463}}
 {"group": "high_output_runtime", "cost_class": "full_high_output_diagnostic", "feature_count": 4, "best_at_0.99": {"model": "random_forest", "hard_auc": 0.6799626961856106, "threshold": 0.7090431451797485, "selected": 178, "selected_rate": 0.0178, "low_correct_retention": 0.9901616303583978, "low_correct_selected": 70, "hard_recovery": 0.04160688665710186, "hard_selected": 87, "impossible_selected_rate": 0.02644836272040302, "selected_easy": 64, "selected_hard": 87, "selected_impossible": 21, "selected_inverse": 6, "selected_high_correct": 151, "precision_hard_among_selected": 0.4887640449438202}}
 {"group": "all_low_layers", "cost_class": "during_low", "feature_count": 42, "best_at_0.99": {"model": "logistic", "hard_auc": 0.7227974728558394, "threshold": 0.8092290163040161, "selected": 205, "selected_rate": 0.0205, "low_correct_retention": 0.9900210822206605, "low_correct_selected": 71, "hard_recovery": 0.046389287422285985, "hard_selected": 97, "impossible_selected_rate": 0.04659949622166247, "selected_easy": 67, "selected_hard": 97, "selected_impossible": 37, "selected_inverse": 4, "selected_high_correct": 164, "precision_hard_among_selected": 0.47317073170731705}}
+{"group": "all_high_layers", "cost_class": "partial_or_full_high", "feature_count": 35, "best_at_0.99": {"model": "logistic", "hard_auc": 0.7248339689409404, "threshold": 0.8137087225914001, "selected": 279, "selected_rate": 0.0279, "low_correct_retention": 0.9900210822206605, "low_correct_selected": 71, "hard_recovery": 0.05212816834050694, "hard_selected": 109, "impossible_selected_rate": 0.12468513853904283, "selected_easy": 44, "selected_hard": 109, "selected_impossible": 99, "selected_inverse": 27, "selected_high_correct": 153, "precision_hard_among_selected": 0.3906810035842294}}
+{"group": "low_output_plus_low_layers", "cost_class": "after_low", "feature_count": 46, "best_at_0.99": {"model": "logistic", "hard_auc": 0.837181052598608, "threshold": 0.8639732003211975, "selected": 360, "selected_rate": 0.036, "low_correct_retention": 0.9901616303583978, "low_correct_selected": 70, "hard_recovery": 0.10521281683405069, "hard_selected": 220, "impossible_selected_rate": 0.08816120906801007, "selected_easy": 62, "selected_hard": 220, "selected_impossible": 70, "selected_inverse": 8, "selected_high_correct": 282, "precision_hard_among_selected": 0.6111111111111112}}
+{"group": "low_output_plus_early_high_layers", "cost_class": "after_low_plus_partial_high", "feature_count": 18, "best_at_0.99": {"model": "logistic", "hard_auc": 0.8399217872791286, "threshold": 0.8646680116653442, "selected": 408, "selected_rate": 0.0408, "low_correct_retention": 0.9900210822206605, "low_correct_selected": 71, "hard_recovery": 0.11525585844093734, "hard_selected": 241, "impossible_selected_rate": 0.12090680100755667, "selected_easy": 57, "selected_hard": 241, "selected_impossible": 96, "selected_inverse": 14, "selected_high_correct": 298, "precision_hard_among_selected": 0.5906862745098039}}
+{"group": "low_plus_high_outputs_diagnostic", "cost_class": "full_high_output_diagnostic", "feature_count": 8, "best_at_0.99": {"model": "logistic", "hard_auc": 0.8391482827831335, "threshold": 0.861213207244873, "selected": 371, "selected_rate": 0.0371, "low_correct_retention": 0.9900210822206605, "low_correct_selected": 71, "hard_recovery": 0.10903873744619799, "hard_selected": 228, "impossible_selected_rate": 0.0906801007556675, "selected_easy": 59, "selected_hard": 228, "selected_impossible": 72, "selected_inverse": 12, "selected_high_correct": 287, "precision_hard_among_selected": 0.6145552560646901}}
 {
+  "status": "ok",
+  "purpose": "Broad feasibility check for a real conservative MID signal and deadline-aware control candidates.",
+  "samples": 10000,
+  "category_counts": {
+    "Easy": 6894,
+    "Hard": 2091,
+    "Impossible": 794,
+    "Inverse": 221
+  },
+  "low_accuracy": 0.7115,
+  "high_accuracy": 0.8985,
+  "retention_targets": [
+    0.995,
+    0.99,
+    0.98,
+    0.95
+  ],
+  "feature_cache": "/content/drive/MyDrive/Research_Experiment/deadline_aware_broad_features_002.npz",
+  "feature_metadata": {
+    "samples": 10000,
+    "feature_groups": [
+      "high_layer:hidden_0",
+      "high_layer:hidden_12",
+      "high_layer:hidden_3",
+      "high_layer:hidden_6",
+      "high_layer:hidden_9",
+      "high_output_runtime",
+      "low_layer:features.0",
+      "low_layer:features.10",
+      "low_layer:features.14",
+      "low_layer:features.18",
+      "low_layer:features.3",
+      "low_layer:features.7",
+      "low_output_runtime"
+    ],
+    "feature_names": {
+      "low_output_runtime": [
+        "low_output.top1_prob",
+        "low_output.top2_prob",
+        "low_output.top1_top2_logit_margin",
+        "low_output.entropy_norm"
+      ],
+      "low_layer:features.0": [
+        "low_layer.features.0.mean",
+        "low_layer.features.0.std",
+        "low_layer.features.0.abs_mean",
+        "low_layer.features.0.l2",
+        "low_layer.features.0.max",
+        "low_layer.features.0.positive_frac",
+        "low_layer.features.0.channel_mean_std"
+      ],
+      "low_layer:features.3": [
+        "low_layer.features.3.mean",
+        "low_layer.features.3.std",
+        "low_layer.features.3.abs_mean",
+        "low_layer.features.3.l2",
+        "low_layer.features.3.max",
+        "low_layer.features.3.positive_frac",
+        "low_layer.features.3.channel_mean_std"
+      ],
+      "low_layer:features.7": [
+        "low_layer.features.7.mean",
+        "low_layer.features.7.std",
+        "low_layer.features.7.abs_mean",
+        "low_layer.features.7.l2",
+        "low_layer.features.7.max",
+        "low_layer.features.7.positive_frac",
+        "low_layer.features.7.channel_mean_std"
+      ],
+      "low_layer:features.10": [
+        "low_layer.features.10.mean",
+        "low_layer.features.10.std",
+        "low_layer.features.10.abs_mean",
+        "low_layer.features.10.l2",
+        "low_layer.features.10.max",
+        "low_layer.features.10.positive_frac",
+        "low_layer.features.10.channel_mean_std"
+      ],
+      "low_layer:features.14": [
+        "low_layer.features.14.mean",
+        "low_layer.features.14.std",
+        "low_layer.features.14.abs_mean",
+        "low_layer.features.14.l2",
+        "low_layer.features.14.max",
+        "low_layer.features.14.positive_frac",
+        "low_layer.features.14.channel_mean_std"
+      ],
+      "low_layer:features.18": [
+        "low_layer.features.18.mean",
+        "low_layer.features.18.std",
+        "low_layer.features.18.abs_mean",
+        "low_layer.features.18.l2",
+        "low_layer.features.18.max",
+        "low_layer.features.18.positive_frac",
+        "low_layer.features.18.channel_mean_std"
+      ],
+      "high_output_runtime": [
+        "high_output.top1_prob",
+        "high_output.top2_prob",
+        "high_output.top1_top2_logit_margin",
+        "high_output.entropy_norm"
+      ],
+      "high_layer:hidden_0": [
+        "high_hidden.0.mean",
+        "high_hidden.0.std",
+        "high_hidden.0.abs_mean",
+        "high_hidden.0.l2",
+        "high_hidden.0.max",
+        "high_hidden.0.cls_l2",
+        "high_hidden.0.token_mean_std"
+      ],
+      "high_layer:hidden_3": [
+        "high_hidden.3.mean",
+        "high_hidden.3.std",
+        "high_hidden.3.abs_mean",
+        "high_hidden.3.l2",
+        "high_hidden.3.max",
+        "high_hidden.3.cls_l2",
+        "high_hidden.3.token_mean_std"
+      ],
+      "high_layer:hidden_6": [
+        "high_hidden.6.mean",
+        "high_hidden.6.std",
+        "high_hidden.6.abs_mean",
+        "high_hidden.6.l2",
+        "high_hidden.6.max",
+        "high_hidden.6.cls_l2",
+        "high_hidden.6.token_mean_std"
+      ],
+      "high_layer:hidden_9": [
+        "high_hidden.9.mean",
+        "high_hidden.9.std",
+        "high_hidden.9.abs_mean",
+        "high_hidden.9.l2",
+        "high_hidden.9.max",
+        "high_hidden.9.cls_l2",
+        "high_hidden.9.token_mean_std"
+      ],
+      "high_layer:hidden_12": [
+        "high_hidden.12.mean",
+        "high_hidden.12.std",
+        "high_hidden.12.abs_mean",
+        "high_hidden.12.l2",
+        "high_hidden.12.max",
+        "high_hidden.12.cls_l2",
+        "high_hidden.12.token_mean_std"
+      ]
+    },
+    "high_layers": [
+      0,
+      3,
+      6,
+      9,
+      12
+    ],
+    "low_layers": [
+      "features.0",
+      "features.3",
+      "features.7",
+      "features.10",
+      "features.14",
+      "features.18"
+    ]
+  },
+  "decision_rule": [
+    "Promising: non-oracle group reaches LOW-correct retention >= 0.99 and Hard recovery >= 0.40.",
+    "Strong: same condition holds for after_low or partial_high features rather than oracle/full-high-output diagnostics.",
+    "Weak: only oracle/full-high-output groups pass, or Hard recovery collapses under 99% LOW-correct retention."
+  ],
+  "deadline_control_candidates": [
+    {
+      "name": "remaining_time_rule",
+      "description": "Run the deepest stage that still fits the remaining deadline.",
+      "strength": "Easiest to explain and implement.",
+      "risk": "May waste work on samples whose expected correction value is low."
+    },
+    {
+      "name": "safety_first_rule",
+      "description": "If a reliable stage cannot finish, choose safe eject or re-sort.",
+      "strength": "Directly avoids cascade-style deadline misses.",
+      "risk": "Can become too conservative and lose useful decisions."
+    },
+    {
+      "name": "value_density_rule",
+      "description": "Run MID/HIGH only when expected gain per added latency or energy is high.",
+      "strength": "Best conceptual contrast against fixed cascade and always-parallel inference.",
+      "risk": "Needs calibrated gain estimates; calibration may be fragile."
+    },
+    {
+      "name": "conservative_correction_rule",
+      "description": "Keep LOW's answer unless the correction signal is very strong.",
+      "strength": "Matches the 99% LOW-correct retention requirement.",
+      "risk": "May recover too little Hard if correction evidence is weak."
+    }
+  ],
+  "group_results": [
+    {
+      "name": "low_output_plus_early_high_layers",
+      "keys": [
+        "low_output_runtime",
+        "high_layer:hidden_0",
+        "high_layer:hidden_12"
+      ],
+      "cost_class": "after_low_plus_partial_high",
+      "feature_count": 18,
+      "model_results": [
+        {
+          "model": "logistic",
+          "hard_auc": 0.8399217872791286,
+          "frontier_by_low_correct_retention": {
+            "0.995": {
+              "threshold": 0.8866340517997742,
+              "selected": 221,
+              "selected_rate": 0.0221,
+              "low_correct_retention": 0.995221363316936,
+              "low_correct_selected": 34,
+              "hard_recovery": 0.05786704925872788,
+              "hard_selected": 121,
+              "impossible_selected_rate": 0.08312342569269521,
+              "selected_easy": 25,
+              "selected_hard": 121,
+              "selected_impossible": 66,
+              "selected_inverse": 9,
+              "selected_high_correct": 146,
+              "precision_hard_among_selected": 0.5475113122171946
+            },
+            "0.99": {
+              "threshold": 0.8646680116653442,
+              "selected": 408,
+              "selected_rate": 0.0408,
+              "low_correct_retention": 0.9900210822206605,
+              "low_correct_selected": 71,
+              "hard_recovery": 0.11525585844093734,
+              "hard_selected": 241,
+              "impossible_selected_rate": 0.12090680100755667,
+              "selected_easy": 57,
+              "selected_hard": 241,
+              "selected_impossible": 96,
+              "selected_inverse": 14,
+              "selected_high_correct": 298,
+              "precision_hard_among_selected": 0.5906862745098039
+            },
+            "0.98": {
+              "threshold": 0.8374447226524353,
+              "selected": 706,
+              "selected_rate": 0.0706,
+              "low_correct_retention": 0.9800421644413212,
+              "low_correct_selected": 142,
+              "hard_recovery": 0.1912960306073649,
+              "hard_selected": 400,
+              "impossible_selected_rate": 0.20654911838790932,
+              "selected_easy": 120,
+              "selected_hard": 400,
+              "selected_impossible": 164,
+              "selected_inverse": 22,
+              "selected_high_correct": 520,
+              "precision_hard_among_selected": 0.56657223796034
+            },
+            "0.95": {
+              "threshold": 0.787733256816864,
+              "selected": 1359,
+              "selected_rate": 0.1359,
+              "low_correct_retention": 0.9501054111033029,
+              "low_correct_selected": 355,
+              "hard_recovery": 0.3481587757054041,
+              "hard_selected": 728,
+              "impossible_selected_rate": 0.34760705289672544,
+              "selected_easy": 310,
+              "selected_hard": 728,
+              "selected_impossible": 276,
+              "selected_inverse": 45,
+              "selected_high_correct": 1038,
+              "precision_hard_among_selected": 0.5356880058866814
+        
