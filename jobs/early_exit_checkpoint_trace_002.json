@@ -1,6 +1,7 @@
 {
   "id": "early_exit_checkpoint_trace_002",
-  "status": "pending",
+  "status": "deferred",
+  "deferred_reason": "Paused while building the faithful BranchyNet baseline so Colab only runs branchynet_mobilenet_cifar100_001.",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
