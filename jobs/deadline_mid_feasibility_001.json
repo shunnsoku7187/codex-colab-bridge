@@ -1,9 +1,11 @@
 {
   "id": "deadline_mid_feasibility_001",
-  "status": "pending",
+  "status": "running",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.deadline_mid_feasibility --input-prefix model_process_trace_balanced_002 --output-name deadline_mid_feasibility_001.json",
   "max_runtime_sec": 1200,
-  "result_file": "results/deadline_mid_feasibility_001.json"
+  "result_file": "results/deadline_mid_feasibility_001.json",
+  "updated_at": "2026-07-03T05:15:38.737643+00:00",
+  "started_at": "2026-07-03T05:15:38.737612+00:00"
 }
