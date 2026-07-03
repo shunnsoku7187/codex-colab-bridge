@@ -1,11 +1,13 @@
 {
   "id": "deadline_aware_broad_feasibility_001",
-  "status": "running",
+  "status": "failed",
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.deadline_aware_broad_feasibility --output-name deadline_aware_broad_feasibility_001.json --cache-name deadline_aware_broad_features_001 --batch-size 64 --require-cuda",
   "max_runtime_sec": 5400,
   "result_file": "results/deadline_aware_broad_feasibility_001.json",
-  "updated_at": "2026-07-03T05:14:51.199691+00:00",
-  "started_at": "2026-07-03T05:14:51.199671+00:00"
+  "updated_at": "2026-07-03T05:15:37.663939+00:00",
+  "started_at": "2026-07-03T05:14:51.199671+00:00",
+  "returncode": 1,
+  "finished_at": "2026-07-03T05:15:37.661602+00:00"
 }
