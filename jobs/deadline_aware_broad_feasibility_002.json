@@ -1,11 +1,13 @@
 {
   "id": "deadline_aware_broad_feasibility_002",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.deadline_aware_broad_feasibility --output-name deadline_aware_broad_feasibility_002.json --cache-name deadline_aware_broad_features_002 --batch-size 64 --require-cuda",
   "max_runtime_sec": 5400,
-  "result_file": "results/deadline_aware_broad_feasibility_002.json"
+  "result_file": "results/deadline_aware_broad_feasibility_002.json",
+  "updated_at": "2026-07-03T06:17:59.776334+00:00",
+  "started_at": "2026-07-03T06:17:59.776307+00:00"
 }
