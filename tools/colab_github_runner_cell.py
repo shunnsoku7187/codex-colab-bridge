@@ -44,6 +44,7 @@ DRIVE_MOUNT_POINT = Path("/content/drive")
 DRIVE_ARTIFACT_DIR = DRIVE_MOUNT_POINT / "MyDrive" / "Research_Experiment"
 DRIVE_CACHE_ROOT = DRIVE_ARTIFACT_DIR / ".colab_cache"
 HEARTBEAT_INTERVAL_SEC = 120
+COLAB_BACKENDS = {"gpu", "colab", "colab_gpu"}
 
 
 def utc_now():
@@ -252,6 +253,12 @@ def execute_job(job_path):
     job_id = job.get("id") or job_path.stem
 
     if job.get("status", "pending") != "pending":
+        return False
+
+    backend = job.get("backend", "gpu")
+    if backend not in COLAB_BACKENDS:
+        print(f"{utc_now()} skipping {job_id}: backend={backend} is not a Colab GPU backend.")
+        append_log(job_id, "job_skipped_by_colab_runner", backend=backend)
         return False
 
     update_status(job_path, job, "running", started_at=utc_now())

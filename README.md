@@ -12,6 +12,49 @@ runtime.
 5. Colab commits logs and results back to GitHub.
 6. Codex reads logs/results and continues.
 
+## CPU/GPU split
+
+Use Git/Codex for CPU-scale preparation and analysis, and keep Colab for GPU
+inference only.
+
+Job files should declare a backend:
+
+```json
+{
+  "backend": "cpu"
+}
+```
+
+or:
+
+```json
+{
+  "backend": "gpu",
+  "requires_gpu": true
+}
+```
+
+Rules:
+
+- `backend: "gpu"` jobs are executed by the Colab runner.
+- `backend: "cpu"` jobs are skipped by the Colab runner and can be executed by
+  `tools/run_cpu_jobs.py`.
+- CPU jobs should depend only on files in Git or small result artifacts already
+  committed to Git. If a CPU job needs a Drive-only artifact, first create a GPU
+  or Drive-export job that writes a compact feature/result file back to Git.
+- Colab jobs should do only the expensive parts: model loading, GPU inference,
+  feature extraction that requires GPU tensors, and writing compact outputs.
+- After Colab writes compact outputs, threshold search, ablations, table
+  generation, and slide/report summaries should be CPU-side work.
+
+Run CPU jobs from the repository root:
+
+```text
+python tools/run_cpu_jobs.py
+```
+
+The runner only picks pending jobs whose `backend` is `cpu`.
+
 ## Layout
 
 ```text
