@@ -1,1 +1,2 @@
 {"time": "2026-07-03T07:44:21.875959+00:00", "event": "job_running", "job_file": "jobs/early_exit_checkpoint_trace_001.json"}
+{"time": "2026-07-03T07:44:23.105667+00:00", "event": "process_prepared", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.early_exit_checkpoint_trace --output-name early_exit_checkpoint_trace_001 --checkpoint-count 8 --epochs 3 --batch-size 128 --max-train-samples 20000 --require-cuda", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 5400}
