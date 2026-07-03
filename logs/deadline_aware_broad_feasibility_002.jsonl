@@ -1,1 +1,2 @@
 {"time": "2026-07-03T06:17:59.776941+00:00", "event": "job_running", "job_file": "jobs/deadline_aware_broad_feasibility_002.json"}
+{"time": "2026-07-03T06:18:00.895436+00:00", "event": "process_prepared", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.deadline_aware_broad_feasibility --output-name deadline_aware_broad_feasibility_002.json --cache-name deadline_aware_broad_features_002 --batch-size 64 --require-cuda", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 5400}
