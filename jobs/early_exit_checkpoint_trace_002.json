@@ -1,0 +1,11 @@
+{
+  "id": "early_exit_checkpoint_trace_002",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.early_exit_checkpoint_trace --output-name early_exit_checkpoint_trace_002 --checkpoint-count 8 --epochs 3 --batch-size 128 --max-train-samples 20000 --require-cuda",
+  "max_runtime_sec": 5400,
+  "result_file": "results/early_exit_checkpoint_trace_002.json"
+}

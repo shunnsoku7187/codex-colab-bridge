@@ -2,10 +2,10 @@
   "id": "lookahead_early_exit_simulation_001",
   "status": "deferred",
   "backend": "cpu",
-  "deferred_reason": "Run after early_exit_checkpoint_trace_001 has produced artifacts/early_exit_checkpoint_trace_001.npz.",
+  "deferred_reason": "Superseded by lookahead_early_exit_simulation_002 because early_exit_checkpoint_trace_001 wrote the trace NPZ to an ignored artifacts path.",
   "type": "shell",
   "cwd": ".",
-  "command": "python -m scripts.simulate_lookahead_early_exit --trace artifacts/early_exit_checkpoint_trace_001.npz --output-name lookahead_early_exit_simulation_001.json",
+  "command": "python -m scripts.simulate_lookahead_early_exit --trace results/early_exit_checkpoint_trace_001.npz --output-name lookahead_early_exit_simulation_001.json",
   "max_runtime_sec": 300,
   "result_file": "results/lookahead_early_exit_simulation_001.json"
 }

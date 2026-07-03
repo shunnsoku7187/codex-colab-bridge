@@ -262,7 +262,7 @@ def main():
     earliest_correct_level_counts = summarize_levels(correct)
     checkpoint_accuracy = correct.mean(axis=0)
 
-    trace_path = Path("artifacts") / f"{args.output_name}.npz"
+    trace_path = RESULTS_DIR / f"{args.output_name}.npz"
     trace_path.parent.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(
         trace_path,
