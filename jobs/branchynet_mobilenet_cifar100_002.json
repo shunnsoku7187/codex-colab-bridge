@@ -1,11 +1,13 @@
 {
   "id": "branchynet_mobilenet_cifar100_002",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.branchynet_mobilenet_cifar100 --output-name branchynet_mobilenet_cifar100_002 --exit-indices 5,12 --epochs 5 --batch-size 128 --threshold-val-size 5000 --learning-rate 1e-4 --weight-decay 1e-4 --threshold-candidates 9 --max-threshold-combinations 2000 --require-cuda",
   "max_runtime_sec": 7200,
-  "result_file": "results/branchynet_mobilenet_cifar100_002.json"
+  "result_file": "results/branchynet_mobilenet_cifar100_002.json",
+  "updated_at": "2026-07-03T18:54:48.211243+00:00",
+  "started_at": "2026-07-03T18:54:48.211225+00:00"
 }
