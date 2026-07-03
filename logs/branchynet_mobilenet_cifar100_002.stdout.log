@@ -1,0 +1,222 @@
+Requirement already satisfied: matplotlib-venn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 1)) (1.1.2)
+Collecting torchinfo (from -r requirements-colab.txt (line 2))
+  Using cached torchinfo-1.8.0-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: transformers in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 3)) (5.12.1)
+Requirement already satisfied: opencv-python-headless in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 4)) (4.13.0.92)
+Requirement already satisfied: scikit-learn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 5)) (1.6.1)
+Requirement already satisfied: lightgbm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 6)) (4.6.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 7)) (4.67.3)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 1)) (3.10.0)
+Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 1)) (2.0.2)
+Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 1)) (1.16.3)
+Requirement already satisfied: huggingface-hub<2.0,>=1.5.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (1.20.1)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (26.2)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (6.0.3)
+Requirement already satisfied: regex>=2025.10.22 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (2025.11.3)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (0.22.2)
+Requirement already satisfied: typer in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (0.25.1)
+Requirement already satisfied: safetensors>=0.4.3 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (0.8.0)
+Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 5)) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 5)) (3.6.0)
+Requirement already satisfied: click>=8.4.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (8.4.2)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (3.29.4)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (2025.3.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.5.1 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (1.5.1)
+Requirement already satisfied: httpx<1,>=0.23.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (0.28.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (4.15.0)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 3)) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 3)) (13.9.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 3)) (0.0.4)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (4.63.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (1.5.0)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (11.3.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (2.9.0.post0)
+Requirement already satisfied: anyio in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (4.14.0)
+Requirement already satisfied: certifi in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (2026.6.17)
+Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (1.0.9)
+Requirement already satisfied: idna in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (3.18)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/dist-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (0.16.0)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.7->matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (1.17.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (0.1.2)
+Using cached torchinfo-1.8.0-py3-none-any.whl (23 kB)
+Installing collected packages: torchinfo
+Successfully installed torchinfo-1.8.0
+device=cuda
+Loading pretrained baseline MobileNetV2 x0_5...
+Using cache found in /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/chenyaofo_pytorch-cifar-models_master
+
+BranchyNet training epoch 1/5:   0%|          | 0/391 [00:00<?, ?it/s]
+BranchyNet training epoch 1/5:   0%|          | 1/391 [00:01<06:38,  1.02s/it]
+BranchyNet training epoch 1/5:   1%|          | 2/391 [00:01<03:26,  1.88it/s]
+BranchyNet training epoch 1/5:   1%|          | 3/391 [00:01<02:30,  2.57it/s]
+BranchyNet training epoch 1/5:   1%|          | 4/391 [00:01<02:03,  3.14it/s]
+BranchyNet training epoch 1/5:   1%|▏         | 5/391 [00:01<01:46,  3.62it/s]
+BranchyNet training epoch 1/5:   2%|▏         | 6/391 [00:02<01:36,  3.99it/s]
+BranchyNet training epoch 1/5:   2%|▏         | 7/391 [00:02<01:30,  4.24it/s]
+BranchyNet training epoch 1/5:   2%|▏         | 8/391 [00:02<01:26,  4.43it/s]
+BranchyNet training epoch 1/5:   2%|▏         | 9/391 [00:02<01:19,  4.78it/s]
+BranchyNet training epoch 1/5:   3%|▎         | 10/391 [00:02<01:15,  5.02it/s]
+BranchyNet training epoch 1/5:   3%|▎         | 11/391 [00:02<01:14,  5.13it/s]
+BranchyNet training epoch 1/5:   3%|▎         | 12/391 [00:03<01:14,  5.10it/s]
+BranchyNet training epoch 1/5:   3%|▎         | 13/391 [00:03<01:11,  5.26it/s]
+BranchyNet training epoch 1/5:   4%|▎         | 14/391 [00:03<01:10,  5.31it/s]
+BranchyNet training epoch 1/5:   4%|▍         | 15/391 [00:03<01:09,  5.39it/s]
+BranchyNet training epoch 1/5:   4%|▍         | 16/391 [00:03<01:09,  5.36it/s]
+BranchyNet training epoch 1/5:   4%|▍         | 17/391 [00:04<01:10,  5.29it/s]
+BranchyNet training epoch 1/5:   5%|▍         | 18/391 [00:04<01:08,  5.41it/s]
+BranchyNet training epoch 1/5:   5%|▍         | 19/391 [00:04<01:09,  5.39it/s]
+BranchyNet training epoch 1/5:   5%|▌         | 20/391 [00:04<01:08,  5.45it/s]
+BranchyNet training epoch 1/5:   5%|▌         | 21/391 [00:04<01:05,  5.61it/s]
+BranchyNet training epoch 1/5:   6%|▌         | 22/391 [00:05<01:07,  5.51it/s]
+BranchyNet training epoch 1/5:   6%|▌         | 23/391 [00:05<01:08,  5.35it/s]
+BranchyNet training epoch 1/5:   6%|▌         | 24/391 [00:05<01:07,  5.46it/s]
+BranchyNet training epoch 1/5:   6%|▋         | 25/391 [00:05<01:07,  5.43it/s]
+BranchyNet training epoch 1/5:   7%|▋         | 26/391 [00:05<01:08,  5.36it/s]
+BranchyNet training epoch 1/5:   7%|▋         | 27/391 [00:05<01:07,  5.43it/s]
+BranchyNet training epoch 1/5:   7%|▋         | 28/391 [00:06<01:07,  5.40it/s]
+BranchyNet training epoch 1/5:   7%|▋         | 29/391 [00:06<01:05,  5.55it/s]
+BranchyNet training epoch 1/5:   8%|▊         | 30/391 [00:06<01:07,  5.31it/s]
+BranchyNet training epoch 1/5:   8%|▊         | 31/391 [00:06<01:06,  5.38it/s]
+BranchyNet training epoch 1/5:   8%|▊         | 32/391 [00:06<01:04,  5.55it/s]
+BranchyNet training epoch 1/5:   8%|▊         | 33/391 [00:07<01:05,  5.42it/s]
+BranchyNet training epoch 1/5:   9%|▊         | 34/391 [00:07<01:04,  5.55it/s]
+BranchyNet training epoch 1/5:   9%|▉         | 35/391 [00:07<01:06,  5.39it/s]
+BranchyNet training epoch 1/5:   9%|▉         | 36/391 [00:07<01:04,  5.52it/s]
+BranchyNet training epoch 1/5:   9%|▉         | 37/391 [00:07<01:09,  5.07it/s]
+BranchyNet training epoch 1/5:  10%|▉         | 38/391 [00:08<01:10,  5.04it/s]
+BranchyNet training epoch 1/5:  10%|▉         | 39/391 [00:08<01:11,  4.90it/s]
+BranchyNet training epoch 1/5:  10%|█         | 40/391 [00:08<01:13,  4.75it/s]
+BranchyNet training epoch 1/5:  10%|█         | 41/391 [00:08<01:13,  4.76it/s]
+BranchyNet training epoch 1/5:  11%|█         | 42/391 [00:08<01:11,  4.85it/s]
+BranchyNet training epoch 1/5:  11%|█         | 43/391 [00:09<01:16,  4.53it/s]
+BranchyNet training epoch 1/5:  11%|█▏        | 44/391 [00:09<01:15,  4.58it/s]
+BranchyNet training epoch 1/5:  12%|█▏        | 45/391 [00:09<01:14,  4.66it/s]
+BranchyNet training epoch 1/5:  12%|█▏        | 46/391 [00:09<01:12,  4.78it/s]
+BranchyNet training epoch 1/5:  12%|█▏        | 47/391 [00:09<01:10,  4.86it/s]
+BranchyNet training epoch 1/5:  12%|█▏        | 48/391 [00:10<01:08,  4.98it/s]
+BranchyNet training epoch 1/5:  13%|█▎        | 49/391 [00:10<01:07,  5.03it/s]
+BranchyNet training epoch 1/5:  13%|█▎        | 50/391 [00:10<01:06,  5.13it/s]
+BranchyNet training epoch 1/5:  13%|█▎        | 51/391 [00:10<01:07,  5.06it/s]
+BranchyNet training epoch 1/5:  13%|█▎        | 52/391 [00:10<01:10,  4.84it/s]
+BranchyNet training epoch 1/5:  14%|█▎        | 53/391 [00:11<01:12,  4.64it/s]
+BranchyNet training epoch 1/5:  14%|█▍        | 54/391 [00:11<01:10,  4.78it/s]
+BranchyNet training epoch 1/5:  14%|█▍        | 55/391 [00:11<01:11,  4.71it/s]
+BranchyNet training epoch 1/5:  14%|█▍        | 56/391 [00:11<01:07,  4.98it/s]
+BranchyNet training epoch 1/5:  15%|█▍        | 57/391 [00:11<01:08,  4.86it/s]
+BranchyNet training epoch 1/5:  15%|█▍        | 58/391 [00:12<01:11,  4.63it/s]
+BranchyNet training epoch 1/5:  15%|█▌        | 59/391 [00:12<01:08,  4.82it/s]
+BranchyNet training epoch 1/5:  15%|█▌        | 60/391 [00:12<01:08,  4.85it/s]
+BranchyNet training epoch 1/5:  16%|█▌        | 61/391 [00:12<01:07,  4.91it/s]
+BranchyNet training epoch 1/5:  16%|█▌        | 62/391 [00:13<01:09,  4.76it/s]
+BranchyNet training epoch 1/5:  16%|█▌        | 63/391 [00:13<01:09,  4.72it/s]
+BranchyNet training epoch 1/5:  16%|█▋        | 64/391 [00:13<01:09,  4.71it/s]
+BranchyNet training epoch 1/5:  17%|█▋        | 65/391 [00:13<01:08,  4.73it/s]
+BranchyNet training epoch 1/5:  17%|█▋        | 66/391 [00:13<01:09,  4.65it/s]
+BranchyNet training epoch 1/5:  17%|█▋        | 67/391 [00:14<01:12,  4.50it/s]
+BranchyNet training epoch 1/5:  17%|█▋        | 68/391 [00:14<01:13,  4.37it/s]
+BranchyNet training epoch 1/5:  18%|█▊        | 69/391 [00:14<01:15,  4.24it/s]
+BranchyNet training epoch 1/5:  18%|█▊        | 70/391 [00:14<01:13,  4.36it/s]
+BranchyNet training epoch 1/5:  18%|█▊        | 71/391 [00:15<01:10,  4.52it/s]
+BranchyNet training epoch 1/5:  18%|█▊        | 72/391 [00:15<01:10,  4.52it/s]
+BranchyNet training epoch 1/5:  19%|█▊        | 73/391 [00:15<01:09,  4.56it/s]
+BranchyNet training epoch 1/5:  19%|█▉        | 74/391 [00:15<01:06,  4.77it/s]
+BranchyNet training epoch 1/5:  19%|█▉        | 75/391 [00:15<01:07,  4.68it/s]
+BranchyNet training epoch 1/5:  19%|█▉        | 76/391 [00:16<01:09,  4.53it/s]
+BranchyNet training epoch 1/5:  20%|█▉        | 77/391 [00:16<01:09,  4.55it/s]
+BranchyNet training epoch 1/5:  20%|█▉        | 78/391 [00:16<01:08,  4.56it/s]
+BranchyNet training epoch 1/5:  20%|██        | 79/391 [00:16<01:04,  4.86it/s]
+BranchyNet training epoch 1/5:  20%|██        | 80/391 [00:16<01:02,  4.99it/s]
+BranchyNet training epoch 1/5:  21%|██        | 81/391 [00:17<01:03,  4.90it/s]
+BranchyNet training epoch 1/5:  21%|██        | 82/391 [00:17<00:59,  5.19it/s]
+BranchyNet training epoch 1/5:  21%|██        | 83/391 [00:17<01:00,  5.12it/s]
+BranchyNet training epoch 1/5:  21%|██▏       | 84/391 [00:17<00:57,  5.34it/s]
+BranchyNet training epoch 1/5:  22%|██▏       | 85/391 [00:17<00:58,  5.24it/s]
+BranchyNet training epoch 1/5:  22%|██▏       | 86/391 [00:18<00:58,  5.24it/s]
+BranchyNet training epoch 1/5:  22%|██▏       | 87/391 [00:18<00:56,  5.36it/s]
+BranchyNet training epoch 1/5:  23%|██▎       | 88/391 [00:18<00:57,  5.25it/s]
+BranchyNet training epoch 1/5:  23%|██▎       | 89/391 [00:18<00:56,  5.33it/s]
+BranchyNet training epoch 1/5:  23%|██▎       | 90/391 [00:18<00:56,  5.34it/s]
+BranchyNet training epoch 1/5:  23%|██▎       | 91/391 [00:18<00:55,  5.37it/s]
+BranchyNet training epoch 1/5:  24%|██▎       | 92/391 [00:19<00:57,  5.23it/s]
+BranchyNet training epoch 1/5:  24%|██▍       | 93/391 [00:19<00:56,  5.27it/s]
+BranchyNet training epoch 1/5:  24%|██▍       | 94/391 [00:19<00:55,  5.30it/s]
+BranchyNet training epoch 1/5:  24%|██▍       | 95/391 [00:19<00:58,  5.05it/s]
+BranchyNet training epoch 1/5:  25%|██▍       | 96/391 [00:19<00:58,  5.07it/s]
+BranchyNet training epoch 1/5:  25%|██▍       | 97/391 [00:20<00:58,  5.03it/s]
+BranchyNet training epoch 1/5:  25%|██▌       | 98/391 [00:20<00:58,  4.99it/s]
+BranchyNet training epoch 1/5:  25%|██▌       | 99/391 [00:20<00:58,  4.97it/s]
+BranchyNet training epoch 1/5:  26%|██▌       | 100/391 [00:20<00:58,  4.93it/s]
+BranchyNet training epoch 1/5:  26%|██▌       | 101/391 [00:20<00:57,  5.04it/s]
+BranchyNet training epoch 1/5:  26%|██▌       | 102/391 [00:21<00:56,  5.09it/s]
+BranchyNet training epoch 1/5:  26%|██▋       | 103/391 [00:21<00:56,  5.08it/s]
+BranchyNet training epoch 1/5:  27%|██▋       | 104/391 [00:21<00:56,  5.08it/s]
+BranchyNet training epoch 1/5:  27%|██▋       | 105/391 [00:21<00:56,  5.09it/s]
+BranchyNet training epoch 1/5:  27%|██▋       | 106/391 [00:21<00:55,  5.15it/s]
+BranchyNet training epoch 1/5:  27%|██▋       | 107/391 [00:22<00:55,  5.13it/s]
+BranchyNet training epoch 1/5:  28%|██▊       | 108/391 [00:22<00:55,  5.12it/s]
+BranchyNet training epoch 1/5:  28%|██▊       | 109/391 [00:22<00:54,  5.16it/s]
+BranchyNet training epoch 1/5:  28%|██▊       | 110/391 [00:22<00:55,  5.05it/s]
+BranchyNet training epoch 1/5:  28%|██▊       | 111/391 [00:22<00:57,  4.88it/s]
+BranchyNet training epoch 1/5:  29%|██▊       | 112/391 [00:23<00:57,  4.84it/s]
+BranchyNet training epoch 1/5:  29%|██▉       | 113/391 [00:23<00:57,  4.85it/s]
+BranchyNet training epoch 1/5:  29%|██▉       | 114/391 [00:23<00:56,  4.89it/s]
+BranchyNet training epoch 1/5:  29%|██▉       | 115/391 [00:23<00:56,  4.90it/s]
+BranchyNet training epoch 1/5:  30%|██▉       | 116/391 [00:23<00:55,  4.95it/s]
+BranchyNet training epoch 1/5:  30%|██▉       | 117/391 [00:24<00:54,  4.99it/s]
+BranchyNet training epoch 1/5:  30%|███       | 118/391 [00:24<00:53,  5.10it/s]
+BranchyNet training epoch 1/5:  30%|███       | 119/391 [00:24<00:51,  5.30it/s]
+BranchyNet training epoch 1/5:  31%|███       | 120/391 [00:24<00:52,  5.15it/s]
+BranchyNet training epoch 1/5:  31%|███       | 121/391 [00:24<00:52,  5.11it/s]
+BranchyNet training epoch 1/5:  31%|███       | 122/391 [00:25<00:54,  4.93it/s]
+BranchyNet training epoch 1/5:  31%|███▏      | 123/391 [00:25<00:54,  4.92it/s]
+BranchyNet training epoch 1/5:  32%|███▏      | 124/391 [00:25<00:52,  5.04it/s]
+BranchyNet training epoch 1/5:  32%|███▏      | 125/391 [00:25<00:52,  5.02it/s]
+BranchyNet training epoch 1/5:  32%|███▏      | 126/391 [00:25<00:52,  5.03it/s]
+BranchyNet training epoch 1/5:  32%|███▏      | 127/391 [00:26<00:54,  4.88it/s]
+BranchyNet training epoch 1/5:  33%|███▎      | 128/391 [00:26<00:53,  4.88it/s]
+BranchyNet training epoch 1/5:  33%|███▎      | 129/391 [00:26<00:53,  4.90it/s]
+BranchyNet training epoch 1/5:  33%|███▎      | 130/391 [00:26<00:55,  4.70it/s]
+BranchyNet training epoch 1/5:  34%|███▎      | 131/391 [00:27<00:57,  4.54it/s]
+BranchyNet training epoch 1/5:  34%|███▍      | 132/391 [00:27<00:56,  4.59it/s]
+BranchyNet training epoch 1/5:  34%|███▍      | 133/391 [00:27<00:54,  4.74it/s]
+BranchyNet training epoch 1/5:  34%|███▍      | 134/391 [00:27<00:54,  4.73it/s]
+BranchyNet training epoch 1/5:  35%|███▍      | 135/391 [00:27<00:54,  4.71it/s]
+BranchyNet training epoch 1/5:  35%|███▍      | 136/391 [00:28<00:54,  4.70it/s]
+BranchyNet training epoch 1/5:  35%|███▌      | 137/391 [00:28<00:53,  4.72it/s]
+BranchyNet training epoch 1/5:  35%|███▌      | 138/391 [00:28<00:52,  4.80it/s]
+BranchyNet training epoch 1/5:  36%|███▌      | 139/391 [00:28<00:52,  4.83it/s]
+BranchyNet training epoch 1/5:  36%|███▌      | 140/391 [00:28<00:56,  4.42it/s]
+BranchyNet training epoch 1/5:  36%|███▌      | 141/391 [00:29<00:54,  4.55it/s]
+BranchyNet training epoch 1/5:  36%|███▋      | 142/391 [00:29<00:53,  4.64it/s]
+BranchyNet training epoch 1/5:  37%|███▋      | 143/391 [00:29<00:53,  4.66it/s]
+BranchyNet training epoch 1/5:  37%|███▋      | 144/391 [00:29<00:53,  4.59it/s]
+BranchyNet training epoch 1/5:  37%|███▋      | 145/391 [00:30<00:55,  4.42it/s]
+BranchyNet training epoch 1/5:  37%|███▋      | 146/391 [00:30<00:55,  4.43it/s]
+BranchyNet training epoch 1/5:  38%|███▊      | 147/391 [00:30<00:55,  4.41it/s]
+BranchyNet training epoch 1/5:  38%|███▊      | 148/391 [00:30<00:52,  4.60it/s]
+BranchyNet training epoch 1/5:  38%|███▊      | 149/391 [00:30<00:51,  4.68it/s]
+BranchyNet training epoch 1/5:  38%|███▊      | 150/391 [00:31<00:51,  4.71it/s]
+BranchyNet training epoch 1/5:  39%|███▊      | 151/391 [00:31<00:48,  4.93it/s]
+BranchyNet training epoch 1/5:  39%|███▉      | 152/391 [00:31<00:49,  4.84it/s]
+BranchyNet training epoch 1/5:  39%|███▉      | 153/391 [00:31<00:48,  4.89it/s]
+BranchyNet training epoch 1/5:  39%|███▉      | 154/391 [00:31<00:49,  4.76it/s]
+BranchyNet training epoch 1/5:  40%|███▉      | 155/391 [00:32<00:48,  4.88it/s]
+BranchyNet training epoch 1/5:  40%|███▉      | 156/391 [00:32<00:51,  4.53it/s]
+BranchyNet training epoch 1/5:  40%|████      | 157/391 [00:32<00:52,  4.42it/s]
+BranchyNet training epoch 1/5:  40%|████      | 158/391 [00:32<00:52,  4.45it/s]
+BranchyNet training epoch 1/5:  41%|████      | 159/391 [00:33<00:52,  4.40it/s]
+BranchyNet training epoch 1/5:  41%|████      | 160/391 [00:33<00:53,  4.34it/s]
+BranchyNet training epoch 1/5:  41%|████      | 161/391 [00:33<00:54,  4.24it/s]
+BranchyNet training epoch 1/5:  41%|████▏     | 162/391 [00:33<00:55,  4.14it/s]
+BranchyNet training epoch 1/5:  42%|████▏     | 163/391 [00:34<00:54,  4.15it/s]
+BranchyNet training epoch 1/5:  42%|████▏     | 164/391 [00:34<00:56,  4.01it/s]
+BranchyNet training epoch 1/5:  42%|████▏     | 165/391 [00:34<00:56,  3.97it/s]
+BranchyNet training epoch 1/5:  42%|████▏     | 166/391 [00:34<00:57,  3.89it/s]
+BranchyNet training epoch 1/5:  43%|████▎     | 167/391 [00:35<00:57,  3.90it/s]
+BranchyNet training epoch 1/5:  43%|████▎     | 168/391 [00:35<00:57,  3.90it/s]
+BranchyNet training epoch 1/5:  43%|█
