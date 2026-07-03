@@ -105,24 +105,25 @@ class BranchyMobileNetV2(nn.Module):
         return outputs
 
 
-def make_datasets(val_size, seed, max_train_samples=None, max_test_samples=None):
+def make_datasets(threshold_val_size, seed, max_train_samples=None, max_test_samples=None):
     train_base = torchvision.datasets.CIFAR100(root=str(DATA_DIR), train=True, download=True, transform=None)
     test_base = torchvision.datasets.CIFAR100(root=str(DATA_DIR), train=False, download=True, transform=None)
     if max_train_samples is not None:
         train_base = Subset(train_base, range(min(max_train_samples, len(train_base))))
     if max_test_samples is not None:
         test_base = Subset(test_base, range(min(max_test_samples, len(test_base))))
-    if val_size > 0:
-        train_size = len(train_base) - min(val_size, len(train_base) // 2)
-        train_set, val_set = random_split(
-            train_base,
-            [train_size, len(train_base) - train_size],
+    if threshold_val_size > 0:
+        val_size = min(threshold_val_size, len(test_base) // 2)
+        eval_size = len(test_base) - val_size
+        threshold_set, eval_set = random_split(
+            test_base,
+            [val_size, eval_size],
             generator=torch.Generator().manual_seed(seed),
         )
     else:
-        train_set = train_base
-        val_set = test_base
-    return train_set, val_set, test_base
+        threshold_set = test_base
+        eval_set = test_base
+    return train_base, threshold_set, eval_set
 
 
 def make_loader(dataset, batch_size, shuffle):
@@ -314,7 +315,7 @@ def main():
     parser.add_argument("--exit-indices", default="5,12")
     parser.add_argument("--epochs", type=int, default=5)
     parser.add_argument("--batch-size", type=int, default=128)
-    parser.add_argument("--val-size", type=int, default=5000)
+    parser.add_argument("--threshold-val-size", type=int, default=5000)
     parser.add_argument("--max-train-samples", type=int, default=None)
     parser.add_argument("--max-test-samples", type=int, default=None)
     parser.add_argument("--learning-rate", type=float, default=1e-4)
@@ -331,7 +332,7 @@ def main():
     if args.require_cuda and device.type != "cuda":
         raise RuntimeError("CUDA is required. In Colab, select a GPU runtime before running.")
 
-    train_set, val_set, test_set = make_datasets(args.val_size, seed=123, max_train_samples=args.max_train_samples, max_test_samples=args.max_test_samples)
+    train_set, val_set, test_set = make_datasets(args.threshold_val_size, seed=123, max_train_samples=args.max_train_samples, max_test_samples=args.max_test_samples)
     train_loader = make_loader(train_set, args.batch_size, shuffle=True)
     val_loader = make_loader(val_set, args.batch_size, shuffle=False)
     test_loader = make_loader(test_set, args.batch_size, shuffle=False)
@@ -371,8 +372,9 @@ def main():
         "exit_costs": [float(x) for x in costs],
         "loss_weights": loss_weights,
         "train_samples": len(train_set),
-        "val_samples": len(val_set),
+        "threshold_val_samples": len(val_set),
         "test_samples": len(test_set),
+        "threshold_protocol": "Thresholds are tuned on a held-out split of CIFAR-100 test, not on CIFAR-100 train, because the pretrained baseline may already have seen the train set.",
         "train_history": history,
         "validation_tuning": tuning,
         "test_final_only": {

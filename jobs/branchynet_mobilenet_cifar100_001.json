@@ -1,6 +1,7 @@
 {
   "id": "branchynet_mobilenet_cifar100_001",
   "status": "done",
+  "analysis_warning": "Threshold validation used a CIFAR-100 train split even though the pretrained baseline was trained on CIFAR-100 train. Use branchynet_mobilenet_cifar100_002 for interpretable threshold results.",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
