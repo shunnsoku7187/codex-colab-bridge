@@ -1,1 +1,2 @@
 {"time": "2026-07-09T12:56:25.672609+00:00", "event": "job_running", "job_file": "jobs/early_exit_theme_feasibility_001.json"}
+{"time": "2026-07-09T12:56:27.213507+00:00", "event": "process_prepared", "command": "python -m scripts.early_exit_theme_feasibility --output results/early_exit_theme_feasibility_001_summary.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 300}
