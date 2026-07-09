@@ -1,6 +1,6 @@
 {
   "id": "resnet_good_loss_compute_tradeoff_001",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": false,
   "type": "shell",
@@ -8,5 +8,7 @@
   "command": "python -m scripts.resnet_good_loss_compute_tradeoff --output results/resnet_good_loss_compute_tradeoff_001_summary.json",
   "max_runtime_sec": 300,
   "result_file": "results/resnet_good_loss_compute_tradeoff_001.json",
-  "note": "Evaluate dual-threshold ResNet early exit as an explicit tradeoff between good-product loss and compute cost, treating reject as real loss rather than free reinspection."
+  "note": "Evaluate dual-threshold ResNet early exit as an explicit tradeoff between good-product loss and compute cost, treating reject as real loss rather than free reinspection.",
+  "updated_at": "2026-07-09T15:38:55.453619+00:00",
+  "started_at": "2026-07-09T15:38:55.453599+00:00"
 }
