@@ -1,0 +1,1357 @@
+{
+  "purpose": "Decide whether the deadline route has value beyond a small model that already fits the deadline.",
+  "decision_rule": {
+    "keep_deadline_route": "Keep only if BranchyNet deadline exits beat same-cost small models under the same confidence-reject false-accept constraint.",
+    "cut_deadline_route": "Cut if standalone small models are comparable or better, because reject/reinspection can also be attached to small models."
+  },
+  "cost_caveat": "Costs are rough normalized compute estimates. ResNet20/32/44 costs use CIFAR ResNet depth ratios versus ResNet56; cross-architecture comparisons are indicative, not final FPGA measurements.",
+  "candidates": [
+    {
+      "name": "branchy_resnet56_exit_after_layer1.0",
+      "kind": "branchy_deadline_exit",
+      "estimated_cost": 0.054545,
+      "forced_accuracy": 0.6452,
+      "forced_false_accept_rate": 0.3548,
+      "reject_curve": [
+        {
+          "threshold": 0.153241,
+          "accept_rate": 1.0,
+          "reject_rate": 0.0,
+          "accepted_accuracy": 0.6452,
+          "false_accept_rate": 0.3548
+        },
+        {
+          "threshold": 0.299902,
+          "accept_rate": 0.95,
+          "reject_rate": 0.05,
+          "accepted_accuracy": 0.665263,
+          "false_accept_rate": 0.334737
+        },
+        {
+          "threshold": 0.341351,
+          "accept_rate": 0.9,
+          "reject_rate": 0.1,
+          "accepted_accuracy": 0.686,
+          "false_accept_rate": 0.314
+        },
+        {
+          "threshold": 0.379016,
+          "accept_rate": 0.85,
+          "reject_rate": 0.15,
+          "accepted_accuracy": 0.705176,
+          "false_accept_rate": 0.294824
+        },
+        {
+          "threshold": 0.411412,
+          "accept_rate": 0.8,
+          "reject_rate": 0.2,
+          "accepted_accuracy": 0.727,
+          "false_accept_rate": 0.273
+        },
+        {
+          "threshold": 0.443117,
+          "accept_rate": 0.75,
+          "reject_rate": 0.25,
+          "accepted_accuracy": 0.741867,
+          "false_accept_rate": 0.258133
+        },
+        {
+          "threshold": 0.473528,
+          "accept_rate": 0.7,
+          "reject_rate": 0.3,
+          "accepted_accuracy": 0.760571,
+          "false_accept_rate": 0.239429
+        },
+        {
+          "threshold": 0.497987,
+          "accept_rate": 0.65,
+          "reject_rate": 0.35,
+          "accepted_accuracy": 0.782462,
+          "false_accept_rate": 0.217538
+        },
+        {
+          "threshold": 0.529915,
+          "accept_rate": 0.6,
+          "reject_rate": 0.4,
+          "accepted_accuracy": 0.803667,
+          "false_accept_rate": 0.196333
+        },
+        {
+          "threshold": 0.565143,
+          "accept_rate": 0.55,
+          "reject_rate": 0.45,
+          "accepted_accuracy": 0.825091,
+          "false_accept_rate": 0.174909
+        },
+        {
+          "threshold": 0.59792,
+          "accept_rate": 0.5,
+          "reject_rate": 0.5,
+          "accepted_accuracy": 0.8444,
+          "false_accept_rate": 0.1556
+        },
+        {
+          "threshold": 0.632218,
+          "accept_rate": 0.45,
+          "reject_rate": 0.55,
+          "accepted_accuracy": 0.861333,
+          "false_accept_rate": 0.138667
+        },
+        {
+          "threshold": 0.670714,
+          "accept_rate": 0.4,
+          "reject_rate": 0.6,
+          "accepted_accuracy": 0.879,
+          "false_accept_rate": 0.121
+        },
+        {
+          "threshold": 0.710372,
+          "accept_rate": 0.35,
+          "reject_rate": 0.65,
+          "accepted_accuracy": 0.897143,
+          "false_accept_rate": 0.102857
+        },
+        {
+          "threshold": 0.749401,
+          "accept_rate": 0.3,
+          "reject_rate": 0.7,
+          "accepted_accuracy": 0.916667,
+          "false_accept_rate": 0.083333
+        },
+        {
+          "threshold": 0.78997,
+          "accept_rate": 0.25,
+          "reject_rate": 0.75,
+          "accepted_accuracy": 0.9328,
+          "false_accept_rate": 0.0672
+        },
+        {
+          "threshold": 0.832938,
+          "accept_rate": 0.2,
+          "reject_rate": 0.8,
+          "accepted_accuracy": 0.947,
+          "false_accept_rate": 0.053
+        },
+        {
+          "threshold": 0.871821,
+          "accept_rate": 0.15,
+          "reject_rate": 0.85,
+          "accepted_accuracy": 0.961333,
+          "false_accept_rate": 0.038667
+        },
+        {
+          "threshold": 0.911682,
+          "accept_rate": 0.1,
+          "reject_rate": 0.9,
+          "accepted_accuracy": 0.972,
+          "false_accept_rate": 0.028
+        },
+        {
+          "threshold": 0.955025,
+          "accept_rate": 0.05,
+          "reject_rate": 0.95,
+          "accepted_accuracy": 0.98,
+          "false_accept_rate": 0.02
+        },
+        {
+          "threshold": 0.999669,
+          "accept_rate": 0.0002,
+          "reject_rate": 0.9998,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        }
+      ],
+      "best_under_false_accept": {
+        "false_accept_le_0.01": {
+          "threshold": 0.999669,
+          "accept_rate": 0.0002,
+          "reject_rate": 0.9998,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        },
+        "false_accept_le_0.02": {
+          "threshold": 0.955025,
+          "accept_rate": 0.05,
+          "reject_rate": 0.95,
+          "accepted_accuracy": 0.98,
+          "false_accept_rate": 0.02
+        },
+        "false_accept_le_0.05": {
+          "threshold": 0.871821,
+          "accept_rate": 0.15,
+          "reject_rate": 0.85,
+          "accepted_accuracy": 0.961333,
+          "false_accept_rate": 0.038667
+        },
+        "false_accept_le_0.10": {
+          "threshold": 0.749401,
+          "accept_rate": 0.3,
+          "reject_rate": 0.7,
+          "accepted_accuracy": 0.916667,
+          "false_accept_rate": 0.083333
+        }
+      }
+    },
+    {
+      "name": "branchy_resnet56_exit_after_layer2.0",
+      "kind": "branchy_deadline_exit",
+      "estimated_cost": 0.381818,
+      "forced_accuracy": 0.7758,
+      "forced_false_accept_rate": 0.2242,
+      "reject_curve": [
+        {
+          "threshold": 0.185311,
+          "accept_rate": 1.0,
+          "reject_rate": 0.0,
+          "accepted_accuracy": 0.7758,
+          "false_accept_rate": 0.2242
+        },
+        {
+          "threshold": 0.391709,
+          "accept_rate": 0.95,
+          "reject_rate": 0.05,
+          "accepted_accuracy": 0.799368,
+          "false_accept_rate": 0.200632
+        },
+        {
+          "threshold": 0.470324,
+          "accept_rate": 0.9,
+          "reject_rate": 0.1,
+          "accepted_accuracy": 0.821556,
+          "false_accept_rate": 0.178444
+        },
+        {
+          "threshold": 0.522672,
+          "accept_rate": 0.85,
+          "reject_rate": 0.15,
+          "accepted_accuracy": 0.842353,
+          "false_accept_rate": 0.157647
+        },
+        {
+          "threshold": 0.57495,
+          "accept_rate": 0.8,
+          "reject_rate": 0.2,
+          "accepted_accuracy": 0.8605,
+          "false_accept_rate": 0.1395
+        },
+        {
+          "threshold": 0.627042,
+          "accept_rate": 0.75,
+          "reject_rate": 0.25,
+          "accepted_accuracy": 0.880267,
+          "false_accept_rate": 0.119733
+        },
+        {
+          "threshold": 0.680308,
+          "accept_rate": 0.7,
+          "reject_rate": 0.3,
+          "accepted_accuracy": 0.895143,
+          "false_accept_rate": 0.104857
+        },
+        {
+          "threshold": 0.735583,
+          "accept_rate": 0.65,
+          "reject_rate": 0.35,
+          "accepted_accuracy": 0.913846,
+          "false_accept_rate": 0.086154
+        },
+        {
+          "threshold": 0.785739,
+          "accept_rate": 0.6,
+          "reject_rate": 0.4,
+          "accepted_accuracy": 0.93,
+          "false_accept_rate": 0.07
+        },
+        {
+          "threshold": 0.833565,
+          "accept_rate": 0.55,
+          "reject_rate": 0.45,
+          "accepted_accuracy": 0.943273,
+          "false_accept_rate": 0.056727
+        },
+        {
+          "threshold": 0.874421,
+          "accept_rate": 0.5,
+          "reject_rate": 0.5,
+          "accepted_accuracy": 0.9532,
+          "false_accept_rate": 0.0468
+        },
+        {
+          "threshold": 0.909278,
+          "accept_rate": 0.45,
+          "reject_rate": 0.55,
+          "accepted_accuracy": 0.963556,
+          "false_accept_rate": 0.036444
+        },
+        {
+          "threshold": 0.936158,
+          "accept_rate": 0.4,
+          "reject_rate": 0.6,
+          "accepted_accuracy": 0.9715,
+          "false_accept_rate": 0.0285
+        },
+        {
+          "threshold": 0.955385,
+          "accept_rate": 0.35,
+          "reject_rate": 0.65,
+          "accepted_accuracy": 0.978286,
+          "false_accept_rate": 0.021714
+        },
+        {
+          "threshold": 0.973002,
+          "accept_rate": 0.3,
+          "reject_rate": 0.7,
+          "accepted_accuracy": 0.984667,
+          "false_accept_rate": 0.015333
+        },
+        {
+          "threshold": 0.984355,
+          "accept_rate": 0.25,
+          "reject_rate": 0.75,
+          "accepted_accuracy": 0.9896,
+          "false_accept_rate": 0.0104
+        },
+        {
+          "threshold": 0.990799,
+          "accept_rate": 0.2,
+          "reject_rate": 0.8,
+          "accepted_accuracy": 0.992,
+          "false_accept_rate": 0.008
+        },
+        {
+          "threshold": 0.995257,
+          "accept_rate": 0.15,
+          "reject_rate": 0.85,
+          "accepted_accuracy": 0.990667,
+          "false_accept_rate": 0.009333
+        },
+        {
+          "threshold": 0.998196,
+          "accept_rate": 0.1,
+          "reject_rate": 0.9,
+          "accepted_accuracy": 0.998,
+          "false_accept_rate": 0.002
+        },
+        {
+          "threshold": 0.999641,
+          "accept_rate": 0.05,
+          "reject_rate": 0.95,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        },
+        {
+          "threshold": 1.0,
+          "accept_rate": 0.0002,
+          "reject_rate": 0.9998,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        }
+      ],
+      "best_under_false_accept": {
+        "false_accept_le_0.01": {
+          "threshold": 0.990799,
+          "accept_rate": 0.2,
+          "reject_rate": 0.8,
+          "accepted_accuracy": 0.992,
+          "false_accept_rate": 0.008
+        },
+        "false_accept_le_0.02": {
+          "threshold": 0.973002,
+          "accept_rate": 0.3,
+          "reject_rate": 0.7,
+          "accepted_accuracy": 0.984667,
+          "false_accept_rate": 0.015333
+        },
+        "false_accept_le_0.05": {
+          "threshold": 0.874421,
+          "accept_rate": 0.5,
+          "reject_rate": 0.5,
+          "accepted_accuracy": 0.9532,
+          "false_accept_rate": 0.0468
+        },
+        "false_accept_le_0.10": {
+          "threshold": 0.735583,
+          "accept_rate": 0.65,
+          "reject_rate": 0.35,
+          "accepted_accuracy": 0.913846,
+          "false_accept_rate": 0.086154
+        }
+      }
+    },
+    {
+      "name": "branchy_mobilenet_exit_after_features.5",
+      "kind": "branchy_deadline_exit",
+      "estimated_cost": 0.315789,
+      "forced_accuracy": 0.6676,
+      "forced_false_accept_rate": 0.3324,
+      "reject_curve": [
+        {
+          "threshold": 0.193366,
+          "accept_rate": 1.0,
+          "reject_rate": 0.0,
+          "accepted_accuracy": 0.6676,
+          "false_accept_rate": 0.3324
+        },
+        {
+          "threshold": 0.327814,
+          "accept_rate": 0.95,
+          "reject_rate": 0.05,
+          "accepted_accuracy": 0.687579,
+          "false_accept_rate": 0.312421
+        },
+        {
+          "threshold": 0.374683,
+          "accept_rate": 0.9,
+          "reject_rate": 0.1,
+          "accepted_accuracy": 0.706444,
+          "false_accept_rate": 0.293556
+        },
+        {
+          "threshold": 0.418649,
+          "accept_rate": 0.85,
+          "reject_rate": 0.15,
+          "accepted_accuracy": 0.724706,
+          "false_accept_rate": 0.275294
+        },
+        {
+          "threshold": 0.456894,
+          "accept_rate": 0.8,
+          "reject_rate": 0.2,
+          "accepted_accuracy": 0.744,
+          "false_accept_rate": 0.256
+        },
+        {
+          "threshold": 0.488029,
+          "accept_rate": 0.75,
+          "reject_rate": 0.25,
+          "accepted_accuracy": 0.7624,
+          "false_accept_rate": 0.2376
+        },
+        {
+          "threshold": 0.513992,
+          "accept_rate": 0.7,
+          "reject_rate": 0.3,
+          "accepted_accuracy": 0.780857,
+          "false_accept_rate": 0.219143
+        },
+        {
+          "threshold": 0.547491,
+          "accept_rate": 0.65,
+          "reject_rate": 0.35,
+          "accepted_accuracy": 0.802769,
+          "false_accept_rate": 0.197231
+        },
+        {
+          "threshold": 0.577534,
+          "accept_rate": 0.6,
+          "reject_rate": 0.4,
+          "accepted_accuracy": 0.822667,
+          "false_accept_rate": 0.177333
+        },
+        {
+          "threshold": 0.613612,
+          "accept_rate": 0.55,
+          "reject_rate": 0.45,
+          "accepted_accuracy": 0.845455,
+          "false_accept_rate": 0.154545
+        },
+        {
+          "threshold": 0.649917,
+          "accept_rate": 0.5,
+          "reject_rate": 0.5,
+          "accepted_accuracy": 0.8588,
+          "false_accept_rate": 0.1412
+        },
+        {
+          "threshold": 0.689578,
+          "accept_rate": 0.45,
+          "reject_rate": 0.55,
+          "accepted_accuracy": 0.872889,
+          "false_accept_rate": 0.127111
+        },
+        {
+          "threshold": 0.728679,
+          "accept_rate": 0.4,
+          "reject_rate": 0.6,
+          "accepted_accuracy": 0.888,
+          "false_accept_rate": 0.112
+        },
+        {
+          "threshold": 0.767649,
+          "accept_rate": 0.35,
+          "reject_rate": 0.65,
+          "accepted_accuracy": 0.902286,
+          "false_accept_rate": 0.097714
+        },
+        {
+          "threshold": 0.802489,
+          "accept_rate": 0.3,
+          "reject_rate": 0.7,
+          "accepted_accuracy": 0.915333,
+          "false_accept_rate": 0.084667
+        },
+        {
+          "threshold": 0.843605,
+          "accept_rate": 0.25,
+          "reject_rate": 0.75,
+          "accepted_accuracy": 0.9296,
+          "false_accept_rate": 0.0704
+        },
+        {
+          "threshold": 0.877952,
+          "accept_rate": 0.2,
+          "reject_rate": 0.8,
+          "accepted_accuracy": 0.947,
+          "false_accept_rate": 0.053
+        },
+        {
+          "threshold": 0.910798,
+          "accept_rate": 0.15,
+          "reject_rate": 0.85,
+          "accepted_accuracy": 0.965333,
+          "false_accept_rate": 0.034667
+        },
+        {
+          "threshold": 0.943976,
+          "accept_rate": 0.1,
+          "reject_rate": 0.9,
+          "accepted_accuracy": 0.966,
+          "false_accept_rate": 0.034
+        },
+        {
+          "threshold": 0.974109,
+          "accept_rate": 0.05,
+          "reject_rate": 0.95,
+          "accepted_accuracy": 0.972,
+          "false_accept_rate": 0.028
+        },
+        {
+          "threshold": 0.999914,
+          "accept_rate": 0.0002,
+          "reject_rate": 0.9998,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        }
+      ],
+      "best_under_false_accept": {
+        "false_accept_le_0.01": {
+          "threshold": 0.999914,
+          "accept_rate": 0.0002,
+          "reject_rate": 0.9998,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        },
+        "false_accept_le_0.02": {
+          "threshold": 0.999914,
+          "accept_rate": 0.0002,
+          "reject_rate": 0.9998,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        },
+        "false_accept_le_0.05": {
+          "threshold": 0.910798,
+          "accept_rate": 0.15,
+          "reject_rate": 0.85,
+          "accepted_accuracy": 0.965333,
+          "false_accept_rate": 0.034667
+        },
+        "false_accept_le_0.10": {
+          "threshold": 0.767649,
+          "accept_rate": 0.35,
+          "reject_rate": 0.65,
+          "accepted_accuracy": 0.902286,
+          "false_accept_rate": 0.097714
+        }
+      }
+    },
+    {
+      "name": "branchy_mobilenet_exit_after_features.12",
+      "kind": "branchy_deadline_exit",
+      "estimated_cost": 0.684211,
+      "forced_accuracy": 0.887,
+      "forced_false_accept_rate": 0.113,
+      "reject_curve": [
+        {
+          "threshold": 0.229255,
+          "accept_rate": 1.0,
+          "reject_rate": 0.0,
+          "accepted_accuracy": 0.887,
+          "false_accept_rate": 0.113
+        },
+        {
+          "threshold": 0.511651,
+          "accept_rate": 0.95,
+          "reject_rate": 0.05,
+          "accepted_accuracy": 0.908211,
+          "false_accept_rate": 0.091789
+        },
+        {
+          "threshold": 0.62271,
+          "accept_rate": 0.9,
+          "reject_rate": 0.1,
+          "accepted_accuracy": 0.926667,
+          "false_accept_rate": 0.073333
+        },
+        {
+          "threshold": 0.721536,
+          "accept_rate": 0.85,
+          "reject_rate": 0.15,
+          "accepted_accuracy": 0.943294,
+          "false_accept_rate": 0.056706
+        },
+        {
+          "threshold": 0.818708,
+          "accept_rate": 0.8,
+          "reject_rate": 0.2,
+          "accepted_accuracy": 0.95825,
+          "false_accept_rate": 0.04175
+        },
+        {
+          "threshold": 0.882884,
+          "accept_rate": 0.75,
+          "reject_rate": 0.25,
+          "accepted_accuracy": 0.971467,
+          "false_accept_rate": 0.028533
+        },
+        {
+          "threshold": 0.92887,
+          "accept_rate": 0.7,
+          "reject_rate": 0.3,
+          "accepted_accuracy": 0.980571,
+          "false_accept_rate": 0.019429
+        },
+        {
+          "threshold": 0.955125,
+          "accept_rate": 0.65,
+          "reject_rate": 0.35,
+          "accepted_accuracy": 0.985538,
+          "false_accept_rate": 0.014462
+        },
+        {
+          "threshold": 0.972962,
+          "accept_rate": 0.6,
+          "reject_rate": 0.4,
+          "accepted_accuracy": 0.987,
+          "false_accept_rate": 0.013
+        },
+        {
+          "threshold": 0.984195,
+          "accept_rate": 0.55,
+          "reject_rate": 0.45,
+          "accepted_accuracy": 0.990545,
+          "false_accept_rate": 0.009455
+        },
+        {
+          "threshold": 0.990589,
+          "accept_rate": 0.5,
+          "reject_rate": 0.5,
+          "accepted_accuracy": 0.992,
+          "false_accept_rate": 0.008
+        },
+        {
+          "threshold": 0.994573,
+          "accept_rate": 0.45,
+          "reject_rate": 0.55,
+          "accepted_accuracy": 0.993333,
+          "false_accept_rate": 0.006667
+        },
+        {
+          "threshold": 0.99701,
+          "accept_rate": 0.4,
+          "reject_rate": 0.6,
+          "accepted_accuracy": 0.9945,
+          "false_accept_rate": 0.0055
+        },
+        {
+          "threshold": 0.998313,
+          "accept_rate": 0.35,
+          "reject_rate": 0.65,
+          "accepted_accuracy": 0.997714,
+          "false_accept_rate": 0.002286
+        },
+        {
+          "threshold": 0.999116,
+          "accept_rate": 0.3,
+          "reject_rate": 0.7,
+          "accepted_accuracy": 0.997333,
+          "false_accept_rate": 0.002667
+        },
+        {
+          "threshold": 0.9996,
+          "accept_rate": 0.25,
+          "reject_rate": 0.75,
+          "accepted_accuracy": 0.9976,
+          "false_accept_rate": 0.0024
+        },
+        {
+          "threshold": 0.999814,
+          "accept_rate": 0.2002,
+          "reject_rate": 0.7998,
+          "accepted_accuracy": 0.998002,
+          "false_accept_rate": 0.001998
+        },
+        {
+          "threshold": 0.999926,
+          "accept_rate": 0.15,
+          "reject_rate": 0.85,
+          "accepted_accuracy": 0.997333,
+          "false_accept_rate": 0.002667
+        },
+        {
+          "threshold": 0.999975,
+          "accept_rate": 0.1002,
+          "reject_rate": 0.8998,
+          "accepted_accuracy": 0.998004,
+          "false_accept_rate": 0.001996
+        },
+        {
+          "threshold": 0.999996,
+          "accept_rate": 0.0504,
+          "reject_rate": 0.9496,
+          "accepted_accuracy": 0.996032,
+          "false_accept_rate": 0.003968
+        },
+        {
+          "threshold": 1.0,
+          "accept_rate": 0.0052,
+          "reject_rate": 0.9948,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        }
+      ],
+      "best_under_false_accept": {
+        "false_accept_le_0.01": {
+          "threshold": 0.984195,
+          "accept_rate": 0.55,
+          "reject_rate": 0.45,
+          "accepted_accuracy": 0.990545,
+          "false_accept_rate": 0.009455
+        },
+        "false_accept_le_0.02": {
+          "threshold": 0.92887,
+          "accept_rate": 0.7,
+          "reject_rate": 0.3,
+          "accepted_accuracy": 0.980571,
+          "false_accept_rate": 0.019429
+        },
+        "false_accept_le_0.05": {
+          "threshold": 0.818708,
+          "accept_rate": 0.8,
+          "reject_rate": 0.2,
+          "accepted_accuracy": 0.95825,
+          "false_accept_rate": 0.04175
+        },
+        "false_accept_le_0.10": {
+          "threshold": 0.511651,
+          "accept_rate": 0.95,
+          "reject_rate": 0.05,
+          "accepted_accuracy": 0.908211,
+          "false_accept_rate": 0.091789
+        }
+      }
+    },
+    {
+      "name": "standalone_resnet20",
+      "kind": "standalone_small_model",
+      "estimated_cost": 0.345455,
+      "forced_accuracy": 0.9232,
+      "forced_false_accept_rate": 0.0768,
+      "reject_curve": [
+        {
+          "threshold": 0.257748,
+          "accept_rate": 1.0,
+          "reject_rate": 0.0,
+          "accepted_accuracy": 0.9232,
+          "false_accept_rate": 0.0768
+        },
+        {
+          "threshold": 0.693712,
+          "accept_rate": 0.95,
+          "reject_rate": 0.05,
+          "accepted_accuracy": 0.945895,
+          "false_accept_rate": 0.054105
+        },
+        {
+          "threshold": 0.86842,
+          "accept_rate": 0.9,
+          "reject_rate": 0.1,
+          "accepted_accuracy": 0.963556,
+          "false_accept_rate": 0.036444
+        },
+        {
+          "threshold": 0.954847,
+          "accept_rate": 0.85,
+          "reject_rate": 0.15,
+          "accepted_accuracy": 0.975529,
+          "false_accept_rate": 0.024471
+        },
+        {
+          "threshold": 0.985548,
+          "accept_rate": 0.8,
+          "reject_rate": 0.2,
+          "accepted_accuracy": 0.9865,
+          "false_accept_rate": 0.0135
+        },
+        {
+          "threshold": 0.994885,
+          "accept_rate": 0.75,
+          "reject_rate": 0.25,
+          "accepted_accuracy": 0.990133,
+          "false_accept_rate": 0.009867
+        },
+        {
+          "threshold": 0.997957,
+          "accept_rate": 0.7,
+          "reject_rate": 0.3,
+          "accepted_accuracy": 0.992,
+          "false_accept_rate": 0.008
+        },
+        {
+          "threshold": 0.999062,
+          "accept_rate": 0.65,
+          "reject_rate": 0.35,
+          "accepted_accuracy": 0.994462,
+          "false_accept_rate": 0.005538
+        },
+        {
+          "threshold": 0.99959,
+          "accept_rate": 0.6,
+          "reject_rate": 0.4,
+          "accepted_accuracy": 0.996667,
+          "false_accept_rate": 0.003333
+        },
+        {
+          "threshold": 0.999808,
+          "accept_rate": 0.55,
+          "reject_rate": 0.45,
+          "accepted_accuracy": 0.997091,
+          "false_accept_rate": 0.002909
+        },
+        {
+          "threshold": 0.99991,
+          "accept_rate": 0.5002,
+          "reject_rate": 0.4998,
+          "accepted_accuracy": 0.998001,
+          "false_accept_rate": 0.001999
+        },
+        {
+          "threshold": 0.99995,
+          "accept_rate": 0.4502,
+          "reject_rate": 0.5498,
+          "accepted_accuracy": 0.999112,
+          "false_accept_rate": 0.000888
+        },
+        {
+          "threshold": 0.999974,
+          "accept_rate": 0.4,
+          "reject_rate": 0.6,
+          "accepted_accuracy": 0.999,
+          "false_accept_rate": 0.001
+        },
+        {
+          "threshold": 0.999986,
+          "accept_rate": 0.3502,
+          "reject_rate": 0.6498,
+          "accepted_accuracy": 0.998858,
+          "false_accept_rate": 0.001142
+        },
+        {
+          "threshold": 0.999993,
+          "accept_rate": 0.3002,
+          "reject_rate": 0.6998,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        },
+        {
+          "threshold": 0.999996,
+          "accept_rate": 0.2522,
+          "reject_rate": 0.7478,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        },
+        {
+          "threshold": 0.999998,
+          "accept_rate": 0.2024,
+          "reject_rate": 0.7976,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        },
+        {
+          "threshold": 0.999999,
+          "accept_rate": 0.157,
+          "reject_rate": 0.843,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        },
+        {
+          "threshold": 1.0,
+          "accept_rate": 0.1072,
+          "reject_rate": 0.8928,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        },
+        {
+          "threshold": 1.0,
+          "accept_rate": 0.0604,
+          "reject_rate": 0.9396,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        }
+      ],
+      "best_under_false_accept": {
+        "false_accept_le_0.01": {
+          "threshold": 0.994885,
+          "accept_rate": 0.75,
+          "reject_rate": 0.25,
+          "accepted_accuracy": 0.990133,
+          "false_accept_rate": 0.009867
+        },
+        "false_accept_le_0.02": {
+          "threshold": 0.985548,
+          "accept_rate": 0.8,
+          "reject_rate": 0.2,
+          "accepted_accuracy": 0.9865,
+          "false_accept_rate": 0.0135
+        },
+        "false_accept_le_0.05": {
+          "threshold": 0.86842,
+          "accept_rate": 0.9,
+          "reject_rate": 0.1,
+          "accepted_accuracy": 0.963556,
+          "false_accept_rate": 0.036444
+        },
+        "false_accept_le_0.10": {
+          "threshold": 0.257748,
+          "accept_rate": 1.0,
+          "reject_rate": 0.0,
+          "accepted_accuracy": 0.9232,
+          "false_accept_rate": 0.0768
+        }
+      }
+    },
+    {
+      "name": "standalone_resnet32",
+      "kind": "standalone_small_model",
+      "estimated_cost": 0.563636,
+      "forced_accuracy": 0.9344,
+      "forced_false_accept_rate": 0.0656,
+      "reject_curve": [
+        {
+          "threshold": 0.325864,
+          "accept_rate": 1.0,
+          "reject_rate": 0.0,
+          "accepted_accuracy": 0.9344,
+          "false_accept_rate": 0.0656
+        },
+        {
+          "threshold": 0.809566,
+          "accept_rate": 0.95,
+          "reject_rate": 0.05,
+          "accepted_accuracy": 0.955789,
+          "false_accept_rate": 0.044211
+        },
+        {
+          "threshold": 0.959047,
+          "accept_rate": 0.9,
+          "reject_rate": 0.1,
+          "accepted_accuracy": 0.967556,
+          "false_accept_rate": 0.032444
+        },
+        {
+          "threshold": 0.989733,
+          "accept_rate": 0.85,
+          "reject_rate": 0.15,
+          "accepted_accuracy": 0.979059,
+          "false_accept_rate": 0.020941
+        },
+        {
+          "threshold": 0.997347,
+          "accept_rate": 0.8,
+          "reject_rate": 0.2,
+          "accepted_accuracy": 0.987,
+          "false_accept_rate": 0.013
+        },
+        {
+          "threshold": 0.998964,
+          "accept_rate": 0.75,
+          "reject_rate": 0.25,
+          "accepted_accuracy": 0.990667,
+          "false_accept_rate": 0.009333
+        },
+        {
+          "threshold": 0.999525,
+          "accept_rate": 0.7,
+          "reject_rate": 0.3,
+          "accepted_accuracy": 0.993143,
+          "false_accept_rate": 0.006857
+        },
+        {
+          "threshold": 0.999753,
+          "accept_rate": 0.65,
+          "reject_rate": 0.35,
+          "accepted_accuracy": 0.994462,
+          "false_accept_rate": 0.005538
+        },
+        {
+          "threshold": 0.999851,
+          "accept_rate": 0.6,
+          "reject_rate": 0.4,
+          "accepted_accuracy": 0.995667,
+          "false_accept_rate": 0.004333
+        },
+        {
+          "threshold": 0.999905,
+          "accept_rate": 0.5506,
+          "reject_rate": 0.4494,
+          "accepted_accuracy": 0.995641,
+          "false_accept_rate": 0.004359
+        },
+        {
+          "threshold": 0.999934,
+          "accept_rate": 0.5002,
+          "reject_rate": 0.4998,
+          "accepted_accuracy": 0.995602,
+          "false_accept_rate": 0.004398
+        },
+        {
+          "threshold": 0.999954,
+          "accept_rate": 0.4506,
+          "reject_rate": 0.5494,
+          "accepted_accuracy": 0.996005,
+          "false_accept_rate": 0.003995
+        },
+        {
+          "threshold": 0.999967,
+          "accept_rate": 0.4002,
+          "reject_rate": 0.5998,
+          "accepted_accuracy": 0.996502,
+          "false_accept_rate": 0.003498
+        },
+        {
+          "threshold": 0.999977,
+          "accept_rate": 0.3504,
+          "reject_rate": 0.6496,
+          "accepted_accuracy": 0.996575,
+          "false_accept_rate": 0.003425
+        },
+        {
+          "threshold": 0.999984,
+          "accept_rate": 0.3008,
+          "reject_rate": 0.6992,
+          "accepted_accuracy": 0.99734,
+          "false_accept_rate": 0.00266
+        },
+        {
+          "threshold": 0.999988,
+          "accept_rate": 0.2502,
+          "reject_rate": 0.7498,
+          "accepted_accuracy": 0.997602,
+          "false_accept_rate": 0.002398
+        },
+        {
+          "threshold": 0.999992,
+          "accept_rate": 0.2008,
+          "reject_rate": 0.7992,
+          "accepted_accuracy": 0.997012,
+          "false_accept_rate": 0.002988
+        },
+        {
+          "threshold": 0.999995,
+          "accept_rate": 0.1502,
+          "reject_rate": 0.8498,
+          "accepted_accuracy": 0.997337,
+          "false_accept_rate": 0.002663
+        },
+        {
+          "threshold": 0.999997,
+          "accept_rate": 0.101,
+          "reject_rate": 0.899,
+          "accepted_accuracy": 0.99802,
+          "false_accept_rate": 0.00198
+        },
+        {
+          "threshold": 0.999998,
+          "accept_rate": 0.0512,
+          "reject_rate": 0.9488,
+          "accepted_accuracy": 0.996094,
+          "false_accept_rate": 0.003906
+        },
+        {
+          "threshold": 1.0,
+          "accept_rate": 0.0022,
+          "reject_rate": 0.9978,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        }
+      ],
+      "best_under_false_accept": {
+        "false_accept_le_0.01": {
+          "threshold": 0.998964,
+          "accept_rate": 0.75,
+          "reject_rate": 0.25,
+          "accepted_accuracy": 0.990667,
+          "false_accept_rate": 0.009333
+        },
+        "false_accept_le_0.02": {
+          "threshold": 0.997347,
+          "accept_rate": 0.8,
+          "reject_rate": 0.2,
+          "accepted_accuracy": 0.987,
+          "false_accept_rate": 0.013
+        },
+        "false_accept_le_0.05": {
+          "threshold": 0.809566,
+          "accept_rate": 0.95,
+          "reject_rate": 0.05,
+          "accepted_accuracy": 0.955789,
+          "false_accept_rate": 0.044211
+        },
+        "false_accept_le_0.10": {
+          "threshold": 0.325864,
+          "accept_rate": 1.0,
+          "reject_rate": 0.0,
+          "accepted_accuracy": 0.9344,
+          "false_accept_rate": 0.0656
+        }
+      }
+    },
+    {
+      "name": "standalone_resnet44",
+      "kind": "standalone_small_model",
+      "estimated_cost": 0.781818,
+      "forced_accuracy": 0.937,
+      "forced_false_accept_rate": 0.063,
+      "reject_curve": [
+        {
+          "threshold": 0.298631,
+          "accept_rate": 1.0,
+          "reject_rate": 0.0,
+          "accepted_accuracy": 0.937,
+          "false_accept_rate": 0.063
+        },
+        {
+          "threshold": 0.823883,
+          "accept_rate": 0.95,
+          "reject_rate": 0.05,
+          "accepted_accuracy": 0.959789,
+          "false_accept_rate": 0.040211
+        },
+        {
+          "threshold": 0.96837,
+          "accept_rate": 0.9,
+          "reject_rate": 0.1,
+          "accepted_accuracy": 0.977333,
+          "false_accept_rate": 0.022667
+        },
+        {
+          "threshold": 0.994074,
+          "accept_rate": 0.85,
+          "reject_rate": 0.15,
+          "accepted_accuracy": 0.985882,
+          "false_accept_rate": 0.014118
+        },
+        {
+          "threshold": 0.998546,
+          "accept_rate": 0.8,
+          "reject_rate": 0.2,
+          "accepted_accuracy": 0.99,
+          "false_accept_rate": 0.01
+        },
+        {
+          "threshold": 0.999388,
+          "accept_rate": 0.75,
+          "reject_rate": 0.25,
+          "accepted_accuracy": 0.992267,
+          "false_accept_rate": 0.007733
+        },
+        {
+          "threshold": 0.999669,
+          "accept_rate": 0.7,
+          "reject_rate": 0.3,
+          "accepted_accuracy": 0.992286,
+          "false_accept_rate": 0.007714
+        },
+        {
+          "threshold": 0.999783,
+          "accept_rate": 0.65,
+          "reject_rate": 0.35,
+          "accepted_accuracy": 0.994769,
+          "false_accept_rate": 0.005231
+        },
+        {
+          "threshold": 0.999848,
+          "accept_rate": 0.6002,
+          "reject_rate": 0.3998,
+          "accepted_accuracy": 0.995668,
+          "false_accept_rate": 0.004332
+        },
+        {
+          "threshold": 0.999887,
+          "accept_rate": 0.5502,
+          "reject_rate": 0.4498,
+          "accepted_accuracy": 0.995638,
+          "false_accept_rate": 0.004362
+        },
+        {
+          "threshold": 0.999915,
+          "accept_rate": 0.5,
+          "reject_rate": 0.5,
+          "accepted_accuracy": 0.996,
+          "false_accept_rate": 0.004
+        },
+        {
+          "threshold": 0.999934,
+          "accept_rate": 0.4504,
+          "reject_rate": 0.5496,
+          "accepted_accuracy": 0.99556,
+          "false_accept_rate": 0.00444
+        },
+        {
+          "threshold": 0.99995,
+          "accept_rate": 0.4,
+          "reject_rate": 0.6,
+          "accepted_accuracy": 0.9965,
+          "false_accept_rate": 0.0035
+        },
+        {
+          "threshold": 0.999961,
+          "accept_rate": 0.3504,
+          "reject_rate": 0.6496,
+          "accepted_accuracy": 0.996575,
+          "false_accept_rate": 0.003425
+        },
+        {
+          "threshold": 0.999969,
+          "accept_rate": 0.3004,
+          "reject_rate": 0.6996,
+          "accepted_accuracy": 0.996671,
+          "false_accept_rate": 0.003329
+        },
+        {
+          "threshold": 0.999976,
+          "accept_rate": 0.2508,
+          "reject_rate": 0.7492,
+          "accepted_accuracy": 0.996013,
+          "false_accept_rate": 0.003987
+        },
+        {
+          "threshold": 0.999982,
+          "accept_rate": 0.2002,
+          "reject_rate": 0.7998,
+          "accepted_accuracy": 0.995005,
+          "false_accept_rate": 0.004995
+        },
+        {
+          "threshold": 0.999987,
+          "accept_rate": 0.1506,
+          "reject_rate": 0.8494,
+          "accepted_accuracy": 0.996016,
+          "false_accept_rate": 0.003984
+        },
+        {
+          "threshold": 0.999992,
+          "accept_rate": 0.102,
+          "reject_rate": 0.898,
+          "accepted_accuracy": 0.996078,
+          "false_accept_rate": 0.003922
+        },
+        {
+          "threshold": 0.999996,
+          "accept_rate": 0.0504,
+          "reject_rate": 0.9496,
+          "accepted_accuracy": 0.996032,
+          "false_accept_rate": 0.003968
+        },
+        {
+          "threshold": 1.0,
+          "accept_rate": 0.0002,
+          "reject_rate": 0.9998,
+          "accepted_accuracy": 1.0,
+          "false_accept_rate": 0.0
+        }
+      ],
+      "best_under_false_accept": {
+        "false_accept_le_0.01": {
+          "threshold": 0.998546,
+          "accept_rate": 0.8,
+          "reject_rate": 0.2,
+          "accepted_accuracy": 0.99,
+          "false_accept_rate": 0.01
+        },
+        "false_accept_le_0.02": {
+          "threshold": 0.994074,
+          "accept_rate": 0.85,
+          "reject_rate": 0.15,
+          "accepted_accuracy": 0.985882,
+          "false_accept_rate": 0.014118
+        },
+        "false_accept_le_0.05": {
+          "threshold": 0.823883,
+          "accept_rate": 0.95,
+          "reject_rate": 0.05,
+          "accepted_accuracy": 0.959789,
+          "false_accept_rate": 0.040211
+        },
+        "false_accept_le_0.10": {
+          "threshold": 0.298631,
+          "accept_rate": 1.0,
+          "reject_rate": 0.0,
+          "accepted_accuracy": 0.937,
+          "false_accept_rate": 0.063
+        }
+      }
+    }
+  ],
+  "pairwise_deadline_comparison": [
+    {
+      "branchy": "branchy_resnet56_exit_after_layer1.0",
+      "small": "standalone_resnet20",
+      "branchy_cost": 0.054545,
+      "small_cost": 0.345455,
+      "forced_accuracy_delta_branchy_minus_small": -0.278,
+      "forced_false_accept_delta_branchy_minus_small": 0.278,
+      "reject_accept_rate_delta_at_false_accept_le_5pct": -0.75,
+      "verdict": "small_model_is_better_or_enough"
+    },
+    {
+      "branchy": "branchy_resnet56_exit_after_layer2.0",
+      "small": "standalone_resnet20",
+      "branchy_cost": 0.381818,
+      "small_cost": 0.345455,
+      "forced_accuracy_delta_branchy_minus_small": -0.1474,
+      "forced_false_accept_delta_branchy_minus_small": 0.1474,
+      "reject_accept_rate_delta_at_false_accept_le_5pct": -0.4,
+      "verdict": "small_model_is_better_or_enough"
+    },
+    {
+      "branchy": "branchy_mobilenet_exit_after_features.5",
+      "small": "standalone_resnet20",
+      "branchy_cost": 0.315789,
+      "small_cost": 0.345455,
+      "forced_accuracy_delta_branchy_minus_small": -0.2556,
+      "forced_false_accept_delta_branchy_minus_small": 0.2556,
+      "reject_accept_rate_delta_at_false_accept_le_5pct": -0.75,
+      "verdict": "small_model_is_better_or_enough"
+    },
+    {
+      "branchy": "branchy_mobilenet_exit_after_features.12",
+      "small": "standalone_resnet20",
+      "branchy_cost": 0.684211,
+      "small_cost": 0.345455,
+      "forced_accuracy_delta_branchy_minus_small": -0.0362,
+      "forced_false_accept_delta_branchy_minus_small": 0.0362,
+      "reject_accept_rate_delta_at_false_accept_le_5pct": -0.1,
+      "verdict": "small_model_is_better_or_enough"
+    },
+    {
+      "branchy": "branchy_mobilenet_exit_after_features.12",
+      "small": "standalone_resnet32",
+      "branchy_cost": 0.684211,
+      "small_cost": 0.563636,
+      "forced_accuracy_delta_branchy_minus_small": -0.0474,
+      "forced_false_accept_delta_branchy_minus_small": 0.0474,
+      "reject_accept_rate_delta_at_false_accept_le_5pct": -0.15,
+      "verdict": "small_model_is_better_or_enough"
+    }
+  ]
+}

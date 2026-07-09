@@ -1,0 +1,196 @@
+Requirement already satisfied: matplotlib-venn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 1)) (1.1.2)
+Collecting torchinfo (from -r requirements-colab.txt (line 2))
+  Using cached torchinfo-1.8.0-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: transformers in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 3)) (5.12.1)
+Requirement already satisfied: opencv-python-headless in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 4)) (4.13.0.92)
+Requirement already satisfied: scikit-learn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 5)) (1.6.1)
+Requirement already satisfied: lightgbm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 6)) (4.6.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 7)) (4.67.3)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 1)) (3.10.0)
+Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 1)) (2.0.2)
+Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 1)) (1.16.3)
+Requirement already satisfied: huggingface-hub<2.0,>=1.5.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (1.20.1)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (26.2)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (6.0.3)
+Requirement already satisfied: regex>=2025.10.22 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (2025.11.3)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (0.22.2)
+Requirement already satisfied: typer in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (0.25.1)
+Requirement already satisfied: safetensors>=0.4.3 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 3)) (0.8.0)
+Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 5)) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 5)) (3.6.0)
+Requirement already satisfied: click>=8.4.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (8.4.2)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (3.29.4)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (2025.3.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.5.1 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (1.5.1)
+Requirement already satisfied: httpx<1,>=0.23.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (0.28.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (4.15.0)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 3)) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 3)) (13.9.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 3)) (0.0.4)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (4.63.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (1.5.0)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (11.3.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (2.9.0.post0)
+Requirement already satisfied: anyio in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (4.14.0)
+Requirement already satisfied: certifi in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (2026.6.17)
+Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (1.0.9)
+Requirement already satisfied: idna in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (3.18)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/dist-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 3)) (0.16.0)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.7->matplotlib->matplotlib-venn->-r requirements-colab.txt (line 1)) (1.17.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 3)) (0.1.2)
+Using cached torchinfo-1.8.0-py3-none-any.whl (23 kB)
+Installing collected packages: torchinfo
+Successfully installed torchinfo-1.8.0
+device=cuda
+Loading pretrained small model: cifar10_resnet20
+Using cache found in /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/chenyaofo_pytorch-cifar-models_master
+Downloading: "https://github.com/chenyaofo/pytorch-cifar-models/releases/download/resnet/cifar10_resnet20-4118986f.pt" to /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/checkpoints/cifar10_resnet20-4118986f.pt
+
+  0%|          | 0.00/1.09M [00:00<?, ?B/s]
+100%|██████████| 1.09M/1.09M [00:00<00:00, 64.0MB/s]
+
+Collecting resnet20 outputs:   0%|          | 0/20 [00:00<?, ?it/s]
+Collecting resnet20 outputs:   5%|▌         | 1/20 [00:01<00:28,  1.49s/it]
+Collecting resnet20 outputs:  10%|█         | 2/20 [00:01<00:13,  1.38it/s]
+Collecting resnet20 outputs:  15%|█▌        | 3/20 [00:01<00:07,  2.13it/s]
+Collecting resnet20 outputs:  20%|██        | 4/20 [00:02<00:05,  2.84it/s]
+Collecting resnet20 outputs:  25%|██▌       | 5/20 [00:02<00:04,  3.48it/s]
+Collecting resnet20 outputs:  30%|███       | 6/20 [00:02<00:03,  4.04it/s]
+Collecting resnet20 outputs:  35%|███▌      | 7/20 [00:02<00:02,  4.65it/s]
+Collecting resnet20 outputs:  40%|████      | 8/20 [00:02<00:02,  5.11it/s]
+Collecting resnet20 outputs:  45%|████▌     | 9/20 [00:02<00:02,  5.50it/s]
+Collecting resnet20 outputs:  50%|█████     | 10/20 [00:02<00:01,  5.92it/s]
+Collecting resnet20 outputs:  55%|█████▌    | 11/20 [00:03<00:01,  6.04it/s]
+Collecting resnet20 outputs:  60%|██████    | 12/20 [00:03<00:01,  6.29it/s]
+Collecting resnet20 outputs:  65%|██████▌   | 13/20 [00:03<00:01,  5.73it/s]
+Collecting resnet20 outputs:  70%|███████   | 14/20 [00:03<00:00,  6.29it/s]
+Collecting resnet20 outputs:  75%|███████▌  | 15/20 [00:03<00:00,  5.79it/s]
+Collecting resnet20 outputs:  80%|████████  | 16/20 [00:03<00:00,  6.19it/s]
+Collecting resnet20 outputs:  85%|████████▌ | 17/20 [00:04<00:00,  5.69it/s]
+Collecting resnet20 outputs:  90%|█████████ | 18/20 [00:04<00:00,  6.03it/s]
+Collecting resnet20 outputs:  95%|█████████▌| 19/20 [00:04<00:00,  6.28it/s]
+Collecting resnet20 outputs: 100%|██████████| 20/20 [00:04<00:00,  7.02it/s]
+Collecting resnet20 outputs: 100%|██████████| 20/20 [00:04<00:00,  4.37it/s]
+Loading pretrained small model: cifar10_resnet32
+Using cache found in /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/chenyaofo_pytorch-cifar-models_master
+Downloading: "https://github.com/chenyaofo/pytorch-cifar-models/releases/download/resnet/cifar10_resnet32-ef93fc4d.pt" to /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/checkpoints/cifar10_resnet32-ef93fc4d.pt
+
+  0%|          | 0.00/1.85M [00:00<?, ?B/s]
+ 81%|████████  | 1.50M/1.85M [00:00<00:00, 6.63MB/s]
+100%|██████████| 1.85M/1.85M [00:00<00:00, 7.55MB/s]
+
+Collecting resnet32 outputs:   0%|          | 0/20 [00:00<?, ?it/s]
+Collecting resnet32 outputs:   5%|▌         | 1/20 [00:00<00:06,  2.94it/s]
+Collecting resnet32 outputs:  10%|█         | 2/20 [00:00<00:04,  3.70it/s]
+Collecting resnet32 outputs:  15%|█▌        | 3/20 [00:00<00:04,  3.99it/s]
+Collecting resnet32 outputs:  20%|██        | 4/20 [00:01<00:03,  4.23it/s]
+Collecting resnet32 outputs:  25%|██▌       | 5/20 [00:01<00:03,  4.42it/s]
+Collecting resnet32 outputs:  30%|███       | 6/20 [00:01<00:03,  4.63it/s]
+Collecting resnet32 outputs:  35%|███▌      | 7/20 [00:01<00:02,  4.73it/s]
+Collecting resnet32 outputs:  40%|████      | 8/20 [00:01<00:02,  4.88it/s]
+Collecting resnet32 outputs:  45%|████▌     | 9/20 [00:01<00:02,  5.03it/s]
+Collecting resnet32 outputs:  50%|█████     | 10/20 [00:02<00:01,  5.08it/s]
+Collecting resnet32 outputs:  55%|█████▌    | 11/20 [00:02<00:01,  5.28it/s]
+Collecting resnet32 outputs:  60%|██████    | 12/20 [00:02<00:01,  5.16it/s]
+Collecting resnet32 outputs:  65%|██████▌   | 13/20 [00:02<00:01,  5.02it/s]
+Collecting resnet32 outputs:  70%|███████   | 14/20 [00:02<00:01,  4.96it/s]
+Collecting resnet32 outputs:  75%|███████▌  | 15/20 [00:03<00:01,  4.77it/s]
+Collecting resnet32 outputs:  80%|████████  | 16/20 [00:03<00:00,  4.78it/s]
+Collecting resnet32 outputs:  85%|████████▌ | 17/20 [00:03<00:00,  5.11it/s]
+Collecting resnet32 outputs:  90%|█████████ | 18/20 [00:03<00:00,  5.18it/s]
+Collecting resnet32 outputs:  95%|█████████▌| 19/20 [00:03<00:00,  5.36it/s]
+Collecting resnet32 outputs: 100%|██████████| 20/20 [00:04<00:00,  6.12it/s]
+Collecting resnet32 outputs: 100%|██████████| 20/20 [00:04<00:00,  4.85it/s]
+Loading pretrained small model: cifar10_resnet44
+Using cache found in /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/chenyaofo_pytorch-cifar-models_master
+Downloading: "https://github.com/chenyaofo/pytorch-cifar-models/releases/download/resnet/cifar10_resnet44-2a3cabcb.pt" to /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/checkpoints/cifar10_resnet44-2a3cabcb.pt
+
+  0%|          | 0.00/2.62M [00:00<?, ?B/s]
+100%|██████████| 2.62M/2.62M [00:00<00:00, 70.9MB/s]
+
+Collecting resnet44 outputs:   0%|          | 0/20 [00:00<?, ?it/s]
+Collecting resnet44 outputs:   5%|▌         | 1/20 [00:00<00:09,  1.93it/s]
+Collecting resnet44 outputs:  10%|█         | 2/20 [00:00<00:05,  3.06it/s]
+Collecting resnet44 outputs:  15%|█▌        | 3/20 [00:00<00:04,  3.72it/s]
+Collecting resnet44 outputs:  20%|██        | 4/20 [00:01<00:04,  3.93it/s]
+Collecting resnet44 outputs:  25%|██▌       | 5/20 [00:01<00:03,  4.25it/s]
+Collecting resnet44 outputs:  30%|███       | 6/20 [00:01<00:03,  4.52it/s]
+Collecting resnet44 outputs:  35%|███▌      | 7/20 [00:01<00:02,  4.77it/s]
+Collecting resnet44 outputs:  40%|████      | 8/20 [00:01<00:02,  5.23it/s]
+Collecting resnet44 outputs:  45%|████▌     | 9/20 [00:01<00:01,  5.93it/s]
+Collecting resnet44 outputs:  50%|█████     | 10/20 [00:02<00:01,  5.47it/s]
+Collecting resnet44 outputs:  55%|█████▌    | 11/20 [00:02<00:01,  4.97it/s]
+Collecting resnet44 outputs:  60%|██████    | 12/20 [00:02<00:01,  5.14it/s]
+Collecting resnet44 outputs:  65%|██████▌   | 13/20 [00:02<00:01,  5.28it/s]
+Collecting resnet44 outputs:  70%|███████   | 14/20 [00:02<00:01,  5.34it/s]
+Collecting resnet44 outputs:  75%|███████▌  | 15/20 [00:03<00:00,  5.67it/s]
+Collecting resnet44 outputs:  80%|████████  | 16/20 [00:03<00:00,  5.63it/s]
+Collecting resnet44 outputs:  85%|████████▌ | 17/20 [00:03<00:00,  5.63it/s]
+Collecting resnet44 outputs:  90%|█████████ | 18/20 [00:03<00:00,  5.78it/s]
+Collecting resnet44 outputs:  95%|█████████▌| 19/20 [00:03<00:00,  5.87it/s]
+Collecting resnet44 outputs: 100%|██████████| 20/20 [00:03<00:00,  5.05it/s]
+{
+  "purpose": "Decide whether the deadline route has value beyond a small model that already fits the deadline.",
+  "decision_rule": {
+    "keep_deadline_route": "Keep only if BranchyNet deadline exits beat same-cost small models under the same confidence-reject false-accept constraint.",
+    "cut_deadline_route": "Cut if standalone small models are comparable or better, because reject/reinspection can also be attached to small models."
+  },
+  "pairwise_deadline_comparison": [
+    {
+      "branchy": "branchy_resnet56_exit_after_layer1.0",
+      "small": "standalone_resnet20",
+      "branchy_cost": 0.054545,
+      "small_cost": 0.345455,
+      "forced_accuracy_delta_branchy_minus_small": -0.278,
+      "forced_false_accept_delta_branchy_minus_small": 0.278,
+      "reject_accept_rate_delta_at_false_accept_le_5pct": -0.75,
+      "verdict": "small_model_is_better_or_enough"
+    },
+    {
+      "branchy": "branchy_resnet56_exit_after_layer2.0",
+      "small": "standalone_resnet20",
+      "branchy_cost": 0.381818,
+      "small_cost": 0.345455,
+      "forced_accuracy_delta_branchy_minus_small": -0.1474,
+      "forced_false_accept_delta_branchy_minus_small": 0.1474,
+      "reject_accept_rate_delta_at_false_accept_le_5pct": -0.4,
+      "verdict": "small_model_is_better_or_enough"
+    },
+    {
+      "branchy": "branchy_mobilenet_exit_after_features.5",
+      "small": "standalone_resnet20",
+      "branchy_cost": 0.315789,
+      "small_cost": 0.345455,
+      "forced_accuracy_delta_branchy_minus_small": -0.2556,
+      "forced_false_accept_delta_branchy_minus_small": 0.2556,
+      "reject_accept_rate_delta_at_false_accept_le_5pct": -0.75,
+      "verdict": "small_model_is_better_or_enough"
+    },
+    {
+      "branchy": "branchy_mobilenet_exit_after_features.12",
+      "small": "standalone_resnet20",
+      "branchy_cost": 0.684211,
+      "small_cost": 0.345455,
+      "forced_accuracy_delta_branchy_minus_small": -0.0362,
+      "forced_false_accept_delta_branchy_minus_small": 0.0362,
+      "reject_accept_rate_delta_at_false_accept_le_5pct": -0.1,
+      "verdict": "small_model_is_better_or_enough"
+    },
+    {
+      "branchy": "branchy_mobilenet_exit_after_features.12",
+      "small": "standalone_resnet32",
+      "branchy_cost": 0.684211,
+      "small_cost": 0.563636,
+      "forced_accuracy_delta_branchy_minus_small": -0.0474,
+      "forced_false_accept_delta_branchy_minus_small": 0.0474,
+      "reject_accept_rate_delta_at_false_accept_le_5pct": -0.15,
+      "verdict": "small_model_is_better_or_enough"
+    }
+  ]
+}
+wrote results/deadline_vs_small_model_001_summary.json
