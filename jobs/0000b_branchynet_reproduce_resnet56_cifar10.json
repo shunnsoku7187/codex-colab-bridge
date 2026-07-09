@@ -1,6 +1,6 @@
 {
   "id": "0000b_branchynet_reproduce_resnet56_cifar10",
-  "status": "running",
+  "status": "done",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,6 +9,8 @@
   "max_runtime_sec": 7200,
   "result_file": "results/0000b_branchynet_reproduce_resnet56_cifar10.json",
   "note": "ResNet-56 approximation of BranchyNet paper B-ResNet/CIFAR-10, because chenyaofo/pytorch-cifar-models does not provide ResNet-110.",
-  "updated_at": "2026-07-09T09:26:18.925826+00:00",
-  "started_at": "2026-07-09T09:26:18.925809+00:00"
+  "updated_at": "2026-07-09T09:44:37.433621+00:00",
+  "started_at": "2026-07-09T09:26:18.925809+00:00",
+  "returncode": 0,
+  "finished_at": "2026-07-09T09:44:37.432904+00:00"
 }
