@@ -1,1 +1,2 @@
 {"time": "2026-07-09T13:27:12.924253+00:00", "event": "job_running", "job_file": "jobs/branchynet_inspection_gap_audit_001.json"}
+{"time": "2026-07-09T13:27:14.545934+00:00", "event": "process_prepared", "command": "python -m scripts.branchynet_inspection_gap_audit --output results/branchynet_inspection_gap_audit_001_summary.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 300}
