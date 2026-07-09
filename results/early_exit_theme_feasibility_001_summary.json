@@ -1,0 +1,2082 @@
+{
+  "summary": {
+    "purpose": "Decide which next research theme has the strongest preliminary evidence: lookahead early-exit, deadline/reject inspection, or FPGA-focused early-exit implementation.",
+    "interpretation_rules": {
+      "lookahead": "Promising only when final-wrong/no-rescue samples are common and predictable from early exit signals.",
+      "deadline_reject": "Promising when useful coverage can be accepted with low false-accept rate before final.",
+      "fpga": "Promising when average-cost gains exist but final-rate/profile/tail behavior creates implementation-specific design issues."
+    },
+    "comparison_rows": [
+      {
+        "trace": "0000b_branchynet_reproduce_resnet56_cifar10",
+        "final_accuracy": 0.9032,
+        "exit_accuracy": [
+          0.6452,
+          0.7758,
+          0.9032
+        ],
+        "cost_at_1pt_drop": 0.627913,
+        "final_rate_at_1pt_drop": 0.4864,
+        "final_wrong_rate": 0.0968,
+        "max_ideal_no_rescue_cost_saving": 0.065615,
+        "best_auc_predict_final_wrong": 0.76041
+      },
+      {
+        "trace": "0001_branchynet_mobilenet_cifar10_retry",
+        "final_accuracy": 0.8984,
+        "exit_accuracy": [
+          0.6676,
+          0.887,
+          0.8984
+        ],
+        "cost_at_1pt_drop": 0.632758,
+        "final_rate_at_1pt_drop": 0.0802,
+        "final_wrong_rate": 0.1016,
+        "max_ideal_no_rescue_cost_saving": 0.048442,
+        "best_auc_predict_final_wrong": 0.866376
+      },
+      {
+        "trace": "0002b_branchynet_resnet56_cifar100",
+        "final_accuracy": 0.6696,
+        "exit_accuracy": [
+          0.2642,
+          0.3556,
+          0.6696
+        ],
+        "cost_at_1pt_drop": 0.91064,
+        "final_rate_at_1pt_drop": 0.8996,
+        "final_wrong_rate": 0.3304,
+        "max_ideal_no_rescue_cost_saving": 0.280233,
+        "best_auc_predict_final_wrong": 0.622493
+      },
+      {
+        "trace": "0003_branchynet_mobilenet_cifar100_retry",
+        "final_accuracy": 0.678,
+        "exit_accuracy": [
+          0.2894,
+          0.5476,
+          0.678
+        ],
+        "cost_at_1pt_drop": 0.890684,
+        "final_rate_at_1pt_drop": 0.7026,
+        "final_wrong_rate": 0.322,
+        "max_ideal_no_rescue_cost_saving": 0.194589,
+        "best_auc_predict_final_wrong": 0.737639
+      }
+    ]
+  },
+  "per_trace": [
+    {
+      "trace": "results/0000b_branchynet_reproduce_resnet56_cifar10.npz",
+      "n": 5000,
+      "exit_names": [
+        "exit_after_layer1.0",
+        "exit_after_layer2.0",
+        "final"
+      ],
+      "exit_costs": [
+        0.054545,
+        0.381818,
+        1.0
+      ],
+      "exit_accuracy": [
+        0.6452,
+        0.7758,
+        0.9032
+      ],
+      "final_accuracy": 0.9032,
+      "pattern_counts": {
+        "exit0_correct_final_correct": 3089,
+        "exit0_wrong_final_correct": 1427,
+        "exit0_wrong_final_wrong": 347,
+        "exit0_correct_final_wrong": 137,
+        "exit1_correct_final_correct": 3748,
+        "exit1_wrong_final_correct": 768,
+        "exit1_wrong_final_wrong": 353,
+        "exit1_correct_final_wrong": 131
+      },
+      "pattern_rates": {
+        "exit0_correct_final_correct": 0.6178,
+        "exit0_wrong_final_correct": 0.2854,
+        "exit0_wrong_final_wrong": 0.0694,
+        "exit0_correct_final_wrong": 0.0274,
+        "exit1_correct_final_correct": 0.7496,
+        "exit1_wrong_final_correct": 0.1536,
+        "exit1_wrong_final_wrong": 0.0706,
+        "exit1_correct_final_wrong": 0.0262
+      },
+      "earliest_correct_counts": {
+        "0": 3226,
+        "1": 930,
+        "2": 557,
+        "never": 287
+      },
+      "earliest_correct_rates": {
+        "0": 0.6452,
+        "1": 0.186,
+        "2": 0.1114,
+        "never": 0.0574
+      },
+      "early_exit_accuracy_cost_curve": [
+        {
+          "max_drop": 0.0,
+          "found": true,
+          "accuracy": 0.9032,
+          "avg_cost": 0.845389,
+          "exit_counts": {
+            "0": 1,
+            "1": 1249,
+            "2": 3750
+          },
+          "exit_rates": {
+            "0": 0.0002,
+            "1": 0.2498,
+            "2": 0.75
+          },
+          "thresholds": [
+            0.999669,
+            0.984355
+          ],
+          "accuracy_drop": 0.0
+        },
+        {
+          "max_drop": 0.0025,
+          "found": true,
+          "accuracy": 0.9008,
+          "avg_cost": 0.718124,
+          "exit_counts": {
+            "0": 625,
+            "1": 1324,
+            "2": 3051
+          },
+          "exit_rates": {
+            "0": 0.125,
+            "1": 0.2648,
+            "2": 0.6102
+          },
+          "thresholds": [
+            0.891896,
+            0.94615
+          ],
+          "accuracy_drop": 0.0024
+        },
+        {
+          "max_drop": 0.005,
+          "found": true,
+          "accuracy": 0.8992,
+          "avg_cost": 0.694509,
+          "exit_counts": {
+            "0": 625,
+            "1": 1515,
+            "2": 2860
+          },
+          "exit_rates": {
+            "0": 0.125,
+            "1": 0.303,
+            "2": 0.572
+          },
+          "thresholds": [
+            0.891896,
+            0.928377
+          ],
+          "accuracy_drop": 0.004
+        },
+        {
+          "max_drop": 0.01,
+          "found": true,
+          "accuracy": 0.8932,
+          "avg_cost": 0.627913,
+          "exit_counts": {
+            "0": 834,
+            "1": 1734,
+            "2": 2432
+          },
+          "exit_rates": {
+            "0": 0.1668,
+            "1": 0.3468,
+            "2": 0.4864
+          },
+          "thresholds": [
+            0.858503,
+            0.874421
+          ],
+          "accuracy_drop": 0.01
+        },
+        {
+          "max_drop": 0.02,
+          "found": true,
+          "accuracy": 0.8842,
+          "avg_cost": 0.567673,
+          "exit_counts": {
+            "0": 1250,
+            "1": 1585,
+            "2": 2165
+          },
+          "exit_rates": {
+            "0": 0.25,
+            "1": 0.317,
+            "2": 0.433
+          },
+          "thresholds": [
+            0.78997,
+            0.841743
+          ],
+          "accuracy_drop": 0.019
+        },
+        {
+          "max_drop": 0.05,
+          "found": true,
+          "accuracy": 0.8548,
+          "avg_cost": 0.439862,
+          "exit_counts": {
+            "0": 1667,
+            "1": 1981,
+            "2": 1352
+          },
+          "exit_rates": {
+            "0": 0.3334,
+            "1": 0.3962,
+            "2": 0.2704
+          },
+          "thresholds": [
+            0.723936,
+            0.67037
+          ],
+          "accuracy_drop": 0.0484
+        },
+        {
+          "max_drop": 0.1,
+          "found": true,
+          "accuracy": 0.8054,
+          "avg_cost": 0.30352,
+          "exit_counts": {
+            "0": 2917,
+            "1": 1172,
+            "2": 911
+          },
+          "exit_rates": {
+            "0": 0.5834,
+            "1": 0.2344,
+            "2": 0.1822
+          },
+          "thresholds": [
+            0.541369,
+            0.627042
+          ],
+          "accuracy_drop": 0.0978
+        }
+      ],
+      "lookahead_no_rescue_analysis": [
+        {
+          "exit": 0,
+          "exit_name": "exit_after_layer1.0",
+          "current_wrong_rate": 0.3548,
+          "rescued_by_final_rate": 0.2854,
+          "not_rescued_by_final_rate": 0.0694,
+          "ideal_no_rescue_stop_cost_saving": 0.065615,
+          "auc_predict_final_wrong_from_exit_info": {
+            "confidence": {
+              "auc": 0.65503,
+              "direction": "lower"
+            },
+            "entropy": {
+              "auc": 0.649508,
+              "direction": "higher"
+            }
+          },
+          "auc_predict_no_rescue_among_current_wrong": {
+            "confidence": {
+              "auc": 0.529075,
+              "direction": "higher"
+            },
+            "entropy": {
+              "auc": 0.507752,
+              "direction": "lower"
+            }
+          }
+        },
+        {
+          "exit": 1,
+          "exit_name": "exit_after_layer2.0",
+          "current_wrong_rate": 0.2242,
+          "rescued_by_final_rate": 0.1536,
+          "not_rescued_by_final_rate": 0.0706,
+          "ideal_no_rescue_stop_cost_saving": 0.043644,
+          "auc_predict_final_wrong_from_exit_info": {
+            "confidence": {
+              "auc": 0.754913,
+              "direction": "lower"
+            },
+            "entropy": {
+              "auc": 0.76041,
+              "direction": "higher"
+            },
+            "confidence_delta_from_prev": {
+              "auc": 0.603583,
+              "direction": "lower"
+            },
+            "entropy_delta_from_prev": {
+              "auc": 0.651951,
+              "direction": "higher"
+            }
+          },
+          "auc_predict_no_rescue_among_current_wrong": {
+            "confidence": {
+              "auc": 0.541349,
+              "direction": "higher"
+            },
+            "entropy": {
+              "auc": 0.500321,
+              "direction": "lower"
+            },
+            "confidence_delta_from_prev": {
+              "auc": 0.525761,
+              "direction": "higher"
+            },
+            "entropy_delta_from_prev": {
+              "auc": 0.522095,
+              "direction": "higher"
+            }
+          }
+        }
+      ],
+      "deadline_reject_curves": {
+        "deadline_at_exit0": [
+          {
+            "exit": 0,
+            "threshold": 0.153241,
+            "coverage": 1.0,
+            "reject_rate": 0.0,
+            "accepted_accuracy": 0.6452,
+            "false_accept_rate": 0.3548,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.341351,
+            "coverage": 0.9,
+            "reject_rate": 0.1,
+            "accepted_accuracy": 0.686,
+            "false_accept_rate": 0.314,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.411412,
+            "coverage": 0.8,
+            "reject_rate": 0.2,
+            "accepted_accuracy": 0.727,
+            "false_accept_rate": 0.273,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.473528,
+            "coverage": 0.7,
+            "reject_rate": 0.3,
+            "accepted_accuracy": 0.760571,
+            "false_accept_rate": 0.239429,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.529915,
+            "coverage": 0.6,
+            "reject_rate": 0.4,
+            "accepted_accuracy": 0.803667,
+            "false_accept_rate": 0.196333,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.59792,
+            "coverage": 0.5,
+            "reject_rate": 0.5,
+            "accepted_accuracy": 0.8444,
+            "false_accept_rate": 0.1556,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.670714,
+            "coverage": 0.4,
+            "reject_rate": 0.6,
+            "accepted_accuracy": 0.879,
+            "false_accept_rate": 0.121,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.749401,
+            "coverage": 0.3,
+            "reject_rate": 0.7,
+            "accepted_accuracy": 0.916667,
+            "false_accept_rate": 0.083333,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.832938,
+            "coverage": 0.2,
+            "reject_rate": 0.8,
+            "accepted_accuracy": 0.947,
+            "false_accept_rate": 0.053,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.911682,
+            "coverage": 0.1,
+            "reject_rate": 0.9,
+            "accepted_accuracy": 0.972,
+            "false_accept_rate": 0.028,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.999669,
+            "coverage": 0.0002,
+            "reject_rate": 0.9998,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0,
+            "deadline_cost": 0.054545
+          }
+        ],
+        "deadline_at_exit1": [
+          {
+            "exit": 1,
+            "threshold": 0.185311,
+            "coverage": 1.0,
+            "reject_rate": 0.0,
+            "accepted_accuracy": 0.7758,
+            "false_accept_rate": 0.2242,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.470324,
+            "coverage": 0.9,
+            "reject_rate": 0.1,
+            "accepted_accuracy": 0.821556,
+            "false_accept_rate": 0.178444,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.57495,
+            "coverage": 0.8,
+            "reject_rate": 0.2,
+            "accepted_accuracy": 0.8605,
+            "false_accept_rate": 0.1395,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.680308,
+            "coverage": 0.7,
+            "reject_rate": 0.3,
+            "accepted_accuracy": 0.895143,
+            "false_accept_rate": 0.104857,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.785739,
+            "coverage": 0.6,
+            "reject_rate": 0.4,
+            "accepted_accuracy": 0.93,
+            "false_accept_rate": 0.07,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.874421,
+            "coverage": 0.5,
+            "reject_rate": 0.5,
+            "accepted_accuracy": 0.9532,
+            "false_accept_rate": 0.0468,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.936158,
+            "coverage": 0.4,
+            "reject_rate": 0.6,
+            "accepted_accuracy": 0.9715,
+            "false_accept_rate": 0.0285,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.973002,
+            "coverage": 0.3,
+            "reject_rate": 0.7,
+            "accepted_accuracy": 0.984667,
+            "false_accept_rate": 0.015333,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.990799,
+            "coverage": 0.2,
+            "reject_rate": 0.8,
+            "accepted_accuracy": 0.992,
+            "false_accept_rate": 0.008,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.998196,
+            "coverage": 0.1,
+            "reject_rate": 0.9,
+            "accepted_accuracy": 0.998,
+            "false_accept_rate": 0.002,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 1.0,
+            "coverage": 0.0002,
+            "reject_rate": 0.9998,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0,
+            "deadline_cost": 0.381818
+          }
+        ]
+      },
+      "theme_signals": {
+        "lookahead_early_exit": {
+          "support": "higher if not_rescued_by_final_rate is large and AUC is high",
+          "max_ideal_cost_saving": 0.065615,
+          "best_auc_final_wrong": 0.76041
+        },
+        "deadline_reject_inspection": {
+          "support": "higher if reject allows low false-accept rate at useful coverage",
+          "example_exit1_50pct_threshold": {
+            "exit": 1,
+            "threshold": 0.874421,
+            "coverage": 0.5,
+            "reject_rate": 0.5,
+            "accepted_accuracy": 0.9532,
+            "false_accept_rate": 0.0468,
+            "deadline_cost": 0.381818
+          }
+        },
+        "fpga_early_exit_implementation": {
+          "support": "higher if useful accuracy-cost curve exists but final-rate/profile pressure remains important",
+          "final_rate_at_zero_drop": 0.75,
+          "final_rate_at_1pt_drop": 0.4864
+        }
+      }
+    },
+    {
+      "trace": "results/0001_branchynet_mobilenet_cifar10_retry.npz",
+      "n": 5000,
+      "exit_names": [
+        "exit_after_features.5",
+        "exit_after_features.12",
+        "final"
+      ],
+      "exit_costs": [
+        0.315789,
+        0.684211,
+        1.0
+      ],
+      "exit_accuracy": [
+        0.6676,
+        0.887,
+        0.8984
+      ],
+      "final_accuracy": 0.8984,
+      "pattern_counts": {
+        "exit0_correct_final_correct": 3184,
+        "exit0_wrong_final_correct": 1308,
+        "exit0_wrong_final_wrong": 354,
+        "exit0_correct_final_wrong": 154,
+        "exit1_correct_final_correct": 4321,
+        "exit1_wrong_final_correct": 171,
+        "exit1_wrong_final_wrong": 394,
+        "exit1_correct_final_wrong": 114
+      },
+      "pattern_rates": {
+        "exit0_correct_final_correct": 0.6368,
+        "exit0_wrong_final_correct": 0.2616,
+        "exit0_wrong_final_wrong": 0.0708,
+        "exit0_correct_final_wrong": 0.0308,
+        "exit1_correct_final_correct": 0.8642,
+        "exit1_wrong_final_correct": 0.0342,
+        "exit1_wrong_final_wrong": 0.0788,
+        "exit1_correct_final_wrong": 0.0228
+      },
+      "earliest_correct_counts": {
+        "0": 3338,
+        "1": 1234,
+        "2": 135,
+        "never": 293
+      },
+      "earliest_correct_rates": {
+        "0": 0.6676,
+        "1": 0.2468,
+        "2": 0.027,
+        "never": 0.0586
+      },
+      "early_exit_accuracy_cost_curve": [
+        {
+          "max_drop": 0.0,
+          "found": true,
+          "accuracy": 0.8984,
+          "avg_cost": 0.747695,
+          "exit_counts": {
+            "0": 209,
+            "1": 3542,
+            "2": 1249
+          },
+          "exit_rates": {
+            "0": 0.0418,
+            "1": 0.7084,
+            "2": 0.2498
+          },
+          "thresholds": [
+            0.977735,
+            0.882884
+          ],
+          "accuracy_drop": 0.0
+        },
+        {
+          "max_drop": 0.0025,
+          "found": true,
+          "accuracy": 0.8964,
+          "avg_cost": 0.692768,
+          "exit_counts": {
+            "0": 417,
+            "1": 3961,
+            "2": 622
+          },
+          "exit_rates": {
+            "0": 0.0834,
+            "1": 0.7922,
+            "2": 0.1244
+          },
+          "thresholds": [
+            0.953117,
+            0.679716
+          ],
+          "accuracy_drop": 0.002
+        },
+        {
+          "max_drop": 0.005,
+          "found": true,
+          "accuracy": 0.8946,
+          "avg_cost": 0.661095,
+          "exit_counts": {
+            "0": 834,
+            "1": 3559,
+            "2": 607
+          },
+          "exit_rates": {
+            "0": 0.1668,
+            "1": 0.7118,
+            "2": 0.1214
+          },
+          "thresholds": [
+            0.898916,
+            0.679716
+          ],
+          "accuracy_drop": 0.0038
+        },
+        {
+          "max_drop": 0.01,
+          "found": true,
+          "accuracy": 0.8904,
+          "avg_cost": 0.632758,
+          "exit_counts": {
+            "0": 1042,
+            "1": 3557,
+            "2": 401
+          },
+          "exit_rates": {
+            "0": 0.2084,
+            "1": 0.7114,
+            "2": 0.0802
+          },
+          "thresholds": [
+            0.873275,
+            0.58845
+          ],
+          "accuracy_drop": 0.008
+        },
+        {
+          "max_drop": 0.02,
+          "found": true,
+          "accuracy": 0.8784,
+          "avg_cost": 0.585568,
+          "exit_counts": {
+            "0": 1667,
+            "1": 2950,
+            "2": 383
+          },
+          "exit_rates": {
+            "0": 0.3334,
+            "1": 0.59,
+            "2": 0.0766
+          },
+          "thresholds": [
+            0.779639,
+            0.58845
+          ],
+          "accuracy_drop": 0.02
+        },
+        {
+          "max_drop": 0.05,
+          "found": true,
+          "accuracy": 0.8504,
+          "avg_cost": 0.510989,
+          "exit_counts": {
+            "0": 2500,
+            "1": 2326,
+            "2": 174
+          },
+          "exit_rates": {
+            "0": 0.5,
+            "1": 0.4652,
+            "2": 0.0348
+          },
+          "thresholds": [
+            0.649917,
+            0.490703
+          ],
+          "accuracy_drop": 0.048
+        },
+        {
+          "max_drop": 0.1,
+          "found": true,
+          "accuracy": 0.8014,
+          "avg_cost": 0.438621,
+          "exit_counts": {
+            "0": 3333,
+            "1": 1667,
+            "2": 0
+          },
+          "exit_rates": {
+            "0": 0.6666,
+            "1": 0.3334,
+            "2": 0.0
+          },
+          "thresholds": [
+            0.535047,
+            0.229255
+          ],
+          "accuracy_drop": 0.097
+        }
+      ],
+      "lookahead_no_rescue_analysis": [
+        {
+          "exit": 0,
+          "exit_name": "exit_after_features.5",
+          "current_wrong_rate": 0.3324,
+          "rescued_by_final_rate": 0.2616,
+          "not_rescued_by_final_rate": 0.0708,
+          "ideal_no_rescue_stop_cost_saving": 0.048442,
+          "auc_predict_final_wrong_from_exit_info": {
+            "confidence": {
+              "auc": 0.675672,
+              "direction": "lower"
+            },
+            "entropy": {
+              "auc": 0.662005,
+              "direction": "higher"
+            }
+          },
+          "auc_predict_no_rescue_among_current_wrong": {
+            "confidence": {
+              "auc": 0.527175,
+              "direction": "higher"
+            },
+            "entropy": {
+              "auc": 0.524612,
+              "direction": "lower"
+            }
+          }
+        },
+        {
+          "exit": 1,
+          "exit_name": "exit_after_features.12",
+          "current_wrong_rate": 0.113,
+          "rescued_by_final_rate": 0.0342,
+          "not_rescued_by_final_rate": 0.0788,
+          "ideal_no_rescue_stop_cost_saving": 0.024884,
+          "auc_predict_final_wrong_from_exit_info": {
+            "confidence": {
+              "auc": 0.866376,
+              "direction": "lower"
+            },
+            "entropy": {
+              "auc": 0.864014,
+              "direction": "higher"
+            },
+            "confidence_delta_from_prev": {
+              "auc": 0.621295,
+              "direction": "lower"
+            },
+            "entropy_delta_from_prev": {
+              "auc": 0.677151,
+              "direction": "higher"
+            }
+          },
+          "auc_predict_no_rescue_among_current_wrong": {
+            "confidence": {
+              "auc": 0.670348,
+              "direction": "higher"
+            },
+            "entropy": {
+              "auc": 0.634666,
+              "direction": "lower"
+            },
+            "confidence_delta_from_prev": {
+              "auc": 0.660937,
+              "direction": "higher"
+            },
+            "entropy_delta_from_prev": {
+              "auc": 0.623074,
+              "direction": "lower"
+            }
+          }
+        }
+      ],
+      "deadline_reject_curves": {
+        "deadline_at_exit0": [
+          {
+            "exit": 0,
+            "threshold": 0.193366,
+            "coverage": 1.0,
+            "reject_rate": 0.0,
+            "accepted_accuracy": 0.6676,
+            "false_accept_rate": 0.3324,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.374683,
+            "coverage": 0.9,
+            "reject_rate": 0.1,
+            "accepted_accuracy": 0.706444,
+            "false_accept_rate": 0.293556,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.456894,
+            "coverage": 0.8,
+            "reject_rate": 0.2,
+            "accepted_accuracy": 0.744,
+            "false_accept_rate": 0.256,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.513992,
+            "coverage": 0.7,
+            "reject_rate": 0.3,
+            "accepted_accuracy": 0.780857,
+            "false_accept_rate": 0.219143,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.577534,
+            "coverage": 0.6,
+            "reject_rate": 0.4,
+            "accepted_accuracy": 0.822667,
+            "false_accept_rate": 0.177333,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.649917,
+            "coverage": 0.5,
+            "reject_rate": 0.5,
+            "accepted_accuracy": 0.8588,
+            "false_accept_rate": 0.1412,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.728679,
+            "coverage": 0.4,
+            "reject_rate": 0.6,
+            "accepted_accuracy": 0.888,
+            "false_accept_rate": 0.112,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.802489,
+            "coverage": 0.3,
+            "reject_rate": 0.7,
+            "accepted_accuracy": 0.915333,
+            "false_accept_rate": 0.084667,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.877952,
+            "coverage": 0.2,
+            "reject_rate": 0.8,
+            "accepted_accuracy": 0.947,
+            "false_accept_rate": 0.053,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.943976,
+            "coverage": 0.1,
+            "reject_rate": 0.9,
+            "accepted_accuracy": 0.966,
+            "false_accept_rate": 0.034,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.999914,
+            "coverage": 0.0002,
+            "reject_rate": 0.9998,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0,
+            "deadline_cost": 0.315789
+          }
+        ],
+        "deadline_at_exit1": [
+          {
+            "exit": 1,
+            "threshold": 0.229255,
+            "coverage": 1.0,
+            "reject_rate": 0.0,
+            "accepted_accuracy": 0.887,
+            "false_accept_rate": 0.113,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.62271,
+            "coverage": 0.9,
+            "reject_rate": 0.1,
+            "accepted_accuracy": 0.926667,
+            "false_accept_rate": 0.073333,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.818708,
+            "coverage": 0.8,
+            "reject_rate": 0.2,
+            "accepted_accuracy": 0.95825,
+            "false_accept_rate": 0.04175,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.92887,
+            "coverage": 0.7,
+            "reject_rate": 0.3,
+            "accepted_accuracy": 0.980571,
+            "false_accept_rate": 0.019429,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.972962,
+            "coverage": 0.6,
+            "reject_rate": 0.4,
+            "accepted_accuracy": 0.987,
+            "false_accept_rate": 0.013,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.990589,
+            "coverage": 0.5,
+            "reject_rate": 0.5,
+            "accepted_accuracy": 0.992,
+            "false_accept_rate": 0.008,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.99701,
+            "coverage": 0.4,
+            "reject_rate": 0.6,
+            "accepted_accuracy": 0.9945,
+            "false_accept_rate": 0.0055,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.999116,
+            "coverage": 0.3,
+            "reject_rate": 0.7,
+            "accepted_accuracy": 0.997333,
+            "false_accept_rate": 0.002667,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.999814,
+            "coverage": 0.2002,
+            "reject_rate": 0.7998,
+            "accepted_accuracy": 0.998002,
+            "false_accept_rate": 0.001998,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.999975,
+            "coverage": 0.1002,
+            "reject_rate": 0.8998,
+            "accepted_accuracy": 0.998004,
+            "false_accept_rate": 0.001996,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 1.0,
+            "coverage": 0.0052,
+            "reject_rate": 0.9948,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0,
+            "deadline_cost": 0.684211
+          }
+        ]
+      },
+      "theme_signals": {
+        "lookahead_early_exit": {
+          "support": "higher if not_rescued_by_final_rate is large and AUC is high",
+          "max_ideal_cost_saving": 0.048442,
+          "best_auc_final_wrong": 0.866376
+        },
+        "deadline_reject_inspection": {
+          "support": "higher if reject allows low false-accept rate at useful coverage",
+          "example_exit1_50pct_threshold": {
+            "exit": 1,
+            "threshold": 0.990589,
+            "coverage": 0.5,
+            "reject_rate": 0.5,
+            "accepted_accuracy": 0.992,
+            "false_accept_rate": 0.008,
+            "deadline_cost": 0.684211
+          }
+        },
+        "fpga_early_exit_implementation": {
+          "support": "higher if useful accuracy-cost curve exists but final-rate/profile pressure remains important",
+          "final_rate_at_zero_drop": 0.2498,
+          "final_rate_at_1pt_drop": 0.0802
+        }
+      }
+    },
+    {
+      "trace": "results/0002b_branchynet_resnet56_cifar100.npz",
+      "n": 5000,
+      "exit_names": [
+        "exit_after_layer1.0",
+        "exit_after_layer2.0",
+        "final"
+      ],
+      "exit_costs": [
+        0.054545,
+        0.381818,
+        1.0
+      ],
+      "exit_accuracy": [
+        0.2642,
+        0.3556,
+        0.6696
+      ],
+      "final_accuracy": 0.6696,
+      "pattern_counts": {
+        "exit0_correct_final_correct": 1151,
+        "exit0_wrong_final_correct": 2197,
+        "exit0_wrong_final_wrong": 1482,
+        "exit0_correct_final_wrong": 170,
+        "exit1_correct_final_correct": 1548,
+        "exit1_wrong_final_correct": 1800,
+        "exit1_wrong_final_wrong": 1422,
+        "exit1_correct_final_wrong": 230
+      },
+      "pattern_rates": {
+        "exit0_correct_final_correct": 0.2302,
+        "exit0_wrong_final_correct": 0.4394,
+        "exit0_wrong_final_wrong": 0.2964,
+        "exit0_correct_final_wrong": 0.034,
+        "exit1_correct_final_correct": 0.3096,
+        "exit1_wrong_final_correct": 0.36,
+        "exit1_wrong_final_wrong": 0.2844,
+        "exit1_correct_final_wrong": 0.046
+      },
+      "earliest_correct_counts": {
+        "0": 1321,
+        "1": 737,
+        "2": 1593,
+        "never": 1349
+      },
+      "earliest_correct_rates": {
+        "0": 0.2642,
+        "1": 0.1474,
+        "2": 0.3186,
+        "never": 0.2698
+      },
+      "early_exit_accuracy_cost_curve": [
+        {
+          "max_drop": 0.0,
+          "found": true,
+          "accuracy": 0.6696,
+          "avg_cost": 0.999687,
+          "exit_counts": {
+            "0": 1,
+            "1": 1,
+            "2": 4998
+          },
+          "exit_rates": {
+            "0": 0.0002,
+            "1": 0.0002,
+            "2": 0.9996
+          },
+          "thresholds": [
+            0.983566,
+            0.993853
+          ],
+          "accuracy_drop": 0.0
+        },
+        {
+          "max_drop": 0.0025,
+          "found": true,
+          "accuracy": 0.6682,
+          "avg_cost": 0.974095,
+          "exit_counts": {
+            "0": 1,
+            "1": 208,
+            "2": 4791
+          },
+          "exit_rates": {
+            "0": 0.0002,
+            "1": 0.0416,
+            "2": 0.9582
+          },
+          "thresholds": [
+            0.983566,
+            0.74323
+          ],
+          "accuracy_drop": 0.0014
+        },
+        {
+          "max_drop": 0.005,
+          "found": true,
+          "accuracy": 0.6648,
+          "avg_cost": 0.946633,
+          "exit_counts": {
+            "0": 209,
+            "1": 112,
+            "2": 4679
+          },
+          "exit_rates": {
+            "0": 0.0418,
+            "1": 0.0224,
+            "2": 0.9358
+          },
+          "thresholds": [
+            0.55962,
+            0.74323
+          ],
+          "accuracy_drop": 0.0048
+        },
+        {
+          "max_drop": 0.01,
+          "found": true,
+          "accuracy": 0.6602,
+          "avg_cost": 0.91064,
+          "exit_counts": {
+            "0": 417,
+            "1": 85,
+            "2": 4498
+          },
+          "exit_rates": {
+            "0": 0.0834,
+            "1": 0.017,
+            "2": 0.8996
+          },
+          "thresholds": [
+            0.434303,
+            0.74323
+          ],
+          "accuracy_drop": 0.0094
+        },
+        {
+          "max_drop": 0.02,
+          "found": true,
+          "accuracy": 0.6502,
+          "avg_cost": 0.862778,
+          "exit_counts": {
+            "0": 625,
+            "1": 154,
+            "2": 4221
+          },
+          "exit_rates": {
+            "0": 0.125,
+            "1": 0.0308,
+            "2": 0.8442
+          },
+          "thresholds": [
+            0.363242,
+            0.604996
+          ],
+          "accuracy_drop": 0.0194
+        },
+        {
+          "max_drop": 0.05,
+          "found": true,
+          "accuracy": 0.6206,
+          "avg_cost": 0.781084,
+          "exit_counts": {
+            "0": 1042,
+            "1": 177,
+            "2": 3781
+          },
+          "exit_rates": {
+            "0": 0.2084,
+            "1": 0.0354,
+            "2": 0.7562
+          },
+          "thresholds": [
+            0.277119,
+            0.516438
+          ],
+          "accuracy_drop": 0.049
+        },
+        {
+          "max_drop": 0.1,
+          "found": true,
+          "accuracy": 0.5732,
+          "avg_cost": 0.664138,
+          "exit_counts": {
+            "0": 1667,
+            "1": 167,
+            "2": 3166
+          },
+          "exit_rates": {
+            "0": 0.3334,
+            "1": 0.0334,
+            "2": 0.6332
+          },
+          "thresholds": [
+            0.195856,
+            0.452613
+          ],
+          "accuracy_drop": 0.0964
+        }
+      ],
+      "lookahead_no_rescue_analysis": [
+        {
+          "exit": 0,
+          "exit_name": "exit_after_layer1.0",
+          "current_wrong_rate": 0.7358,
+          "rescued_by_final_rate": 0.4394,
+          "not_rescued_by_final_rate": 0.2964,
+          "ideal_no_rescue_stop_cost_saving": 0.280233,
+          "auc_predict_final_wrong_from_exit_info": {
+            "confidence": {
+              "auc": 0.577872,
+              "direction": "lower"
+            },
+            "entropy": {
+              "auc": 0.568801,
+              "direction": "higher"
+            }
+          },
+          "auc_predict_no_rescue_among_current_wrong": {
+            "confidence": {
+              "auc": 0.510638,
+              "direction": "lower"
+            },
+            "entropy": {
+              "auc": 0.510143,
+              "direction": "higher"
+            }
+          }
+        },
+        {
+          "exit": 1,
+          "exit_name": "exit_after_layer2.0",
+          "current_wrong_rate": 0.6444,
+          "rescued_by_final_rate": 0.36,
+          "not_rescued_by_final_rate": 0.2844,
+          "ideal_no_rescue_stop_cost_saving": 0.175811,
+          "auc_predict_final_wrong_from_exit_info": {
+            "confidence": {
+              "auc": 0.622493,
+              "direction": "lower"
+            },
+            "entropy": {
+              "auc": 0.615145,
+              "direction": "higher"
+            },
+            "confidence_delta_from_prev": {
+              "auc": 0.582144,
+              "direction": "lower"
+            },
+            "entropy_delta_from_prev": {
+              "auc": 0.577194,
+              "direction": "higher"
+            }
+          },
+          "auc_predict_no_rescue_among_current_wrong": {
+            "confidence": {
+              "auc": 0.522854,
+              "direction": "lower"
+            },
+            "entropy": {
+              "auc": 0.537289,
+              "direction": "higher"
+            },
+            "confidence_delta_from_prev": {
+              "auc": 0.513942,
+              "direction": "lower"
+            },
+            "entropy_delta_from_prev": {
+              "auc": 0.532911,
+              "direction": "higher"
+            }
+          }
+        }
+      ],
+      "deadline_reject_curves": {
+        "deadline_at_exit0": [
+          {
+            "exit": 0,
+            "threshold": 0.032057,
+            "coverage": 1.0,
+            "reject_rate": 0.0,
+            "accepted_accuracy": 0.2642,
+            "false_accept_rate": 0.7358,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.064463,
+            "coverage": 0.9,
+            "reject_rate": 0.1,
+            "accepted_accuracy": 0.282889,
+            "false_accept_rate": 0.717111,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.079022,
+            "coverage": 0.8,
+            "reject_rate": 0.2,
+            "accepted_accuracy": 0.30625,
+            "false_accept_rate": 0.69375,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.094802,
+            "coverage": 0.7,
+            "reject_rate": 0.3,
+            "accepted_accuracy": 0.328286,
+            "false_accept_rate": 0.671714,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.112946,
+            "coverage": 0.6,
+            "reject_rate": 0.4,
+            "accepted_accuracy": 0.358,
+            "false_accept_rate": 0.642,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.137052,
+            "coverage": 0.5,
+            "reject_rate": 0.5,
+            "accepted_accuracy": 0.3908,
+            "false_accept_rate": 0.6092,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.168395,
+            "coverage": 0.4,
+            "reject_rate": 0.6,
+            "accepted_accuracy": 0.433,
+            "false_accept_rate": 0.567,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.211642,
+            "coverage": 0.3,
+            "reject_rate": 0.7,
+            "accepted_accuracy": 0.484667,
+            "false_accept_rate": 0.515333,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.28442,
+            "coverage": 0.2,
+            "reject_rate": 0.8,
+            "accepted_accuracy": 0.561,
+            "false_accept_rate": 0.439,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.395497,
+            "coverage": 0.1,
+            "reject_rate": 0.9,
+            "accepted_accuracy": 0.674,
+            "false_accept_rate": 0.326,
+            "deadline_cost": 0.054545
+          },
+          {
+            "exit": 0,
+            "threshold": 0.983566,
+            "coverage": 0.0002,
+            "reject_rate": 0.9998,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0,
+            "deadline_cost": 0.054545
+          }
+        ],
+        "deadline_at_exit1": [
+          {
+            "exit": 1,
+            "threshold": 0.037171,
+            "coverage": 1.0,
+            "reject_rate": 0.0,
+            "accepted_accuracy": 0.3556,
+            "false_accept_rate": 0.6444,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.095441,
+            "coverage": 0.9,
+            "reject_rate": 0.1,
+            "accepted_accuracy": 0.382444,
+            "false_accept_rate": 0.617556,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.122347,
+            "coverage": 0.8,
+            "reject_rate": 0.2,
+            "accepted_accuracy": 0.412,
+            "false_accept_rate": 0.588,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.150358,
+            "coverage": 0.7,
+            "reject_rate": 0.3,
+            "accepted_accuracy": 0.442857,
+            "false_accept_rate": 0.557143,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.180929,
+            "coverage": 0.6,
+            "reject_rate": 0.4,
+            "accepted_accuracy": 0.476333,
+            "false_accept_rate": 0.523667,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.219044,
+            "coverage": 0.5,
+            "reject_rate": 0.5,
+            "accepted_accuracy": 0.5228,
+            "false_accept_rate": 0.4772,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.266372,
+            "coverage": 0.4,
+            "reject_rate": 0.6,
+            "accepted_accuracy": 0.5635,
+            "false_accept_rate": 0.4365,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.328408,
+            "coverage": 0.3,
+            "reject_rate": 0.7,
+            "accepted_accuracy": 0.629333,
+            "false_accept_rate": 0.370667,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.412076,
+            "coverage": 0.2,
+            "reject_rate": 0.8,
+            "accepted_accuracy": 0.714,
+            "false_accept_rate": 0.286,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.567467,
+            "coverage": 0.1,
+            "reject_rate": 0.9,
+            "accepted_accuracy": 0.806,
+            "false_accept_rate": 0.194,
+            "deadline_cost": 0.381818
+          },
+          {
+            "exit": 1,
+            "threshold": 0.993853,
+            "coverage": 0.0002,
+            "reject_rate": 0.9998,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0,
+            "deadline_cost": 0.381818
+          }
+        ]
+      },
+      "theme_signals": {
+        "lookahead_early_exit": {
+          "support": "higher if not_rescued_by_final_rate is large and AUC is high",
+          "max_ideal_cost_saving": 0.280233,
+          "best_auc_final_wrong": 0.622493
+        },
+        "deadline_reject_inspection": {
+          "support": "higher if reject allows low false-accept rate at useful coverage",
+          "example_exit1_50pct_threshold": {
+            "exit": 1,
+            "threshold": 0.219044,
+            "coverage": 0.5,
+            "reject_rate": 0.5,
+            "accepted_accuracy": 0.5228,
+            "false_accept_rate": 0.4772,
+            "deadline_cost": 0.381818
+          }
+        },
+        "fpga_early_exit_implementation": {
+          "support": "higher if useful accuracy-cost curve exists but final-rate/profile pressure remains important",
+          "final_rate_at_zero_drop": 0.9996,
+          "final_rate_at_1pt_drop": 0.8996
+        }
+      }
+    },
+    {
+      "trace": "results/0003_branchynet_mobilenet_cifar100_retry.npz",
+      "n": 5000,
+      "exit_names": [
+        "exit_after_features.5",
+        "exit_after_features.12",
+        "final"
+      ],
+      "exit_costs": [
+        0.315789,
+        0.684211,
+        1.0
+      ],
+      "exit_accuracy": [
+        0.2894,
+        0.5476,
+        0.678
+      ],
+      "final_accuracy": 0.678,
+      "pattern_counts": {
+        "exit0_correct_final_correct": 1259,
+        "exit0_wrong_final_correct": 2131,
+        "exit0_wrong_final_wrong": 1422,
+        "exit0_correct_final_wrong": 188,
+        "exit1_correct_final_correct": 2410,
+        "exit1_wrong_final_correct": 980,
+        "exit1_wrong_final_wrong": 1282,
+        "exit1_correct_final_wrong": 328
+      },
+      "pattern_rates": {
+        "exit0_correct_final_correct": 0.2518,
+        "exit0_wrong_final_correct": 0.4262,
+        "exit0_wrong_final_wrong": 0.2844,
+        "exit0_correct_final_wrong": 0.0376,
+        "exit1_correct_final_correct": 0.482,
+        "exit1_wrong_final_correct": 0.196,
+        "exit1_wrong_final_wrong": 0.2564,
+        "exit1_correct_final_wrong": 0.0656
+      },
+      "earliest_correct_counts": {
+        "0": 1447,
+        "1": 1466,
+        "2": 885,
+        "never": 1202
+      },
+      "earliest_correct_rates": {
+        "0": 0.2894,
+        "1": 0.2932,
+        "2": 0.177,
+        "never": 0.2404
+      },
+      "early_exit_accuracy_cost_curve": [
+        {
+          "max_drop": 0.0,
+          "found": true,
+          "accuracy": 0.6786,
+          "avg_cost": 0.934116,
+          "exit_counts": {
+            "0": 1,
+            "1": 1041,
+            "2": 3958
+          },
+          "exit_rates": {
+            "0": 0.0002,
+            "1": 0.2082,
+            "2": 0.7916
+          },
+          "thresholds": [
+            0.968741,
+            0.757667
+          ],
+          "accuracy_drop": -0.0006
+        },
+        {
+          "max_drop": 0.0025,
+          "found": true,
+          "accuracy": 0.6762,
+          "avg_cost": 0.915884,
+          "exit_counts": {
+            "0": 209,
+            "1": 879,
+            "2": 3912
+          },
+          "exit_rates": {
+            "0": 0.0418,
+            "1": 0.1758,
+            "2": 0.7824
+          },
+          "thresholds": [
+            0.593012,
+            0.757667
+          ],
+          "accuracy_drop": 0.0018
+        },
+        {
+          "max_drop": 0.005,
+          "found": true,
+          "accuracy": 0.6744,
+          "avg_cost": 0.903379,
+          "exit_counts": {
+            "0": 209,
+            "1": 1077,
+            "2": 3714
+          },
+          "exit_rates": {
+            "0": 0.0418,
+            "1": 0.2154,
+            "2": 0.7428
+          },
+          "thresholds": [
+            0.593012,
+            0.697758
+          ],
+          "accuracy_drop": 0.0036
+        },
+        {
+          "max_drop": 0.01,
+          "found": true,
+          "accuracy": 0.6714,
+          "avg_cost": 0.890684,
+          "exit_counts": {
+            "0": 209,
+            "1": 1278,
+            "2": 3513
+          },
+          "exit_rates": {
+            "0": 0.0418,
+            "1": 0.2556,
+            "2": 0.7026
+          },
+          "thresholds": [
+            0.593012,
+            0.650614
+          ],
+          "accuracy_drop": 0.0066
+        },
+        {
+          "max_drop": 0.02,
+          "found": true,
+          "accuracy": 0.6598,
+          "avg_cost": 0.852095,
+          "exit_counts": {
+            "0": 209,
+            "1": 1889,
+            "2": 2902
+          },
+          "exit_rates": {
+            "0": 0.0418,
+            "1": 0.3778,
+            "2": 0.5804
+          },
+          "thresholds": [
+            0.593012,
+            0.52267
+          ],
+          "accuracy_drop": 0.0182
+        },
+        {
+          "max_drop": 0.05,
+          "found": true,
+          "accuracy": 0.6298,
+          "avg_cost": 0.784379,
+          "exit_counts": {
+            "0": 834,
+            "1": 1607,
+            "2": 2559
+          },
+          "exit_rates": {
+            "0": 0.1668,
+            "1": 0.3214,
+            "2": 0.5118
+          },
+          "thresholds": [
+            0.356619,
+            0.487262
+          ],
+          "accuracy_drop": 0.0482
+        },
+        {
+          "max_drop": 0.1,
+          "found": true,
+          "accuracy": 0.5804,
+          "avg_cost": 0.699558,
+          "exit_counts": {
+            "0": 834,
+            "1": 2950,
+            "2": 1216
+          },
+          "exit_rates": {
+            "0": 0.1668,
+            "1": 0.59,
+            "2": 0.2432
+          },
+          "thresholds": [
+            0.356619,
+            0.292371
+          ],
+          "accuracy_drop": 0.0976
+        }
+      ],
+      "lookahead_no_rescue_analysis": [
+        {
+          "exit": 0,
+          "exit_name": "exit_after_features.5",
+          "current_wrong_rate": 0.7106,
+          "rescued_by_final_rate": 0.4262,
+          "not_rescued_by_final_rate": 0.2844,
+          "ideal_no_rescue_stop_cost_saving": 0.194589,
+          "auc_predict_final_wrong_from_exit_info": {
+            "confidence": {
+              "auc": 0.600213,
+              "direction": "lower"
+            },
+            "entropy": {
+              "auc": 0.585943,
+              "direction": "higher"
+            }
+          },
+          "auc_predict_no_rescue_among_current_wrong": {
+            "confidence": {
+              "auc": 0.536131,
+              "direction": "lower"
+            },
+            "entropy": {
+              "auc": 0.531533,
+              "direction": "higher"
+            }
+          }
+        },
+        {
+          "exit": 1,
+          "exit_name": "exit_after_features.12",
+          "current_wrong_rate": 0.4524,
+          "rescued_by_final_rate": 0.196,
+          "not_rescued_by_final_rate": 0.2564,
+          "ideal_no_rescue_stop_cost_saving": 0.080968,
+          "auc_predict_final_wrong_from_exit_info": {
+            "confidence": {
+              "auc": 0.737639,
+              "direction": "lower"
+            },
+            "entropy": {
+              "auc": 0.726182,
+              "direction": "higher"
+            },
+            "confidence_delta_from_prev": {
+              "auc": 0.693681,
+              "direction": "lower"
+            },
+            "entropy_delta_from_prev": {
+              "auc": 0.66785,
+              "direction": "higher"
+            }
+          },
+          "auc_predict_no_rescue_among_current_wrong": {
+            "confidence": {
+              "auc": 0.5668,
+              "direction": "lower"
+            },
+            "entropy": {
+              "auc": 0.583905,
+              "direction": "higher"
+            },
+            "confidence_delta_from_prev": {
+              "auc": 0.539119,
+              "direction": "lower"
+            },
+            "entropy_delta_from_prev": {
+              "auc": 0.56557,
+              "direction": "higher"
+            }
+          }
+        }
+      ],
+      "deadline_reject_curves": {
+        "deadline_at_exit0": [
+          {
+            "exit": 0,
+            "threshold": 0.037698,
+            "coverage": 1.0,
+            "reject_rate": 0.0,
+            "accepted_accuracy": 0.2894,
+            "false_accept_rate": 0.7106,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.077012,
+            "coverage": 0.9,
+            "reject_rate": 0.1,
+            "accepted_accuracy": 0.31,
+            "false_accept_rate": 0.69,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.096741,
+            "coverage": 0.8,
+            "reject_rate": 0.2,
+            "accepted_accuracy": 0.33125,
+            "false_accept_rate": 0.66875,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.117507,
+            "coverage": 0.7,
+            "reject_rate": 0.3,
+            "accepted_accuracy": 0.356,
+            "false_accept_rate": 0.644,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.143717,
+            "coverage": 0.6,
+            "reject_rate": 0.4,
+            "accepted_accuracy": 0.384,
+            "false_accept_rate": 0.616,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.173631,
+            "coverage": 0.5,
+            "reject_rate": 0.5,
+            "accepted_accuracy": 0.4176,
+            "false_accept_rate": 0.5824,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.207268,
+            "coverage": 0.4,
+            "reject_rate": 0.6,
+            "accepted_accuracy": 0.458,
+            "false_accept_rate": 0.542,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.258792,
+            "coverage": 0.3,
+            "reject_rate": 0.7,
+            "accepted_accuracy": 0.512,
+            "false_accept_rate": 0.488,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.326703,
+            "coverage": 0.2,
+            "reject_rate": 0.8,
+            "accepted_accuracy": 0.585,
+            "false_accept_rate": 0.415,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.444591,
+            "coverage": 0.1,
+            "reject_rate": 0.9,
+            "accepted_accuracy": 0.7,
+            "false_accept_rate": 0.3,
+            "deadline_cost": 0.315789
+          },
+          {
+            "exit": 0,
+            "threshold": 0.968741,
+            "coverage": 0.0002,
+            "reject_rate": 0.9998,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0,
+            "deadline_cost": 0.315789
+          }
+        ],
+        "deadline_at_exit1": [
+          {
+            "exit": 1,
+            "threshold": 0.06248,
+            "coverage": 1.0,
+            "reject_rate": 0.0,
+            "accepted_accuracy": 0.5476,
+            "false_accept_rate": 0.4524,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.19188,
+            "coverage": 0.9,
+            "reject_rate": 0.1,
+            "accepted_accuracy": 0.59,
+            "false_accept_rate": 0.41,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.259361,
+            "coverage": 0.8,
+            "reject_rate": 0.2,
+            "accepted_accuracy": 0.63575,
+            "false_accept_rate": 0.36425,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.323284,
+            "coverage": 0.7,
+            "reject_rate": 0.3,
+            "accepted_accuracy": 0.680286,
+            "false_accept_rate": 0.319714,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.38639,
+            "coverage": 0.6,
+            "reject_rate": 0.4,
+            "accepted_accuracy": 0.720333,
+            "false_accept_rate": 0.279667,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.453029,
+            "coverage": 0.5,
+            "reject_rate": 0.5,
+            "accepted_accuracy": 0.772,
+            "false_accept_rate": 0.228,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.535816,
+            "coverage": 0.4,
+            "reject_rate": 0.6,
+            "accepted_accuracy": 0.8215,
+            "false_accept_rate": 0.1785,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.642539,
+            "coverage": 0.3,
+            "reject_rate": 0.7,
+            "accepted_accuracy": 0.868667,
+            "false_accept_rate": 0.131333,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.770061,
+            "coverage": 0.2,
+            "reject_rate": 0.8,
+            "accepted_accuracy": 0.936,
+            "false_accept_rate": 0.064,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.908257,
+            "coverage": 0.1,
+            "reject_rate": 0.9,
+            "accepted_accuracy": 0.978,
+            "false_accept_rate": 0.022,
+            "deadline_cost": 0.684211
+          },
+          {
+            "exit": 1,
+            "threshold": 0.999747,
+            "coverage": 0.0002,
+            "reject_rate": 0.9998,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0,
+            "deadline_cost": 0.684211
+          }
+        ]
+      },
+      "theme_signals": {
+        "lookahead_early_exit": {
+          "support": "higher if not_rescued_by_final_rate is large and AUC is high",
+          "max_ideal_cost_saving": 0.194589,
+          "best_auc_final_wrong": 0.737639
+        },
+        "deadline_reject_inspection": {
+          "support": "higher if reject allows low false-accept rate at useful coverage",
+          "example_exit1_50pct_threshold": {
+            "exit": 1,
+            "threshold": 0.453029,
+            "coverage": 0.5,
+            "reject_rate": 0.5,
+            "accepted_accuracy": 0.772,
+            "false_accept_rate": 0.228,
+            "deadline_cost": 0.684211
+          }
+        },
+        "fpga_early_exit_implementation": {
+          "support": "higher if useful accuracy-cost curve exists but final-rate/profile pressure remains important",
+          "final_rate_at_zero_drop": 0.7916,
+          "final_rate_at_1pt_drop": 0.7026
+        }
+      }
+    }
+  ]
+}

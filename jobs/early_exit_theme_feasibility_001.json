@@ -1,6 +1,6 @@
 {
   "id": "early_exit_theme_feasibility_001",
-  "status": "running",
+  "status": "done",
   "backend": "gpu",
   "requires_gpu": false,
   "type": "shell",
@@ -9,6 +9,8 @@
   "max_runtime_sec": 300,
   "result_file": "results/early_exit_theme_feasibility_001.json",
   "note": "CPU-light Colab job. Uses existing BranchyNet trace NPZ files to decide the next research theme: lookahead early-exit, deadline/reject inspection, or FPGA-focused implementation.",
-  "updated_at": "2026-07-09T12:56:25.672126+00:00",
-  "started_at": "2026-07-09T12:56:25.672107+00:00"
+  "updated_at": "2026-07-09T12:56:29.976017+00:00",
+  "started_at": "2026-07-09T12:56:25.672107+00:00",
+  "returncode": 0,
+  "finished_at": "2026-07-09T12:56:29.975417+00:00"
 }

@@ -1,0 +1,67 @@
+{
+  "purpose": "Decide which next research theme has the strongest preliminary evidence: lookahead early-exit, deadline/reject inspection, or FPGA-focused early-exit implementation.",
+  "interpretation_rules": {
+    "lookahead": "Promising only when final-wrong/no-rescue samples are common and predictable from early exit signals.",
+    "deadline_reject": "Promising when useful coverage can be accepted with low false-accept rate before final.",
+    "fpga": "Promising when average-cost gains exist but final-rate/profile/tail behavior creates implementation-specific design issues."
+  },
+  "comparison_rows": [
+    {
+      "trace": "0000b_branchynet_reproduce_resnet56_cifar10",
+      "final_accuracy": 0.9032,
+      "exit_accuracy": [
+        0.6452,
+        0.7758,
+        0.9032
+      ],
+      "cost_at_1pt_drop": 0.627913,
+      "final_rate_at_1pt_drop": 0.4864,
+      "final_wrong_rate": 0.0968,
+      "max_ideal_no_rescue_cost_saving": 0.065615,
+      "best_auc_predict_final_wrong": 0.76041
+    },
+    {
+      "trace": "0001_branchynet_mobilenet_cifar10_retry",
+      "final_accuracy": 0.8984,
+      "exit_accuracy": [
+        0.6676,
+        0.887,
+        0.8984
+      ],
+      "cost_at_1pt_drop": 0.632758,
+      "final_rate_at_1pt_drop": 0.0802,
+      "final_wrong_rate": 0.1016,
+      "max_ideal_no_rescue_cost_saving": 0.048442,
+      "best_auc_predict_final_wrong": 0.866376
+    },
+    {
+      "trace": "0002b_branchynet_resnet56_cifar100",
+      "final_accuracy": 0.6696,
+      "exit_accuracy": [
+        0.2642,
+        0.3556,
+        0.6696
+      ],
+      "cost_at_1pt_drop": 0.91064,
+      "final_rate_at_1pt_drop": 0.8996,
+      "final_wrong_rate": 0.3304,
+      "max_ideal_no_rescue_cost_saving": 0.280233,
+      "best_auc_predict_final_wrong": 0.622493
+    },
+    {
+      "trace": "0003_branchynet_mobilenet_cifar100_retry",
+      "final_accuracy": 0.678,
+      "exit_accuracy": [
+        0.2894,
+        0.5476,
+        0.678
+      ],
+      "cost_at_1pt_drop": 0.890684,
+      "final_rate_at_1pt_drop": 0.7026,
+      "final_wrong_rate": 0.322,
+      "max_ideal_no_rescue_cost_saving": 0.194589,
+      "best_auc_predict_final_wrong": 0.737639
+    }
+  ]
+}
+wrote results/early_exit_theme_feasibility_001_summary.json
