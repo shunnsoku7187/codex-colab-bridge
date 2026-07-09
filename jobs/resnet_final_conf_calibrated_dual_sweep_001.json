@@ -1,0 +1,12 @@
+{
+  "id": "resnet_final_conf_calibrated_dual_sweep_001",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": false,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m scripts.resnet_final_conf_calibrated_dual_sweep --output results/resnet_final_conf_calibrated_dual_sweep_001_summary.json",
+  "max_runtime_sec": 300,
+  "result_file": "results/resnet_final_conf_calibrated_dual_sweep_001.json",
+  "note": "Calibrate final-exit self-confidence thresholds for required accepted accuracy, then rerun ResNet56 dual-threshold early accept/reject sweep using lost reliable-good rate."
+}
