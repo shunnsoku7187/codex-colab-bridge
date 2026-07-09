@@ -1,6 +1,6 @@
 {
   "id": "deadline_vs_small_model_001",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -8,5 +8,7 @@
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.deadline_vs_small_model --output results/deadline_vs_small_model_001_summary.json --small-models resnet20 resnet32 resnet44 --batch-size 256 --threshold-val-size 5000 --require-cuda",
   "max_runtime_sec": 3600,
   "result_file": "results/deadline_vs_small_model_001.json",
-  "note": "Decision experiment for whether the deadline route is worth keeping: compare BranchyNet deadline exits against same-deadline standalone small CIFAR-10 models with the same confidence-reject evaluation."
+  "note": "Decision experiment for whether the deadline route is worth keeping: compare BranchyNet deadline exits against same-deadline standalone small CIFAR-10 models with the same confidence-reject evaluation.",
+  "updated_at": "2026-07-09T13:42:20.924672+00:00",
+  "started_at": "2026-07-09T13:42:20.924653+00:00"
 }
