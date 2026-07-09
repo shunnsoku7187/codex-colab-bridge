@@ -1,0 +1,12 @@
+{
+  "id": "branchynet_inspection_gap_audit_001",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": false,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m scripts.branchynet_inspection_gap_audit --output results/branchynet_inspection_gap_audit_001_summary.json",
+  "max_runtime_sec": 300,
+  "result_file": "results/branchynet_inspection_gap_audit_001.json",
+  "note": "CIFAR-10 audit showing weaknesses when vanilla BranchyNet is directly reused as an inspection system: forced decisions, deadline miss/forced-deadline risk, and profile-sensitive final load."
+}
