@@ -1,2 +1,4 @@
 {"time": "2026-07-09T15:38:55.454264+00:00", "event": "job_running", "job_file": "jobs/resnet_good_loss_compute_tradeoff_001.json"}
 {"time": "2026-07-09T15:38:56.991776+00:00", "event": "process_prepared", "command": "python -m scripts.resnet_good_loss_compute_tradeoff --output results/resnet_good_loss_compute_tradeoff_001_summary.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 300}
+{"time": "2026-07-09T15:38:58.598180+00:00", "event": "process_start", "command": "python -m scripts.resnet_good_loss_compute_tradeoff --output results/resnet_good_loss_compute_tradeoff_001_summary.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge"}
+{"time": "2026-07-09T15:39:35.571576+00:00", "event": "process_end", "returncode": 0, "duration_sec": 36.973}
