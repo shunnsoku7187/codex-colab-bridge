@@ -5213,4 +5213,65 @@ device=cuda
  99%|█████████▉| 169M/170M [1:18:22<00:47, 28.6kB/s]
  99%|█████████▉| 169M/170M [1:18:23<00:45, 28.8kB/s]
  99%|█████████▉| 169M/170M [1:18:24<00:42, 30.4kB/s]
- 
+ 99%|█████████▉| 169M/170M [1:18:26<00:44, 28.0kB/s]
+ 99%|█████████▉| 169M/170M [1:18:27<00:46, 26.4kB/s]
+ 99%|█████████▉| 169M/170M [1:18:28<00:45, 26.2kB/s]
+ 99%|█████████▉| 169M/170M [1:18:29<00:36, 31.2kB/s]
+ 99%|█████████▉| 169M/170M [1:18:30<00:37, 30.0kB/s]
+ 99%|█████████▉| 169M/170M [1:18:31<00:37, 29.2kB/s]
+ 99%|█████████▉| 169M/170M [1:18:33<00:37, 27.8kB/s]
+ 99%|█████████▉| 169M/170M [1:18:34<00:35, 29.1kB/s]
+ 99%|█████████▉| 170M/170M [1:18:34<00:29, 33.7kB/s]
+ 99%|█████████▉| 170M/170M [1:18:35<00:27, 35.0kB/s]
+ 99%|█████████▉| 170M/170M [1:18:36<00:25, 36.8kB/s]
+ 99%|█████████▉| 170M/170M [1:18:37<00:24, 36.4kB/s]
+ 99%|█████████▉| 170M/170M [1:18:37<00:21, 40.5kB/s]
+100%|█████████▉| 170M/170M [1:18:38<00:18, 44.1kB/s]
+100%|█████████▉| 170M/170M [1:18:39<00:18, 42.0kB/s]
+100%|█████████▉| 170M/170M [1:18:40<00:21, 34.9kB/s]
+100%|█████████▉| 170M/170M [1:18:41<00:19, 38.1kB/s]
+100%|█████████▉| 170M/170M [1:18:41<00:15, 44.5kB/s]
+100%|█████████▉| 170M/170M [1:18:42<00:12, 53.4kB/s]
+100%|█████████▉| 170M/170M [1:18:42<00:12, 49.4kB/s]
+100%|█████████▉| 170M/170M [1:18:43<00:11, 50.9kB/s]
+100%|█████████▉| 170M/170M [1:18:43<00:09, 57.7kB/s]
+100%|█████████▉| 170M/170M [1:18:44<00:09, 58.7kB/s]
+100%|█████████▉| 170M/170M [1:18:44<00:08, 60.1kB/s]
+100%|█████████▉| 170M/170M [1:18:46<00:09, 46.8kB/s]
+100%|█████████▉| 170M/170M [1:18:46<00:09, 43.9kB/s]
+100%|█████████▉| 170M/170M [1:18:47<00:09, 44.0kB/s]
+100%|█████████▉| 170M/170M [1:18:48<00:07, 50.0kB/s]
+100%|█████████▉| 170M/170M [1:18:48<00:06, 48.2kB/s]
+100%|█████████▉| 170M/170M [1:18:49<00:06, 46.0kB/s]
+100%|█████████▉| 170M/170M [1:18:50<00:06, 43.1kB/s]
+100%|█████████▉| 170M/170M [1:18:51<00:05, 40.5kB/s]
+100%|█████████▉| 170M/170M [1:18:52<00:04, 42.5kB/s]
+100%|█████████▉| 170M/170M [1:18:53<00:04, 34.4kB/s]
+100%|█████████▉| 170M/170M [1:18:54<00:04, 33.2kB/s]
+100%|█████████▉| 170M/170M [1:18:55<00:03, 30.2kB/s]
+100%|█████████▉| 170M/170M [1:18:56<00:02, 33.4kB/s]
+100%|█████████▉| 170M/170M [1:18:57<00:01, 31.4kB/s]
+100%|█████████▉| 170M/170M [1:18:59<00:00, 28.6kB/s]
+100%|██████████| 170M/170M [1:18:59<00:00, 36.0kB/s]
+Loading pretrained model from torch.hub: cifar10_resnet110
+Using cache found in /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/chenyaofo_pytorch-cifar-models_master
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/codex_colab_bridge/codex-colab-bridge/scripts/branchynet_cifar_sweep.py", line 573, in <module>
+    main()
+  File "/content/codex_colab_bridge/codex-colab-bridge/scripts/branchynet_cifar_sweep.py", line 484, in main
+    base_model = load_cifar_model(args.arch, args.dataset, device)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/codex_colab_bridge/codex-colab-bridge/scripts/branchynet_cifar_sweep.py", line 170, in load_cifar_model
+    model = torch.hub.load("chenyaofo/pytorch-cifar-models", hub_name, pretrained=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/hub.py", line 669, in load
+    model = _load_local(repo_or_dir, model, *args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/hub.py", line 701, in _load_local
+    entry = _load_entry_from_hubconf(hub_module, model)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/hub.py", line 422, in _load_entry_from_hubconf
+    raise RuntimeError(f"Cannot find callable {model} in hubconf")
+RuntimeError: Cannot find callable cifar10_resnet110 in hubconf
