@@ -23,18 +23,25 @@ Stay as close as practical to the BranchyNet paper:
 Reference target:
 
 - BranchyNet reports B-ResNet/CIFAR-10 knee exit rates of `41.5%, 13.8%, 44.7%`.
+- The paper's B-ResNet uses ResNet-110 on CIFAR-10. It adds side branches after
+  the 2nd and 37th convolutional layers; the branch depths are 3 convolutional
+  layers plus FC for the first branch, and 2 convolutional layers plus FC for
+  the second branch.
 - Therefore, a valid reproduction should not send almost all samples to final
   under the paper-like CIFAR-10/ResNet condition.
+- The current pretrained hub does not provide ResNet-110. The nearest available
+  pretrained CIFAR ResNet is ResNet-56, so `0000b` and `0002b` are explicitly
+  ResNet-56 approximations rather than strict reproductions.
 
 ## Jobs
 
 0. Paper-like reproduction:
 
 ```text
-branchynet_reproduce_resnet_cifar10_000
+0000b_branchynet_reproduce_resnet56_cifar10
 ```
 
-This uses ResNet-110, exits near the early/one-third positions, and ResNet side
+This uses ResNet-56, exits near the early/one-third positions, and ResNet side
 branch depths `3,2` to approximate the paper's B-ResNet setup.
 
 1. Change model only:
@@ -46,7 +53,7 @@ branchynet_mobilenet_cifar10_001
 2. Change dataset only:
 
 ```text
-branchynet_resnet_cifar100_002
+0002b_branchynet_resnet56_cifar100
 ```
 
 3. Both changed:

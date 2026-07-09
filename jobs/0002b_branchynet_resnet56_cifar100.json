@@ -1,0 +1,12 @@
+{
+  "id": "0002b_branchynet_resnet56_cifar100",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.branchynet_cifar_sweep --output-name 0002b_branchynet_resnet56_cifar100 --dataset cifar100 --arch resnet56 --exit-modules layer1.0,layer2.0 --branch-depths 3,2 --epochs 10 --batch-size 128 --threshold-val-size 5000 --learning-rate 0.001 --weight-decay 1e-4 --loss-weights 1,1,1 --threshold-candidates 9 --max-threshold-combinations 2000 --require-cuda",
+  "max_runtime_sec": 7200,
+  "result_file": "results/0002b_branchynet_resnet56_cifar100.json",
+  "note": "ResNet-56 CIFAR-100 counterpart for comparing dataset difficulty after the CIFAR-10 ResNet-56 approximation."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "0000b_branchynet_reproduce_resnet56_cifar10",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.branchynet_cifar_sweep --output-name 0000b_branchynet_reproduce_resnet56_cifar10 --dataset cifar10 --arch resnet56 --exit-modules layer1.0,layer2.0 --branch-depths 3,2 --epochs 10 --batch-size 128 --threshold-val-size 5000 --learning-rate 0.001 --weight-decay 1e-4 --loss-weights 1,1,1 --threshold-candidates 9 --max-threshold-combinations 2000 --require-cuda",
+  "max_runtime_sec": 7200,
+  "result_file": "results/0000b_branchynet_reproduce_resnet56_cifar10.json",
+  "note": "ResNet-56 approximation of BranchyNet paper B-ResNet/CIFAR-10, because chenyaofo/pytorch-cifar-models does not provide ResNet-110."
+}

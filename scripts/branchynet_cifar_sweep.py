@@ -33,11 +33,11 @@ CIFAR_STATS = {
 
 DEFAULT_EXITS = {
     "mobilenetv2_x0_5": "features.5,features.12",
-    # ResNet-110 for CIFAR has three residual groups. The paper places branches
-    # early and around the first third of the network. These module-level exits
-    # approximate that placement while remaining robust to the torch.hub module
-    # naming used by chenyaofo/pytorch-cifar-models.
-    "resnet110": "layer1.0,layer2.0",
+    # The BranchyNet paper uses ResNet-110 and places exits after the 2nd and
+    # 37th convolutional layers. The chenyaofo hub provides ResNet-56, not
+    # ResNet-110, so these exits approximate the same early / one-third
+    # placement on the available pretrained CIFAR ResNet family.
+    "resnet56": "layer1.0,layer2.0",
 }
 
 
@@ -431,20 +431,20 @@ def estimate_costs(arch, exit_modules):
     if arch == "mobilenetv2_x0_5":
         total = 19
         return [(int(module.split(".")[-1]) + 1) / total for module in exit_modules] + [1.0]
-    if arch == "resnet110":
-        # CIFAR ResNet-110 has 3 groups of 18 residual blocks after the stem.
+    if arch == "resnet56":
+        # CIFAR ResNet-56 has 3 groups of 9 residual blocks after the stem.
         # Use rough cumulative block positions for comparative energy theory.
         costs = []
         for module in exit_modules:
             if module.startswith("layer1."):
                 block = int(module.split(".")[1])
-                costs.append((1 + 2 * (block + 1)) / 109)
+                costs.append((1 + 2 * (block + 1)) / 55)
             elif module.startswith("layer2."):
                 block = int(module.split(".")[1])
-                costs.append((1 + 2 * 18 + 2 * (block + 1)) / 109)
+                costs.append((1 + 2 * 9 + 2 * (block + 1)) / 55)
             elif module.startswith("layer3."):
                 block = int(module.split(".")[1])
-                costs.append((1 + 2 * 36 + 2 * (block + 1)) / 109)
+                costs.append((1 + 2 * 18 + 2 * (block + 1)) / 55)
             else:
                 costs.append(1.0)
         return costs + [1.0]
