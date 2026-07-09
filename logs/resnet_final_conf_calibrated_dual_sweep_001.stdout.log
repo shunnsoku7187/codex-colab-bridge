@@ -1,0 +1,606 @@
+{
+  "purpose": "Calibrate final self-confidence from required accuracy, then evaluate dual-threshold early accept/reject.",
+  "final_accuracy": 0.9032,
+  "calibrated_thresholds": {
+    "target_accuracy_0.950": {
+      "target_accuracy": 0.95,
+      "threshold": 0.723593,
+      "accept_rate": 0.8962,
+      "accepted_accuracy": 0.950011,
+      "false_accept_rate": 0.049989
+    },
+    "target_accuracy_0.980": {
+      "target_accuracy": 0.98,
+      "threshold": 0.923672,
+      "accept_rate": 0.7744,
+      "accepted_accuracy": 0.980114,
+      "false_accept_rate": 0.019886
+    },
+    "target_accuracy_0.990": {
+      "target_accuracy": 0.99,
+      "threshold": 0.971294,
+      "accept_rate": 0.6926,
+      "accepted_accuracy": 0.990182,
+      "false_accept_rate": 0.009818
+    }
+  },
+  "high_conf_only_baseline": {
+    "thresholds": {
+      "lower0": -1.0,
+      "upper0": 0.832938,
+      "lower1": -1.0,
+      "upper1": 0.936158
+    },
+    "counts": {
+      "accept0": 1000,
+      "reject0": 0,
+      "accept1": 1149,
+      "reject1": 0,
+      "final": 2851
+    },
+    "rates": {
+      "accept0": 0.2,
+      "reject0": 0.0,
+      "accept1": 0.2298,
+      "reject1": 0.0,
+      "final": 0.5702
+    },
+    "accept_rate": 1.0,
+    "reject_rate": 0.0,
+    "final_rate": 0.5702,
+    "early_terminal_rate": 0.4298,
+    "avg_cost": 0.668851,
+    "accepted_accuracy": 0.8954,
+    "false_accept_rate": 0.1046,
+    "rejected_final_correct_rate": null,
+    "rejected_reliable_final_correct_rate": null,
+    "lost_reliable_final_correct_rate": 0.0,
+    "accuracy_drop_vs_final": 0.0078
+  },
+  "calibrated_dual_threshold_sweeps": {
+    "target_accuracy_0.950": {
+      "reliable_final_threshold": {
+        "target_accuracy": 0.95,
+        "threshold": 0.723593,
+        "accept_rate": 0.8962,
+        "accepted_accuracy": 0.950011,
+        "false_accept_rate": 0.049989
+      },
+      "best_under_constraints": {
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.02": null,
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.05": null,
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.10": null,
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.20": null,
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.30": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.02": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.05": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.10": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.20": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.30": {
+          "thresholds": {
+            "lower0": 0.299902,
+            "upper0": 0.911682,
+            "lower1": 0.785739,
+            "upper1": 0.936158
+          },
+          "counts": {
+            "accept0": 500,
+            "reject0": 250,
+            "accept1": 1523,
+            "reject1": 1788,
+            "final": 939
+          },
+          "rates": {
+            "accept0": 0.1,
+            "reject0": 0.05,
+            "accept1": 0.3046,
+            "reject1": 0.3576,
+            "final": 0.1878
+          },
+          "accept_rate": 0.5924,
+          "reject_rate": 0.4076,
+          "final_rate": 0.1878,
+          "early_terminal_rate": 0.8122,
+          "avg_cost": 0.448822,
+          "accepted_accuracy": 0.954423,
+          "false_accept_rate": 0.045577,
+          "rejected_final_correct_rate": 0.821394,
+          "rejected_reliable_final_correct_rate": 0.715407,
+          "lost_reliable_final_correct_rate": 0.2916
+        },
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.02": null,
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.05": null,
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.10": {
+          "thresholds": {
+            "lower0": 0.299902,
+            "upper0": 0.911682,
+            "lower1": 0.470324,
+            "upper1": 0.785739
+          },
+          "counts": {
+            "accept0": 500,
+            "reject0": 250,
+            "accept1": 2462,
+            "reject1": 422,
+            "final": 1366
+          },
+          "rates": {
+            "accept0": 0.1,
+            "reject0": 0.05,
+            "accept1": 0.4924,
+            "reject1": 0.0844,
+            "final": 0.2732
+          },
+          "accept_rate": 0.8656,
+          "reject_rate": 0.1344,
+          "final_rate": 0.2732,
+          "early_terminal_rate": 0.7268,
+          "avg_cost": 0.501615,
+          "accepted_accuracy": 0.901571,
+          "false_accept_rate": 0.098429,
+          "rejected_final_correct_rate": 0.784226,
+          "rejected_reliable_final_correct_rate": 0.651786,
+          "lost_reliable_final_correct_rate": 0.0876
+        },
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.20": {
+          "thresholds": {
+            "lower0": 0.379016,
+            "upper0": 0.749401,
+            "lower1": 0.57495,
+            "upper1": 0.785739
+          },
+          "counts": {
+            "accept0": 1500,
+            "reject0": 750,
+            "accept1": 1463,
+            "reject1": 605,
+            "final": 682
+          },
+          "rates": {
+            "accept0": 0.3,
+            "reject0": 0.15,
+            "accept1": 0.2926,
+            "reject1": 0.121,
+            "final": 0.1364
+          },
+          "accept_rate": 0.729,
+          "reject_rate": 0.271,
+          "final_rate": 0.1364,
+          "early_terminal_rate": 0.8636,
+          "avg_cost": 0.318865,
+          "accepted_accuracy": 0.900686,
+          "false_accept_rate": 0.099314,
+          "rejected_final_correct_rate": 0.81476,
+          "rejected_reliable_final_correct_rate": 0.707011,
+          "lost_reliable_final_correct_rate": 0.1916
+        },
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.30": {
+          "thresholds": {
+            "lower0": 0.473528,
+            "upper0": 0.832938,
+            "lower1": 0.57495,
+            "upper1": 0.680308
+          },
+          "counts": {
+            "accept0": 1000,
+            "reject0": 1500,
+            "accept1": 1870,
+            "reject1": 369,
+            "final": 261
+          },
+          "rates": {
+            "accept0": 0.2,
+            "reject0": 0.3,
+            "accept1": 0.374,
+            "reject1": 0.0738,
+            "final": 0.0522
+          },
+          "accept_rate": 0.6262,
+          "reject_rate": 0.3738,
+          "final_rate": 0.0522,
+          "early_terminal_rate": 0.9478,
+          "avg_cost": 0.250451,
+          "accepted_accuracy": 0.902268,
+          "false_accept_rate": 0.097732,
+          "rejected_final_correct_rate": 0.832531,
+          "rejected_reliable_final_correct_rate": 0.735152,
+          "lost_reliable_final_correct_rate": 0.2748
+        }
+      }
+    },
+    "target_accuracy_0.980": {
+      "reliable_final_threshold": {
+        "target_accuracy": 0.98,
+        "threshold": 0.923672,
+        "accept_rate": 0.7744,
+        "accepted_accuracy": 0.980114,
+        "false_accept_rate": 0.019886
+      },
+      "best_under_constraints": {
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.02": null,
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.05": null,
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.10": null,
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.20": null,
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.30": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.02": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.05": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.10": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.20": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.30": {
+          "thresholds": {
+            "lower0": 0.473528,
+            "upper0": 0.911682,
+            "lower1": 0.785739,
+            "upper1": 0.874421
+          },
+          "counts": {
+            "accept0": 500,
+            "reject0": 1500,
+            "accept1": 1725,
+            "reject1": 945,
+            "final": 330
+          },
+          "rates": {
+            "accept0": 0.1,
+            "reject0": 0.3,
+            "accept1": 0.345,
+            "reject1": 0.189,
+            "final": 0.066
+          },
+          "accept_rate": 0.511,
+          "reject_rate": 0.489,
+          "final_rate": 0.066,
+          "early_terminal_rate": 0.934,
+          "avg_cost": 0.291709,
+          "accepted_accuracy": 0.953033,
+          "false_accept_rate": 0.046967,
+          "rejected_final_correct_rate": 0.838855,
+          "rejected_reliable_final_correct_rate": 0.602863,
+          "lost_reliable_final_correct_rate": 0.2948
+        },
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.02": null,
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.05": {
+          "thresholds": {
+            "lower0": 0.299902,
+            "upper0": 0.832938,
+            "lower1": 0.391709,
+            "upper1": 0.874421
+          },
+          "counts": {
+            "accept0": 1000,
+            "reject0": 250,
+            "accept1": 1567,
+            "reject1": 197,
+            "final": 1986
+          },
+          "rates": {
+            "accept0": 0.2,
+            "reject0": 0.05,
+            "accept1": 0.3134,
+            "reject1": 0.0394,
+            "final": 0.3972
+          },
+          "accept_rate": 0.9106,
+          "reject_rate": 0.0894,
+          "final_rate": 0.3972,
+          "early_terminal_rate": 0.6028,
+          "avg_cost": 0.545542,
+          "accepted_accuracy": 0.900505,
+          "false_accept_rate": 0.099495,
+          "rejected_final_correct_rate": 0.789709,
+          "rejected_reliable_final_correct_rate": 0.503356,
+          "lost_reliable_final_correct_rate": 0.045
+        },
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.10": {
+          "thresholds": {
+            "lower0": 0.299902,
+            "upper0": 0.832938,
+            "lower1": 0.522672,
+            "upper1": 0.785739
+          },
+          "counts": {
+            "accept0": 1000,
+            "reject0": 250,
+            "accept1": 2013,
+            "reject1": 649,
+            "final": 1088
+          },
+          "rates": {
+            "accept0": 0.2,
+            "reject0": 0.05,
+            "accept1": 0.4026,
+            "reject1": 0.1298,
+            "final": 0.2176
+          },
+          "accept_rate": 0.8202,
+          "reject_rate": 0.1798,
+          "final_rate": 0.2176,
+          "early_terminal_rate": 0.7824,
+          "avg_cost": 0.434516,
+          "accepted_accuracy": 0.902707,
+          "false_accept_rate": 0.097293,
+          "rejected_final_correct_rate": 0.785317,
+          "rejected_reliable_final_correct_rate": 0.489433,
+          "lost_reliable_final_correct_rate": 0.088
+        },
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.20": {
+          "thresholds": {
+            "lower0": 0.379016,
+            "upper0": 0.749401,
+            "lower1": 0.680308,
+            "upper1": 0.785739
+          },
+          "counts": {
+            "accept0": 1500,
+            "reject0": 750,
+            "accept1": 1463,
+            "reject1": 957,
+            "final": 330
+          },
+          "rates": {
+            "accept0": 0.3,
+            "reject0": 0.15,
+            "accept1": 0.2926,
+            "reject1": 0.1914,
+            "final": 0.066
+          },
+          "accept_rate": 0.6586,
+          "reject_rate": 0.3414,
+          "final_rate": 0.066,
+          "early_terminal_rate": 0.934,
+          "avg_cost": 0.275345,
+          "accepted_accuracy": 0.906468,
+          "false_accept_rate": 0.093532,
+          "rejected_final_correct_rate": 0.821324,
+          "rejected_reliable_final_correct_rate": 0.554189,
+          "lost_reliable_final_correct_rate": 0.1892
+        },
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.30": {
+          "thresholds": {
+            "lower0": 0.529915,
+            "upper0": 0.911682,
+            "lower1": 0.522672,
+            "upper1": 0.57495
+          },
+          "counts": {
+            "accept0": 500,
+            "reject0": 2000,
+            "accept1": 2247,
+            "reject1": 167,
+            "final": 86
+          },
+          "rates": {
+            "accept0": 0.1,
+            "reject0": 0.4,
+            "accept1": 0.4494,
+            "reject1": 0.0334,
+            "final": 0.0172
+          },
+          "accept_rate": 0.5666,
+          "reject_rate": 0.4334,
+          "final_rate": 0.0172,
+          "early_terminal_rate": 0.9828,
+          "avg_cost": 0.228815,
+          "accepted_accuracy": 0.900106,
+          "false_accept_rate": 0.099894,
+          "rejected_final_correct_rate": 0.846793,
+          "rejected_reliable_final_correct_rate": 0.619289,
+          "lost_reliable_final_correct_rate": 0.2684
+        }
+      }
+    },
+    "target_accuracy_0.990": {
+      "reliable_final_threshold": {
+        "target_accuracy": 0.99,
+        "threshold": 0.971294,
+        "accept_rate": 0.6926,
+        "accepted_accuracy": 0.990182,
+        "false_accept_rate": 0.009818
+      },
+      "best_under_constraints": {
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.02": null,
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.05": null,
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.10": null,
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.20": null,
+        "false_accept_le_0.02_lost_reliable_final_correct_overall_le_0.30": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.02": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.05": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.10": null,
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.20": {
+          "thresholds": {
+            "lower0": 0.341351,
+            "upper0": 0.911682,
+            "lower1": 0.785739,
+            "upper1": 0.936158
+          },
+          "counts": {
+            "accept0": 500,
+            "reject0": 500,
+            "accept1": 1503,
+            "reject1": 1589,
+            "final": 908
+          },
+          "rates": {
+            "accept0": 0.1,
+            "reject0": 0.1,
+            "accept1": 0.3006,
+            "reject1": 0.3178,
+            "final": 0.1816
+          },
+          "accept_rate": 0.5822,
+          "reject_rate": 0.4178,
+          "final_rate": 0.1816,
+          "early_terminal_rate": 0.8184,
+          "avg_cost": 0.428625,
+          "accepted_accuracy": 0.954998,
+          "false_accept_rate": 0.045002,
+          "rejected_final_correct_rate": 0.824318,
+          "rejected_reliable_final_correct_rate": 0.461944,
+          "lost_reliable_final_correct_rate": 0.193
+        },
+        "false_accept_le_0.05_lost_reliable_final_correct_overall_le_0.30": {
+          "thresholds": {
+            "lower0": 0.529915,
+            "upper0": 0.911682,
+            "lower1": 0.785739,
+            "upper1": 0.874421
+          },
+          "counts": {
+            "accept0": 500,
+            "reject0": 2000,
+            "accept1": 1560,
+            "reject1": 685,
+            "final": 255
+          },
+          "rates": {
+            "accept0": 0.1,
+            "reject0": 0.4,
+            "accept1": 0.312,
+            "reject1": 0.137,
+            "final": 0.051
+          },
+          "accept_rate": 0.463,
+          "reject_rate": 0.537,
+          "final_rate": 0.051,
+          "early_terminal_rate": 0.949,
+          "avg_cost": 0.249709,
+          "accepted_accuracy": 0.95594,
+          "false_accept_rate": 0.04406,
+          "rejected_final_correct_rate": 0.84879,
+          "rejected_reliable_final_correct_rate": 0.526257,
+          "lost_reliable_final_correct_rate": 0.2826
+        },
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.02": null,
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.05": {
+          "thresholds": {
+            "lower0": 0.299902,
+            "upper0": 0.832938,
+            "lower1": 0.391709,
+            "upper1": 0.874421
+          },
+          "counts": {
+            "accept0": 1000,
+            "reject0": 250,
+            "accept1": 1567,
+            "reject1": 197,
+            "final": 1986
+          },
+          "rates": {
+            "accept0": 0.2,
+            "reject0": 0.05,
+            "accept1": 0.3134,
+            "reject1": 0.0394,
+            "final": 0.3972
+          },
+          "accept_rate": 0.9106,
+          "reject_rate": 0.0894,
+          "final_rate": 0.3972,
+          "early_terminal_rate": 0.6028,
+          "avg_cost": 0.545542,
+          "accepted_accuracy": 0.900505,
+          "false_accept_rate": 0.099495,
+          "rejected_final_correct_rate": 0.789709,
+          "rejected_reliable_final_correct_rate": 0.416107,
+          "lost_reliable_final_correct_rate": 0.0372
+        },
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.10": {
+          "thresholds": {
+            "lower0": 0.299902,
+            "upper0": 0.832938,
+            "lower1": 0.57495,
+            "upper1": 0.785739
+          },
+          "counts": {
+            "accept0": 1000,
+            "reject0": 250,
+            "accept1": 2013,
+            "reject1": 860,
+            "final": 877
+          },
+          "rates": {
+            "accept0": 0.2,
+            "reject0": 0.05,
+            "accept1": 0.4026,
+            "reject1": 0.172,
+            "final": 0.1754
+          },
+          "accept_rate": 0.778,
+          "reject_rate": 0.222,
+          "final_rate": 0.1754,
+          "early_terminal_rate": 0.8246,
+          "avg_cost": 0.408429,
+          "accepted_accuracy": 0.905141,
+          "false_accept_rate": 0.094859,
+          "rejected_final_correct_rate": 0.799099,
+          "rejected_reliable_final_correct_rate": 0.40991,
+          "lost_reliable_final_correct_rate": 0.091
+        },
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.20": {
+          "thresholds": {
+            "lower0": 0.473528,
+            "upper0": 0.832938,
+            "lower1": 0.57495,
+            "upper1": 0.680308
+          },
+          "counts": {
+            "accept0": 1000,
+            "reject0": 1500,
+            "accept1": 1870,
+            "reject1": 369,
+            "final": 261
+          },
+          "rates": {
+            "accept0": 0.2,
+            "reject0": 0.3,
+            "accept1": 0.374,
+            "reject1": 0.0738,
+            "final": 0.0522
+          },
+          "accept_rate": 0.6262,
+          "reject_rate": 0.3738,
+          "final_rate": 0.0522,
+          "early_terminal_rate": 0.9478,
+          "avg_cost": 0.250451,
+          "accepted_accuracy": 0.902268,
+          "false_accept_rate": 0.097732,
+          "rejected_final_correct_rate": 0.832531,
+          "rejected_reliable_final_correct_rate": 0.496522,
+          "lost_reliable_final_correct_rate": 0.1856
+        },
+        "false_accept_le_0.10_lost_reliable_final_correct_overall_le_0.30": {
+          "thresholds": {
+            "lower0": 0.59792,
+            "upper0": 0.911682,
+            "lower1": 0.470324,
+            "upper1": 0.522672
+          },
+          "counts": {
+            "accept0": 500,
+            "reject0": 2500,
+            "accept1": 1899,
+            "reject1": 49,
+            "final": 52
+          },
+          "rates": {
+            "accept0": 0.1,
+            "reject0": 0.5,
+            "accept1": 0.3798,
+            "reject1": 0.0098,
+            "final": 0.0104
+          },
+          "accept_rate": 0.4902,
+          "reject_rate": 0.5098,
+          "final_rate": 0.0104,
+          "early_terminal_rate": 0.9896,
+          "avg_cost": 0.191884,
+          "accepted_accuracy": 0.904529,
+          "false_accept_rate": 0.095471,
+          "rejected_final_correct_rate": 0.857199,
+          "rejected_reliable_final_correct_rate": 0.559043,
+          "lost_reliable_final_correct_rate": 0.285
+        }
+      }
+    }
+  }
+}
+wrote results/resnet_final_conf_calibrated_dual_sweep_001_summary.json

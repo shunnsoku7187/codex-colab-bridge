@@ -1,2 +1,4 @@
 {"time": "2026-07-09T15:20:30.363338+00:00", "event": "job_running", "job_file": "jobs/resnet_final_conf_calibrated_dual_sweep_001.json"}
 {"time": "2026-07-09T15:20:31.975011+00:00", "event": "process_prepared", "command": "python -m scripts.resnet_final_conf_calibrated_dual_sweep --output results/resnet_final_conf_calibrated_dual_sweep_001_summary.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 300}
+{"time": "2026-07-09T15:20:33.664818+00:00", "event": "process_start", "command": "python -m scripts.resnet_final_conf_calibrated_dual_sweep --output results/resnet_final_conf_calibrated_dual_sweep_001_summary.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge"}
+{"time": "2026-07-09T15:20:59.309153+00:00", "event": "process_end", "returncode": 0, "duration_sec": 25.644}
