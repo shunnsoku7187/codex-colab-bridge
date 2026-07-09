@@ -1,0 +1,23 @@
+{
+  "output_name": "0002b_branchynet_resnet56_cifar100",
+  "status": "training",
+  "completed_epochs": 2,
+  "target_epochs": 10,
+  "latest_checkpoint": "/content/drive/MyDrive/Research_Experiment/checkpoints/0002b_branchynet_resnet56_cifar100/latest.pt",
+  "epoch_checkpoint": "/content/drive/MyDrive/Research_Experiment/checkpoints/0002b_branchynet_resnet56_cifar100/epoch_002.pt",
+  "latest_metrics": {
+    "epoch": 2,
+    "loss": 2.7600038765031663,
+    "exit_losses": [
+      3.912567615509033,
+      3.5421512126922607,
+      0.825292706489563
+    ],
+    "exit_accuracy": [
+      0.09388,
+      0.14768,
+      0.75066
+    ]
+  },
+  "updated_at": "2026-07-09T09:48:38.217138+00:00"
+}
