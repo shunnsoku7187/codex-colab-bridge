@@ -1,6 +1,6 @@
 {
   "id": "0000_branchynet_reproduce_resnet_cifar10_retry",
-  "status": "running",
+  "status": "interrupted",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,6 @@
   "max_runtime_sec": 7200,
   "result_file": "results/0000_branchynet_reproduce_resnet_cifar10_retry.json",
   "updated_at": "2026-07-09T04:33:02.777888+00:00",
-  "started_at": "2026-07-09T04:33:02.777871+00:00"
+  "started_at": "2026-07-09T04:33:02.777871+00:00",
+  "interrupted_reason": "User stopped the Colab run during the slow CIFAR-10 download before checkpoint-enabled code was available."
 }

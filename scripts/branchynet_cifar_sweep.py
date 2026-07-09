@@ -13,6 +13,7 @@ import torchvision.transforms as transforms
 from torch.utils.data import DataLoader, random_split
 from tqdm import tqdm
 
+from src.checkpointing import atomic_write_json, checkpoint_dir, latest_checkpoint, save_torch_checkpoint, utc_now
 from src.experiment_paths import DATA_DIR, RESULTS_DIR, ensure_dirs
 
 
@@ -219,10 +220,47 @@ def weighted_exit_loss(outputs, labels, weights):
     return weighted, [float(loss.detach().cpu().item()) for loss in losses]
 
 
-def train_branchynet(model, loader, transform, device, epochs, learning_rate, weight_decay, loss_weights):
+def train_branchynet(
+    model,
+    loader,
+    transform,
+    device,
+    epochs,
+    learning_rate,
+    weight_decay,
+    loss_weights,
+    checkpoint_path=None,
+    output_name=None,
+    checkpoint_metadata=None,
+    resume=True,
+):
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate, weight_decay=weight_decay, betas=(0.99, 0.999))
     history = []
-    for epoch in range(epochs):
+    start_epoch = 0
+
+    if checkpoint_path is not None:
+        checkpoint_path.mkdir(parents=True, exist_ok=True)
+        resume_checkpoint = latest_checkpoint(checkpoint_path) if resume else None
+        if resume_checkpoint is not None:
+            try:
+                payload = torch.load(resume_checkpoint, map_location=device, weights_only=False)
+            except TypeError:
+                payload = torch.load(resume_checkpoint, map_location=device)
+            checkpoint_metadata = checkpoint_metadata or {}
+            for key, expected in checkpoint_metadata.items():
+                observed = payload.get(key)
+                if observed != expected:
+                    raise RuntimeError(
+                        f"Checkpoint {resume_checkpoint} is incompatible for {key}: "
+                        f"expected {expected!r}, observed {observed!r}."
+                    )
+            model.load_state_dict(payload["model_state"])
+            optimizer.load_state_dict(payload["optimizer_state"])
+            history = payload.get("history", [])
+            start_epoch = int(payload.get("epoch", 0))
+            print(f"Resuming from checkpoint {resume_checkpoint} at completed_epoch={start_epoch}", flush=True)
+
+    for epoch in range(start_epoch, epochs):
         model.train()
         total = 0
         correct = None
@@ -251,6 +289,35 @@ def train_branchynet(model, loader, transform, device, epochs, learning_rate, we
         }
         print(json.dumps(row, ensure_ascii=False), flush=True)
         history.append(row)
+
+        if checkpoint_path is not None:
+            checkpoint_payload = {
+                "output_name": output_name,
+                "epoch": epoch + 1,
+                "saved_at": utc_now(),
+                "model_state": model.state_dict(),
+                "optimizer_state": optimizer.state_dict(),
+                "history": history,
+            }
+            if checkpoint_metadata:
+                checkpoint_payload.update(checkpoint_metadata)
+            epoch_path = checkpoint_path / f"epoch_{epoch + 1:03d}.pt"
+            latest_path = checkpoint_path / "latest.pt"
+            save_torch_checkpoint(epoch_path, checkpoint_payload)
+            save_torch_checkpoint(latest_path, checkpoint_payload)
+            progress = {
+                "output_name": output_name,
+                "status": "training",
+                "completed_epochs": epoch + 1,
+                "target_epochs": epochs,
+                "latest_checkpoint": str(latest_path),
+                "epoch_checkpoint": str(epoch_path),
+                "latest_metrics": row,
+                "updated_at": utc_now(),
+            }
+            atomic_write_json(checkpoint_path / "progress.json", progress)
+            atomic_write_json(RESULTS_DIR / f"{output_name}_progress.json", progress)
+            print(f"Saved checkpoint: {latest_path}", flush=True)
     return history
 
 
@@ -400,6 +467,7 @@ def main():
     parser.add_argument("--threshold-candidates", type=int, default=9)
     parser.add_argument("--max-threshold-combinations", type=int, default=2000)
     parser.add_argument("--require-cuda", action="store_true")
+    parser.add_argument("--no-resume", action="store_true")
     args = parser.parse_args()
 
     ensure_dirs()
@@ -426,7 +494,28 @@ def main():
     print(f"exit_names={model.exit_names}", flush=True)
     print(f"costs={costs}", flush=True)
 
-    history = train_branchynet(model, train_loader, transform_train(args.dataset), device, args.epochs, args.learning_rate, args.weight_decay, loss_weights)
+    checkpoint_path = checkpoint_dir(args.output_name)
+    checkpoint_metadata = {
+        "dataset": args.dataset,
+        "arch": args.arch,
+        "exit_modules": exit_modules,
+        "branch_depths": branch_depths,
+        "loss_weights": loss_weights,
+    }
+    history = train_branchynet(
+        model,
+        train_loader,
+        transform_train(args.dataset),
+        device,
+        args.epochs,
+        args.learning_rate,
+        args.weight_decay,
+        loss_weights,
+        checkpoint_path=checkpoint_path,
+        output_name=args.output_name,
+        checkpoint_metadata=checkpoint_metadata,
+        resume=not args.no_resume,
+    )
     val_data = collect_outputs(model, val_loader, transform_eval(args.dataset), device, model.exit_names, costs)
     test_data = collect_outputs(model, test_loader, transform_eval(args.dataset), device, model.exit_names, costs)
     tuning = tune_thresholds(val_data, args.threshold_candidates, args.max_threshold_combinations)
@@ -450,6 +539,8 @@ def main():
         "test_samples": len(test_set),
         "threshold_protocol": "Train side branches on CIFAR train; tune entropy thresholds on a held-out split of CIFAR test; evaluate on remaining CIFAR test split.",
         "train_history": history,
+        "checkpoint_dir": str(checkpoint_path),
+        "resume_enabled": not args.no_resume,
         "validation_tuning": tuning,
         "test_final_only": {
             "accuracy": float(test_data["correct"][:, -1].mean()),
@@ -462,6 +553,18 @@ def main():
     }
     output_path = RESULTS_DIR / f"{args.output_name}.json"
     output_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    atomic_write_json(
+        checkpoint_path / "progress.json",
+        {
+            "output_name": args.output_name,
+            "status": "complete",
+            "completed_epochs": args.epochs,
+            "target_epochs": args.epochs,
+            "summary": str(output_path),
+            "result_npz": str(result_npz),
+            "updated_at": utc_now(),
+        },
+    )
     print(json.dumps(summary, ensure_ascii=False, indent=2), flush=True)
     model.close()
 

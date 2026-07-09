@@ -1,0 +1,11 @@
+{
+  "id": "0000a_branchynet_reproduce_resnet_cifar10_checkpointed",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.branchynet_cifar_sweep --output-name 0000a_branchynet_reproduce_resnet_cifar10_checkpointed --dataset cifar10 --arch resnet110 --exit-modules layer1.0,layer2.0 --branch-depths 3,2 --epochs 10 --batch-size 128 --threshold-val-size 5000 --learning-rate 0.001 --weight-decay 1e-4 --loss-weights 1,1,1 --threshold-candidates 9 --max-threshold-combinations 2000 --require-cuda",
+  "max_runtime_sec": 7200,
+  "result_file": "results/0000a_branchynet_reproduce_resnet_cifar10_checkpointed.json"
+}

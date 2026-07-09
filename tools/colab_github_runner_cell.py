@@ -191,6 +191,8 @@ def run_job_process(job_id, command, cwd, max_runtime_sec=None):
     next_heartbeat_at = started_at + HEARTBEAT_INTERVAL_SEC
     env = os.environ.copy()
     env["PYTHONUNBUFFERED"] = "1"
+    env["CODEX_COLAB_JOB_ID"] = job_id
+    env["CODEX_COLAB_CHECKPOINT_DIR"] = str(Path(os.environ["CODEX_COLAB_ARTIFACT_DIR"]) / "checkpoints" / job_id)
 
     with stdout_path.open("a", encoding="utf-8") as stdout_handle, stderr_path.open("a", encoding="utf-8") as stderr_handle:
         stderr_handle.write("stderr is merged into stdout by the Colab runner to avoid pipe deadlocks.\n")
