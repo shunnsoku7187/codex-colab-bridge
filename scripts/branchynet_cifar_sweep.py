@@ -111,8 +111,8 @@ class BranchyHookedModel(nn.Module):
         self.side_branches = nn.ModuleDict()
         self._hook_outputs = {}
         self._handles = []
-        self._init_branches(num_classes)
         self._register_hooks()
+        self._init_branches(num_classes)
 
     def _init_branches(self, num_classes):
         was_training = self.base_model.training

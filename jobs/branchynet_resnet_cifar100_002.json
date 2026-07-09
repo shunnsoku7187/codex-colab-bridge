@@ -1,6 +1,7 @@
 {
   "id": "branchynet_resnet_cifar100_002",
-  "status": "pending",
+  "status": "deferred",
+  "deferred_reason": "Superseded by ordered retry job 0002_branchynet_resnet_cifar100_retry.json after hook initialization fix.",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",

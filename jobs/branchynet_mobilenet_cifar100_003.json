@@ -1,6 +1,7 @@
 {
   "id": "branchynet_mobilenet_cifar100_003",
   "status": "failed",
+  "analysis": "Failed because hooks were registered after dummy forward during branch initialization. Superseded by 0003_branchynet_mobilenet_cifar100_retry.json.",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",

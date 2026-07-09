@@ -1,6 +1,7 @@
 {
   "id": "branchynet_mobilenet_cifar10_001",
-  "status": "running",
+  "status": "interrupted",
+  "interrupted_reason": "User stopped the Colab run while CIFAR-10 download was very slow. This job used a buggy hook initialization order; superseded by 0001_branchynet_mobilenet_cifar10_retry.json.",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
