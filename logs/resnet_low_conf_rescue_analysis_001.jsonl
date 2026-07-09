@@ -1,2 +1,4 @@
 {"time": "2026-07-09T14:42:49.427044+00:00", "event": "job_running", "job_file": "jobs/resnet_low_conf_rescue_analysis_001.json"}
 {"time": "2026-07-09T14:42:51.132917+00:00", "event": "process_prepared", "command": "python -m scripts.resnet_low_conf_rescue_analysis --output results/resnet_low_conf_rescue_analysis_001_summary.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 300}
+{"time": "2026-07-09T14:42:52.672621+00:00", "event": "process_start", "command": "python -m scripts.resnet_low_conf_rescue_analysis --output results/resnet_low_conf_rescue_analysis_001_summary.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge"}
+{"time": "2026-07-09T14:42:52.879676+00:00", "event": "process_end", "returncode": 0, "duration_sec": 0.207}

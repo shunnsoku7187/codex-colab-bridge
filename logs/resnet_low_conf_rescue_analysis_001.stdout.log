@@ -1,0 +1,64 @@
+{
+  "purpose": "Decide whether ResNet BranchyNet has value in sending low self-confidence early-exit samples to later exits.",
+  "interpretation": {
+    "keep_rescue_route": "Keep only if early low-confidence samples are often converted to high-confidence correct decisions later, preferably more than standalone ResNet scaling does.",
+    "cut_or_demote": "If low-confidence samples remain unsafe later, or standalone ResNet scaling rescues them as well or better, then this is not a strong BranchyNet-specific route."
+  },
+  "summary_rows": [
+    {
+      "low_conf_quantile": 0.1,
+      "best_branchy_transition": {
+        "source": "exit_after_layer1.0",
+        "target": "final",
+        "rescued_high_conf_correct_selected": 0.058,
+        "rescued_high_conf_correct_source_wrong": 0.080332,
+        "still_unsafe_after_target": 0.886
+      },
+      "best_standalone_resnet_transition": {
+        "source": "resnet20",
+        "target": "resnet44",
+        "rescued_high_conf_correct_selected": 0.012,
+        "rescued_high_conf_correct_source_wrong": 0.027273,
+        "still_unsafe_after_target": 0.966
+      },
+      "branchy_minus_standalone_rescue_rate": 0.046
+    },
+    {
+      "low_conf_quantile": 0.2,
+      "best_branchy_transition": {
+        "source": "exit_after_layer1.0",
+        "target": "final",
+        "rescued_high_conf_correct_selected": 0.06,
+        "rescued_high_conf_correct_source_wrong": 0.087977,
+        "still_unsafe_after_target": 0.884
+      },
+      "best_standalone_resnet_transition": {
+        "source": "resnet20",
+        "target": "resnet44",
+        "rescued_high_conf_correct_selected": 0.006,
+        "rescued_high_conf_correct_source_wrong": 0.018182,
+        "still_unsafe_after_target": 0.949
+      },
+      "branchy_minus_standalone_rescue_rate": 0.054
+    },
+    {
+      "low_conf_quantile": 0.3,
+      "best_branchy_transition": {
+        "source": "exit_after_layer1.0",
+        "target": "final",
+        "rescued_high_conf_correct_selected": 0.059333,
+        "rescued_high_conf_correct_source_wrong": 0.095085,
+        "still_unsafe_after_target": 0.874667
+      },
+      "best_standalone_resnet_transition": {
+        "source": "resnet20",
+        "target": "resnet44",
+        "rescued_high_conf_correct_selected": 0.004,
+        "rescued_high_conf_correct_source_wrong": 0.016854,
+        "still_unsafe_after_target": 0.914667
+      },
+      "branchy_minus_standalone_rescue_rate": 0.055333
+    }
+  ]
+}
+wrote results/resnet_low_conf_rescue_analysis_001_summary.json
