@@ -1,0 +1,12 @@
+{
+  "id": "resnet_low_conf_rescue_analysis_001",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": false,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m scripts.resnet_low_conf_rescue_analysis --output results/resnet_low_conf_rescue_analysis_001_summary.json",
+  "max_runtime_sec": 300,
+  "result_file": "results/resnet_low_conf_rescue_analysis_001.json",
+  "note": "ResNet-only analysis of whether low self-confidence early-exit samples are rescued by later exits. MobileNet is intentionally excluded."
+}
