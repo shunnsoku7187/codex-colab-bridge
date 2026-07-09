@@ -1,0 +1,12 @@
+{
+  "id": "cifar10_inspection_theme_probe_001",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": false,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m scripts.cifar10_inspection_theme_probe --output results/cifar10_inspection_theme_probe_001_summary.json",
+  "max_runtime_sec": 300,
+  "result_file": "results/cifar10_inspection_theme_probe_001.json",
+  "note": "CIFAR-10-only probe for research value beyond standard BranchyNet metrics: deadline/reinspect, final-risk reject, and FPGA profile sensitivity."
+}
