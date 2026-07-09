@@ -1,6 +1,6 @@
 {
   "id": "resnet_dual_threshold_sweep_001",
-  "status": "running",
+  "status": "done",
   "backend": "gpu",
   "requires_gpu": false,
   "type": "shell",
@@ -9,6 +9,8 @@
   "max_runtime_sec": 300,
   "result_file": "results/resnet_dual_threshold_sweep_001.json",
   "note": "ResNet56 BranchyNet dual-threshold sweep. At exit0/exit1, high self-confidence accepts early, low self-confidence rejects early, and only middle-confidence samples continue.",
-  "updated_at": "2026-07-09T14:53:06.833050+00:00",
-  "started_at": "2026-07-09T14:53:06.832953+00:00"
+  "updated_at": "2026-07-09T14:53:20.319605+00:00",
+  "started_at": "2026-07-09T14:53:06.832953+00:00",
+  "returncode": 0,
+  "finished_at": "2026-07-09T14:53:20.318609+00:00"
 }

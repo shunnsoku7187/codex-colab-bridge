@@ -1,0 +1,109 @@
+{
+  "purpose": "Sweep dual-threshold early exit: high self-confidence accept, low self-confidence reject, middle continues.",
+  "final_accuracy": 0.9032,
+  "sweep_count": 4356,
+  "high_conf_only_baseline": {
+    "thresholds": {
+      "lower0": -1.0,
+      "upper0": 0.832938,
+      "lower1": -1.0,
+      "upper1": 0.936158
+    },
+    "counts": {
+      "accept0": 1000,
+      "reject0": 0,
+      "accept1": 1149,
+      "reject1": 0,
+      "final": 2851
+    },
+    "rates": {
+      "accept0": 0.2,
+      "reject0": 0.0,
+      "accept1": 0.2298,
+      "reject1": 0.0,
+      "final": 0.5702
+    },
+    "accept_rate": 1.0,
+    "reject_rate": 0.0,
+    "final_rate": 0.5702,
+    "early_terminal_rate": 0.4298,
+    "avg_cost": 0.668851,
+    "accepted_accuracy": 0.8954,
+    "false_accept_rate": 0.1046,
+    "rejected_final_correct_rate": null,
+    "rejected_final_high_conf_correct_rate": null,
+    "accuracy_drop_vs_final": 0.0078
+  },
+  "best_under_constraints": {
+    "false_accept_le_0.02_rejected_final_high_correct_le_0.02": null,
+    "false_accept_le_0.02_rejected_final_high_correct_le_0.05": null,
+    "false_accept_le_0.02_rejected_final_high_correct_le_0.10": null,
+    "false_accept_le_0.05_rejected_final_high_correct_le_0.02": null,
+    "false_accept_le_0.05_rejected_final_high_correct_le_0.05": null,
+    "false_accept_le_0.05_rejected_final_high_correct_le_0.10": {
+      "thresholds": {
+        "lower0": 0.379016,
+        "upper0": 0.911682,
+        "lower1": 0.785739,
+        "upper1": 0.936158
+      },
+      "counts": {
+        "accept0": 500,
+        "reject0": 750,
+        "accept1": 1477,
+        "reject1": 1424,
+        "final": 849
+      },
+      "rates": {
+        "accept0": 0.1,
+        "reject0": 0.15,
+        "accept1": 0.2954,
+        "reject1": 0.2848,
+        "final": 0.1698
+      },
+      "accept_rate": 0.5652,
+      "reject_rate": 0.4348,
+      "final_rate": 0.1698,
+      "early_terminal_rate": 0.8302,
+      "avg_cost": 0.404967,
+      "accepted_accuracy": 0.956829,
+      "false_accept_rate": 0.043171,
+      "rejected_final_correct_rate": 0.827507,
+      "rejected_final_high_conf_correct_rate": 0.098896
+    },
+    "false_accept_le_0.10_rejected_final_high_correct_le_0.02": null,
+    "false_accept_le_0.10_rejected_final_high_correct_le_0.05": null,
+    "false_accept_le_0.10_rejected_final_high_correct_le_0.10": {
+      "thresholds": {
+        "lower0": 0.411412,
+        "upper0": 0.749401,
+        "lower1": 0.680308,
+        "upper1": 0.785739
+      },
+      "counts": {
+        "accept0": 1500,
+        "reject0": 1000,
+        "accept1": 1397,
+        "reject1": 803,
+        "final": 300
+      },
+      "rates": {
+        "accept0": 0.3,
+        "reject0": 0.2,
+        "accept1": 0.2794,
+        "reject1": 0.1606,
+        "final": 0.06
+      },
+      "accept_rate": 0.6394,
+      "reject_rate": 0.3606,
+      "final_rate": 0.06,
+      "early_terminal_rate": 0.94,
+      "avg_cost": 0.255273,
+      "accepted_accuracy": 0.909916,
+      "false_accept_rate": 0.090084,
+      "rejected_final_correct_rate": 0.823073,
+      "rejected_final_high_conf_correct_rate": 0.09706
+    }
+  }
+}
+wrote results/resnet_dual_threshold_sweep_001_summary.json

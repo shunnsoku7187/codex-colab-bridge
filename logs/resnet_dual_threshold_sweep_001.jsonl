@@ -1,2 +1,4 @@
 {"time": "2026-07-09T14:53:06.833690+00:00", "event": "job_running", "job_file": "jobs/resnet_dual_threshold_sweep_001.json"}
 {"time": "2026-07-09T14:53:09.400791+00:00", "event": "process_prepared", "command": "python -m scripts.resnet_dual_threshold_sweep --output results/resnet_dual_threshold_sweep_001_summary.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 300}
+{"time": "2026-07-09T14:53:10.942207+00:00", "event": "process_start", "command": "python -m scripts.resnet_dual_threshold_sweep --output results/resnet_dual_threshold_sweep_001_summary.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge"}
+{"time": "2026-07-09T14:53:20.318384+00:00", "event": "process_end", "returncode": 0, "duration_sec": 9.376}
