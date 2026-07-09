@@ -1,23 +1,23 @@
 {
   "output_name": "0003_branchynet_mobilenet_cifar100_retry",
   "status": "training",
-  "completed_epochs": 2,
+  "completed_epochs": 3,
   "target_epochs": 10,
   "latest_checkpoint": "/content/drive/MyDrive/Research_Experiment/checkpoints/0003_branchynet_mobilenet_cifar100_retry/latest.pt",
-  "epoch_checkpoint": "/content/drive/MyDrive/Research_Experiment/checkpoints/0003_branchynet_mobilenet_cifar100_retry/epoch_002.pt",
+  "epoch_checkpoint": "/content/drive/MyDrive/Research_Experiment/checkpoints/0003_branchynet_mobilenet_cifar100_retry/epoch_003.pt",
   "latest_metrics": {
-    "epoch": 2,
-    "loss": 2.4654875240667398,
+    "epoch": 3,
+    "loss": 2.2345290754152383,
     "exit_losses": [
-      3.7388381958007812,
-      2.912609815597534,
-      0.7450148463249207
+      3.463610887527466,
+      2.5204579830169678,
+      0.7195194959640503
     ],
     "exit_accuracy": [
-      0.12818,
-      0.26578,
-      0.77038
+      0.16534,
+      0.33176,
+      0.7764
     ]
   },
-  "updated_at": "2026-07-09T06:52:40.887088+00:00"
+  "updated_at": "2026-07-09T06:54:05.560546+00:00"
 }
