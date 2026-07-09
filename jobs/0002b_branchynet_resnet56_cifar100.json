@@ -1,6 +1,6 @@
 {
   "id": "0002b_branchynet_resnet56_cifar100",
-  "status": "running",
+  "status": "done",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,6 +9,8 @@
   "max_runtime_sec": 7200,
   "result_file": "results/0002b_branchynet_resnet56_cifar100.json",
   "note": "ResNet-56 CIFAR-100 counterpart for comparing dataset difficulty after the CIFAR-10 ResNet-56 approximation.",
-  "updated_at": "2026-07-09T09:44:38.828882+00:00",
-  "started_at": "2026-07-09T09:44:38.828858+00:00"
+  "updated_at": "2026-07-09T10:03:22.347816+00:00",
+  "started_at": "2026-07-09T09:44:38.828858+00:00",
+  "returncode": 0,
+  "finished_at": "2026-07-09T10:03:22.347051+00:00"
 }
