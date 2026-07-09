@@ -1,0 +1,23 @@
+{
+  "output_name": "0003_branchynet_mobilenet_cifar100_retry",
+  "status": "training",
+  "completed_epochs": 1,
+  "target_epochs": 10,
+  "latest_checkpoint": "/content/drive/MyDrive/Research_Experiment/checkpoints/0003_branchynet_mobilenet_cifar100_retry/latest.pt",
+  "epoch_checkpoint": "/content/drive/MyDrive/Research_Experiment/checkpoints/0003_branchynet_mobilenet_cifar100_retry/epoch_001.pt",
+  "latest_metrics": {
+    "epoch": 1,
+    "loss": 3.0006942602679554,
+    "exit_losses": [
+      4.274781703948975,
+      3.8317224979400635,
+      0.8955764174461365
+    ],
+    "exit_accuracy": [
+      0.06516,
+      0.1396,
+      0.72746
+    ]
+  },
+  "updated_at": "2026-07-09T06:51:14.816919+00:00"
+}
