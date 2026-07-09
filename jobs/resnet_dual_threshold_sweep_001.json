@@ -1,6 +1,6 @@
 {
   "id": "resnet_dual_threshold_sweep_001",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": false,
   "type": "shell",
@@ -8,5 +8,7 @@
   "command": "python -m scripts.resnet_dual_threshold_sweep --output results/resnet_dual_threshold_sweep_001_summary.json",
   "max_runtime_sec": 300,
   "result_file": "results/resnet_dual_threshold_sweep_001.json",
-  "note": "ResNet56 BranchyNet dual-threshold sweep. At exit0/exit1, high self-confidence accepts early, low self-confidence rejects early, and only middle-confidence samples continue."
+  "note": "ResNet56 BranchyNet dual-threshold sweep. At exit0/exit1, high self-confidence accepts early, low self-confidence rejects early, and only middle-confidence samples continue.",
+  "updated_at": "2026-07-09T14:53:06.833050+00:00",
+  "started_at": "2026-07-09T14:53:06.832953+00:00"
 }
