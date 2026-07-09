@@ -1,0 +1,1888 @@
+{
+  "summary": {
+    "purpose": "Find CIFAR-10 evidence that an inspection-oriented early-exit system can claim value on axes different from standard BranchyNet accuracy/average-cost.",
+    "claim_axes": {
+      "deadline": "Can make safe decisions before a fixed deadline and send the rest to reinspection.",
+      "final_risk": "Can reject samples that even the final classifier is likely to mishandle.",
+      "fpga_profile": "Exit distributions and tail/final pressure change with input profile, which matters for FPGA resource planning."
+    },
+    "comparison_rows": [
+      {
+        "trace": "0000b_branchynet_reproduce_resnet56_cifar10",
+        "standard_branchynet_1pt": {
+          "accuracy": 0.8932,
+          "avg_cost": 0.627913,
+          "final_rate": 0.4864,
+          "p99_cost": 1.0
+        },
+        "deadline_exit1_false_accept_le_5pct": {
+          "accept_rate": 0.5,
+          "reinspect_rate": 0.5,
+          "accepted_accuracy": 0.9532,
+          "deadline_cost": 0.381818
+        },
+        "final_reject_false_accept_le_2pct": {
+          "accept_rate": 0.75,
+          "reinspect_rate": 0.25,
+          "accepted_accuracy": 0.9824
+        },
+        "profile_drift_final_rate": {
+          "hardest_20pct_by_final_confidence": 0.843,
+          "middle_20pct_by_final_confidence": 0.509,
+          "easiest_20pct_by_final_confidence": 0.131
+        },
+        "profile_drift_avg_cost": {
+          "hardest_20pct_by_final_confidence": 0.891818,
+          "middle_20pct_by_final_confidence": 0.656873,
+          "easiest_20pct_by_final_confidence": 0.337127
+        }
+      },
+      {
+        "trace": "0001_branchynet_mobilenet_cifar10_retry",
+        "standard_branchynet_1pt": {
+          "accuracy": 0.8904,
+          "avg_cost": 0.632758,
+          "final_rate": 0.0802,
+          "p99_cost": 1.0
+        },
+        "deadline_exit1_false_accept_le_5pct": {
+          "accept_rate": 0.8,
+          "reinspect_rate": 0.2,
+          "accepted_accuracy": 0.95825,
+          "deadline_cost": 0.684211
+        },
+        "final_reject_false_accept_le_2pct": {
+          "accept_rate": 0.7,
+          "reinspect_rate": 0.3,
+          "accepted_accuracy": 0.984571
+        },
+        "profile_drift_final_rate": {
+          "hardest_20pct_by_final_confidence": 0.322,
+          "middle_20pct_by_final_confidence": 0.01,
+          "easiest_20pct_by_final_confidence": 0.0
+        },
+        "profile_drift_avg_cost": {
+          "hardest_20pct_by_final_confidence": 0.765263,
+          "middle_20pct_by_final_confidence": 0.625842,
+          "easiest_20pct_by_final_confidence": 0.524316
+        }
+      }
+    ]
+  },
+  "per_trace": [
+    {
+      "trace": "results/0000b_branchynet_reproduce_resnet56_cifar10.npz",
+      "n": 5000,
+      "exit_names": [
+        "exit_after_layer1.0",
+        "exit_after_layer2.0",
+        "final"
+      ],
+      "exit_costs": [
+        0.054545,
+        0.381818,
+        1.0
+      ],
+      "final_accuracy": 0.9032,
+      "exit_accuracy": [
+        0.6452,
+        0.7758,
+        0.9032
+      ],
+      "branchynet_accuracy_cost_curve": [
+        {
+          "max_accuracy_drop": 0.0,
+          "found": true,
+          "accuracy": 0.9032,
+          "avg_cost": 0.845389,
+          "p90_cost": 1.0,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 1,
+            "1": 1249,
+            "2": 3750
+          },
+          "exit_rates": {
+            "0": 0.0002,
+            "1": 0.2498,
+            "2": 0.75
+          },
+          "thresholds": [
+            0.999669,
+            0.984355
+          ],
+          "accuracy_drop": 0.0
+        },
+        {
+          "max_accuracy_drop": 0.0025,
+          "found": true,
+          "accuracy": 0.9008,
+          "avg_cost": 0.718124,
+          "p90_cost": 1.0,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 625,
+            "1": 1324,
+            "2": 3051
+          },
+          "exit_rates": {
+            "0": 0.125,
+            "1": 0.2648,
+            "2": 0.6102
+          },
+          "thresholds": [
+            0.891896,
+            0.94615
+          ],
+          "accuracy_drop": 0.0024
+        },
+        {
+          "max_accuracy_drop": 0.005,
+          "found": true,
+          "accuracy": 0.8992,
+          "avg_cost": 0.694509,
+          "p90_cost": 1.0,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 625,
+            "1": 1515,
+            "2": 2860
+          },
+          "exit_rates": {
+            "0": 0.125,
+            "1": 0.303,
+            "2": 0.572
+          },
+          "thresholds": [
+            0.891896,
+            0.928377
+          ],
+          "accuracy_drop": 0.004
+        },
+        {
+          "max_accuracy_drop": 0.01,
+          "found": true,
+          "accuracy": 0.8932,
+          "avg_cost": 0.627913,
+          "p90_cost": 1.0,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 834,
+            "1": 1734,
+            "2": 2432
+          },
+          "exit_rates": {
+            "0": 0.1668,
+            "1": 0.3468,
+            "2": 0.4864
+          },
+          "thresholds": [
+            0.858503,
+            0.874421
+          ],
+          "accuracy_drop": 0.01
+        },
+        {
+          "max_accuracy_drop": 0.02,
+          "found": true,
+          "accuracy": 0.8842,
+          "avg_cost": 0.567673,
+          "p90_cost": 1.0,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 1250,
+            "1": 1585,
+            "2": 2165
+          },
+          "exit_rates": {
+            "0": 0.25,
+            "1": 0.317,
+            "2": 0.433
+          },
+          "thresholds": [
+            0.78997,
+            0.841743
+          ],
+          "accuracy_drop": 0.019
+        },
+        {
+          "max_accuracy_drop": 0.05,
+          "found": true,
+          "accuracy": 0.8548,
+          "avg_cost": 0.439862,
+          "p90_cost": 1.0,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 1667,
+            "1": 1981,
+            "2": 1352
+          },
+          "exit_rates": {
+            "0": 0.3334,
+            "1": 0.3962,
+            "2": 0.2704
+          },
+          "thresholds": [
+            0.723936,
+            0.67037
+          ],
+          "accuracy_drop": 0.0484
+        }
+      ],
+      "inspection_deadline": {
+        "deadline_at_exit0": [
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.153241,
+            "accept_rate": 1.0,
+            "reinspect_rate": 0.0,
+            "accepted_accuracy": 0.6452,
+            "false_accept_rate": 0.3548
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.299902,
+            "accept_rate": 0.95,
+            "reinspect_rate": 0.05,
+            "accepted_accuracy": 0.665263,
+            "false_accept_rate": 0.334737
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.341351,
+            "accept_rate": 0.9,
+            "reinspect_rate": 0.1,
+            "accepted_accuracy": 0.686,
+            "false_accept_rate": 0.314
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.379016,
+            "accept_rate": 0.85,
+            "reinspect_rate": 0.15,
+            "accepted_accuracy": 0.705176,
+            "false_accept_rate": 0.294824
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.411412,
+            "accept_rate": 0.8,
+            "reinspect_rate": 0.2,
+            "accepted_accuracy": 0.727,
+            "false_accept_rate": 0.273
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.443117,
+            "accept_rate": 0.75,
+            "reinspect_rate": 0.25,
+            "accepted_accuracy": 0.741867,
+            "false_accept_rate": 0.258133
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.473528,
+            "accept_rate": 0.7,
+            "reinspect_rate": 0.3,
+            "accepted_accuracy": 0.760571,
+            "false_accept_rate": 0.239429
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.497987,
+            "accept_rate": 0.65,
+            "reinspect_rate": 0.35,
+            "accepted_accuracy": 0.782462,
+            "false_accept_rate": 0.217538
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.529915,
+            "accept_rate": 0.6,
+            "reinspect_rate": 0.4,
+            "accepted_accuracy": 0.803667,
+            "false_accept_rate": 0.196333
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.565143,
+            "accept_rate": 0.55,
+            "reinspect_rate": 0.45,
+            "accepted_accuracy": 0.825091,
+            "false_accept_rate": 0.174909
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.59792,
+            "accept_rate": 0.5,
+            "reinspect_rate": 0.5,
+            "accepted_accuracy": 0.8444,
+            "false_accept_rate": 0.1556
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.632218,
+            "accept_rate": 0.45,
+            "reinspect_rate": 0.55,
+            "accepted_accuracy": 0.861333,
+            "false_accept_rate": 0.138667
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.670714,
+            "accept_rate": 0.4,
+            "reinspect_rate": 0.6,
+            "accepted_accuracy": 0.879,
+            "false_accept_rate": 0.121
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.710372,
+            "accept_rate": 0.35,
+            "reinspect_rate": 0.65,
+            "accepted_accuracy": 0.897143,
+            "false_accept_rate": 0.102857
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.749401,
+            "accept_rate": 0.3,
+            "reinspect_rate": 0.7,
+            "accepted_accuracy": 0.916667,
+            "false_accept_rate": 0.083333
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.78997,
+            "accept_rate": 0.25,
+            "reinspect_rate": 0.75,
+            "accepted_accuracy": 0.9328,
+            "false_accept_rate": 0.0672
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.832938,
+            "accept_rate": 0.2,
+            "reinspect_rate": 0.8,
+            "accepted_accuracy": 0.947,
+            "false_accept_rate": 0.053
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.871821,
+            "accept_rate": 0.15,
+            "reinspect_rate": 0.85,
+            "accepted_accuracy": 0.961333,
+            "false_accept_rate": 0.038667
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.911682,
+            "accept_rate": 0.1,
+            "reinspect_rate": 0.9,
+            "accepted_accuracy": 0.972,
+            "false_accept_rate": 0.028
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.955025,
+            "accept_rate": 0.05,
+            "reinspect_rate": 0.95,
+            "accepted_accuracy": 0.98,
+            "false_accept_rate": 0.02
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.999669,
+            "accept_rate": 0.0002,
+            "reinspect_rate": 0.9998,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          }
+        ],
+        "deadline_at_exit1": [
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.185311,
+            "accept_rate": 1.0,
+            "reinspect_rate": 0.0,
+            "accepted_accuracy": 0.7758,
+            "false_accept_rate": 0.2242
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.391709,
+            "accept_rate": 0.95,
+            "reinspect_rate": 0.05,
+            "accepted_accuracy": 0.799368,
+            "false_accept_rate": 0.200632
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.470324,
+            "accept_rate": 0.9,
+            "reinspect_rate": 0.1,
+            "accepted_accuracy": 0.821556,
+            "false_accept_rate": 0.178444
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.522672,
+            "accept_rate": 0.85,
+            "reinspect_rate": 0.15,
+            "accepted_accuracy": 0.842353,
+            "false_accept_rate": 0.157647
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.57495,
+            "accept_rate": 0.8,
+            "reinspect_rate": 0.2,
+            "accepted_accuracy": 0.8605,
+            "false_accept_rate": 0.1395
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.627042,
+            "accept_rate": 0.75,
+            "reinspect_rate": 0.25,
+            "accepted_accuracy": 0.880267,
+            "false_accept_rate": 0.119733
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.680308,
+            "accept_rate": 0.7,
+            "reinspect_rate": 0.3,
+            "accepted_accuracy": 0.895143,
+            "false_accept_rate": 0.104857
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.735583,
+            "accept_rate": 0.65,
+            "reinspect_rate": 0.35,
+            "accepted_accuracy": 0.913846,
+            "false_accept_rate": 0.086154
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.785739,
+            "accept_rate": 0.6,
+            "reinspect_rate": 0.4,
+            "accepted_accuracy": 0.93,
+            "false_accept_rate": 0.07
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.833565,
+            "accept_rate": 0.55,
+            "reinspect_rate": 0.45,
+            "accepted_accuracy": 0.943273,
+            "false_accept_rate": 0.056727
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.874421,
+            "accept_rate": 0.5,
+            "reinspect_rate": 0.5,
+            "accepted_accuracy": 0.9532,
+            "false_accept_rate": 0.0468
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.909278,
+            "accept_rate": 0.45,
+            "reinspect_rate": 0.55,
+            "accepted_accuracy": 0.963556,
+            "false_accept_rate": 0.036444
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.936158,
+            "accept_rate": 0.4,
+            "reinspect_rate": 0.6,
+            "accepted_accuracy": 0.9715,
+            "false_accept_rate": 0.0285
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.955385,
+            "accept_rate": 0.35,
+            "reinspect_rate": 0.65,
+            "accepted_accuracy": 0.978286,
+            "false_accept_rate": 0.021714
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.973002,
+            "accept_rate": 0.3,
+            "reinspect_rate": 0.7,
+            "accepted_accuracy": 0.984667,
+            "false_accept_rate": 0.015333
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.984355,
+            "accept_rate": 0.25,
+            "reinspect_rate": 0.75,
+            "accepted_accuracy": 0.9896,
+            "false_accept_rate": 0.0104
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.990799,
+            "accept_rate": 0.2,
+            "reinspect_rate": 0.8,
+            "accepted_accuracy": 0.992,
+            "false_accept_rate": 0.008
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.995257,
+            "accept_rate": 0.15,
+            "reinspect_rate": 0.85,
+            "accepted_accuracy": 0.990667,
+            "false_accept_rate": 0.009333
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.998196,
+            "accept_rate": 0.1,
+            "reinspect_rate": 0.9,
+            "accepted_accuracy": 0.998,
+            "false_accept_rate": 0.002
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.999641,
+            "accept_rate": 0.05,
+            "reinspect_rate": 0.95,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 1.0,
+            "accept_rate": 0.0002,
+            "reinspect_rate": 0.9998,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          }
+        ],
+        "best_points_exit0": {
+          "false_accept_le_0.01": {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.999669,
+            "accept_rate": 0.0002,
+            "reinspect_rate": 0.9998,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          },
+          "false_accept_le_0.02": {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.955025,
+            "accept_rate": 0.05,
+            "reinspect_rate": 0.95,
+            "accepted_accuracy": 0.98,
+            "false_accept_rate": 0.02
+          },
+          "false_accept_le_0.05": {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.871821,
+            "accept_rate": 0.15,
+            "reinspect_rate": 0.85,
+            "accepted_accuracy": 0.961333,
+            "false_accept_rate": 0.038667
+          },
+          "false_accept_le_0.10": {
+            "deadline_exit": 0,
+            "deadline_cost": 0.054545,
+            "threshold": 0.749401,
+            "accept_rate": 0.3,
+            "reinspect_rate": 0.7,
+            "accepted_accuracy": 0.916667,
+            "false_accept_rate": 0.083333
+          }
+        },
+        "best_points_exit1": {
+          "false_accept_le_0.01": {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.990799,
+            "accept_rate": 0.2,
+            "reinspect_rate": 0.8,
+            "accepted_accuracy": 0.992,
+            "false_accept_rate": 0.008
+          },
+          "false_accept_le_0.02": {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.973002,
+            "accept_rate": 0.3,
+            "reinspect_rate": 0.7,
+            "accepted_accuracy": 0.984667,
+            "false_accept_rate": 0.015333
+          },
+          "false_accept_le_0.05": {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.874421,
+            "accept_rate": 0.5,
+            "reinspect_rate": 0.5,
+            "accepted_accuracy": 0.9532,
+            "false_accept_rate": 0.0468
+          },
+          "false_accept_le_0.10": {
+            "deadline_exit": 1,
+            "deadline_cost": 0.381818,
+            "threshold": 0.735583,
+            "accept_rate": 0.65,
+            "reinspect_rate": 0.35,
+            "accepted_accuracy": 0.913846,
+            "false_accept_rate": 0.086154
+          }
+        }
+      },
+      "final_risk_reinspect": {
+        "curve": [
+          {
+            "threshold": 0.207455,
+            "accept_rate": 1.0,
+            "reinspect_rate": 0.0,
+            "accepted_accuracy": 0.9032,
+            "false_accept_rate": 0.0968
+          },
+          {
+            "threshold": 0.566393,
+            "accept_rate": 0.95,
+            "reinspect_rate": 0.05,
+            "accepted_accuracy": 0.929263,
+            "false_accept_rate": 0.070737
+          },
+          {
+            "threshold": 0.714823,
+            "accept_rate": 0.9,
+            "reinspect_rate": 0.1,
+            "accepted_accuracy": 0.948667,
+            "false_accept_rate": 0.051333
+          },
+          {
+            "threshold": 0.818787,
+            "accept_rate": 0.85,
+            "reinspect_rate": 0.15,
+            "accepted_accuracy": 0.961412,
+            "false_accept_rate": 0.038588
+          },
+          {
+            "threshold": 0.896996,
+            "accept_rate": 0.8,
+            "reinspect_rate": 0.2,
+            "accepted_accuracy": 0.9745,
+            "false_accept_rate": 0.0255
+          },
+          {
+            "threshold": 0.944376,
+            "accept_rate": 0.75,
+            "reinspect_rate": 0.25,
+            "accepted_accuracy": 0.9824,
+            "false_accept_rate": 0.0176
+          },
+          {
+            "threshold": 0.968411,
+            "accept_rate": 0.7,
+            "reinspect_rate": 0.3,
+            "accepted_accuracy": 0.988571,
+            "false_accept_rate": 0.011429
+          },
+          {
+            "threshold": 0.983142,
+            "accept_rate": 0.65,
+            "reinspect_rate": 0.35,
+            "accepted_accuracy": 0.991385,
+            "false_accept_rate": 0.008615
+          },
+          {
+            "threshold": 0.990716,
+            "accept_rate": 0.6,
+            "reinspect_rate": 0.4,
+            "accepted_accuracy": 0.994667,
+            "false_accept_rate": 0.005333
+          },
+          {
+            "threshold": 0.994857,
+            "accept_rate": 0.55,
+            "reinspect_rate": 0.45,
+            "accepted_accuracy": 0.995636,
+            "false_accept_rate": 0.004364
+          },
+          {
+            "threshold": 0.997157,
+            "accept_rate": 0.5,
+            "reinspect_rate": 0.5,
+            "accepted_accuracy": 0.9976,
+            "false_accept_rate": 0.0024
+          },
+          {
+            "threshold": 0.998379,
+            "accept_rate": 0.45,
+            "reinspect_rate": 0.55,
+            "accepted_accuracy": 0.998222,
+            "false_accept_rate": 0.001778
+          },
+          {
+            "threshold": 0.999095,
+            "accept_rate": 0.4,
+            "reinspect_rate": 0.6,
+            "accepted_accuracy": 0.9985,
+            "false_accept_rate": 0.0015
+          },
+          {
+            "threshold": 0.99948,
+            "accept_rate": 0.35,
+            "reinspect_rate": 0.65,
+            "accepted_accuracy": 0.998286,
+            "false_accept_rate": 0.001714
+          },
+          {
+            "threshold": 0.999711,
+            "accept_rate": 0.3,
+            "reinspect_rate": 0.7,
+            "accepted_accuracy": 0.998,
+            "false_accept_rate": 0.002
+          },
+          {
+            "threshold": 0.999846,
+            "accept_rate": 0.25,
+            "reinspect_rate": 0.75,
+            "accepted_accuracy": 0.9984,
+            "false_accept_rate": 0.0016
+          },
+          {
+            "threshold": 0.999922,
+            "accept_rate": 0.2,
+            "reinspect_rate": 0.8,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          },
+          {
+            "threshold": 0.999964,
+            "accept_rate": 0.1504,
+            "reinspect_rate": 0.8496,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          },
+          {
+            "threshold": 0.999986,
+            "accept_rate": 0.1,
+            "reinspect_rate": 0.9,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          },
+          {
+            "threshold": 0.999996,
+            "accept_rate": 0.0502,
+            "reinspect_rate": 0.9498,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          },
+          {
+            "threshold": 1.0,
+            "accept_rate": 0.0022,
+            "reinspect_rate": 0.9978,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          }
+        ],
+        "best_points": {
+          "false_accept_le_0.01": {
+            "threshold": 0.983142,
+            "accept_rate": 0.65,
+            "reinspect_rate": 0.35,
+            "accepted_accuracy": 0.991385,
+            "false_accept_rate": 0.008615
+          },
+          "false_accept_le_0.02": {
+            "threshold": 0.944376,
+            "accept_rate": 0.75,
+            "reinspect_rate": 0.25,
+            "accepted_accuracy": 0.9824,
+            "false_accept_rate": 0.0176
+          },
+          "false_accept_le_0.05": {
+            "threshold": 0.818787,
+            "accept_rate": 0.85,
+            "reinspect_rate": 0.15,
+            "accepted_accuracy": 0.961412,
+            "false_accept_rate": 0.038588
+          },
+          "false_accept_le_0.10": {
+            "threshold": 0.207455,
+            "accept_rate": 1.0,
+            "reinspect_rate": 0.0,
+            "accepted_accuracy": 0.9032,
+            "false_accept_rate": 0.0968
+          }
+        }
+      },
+      "fpga_profile": {
+        "branchynet_1pt_policy": {
+          "max_accuracy_drop": 0.01,
+          "found": true,
+          "accuracy": 0.8932,
+          "avg_cost": 0.627913,
+          "p90_cost": 1.0,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 834,
+            "1": 1734,
+            "2": 2432
+          },
+          "exit_rates": {
+            "0": 0.1668,
+            "1": 0.3468,
+            "2": 0.4864
+          },
+          "thresholds": [
+            0.858503,
+            0.874421
+          ],
+          "accuracy_drop": 0.01
+        },
+        "window_pressure": {
+          "window": 100,
+          "num_windows": 50,
+          "final_rate_mean": 0.4864,
+          "final_rate_p90": 0.55,
+          "final_rate_p99": 0.5753,
+          "mean_cost_p90": 0.673709,
+          "mean_cost_p99": 0.701589
+        },
+        "profile_drift_by_final_confidence": {
+          "hardest_20pct_by_final_confidence": {
+            "accuracy": 0.615,
+            "avg_cost": 0.891818,
+            "p90_cost": 1.0,
+            "p99_cost": 1.0,
+            "max_cost": 1.0,
+            "exit_counts": {
+              "0": 34,
+              "1": 123,
+              "2": 843
+            },
+            "exit_rates": {
+              "0": 0.034,
+              "1": 0.123,
+              "2": 0.843
+            },
+            "thresholds": [
+              0.858503,
+              0.874421
+            ]
+          },
+          "middle_20pct_by_final_confidence": {
+            "accuracy": 0.98,
+            "avg_cost": 0.656873,
+            "p90_cost": 1.0,
+            "p99_cost": 1.0,
+            "max_cost": 1.0,
+            "exit_counts": {
+              "0": 121,
+              "1": 370,
+              "2": 509
+            },
+            "exit_rates": {
+              "0": 0.121,
+              "1": 0.37,
+              "2": 0.509
+            },
+            "thresholds": [
+              0.858503,
+              0.874421
+            ]
+          },
+          "easiest_20pct_by_final_confidence": {
+            "accuracy": 0.994,
+            "avg_cost": 0.337127,
+            "p90_cost": 1.0,
+            "p99_cost": 1.0,
+            "max_cost": 1.0,
+            "exit_counts": {
+              "0": 384,
+              "1": 485,
+              "2": 131
+            },
+            "exit_rates": {
+              "0": 0.384,
+              "1": 0.485,
+              "2": 0.131
+            },
+            "thresholds": [
+              0.858503,
+              0.874421
+            ]
+          }
+        }
+      }
+    },
+    {
+      "trace": "results/0001_branchynet_mobilenet_cifar10_retry.npz",
+      "n": 5000,
+      "exit_names": [
+        "exit_after_features.5",
+        "exit_after_features.12",
+        "final"
+      ],
+      "exit_costs": [
+        0.315789,
+        0.684211,
+        1.0
+      ],
+      "final_accuracy": 0.8984,
+      "exit_accuracy": [
+        0.6676,
+        0.887,
+        0.8984
+      ],
+      "branchynet_accuracy_cost_curve": [
+        {
+          "max_accuracy_drop": 0.0,
+          "found": true,
+          "accuracy": 0.8984,
+          "avg_cost": 0.747695,
+          "p90_cost": 1.0,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 209,
+            "1": 3542,
+            "2": 1249
+          },
+          "exit_rates": {
+            "0": 0.0418,
+            "1": 0.7084,
+            "2": 0.2498
+          },
+          "thresholds": [
+            0.977735,
+            0.882884
+          ],
+          "accuracy_drop": 0.0
+        },
+        {
+          "max_accuracy_drop": 0.0025,
+          "found": true,
+          "accuracy": 0.8964,
+          "avg_cost": 0.692768,
+          "p90_cost": 1.0,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 417,
+            "1": 3961,
+            "2": 622
+          },
+          "exit_rates": {
+            "0": 0.0834,
+            "1": 0.7922,
+            "2": 0.1244
+          },
+          "thresholds": [
+            0.953117,
+            0.679716
+          ],
+          "accuracy_drop": 0.002
+        },
+        {
+          "max_accuracy_drop": 0.005,
+          "found": true,
+          "accuracy": 0.8946,
+          "avg_cost": 0.661095,
+          "p90_cost": 1.0,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 834,
+            "1": 3559,
+            "2": 607
+          },
+          "exit_rates": {
+            "0": 0.1668,
+            "1": 0.7118,
+            "2": 0.1214
+          },
+          "thresholds": [
+            0.898916,
+            0.679716
+          ],
+          "accuracy_drop": 0.0038
+        },
+        {
+          "max_accuracy_drop": 0.01,
+          "found": true,
+          "accuracy": 0.8904,
+          "avg_cost": 0.632758,
+          "p90_cost": 0.684211,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 1042,
+            "1": 3557,
+            "2": 401
+          },
+          "exit_rates": {
+            "0": 0.2084,
+            "1": 0.7114,
+            "2": 0.0802
+          },
+          "thresholds": [
+            0.873275,
+            0.58845
+          ],
+          "accuracy_drop": 0.008
+        },
+        {
+          "max_accuracy_drop": 0.02,
+          "found": true,
+          "accuracy": 0.8784,
+          "avg_cost": 0.585568,
+          "p90_cost": 0.684211,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 1667,
+            "1": 2950,
+            "2": 383
+          },
+          "exit_rates": {
+            "0": 0.3334,
+            "1": 0.59,
+            "2": 0.0766
+          },
+          "thresholds": [
+            0.779639,
+            0.58845
+          ],
+          "accuracy_drop": 0.02
+        },
+        {
+          "max_accuracy_drop": 0.05,
+          "found": true,
+          "accuracy": 0.8504,
+          "avg_cost": 0.510989,
+          "p90_cost": 0.684211,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 2500,
+            "1": 2326,
+            "2": 174
+          },
+          "exit_rates": {
+            "0": 0.5,
+            "1": 0.4652,
+            "2": 0.0348
+          },
+          "thresholds": [
+            0.649917,
+            0.490703
+          ],
+          "accuracy_drop": 0.048
+        }
+      ],
+      "inspection_deadline": {
+        "deadline_at_exit0": [
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.193366,
+            "accept_rate": 1.0,
+            "reinspect_rate": 0.0,
+            "accepted_accuracy": 0.6676,
+            "false_accept_rate": 0.3324
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.327814,
+            "accept_rate": 0.95,
+            "reinspect_rate": 0.05,
+            "accepted_accuracy": 0.687579,
+            "false_accept_rate": 0.312421
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.374683,
+            "accept_rate": 0.9,
+            "reinspect_rate": 0.1,
+            "accepted_accuracy": 0.706444,
+            "false_accept_rate": 0.293556
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.418649,
+            "accept_rate": 0.85,
+            "reinspect_rate": 0.15,
+            "accepted_accuracy": 0.724706,
+            "false_accept_rate": 0.275294
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.456894,
+            "accept_rate": 0.8,
+            "reinspect_rate": 0.2,
+            "accepted_accuracy": 0.744,
+            "false_accept_rate": 0.256
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.488029,
+            "accept_rate": 0.75,
+            "reinspect_rate": 0.25,
+            "accepted_accuracy": 0.7624,
+            "false_accept_rate": 0.2376
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.513992,
+            "accept_rate": 0.7,
+            "reinspect_rate": 0.3,
+            "accepted_accuracy": 0.780857,
+            "false_accept_rate": 0.219143
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.547491,
+            "accept_rate": 0.65,
+            "reinspect_rate": 0.35,
+            "accepted_accuracy": 0.802769,
+            "false_accept_rate": 0.197231
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.577534,
+            "accept_rate": 0.6,
+            "reinspect_rate": 0.4,
+            "accepted_accuracy": 0.822667,
+            "false_accept_rate": 0.177333
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.613612,
+            "accept_rate": 0.55,
+            "reinspect_rate": 0.45,
+            "accepted_accuracy": 0.845455,
+            "false_accept_rate": 0.154545
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.649917,
+            "accept_rate": 0.5,
+            "reinspect_rate": 0.5,
+            "accepted_accuracy": 0.8588,
+            "false_accept_rate": 0.1412
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.689578,
+            "accept_rate": 0.45,
+            "reinspect_rate": 0.55,
+            "accepted_accuracy": 0.872889,
+            "false_accept_rate": 0.127111
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.728679,
+            "accept_rate": 0.4,
+            "reinspect_rate": 0.6,
+            "accepted_accuracy": 0.888,
+            "false_accept_rate": 0.112
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.767649,
+            "accept_rate": 0.35,
+            "reinspect_rate": 0.65,
+            "accepted_accuracy": 0.902286,
+            "false_accept_rate": 0.097714
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.802489,
+            "accept_rate": 0.3,
+            "reinspect_rate": 0.7,
+            "accepted_accuracy": 0.915333,
+            "false_accept_rate": 0.084667
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.843605,
+            "accept_rate": 0.25,
+            "reinspect_rate": 0.75,
+            "accepted_accuracy": 0.9296,
+            "false_accept_rate": 0.0704
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.877952,
+            "accept_rate": 0.2,
+            "reinspect_rate": 0.8,
+            "accepted_accuracy": 0.947,
+            "false_accept_rate": 0.053
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.910798,
+            "accept_rate": 0.15,
+            "reinspect_rate": 0.85,
+            "accepted_accuracy": 0.965333,
+            "false_accept_rate": 0.034667
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.943976,
+            "accept_rate": 0.1,
+            "reinspect_rate": 0.9,
+            "accepted_accuracy": 0.966,
+            "false_accept_rate": 0.034
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.974109,
+            "accept_rate": 0.05,
+            "reinspect_rate": 0.95,
+            "accepted_accuracy": 0.972,
+            "false_accept_rate": 0.028
+          },
+          {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.999914,
+            "accept_rate": 0.0002,
+            "reinspect_rate": 0.9998,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          }
+        ],
+        "deadline_at_exit1": [
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.229255,
+            "accept_rate": 1.0,
+            "reinspect_rate": 0.0,
+            "accepted_accuracy": 0.887,
+            "false_accept_rate": 0.113
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.511651,
+            "accept_rate": 0.95,
+            "reinspect_rate": 0.05,
+            "accepted_accuracy": 0.908211,
+            "false_accept_rate": 0.091789
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.62271,
+            "accept_rate": 0.9,
+            "reinspect_rate": 0.1,
+            "accepted_accuracy": 0.926667,
+            "false_accept_rate": 0.073333
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.721536,
+            "accept_rate": 0.85,
+            "reinspect_rate": 0.15,
+            "accepted_accuracy": 0.943294,
+            "false_accept_rate": 0.056706
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.818708,
+            "accept_rate": 0.8,
+            "reinspect_rate": 0.2,
+            "accepted_accuracy": 0.95825,
+            "false_accept_rate": 0.04175
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.882884,
+            "accept_rate": 0.75,
+            "reinspect_rate": 0.25,
+            "accepted_accuracy": 0.971467,
+            "false_accept_rate": 0.028533
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.92887,
+            "accept_rate": 0.7,
+            "reinspect_rate": 0.3,
+            "accepted_accuracy": 0.980571,
+            "false_accept_rate": 0.019429
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.955125,
+            "accept_rate": 0.65,
+            "reinspect_rate": 0.35,
+            "accepted_accuracy": 0.985538,
+            "false_accept_rate": 0.014462
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.972962,
+            "accept_rate": 0.6,
+            "reinspect_rate": 0.4,
+            "accepted_accuracy": 0.987,
+            "false_accept_rate": 0.013
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.984195,
+            "accept_rate": 0.55,
+            "reinspect_rate": 0.45,
+            "accepted_accuracy": 0.990545,
+            "false_accept_rate": 0.009455
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.990589,
+            "accept_rate": 0.5,
+            "reinspect_rate": 0.5,
+            "accepted_accuracy": 0.992,
+            "false_accept_rate": 0.008
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.994573,
+            "accept_rate": 0.45,
+            "reinspect_rate": 0.55,
+            "accepted_accuracy": 0.993333,
+            "false_accept_rate": 0.006667
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.99701,
+            "accept_rate": 0.4,
+            "reinspect_rate": 0.6,
+            "accepted_accuracy": 0.9945,
+            "false_accept_rate": 0.0055
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.998313,
+            "accept_rate": 0.35,
+            "reinspect_rate": 0.65,
+            "accepted_accuracy": 0.997714,
+            "false_accept_rate": 0.002286
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.999116,
+            "accept_rate": 0.3,
+            "reinspect_rate": 0.7,
+            "accepted_accuracy": 0.997333,
+            "false_accept_rate": 0.002667
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.9996,
+            "accept_rate": 0.25,
+            "reinspect_rate": 0.75,
+            "accepted_accuracy": 0.9976,
+            "false_accept_rate": 0.0024
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.999814,
+            "accept_rate": 0.2002,
+            "reinspect_rate": 0.7998,
+            "accepted_accuracy": 0.998002,
+            "false_accept_rate": 0.001998
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.999926,
+            "accept_rate": 0.15,
+            "reinspect_rate": 0.85,
+            "accepted_accuracy": 0.997333,
+            "false_accept_rate": 0.002667
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.999975,
+            "accept_rate": 0.1002,
+            "reinspect_rate": 0.8998,
+            "accepted_accuracy": 0.998004,
+            "false_accept_rate": 0.001996
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.999996,
+            "accept_rate": 0.0504,
+            "reinspect_rate": 0.9496,
+            "accepted_accuracy": 0.996032,
+            "false_accept_rate": 0.003968
+          },
+          {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 1.0,
+            "accept_rate": 0.0052,
+            "reinspect_rate": 0.9948,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          }
+        ],
+        "best_points_exit0": {
+          "false_accept_le_0.01": {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.999914,
+            "accept_rate": 0.0002,
+            "reinspect_rate": 0.9998,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          },
+          "false_accept_le_0.02": {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.999914,
+            "accept_rate": 0.0002,
+            "reinspect_rate": 0.9998,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          },
+          "false_accept_le_0.05": {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.910798,
+            "accept_rate": 0.15,
+            "reinspect_rate": 0.85,
+            "accepted_accuracy": 0.965333,
+            "false_accept_rate": 0.034667
+          },
+          "false_accept_le_0.10": {
+            "deadline_exit": 0,
+            "deadline_cost": 0.315789,
+            "threshold": 0.767649,
+            "accept_rate": 0.35,
+            "reinspect_rate": 0.65,
+            "accepted_accuracy": 0.902286,
+            "false_accept_rate": 0.097714
+          }
+        },
+        "best_points_exit1": {
+          "false_accept_le_0.01": {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.984195,
+            "accept_rate": 0.55,
+            "reinspect_rate": 0.45,
+            "accepted_accuracy": 0.990545,
+            "false_accept_rate": 0.009455
+          },
+          "false_accept_le_0.02": {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.92887,
+            "accept_rate": 0.7,
+            "reinspect_rate": 0.3,
+            "accepted_accuracy": 0.980571,
+            "false_accept_rate": 0.019429
+          },
+          "false_accept_le_0.05": {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.818708,
+            "accept_rate": 0.8,
+            "reinspect_rate": 0.2,
+            "accepted_accuracy": 0.95825,
+            "false_accept_rate": 0.04175
+          },
+          "false_accept_le_0.10": {
+            "deadline_exit": 1,
+            "deadline_cost": 0.684211,
+            "threshold": 0.511651,
+            "accept_rate": 0.95,
+            "reinspect_rate": 0.05,
+            "accepted_accuracy": 0.908211,
+            "false_accept_rate": 0.091789
+          }
+        }
+      },
+      "final_risk_reinspect": {
+        "curve": [
+          {
+            "threshold": 0.229593,
+            "accept_rate": 1.0,
+            "reinspect_rate": 0.0,
+            "accepted_accuracy": 0.8984,
+            "false_accept_rate": 0.1016
+          },
+          {
+            "threshold": 0.556501,
+            "accept_rate": 0.95,
+            "reinspect_rate": 0.05,
+            "accepted_accuracy": 0.921684,
+            "false_accept_rate": 0.078316
+          },
+          {
+            "threshold": 0.705554,
+            "accept_rate": 0.9,
+            "reinspect_rate": 0.1,
+            "accepted_accuracy": 0.940444,
+            "false_accept_rate": 0.059556
+          },
+          {
+            "threshold": 0.822297,
+            "accept_rate": 0.85,
+            "reinspect_rate": 0.15,
+            "accepted_accuracy": 0.959294,
+            "false_accept_rate": 0.040706
+          },
+          {
+            "threshold": 0.896187,
+            "accept_rate": 0.8,
+            "reinspect_rate": 0.2,
+            "accepted_accuracy": 0.97125,
+            "false_accept_rate": 0.02875
+          },
+          {
+            "threshold": 0.943358,
+            "accept_rate": 0.75,
+            "reinspect_rate": 0.25,
+            "accepted_accuracy": 0.9776,
+            "false_accept_rate": 0.0224
+          },
+          {
+            "threshold": 0.967763,
+            "accept_rate": 0.7,
+            "reinspect_rate": 0.3,
+            "accepted_accuracy": 0.984571,
+            "false_accept_rate": 0.015429
+          },
+          {
+            "threshold": 0.9822,
+            "accept_rate": 0.65,
+            "reinspect_rate": 0.35,
+            "accepted_accuracy": 0.988923,
+            "false_accept_rate": 0.011077
+          },
+          {
+            "threshold": 0.990091,
+            "accept_rate": 0.6,
+            "reinspect_rate": 0.4,
+            "accepted_accuracy": 0.991667,
+            "false_accept_rate": 0.008333
+          },
+          {
+            "threshold": 0.994403,
+            "accept_rate": 0.55,
+            "reinspect_rate": 0.45,
+            "accepted_accuracy": 0.994182,
+            "false_accept_rate": 0.005818
+          },
+          {
+            "threshold": 0.996738,
+            "accept_rate": 0.5,
+            "reinspect_rate": 0.5,
+            "accepted_accuracy": 0.994,
+            "false_accept_rate": 0.006
+          },
+          {
+            "threshold": 0.997989,
+            "accept_rate": 0.45,
+            "reinspect_rate": 0.55,
+            "accepted_accuracy": 0.996889,
+            "false_accept_rate": 0.003111
+          },
+          {
+            "threshold": 0.998821,
+            "accept_rate": 0.4,
+            "reinspect_rate": 0.6,
+            "accepted_accuracy": 0.9975,
+            "false_accept_rate": 0.0025
+          },
+          {
+            "threshold": 0.999284,
+            "accept_rate": 0.35,
+            "reinspect_rate": 0.65,
+            "accepted_accuracy": 0.997714,
+            "false_accept_rate": 0.002286
+          },
+          {
+            "threshold": 0.999576,
+            "accept_rate": 0.3,
+            "reinspect_rate": 0.7,
+            "accepted_accuracy": 0.997333,
+            "false_accept_rate": 0.002667
+          },
+          {
+            "threshold": 0.999765,
+            "accept_rate": 0.25,
+            "reinspect_rate": 0.75,
+            "accepted_accuracy": 0.9976,
+            "false_accept_rate": 0.0024
+          },
+          {
+            "threshold": 0.99988,
+            "accept_rate": 0.2002,
+            "reinspect_rate": 0.7998,
+            "accepted_accuracy": 0.998002,
+            "false_accept_rate": 0.001998
+          },
+          {
+            "threshold": 0.99994,
+            "accept_rate": 0.15,
+            "reinspect_rate": 0.85,
+            "accepted_accuracy": 0.998667,
+            "false_accept_rate": 0.001333
+          },
+          {
+            "threshold": 0.999974,
+            "accept_rate": 0.1004,
+            "reinspect_rate": 0.8996,
+            "accepted_accuracy": 0.998008,
+            "false_accept_rate": 0.001992
+          },
+          {
+            "threshold": 0.999992,
+            "accept_rate": 0.05,
+            "reinspect_rate": 0.95,
+            "accepted_accuracy": 0.996,
+            "false_accept_rate": 0.004
+          },
+          {
+            "threshold": 1.0,
+            "accept_rate": 0.0022,
+            "reinspect_rate": 0.9978,
+            "accepted_accuracy": 1.0,
+            "false_accept_rate": 0.0
+          }
+        ],
+        "best_points": {
+          "false_accept_le_0.01": {
+            "threshold": 0.990091,
+            "accept_rate": 0.6,
+            "reinspect_rate": 0.4,
+            "accepted_accuracy": 0.991667,
+            "false_accept_rate": 0.008333
+          },
+          "false_accept_le_0.02": {
+            "threshold": 0.967763,
+            "accept_rate": 0.7,
+            "reinspect_rate": 0.3,
+            "accepted_accuracy": 0.984571,
+            "false_accept_rate": 0.015429
+          },
+          "false_accept_le_0.05": {
+            "threshold": 0.822297,
+            "accept_rate": 0.85,
+            "reinspect_rate": 0.15,
+            "accepted_accuracy": 0.959294,
+            "false_accept_rate": 0.040706
+          },
+          "false_accept_le_0.10": {
+            "threshold": 0.556501,
+            "accept_rate": 0.95,
+            "reinspect_rate": 0.05,
+            "accepted_accuracy": 0.921684,
+            "false_accept_rate": 0.078316
+          }
+        }
+      },
+      "fpga_profile": {
+        "branchynet_1pt_policy": {
+          "max_accuracy_drop": 0.01,
+          "found": true,
+          "accuracy": 0.8904,
+          "avg_cost": 0.632758,
+          "p90_cost": 0.684211,
+          "p99_cost": 1.0,
+          "max_cost": 1.0,
+          "exit_counts": {
+            "0": 1042,
+            "1": 3557,
+            "2": 401
+          },
+          "exit_rates": {
+            "0": 0.2084,
+            "1": 0.7114,
+            "2": 0.0802
+          },
+          "thresholds": [
+            0.873275,
+            0.58845
+          ],
+          "accuracy_drop": 0.008
+        },
+        "window_pressure": {
+          "window": 100,
+          "num_windows": 50,
+          "final_rate_mean": 0.0802,
+          "final_rate_p90": 0.11,
+          "final_rate_p99": 0.1302,
+          "mean_cost_p90": 0.653105,
+          "mean_cost_p99": 0.670289
+        },
+        "profile_drift_by_final_confidence": {
+          "hardest_20pct_by_final_confidence": {
+            "accuracy": 0.605,
+            "avg_cost": 0.765263,
+            "p90_cost": 1.0,
+            "p99_cost": 1.0,
+            "max_cost": 1.0,
+            "exit_counts": {
+              "0": 56,
+              "1": 622,
+              "2": 322
+            },
+            "exit_rates": {
+              "0": 0.056,
+              "1": 0.622,
+              "2": 0.322
+            },
+            "thresholds": [
+              0.873275,
+              0.58845
+            ]
+          },
+          "middle_20pct_by_final_confidence": {
+            "accuracy": 0.973,
+            "avg_cost": 0.625842,
+            "p90_cost": 0.684211,
+            "p99_cost": 0.687368,
+            "max_cost": 1.0,
+            "exit_counts": {
+              "0": 167,
+              "1": 823,
+              "2": 10
+            },
+            "exit_rates": {
+              "0": 0.167,
+              "1": 0.823,
+              "2": 0.01
+            },
+            "thresholds": [
+              0.873275,
+              0.58845
+            ]
+          },
+          "easiest_20pct_by_final_confidence": {
+            "accuracy": 0.995,
+            "avg_cost": 0.524316,
+            "p90_cost": 0.684211,
+            "p99_cost": 0.684211,
+            "max_cost": 0.684211,
+            "exit_counts": {
+              "0": 434,
+              "1": 566,
+              "2": 0
+            },
+            "exit_rates": {
+              "0": 0.434,
+              "1": 0.566,
+              "2": 0.0
+            },
+            "thresholds": [
+              0.873275,
+              0.58845
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

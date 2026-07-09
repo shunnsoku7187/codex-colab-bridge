@@ -1,0 +1,71 @@
+{
+  "purpose": "Find CIFAR-10 evidence that an inspection-oriented early-exit system can claim value on axes different from standard BranchyNet accuracy/average-cost.",
+  "claim_axes": {
+    "deadline": "Can make safe decisions before a fixed deadline and send the rest to reinspection.",
+    "final_risk": "Can reject samples that even the final classifier is likely to mishandle.",
+    "fpga_profile": "Exit distributions and tail/final pressure change with input profile, which matters for FPGA resource planning."
+  },
+  "comparison_rows": [
+    {
+      "trace": "0000b_branchynet_reproduce_resnet56_cifar10",
+      "standard_branchynet_1pt": {
+        "accuracy": 0.8932,
+        "avg_cost": 0.627913,
+        "final_rate": 0.4864,
+        "p99_cost": 1.0
+      },
+      "deadline_exit1_false_accept_le_5pct": {
+        "accept_rate": 0.5,
+        "reinspect_rate": 0.5,
+        "accepted_accuracy": 0.9532,
+        "deadline_cost": 0.381818
+      },
+      "final_reject_false_accept_le_2pct": {
+        "accept_rate": 0.75,
+        "reinspect_rate": 0.25,
+        "accepted_accuracy": 0.9824
+      },
+      "profile_drift_final_rate": {
+        "hardest_20pct_by_final_confidence": 0.843,
+        "middle_20pct_by_final_confidence": 0.509,
+        "easiest_20pct_by_final_confidence": 0.131
+      },
+      "profile_drift_avg_cost": {
+        "hardest_20pct_by_final_confidence": 0.891818,
+        "middle_20pct_by_final_confidence": 0.656873,
+        "easiest_20pct_by_final_confidence": 0.337127
+      }
+    },
+    {
+      "trace": "0001_branchynet_mobilenet_cifar10_retry",
+      "standard_branchynet_1pt": {
+        "accuracy": 0.8904,
+        "avg_cost": 0.632758,
+        "final_rate": 0.0802,
+        "p99_cost": 1.0
+      },
+      "deadline_exit1_false_accept_le_5pct": {
+        "accept_rate": 0.8,
+        "reinspect_rate": 0.2,
+        "accepted_accuracy": 0.95825,
+        "deadline_cost": 0.684211
+      },
+      "final_reject_false_accept_le_2pct": {
+        "accept_rate": 0.7,
+        "reinspect_rate": 0.3,
+        "accepted_accuracy": 0.984571
+      },
+      "profile_drift_final_rate": {
+        "hardest_20pct_by_final_confidence": 0.322,
+        "middle_20pct_by_final_confidence": 0.01,
+        "easiest_20pct_by_final_confidence": 0.0
+      },
+      "profile_drift_avg_cost": {
+        "hardest_20pct_by_final_confidence": 0.765263,
+        "middle_20pct_by_final_confidence": 0.625842,
+        "easiest_20pct_by_final_confidence": 0.524316
+      }
+    }
+  ]
+}
+wrote results/cifar10_inspection_theme_probe_001_summary.json

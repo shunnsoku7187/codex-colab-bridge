@@ -1,2 +1,4 @@
 {"time": "2026-07-09T13:05:14.685904+00:00", "event": "job_running", "job_file": "jobs/cifar10_inspection_theme_probe_001.json"}
 {"time": "2026-07-09T13:05:16.285440+00:00", "event": "process_prepared", "command": "python -m scripts.cifar10_inspection_theme_probe --output results/cifar10_inspection_theme_probe_001_summary.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 300}
+{"time": "2026-07-09T13:05:17.783858+00:00", "event": "process_start", "command": "python -m scripts.cifar10_inspection_theme_probe --output results/cifar10_inspection_theme_probe_001_summary.json", "cwd": "/content/codex_colab_bridge/codex-colab-bridge"}
+{"time": "2026-07-09T13:05:19.051751+00:00", "event": "process_end", "returncode": 0, "duration_sec": 1.268}
