@@ -1,0 +1,65 @@
+{
+  "purpose": "Show why vanilla BranchyNet is not directly sufficient as an inspection system.",
+  "vanilla_branchynet_assumption": "Every sample is forced into a class label; confidence controls early exit only for average-cost reduction.",
+  "inspection_requirements_not_directly_optimized": [
+    "false accept / erroneous pass rate",
+    "deadline compliance",
+    "reinspection / hold-out option",
+    "profile-dependent FPGA tail load"
+  ],
+  "comparison_rows": [
+    {
+      "trace": "0000b_branchynet_reproduce_resnet56_cifar10",
+      "standard_branchynet": {
+        "accuracy": 0.8932,
+        "avg_cost": 0.627913,
+        "final_rate": 0.4864,
+        "p99_cost": 1.0
+      },
+      "forced_decision_problem": {
+        "overall_false_accept_rate": 0.1068,
+        "lowest_20pct_selected_conf_false_accept_rate": 0.329,
+        "lowest_20pct_final_conf_false_accept_rate": 0.382
+      },
+      "deadline_exit1_problem": {
+        "miss_rate_if_standard_branchynet": 0.4864,
+        "forced_deadline_false_accept_rate": 0.2242,
+        "low_conf_deadline_false_accept_rate": 0.563
+      },
+      "profile_problem": {
+        "hardest_20pct_final_rate": 0.843,
+        "middle_20pct_final_rate": 0.509,
+        "easiest_20pct_final_rate": 0.131,
+        "hardest_20pct_avg_cost": 0.891818,
+        "easiest_20pct_avg_cost": 0.337127
+      }
+    },
+    {
+      "trace": "0001_branchynet_mobilenet_cifar10_retry",
+      "standard_branchynet": {
+        "accuracy": 0.8904,
+        "avg_cost": 0.632758,
+        "final_rate": 0.0802,
+        "p99_cost": 1.0
+      },
+      "forced_decision_problem": {
+        "overall_false_accept_rate": 0.1096,
+        "lowest_20pct_selected_conf_false_accept_rate": 0.356,
+        "lowest_20pct_final_conf_false_accept_rate": 0.393
+      },
+      "deadline_exit1_problem": {
+        "miss_rate_if_standard_branchynet": 0.0802,
+        "forced_deadline_false_accept_rate": 0.113,
+        "low_conf_deadline_false_accept_rate": 0.398
+      },
+      "profile_problem": {
+        "hardest_20pct_final_rate": 0.322,
+        "middle_20pct_final_rate": 0.01,
+        "easiest_20pct_final_rate": 0.0,
+        "hardest_20pct_avg_cost": 0.765263,
+        "easiest_20pct_avg_cost": 0.524316
+      }
+    }
+  ]
+}
+wrote results/branchynet_inspection_gap_audit_001_summary.json
