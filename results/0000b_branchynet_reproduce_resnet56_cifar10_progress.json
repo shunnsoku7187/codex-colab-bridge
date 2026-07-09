@@ -1,23 +1,23 @@
 {
   "output_name": "0000b_branchynet_reproduce_resnet56_cifar10",
   "status": "training",
-  "completed_epochs": 3,
+  "completed_epochs": 4,
   "target_epochs": 10,
   "latest_checkpoint": "/content/drive/MyDrive/Research_Experiment/checkpoints/0000b_branchynet_reproduce_resnet56_cifar10/latest.pt",
-  "epoch_checkpoint": "/content/drive/MyDrive/Research_Experiment/checkpoints/0000b_branchynet_reproduce_resnet56_cifar10/epoch_003.pt",
+  "epoch_checkpoint": "/content/drive/MyDrive/Research_Experiment/checkpoints/0000b_branchynet_reproduce_resnet56_cifar10/epoch_004.pt",
   "latest_metrics": {
-    "epoch": 3,
-    "loss": 0.8551743911660236,
+    "epoch": 4,
+    "loss": 0.7992554302410702,
     "exit_losses": [
-      1.3841770887374878,
-      0.9237752556800842,
-      0.2575708031654358
+      1.3086390495300293,
+      0.8529031872749329,
+      0.23622414469718933
     ],
     "exit_accuracy": [
-      0.49158,
-      0.6708,
-      0.91398
+      0.5217,
+      0.69704,
+      0.91898
     ]
   },
-  "updated_at": "2026-07-09T09:31:52.907208+00:00"
+  "updated_at": "2026-07-09T09:33:38.904479+00:00"
 }
