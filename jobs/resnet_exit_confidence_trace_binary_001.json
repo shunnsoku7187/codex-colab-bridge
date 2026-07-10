@@ -1,7 +1,7 @@
 {
   "id": "resnet_exit_confidence_trace_binary_001",
   "status": "pending",
-  "backend": "cpu",
+  "backend": "colab",
   "requires_gpu": false,
   "type": "shell",
   "cwd": ".",
