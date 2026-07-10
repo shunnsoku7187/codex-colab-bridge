@@ -139,6 +139,49 @@ def low_conf_recovery_rows(
     return rows
 
 
+def fixed_confidence_band_rows(
+    source_exit: int,
+    source_confidence: np.ndarray,
+    source_correct: np.ndarray,
+    final_confidence: np.ndarray,
+    final_correct: np.ndarray,
+    final_reliable_yes: np.ndarray,
+    bins: list[float],
+) -> list[dict[str, Any]]:
+    rows = []
+    for i in range(len(bins) - 1):
+        lo = float(bins[i])
+        hi = float(bins[i + 1])
+        if i == len(bins) - 2:
+            mask = (source_confidence >= lo) & (source_confidence <= hi)
+        else:
+            mask = (source_confidence >= lo) & (source_confidence < hi)
+        count = int(mask.sum())
+        if count:
+            final_conf_mean = float(final_confidence[mask].mean())
+            confidence_gain_mean = float((final_confidence[mask] - source_confidence[mask]).mean())
+            source_acc = float(source_correct[mask].mean())
+            final_acc = float(final_correct[mask].mean())
+            reliable_yes_rate = float(final_reliable_yes[mask].mean())
+        else:
+            final_conf_mean = confidence_gain_mean = source_acc = final_acc = reliable_yes_rate = None
+        rows.append({
+            "source_exit": source_exit,
+            "band": f"{int(lo * 100)}-{int(hi * 100)}%",
+            "confidence_min": round_float(lo),
+            "confidence_max": round_float(hi),
+            "count": count,
+            "rate": round_float(mask.mean()),
+            "source_accuracy": round_float(source_acc),
+            "final_accuracy": round_float(final_acc),
+            "source_confidence_mean": round_float(float(source_confidence[mask].mean()) if count else None),
+            "final_confidence_mean": round_float(final_conf_mean),
+            "confidence_gain_mean": round_float(confidence_gain_mean),
+            "final_reliable_yes_rate": round_float(reliable_yes_rate),
+        })
+    return rows
+
+
 def confusion(actual_yes: np.ndarray, predicted_yes: np.ndarray) -> dict[str, Any]:
     tp = int((actual_yes & predicted_yes).sum())
     fp = int((~actual_yes & predicted_yes).sum())
@@ -273,6 +316,37 @@ def plot_reliable_yes_curves(positive_set_results: list[dict[str, Any]], plot_di
         plt.close(fig)
         written.append(str(out))
 
+        transition = target.get("exit1_confidence_band_transition")
+        if transition:
+            plot_rows = [row for row in transition if row["count"] > 0]
+            x = [(row["confidence_min"] + row["confidence_max"]) * 50 for row in plot_rows]
+            fig, ax1 = plt.subplots(figsize=(7.8, 4.6), dpi=160)
+            final_acc = [100 * row["final_accuracy"] for row in plot_rows]
+            reliable_yes = [100 * row["final_reliable_yes_rate"] for row in plot_rows]
+            ax1.plot(x, final_acc, marker="o", linewidth=2.2, label="final correct")
+            ax1.plot(x, reliable_yes, marker="s", linewidth=2.2, label="final reliable yes")
+            ax1.set_xlabel("exit 1 self-confidence band center [%]")
+            ax1.set_ylabel("outcome rate within band [%]")
+            y_max = max(final_acc + reliable_yes) if final_acc or reliable_yes else 1.0
+            ax1.set_ylim(0.0, max(5.0, y_max * 1.2 + 2.0))
+            ax1.grid(True, alpha=0.3)
+            ax2 = ax1.twinx()
+            gain = [100 * row["confidence_gain_mean"] for row in plot_rows]
+            ax2.plot(x, gain, marker="^", color="#666666", linestyle="--", linewidth=2.0, label="mean confidence gain")
+            ax2.set_ylabel("final confidence - exit 1 confidence [pt]")
+            gain_min = min(gain) if gain else 0.0
+            gain_max = max(gain) if gain else 0.0
+            ax2.set_ylim(min(0.0, gain_min * 1.2 - 2.0), max(5.0, gain_max * 1.2 + 2.0))
+            lines1, labels1 = ax1.get_legend_handles_labels()
+            lines2, labels2 = ax2.get_legend_handles_labels()
+            ax1.legend(lines1 + lines2, labels1 + labels2, loc="upper left", fontsize=8)
+            ax1.set_title(f"{item['name']}: what happens after exit 1 confidence bands")
+            fig.tight_layout()
+            out = plot_dir / f"{item['name']}_exit1_confidence_band_transition.png"
+            fig.savefig(out)
+            plt.close(fig)
+            written.append(str(out))
+
     return written
 
 
@@ -349,6 +423,15 @@ def analyze_positive_set(
                 reliable_yes,
                 final_yes_pred,
                 quantile_edges,
+            ),
+            "exit1_confidence_band_transition": fixed_confidence_band_rows(
+                1,
+                confidence[:, 1],
+                correct[:, 1],
+                confidence[:, -1],
+                correct[:, -1],
+                reliable_yes,
+                [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
             ),
         }
 
