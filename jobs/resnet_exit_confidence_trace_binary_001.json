@@ -1,6 +1,6 @@
 {
   "id": "resnet_exit_confidence_trace_binary_001",
-  "status": "done",
+  "status": "pending",
   "backend": "colab",
   "requires_gpu": false,
   "type": "shell",
@@ -8,9 +8,5 @@
   "command": "python -m scripts.resnet_exit_confidence_trace_binary --trace results/0000b_branchynet_reproduce_resnet56_cifar10.npz --output results/resnet_exit_confidence_trace_binary_001_summary.json --sample-csv results/resnet_exit_confidence_trace_binary_001_samples.csv --plot-dir results/resnet_exit_confidence_trace_binary_001_plots",
   "max_runtime_sec": 300,
   "result_file": "results/resnet_exit_confidence_trace_binary_001.json",
-  "note": "Collect per-exit confidence, prediction, yes/no metrics, reliable-yes recovery evidence, and slide-friendly plots for ResNet56-BranchyNet on CIFAR-10 binary inspection candidates.",
-  "updated_at": "2026-07-10T05:39:44.722671+00:00",
-  "started_at": "2026-07-10T05:39:31.716132+00:00",
-  "returncode": 0,
-  "finished_at": "2026-07-10T05:39:44.721915+00:00"
+  "note": "Collect per-exit confidence, prediction, yes/no metrics, reliable-yes recovery evidence, and slide-friendly plots for ResNet56-BranchyNet on CIFAR-10 binary inspection candidates."
 }
