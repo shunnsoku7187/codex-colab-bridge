@@ -1,2 +1,3 @@
 {"time": "2026-07-10T05:28:51.794833+00:00", "event": "job_skipped_by_colab_runner", "backend": "cpu"}
 {"time": "2026-07-10T05:33:25.708669+00:00", "event": "job_running", "job_file": "jobs/resnet_exit_confidence_trace_binary_001.json"}
+{"time": "2026-07-10T05:33:27.670592+00:00", "event": "process_prepared", "command": "python -m scripts.resnet_exit_confidence_trace_binary --trace results/0000b_branchynet_reproduce_resnet56_cifar10.npz --output results/resnet_exit_confidence_trace_binary_001_summary.json --sample-csv results/resnet_exit_confidence_trace_binary_001_samples.csv --plot-dir results/resnet_exit_confidence_trace_binary_001_plots", "cwd": "/content/codex_colab_bridge/codex-colab-bridge", "max_runtime_sec": 300}
