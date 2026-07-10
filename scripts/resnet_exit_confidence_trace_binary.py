@@ -220,19 +220,23 @@ def plot_reliable_yes_curves(positive_set_results: list[dict[str, Any]], plot_di
         if target is None:
             continue
 
-        fig, ax = plt.subplots(figsize=(7.2, 4.2), dpi=160)
+        fig, ax = plt.subplots(figsize=(7.8, 4.6), dpi=160)
+        plotted_y: list[float] = []
         for exit_label, rows_key in [
-            ("exit0", "exit0_confidence_bands_to_final"),
-            ("exit1", "exit1_confidence_bands_to_final"),
+            ("出口0", "exit0_confidence_bands_to_final"),
+            ("出口1", "exit1_confidence_bands_to_final"),
         ]:
             rows = target[rows_key]
             x = [(row["confidence_min"] + row["confidence_max"]) / 2 for row in rows if row["final_reliable_yes_rate"] is not None]
-            y = [row["final_reliable_yes_rate"] for row in rows if row["final_reliable_yes_rate"] is not None]
+            y = [100 * row["final_reliable_yes_rate"] for row in rows if row["final_reliable_yes_rate"] is not None]
             ax.plot(x, y, marker="o", linewidth=2, label=exit_label)
-        ax.set_title(f"{item['name']}: early confidence vs final reliable yes")
-        ax.set_xlabel("early-exit self-confidence")
-        ax.set_ylabel("final reliable-yes rate")
-        ax.set_ylim(0.0, 1.02)
+            plotted_y.extend(y)
+        ax.set_title(f"{item['name']}: 早期出口の自己確信度と最終的な「信頼あるyes」率")
+        ax.set_xlabel("早期出口の自己確信度")
+        ax.set_ylabel("最終的に信頼あるyesとなる割合 [%]")
+        if plotted_y:
+            y_max = max(plotted_y)
+            ax.set_ylim(0.0, max(5.0, y_max * 1.25 + 1.0))
         ax.grid(True, alpha=0.3)
         ax.legend()
         fig.tight_layout()
@@ -241,21 +245,26 @@ def plot_reliable_yes_curves(positive_set_results: list[dict[str, Any]], plot_di
         plt.close(fig)
         written.append(str(out))
 
-        fig, ax = plt.subplots(figsize=(7.2, 4.2), dpi=160)
+        fig, ax = plt.subplots(figsize=(7.8, 4.6), dpi=160)
+        plotted_y: list[float] = []
         for exit_label, rows_key in [
-            ("exit0", "source_exit_0_low_conf_recovery"),
-            ("exit1", "source_exit_1_low_conf_recovery"),
+            ("出口0", "source_exit_0_low_conf_recovery"),
+            ("出口1", "source_exit_1_low_conf_recovery"),
         ]:
             rows = target[rows_key]
-            x = [row["low_conf_rate"] for row in rows]
-            y = [row["final_reliable_yes_rate_among_low_conf"] for row in rows]
-            ax.plot(x, y, marker="o", linewidth=2, label=f"{exit_label}: all low-conf")
-            y_not_yes = [row["final_reliable_yes_rate_among_low_conf_not_yes"] for row in rows]
-            ax.plot(x, y_not_yes, marker="s", linestyle="--", linewidth=2, label=f"{exit_label}: low-conf not-yes")
-        ax.set_title(f"{item['name']}: low-confidence cutoff vs reliable-yes recovery")
-        ax.set_xlabel("fraction cut as low-confidence")
-        ax.set_ylabel("final reliable-yes recovery rate")
-        ax.set_ylim(0.0, 1.02)
+            x = [100 * row["low_conf_rate"] for row in rows]
+            y = [100 * row["final_reliable_yes_rate_among_low_conf"] for row in rows]
+            ax.plot(x, y, marker="o", linewidth=2.2, label=f"{exit_label}: 低信頼すべて")
+            plotted_y.extend(y)
+            y_not_yes = [100 * row["final_reliable_yes_rate_among_low_conf_not_yes"] for row in rows]
+            ax.plot(x, y_not_yes, marker="s", linestyle="--", linewidth=2.2, label=f"{exit_label}: 低信頼かつnot-yes")
+            plotted_y.extend(y_not_yes)
+        ax.set_title(f"{item['name']}: 早期に棄却した候補が最終的に「信頼あるyes」へ復帰する割合")
+        ax.set_xlabel("低信頼として早期棄却する割合 [%]")
+        ax.set_ylabel("最終的に信頼あるyesへ復帰した割合 [%]")
+        if plotted_y:
+            y_max = max(plotted_y)
+            ax.set_ylim(0.0, max(5.0, y_max * 1.25 + 1.0))
         ax.grid(True, alpha=0.3)
         ax.legend(fontsize=8)
         fig.tight_layout()
