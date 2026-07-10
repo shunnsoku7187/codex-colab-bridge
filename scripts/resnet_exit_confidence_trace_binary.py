@@ -203,6 +203,70 @@ def write_sample_csv(
             writer.writerow(row)
 
 
+def plot_reliable_yes_curves(positive_set_results: list[dict[str, Any]], plot_dir: Path) -> list[str]:
+    """Save slide-friendly PNGs for reliable-yes recovery behavior."""
+
+    import matplotlib.pyplot as plt
+
+    plot_dir.mkdir(parents=True, exist_ok=True)
+    written: list[str] = []
+
+    for item in positive_set_results:
+        target_key = "target_yes_precision_0.980"
+        target = item["reliable_yes_recovery"].get(target_key)
+        if target is None:
+            target_key = next((key for key, value in item["reliable_yes_recovery"].items() if value is not None), "")
+            target = item["reliable_yes_recovery"].get(target_key) if target_key else None
+        if target is None:
+            continue
+
+        fig, ax = plt.subplots(figsize=(7.2, 4.2), dpi=160)
+        for exit_label, rows_key in [
+            ("exit0", "exit0_confidence_bands_to_final"),
+            ("exit1", "exit1_confidence_bands_to_final"),
+        ]:
+            rows = target[rows_key]
+            x = [(row["confidence_min"] + row["confidence_max"]) / 2 for row in rows if row["final_reliable_yes_rate"] is not None]
+            y = [row["final_reliable_yes_rate"] for row in rows if row["final_reliable_yes_rate"] is not None]
+            ax.plot(x, y, marker="o", linewidth=2, label=exit_label)
+        ax.set_title(f"{item['name']}: early confidence vs final reliable yes")
+        ax.set_xlabel("early-exit self-confidence")
+        ax.set_ylabel("final reliable-yes rate")
+        ax.set_ylim(0.0, 1.02)
+        ax.grid(True, alpha=0.3)
+        ax.legend()
+        fig.tight_layout()
+        out = plot_dir / f"{item['name']}_confidence_to_reliable_yes.png"
+        fig.savefig(out)
+        plt.close(fig)
+        written.append(str(out))
+
+        fig, ax = plt.subplots(figsize=(7.2, 4.2), dpi=160)
+        for exit_label, rows_key in [
+            ("exit0", "source_exit_0_low_conf_recovery"),
+            ("exit1", "source_exit_1_low_conf_recovery"),
+        ]:
+            rows = target[rows_key]
+            x = [row["low_conf_rate"] for row in rows]
+            y = [row["final_reliable_yes_rate_among_low_conf"] for row in rows]
+            ax.plot(x, y, marker="o", linewidth=2, label=f"{exit_label}: all low-conf")
+            y_not_yes = [row["final_reliable_yes_rate_among_low_conf_not_yes"] for row in rows]
+            ax.plot(x, y_not_yes, marker="s", linestyle="--", linewidth=2, label=f"{exit_label}: low-conf not-yes")
+        ax.set_title(f"{item['name']}: low-confidence cutoff vs reliable-yes recovery")
+        ax.set_xlabel("fraction cut as low-confidence")
+        ax.set_ylabel("final reliable-yes recovery rate")
+        ax.set_ylim(0.0, 1.02)
+        ax.grid(True, alpha=0.3)
+        ax.legend(fontsize=8)
+        fig.tight_layout()
+        out = plot_dir / f"{item['name']}_low_conf_reliable_yes_recovery.png"
+        fig.savefig(out)
+        plt.close(fig)
+        written.append(str(out))
+
+    return written
+
+
 def analyze_positive_set(
     name: str,
     positive_classes: list[int],
@@ -295,6 +359,7 @@ def main() -> None:
     parser.add_argument("--trace", default="results/0000b_branchynet_reproduce_resnet56_cifar10.npz")
     parser.add_argument("--output", default="results/resnet_exit_confidence_trace_binary_001_summary.json")
     parser.add_argument("--sample-csv", default="results/resnet_exit_confidence_trace_binary_001_samples.csv")
+    parser.add_argument("--plot-dir", default="results/resnet_exit_confidence_trace_binary_001_plots")
     parser.add_argument("--target-yes-precisions", nargs="*", type=float, default=[0.95, 0.98, 0.99])
     parser.add_argument("--low-quantiles", nargs="*", type=float, default=[0.05, 0.10, 0.20, 0.30, 0.40])
     parser.add_argument("--band-quantiles", nargs="*", type=float, default=[0.0, 0.05, 0.10, 0.20, 0.40, 0.60, 0.80, 0.90, 0.95, 1.0])
@@ -323,6 +388,7 @@ def main() -> None:
         )
         for name, classes in DEFAULT_POSITIVE_SETS.items()
     ]
+    plot_files = plot_reliable_yes_curves(positive_set_results, Path(args.plot_dir))
 
     payload = {
         "purpose": "Collect per-exit confidence and binary inspection metrics for ResNet56-BranchyNet.",
@@ -338,6 +404,7 @@ def main() -> None:
         "exit_costs": [round_float(x) for x in exit_costs],
         "multiclass_exit_accuracy": [round_float(correct[:, i].mean()) for i in range(correct.shape[1])],
         "positive_set_results": positive_set_results,
+        "plot_files": plot_files,
         "dataset_note": {
             "cifar10_use": "Useful for controlled first evidence because the existing ResNet56-BranchyNet trace is ready, but it is not an inspection dataset.",
             "next_dataset_need": "Move to a genuine binary or anomaly/defect dataset before making the final inspection-task claim.",
@@ -367,6 +434,7 @@ def main() -> None:
         "wrote": {
             "summary": str(out),
             "sample_csv": args.sample_csv,
+            "plots": plot_files,
         },
     }
     print(json.dumps(compact, ensure_ascii=False, indent=2), flush=True)
