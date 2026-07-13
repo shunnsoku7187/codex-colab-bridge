@@ -1,0 +1,227 @@
+{
+  "purpose": "Compare final-only 99%-accurate confidence filtering with upper-only and dual-sided early exit.",
+  "trace": "results/0000b_branchynet_reproduce_resnet56_cifar10.npz",
+  "exit_names": [
+    "exit_after_layer1.0",
+    "exit_after_layer2.0",
+    "final"
+  ],
+  "exit_costs": [
+    0.054545,
+    0.381818,
+    1.0
+  ],
+  "target_accuracy": 0.99,
+  "final_accuracy_without_reject": 0.9032,
+  "final_confidence_threshold": {
+    "threshold": 0.971294,
+    "accept_rate": 0.6926,
+    "accepted_accuracy": 0.990182,
+    "false_accept_rate": 0.009818
+  },
+  "definitions": {
+    "accepted_accuracy": "accuracy among samples that receive a class label",
+    "reject": "no reliable class label is emitted",
+    "final_reliable": "sample accepted by the final-only calibrated threshold and correctly classified at the final exit",
+    "lost_final_reliable_rate": "fraction of all samples that would be accepted correctly by final-only but are early-rejected by the policy",
+    "avg_cost": "mean normalized exit cost; final-only is 1.0"
+  },
+  "policies": {
+    "final_only": {
+      "thresholds": {
+        "lower0": -1.0,
+        "upper0": 2.0,
+        "lower1": -1.0,
+        "upper1": 2.0
+      },
+      "counts": {
+        "accept0": 0,
+        "reject0": 0,
+        "accept1": 0,
+        "reject1": 0,
+        "final": 5000
+      },
+      "rates": {
+        "accept0": 0.0,
+        "reject0": 0.0,
+        "accept1": 0.0,
+        "reject1": 0.0,
+        "final": 1.0
+      },
+      "accept_rate": 0.6924,
+      "reject_rate": 0.3076,
+      "final_rate": 1.0,
+      "early_accept_rate": 0.0,
+      "early_reject_rate": 0.0,
+      "avg_cost": 1.0,
+      "accepted_accuracy": 0.990468,
+      "false_accept_rate": 0.009532,
+      "lost_final_reliable_rate": 0.0,
+      "lost_final_reliable_among_early_reject": null
+    },
+    "upper_only_best_cost": {
+      "thresholds": {
+        "lower0": -1.0,
+        "upper0": 0.987489,
+        "lower1": -1.0,
+        "upper1": 0.998196
+      },
+      "counts": {
+        "accept0": 50,
+        "reject0": 0,
+        "accept1": 464,
+        "reject1": 0,
+        "final": 4486
+      },
+      "rates": {
+        "accept0": 0.01,
+        "reject0": 0.0,
+        "accept1": 0.0928,
+        "reject1": 0.0,
+        "final": 0.8972
+      },
+      "accept_rate": 0.6936,
+      "reject_rate": 0.3064,
+      "final_rate": 0.8972,
+      "early_accept_rate": 0.1028,
+      "early_reject_rate": 0.0,
+      "avg_cost": 0.933178,
+      "accepted_accuracy": 0.990196,
+      "false_accept_rate": 0.009804,
+      "lost_final_reliable_rate": 0.0,
+      "lost_final_reliable_among_early_reject": null
+    },
+    "dual_side_best_cost": {
+      "thresholds": {
+        "lower0": 0.979263,
+        "upper0": 0.987489,
+        "lower1": 0.185311,
+        "upper1": 0.291532
+      },
+      "counts": {
+        "accept0": 50,
+        "reject0": 4900,
+        "accept1": 50,
+        "reject1": 0,
+        "final": 0
+      },
+      "rates": {
+        "accept0": 0.01,
+        "reject0": 0.98,
+        "accept1": 0.01,
+        "reject1": 0.0,
+        "final": 0.0
+      },
+      "accept_rate": 0.02,
+      "reject_rate": 0.98,
+      "final_rate": 0.0,
+      "early_accept_rate": 0.02,
+      "early_reject_rate": 0.98,
+      "avg_cost": 0.057818,
+      "accepted_accuracy": 0.99,
+      "false_accept_rate": 0.01,
+      "lost_final_reliable_rate": 0.6662,
+      "lost_final_reliable_among_early_reject": 0.679796
+    },
+    "dual_side_best_cost_lost_final_reliable_le_1pct": {
+      "thresholds": {
+        "lower0": 0.264735,
+        "upper0": 0.979263,
+        "lower1": 0.185311,
+        "upper1": 0.998196
+      },
+      "counts": {
+        "accept0": 100,
+        "reject0": 100,
+        "accept1": 433,
+        "reject1": 0,
+        "final": 4367
+      },
+      "rates": {
+        "accept0": 0.02,
+        "reject0": 0.02,
+        "accept1": 0.0866,
+        "reject1": 0.0,
+        "final": 0.8734
+      },
+      "accept_rate": 0.684,
+      "reject_rate": 0.316,
+      "final_rate": 0.8734,
+      "early_accept_rate": 0.1066,
+      "early_reject_rate": 0.02,
+      "avg_cost": 0.908647,
+      "accepted_accuracy": 0.990351,
+      "false_accept_rate": 0.009649,
+      "lost_final_reliable_rate": 0.0094,
+      "lost_final_reliable_among_early_reject": 0.47
+    },
+    "dual_side_best_cost_lost_final_reliable_le_2pct": {
+      "thresholds": {
+        "lower0": 0.242425,
+        "upper0": 0.987489,
+        "lower1": 0.391709,
+        "upper1": 0.998196
+      },
+      "counts": {
+        "accept0": 50,
+        "reject0": 50,
+        "accept1": 464,
+        "reject1": 239,
+        "final": 4197
+      },
+      "rates": {
+        "accept0": 0.01,
+        "reject0": 0.01,
+        "accept1": 0.0928,
+        "reject1": 0.0478,
+        "final": 0.8394
+      },
+      "accept_rate": 0.6746,
+      "reject_rate": 0.3254,
+      "final_rate": 0.8394,
+      "early_accept_rate": 0.1028,
+      "early_reject_rate": 0.0578,
+      "avg_cost": 0.894175,
+      "accepted_accuracy": 0.990216,
+      "false_accept_rate": 0.009784,
+      "lost_final_reliable_rate": 0.0188,
+      "lost_final_reliable_among_early_reject": 0.32526
+    },
+    "dual_side_best_cost_lost_final_reliable_le_5pct": {
+      "thresholds": {
+        "lower0": 0.341351,
+        "upper0": 0.979263,
+        "lower1": 0.185311,
+        "upper1": 0.998196
+      },
+      "counts": {
+        "accept0": 100,
+        "reject0": 500,
+        "accept1": 432,
+        "reject1": 0,
+        "final": 3968
+      },
+      "rates": {
+        "accept0": 0.02,
+        "reject0": 0.1,
+        "accept1": 0.0864,
+        "reject1": 0.0,
+        "final": 0.7936
+      },
+      "accept_rate": 0.643,
+      "reject_rate": 0.357,
+      "final_rate": 0.7936,
+      "early_accept_rate": 0.1064,
+      "early_reject_rate": 0.1,
+      "avg_cost": 0.833135,
+      "accepted_accuracy": 0.990358,
+      "false_accept_rate": 0.009642,
+      "lost_final_reliable_rate": 0.05,
+      "lost_final_reliable_among_early_reject": 0.5
+    }
+  },
+  "sweep_counts": {
+    "upper_only": 289,
+    "dual_side": 18496
+  }
+}

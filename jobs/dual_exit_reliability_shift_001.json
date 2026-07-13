@@ -1,0 +1,13 @@
+{
+  "id": "dual_exit_reliability_shift_001",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.branchynet_cifar_sweep --output-name 0000b_branchynet_reproduce_resnet56_cifar10 --dataset cifar10 --arch resnet56 --exit-modules layer1.0,layer2.0 --branch-depths 3,2 --epochs 10 --batch-size 128 --threshold-val-size 5000 --learning-rate 0.001 --weight-decay 1e-4 --loss-weights 1,1,1 --threshold-candidates 9 --max-threshold-combinations 2000 --require-cuda && python -m scripts.dual_exit_reliability_shift_experiment --output results/dual_exit_reliability_shift_001_summary.json --model-output-name 0000b_branchynet_reproduce_resnet56_cifar10 --target-accuracy 0.99 --batch-size 128 --threshold-val-size 5000 --require-cuda",
+  "max_runtime_sec": 7200,
+  "result_file": "results/dual_exit_reliability_shift_001.json",
+  "note": "Reliability-oriented dual-sided early-exit stress test: compare final-only 99% confidence filtering, upper-only early exit, and dual-sided early exit on clean and low-quality CIFAR-10 mixtures.",
+  "created_at": "2026-07-13T00:00:00+09:00"
+}
