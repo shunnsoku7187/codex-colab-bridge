@@ -1,6 +1,6 @@
 {
   "id": "resnet_exit_confidence_trace_binary_001",
-  "status": "running",
+  "status": "done",
   "backend": "colab",
   "requires_gpu": false,
   "type": "shell",
@@ -9,6 +9,8 @@
   "max_runtime_sec": 300,
   "result_file": "results/resnet_exit_confidence_trace_binary_001.json",
   "note": "Collect per-exit confidence, prediction, yes/no metrics, reliable-yes recovery evidence, and slide-friendly plots for ResNet56-BranchyNet on per-class CIFAR-10 one-vs-rest binary inspection candidates.",
-  "updated_at": "2026-07-13T04:19:27.697481+00:00",
-  "started_at": "2026-07-13T04:19:27.697461+00:00"
+  "updated_at": "2026-07-13T04:19:41.081113+00:00",
+  "started_at": "2026-07-13T04:19:27.697461+00:00",
+  "returncode": 0,
+  "finished_at": "2026-07-13T04:19:41.080364+00:00"
 }

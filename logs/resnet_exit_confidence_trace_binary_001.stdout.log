@@ -2291,3 +2291,1170 @@
     ]
   }
 }
+{
+  "purpose": "Collect per-exit confidence and binary inspection metrics for ResNet56-BranchyNet.",
+  "trace": "results/0000b_branchynet_reproduce_resnet56_cifar10.npz",
+  "n": 5000,
+  "multiclass_exit_accuracy": [
+    0.6452,
+    0.7758,
+    0.9032
+  ],
+  "positive_set_summary": [
+    {
+      "name": "class_0_airplane",
+      "positive_class_names": [
+        "airplane"
+      ],
+      "positive_rate": 0.5,
+      "sample_count": 944,
+      "exit_binary_metrics": [
+        {
+          "exit_index": 0,
+          "multiclass_accuracy": 0.667373,
+          "binary_confusion": {
+            "tp": 318,
+            "fp": 17,
+            "fn": 154,
+            "tn": 455,
+            "total": 944,
+            "accuracy": 0.818856,
+            "yes_precision": 0.949254,
+            "yes_recall": 0.673729,
+            "specificity": 0.963983,
+            "f1": 0.788104,
+            "false_yes_rate_among_yes": 0.050746,
+            "yes_loss_rate": 0.326271
+          },
+          "yes_prediction_rate": 0.354873,
+          "confidence_mean": 0.61956,
+          "confidence_median": 0.615443
+        },
+        {
+          "exit_index": 1,
+          "multiclass_accuracy": 0.813559,
+          "binary_confusion": {
+            "tp": 413,
+            "fp": 11,
+            "fn": 59,
+            "tn": 461,
+            "total": 944,
+            "accuracy": 0.925847,
+            "yes_precision": 0.974057,
+            "yes_recall": 0.875,
+            "specificity": 0.976695,
+            "f1": 0.921875,
+            "false_yes_rate_among_yes": 0.025943,
+            "yes_loss_rate": 0.125
+          },
+          "yes_prediction_rate": 0.449153,
+          "confidence_mean": 0.814639,
+          "confidence_median": 0.891126
+        },
+        {
+          "exit_index": 2,
+          "multiclass_accuracy": 0.912076,
+          "binary_confusion": {
+            "tp": 438,
+            "fp": 5,
+            "fn": 34,
+            "tn": 467,
+            "total": 944,
+            "accuracy": 0.958686,
+            "yes_precision": 0.988713,
+            "yes_recall": 0.927966,
+            "specificity": 0.989407,
+            "f1": 0.957377,
+            "false_yes_rate_among_yes": 0.011287,
+            "yes_loss_rate": 0.072034
+          },
+          "yes_prediction_rate": 0.46928,
+          "confidence_mean": 0.926456,
+          "confidence_median": 0.995994
+        }
+      ],
+      "final_calibration": {
+        "target_yes_precision_0.950": {
+          "target_yes_precision": 0.95,
+          "threshold": 0.307045,
+          "yes_accept_rate": 0.46928,
+          "yes_precision": 0.988713,
+          "false_yes_rate_among_yes": 0.011287
+        },
+        "target_yes_precision_0.980": {
+          "target_yes_precision": 0.98,
+          "threshold": 0.307045,
+          "yes_accept_rate": 0.46928,
+          "yes_precision": 0.988713,
+          "false_yes_rate_among_yes": 0.011287
+        },
+        "target_yes_precision_0.990": {
+          "target_yes_precision": 0.99,
+          "threshold": 0.436039,
+          "yes_accept_rate": 0.46822,
+          "yes_precision": 0.99095,
+          "false_yes_rate_among_yes": 0.00905
+        }
+      }
+    },
+    {
+      "name": "class_1_automobile",
+      "positive_class_names": [
+        "automobile"
+      ],
+      "positive_rate": 0.5,
+      "sample_count": 1000,
+      "exit_binary_metrics": [
+        {
+          "exit_index": 0,
+          "multiclass_accuracy": 0.662,
+          "binary_confusion": {
+            "tp": 355,
+            "fp": 5,
+            "fn": 145,
+            "tn": 495,
+            "total": 1000,
+            "accuracy": 0.85,
+            "yes_precision": 0.986111,
+            "yes_recall": 0.71,
+            "specificity": 0.99,
+            "f1": 0.825581,
+            "false_yes_rate_among_yes": 0.013889,
+            "yes_loss_rate": 0.29
+          },
+          "yes_prediction_rate": 0.36,
+          "confidence_mean": 0.640396,
+          "confidence_median": 0.632772
+        },
+        {
+          "exit_index": 1,
+          "multiclass_accuracy": 0.812,
+          "binary_confusion": {
+            "tp": 434,
+            "fp": 3,
+            "fn": 66,
+            "tn": 497,
+            "total": 1000,
+            "accuracy": 0.931,
+            "yes_precision": 0.993135,
+            "yes_recall": 0.868,
+            "specificity": 0.994,
+            "f1": 0.926361,
+            "false_yes_rate_among_yes": 0.006865,
+            "yes_loss_rate": 0.132
+          },
+          "yes_prediction_rate": 0.437,
+          "confidence_mean": 0.834113,
+          "confidence_median": 0.936611
+        },
+        {
+          "exit_index": 2,
+          "multiclass_accuracy": 0.926,
+          "binary_confusion": {
+            "tp": 470,
+            "fp": 0,
+            "fn": 30,
+            "tn": 500,
+            "total": 1000,
+            "accuracy": 0.97,
+            "yes_precision": 1.0,
+            "yes_recall": 0.94,
+            "specificity": 1.0,
+            "f1": 0.969072,
+            "false_yes_rate_among_yes": 0.0,
+            "yes_loss_rate": 0.06
+          },
+          "yes_prediction_rate": 0.47,
+          "confidence_mean": 0.942702,
+          "confidence_median": 0.998387
+        }
+      ],
+      "final_calibration": {
+        "target_yes_precision_0.950": {
+          "target_yes_precision": 0.95,
+          "threshold": 0.462562,
+          "yes_accept_rate": 0.47,
+          "yes_precision": 1.0,
+          "false_yes_rate_among_yes": 0.0
+        },
+        "target_yes_precision_0.980": {
+          "target_yes_precision": 0.98,
+          "threshold": 0.462562,
+          "yes_accept_rate": 0.47,
+          "yes_precision": 1.0,
+          "false_yes_rate_among_yes": 0.0
+        },
+        "target_yes_precision_0.990": {
+          "target_yes_precision": 0.99,
+          "threshold": 0.462562,
+          "yes_accept_rate": 0.47,
+          "yes_precision": 1.0,
+          "false_yes_rate_among_yes": 0.0
+        }
+      }
+    },
+    {
+      "name": "class_2_bird",
+      "positive_class_names": [
+        "bird"
+      ],
+      "positive_rate": 0.5,
+      "sample_count": 1014,
+      "exit_binary_metrics": [
+        {
+          "exit_index": 0,
+          "multiclass_accuracy": 0.584813,
+          "binary_confusion": {
+            "tp": 245,
+            "fp": 27,
+            "fn": 262,
+            "tn": 480,
+            "total": 1014,
+            "accuracy": 0.71499,
+            "yes_precision": 0.900735,
+            "yes_recall": 0.483235,
+            "specificity": 0.946746,
+            "f1": 0.629012,
+            "false_yes_rate_among_yes": 0.099265,
+            "yes_loss_rate": 0.516765
+          },
+          "yes_prediction_rate": 0.268245,
+          "confidence_mean": 0.584627,
+          "confidence_median": 0.564676
+        },
+        {
+          "exit_index": 1,
+          "multiclass_accuracy": 0.700197,
+          "binary_confusion": {
+            "tp": 301,
+            "fp": 10,
+            "fn": 206,
+            "tn": 497,
+            "total": 1014,
+            "accuracy": 0.786982,
+            "yes_precision": 0.967846,
+            "yes_recall": 0.593688,
+            "specificity": 0.980276,
+            "f1": 0.735941,
+            "false_yes_rate_among_yes": 0.032154,
+            "yes_loss_rate": 0.406312
+          },
+          "yes_prediction_rate": 0.306706,
+          "confidence_mean": 0.754906,
+          "confidence_median": 0.806317
+        },
+        {
+          "exit_index": 2,
+          "multiclass_accuracy": 0.869822,
+          "binary_confusion": {
+            "tp": 428,
+            "fp": 4,
+            "fn": 79,
+            "tn": 503,
+            "total": 1014,
+            "accuracy": 0.918146,
+            "yes_precision": 0.990741,
+            "yes_recall": 0.844181,
+            "specificity": 0.99211,
+            "f1": 0.911608,
+            "false_yes_rate_among_yes": 0.009259,
+            "yes_loss_rate": 0.155819
+          },
+          "yes_prediction_rate": 0.426036,
+          "confidence_mean": 0.914671,
+          "confidence_median": 0.994512
+        }
+      ],
+      "final_calibration": {
+        "target_yes_precision_0.950": {
+          "target_yes_precision": 0.95,
+          "threshold": 0.34326,
+          "yes_accept_rate": 0.426036,
+          "yes_precision": 0.990741,
+          "false_yes_rate_among_yes": 0.009259
+        },
+        "target_yes_precision_0.980": {
+          "target_yes_precision": 0.98,
+          "threshold": 0.34326,
+          "yes_accept_rate": 0.426036,
+          "yes_precision": 0.990741,
+          "false_yes_rate_among_yes": 0.009259
+        },
+        "target_yes_precision_0.990": {
+          "target_yes_precision": 0.99,
+          "threshold": 0.34326,
+          "yes_accept_rate": 0.426036,
+          "yes_precision": 0.990741,
+          "false_yes_rate_among_yes": 0.009259
+        }
+      }
+    },
+    {
+      "name": "class_3_cat",
+      "positive_class_names": [
+        "cat"
+      ],
+      "positive_rate": 0.5,
+      "sample_count": 1010,
+      "exit_binary_metrics": [
+        {
+          "exit_index": 0,
+          "multiclass_accuracy": 0.528713,
+          "binary_confusion": {
+            "tp": 202,
+            "fp": 25,
+            "fn": 303,
+            "tn": 480,
+            "total": 1010,
+            "accuracy": 0.675248,
+            "yes_precision": 0.889868,
+            "yes_recall": 0.4,
+            "specificity": 0.950495,
+            "f1": 0.551913,
+            "false_yes_rate_among_yes": 0.110132,
+            "yes_loss_rate": 0.6
+          },
+          "yes_prediction_rate": 0.224752,
+          "confidence_mean": 0.546397,
+          "confidence_median": 0.510986
+        },
+        {
+          "exit_index": 1,
+          "multiclass_accuracy": 0.690099,
+          "binary_confusion": {
+            "tp": 309,
+            "fp": 19,
+            "fn": 196,
+            "tn": 486,
+            "total": 1010,
+            "accuracy": 0.787129,
+            "yes_precision": 0.942073,
+            "yes_recall": 0.611881,
+            "specificity": 0.962376,
+            "f1": 0.741897,
+            "false_yes_rate_among_yes": 0.057927,
+            "yes_loss_rate": 0.388119
+          },
+          "yes_prediction_rate": 0.324752,
+          "confidence_mean": 0.724129,
+          "confidence_median": 0.745938
+        },
+        {
+          "exit_index": 2,
+          "multiclass_accuracy": 0.863366,
+          "binary_confusion": {
+            "tp": 409,
+            "fp": 12,
+            "fn": 96,
+            "tn": 493,
+            "total": 1010,
+            "accuracy": 0.893069,
+            "yes_precision": 0.971496,
+            "yes_recall": 0.809901,
+            "specificity": 0.976238,
+            "f1": 0.883369,
+            "false_yes_rate_among_yes": 0.028504,
+            "yes_loss_rate": 0.190099
+          },
+          "yes_prediction_rate": 0.416832,
+          "confidence_mean": 0.903177,
+          "confidence_median": 0.989082
+        }
+      ],
+      "final_calibration": {
+        "target_yes_precision_0.950": {
+          "target_yes_precision": 0.95,
+          "threshold": 0.291571,
+          "yes_accept_rate": 0.416832,
+          "yes_precision": 0.971496,
+          "false_yes_rate_among_yes": 0.028504
+        },
+        "target_yes_precision_0.980": {
+          "target_yes_precision": 0.98,
+          "threshold": 0.571186,
+          "yes_accept_rate": 0.39802,
+          "yes_precision": 0.9801,
+          "false_yes_rate_among_yes": 0.0199
+        },
+        "target_yes_precision_0.990": {
+          "target_yes_precision": 0.99,
+          "threshold": 0.766781,
+          "yes_accept_rate": 0.348515,
+          "yes_precision": 0.991477,
+          "false_yes_rate_among_yes": 0.008523
+        }
+      }
+    },
+    {
+      "name": "class_4_deer",
+      "positive_class_names": [
+        "deer"
+      ],
+      "positive_rate": 0.5,
+      "sample_count": 1048,
+      "exit_binary_metrics": [
+        {
+          "exit_index": 0,
+          "multiclass_accuracy": 0.63645,
+          "binary_confusion": {
+            "tp": 330,
+            "fp": 25,
+            "fn": 194,
+            "tn": 499,
+            "total": 1048,
+            "accuracy": 0.791031,
+            "yes_precision": 0.929577,
+            "yes_recall": 0.629771,
+            "specificity": 0.95229,
+            "f1": 0.750853,
+            "false_yes_rate_among_yes": 0.070423,
+            "yes_loss_rate": 0.370229
+          },
+          "yes_prediction_rate": 0.33874,
+          "confidence_mean": 0.58335,
+          "confidence_median": 0.56317
+        },
+        {
+          "exit_index": 1,
+          "multiclass_accuracy": 0.770992,
+          "binary_confusion": {
+            "tp": 407,
+            "fp": 15,
+            "fn": 117,
+            "tn": 509,
+            "total": 1048,
+            "accuracy": 0.874046,
+            "yes_precision": 0.964455,
+            "yes_recall": 0.776718,
+            "specificity": 0.971374,
+            "f1": 0.860465,
+            "false_yes_rate_among_yes": 0.035545,
+            "yes_loss_rate": 0.223282
+          },
+          "yes_prediction_rate": 0.402672,
+          "confidence_mean": 0.775586,
+          "confidence_median": 0.845756
+        },
+        {
+          "exit_index": 2,
+          "multiclass_accuracy": 0.936069,
+          "binary_confusion": {
+            "tp": 505,
+            "fp": 9,
+            "fn": 19,
+            "tn": 515,
+            "total": 1048,
+            "accuracy": 0.973282,
+            "yes_precision": 0.98249,
+            "yes_recall": 0.96374,
+            "specificity": 0.982824,
+            "f1": 0.973025,
+            "false_yes_rate_among_yes": 0.01751,
+            "yes_loss_rate": 0.03626
+          },
+          "yes_prediction_rate": 0.490458,
+          "confidence_mean": 0.948952,
+          "confidence_median": 0.999043
+        }
+      ],
+      "final_calibration": {
+        "target_yes_precision_0.950": {
+          "target_yes_precision": 0.95,
+          "threshold": 0.334725,
+          "yes_accept_rate": 0.490458,
+          "yes_precision": 0.98249,
+          "false_yes_rate_among_yes": 0.01751
+        },
+        "target_yes_precision_0.980": {
+          "target_yes_precision": 0.98,
+          "threshold": 0.334725,
+          "yes_accept_rate": 0.490458,
+          "yes_precision": 0.98249,
+          "false_yes_rate_among_yes": 0.01751
+        },
+        "target_yes_precision_0.990": {
+          "target_yes_precision": 0.99,
+          "threshold": 0.601177,
+          "yes_accept_rate": 0.483779,
+          "yes_precision": 0.990138,
+          "false_yes_rate_among_yes": 0.009862
+        }
+      }
+    },
+    {
+      "name": "class_5_dog",
+      "positive_class_names": [
+        "dog"
+      ],
+      "positive_rate": 0.5,
+      "sample_count": 968,
+      "exit_binary_metrics": [
+        {
+          "exit_index": 0,
+          "multiclass_accuracy": 0.614669,
+          "binary_confusion": {
+            "tp": 271,
+            "fp": 23,
+            "fn": 213,
+            "tn": 461,
+            "total": 968,
+            "accuracy": 0.756198,
+            "yes_precision": 0.921769,
+            "yes_recall": 0.559917,
+            "specificity": 0.952479,
+            "f1": 0.696658,
+            "false_yes_rate_among_yes": 0.078231,
+            "yes_loss_rate": 0.440083
+          },
+          "yes_prediction_rate": 0.303719,
+          "confidence_mean": 0.577746,
+          "confidence_median": 0.552504
+        },
+        {
+          "exit_index": 1,
+          "multiclass_accuracy": 0.703512,
+          "binary_confusion": {
+            "tp": 289,
+            "fp": 6,
+            "fn": 195,
+            "tn": 478,
+            "total": 968,
+            "accuracy": 0.792355,
+            "yes_precision": 0.979661,
+            "yes_recall": 0.597107,
+            "specificity": 0.987603,
+            "f1": 0.741977,
+            "false_yes_rate_among_yes": 0.020339,
+            "yes_loss_rate": 0.402893
+          },
+          "yes_prediction_rate": 0.304752,
+          "confidence_mean": 0.745167,
+          "confidence_median": 0.777261
+        },
+        {
+          "exit_index": 2,
+          "multiclass_accuracy": 0.857438,
+          "binary_confusion": {
+            "tp": 381,
+            "fp": 3,
+            "fn": 103,
+            "tn": 481,
+            "total": 968,
+            "accuracy": 0.890496,
+            "yes_precision": 0.992188,
+            "yes_recall": 0.78719,
+            "specificity": 0.993802,
+            "f1": 0.87788,
+            "false_yes_rate_among_yes": 0.007812,
+            "yes_loss_rate": 0.21281
+          },
+          "yes_prediction_rate": 0.396694,
+          "confidence_mean": 0.899434,
+          "confidence_median": 0.988936
+        }
+      ],
+      "final_calibration": {
+        "target_yes_precision_0.950": {
+          "target_yes_precision": 0.95,
+          "threshold": 0.347335,
+          "yes_accept_rate": 0.396694,
+          "yes_precision": 0.992188,
+          "false_yes_rate_among_yes": 0.007812
+        },
+        "target_yes_precision_0.980": {
+          "target_yes_precision": 0.98,
+          "threshold": 0.347335,
+          "yes_accept_rate": 0.396694,
+          "yes_precision": 0.992188,
+          "false_yes_rate_among_yes": 0.007812
+        },
+        "target_yes_precision_0.990": {
+          "target_yes_precision": 0.99,
+          "threshold": 0.347335,
+          "yes_accept_rate": 0.396694,
+          "yes_precision": 0.992188,
+          "false_yes_rate_among_yes": 0.007812
+        }
+      }
+    },
+    {
+      "name": "class_6_frog",
+      "positive_class_names": [
+        "frog"
+      ],
+      "positive_rate": 0.5,
+      "sample_count": 988,
+      "exit_binary_metrics": [
+        {
+          "exit_index": 0,
+          "multiclass_accuracy": 0.682186,
+          "binary_confusion": {
+            "tp": 369,
+            "fp": 15,
+            "fn": 125,
+            "tn": 479,
+            "total": 988,
+            "accuracy": 0.8583,
+            "yes_precision": 0.960938,
+            "yes_recall": 0.746964,
+            "specificity": 0.969636,
+            "f1": 0.840547,
+            "false_yes_rate_among_yes": 0.039062,
+            "yes_loss_rate": 0.253036
+          },
+          "yes_prediction_rate": 0.388664,
+          "confidence_mean": 0.634482,
+          "confidence_median": 0.623698
+        },
+        {
+          "exit_index": 1,
+          "multiclass_accuracy": 0.839069,
+          "binary_confusion": {
+            "tp": 449,
+            "fp": 19,
+            "fn": 45,
+            "tn": 475,
+            "total": 988,
+            "accuracy": 0.935223,
+            "yes_precision": 0.959402,
+            "yes_recall": 0.908907,
+            "specificity": 0.961538,
+            "f1": 0.933472,
+            "false_yes_rate_among_yes": 0.040598,
+            "yes_loss_rate": 0.091093
+          },
+          "yes_prediction_rate": 0.473684,
+          "confidence_mean": 0.837075,
+          "confidence_median": 0.946362
+        },
+        {
+          "exit_index": 2,
+          "multiclass_accuracy": 0.911943,
+          "binary_confusion": {
+            "tp": 455,
+            "fp": 3,
+            "fn": 39,
+            "tn": 491,
+            "total": 988,
+            "accuracy": 0.95749,
+            "yes_precision": 0.99345,
+            "yes_recall": 0.921053,
+            "specificity": 0.993927,
+            "f1": 0.955882,
+            "false_yes_rate_among_yes": 0.00655,
+            "yes_loss_rate": 0.078947
+          },
+          "yes_prediction_rate": 0.463563,
+          "confidence_mean": 0.938502,
+          "confidence_median": 0.998499
+        }
+      ],
+      "final_calibration": {
+        "target_yes_precision_0.950": {
+          "target_yes_precision": 0.95,
+          "threshold": 0.359063,
+          "yes_accept_rate": 0.463563,
+          "yes_precision": 0.99345,
+          "false_yes_rate_among_yes": 0.00655
+        },
+        "target_yes_precision_0.980": {
+          "target_yes_precision": 0.98,
+          "threshold": 0.359063,
+          "yes_accept_rate": 0.463563,
+          "yes_precision": 0.99345,
+          "false_yes_rate_among_yes": 0.00655
+        },
+        "target_yes_precision_0.990": {
+          "target_yes_precision": 0.99,
+          "threshold": 0.359063,
+          "yes_accept_rate": 0.463563,
+          "yes_precision": 0.99345,
+          "false_yes_rate_among_yes": 0.00655
+        }
+      }
+    },
+    {
+      "name": "class_7_horse",
+      "positive_class_names": [
+        "horse"
+      ],
+      "positive_rate": 0.5,
+      "sample_count": 1018,
+      "exit_binary_metrics": [
+        {
+          "exit_index": 0,
+          "multiclass_accuracy": 0.675835,
+          "binary_confusion": {
+            "tp": 364,
+            "fp": 14,
+            "fn": 145,
+            "tn": 495,
+            "total": 1018,
+            "accuracy": 0.843811,
+            "yes_precision": 0.962963,
+            "yes_recall": 0.715128,
+            "specificity": 0.972495,
+            "f1": 0.820744,
+            "false_yes_rate_among_yes": 0.037037,
+            "yes_loss_rate": 0.284872
+          },
+          "yes_prediction_rate": 0.371316,
+          "confidence_mean": 0.635799,
+          "confidence_median": 0.632045
+        },
+        {
+          "exit_index": 1,
+          "multiclass_accuracy": 0.785855,
+          "binary_confusion": {
+            "tp": 399,
+            "fp": 6,
+            "fn": 110,
+            "tn": 503,
+            "total": 1018,
+            "accuracy": 0.886051,
+            "yes_precision": 0.985185,
+            "yes_recall": 0.78389,
+            "specificity": 0.988212,
+            "f1": 0.873085,
+            "false_yes_rate_among_yes": 0.014815,
+            "yes_loss_rate": 0.21611
+          },
+          "yes_prediction_rate": 0.397839,
+          "confidence_mean": 0.7867,
+          "confidence_median": 0.863292
+        },
+        {
+          "exit_index": 2,
+          "multiclass_accuracy": 0.918468,
+          "binary_confusion": {
+            "tp": 476,
+            "fp": 6,
+            "fn": 33,
+            "tn": 503,
+            "total": 1018,
+            "accuracy": 0.96169,
+            "yes_precision": 0.987552,
+            "yes_recall": 0.935167,
+            "specificity": 0.988212,
+            "f1": 0.960646,
+            "false_yes_rate_among_yes": 0.012448,
+            "yes_loss_rate": 0.064833
+          },
+          "yes_prediction_rate": 0.473477,
+          "confidence_mean": 0.929403,
+          "confidence_median": 0.99751
+        }
+      ],
+      "final_calibration": {
+        "target_yes_precision_0.950": {
+          "target_yes_precision": 0.95,
+          "threshold": 0.207455,
+          "yes_accept_rate": 0.473477,
+          "yes_precision": 0.987552,
+          "false_yes_rate_among_yes": 0.012448
+        },
+        "target_yes_precision_0.980": {
+          "target_yes_precision": 0.98,
+          "threshold": 0.207455,
+          "yes_accept_rate": 0.473477,
+          "yes_precision": 0.987552,
+          "false_yes_rate_among_yes": 0.012448
+        },
+        "target_yes_precision_0.990": {
+          "target_yes_precision": 0.99,
+          "threshold": 0.487116,
+          "yes_accept_rate": 0.467583,
+          "yes_precision": 0.991597,
+          "false_yes_rate_among_yes": 0.008403
+        }
+      }
+    },
+    {
+      "name": "class_8_ship",
+      "positive_class_names": [
+        "ship"
+      ],
+      "positive_rate": 0.5,
+      "sample_count": 996,
+      "exit_binary_metrics": [
+        {
+          "exit_index": 0,
+          "multiclass_accuracy": 0.688755,
+          "binary_confusion": {
+            "tp": 383,
+            "fp": 6,
+            "fn": 115,
+            "tn": 492,
+            "total": 996,
+            "accuracy": 0.878514,
+            "yes_precision": 0.984576,
+            "yes_recall": 0.769076,
+            "specificity": 0.987952,
+            "f1": 0.863585,
+            "false_yes_rate_among_yes": 0.015424,
+            "yes_loss_rate": 0.230924
+          },
+          "yes_prediction_rate": 0.390562,
+          "confidence_mean": 0.661053,
+          "confidence_median": 0.664643
+        },
+        {
+          "exit_index": 1,
+          "multiclass_accuracy": 0.808233,
+          "binary_confusion": {
+            "tp": 424,
+            "fp": 4,
+            "fn": 74,
+            "tn": 494,
+            "total": 996,
+            "accuracy": 0.921687,
+            "yes_precision": 0.990654,
+            "yes_recall": 0.851406,
+            "specificity": 0.991968,
+            "f1": 0.915767,
+            "false_yes_rate_among_yes": 0.009346,
+            "yes_loss_rate": 0.148594
+          },
+          "yes_prediction_rate": 0.429719,
+          "confidence_mean": 0.834639,
+          "confidence_median": 0.922607
+        },
+        {
+          "exit_index": 2,
+          "multiclass_accuracy": 0.916667,
+          "binary_confusion": {
+            "tp": 470,
+            "fp": 2,
+            "fn": 28,
+            "tn": 496,
+            "total": 996,
+            "accuracy": 0.96988,
+            "yes_precision": 0.995763,
+            "yes_recall": 0.943775,
+            "specificity": 0.995984,
+            "f1": 0.969072,
+            "false_yes_rate_among_yes": 0.004237,
+            "yes_loss_rate": 0.056225
+          },
+          "yes_prediction_rate": 0.473896,
+          "confidence_mean": 0.943896,
+          "confidence_median": 0.998383
+        }
+      ],
+      "final_calibration": {
+        "target_yes_precision_0.950": {
+          "target_yes_precision": 0.95,
+          "threshold": 0.43593,
+          "yes_accept_rate": 0.473896,
+          "yes_precision": 0.995763,
+          "false_yes_rate_among_yes": 0.004237
+        },
+        "target_yes_precision_0.980": {
+          "target_yes_precision": 0.98,
+          "threshold": 0.43593,
+          "yes_accept_rate": 0.473896,
+          "yes_precision": 0.995763,
+          "false_yes_rate_among_yes": 0.004237
+        },
+        "target_yes_precision_0.990": {
+          "target_yes_precision": 0.99,
+          "threshold": 0.43593,
+          "yes_accept_rate": 0.473896,
+          "yes_precision": 0.995763,
+          "false_yes_rate_among_yes": 0.004237
+        }
+      }
+    },
+    {
+      "name": "class_9_truck",
+      "positive_class_names": [
+        "truck"
+      ],
+      "positive_rate": 0.5,
+      "sample_count": 1014,
+      "exit_binary_metrics": [
+        {
+          "exit_index": 0,
+          "multiclass_accuracy": 0.695266,
+          "binary_confusion": {
+            "tp": 389,
+            "fp": 12,
+            "fn": 118,
+            "tn": 495,
+            "total": 1014,
+            "accuracy": 0.871795,
+            "yes_precision": 0.970075,
+            "yes_recall": 0.767258,
+            "specificity": 0.976331,
+            "f1": 0.856828,
+            "false_yes_rate_among_yes": 0.029925,
+            "yes_loss_rate": 0.232742
+          },
+          "yes_prediction_rate": 0.395464,
+          "confidence_mean": 0.644617,
+          "confidence_median": 0.645929
+        },
+        {
+          "exit_index": 1,
+          "multiclass_accuracy": 0.830375,
+          "binary_confusion": {
+            "tp": 454,
+            "fp": 9,
+            "fn": 53,
+            "tn": 498,
+            "total": 1014,
+            "accuracy": 0.938856,
+            "yes_precision": 0.980562,
+            "yes_recall": 0.895464,
+            "specificity": 0.982249,
+            "f1": 0.936082,
+            "false_yes_rate_among_yes": 0.019438,
+            "yes_loss_rate": 0.104536
+          },
+          "yes_prediction_rate": 0.456607,
+          "confidence_mean": 0.837983,
+          "confidence_median": 0.940097
+        },
+        {
+          "exit_index": 2,
+          "multiclass_accuracy": 0.926036,
+          "binary_confusion": {
+            "tp": 484,
+            "fp": 2,
+            "fn": 23,
+            "tn": 505,
+            "total": 1014,
+            "accuracy": 0.975345,
+            "yes_precision": 0.995885,
+            "yes_recall": 0.954635,
+            "specificity": 0.996055,
+            "f1": 0.974824,
+            "false_yes_rate_among_yes": 0.004115,
+            "yes_loss_rate": 0.045365
+          },
+          "yes_prediction_rate": 0.47929,
+          "confidence_mean": 0.937868,
+          "confidence_median": 0.999052
+        }
+      ],
+      "final_calibration": {
+        "target_yes_precision_0.950": {
+          "target_yes_precision": 0.95,
+          "threshold": 0.434473,
+          "yes_accept_rate": 0.47929,
+          "yes_precision": 0.995885,
+          "false_yes_rate_among_yes": 0.004115
+        },
+        "target_yes_precision_0.980": {
+          "target_yes_precision": 0.98,
+          "threshold": 0.434473,
+          "yes_accept_rate": 0.47929,
+          "yes_precision": 0.995885,
+          "false_yes_rate_among_yes": 0.004115
+        },
+        "target_yes_precision_0.990": {
+          "target_yes_precision": 0.99,
+          "threshold": 0.434473,
+          "yes_accept_rate": 0.47929,
+          "yes_precision": 0.995885,
+          "false_yes_rate_among_yes": 0.004115
+        }
+      }
+    }
+  ],
+  "class_average": {
+    "target_key": "target_yes_precision_0.980",
+    "task_count": 10,
+    "exit_binary_metric_macro_average": [
+      {
+        "exit_index": 0,
+        "accuracy": 0.805874,
+        "yes_precision": 0.945587,
+        "yes_recall": 0.645508,
+        "specificity": 0.966241,
+        "f1": 0.762382,
+        "false_yes_rate_among_yes": 0.054413,
+        "yes_loss_rate": 0.354492
+      },
+      {
+        "exit_index": 1,
+        "accuracy": 0.877918,
+        "yes_precision": 0.973703,
+        "yes_recall": 0.776206,
+        "specificity": 0.979629,
+        "f1": 0.858692,
+        "false_yes_rate_among_yes": 0.026297,
+        "yes_loss_rate": 0.223794
+      },
+      {
+        "exit_index": 2,
+        "accuracy": 0.946808,
+        "yes_precision": 0.989828,
+        "yes_recall": 0.902761,
+        "specificity": 0.990856,
+        "f1": 0.943276,
+        "false_yes_rate_among_yes": 0.010172,
+        "yes_loss_rate": 0.097239
+      }
+    ],
+    "exit1_confidence_band_transition_weighted_average": [
+      {
+        "band": "0-10%",
+        "confidence_min": 0.0,
+        "confidence_max": 0.1,
+        "count": 0,
+        "source_accuracy": null,
+        "final_accuracy": null,
+        "source_confidence_mean": null,
+        "final_confidence_mean": null,
+        "confidence_gain_mean": null,
+        "final_reliable_yes_rate": null
+      },
+      {
+        "band": "10-20%",
+        "confidence_min": 0.1,
+        "confidence_max": 0.2,
+        "count": 3,
+        "source_accuracy": 0.333333,
+        "final_accuracy": 1.0,
+        "source_confidence_mean": 0.189969,
+        "final_confidence_mean": 0.997715,
+        "confidence_gain_mean": 0.807745,
+        "final_reliable_yes_rate": 0.666667
+      },
+      {
+        "band": "20-30%",
+        "confidence_min": 0.2,
+        "confidence_max": 0.3,
+        "count": 113,
+        "source_accuracy": 0.345133,
+        "final_accuracy": 0.716814,
+        "source_confidence_mean": 0.266566,
+        "final_confidence_mean": 0.793739,
+        "confidence_gain_mean": 0.527172,
+        "final_reliable_yes_rate": 0.353982
+      },
+      {
+        "band": "30-40%",
+        "confidence_min": 0.3,
+        "confidence_max": 0.4,
+        "count": 422,
+        "source_accuracy": 0.353081,
+        "final_accuracy": 0.677725,
+        "source_confidence_mean": 0.354133,
+        "final_confidence_mean": 0.767905,
+        "confidence_gain_mean": 0.413772,
+        "final_reliable_yes_rate": 0.350711
+      },
+      {
+        "band": "40-50%",
+        "confidence_min": 0.4,
+        "confidence_max": 0.5,
+        "count": 705,
+        "source_accuracy": 0.395745,
+        "final_accuracy": 0.778723,
+        "source_confidence_mean": 0.455064,
+        "final_confidence_mean": 0.839583,
+        "confidence_gain_mean": 0.384519,
+        "final_reliable_yes_rate": 0.375887
+      },
+      {
+        "band": "50-60%",
+        "confidence_min": 0.5,
+        "confidence_max": 0.6,
+        "count": 1009,
+        "source_accuracy": 0.547076,
+        "final_accuracy": 0.860257,
+        "source_confidence_mean": 0.548791,
+        "final_confidence_mean": 0.8778,
+        "confidence_gain_mean": 0.329009,
+        "final_reliable_yes_rate": 0.4222
+      },
+      {
+        "band": "60-70%",
+        "confidence_min": 0.6,
+        "confidence_max": 0.7,
+        "count": 910,
+        "source_accuracy": 0.612088,
+        "final_accuracy": 0.834066,
+        "source_confidence_mean": 0.649323,
+        "final_confidence_mean": 0.883989,
+        "confidence_gain_mean": 0.234666,
+        "final_reliable_yes_rate": 0.418681
+      },
+      {
+        "band": "70-80%",
+        "confidence_min": 0.7,
+        "confidence_max": 0.8,
+        "count": 957,
+        "source_accuracy": 0.710554,
+        "final_accuracy": 0.863114,
+        "source_confidence_mean": 0.749733,
+        "final_confidence_mean": 0.902166,
+        "confidence_gain_mean": 0.152433,
+        "final_reliable_yes_rate": 0.432602
+      },
+      {
+        "band": "80-90%",
+        "confidence_min": 0.8,
+        "confidence_max": 0.9,
+        "count": 1242,
+        "source_accuracy": 0.828502,
+        "final_accuracy": 0.9219,
+        "source_confidence_mean": 0.854002,
+        "final_confidence_mean": 0.937349,
+        "confidence_gain_mean": 0.083347,
+        "final_reliable_yes_rate": 0.454911
+      },
+      {
+        "band": "90-100%",
+        "confidence_min": 0.9,
+        "confidence_max": 1.0,
+        "count": 4639,
+        "source_accuracy": 0.962707,
+        "final_accuracy": 0.974995,
+        "source_confidence_mean": 0.974194,
+        "final_confidence_mean": 0.983028,
+        "confidence_gain_mean": 0.008835,
+        "final_reliable_yes_rate": 0.486312
+      }
+    ]
+  },
+  "wrote": {
+    "summary": "results/resnet_exit_confidence_trace_binary_001_summary.json",
+    "sample_csv": "results/resnet_exit_confidence_trace_binary_001_samples.csv",
+    "plots": [
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_0_airplane_confidence_to_reliable_yes.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_0_airplane_low_conf_reliable_yes_recovery.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_0_airplane_exit1_confidence_band_transition.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_1_automobile_confidence_to_reliable_yes.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_1_automobile_low_conf_reliable_yes_recovery.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_1_automobile_exit1_confidence_band_transition.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_2_bird_confidence_to_reliable_yes.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_2_bird_low_conf_reliable_yes_recovery.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_2_bird_exit1_confidence_band_transition.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_3_cat_confidence_to_reliable_yes.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_3_cat_low_conf_reliable_yes_recovery.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_3_cat_exit1_confidence_band_transition.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_4_deer_confidence_to_reliable_yes.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_4_deer_low_conf_reliable_yes_recovery.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_4_deer_exit1_confidence_band_transition.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_5_dog_confidence_to_reliable_yes.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_5_dog_low_conf_reliable_yes_recovery.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_5_dog_exit1_confidence_band_transition.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_6_frog_confidence_to_reliable_yes.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_6_frog_low_conf_reliable_yes_recovery.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_6_frog_exit1_confidence_band_transition.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_7_horse_confidence_to_reliable_yes.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_7_horse_low_conf_reliable_yes_recovery.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_7_horse_exit1_confidence_band_transition.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_8_ship_confidence_to_reliable_yes.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_8_ship_low_conf_reliable_yes_recovery.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_8_ship_exit1_confidence_band_transition.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_9_truck_confidence_to_reliable_yes.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_9_truck_low_conf_reliable_yes_recovery.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_9_truck_exit1_confidence_band_transition.png",
+      "results/resnet_exit_confidence_trace_binary_001_plots/class_average_exit1_confidence_band_transition.png"
+    ]
+  }
+}
