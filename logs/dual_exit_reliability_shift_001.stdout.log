@@ -1,3 +1,140 @@
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 1)) (3.10.0)
+Requirement already satisfied: matplotlib-venn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 2)) (1.1.2)
+Collecting torchinfo (from -r requirements-colab.txt (line 3))
+  Using cached torchinfo-1.8.0-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: transformers in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 4)) (5.12.1)
+Requirement already satisfied: opencv-python-headless in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 5)) (4.13.0.92)
+Requirement already satisfied: scikit-learn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 6)) (1.6.1)
+Requirement already satisfied: lightgbm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 7)) (4.6.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 8)) (4.67.3)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (4.63.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (1.5.0)
+Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (2.0.2)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (26.2)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (11.3.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (2.9.0.post0)
+Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 2)) (1.16.3)
+Requirement already satisfied: huggingface-hub<2.0,>=1.5.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (1.20.1)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (6.0.3)
+Requirement already satisfied: regex>=2025.10.22 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (2025.11.3)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (0.22.2)
+Requirement already satisfied: typer in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (0.25.1)
+Requirement already satisfied: safetensors>=0.4.3 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (0.8.0)
+Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 6)) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 6)) (3.6.0)
+Requirement already satisfied: click>=8.4.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (8.4.2)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (3.29.4)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (2025.3.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.5.1 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (1.5.1)
+Requirement already satisfied: httpx<1,>=0.23.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (0.28.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (4.15.0)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.7->matplotlib->-r requirements-colab.txt (line 1)) (1.17.0)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (13.9.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (0.0.4)
+Requirement already satisfied: anyio in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (4.14.0)
+Requirement already satisfied: certifi in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (2026.6.17)
+Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (1.0.9)
+Requirement already satisfied: idna in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (3.18)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/dist-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (0.16.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (0.1.2)
+Using cached torchinfo-1.8.0-py3-none-any.whl (23 kB)
+Installing collected packages: torchinfo
+Successfully installed torchinfo-1.8.0
+device=cuda
+Loading pretrained model from torch.hub: cifar10_resnet56
+Using cache found in /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/chenyaofo_pytorch-cifar-models_master
+exit_modules=['layer1.0', 'layer2.0']
+branch_depths=[3, 2]
+exit_names=['exit_after_layer1.0', 'exit_after_layer2.0', 'final']
+costs=[0.05454545454545454, 0.38181818181818183, 1.0]
+Resuming from checkpoint /content/drive/MyDrive/Research_Experiment/checkpoints/0000b_branchynet_reproduce_resnet56_cifar10/latest.pt at completed_epoch=10
+
+Collecting BranchyNet outputs:   0%|          | 0/40 [00:00<?, ?it/s]
+Collecting BranchyNet outputs:   2%|▎         | 1/40 [00:00<00:28,  1.35it/s]
+Collecting BranchyNet outputs:   5%|▌         | 2/40 [00:00<00:15,  2.43it/s]
+Collecting BranchyNet outputs:   8%|▊         | 3/40 [00:01<00:10,  3.41it/s]
+Collecting BranchyNet outputs:  10%|█         | 4/40 [00:01<00:08,  4.12it/s]
+Collecting BranchyNet outputs:  12%|█▎        | 5/40 [00:01<00:07,  4.92it/s]
+Collecting BranchyNet outputs:  15%|█▌        | 6/40 [00:01<00:05,  5.86it/s]
+Collecting BranchyNet outputs:  18%|█▊        | 7/40 [00:01<00:05,  6.49it/s]
+Collecting BranchyNet outputs:  20%|██        | 8/40 [00:01<00:05,  6.32it/s]
+Collecting BranchyNet outputs:  22%|██▎       | 9/40 [00:01<00:04,  6.90it/s]
+Collecting BranchyNet outputs:  25%|██▌       | 10/40 [00:01<00:04,  7.50it/s]
+Collecting BranchyNet outputs:  28%|██▊       | 11/40 [00:02<00:04,  6.94it/s]
+Collecting BranchyNet outputs:  30%|███       | 12/40 [00:02<00:04,  6.40it/s]
+Collecting BranchyNet outputs:  32%|███▎      | 13/40 [00:02<00:04,  6.38it/s]
+Collecting BranchyNet outputs:  35%|███▌      | 14/40 [00:02<00:03,  7.03it/s]
+Collecting BranchyNet outputs:  38%|███▊      | 15/40 [00:02<00:03,  7.25it/s]
+Collecting BranchyNet outputs:  40%|████      | 16/40 [00:02<00:03,  7.44it/s]
+Collecting BranchyNet outputs:  45%|████▌     | 18/40 [00:03<00:02,  8.08it/s]
+Collecting BranchyNet outputs:  50%|█████     | 20/40 [00:03<00:02,  8.14it/s]
+Collecting BranchyNet outputs:  52%|█████▎    | 21/40 [00:03<00:02,  8.11it/s]
+Collecting BranchyNet outputs:  55%|█████▌    | 22/40 [00:03<00:02,  7.76it/s]
+Collecting BranchyNet outputs:  57%|█████▊    | 23/40 [00:03<00:02,  7.63it/s]
+Collecting BranchyNet outputs:  60%|██████    | 24/40 [00:03<00:02,  7.43it/s]
+Collecting BranchyNet outputs:  62%|██████▎   | 25/40 [00:04<00:02,  6.96it/s]
+Collecting BranchyNet outputs:  65%|██████▌   | 26/40 [00:04<00:02,  6.61it/s]
+Collecting BranchyNet outputs:  68%|██████▊   | 27/40 [00:04<00:01,  6.53it/s]
+Collecting BranchyNet outputs:  70%|███████   | 28/40 [00:04<00:01,  6.80it/s]
+Collecting BranchyNet outputs:  72%|███████▎  | 29/40 [00:04<00:01,  7.11it/s]
+Collecting BranchyNet outputs:  75%|███████▌  | 30/40 [00:04<00:01,  7.30it/s]
+Collecting BranchyNet outputs:  78%|███████▊  | 31/40 [00:04<00:01,  6.60it/s]
+Collecting BranchyNet outputs:  80%|████████  | 32/40 [00:05<00:01,  6.51it/s]
+Collecting BranchyNet outputs:  82%|████████▎ | 33/40 [00:05<00:01,  6.31it/s]
+Collecting BranchyNet outputs:  85%|████████▌ | 34/40 [00:05<00:00,  6.17it/s]
+Collecting BranchyNet outputs:  88%|████████▊ | 35/40 [00:05<00:00,  6.15it/s]
+Collecting BranchyNet outputs:  90%|█████████ | 36/40 [00:05<00:00,  6.71it/s]
+Collecting BranchyNet outputs:  95%|█████████▌| 38/40 [00:05<00:00,  8.05it/s]
+Collecting BranchyNet outputs:  98%|█████████▊| 39/40 [00:06<00:00,  8.04it/s]
+Collecting BranchyNet outputs: 100%|██████████| 40/40 [00:06<00:00,  6.47it/s]
+
+Collecting BranchyNet outputs:   0%|          | 0/40 [00:00<?, ?it/s]
+Collecting BranchyNet outputs:   2%|▎         | 1/40 [00:00<00:14,  2.73it/s]
+Collecting BranchyNet outputs:   5%|▌         | 2/40 [00:00<00:09,  4.04it/s]
+Collecting BranchyNet outputs:   8%|▊         | 3/40 [00:00<00:07,  4.83it/s]
+Collecting BranchyNet outputs:  10%|█         | 4/40 [00:00<00:06,  5.84it/s]
+Collecting BranchyNet outputs:  12%|█▎        | 5/40 [00:00<00:05,  6.22it/s]
+Collecting BranchyNet outputs:  15%|█▌        | 6/40 [00:01<00:05,  6.22it/s]
+Collecting BranchyNet outputs:  18%|█▊        | 7/40 [00:01<00:05,  6.06it/s]
+Collecting BranchyNet outputs:  20%|██        | 8/40 [00:01<00:04,  6.59it/s]
+Collecting BranchyNet outputs:  22%|██▎       | 9/40 [00:01<00:05,  6.06it/s]
+Collecting BranchyNet outputs:  25%|██▌       | 10/40 [00:01<00:05,  5.68it/s]
+Collecting BranchyNet outputs:  28%|██▊       | 11/40 [00:02<00:05,  5.38it/s]
+Collecting BranchyNet outputs:  30%|███       | 12/40 [00:02<00:05,  5.25it/s]
+Collecting BranchyNet outputs:  32%|███▎      | 13/40 [00:02<00:05,  5.26it/s]
+Collecting BranchyNet outputs:  35%|███▌      | 14/40 [00:02<00:05,  5.16it/s]
+Collecting BranchyNet outputs:  38%|███▊      | 15/40 [00:02<00:04,  5.07it/s]
+Collecting BranchyNet outputs:  40%|████      | 16/40 [00:03<00:04,  4.96it/s]
+Collecting BranchyNet outputs:  42%|████▎     | 17/40 [00:03<00:04,  5.58it/s]
+Collecting BranchyNet outputs:  45%|████▌     | 18/40 [00:03<00:04,  5.49it/s]
+Collecting BranchyNet outputs:  48%|████▊     | 19/40 [00:03<00:03,  5.31it/s]
+Collecting BranchyNet outputs:  50%|█████     | 20/40 [00:03<00:03,  5.45it/s]
+Collecting BranchyNet outputs:  52%|█████▎    | 21/40 [00:03<00:03,  5.14it/s]
+Collecting BranchyNet outputs:  55%|█████▌    | 22/40 [00:04<00:03,  5.06it/s]
+Collecting BranchyNet outputs:  57%|█████▊    | 23/40 [00:04<00:03,  5.00it/s]
+Collecting BranchyNet outputs:  60%|██████    | 24/40 [00:04<00:03,  5.26it/s]
+Collecting BranchyNet outputs:  62%|██████▎   | 25/40 [00:04<00:02,  5.09it/s]
+Collecting BranchyNet outputs:  65%|██████▌   | 26/40 [00:04<00:02,  5.76it/s]
+Collecting BranchyNet outputs:  68%|██████▊   | 27/40 [00:05<00:02,  5.67it/s]
+Collecting BranchyNet outputs:  70%|███████   | 28/40 [00:05<00:01,  6.08it/s]
+Collecting BranchyNet outputs:  72%|███████▎  | 29/40 [00:05<00:01,  6.26it/s]
+Collecting BranchyNet outputs:  75%|███████▌  | 30/40 [00:05<00:01,  6.70it/s]
+Collecting BranchyNet outputs:  78%|███████▊  | 31/40 [00:05<00:01,  6.68it/s]
+Collecting BranchyNet outputs:  80%|████████  | 32/40 [00:05<00:01,  7.10it/s]
+Collecting BranchyNet outputs:  82%|████████▎ | 33/40 [00:05<00:01,  6.92it/s]
+Collecting BranchyNet outputs:  85%|████████▌ | 34/40 [00:05<00:00,  7.31it/s]
+Collecting BranchyNet outputs:  88%|████████▊ | 35/40 [00:06<00:00,  6.51it/s]
+Collecting BranchyNet outputs:  90%|█████████ | 36/40 [00:06<00:00,  7.25it/s]
+Collecting BranchyNet outputs:  92%|█████████▎| 37/40 [00:06<00:00,  7.31it/s]
+Collecting BranchyNet outputs:  95%|█████████▌| 38/40 [00:06<00:00,  7.68it/s]
+Collecting BranchyNet outputs: 100%|██████████| 40/40 [00:06<00:00, 10.20it/s]
+Collecting BranchyNet outputs: 100%|██████████| 40/40 [00:06<00:00,  5.94it/s]
 {
   "status": "ok",
   "purpose": "BranchyNet sweep with paper-aligned side branches, joint weighted loss, Adam, entropy threshold tuning.",
@@ -1030,3 +1167,79 @@
   },
   "result_npz": "/content/codex_colab_bridge/codex-colab-bridge/results/0000b_branchynet_reproduce_resnet56_cifar10.npz"
 }
+device=cuda
+Loading pretrained model from torch.hub: cifar10_resnet56
+Using cache found in /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/chenyaofo_pytorch-cifar-models_master
+Loaded BranchyNet checkpoint: /content/drive/MyDrive/Research_Experiment/checkpoints/0000b_branchynet_reproduce_resnet56_cifar10/latest.pt
+Collecting scenario=clean
+
+Collecting BranchyNet outputs:   0%|          | 0/40 [00:00<?, ?it/s]
+Collecting BranchyNet outputs:   2%|▎         | 1/40 [00:00<00:22,  1.70it/s]
+Collecting BranchyNet outputs:   5%|▌         | 2/40 [00:00<00:11,  3.25it/s]
+Collecting BranchyNet outputs:   8%|▊         | 3/40 [00:00<00:08,  4.42it/s]
+Collecting BranchyNet outputs:  10%|█         | 4/40 [00:00<00:06,  5.36it/s]
+Collecting BranchyNet outputs:  12%|█▎        | 5/40 [00:01<00:05,  6.05it/s]
+Collecting BranchyNet outputs:  15%|█▌        | 6/40 [00:01<00:05,  6.80it/s]
+Collecting BranchyNet outputs:  18%|█▊        | 7/40 [00:01<00:04,  7.21it/s]
+Collecting BranchyNet outputs:  20%|██        | 8/40 [00:01<00:04,  7.57it/s]
+Collecting BranchyNet outputs:  22%|██▎       | 9/40 [00:01<00:04,  7.57it/s]
+Collecting BranchyNet outputs:  25%|██▌       | 10/40 [00:01<00:04,  7.40it/s]
+Collecting BranchyNet outputs:  28%|██▊       | 11/40 [00:01<00:03,  7.46it/s]
+Collecting BranchyNet outputs:  30%|███       | 12/40 [00:01<00:03,  7.31it/s]
+Collecting BranchyNet outputs:  32%|███▎      | 13/40 [00:02<00:03,  7.53it/s]
+Collecting BranchyNet outputs:  35%|███▌      | 14/40 [00:02<00:03,  7.71it/s]
+Collecting BranchyNet outputs:  38%|███▊      | 15/40 [00:02<00:03,  7.26it/s]
+Collecting BranchyNet outputs:  40%|████      | 16/40 [00:02<00:03,  6.82it/s]
+Collecting BranchyNet outputs:  42%|████▎     | 17/40 [00:02<00:03,  7.14it/s]
+Collecting BranchyNet outputs:  45%|████▌     | 18/40 [00:02<00:03,  7.18it/s]
+Collecting BranchyNet outputs:  48%|████▊     | 19/40 [00:02<00:03,  6.90it/s]
+Collecting BranchyNet outputs:  50%|█████     | 20/40 [00:03<00:03,  6.65it/s]
+Collecting BranchyNet outputs:  52%|█████▎    | 21/40 [00:03<00:03,  6.12it/s]
+Collecting BranchyNet outputs:  55%|█████▌    | 22/40 [00:03<00:02,  6.30it/s]
+Collecting BranchyNet outputs:  57%|█████▊    | 23/40 [00:03<00:02,  6.72it/s]
+Collecting BranchyNet outputs:  62%|██████▎   | 25/40 [00:03<00:01,  8.55it/s]
+Collecting BranchyNet outputs:  65%|██████▌   | 26/40 [00:03<00:01,  8.71it/s]
+Collecting BranchyNet outputs:  70%|███████   | 28/40 [00:04<00:01,  8.66it/s]
+Collecting BranchyNet outputs:  72%|███████▎  | 29/40 [00:04<00:01,  8.56it/s]
+Collecting BranchyNet outputs:  75%|███████▌  | 30/40 [00:04<00:01,  8.44it/s]
+Collecting BranchyNet outputs:  78%|███████▊  | 31/40 [00:04<00:01,  8.45it/s]
+Collecting BranchyNet outputs:  80%|████████  | 32/40 [00:04<00:00,  8.57it/s]
+Collecting BranchyNet outputs:  85%|████████▌ | 34/40 [00:04<00:00,  9.71it/s]
+Collecting BranchyNet outputs:  88%|████████▊ | 35/40 [00:04<00:00,  9.35it/s]
+Collecting BranchyNet outputs:  90%|█████████ | 36/40 [00:04<00:00,  9.04it/s]
+Collecting BranchyNet outputs:  92%|█████████▎| 37/40 [00:05<00:00,  8.29it/s]
+Collecting BranchyNet outputs:  95%|█████████▌| 38/40 [00:05<00:00,  8.37it/s]
+Collecting BranchyNet outputs:  98%|█████████▊| 39/40 [00:05<00:00,  8.22it/s]
+Collecting BranchyNet outputs: 100%|██████████| 40/40 [00:05<00:00,  7.15it/s]
+Collecting scenario=clean
+
+Collecting BranchyNet outputs:   0%|          | 0/40 [00:00<?, ?it/s]
+Collecting BranchyNet outputs:   2%|▎         | 1/40 [00:00<00:12,  3.21it/s]
+Collecting BranchyNet outputs:   5%|▌         | 2/40 [00:00<00:07,  5.06it/s]
+Collecting BranchyNet outputs:   8%|▊         | 3/40 [00:00<00:06,  5.38it/s]
+Collecting BranchyNet outputs:  10%|█         | 4/40 [00:00<00:05,  6.11it/s]
+Collecting BranchyNet outputs:  12%|█▎        | 5/40 [00:00<00:05,  6.08it/s]
+Collecting BranchyNet outputs:  15%|█▌        | 6/40 [00:01<00:05,  6.00it/s]
+Collecting BranchyNet outputs:  18%|█▊        | 7/40 [00:01<00:06,  5.41it/s]
+Collecting BranchyNet outputs:  20%|██        | 8/40 [00:01<00:05,  5.69it/s]
+Collecting BranchyNet outputs:  22%|██▎       | 9/40 [00:01<00:05,  5.69it/s]
+Collecting BranchyNet outputs:  25%|██▌       | 10/40 [00:01<00:04,  6.21it/s]
+Collecting BranchyNet outputs:  28%|██▊       | 11/40 [00:01<00:04,  6.36it/s]
+Collecting BranchyNet outputs:  30%|███       | 12/40 [00:02<00:04,  6.67it/s]
+Collecting BranchyNet outputs:  32%|███▎      | 13/40 [00:02<00:04,  6.56it/s]
+Collecting BranchyNet outputs:  35%|███▌      | 14/40 [00:02<00:04,  6.32it/s]
+Collecting BranchyNet outputs:  38%|███▊      | 15/40 [00:02<00:03,  6.62it/s]
+Collecting BranchyNet outputs:  40%|████      | 16/40 [00:02<00:03,  7.28it/s]
+Collecting BranchyNet outputs:  42%|████▎     | 17/40 [00:02<00:03,  6.86it/s]
+Collecting BranchyNet outputs:  45%|████▌     | 18/40 [00:02<00:03,  6.53it/s]
+Collecting BranchyNet outputs:  48%|████▊     | 19/40 [00:03<00:03,  6.04it/s]
+Collecting BranchyNet outputs:  50%|█████     | 20/40 [00:03<00:03,  6.59it/s]
+Collecting BranchyNet outputs:  52%|█████▎    | 21/40 [00:03<00:03,  6.33it/s]
+Collecting BranchyNet outputs:  55%|█████▌    | 22/40 [00:03<00:02,  6.75it/s]
+Collecting BranchyNet outputs:  57%|█████▊    | 23/40 [00:03<00:02,  6.89it/s]
+Collecting BranchyNet outputs:  60%|██████    | 24/40 [00:03<00:02,  7.12it/s]
+Collecting BranchyNet outputs:  62%|██████▎   | 25/40 [00:03<00:02,  6.90it/s]
+Collecting BranchyNet outputs:  65%|██████▌   | 26/40 [00:04<00:01,  7.23it/s]
+Collecting BranchyNet outputs:  68%|██████▊   | 27/40 [00:04<00:01,  7.06it/s]
+Collecting BranchyNet outputs:  70%|███████   | 28/40 [00:04<00:01,  7.09it/s]
+Collecting BranchyNet outputs:  72%|██
