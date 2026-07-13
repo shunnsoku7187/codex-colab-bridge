@@ -3,7 +3,7 @@
 The experiment keeps the raw per-exit behavior reusable:
 
 * predicted class, correctness, self-confidence, and entropy at each exit
-* binary yes/no mapping for several CIFAR-10 positive-class candidates
+* binary yes/no one-vs-rest tasks for each CIFAR-10 class
 * whether an early low-confidence sample later recovers to a reliable yes
 
 Here "reliable yes" means that the final exit predicts yes and its final
@@ -35,19 +35,54 @@ CIFAR10_CLASSES = [
 ]
 
 
-DEFAULT_POSITIVE_SETS = {
-    "vehicle": [0, 1, 8, 9],
-    "animal": [2, 3, 4, 5, 6, 7],
-    "pet": [3, 5],
-    "vehicle_vs_animal_balanced": [0, 1, 8, 9],
-    "single_ship": [8],
-}
-
-
 def round_float(value: float | np.floating[Any] | None, digits: int = 6) -> float | None:
     if value is None:
         return None
     return round(float(value), digits)
+
+
+def make_one_vs_rest_tasks(labels: np.ndarray, seed: int, negative_ratio: float) -> list[dict[str, Any]]:
+    """Build balanced one-vs-rest binary tasks from CIFAR-10 labels.
+
+    For class k, all samples of class k are yes.  No samples are randomly drawn
+    from the other nine classes as evenly as possible.  The default
+    negative_ratio=1.0 gives a balanced yes/no task.
+    """
+
+    rng = np.random.default_rng(seed)
+    tasks: list[dict[str, Any]] = []
+    for class_id, class_name in enumerate(CIFAR10_CLASSES):
+        pos_idx = np.flatnonzero(labels == class_id)
+        negative_total = max(1, int(round(len(pos_idx) * negative_ratio)))
+        other_classes = [idx for idx in range(len(CIFAR10_CLASSES)) if idx != class_id]
+        base = negative_total // len(other_classes)
+        remainder = negative_total % len(other_classes)
+        neg_parts = []
+        per_class_counts: dict[str, int] = {}
+        for offset, other_class in enumerate(other_classes):
+            take = base + (1 if offset < remainder else 0)
+            pool = np.flatnonzero(labels == other_class)
+            take = min(take, len(pool))
+            chosen = rng.choice(pool, size=take, replace=False)
+            neg_parts.append(chosen)
+            per_class_counts[CIFAR10_CLASSES[other_class]] = int(take)
+        neg_idx = np.concatenate(neg_parts) if neg_parts else np.array([], dtype=int)
+        sample_idx = np.concatenate([pos_idx, neg_idx])
+        rng.shuffle(sample_idx)
+        tasks.append({
+            "name": f"class_{class_id}_{class_name}",
+            "positive_classes": [class_id],
+            "positive_class_names": [class_name],
+            "sample_indices": sample_idx.astype(int),
+            "positive_count": int(len(pos_idx)),
+            "negative_count": int(len(neg_idx)),
+            "negative_sampling": {
+                "seed": seed,
+                "negative_ratio": negative_ratio,
+                "negative_per_other_class": per_class_counts,
+            },
+        })
+    return tasks
 
 
 def calibrate_yes_threshold(
@@ -350,6 +385,109 @@ def plot_reliable_yes_curves(positive_set_results: list[dict[str, Any]], plot_di
     return written
 
 
+def weighted_mean(rows: list[dict[str, Any]], key: str, weight_key: str = "count") -> float | None:
+    num = 0.0
+    den = 0.0
+    for row in rows:
+        value = row.get(key)
+        weight = row.get(weight_key, 0)
+        if value is None or weight is None:
+            continue
+        num += float(value) * float(weight)
+        den += float(weight)
+    return None if den == 0 else num / den
+
+
+def class_average_summary(positive_set_results: list[dict[str, Any]], target_key: str = "target_yes_precision_0.980") -> dict[str, Any]:
+    exit_metric_keys = [
+        "accuracy",
+        "yes_precision",
+        "yes_recall",
+        "specificity",
+        "f1",
+        "false_yes_rate_among_yes",
+        "yes_loss_rate",
+    ]
+    exit_averages = []
+    for exit_idx in range(3):
+        metrics: dict[str, Any] = {"exit_index": exit_idx}
+        for metric in exit_metric_keys:
+            values = [
+                item["exit_summaries"][exit_idx]["binary_confusion"][metric]
+                for item in positive_set_results
+                if item["exit_summaries"][exit_idx]["binary_confusion"][metric] is not None
+            ]
+            metrics[metric] = round_float(float(np.mean(values)) if values else None)
+        exit_averages.append(metrics)
+
+    band_rows = []
+    first_transition = None
+    for item in positive_set_results:
+        target = item["reliable_yes_recovery"].get(target_key)
+        if target is not None:
+            first_transition = target["exit1_confidence_band_transition"]
+            break
+    if first_transition:
+        for band_idx, template in enumerate(first_transition):
+            rows = [
+                item["reliable_yes_recovery"][target_key]["exit1_confidence_band_transition"][band_idx]
+                for item in positive_set_results
+                if item["reliable_yes_recovery"].get(target_key) is not None
+            ]
+            band_rows.append({
+                "band": template["band"],
+                "confidence_min": template["confidence_min"],
+                "confidence_max": template["confidence_max"],
+                "count": int(sum(row["count"] for row in rows)),
+                "source_accuracy": round_float(weighted_mean(rows, "source_accuracy")),
+                "final_accuracy": round_float(weighted_mean(rows, "final_accuracy")),
+                "source_confidence_mean": round_float(weighted_mean(rows, "source_confidence_mean")),
+                "final_confidence_mean": round_float(weighted_mean(rows, "final_confidence_mean")),
+                "confidence_gain_mean": round_float(weighted_mean(rows, "confidence_gain_mean")),
+                "final_reliable_yes_rate": round_float(weighted_mean(rows, "final_reliable_yes_rate")),
+            })
+
+    return {
+        "target_key": target_key,
+        "task_count": len(positive_set_results),
+        "exit_binary_metric_macro_average": exit_averages,
+        "exit1_confidence_band_transition_weighted_average": band_rows,
+    }
+
+
+def plot_class_average_transition(class_average: dict[str, Any], plot_dir: Path) -> str | None:
+    import matplotlib.pyplot as plt
+
+    rows = [row for row in class_average.get("exit1_confidence_band_transition_weighted_average", []) if row["count"] > 0]
+    if not rows:
+        return None
+    x = [(row["confidence_min"] + row["confidence_max"]) * 50 for row in rows]
+    fig, ax1 = plt.subplots(figsize=(7.8, 4.6), dpi=160)
+    final_acc = [100 * row["final_accuracy"] for row in rows]
+    reliable_yes = [100 * row["final_reliable_yes_rate"] for row in rows]
+    ax1.plot(x, final_acc, marker="o", linewidth=2.2, label="final correct")
+    ax1.plot(x, reliable_yes, marker="s", linewidth=2.2, label="final reliable yes")
+    ax1.set_xlabel("exit 1 self-confidence band center [%]")
+    ax1.set_ylabel("outcome rate within band [%]")
+    y_max = max(final_acc + reliable_yes)
+    ax1.set_ylim(0.0, max(5.0, y_max * 1.2 + 2.0))
+    ax1.grid(True, alpha=0.3)
+    ax2 = ax1.twinx()
+    gain = [100 * row["confidence_gain_mean"] for row in rows]
+    ax2.plot(x, gain, marker="^", color="#666666", linestyle="--", linewidth=2.0, label="mean confidence gain")
+    ax2.set_ylabel("final confidence - exit 1 confidence [pt]")
+    ax2.set_ylim(min(0.0, min(gain) * 1.2 - 2.0), max(5.0, max(gain) * 1.2 + 2.0))
+    lines1, labels1 = ax1.get_legend_handles_labels()
+    lines2, labels2 = ax2.get_legend_handles_labels()
+    ax1.legend(lines1 + lines2, labels1 + labels2, loc="upper left", fontsize=8)
+    ax1.set_title("class average: what happens after exit 1 confidence bands")
+    fig.tight_layout()
+    out = plot_dir / "class_average_exit1_confidence_band_transition.png"
+    fig.savefig(out)
+    plt.close(fig)
+    return str(out)
+
+
 def analyze_positive_set(
     name: str,
     positive_classes: list[int],
@@ -452,6 +590,8 @@ def main() -> None:
     parser.add_argument("--output", default="results/resnet_exit_confidence_trace_binary_001_summary.json")
     parser.add_argument("--sample-csv", default="results/resnet_exit_confidence_trace_binary_001_samples.csv")
     parser.add_argument("--plot-dir", default="results/resnet_exit_confidence_trace_binary_001_plots")
+    parser.add_argument("--negative-ratio", type=float, default=1.0)
+    parser.add_argument("--negative-sampling-seed", type=int, default=20260713)
     parser.add_argument("--target-yes-precisions", nargs="*", type=float, default=[0.95, 0.98, 0.99])
     parser.add_argument("--low-quantiles", nargs="*", type=float, default=[0.05, 0.10, 0.20, 0.30, 0.40])
     parser.add_argument("--band-quantiles", nargs="*", type=float, default=[0.0, 0.05, 0.10, 0.20, 0.40, 0.60, 0.80, 0.90, 0.95, 1.0])
@@ -466,29 +606,47 @@ def main() -> None:
     exit_names = [str(x) for x in data["exit_names"].tolist()]
     exit_costs = np.asarray(data["exit_costs"], dtype=float)
 
+    tasks = make_one_vs_rest_tasks(labels, args.negative_sampling_seed, args.negative_ratio)
     positive_set_results = [
         analyze_positive_set(
-            name,
-            classes,
-            labels,
-            pred,
-            confidence,
-            correct,
+            task["name"],
+            task["positive_classes"],
+            labels[task["sample_indices"]],
+            pred[task["sample_indices"]],
+            confidence[task["sample_indices"]],
+            correct[task["sample_indices"]],
             args.target_yes_precisions,
             args.low_quantiles,
             args.band_quantiles,
         )
-        for name, classes in DEFAULT_POSITIVE_SETS.items()
+        | {
+            "positive_class_names": task["positive_class_names"],
+            "sample_count": int(len(task["sample_indices"])),
+            "positive_count": task["positive_count"],
+            "negative_count": task["negative_count"],
+            "negative_sampling": task["negative_sampling"],
+        }
+        for task in tasks
     ]
+    class_average = class_average_summary(positive_set_results)
     plot_files = plot_reliable_yes_curves(positive_set_results, Path(args.plot_dir))
+    average_plot = plot_class_average_transition(class_average, Path(args.plot_dir))
+    if average_plot:
+        plot_files.append(average_plot)
 
     payload = {
         "purpose": "Collect per-exit confidence and binary inspection metrics for ResNet56-BranchyNet.",
         "definitions": {
             "self_confidence": "maximum softmax probability at each exit",
-            "yes": "the class group treated as acceptable/pass/positive for a candidate binary inspection task",
+            "yes": "one target CIFAR-10 class treated as acceptable/pass/positive",
+            "no": "samples randomly drawn from the other nine CIFAR-10 classes",
             "reliable_yes": "final exit predicts yes, binary yes/no prediction is correct, and final self-confidence meets a target yes precision threshold",
             "low_conf_reliable_yes_recovery": "among samples with low self-confidence at an early exit, the fraction that later become reliable yes at final",
+        },
+        "binary_task_construction": {
+            "method": "For each CIFAR-10 class, use all images of that class as yes and sample no images evenly from the other classes.",
+            "negative_ratio": args.negative_ratio,
+            "negative_sampling_seed": args.negative_sampling_seed,
         },
         "trace": args.trace,
         "n": int(labels.shape[0]),
@@ -496,6 +654,7 @@ def main() -> None:
         "exit_costs": [round_float(x) for x in exit_costs],
         "multiclass_exit_accuracy": [round_float(correct[:, i].mean()) for i in range(correct.shape[1])],
         "positive_set_results": positive_set_results,
+        "class_average": class_average,
         "plot_files": plot_files,
         "dataset_note": {
             "cifar10_use": "Useful for controlled first evidence because the existing ResNet56-BranchyNet trace is ready, but it is not an inspection dataset.",
@@ -518,11 +677,13 @@ def main() -> None:
                 "name": item["name"],
                 "positive_class_names": item["positive_class_names"],
                 "positive_rate": item["positive_rate"],
+                "sample_count": item["sample_count"],
                 "exit_binary_metrics": item["exit_summaries"],
                 "final_calibration": item["final_calibration"],
             }
             for item in positive_set_results
         ],
+        "class_average": class_average,
         "wrote": {
             "summary": str(out),
             "sample_csv": args.sample_csv,
