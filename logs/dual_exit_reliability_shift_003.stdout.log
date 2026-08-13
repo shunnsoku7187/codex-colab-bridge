@@ -2180,4 +2180,9 @@ Collecting BranchyNet outputs:  95%|█████████▌| 38/40 [00:07
 Collecting BranchyNet outputs:  98%|█████████▊| 39/40 [00:07<00:00,  5.65it/s]
 Collecting BranchyNet outputs: 100%|██████████| 40/40 [00:07<00:00,  5.08it/s]
 Sweeping policy mixture=clean_only samples=5000
+Sweeping policy mixture=clean90_mild_quality10 samples=5000
+Sweeping policy mixture=clean80_mild_quality20 samples=5000
+Sweeping policy mixture=clean75_blur_r2_25 samples=5000
+Sweeping policy mixture=clean75_occlude16_25 samples=5000
+Sweeping policy mixture=clean75_noise25_25 samples=5000
 S
