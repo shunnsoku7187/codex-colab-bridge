@@ -1,0 +1,455 @@
+{
+  "purpose": "Reproduce selective-classification risk-coverage evaluation and test whether dual-sided early exit can reduce compute under comparable final softmax-response risk targets.",
+  "trace": "results/0000b_branchynet_reproduce_resnet56_cifar10.npz",
+  "exit_names": [
+    "exit_after_layer1.0",
+    "exit_after_layer2.0",
+    "final"
+  ],
+  "exit_costs": [
+    0.054545,
+    0.381818,
+    1.0
+  ],
+  "definitions": {
+    "coverage": "fraction of samples for which the system emits a class label",
+    "selective_risk": "classification error among emitted labels only",
+    "softmax_response": "baseline selective classifier that accepts samples by descending max softmax confidence",
+    "dual_side_early_exit": "accept high-confidence early exits, reject low-confidence early exits, and send middle-confidence samples deeper"
+  },
+  "selective_classification": {
+    "softmax_response_exit0": [
+      {
+        "coverage": 1.0,
+        "selective_risk": 0.3548,
+        "selective_accuracy": 0.6452,
+        "threshold": 0.153241,
+        "accepted": 5000
+      },
+      {
+        "coverage": 0.95,
+        "selective_risk": 0.334737,
+        "selective_accuracy": 0.665263,
+        "threshold": 0.299947,
+        "accepted": 4750
+      },
+      {
+        "coverage": 0.9,
+        "selective_risk": 0.314,
+        "selective_accuracy": 0.686,
+        "threshold": 0.341357,
+        "accepted": 4500
+      },
+      {
+        "coverage": 0.85,
+        "selective_risk": 0.294824,
+        "selective_accuracy": 0.705176,
+        "threshold": 0.379028,
+        "accepted": 4250
+      },
+      {
+        "coverage": 0.8,
+        "selective_risk": 0.273,
+        "selective_accuracy": 0.727,
+        "threshold": 0.411423,
+        "accepted": 4000
+      },
+      {
+        "coverage": 0.75,
+        "selective_risk": 0.258133,
+        "selective_accuracy": 0.741867,
+        "threshold": 0.443122,
+        "accepted": 3750
+      },
+      {
+        "coverage": 0.7,
+        "selective_risk": 0.239429,
+        "selective_accuracy": 0.760571,
+        "threshold": 0.473559,
+        "accepted": 3500
+      },
+      {
+        "coverage": 0.65,
+        "selective_risk": 0.217538,
+        "selective_accuracy": 0.782462,
+        "threshold": 0.498057,
+        "accepted": 3250
+      },
+      {
+        "coverage": 0.6,
+        "selective_risk": 0.196333,
+        "selective_accuracy": 0.803667,
+        "threshold": 0.530064,
+        "accepted": 3000
+      },
+      {
+        "coverage": 0.55,
+        "selective_risk": 0.174909,
+        "selective_accuracy": 0.825091,
+        "threshold": 0.565181,
+        "accepted": 2750
+      },
+      {
+        "coverage": 0.5,
+        "selective_risk": 0.1556,
+        "selective_accuracy": 0.8444,
+        "threshold": 0.597998,
+        "accepted": 2500
+      },
+      {
+        "coverage": 0.45,
+        "selective_risk": 0.138667,
+        "selective_accuracy": 0.861333,
+        "threshold": 0.632232,
+        "accepted": 2250
+      },
+      {
+        "coverage": 0.4,
+        "selective_risk": 0.121,
+        "selective_accuracy": 0.879,
+        "threshold": 0.670726,
+        "accepted": 2000
+      },
+      {
+        "coverage": 0.35,
+        "selective_risk": 0.102857,
+        "selective_accuracy": 0.897143,
+        "threshold": 0.710387,
+        "accepted": 1750
+      },
+      {
+        "coverage": 0.3,
+        "selective_risk": 0.083333,
+        "selective_accuracy": 0.916667,
+        "threshold": 0.749402,
+        "accepted": 1500
+      },
+      {
+        "coverage": 0.25,
+        "selective_risk": 0.0672,
+        "selective_accuracy": 0.9328,
+        "threshold": 0.790046,
+        "accepted": 1250
+      },
+      {
+        "coverage": 0.2,
+        "selective_risk": 0.053,
+        "selective_accuracy": 0.947,
+        "threshold": 0.833045,
+        "accepted": 1000
+      },
+      {
+        "coverage": 0.15,
+        "selective_risk": 0.038667,
+        "selective_accuracy": 0.961333,
+        "threshold": 0.871938,
+        "accepted": 750
+      },
+      {
+        "coverage": 0.1,
+        "selective_risk": 0.028,
+        "selective_accuracy": 0.972,
+        "threshold": 0.911834,
+        "accepted": 500
+      }
+    ],
+    "softmax_response_exit1": [
+      {
+        "coverage": 1.0,
+        "selective_risk": 0.2242,
+        "selective_accuracy": 0.7758,
+        "threshold": 0.185311,
+        "accepted": 5000
+      },
+      {
+        "coverage": 0.95,
+        "selective_risk": 0.200632,
+        "selective_accuracy": 0.799368,
+        "threshold": 0.391715,
+        "accepted": 4750
+      },
+      {
+        "coverage": 0.9,
+        "selective_risk": 0.178444,
+        "selective_accuracy": 0.821556,
+        "threshold": 0.470371,
+        "accepted": 4500
+      },
+      {
+        "coverage": 0.85,
+        "selective_risk": 0.157647,
+        "selective_accuracy": 0.842353,
+        "threshold": 0.522684,
+        "accepted": 4250
+      },
+      {
+        "coverage": 0.8,
+        "selective_risk": 0.1395,
+        "selective_accuracy": 0.8605,
+        "threshold": 0.574993,
+        "accepted": 4000
+      },
+      {
+        "coverage": 0.75,
+        "selective_risk": 0.119733,
+        "selective_accuracy": 0.880267,
+        "threshold": 0.627065,
+        "accepted": 3750
+      },
+      {
+        "coverage": 0.7,
+        "selective_risk": 0.104857,
+        "selective_accuracy": 0.895143,
+        "threshold": 0.680372,
+        "accepted": 3500
+      },
+      {
+        "coverage": 0.65,
+        "selective_risk": 0.086154,
+        "selective_accuracy": 0.913846,
+        "threshold": 0.735606,
+        "accepted": 3250
+      },
+      {
+        "coverage": 0.6,
+        "selective_risk": 0.07,
+        "selective_accuracy": 0.93,
+        "threshold": 0.785824,
+        "accepted": 3000
+      },
+      {
+        "coverage": 0.55,
+        "selective_risk": 0.056727,
+        "selective_accuracy": 0.943273,
+        "threshold": 0.833731,
+        "accepted": 2750
+      },
+      {
+        "coverage": 0.5,
+        "selective_risk": 0.0468,
+        "selective_accuracy": 0.9532,
+        "threshold": 0.874514,
+        "accepted": 2500
+      },
+      {
+        "coverage": 0.45,
+        "selective_risk": 0.036444,
+        "selective_accuracy": 0.963556,
+        "threshold": 0.909302,
+        "accepted": 2250
+      },
+      {
+        "coverage": 0.4,
+        "selective_risk": 0.0285,
+        "selective_accuracy": 0.9715,
+        "threshold": 0.936219,
+        "accepted": 2000
+      },
+      {
+        "coverage": 0.35,
+        "selective_risk": 0.021714,
+        "selective_accuracy": 0.978286,
+        "threshold": 0.95541,
+        "accepted": 1750
+      },
+      {
+        "coverage": 0.3,
+        "selective_risk": 0.015333,
+        "selective_accuracy": 0.984667,
+        "threshold": 0.973014,
+        "accepted": 1500
+      },
+      {
+        "coverage": 0.25,
+        "selective_risk": 0.0104,
+        "selective_accuracy": 0.9896,
+        "threshold": 0.984379,
+        "accepted": 1250
+      },
+      {
+        "coverage": 0.2,
+        "selective_risk": 0.008,
+        "selective_accuracy": 0.992,
+        "threshold": 0.990823,
+        "accepted": 1000
+      },
+      {
+        "coverage": 0.15,
+        "selective_risk": 0.009333,
+        "selective_accuracy": 0.990667,
+        "threshold": 0.995267,
+        "accepted": 750
+      },
+      {
+        "coverage": 0.1,
+        "selective_risk": 0.002,
+        "selective_accuracy": 0.998,
+        "threshold": 0.998197,
+        "accepted": 500
+      }
+    ],
+    "softmax_response_final": [
+      {
+        "coverage": 1.0,
+        "selective_risk": 0.0968,
+        "selective_accuracy": 0.9032,
+        "threshold": 0.207455,
+        "accepted": 5000
+      },
+      {
+        "coverage": 0.95,
+        "selective_risk": 0.070737,
+        "selective_accuracy": 0.929263,
+        "threshold": 0.566403,
+        "accepted": 4750
+      },
+      {
+        "coverage": 0.9,
+        "selective_risk": 0.051333,
+        "selective_accuracy": 0.948667,
+        "threshold": 0.714954,
+        "accepted": 4500
+      },
+      {
+        "coverage": 0.85,
+        "selective_risk": 0.038588,
+        "selective_accuracy": 0.961412,
+        "threshold": 0.81879,
+        "accepted": 4250
+      },
+      {
+        "coverage": 0.8,
+        "selective_risk": 0.0255,
+        "selective_accuracy": 0.9745,
+        "threshold": 0.897004,
+        "accepted": 4000
+      },
+      {
+        "coverage": 0.75,
+        "selective_risk": 0.0176,
+        "selective_accuracy": 0.9824,
+        "threshold": 0.944394,
+        "accepted": 3750
+      },
+      {
+        "coverage": 0.7,
+        "selective_risk": 0.011429,
+        "selective_accuracy": 0.988571,
+        "threshold": 0.968472,
+        "accepted": 3500
+      },
+      {
+        "coverage": 0.65,
+        "selective_risk": 0.008615,
+        "selective_accuracy": 0.991385,
+        "threshold": 0.983143,
+        "accepted": 3250
+      },
+      {
+        "coverage": 0.6,
+        "selective_risk": 0.005333,
+        "selective_accuracy": 0.994667,
+        "threshold": 0.990721,
+        "accepted": 3000
+      },
+      {
+        "coverage": 0.55,
+        "selective_risk": 0.004364,
+        "selective_accuracy": 0.995636,
+        "threshold": 0.994871,
+        "accepted": 2750
+      },
+      {
+        "coverage": 0.5,
+        "selective_risk": 0.0024,
+        "selective_accuracy": 0.9976,
+        "threshold": 0.997158,
+        "accepted": 2500
+      },
+      {
+        "coverage": 0.45,
+        "selective_risk": 0.001778,
+        "selective_accuracy": 0.998222,
+        "threshold": 0.998381,
+        "accepted": 2250
+      },
+      {
+        "coverage": 0.4,
+        "selective_risk": 0.0015,
+        "selective_accuracy": 0.9985,
+        "threshold": 0.999097,
+        "accepted": 2000
+      },
+      {
+        "coverage": 0.35,
+        "selective_risk": 0.001714,
+        "selective_accuracy": 0.998286,
+        "threshold": 0.999481,
+        "accepted": 1750
+      },
+      {
+        "coverage": 0.3,
+        "selective_risk": 0.002,
+        "selective_accuracy": 0.998,
+        "threshold": 0.999712,
+        "accepted": 1500
+      },
+      {
+        "coverage": 0.25,
+        "selective_risk": 0.0016,
+        "selective_accuracy": 0.9984,
+        "threshold": 0.999847,
+        "accepted": 1250
+      },
+      {
+        "coverage": 0.2,
+        "selective_risk": 0.0,
+        "selective_accuracy": 1.0,
+        "threshold": 0.999923,
+        "accepted": 1000
+      },
+      {
+        "coverage": 0.15,
+        "selective_risk": 0.0,
+        "selective_accuracy": 1.0,
+        "threshold": 0.999964,
+        "accepted": 750
+      },
+      {
+        "coverage": 0.1,
+        "selective_risk": 0.0,
+        "selective_accuracy": 1.0,
+        "threshold": 0.999986,
+        "accepted": 500
+      }
+    ]
+  },
+  "dual_exit_against_final_sr": {
+    "coverage_at_least_0.95_risk_le_final_sr": null,
+    "coverage_at_least_0.90_risk_le_final_sr": null,
+    "coverage_at_least_0.80_risk_le_final_sr": null,
+    "coverage_at_least_0.70_risk_le_final_sr": null,
+    "coverage_at_least_0.60_risk_le_final_sr": {
+      "thresholds": {
+        "lower0": 0.153241,
+        "upper0": 0.987489,
+        "lower1": 0.185311,
+        "upper1": 0.999641,
+        "final": 0.990716
+      },
+      "coverage": 0.6008,
+      "selective_risk": 0.005326,
+      "selective_accuracy": 0.994674,
+      "reject_rate": 0.3992,
+      "early_reject_rate": 0.0004,
+      "early_accept_rate": 0.0536,
+      "final_execution_rate": 0.946,
+      "avg_cost": 0.96328
+    }
+  },
+  "implementation_notes": {
+    "current_status": "metric reproduction and policy audit using an existing BranchyNet trace",
+    "not_yet_done": "full SelectiveNet training with a learned selection head",
+    "fpga_relevance": "risk-coverage gives the software objective; dual-side policies test whether reject decisions can be moved earlier to reduce hardware work"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "selective_dual_exit_audit_001",
+  "status": "pending",
+  "backend": "cpu",
+  "requires_gpu": false,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python scripts/selective_dual_exit_audit.py --trace results/0000b_branchynet_reproduce_resnet56_cifar10.npz --output results/selective_dual_exit_audit_001_summary.json --plot results/selective_dual_exit_audit_001_risk_coverage.png",
+  "max_runtime_sec": 900,
+  "result_file": "results/selective_dual_exit_audit_001_summary.json",
+  "note": "Reproduce selective-classification risk-coverage evaluation with Softmax Response, then audit whether dual-sided early exit can reduce compute under comparable final selective-risk targets.",
+  "created_at": "2026-08-13T00:00:00+09:00"
+}

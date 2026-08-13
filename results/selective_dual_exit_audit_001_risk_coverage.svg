@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="380" viewBox="0 0 980 380">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;font-size:13px;fill:#0f172a}.title{font-size:16px;font-weight:700}.axis{stroke:#94a3b8;stroke-width:1}.grid{stroke:#e2e8f0;stroke-width:1}</style>
+<text x="52" y="24" class="title">Selective classification: risk-coverage</text>
+<text x="516.0" y="24" class="title">Dual-side early exit under final-SR risk target</text>
+<line class="axis" x1="52.0" y1="328" x2="464.0" y2="328"/>
+<line class="axis" x1="52.0" y1="52" x2="52.0" y2="328"/>
+<line class="grid" x1="52.0" y1="52" x2="52.0" y2="328"/>
+<text x="42.0" y="346">1.0</text>
+<line class="grid" x1="143.6" y1="52" x2="143.6" y2="328"/>
+<text x="133.6" y="346">0.8</text>
+<line class="grid" x1="235.1" y1="52" x2="235.1" y2="328"/>
+<text x="225.1" y="346">0.6</text>
+<line class="grid" x1="326.7" y1="52" x2="326.7" y2="328"/>
+<text x="316.7" y="346">0.4</text>
+<line class="grid" x1="418.2" y1="52" x2="418.2" y2="328"/>
+<text x="408.2" y="346">0.2</text>
+<line class="axis" x1="516.0" y1="328" x2="928.0" y2="328"/>
+<line class="axis" x1="516.0" y1="52" x2="516.0" y2="328"/>
+<line class="grid" x1="516.0" y1="52" x2="516.0" y2="328"/>
+<text x="506.0" y="346">1.0</text>
+<line class="grid" x1="607.6" y1="52" x2="607.6" y2="328"/>
+<text x="597.6" y="346">0.8</text>
+<line class="grid" x1="699.1" y1="52" x2="699.1" y2="328"/>
+<text x="689.1" y="346">0.6</text>
+<line class="grid" x1="790.7" y1="52" x2="790.7" y2="328"/>
+<text x="780.7" y="346">0.4</text>
+<line class="grid" x1="882.2" y1="52" x2="882.2" y2="328"/>
+<text x="872.2" y="346">0.2</text>
+<polyline points="52.0,56.0 74.9,71.4 97.8,87.3 120.7,102.0 143.6,118.7 166.4,130.1 189.3,144.4 212.2,161.2 235.1,177.5 258.0,193.9 280.9,208.7 303.8,221.7 326.7,235.2 349.6,249.1 372.4,264.1 395.3,276.5 418.2,287.4 441.1,298.4 464.0,306.5" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<polyline points="52.0,156.1 74.9,174.2 97.8,191.2 120.7,207.1 143.6,221.0 166.4,236.2 189.3,247.6 212.2,261.9 235.1,274.3 258.0,284.5 280.9,292.1 303.8,300.1 326.7,306.1 349.6,311.4 372.4,316.2 395.3,320.0 418.2,321.9 441.1,320.8 464.0,326.5" fill="none" stroke="#f97316" stroke-width="2.5"/>
+<polyline points="52.0,253.8 74.9,273.8 97.8,288.6 120.7,298.4 143.6,308.4 166.4,314.5 189.3,319.2 212.2,321.4 235.1,323.9 258.0,324.7 280.9,326.2 303.8,326.6 326.7,326.9 349.6,326.7 372.4,326.5 395.3,326.8 418.2,328.0 441.1,328.0 464.0,328.0" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+<text x="62" y="368">coverage</text>
+<text x="8" y="62">risk</text>
+<text x="212" y="72" fill="#2563eb">exit0</text>
+<text x="267" y="72" fill="#f97316">exit1</text>
+<text x="322" y="72" fill="#16a34a">final</text>
+<line x1="516.0" y1="52.0" x2="928.0" y2="52.0" stroke="#64748b" stroke-width="2.5"/>
+<circle cx="698.7" cy="62.1" r="5" fill="#16a34a"/>
+<text x="526.0" y="368">coverage</text>
+<text x="474.0" y="62">cost</text>
+<text x="681.0" y="72" fill="#64748b">final-only</text>
+<text x="776.0" y="72" fill="#16a34a">dual-side</text>
+</svg>
