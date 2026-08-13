@@ -14,8 +14,11 @@ from typing import Any
 
 
 POLICY_LABELS = {
-    "final_only": "finalのみ",
-    "upper_only_best_cost": "上側早期終了のみ",
+    "final_only": "HIGHのみ",
+    "branchynet_upper_only": "BN",
+    "cascade_low_high": "カスケード",
+    "parallel_low_high": "パラレル",
+    "upper_only_best_cost": "BN",
     "dual_side_best_cost_lost_final_reliable_le_1pct": "両側早期終了 良品ロス1%級",
     "dual_side_best_cost_lost_final_reliable_le_2pct": "両側早期終了 良品ロス2%級",
     "dual_side_best_cost_lost_final_reliable_le_5pct": "両側早期終了 良品ロス5%級",
@@ -36,6 +39,9 @@ def num(value: float | None, digits: int = 4) -> str:
 
 def scenario_policy_rows(payload: dict[str, Any]) -> list[dict[str, Any]]:
     rows = []
+    exit_costs = payload["model"]["exit_costs"]
+    low_cost = float(exit_costs[1])
+    high_cost = float(exit_costs[-1])
     for scenario, result in payload["scenario_results"].items():
         final = result["eval_final_only"]
         rows.append(
@@ -53,9 +59,67 @@ def scenario_policy_rows(payload: dict[str, Any]) -> list[dict[str, Any]]:
                 "cost_reduction_vs_final": 0.0,
                 "accept_rate_drop_vs_final": 0.0,
                 "valid": True,
+                "note": "HIGHを最後まで実行し、HIGHの自己確信度で信頼ラベルだけを出す。",
+            }
+        )
+        upper_policy = result["evaluated_on_heldout"].get("upper_only_best_cost")
+        rows.append(
+            {
+                "scenario": scenario,
+                "method": "branchynet_upper_only",
+                "method_label": POLICY_LABELS["branchynet_upper_only"],
+                "accepted_accuracy": None if upper_policy is None else upper_policy["accepted_accuracy"],
+                "accept_rate": None if upper_policy is None else upper_policy["accept_rate"],
+                "reject_rate": None if upper_policy is None else upper_policy["reject_rate"],
+                "early_reject_rate": None if upper_policy is None else upper_policy["early_reject_rate"],
+                "final_rate": None if upper_policy is None else upper_policy["final_rate"],
+                "avg_cost": None if upper_policy is None else upper_policy["avg_cost"],
+                "lost_final_reliable_rate": None if upper_policy is None else upper_policy["lost_final_reliable_rate"],
+                "cost_reduction_vs_final": None if upper_policy is None else round(final["avg_cost"] - upper_policy["avg_cost"], 6),
+                "accept_rate_drop_vs_final": None if upper_policy is None else round(final["accept_rate"] - upper_policy["accept_rate"], 6),
+                "valid": upper_policy is not None,
+                "note": "早い出口で高確信なら終了し、それ以外は後段へ送る。低確信の早期棄却はしない。",
+            }
+        )
+        rows.append(
+            {
+                "scenario": scenario,
+                "method": "cascade_low_high",
+                "method_label": POLICY_LABELS["cascade_low_high"],
+                "accepted_accuracy": None if upper_policy is None else upper_policy["accepted_accuracy"],
+                "accept_rate": None if upper_policy is None else upper_policy["accept_rate"],
+                "reject_rate": None if upper_policy is None else upper_policy["reject_rate"],
+                "early_reject_rate": 0.0 if upper_policy is not None else None,
+                "final_rate": None if upper_policy is None else upper_policy["final_rate"],
+                "avg_cost": None if upper_policy is None else round(low_cost + upper_policy["final_rate"] * high_cost, 6),
+                "lost_final_reliable_rate": None if upper_policy is None else upper_policy["lost_final_reliable_rate"],
+                "cost_reduction_vs_final": None if upper_policy is None else round(final["avg_cost"] - (low_cost + upper_policy["final_rate"] * high_cost), 6),
+                "accept_rate_drop_vs_final": None if upper_policy is None else round(final["accept_rate"] - upper_policy["accept_rate"], 6),
+                "valid": upper_policy is not None,
+                "note": "LOWを実行し、高確信でなければ独立したHIGHを追加実行する代表的カスケード。低確信の早期棄却はしない。",
+            }
+        )
+        rows.append(
+            {
+                "scenario": scenario,
+                "method": "parallel_low_high",
+                "method_label": POLICY_LABELS["parallel_low_high"],
+                "accepted_accuracy": final["accepted_accuracy"],
+                "accept_rate": final["accept_rate"],
+                "reject_rate": final["reject_rate"],
+                "early_reject_rate": 0.0,
+                "final_rate": 1.0,
+                "avg_cost": round(low_cost + high_cost, 6),
+                "lost_final_reliable_rate": 0.0,
+                "cost_reduction_vs_final": round(final["avg_cost"] - (low_cost + high_cost), 6),
+                "accept_rate_drop_vs_final": 0.0,
+                "valid": True,
+                "note": "LOW/HIGHを同時実行し、信頼ラベルはHIGHの自己確信度で決める。遅延面では強いが、計算量は常に増える。",
             }
         )
         for key, policy in result["evaluated_on_heldout"].items():
+            if key == "upper_only_best_cost":
+                continue
             rows.append(
                 {
                     "scenario": scenario,
@@ -71,6 +135,7 @@ def scenario_policy_rows(payload: dict[str, Any]) -> list[dict[str, Any]]:
                     "cost_reduction_vs_final": None if policy is None else round(final["avg_cost"] - policy["avg_cost"], 6),
                     "accept_rate_drop_vs_final": None if policy is None else round(final["accept_rate"] - policy["accept_rate"], 6),
                     "valid": policy is not None,
+                    "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。",
                 }
             )
     return rows
@@ -101,7 +166,9 @@ def scenario_summary(rows: list[dict[str, Any]], min_accuracy: float, min_cost_r
     for scenario in scenarios:
         scenario_rows = [row for row in rows if row["scenario"] == scenario]
         final = next(row for row in scenario_rows if row["method"] == "final_only")
-        upper = next(row for row in scenario_rows if row["method"] == "upper_only_best_cost")
+        bn = next(row for row in scenario_rows if row["method"] == "branchynet_upper_only")
+        cascade = next(row for row in scenario_rows if row["method"] == "cascade_low_high")
+        parallel = next(row for row in scenario_rows if row["method"] == "parallel_low_high")
         wins = [
             row
             for row in scenario_rows
@@ -116,7 +183,9 @@ def scenario_summary(rows: list[dict[str, Any]], min_accuracy: float, min_cost_r
                 "scenario": scenario,
                 "final_accept_rate": final["accept_rate"],
                 "final_accuracy": final["accepted_accuracy"],
-                "upper_only_valid": upper["valid"],
+                "bn_valid": bn["valid"],
+                "cascade_valid": cascade["valid"],
+                "parallel_cost_reduction": parallel["cost_reduction_vs_final"],
                 "best_dual": best,
                 "verdict": "clear_dual_win" if best is not None else "no_clear_win",
             }
@@ -129,20 +198,25 @@ def write_markdown(payload: dict[str, Any], rows: list[dict[str, Any]], out_path
     summaries = scenario_summary(rows, min_accuracy, min_cost_reduction)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     lines = [
-        "# 両側早期終了 他手法比較",
+        "# 両側早期終了 代表的動的切り替え手法との比較",
         "",
         "## 比較条件",
         "",
         f"- ラベルを出した画像だけの精度が {pct(min_accuracy)} 以上",
-        f"- finalのみと比べた平均計算量削減が {pct(min_cost_reduction)} 以上",
+        f"- HIGHのみと比べた平均計算量削減が {pct(min_cost_reduction)} 以上",
         "- 棄却は成功扱いにしない。ラベル出力率低下と良品ロスを同時に見る。",
-        "- 上側早期終了のみは、同じ99%級の精度制約を満たせる設定があるかで判定する。",
+        "- BNは高確信の早期終了だけを持つBranchyNet型とする。",
+        "- カスケードはLOWで高確信なら終了、そうでなければHIGHへ送る代表方式とする。",
+        "- パラレルはLOW/HIGHを同時実行し、信頼ラベルはHIGH側で決める代表方式とする。",
         "",
         "## 結論",
         "",
     ]
     clear = [item for item in summaries if item["verdict"] == "clear_dual_win"]
     lines.append(f"この条件では、{len(clear)}/{len(summaries)} シナリオで両側早期終了が明確な省計算側の勝ちを持つ。")
+    lines.append("")
+    lines.append("今回の低品質混入条件では、BN/カスケードは99%級の信頼ラベル制約を満たす有効設定が見つからなかった。")
+    lines.append("パラレルはHIGHを常に動かすため信頼性はfinalのみと同等だが、計算量はLOW分だけ増え、省計算手法としては不利である。")
     lines.append("")
     lines.append("ただし、これは無条件の勝利ではない。両側早期終了はラベル出力率を下げ、低信頼画像を早期棄却することで計算量を下げる方式である。")
     lines.append("したがって勝ち筋は、「全画像へラベルを付ける分類」ではなく、「信頼できるラベルだけを低コストで出したい検品・低品質入力混入」の条件である。")
@@ -198,25 +272,27 @@ def write_markdown(payload: dict[str, Any], rows: list[dict[str, Any]], out_path
     lines.append("")
     lines.append("## シナリオ別判定")
     lines.append("")
-    lines.append("| シナリオ | finalのみ ラベル精度 | finalのみ 出力率 | 上側早期終了のみ | 両側早期終了の判定 |")
-    lines.append("|---|---:|---:|---|---|")
+    lines.append("| シナリオ | HIGHのみ 出力率 | BN | カスケード | パラレル | 両側早期終了の判定 |")
+    lines.append("|---|---:|---|---|---|---|")
     for item in summaries:
         best = item["best_dual"]
         if best is None:
             dual = "明確な勝ちなし"
         else:
             dual = f"{best['method_label']} / 削減 {pct(best['cost_reduction_vs_final'])}, 精度 {pct(best['accepted_accuracy'])}"
-        upper = "99%級制約で有効設定あり" if item["upper_only_valid"] else "99%級制約で有効設定なし"
+        bn = "有効設定あり" if item["bn_valid"] else "99%級制約で有効設定なし"
+        cascade = "有効設定あり" if item["cascade_valid"] else "99%級制約で有効設定なし"
+        parallel = f"計算量増 {pct(-item['parallel_cost_reduction'])}"
         lines.append(
-            f"| {item['scenario']} | {pct(item['final_accuracy'])} | {pct(item['final_accept_rate'])} | {upper} | {dual} |"
+            f"| {item['scenario']} | {pct(item['final_accept_rate'])} | {bn} | {cascade} | {parallel} | {dual} |"
         )
     lines.append("")
     lines.append("## 発表で使える主張")
     lines.append("")
-    lines.append("両側早期終了は、既存の上側早期終了のように「自信があるものを早く出す」だけではなく、")
+    lines.append("両側早期終了は、BNやカスケードのように「自信があるものを早く出す」だけではなく、")
     lines.append("「後段まで進めても信頼ラベルになりにくい低品質入力を早く棄却する」点で差別化できる。")
-    lines.append("今回の低品質混入条件では、上側早期終了のみは99%級の精度制約を満たす有効設定が見つからず、")
-    lines.append("両側早期終了だけが精度を保ちながらfinal実行率を下げる設定を持った。")
+    lines.append("今回の低品質混入条件では、BN/カスケードは99%級の精度制約を満たす有効設定が見つからず、")
+    lines.append("パラレルは省計算にならない。両側早期終了だけが、精度を保ちながらfinal実行率を下げる設定を持った。")
     lines.append("")
     lines.append("## 注意")
     lines.append("")
@@ -242,7 +318,7 @@ def write_svg(winners: list[dict[str, Any]], out_path: Path) -> None:
         '<rect width="100%" height="100%" fill="white"/>',
         '<style>text{font-family:Arial,sans-serif;fill:#0f172a;font-size:14px}.title{font-size:22px;font-weight:700}.small{font-size:12px;fill:#475569}</style>',
         '<text x="34" y="36" class="title">Dual-sided early exit wins under reliability-oriented low-quality conditions</text>',
-        '<text x="34" y="58" class="small">Constraint: accepted-label accuracy >= 99%, cost reduction >= 10% versus final-only confidence filtering.</text>',
+        '<text x="34" y="58" class="small">Baselines: BN upper-only, cascade low-high, parallel low-high, and high-only confidence filtering.</text>',
     ]
     for idx, row in enumerate(winners):
         y = top + idx * row_h
@@ -283,6 +359,8 @@ def main() -> None:
             "accept_rate": "fraction of samples that receive a label",
             "avg_cost": "mean normalized compute cost; final-only is 1.0",
             "lost_final_reliable_rate": "fraction of all samples final-only would correctly label but the dual-side policy rejects early",
+            "cascade_low_high": "run LOW first; if not high confidence, run an independent HIGH model",
+            "parallel_low_high": "run LOW and HIGH together; reliability is decided by HIGH confidence",
         },
         "winner_count": len(winners),
         "conservative_winner_count_lost_le_2pct": len(conservative_winners),

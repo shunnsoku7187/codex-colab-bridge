@@ -2,7 +2,7 @@
 <rect width="100%" height="100%" fill="white"/>
 <style>text{font-family:Arial,sans-serif;fill:#0f172a;font-size:14px}.title{font-size:22px;font-weight:700}.small{font-size:12px;fill:#475569}</style>
 <text x="34" y="36" class="title">Dual-sided early exit wins under reliability-oriented low-quality conditions</text>
-<text x="34" y="58" class="small">Constraint: accepted-label accuracy >= 99%, cost reduction >= 10% versus final-only confidence filtering.</text>
+<text x="34" y="58" class="small">Baselines: BN upper-only, cascade low-high, parallel low-high, and high-only confidence filtering.</text>
 <text x="34" y="98">clean40 mixed low quality60</text>
 <rect x="355" y="83" width="520" height="20" fill="#e2e8f0"/>
 <rect x="355" y="83" width="520.0" height="20" fill="#16a34a"/>

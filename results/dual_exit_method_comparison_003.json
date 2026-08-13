@@ -6,7 +6,9 @@
     "accepted_accuracy": "accuracy among samples that receive a label",
     "accept_rate": "fraction of samples that receive a label",
     "avg_cost": "mean normalized compute cost; final-only is 1.0",
-    "lost_final_reliable_rate": "fraction of all samples final-only would correctly label but the dual-side policy rejects early"
+    "lost_final_reliable_rate": "fraction of all samples final-only would correctly label but the dual-side policy rejects early",
+    "cascade_low_high": "run LOW first; if not high confidence, run an independent HIGH model",
+    "parallel_low_high": "run LOW and HIGH together; reliability is decided by HIGH confidence"
   },
   "winner_count": 17,
   "conservative_winner_count_lost_le_2pct": 5,
@@ -25,7 +27,8 @@
       "lost_final_reliable_rate": 0.052,
       "cost_reduction_vs_final": 0.392407,
       "accept_rate_drop_vs_final": 0.0496,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_occlude16_25",
@@ -40,7 +43,8 @@
       "lost_final_reliable_rate": 0.0614,
       "cost_reduction_vs_final": 0.344938,
       "accept_rate_drop_vs_final": 0.0558,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_jpeg10_25",
@@ -55,7 +59,8 @@
       "lost_final_reliable_rate": 0.045,
       "cost_reduction_vs_final": 0.238473,
       "accept_rate_drop_vs_final": 0.0434,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean90_mild_quality10",
@@ -70,7 +75,8 @@
       "lost_final_reliable_rate": 0.052,
       "cost_reduction_vs_final": 0.222996,
       "accept_rate_drop_vs_final": 0.0486,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_occlude16_25",
@@ -85,7 +91,8 @@
       "lost_final_reliable_rate": 0.0234,
       "cost_reduction_vs_final": 0.221513,
       "accept_rate_drop_vs_final": 0.0208,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean80_mild_quality20",
@@ -100,7 +107,8 @@
       "lost_final_reliable_rate": 0.0582,
       "cost_reduction_vs_final": 0.211571,
       "accept_rate_drop_vs_final": 0.0572,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean40_mixed_low_quality60",
@@ -115,7 +123,8 @@
       "lost_final_reliable_rate": 0.0218,
       "cost_reduction_vs_final": 0.2096,
       "accept_rate_drop_vs_final": 0.0194,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_blur_r2_25",
@@ -130,7 +139,8 @@
       "lost_final_reliable_rate": 0.0562,
       "cost_reduction_vs_final": 0.199222,
       "accept_rate_drop_vs_final": 0.0542,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean_only",
@@ -145,7 +155,8 @@
       "lost_final_reliable_rate": 0.0356,
       "cost_reduction_vs_final": 0.177411,
       "accept_rate_drop_vs_final": 0.0312,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_jpeg10_25",
@@ -160,7 +171,8 @@
       "lost_final_reliable_rate": 0.0238,
       "cost_reduction_vs_final": 0.167862,
       "accept_rate_drop_vs_final": 0.0222,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean40_mixed_low_quality60",
@@ -175,7 +187,8 @@
       "lost_final_reliable_rate": 0.0102,
       "cost_reduction_vs_final": 0.163164,
       "accept_rate_drop_vs_final": 0.0078,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean90_mild_quality10",
@@ -190,7 +203,8 @@
       "lost_final_reliable_rate": 0.0202,
       "cost_reduction_vs_final": 0.132422,
       "accept_rate_drop_vs_final": 0.0172,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean_only",
@@ -205,7 +219,8 @@
       "lost_final_reliable_rate": 0.0166,
       "cost_reduction_vs_final": 0.130109,
       "accept_rate_drop_vs_final": 0.0122,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_occlude16_25",
@@ -220,7 +235,8 @@
       "lost_final_reliable_rate": 0.0084,
       "cost_reduction_vs_final": 0.12472,
       "accept_rate_drop_vs_final": 0.0064,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean90_mild_quality10",
@@ -235,7 +251,8 @@
       "lost_final_reliable_rate": 0.0126,
       "cost_reduction_vs_final": 0.109745,
       "accept_rate_drop_vs_final": 0.009,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_blur_r2_25",
@@ -250,7 +267,8 @@
       "lost_final_reliable_rate": 0.024,
       "cost_reduction_vs_final": 0.108764,
       "accept_rate_drop_vs_final": 0.0226,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean80_mild_quality20",
@@ -265,7 +283,8 @@
       "lost_final_reliable_rate": 0.0186,
       "cost_reduction_vs_final": 0.103135,
       "accept_rate_drop_vs_final": 0.017,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     }
   ],
   "conservative_winners_lost_le_2pct": [
@@ -282,7 +301,8 @@
       "lost_final_reliable_rate": 0.0102,
       "cost_reduction_vs_final": 0.163164,
       "accept_rate_drop_vs_final": 0.0078,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean_only",
@@ -297,7 +317,8 @@
       "lost_final_reliable_rate": 0.0166,
       "cost_reduction_vs_final": 0.130109,
       "accept_rate_drop_vs_final": 0.0122,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_occlude16_25",
@@ -312,7 +333,8 @@
       "lost_final_reliable_rate": 0.0084,
       "cost_reduction_vs_final": 0.12472,
       "accept_rate_drop_vs_final": 0.0064,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean90_mild_quality10",
@@ -327,7 +349,8 @@
       "lost_final_reliable_rate": 0.0126,
       "cost_reduction_vs_final": 0.109745,
       "accept_rate_drop_vs_final": 0.009,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean80_mild_quality20",
@@ -342,14 +365,15 @@
       "lost_final_reliable_rate": 0.0186,
       "cost_reduction_vs_final": 0.103135,
       "accept_rate_drop_vs_final": 0.017,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     }
   ],
   "all_rows": [
     {
       "scenario": "clean_only",
       "method": "final_only",
-      "method_label": "finalのみ",
+      "method_label": "HIGHのみ",
       "accepted_accuracy": 0.993773,
       "accept_rate": 0.6102,
       "reject_rate": 0.3898,
@@ -359,12 +383,13 @@
       "lost_final_reliable_rate": 0.0,
       "cost_reduction_vs_final": 0.0,
       "accept_rate_drop_vs_final": 0.0,
-      "valid": true
+      "valid": true,
+      "note": "HIGHを最後まで実行し、HIGHの自己確信度で信頼ラベルだけを出す。"
     },
     {
       "scenario": "clean_only",
-      "method": "upper_only_best_cost",
-      "method_label": "上側早期終了のみ",
+      "method": "branchynet_upper_only",
+      "method_label": "BN",
       "accepted_accuracy": null,
       "accept_rate": null,
       "reject_rate": null,
@@ -374,7 +399,40 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "早い出口で高確信なら終了し、それ以外は後段へ送る。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean_only",
+      "method": "cascade_low_high",
+      "method_label": "カスケード",
+      "accepted_accuracy": null,
+      "accept_rate": null,
+      "reject_rate": null,
+      "early_reject_rate": null,
+      "final_rate": null,
+      "avg_cost": null,
+      "lost_final_reliable_rate": null,
+      "cost_reduction_vs_final": null,
+      "accept_rate_drop_vs_final": null,
+      "valid": false,
+      "note": "LOWを実行し、高確信でなければ独立したHIGHを追加実行する代表的カスケード。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean_only",
+      "method": "parallel_low_high",
+      "method_label": "パラレル",
+      "accepted_accuracy": 0.993773,
+      "accept_rate": 0.6102,
+      "reject_rate": 0.3898,
+      "early_reject_rate": 0.0,
+      "final_rate": 1.0,
+      "avg_cost": 1.381818,
+      "lost_final_reliable_rate": 0.0,
+      "cost_reduction_vs_final": -0.381818,
+      "accept_rate_drop_vs_final": 0.0,
+      "valid": true,
+      "note": "LOW/HIGHを同時実行し、信頼ラベルはHIGHの自己確信度で決める。遅延面では強いが、計算量は常に増える。"
     },
     {
       "scenario": "clean_only",
@@ -389,7 +447,8 @@
       "lost_final_reliable_rate": 0.0122,
       "cost_reduction_vs_final": 0.095004,
       "accept_rate_drop_vs_final": 0.0108,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean_only",
@@ -404,7 +463,8 @@
       "lost_final_reliable_rate": 0.0166,
       "cost_reduction_vs_final": 0.130109,
       "accept_rate_drop_vs_final": 0.0122,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean_only",
@@ -419,12 +479,13 @@
       "lost_final_reliable_rate": 0.0356,
       "cost_reduction_vs_final": 0.177411,
       "accept_rate_drop_vs_final": 0.0312,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean90_mild_quality10",
       "method": "final_only",
-      "method_label": "finalのみ",
+      "method_label": "HIGHのみ",
       "accepted_accuracy": 0.993777,
       "accept_rate": 0.5142,
       "reject_rate": 0.4858,
@@ -434,12 +495,13 @@
       "lost_final_reliable_rate": 0.0,
       "cost_reduction_vs_final": 0.0,
       "accept_rate_drop_vs_final": 0.0,
-      "valid": true
+      "valid": true,
+      "note": "HIGHを最後まで実行し、HIGHの自己確信度で信頼ラベルだけを出す。"
     },
     {
       "scenario": "clean90_mild_quality10",
-      "method": "upper_only_best_cost",
-      "method_label": "上側早期終了のみ",
+      "method": "branchynet_upper_only",
+      "method_label": "BN",
       "accepted_accuracy": null,
       "accept_rate": null,
       "reject_rate": null,
@@ -449,7 +511,40 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "早い出口で高確信なら終了し、それ以外は後段へ送る。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean90_mild_quality10",
+      "method": "cascade_low_high",
+      "method_label": "カスケード",
+      "accepted_accuracy": null,
+      "accept_rate": null,
+      "reject_rate": null,
+      "early_reject_rate": null,
+      "final_rate": null,
+      "avg_cost": null,
+      "lost_final_reliable_rate": null,
+      "cost_reduction_vs_final": null,
+      "accept_rate_drop_vs_final": null,
+      "valid": false,
+      "note": "LOWを実行し、高確信でなければ独立したHIGHを追加実行する代表的カスケード。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean90_mild_quality10",
+      "method": "parallel_low_high",
+      "method_label": "パラレル",
+      "accepted_accuracy": 0.993777,
+      "accept_rate": 0.5142,
+      "reject_rate": 0.4858,
+      "early_reject_rate": 0.0,
+      "final_rate": 1.0,
+      "avg_cost": 1.381818,
+      "lost_final_reliable_rate": 0.0,
+      "cost_reduction_vs_final": -0.381818,
+      "accept_rate_drop_vs_final": 0.0,
+      "valid": true,
+      "note": "LOW/HIGHを同時実行し、信頼ラベルはHIGHの自己確信度で決める。遅延面では強いが、計算量は常に増える。"
     },
     {
       "scenario": "clean90_mild_quality10",
@@ -464,7 +559,8 @@
       "lost_final_reliable_rate": 0.0126,
       "cost_reduction_vs_final": 0.109745,
       "accept_rate_drop_vs_final": 0.009,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean90_mild_quality10",
@@ -479,7 +575,8 @@
       "lost_final_reliable_rate": 0.0202,
       "cost_reduction_vs_final": 0.132422,
       "accept_rate_drop_vs_final": 0.0172,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean90_mild_quality10",
@@ -494,12 +591,13 @@
       "lost_final_reliable_rate": 0.052,
       "cost_reduction_vs_final": 0.222996,
       "accept_rate_drop_vs_final": 0.0486,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean80_mild_quality20",
       "method": "final_only",
-      "method_label": "finalのみ",
+      "method_label": "HIGHのみ",
       "accepted_accuracy": 0.991966,
       "accept_rate": 0.473,
       "reject_rate": 0.527,
@@ -509,12 +607,13 @@
       "lost_final_reliable_rate": 0.0,
       "cost_reduction_vs_final": 0.0,
       "accept_rate_drop_vs_final": 0.0,
-      "valid": true
+      "valid": true,
+      "note": "HIGHを最後まで実行し、HIGHの自己確信度で信頼ラベルだけを出す。"
     },
     {
       "scenario": "clean80_mild_quality20",
-      "method": "upper_only_best_cost",
-      "method_label": "上側早期終了のみ",
+      "method": "branchynet_upper_only",
+      "method_label": "BN",
       "accepted_accuracy": null,
       "accept_rate": null,
       "reject_rate": null,
@@ -524,7 +623,40 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "早い出口で高確信なら終了し、それ以外は後段へ送る。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean80_mild_quality20",
+      "method": "cascade_low_high",
+      "method_label": "カスケード",
+      "accepted_accuracy": null,
+      "accept_rate": null,
+      "reject_rate": null,
+      "early_reject_rate": null,
+      "final_rate": null,
+      "avg_cost": null,
+      "lost_final_reliable_rate": null,
+      "cost_reduction_vs_final": null,
+      "accept_rate_drop_vs_final": null,
+      "valid": false,
+      "note": "LOWを実行し、高確信でなければ独立したHIGHを追加実行する代表的カスケード。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean80_mild_quality20",
+      "method": "parallel_low_high",
+      "method_label": "パラレル",
+      "accepted_accuracy": 0.991966,
+      "accept_rate": 0.473,
+      "reject_rate": 0.527,
+      "early_reject_rate": 0.0,
+      "final_rate": 1.0,
+      "avg_cost": 1.381818,
+      "lost_final_reliable_rate": 0.0,
+      "cost_reduction_vs_final": -0.381818,
+      "accept_rate_drop_vs_final": 0.0,
+      "valid": true,
+      "note": "LOW/HIGHを同時実行し、信頼ラベルはHIGHの自己確信度で決める。遅延面では強いが、計算量は常に増える。"
     },
     {
       "scenario": "clean80_mild_quality20",
@@ -539,7 +671,8 @@
       "lost_final_reliable_rate": 0.0116,
       "cost_reduction_vs_final": 0.062873,
       "accept_rate_drop_vs_final": 0.01,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean80_mild_quality20",
@@ -554,7 +687,8 @@
       "lost_final_reliable_rate": 0.0186,
       "cost_reduction_vs_final": 0.103135,
       "accept_rate_drop_vs_final": 0.017,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean80_mild_quality20",
@@ -569,12 +703,13 @@
       "lost_final_reliable_rate": 0.0582,
       "cost_reduction_vs_final": 0.211571,
       "accept_rate_drop_vs_final": 0.0572,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_blur_r2_25",
       "method": "final_only",
-      "method_label": "finalのみ",
+      "method_label": "HIGHのみ",
       "accepted_accuracy": 0.995686,
       "accept_rate": 0.4172,
       "reject_rate": 0.5828,
@@ -584,12 +719,13 @@
       "lost_final_reliable_rate": 0.0,
       "cost_reduction_vs_final": 0.0,
       "accept_rate_drop_vs_final": 0.0,
-      "valid": true
+      "valid": true,
+      "note": "HIGHを最後まで実行し、HIGHの自己確信度で信頼ラベルだけを出す。"
     },
     {
       "scenario": "clean75_blur_r2_25",
-      "method": "upper_only_best_cost",
-      "method_label": "上側早期終了のみ",
+      "method": "branchynet_upper_only",
+      "method_label": "BN",
       "accepted_accuracy": null,
       "accept_rate": null,
       "reject_rate": null,
@@ -599,7 +735,40 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "早い出口で高確信なら終了し、それ以外は後段へ送る。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean75_blur_r2_25",
+      "method": "cascade_low_high",
+      "method_label": "カスケード",
+      "accepted_accuracy": null,
+      "accept_rate": null,
+      "reject_rate": null,
+      "early_reject_rate": null,
+      "final_rate": null,
+      "avg_cost": null,
+      "lost_final_reliable_rate": null,
+      "cost_reduction_vs_final": null,
+      "accept_rate_drop_vs_final": null,
+      "valid": false,
+      "note": "LOWを実行し、高確信でなければ独立したHIGHを追加実行する代表的カスケード。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean75_blur_r2_25",
+      "method": "parallel_low_high",
+      "method_label": "パラレル",
+      "accepted_accuracy": 0.995686,
+      "accept_rate": 0.4172,
+      "reject_rate": 0.5828,
+      "early_reject_rate": 0.0,
+      "final_rate": 1.0,
+      "avg_cost": 1.381818,
+      "lost_final_reliable_rate": 0.0,
+      "cost_reduction_vs_final": -0.381818,
+      "accept_rate_drop_vs_final": 0.0,
+      "valid": true,
+      "note": "LOW/HIGHを同時実行し、信頼ラベルはHIGHの自己確信度で決める。遅延面では強いが、計算量は常に増える。"
     },
     {
       "scenario": "clean75_blur_r2_25",
@@ -614,7 +783,8 @@
       "lost_final_reliable_rate": 0.0124,
       "cost_reduction_vs_final": 0.072007,
       "accept_rate_drop_vs_final": 0.011,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_blur_r2_25",
@@ -629,7 +799,8 @@
       "lost_final_reliable_rate": 0.024,
       "cost_reduction_vs_final": 0.108764,
       "accept_rate_drop_vs_final": 0.0226,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_blur_r2_25",
@@ -644,12 +815,13 @@
       "lost_final_reliable_rate": 0.0562,
       "cost_reduction_vs_final": 0.199222,
       "accept_rate_drop_vs_final": 0.0542,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_occlude16_25",
       "method": "final_only",
-      "method_label": "finalのみ",
+      "method_label": "HIGHのみ",
       "accepted_accuracy": 0.994784,
       "accept_rate": 0.4218,
       "reject_rate": 0.5782,
@@ -659,12 +831,13 @@
       "lost_final_reliable_rate": 0.0,
       "cost_reduction_vs_final": 0.0,
       "accept_rate_drop_vs_final": 0.0,
-      "valid": true
+      "valid": true,
+      "note": "HIGHを最後まで実行し、HIGHの自己確信度で信頼ラベルだけを出す。"
     },
     {
       "scenario": "clean75_occlude16_25",
-      "method": "upper_only_best_cost",
-      "method_label": "上側早期終了のみ",
+      "method": "branchynet_upper_only",
+      "method_label": "BN",
       "accepted_accuracy": null,
       "accept_rate": null,
       "reject_rate": null,
@@ -674,7 +847,40 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "早い出口で高確信なら終了し、それ以外は後段へ送る。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean75_occlude16_25",
+      "method": "cascade_low_high",
+      "method_label": "カスケード",
+      "accepted_accuracy": null,
+      "accept_rate": null,
+      "reject_rate": null,
+      "early_reject_rate": null,
+      "final_rate": null,
+      "avg_cost": null,
+      "lost_final_reliable_rate": null,
+      "cost_reduction_vs_final": null,
+      "accept_rate_drop_vs_final": null,
+      "valid": false,
+      "note": "LOWを実行し、高確信でなければ独立したHIGHを追加実行する代表的カスケード。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean75_occlude16_25",
+      "method": "parallel_low_high",
+      "method_label": "パラレル",
+      "accepted_accuracy": 0.994784,
+      "accept_rate": 0.4218,
+      "reject_rate": 0.5782,
+      "early_reject_rate": 0.0,
+      "final_rate": 1.0,
+      "avg_cost": 1.381818,
+      "lost_final_reliable_rate": 0.0,
+      "cost_reduction_vs_final": -0.381818,
+      "accept_rate_drop_vs_final": 0.0,
+      "valid": true,
+      "note": "LOW/HIGHを同時実行し、信頼ラベルはHIGHの自己確信度で決める。遅延面では強いが、計算量は常に増える。"
     },
     {
       "scenario": "clean75_occlude16_25",
@@ -689,7 +895,8 @@
       "lost_final_reliable_rate": 0.0084,
       "cost_reduction_vs_final": 0.12472,
       "accept_rate_drop_vs_final": 0.0064,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_occlude16_25",
@@ -704,7 +911,8 @@
       "lost_final_reliable_rate": 0.0234,
       "cost_reduction_vs_final": 0.221513,
       "accept_rate_drop_vs_final": 0.0208,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_occlude16_25",
@@ -719,12 +927,13 @@
       "lost_final_reliable_rate": 0.0614,
       "cost_reduction_vs_final": 0.344938,
       "accept_rate_drop_vs_final": 0.0558,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_noise25_25",
       "method": "final_only",
-      "method_label": "finalのみ",
+      "method_label": "HIGHのみ",
       "accepted_accuracy": 0.991945,
       "accept_rate": 0.3228,
       "reject_rate": 0.6772,
@@ -734,12 +943,13 @@
       "lost_final_reliable_rate": 0.0,
       "cost_reduction_vs_final": 0.0,
       "accept_rate_drop_vs_final": 0.0,
-      "valid": true
+      "valid": true,
+      "note": "HIGHを最後まで実行し、HIGHの自己確信度で信頼ラベルだけを出す。"
     },
     {
       "scenario": "clean75_noise25_25",
-      "method": "upper_only_best_cost",
-      "method_label": "上側早期終了のみ",
+      "method": "branchynet_upper_only",
+      "method_label": "BN",
       "accepted_accuracy": null,
       "accept_rate": null,
       "reject_rate": null,
@@ -749,7 +959,40 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "早い出口で高確信なら終了し、それ以外は後段へ送る。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean75_noise25_25",
+      "method": "cascade_low_high",
+      "method_label": "カスケード",
+      "accepted_accuracy": null,
+      "accept_rate": null,
+      "reject_rate": null,
+      "early_reject_rate": null,
+      "final_rate": null,
+      "avg_cost": null,
+      "lost_final_reliable_rate": null,
+      "cost_reduction_vs_final": null,
+      "accept_rate_drop_vs_final": null,
+      "valid": false,
+      "note": "LOWを実行し、高確信でなければ独立したHIGHを追加実行する代表的カスケード。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean75_noise25_25",
+      "method": "parallel_low_high",
+      "method_label": "パラレル",
+      "accepted_accuracy": 0.991945,
+      "accept_rate": 0.3228,
+      "reject_rate": 0.6772,
+      "early_reject_rate": 0.0,
+      "final_rate": 1.0,
+      "avg_cost": 1.381818,
+      "lost_final_reliable_rate": 0.0,
+      "cost_reduction_vs_final": -0.381818,
+      "accept_rate_drop_vs_final": 0.0,
+      "valid": true,
+      "note": "LOW/HIGHを同時実行し、信頼ラベルはHIGHの自己確信度で決める。遅延面では強いが、計算量は常に増える。"
     },
     {
       "scenario": "clean75_noise25_25",
@@ -764,7 +1007,8 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_noise25_25",
@@ -779,7 +1023,8 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_noise25_25",
@@ -794,12 +1039,13 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_jpeg10_25",
       "method": "final_only",
-      "method_label": "finalのみ",
+      "method_label": "HIGHのみ",
       "accepted_accuracy": 0.992333,
       "accept_rate": 0.4174,
       "reject_rate": 0.5826,
@@ -809,12 +1055,13 @@
       "lost_final_reliable_rate": 0.0,
       "cost_reduction_vs_final": 0.0,
       "accept_rate_drop_vs_final": 0.0,
-      "valid": true
+      "valid": true,
+      "note": "HIGHを最後まで実行し、HIGHの自己確信度で信頼ラベルだけを出す。"
     },
     {
       "scenario": "clean75_jpeg10_25",
-      "method": "upper_only_best_cost",
-      "method_label": "上側早期終了のみ",
+      "method": "branchynet_upper_only",
+      "method_label": "BN",
       "accepted_accuracy": null,
       "accept_rate": null,
       "reject_rate": null,
@@ -824,7 +1071,40 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "早い出口で高確信なら終了し、それ以外は後段へ送る。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean75_jpeg10_25",
+      "method": "cascade_low_high",
+      "method_label": "カスケード",
+      "accepted_accuracy": null,
+      "accept_rate": null,
+      "reject_rate": null,
+      "early_reject_rate": null,
+      "final_rate": null,
+      "avg_cost": null,
+      "lost_final_reliable_rate": null,
+      "cost_reduction_vs_final": null,
+      "accept_rate_drop_vs_final": null,
+      "valid": false,
+      "note": "LOWを実行し、高確信でなければ独立したHIGHを追加実行する代表的カスケード。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean75_jpeg10_25",
+      "method": "parallel_low_high",
+      "method_label": "パラレル",
+      "accepted_accuracy": 0.992333,
+      "accept_rate": 0.4174,
+      "reject_rate": 0.5826,
+      "early_reject_rate": 0.0,
+      "final_rate": 1.0,
+      "avg_cost": 1.381818,
+      "lost_final_reliable_rate": 0.0,
+      "cost_reduction_vs_final": -0.381818,
+      "accept_rate_drop_vs_final": 0.0,
+      "valid": true,
+      "note": "LOW/HIGHを同時実行し、信頼ラベルはHIGHの自己確信度で決める。遅延面では強いが、計算量は常に増える。"
     },
     {
       "scenario": "clean75_jpeg10_25",
@@ -839,7 +1119,8 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_jpeg10_25",
@@ -854,7 +1135,8 @@
       "lost_final_reliable_rate": 0.0238,
       "cost_reduction_vs_final": 0.167862,
       "accept_rate_drop_vs_final": 0.0222,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean75_jpeg10_25",
@@ -869,12 +1151,13 @@
       "lost_final_reliable_rate": 0.045,
       "cost_reduction_vs_final": 0.238473,
       "accept_rate_drop_vs_final": 0.0434,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean70_mixed_quality30",
       "method": "final_only",
-      "method_label": "finalのみ",
+      "method_label": "HIGHのみ",
       "accepted_accuracy": 0.990017,
       "accept_rate": 0.3606,
       "reject_rate": 0.6394,
@@ -884,12 +1167,13 @@
       "lost_final_reliable_rate": 0.0,
       "cost_reduction_vs_final": 0.0,
       "accept_rate_drop_vs_final": 0.0,
-      "valid": true
+      "valid": true,
+      "note": "HIGHを最後まで実行し、HIGHの自己確信度で信頼ラベルだけを出す。"
     },
     {
       "scenario": "clean70_mixed_quality30",
-      "method": "upper_only_best_cost",
-      "method_label": "上側早期終了のみ",
+      "method": "branchynet_upper_only",
+      "method_label": "BN",
       "accepted_accuracy": null,
       "accept_rate": null,
       "reject_rate": null,
@@ -899,7 +1183,40 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "早い出口で高確信なら終了し、それ以外は後段へ送る。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean70_mixed_quality30",
+      "method": "cascade_low_high",
+      "method_label": "カスケード",
+      "accepted_accuracy": null,
+      "accept_rate": null,
+      "reject_rate": null,
+      "early_reject_rate": null,
+      "final_rate": null,
+      "avg_cost": null,
+      "lost_final_reliable_rate": null,
+      "cost_reduction_vs_final": null,
+      "accept_rate_drop_vs_final": null,
+      "valid": false,
+      "note": "LOWを実行し、高確信でなければ独立したHIGHを追加実行する代表的カスケード。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean70_mixed_quality30",
+      "method": "parallel_low_high",
+      "method_label": "パラレル",
+      "accepted_accuracy": 0.990017,
+      "accept_rate": 0.3606,
+      "reject_rate": 0.6394,
+      "early_reject_rate": 0.0,
+      "final_rate": 1.0,
+      "avg_cost": 1.381818,
+      "lost_final_reliable_rate": 0.0,
+      "cost_reduction_vs_final": -0.381818,
+      "accept_rate_drop_vs_final": 0.0,
+      "valid": true,
+      "note": "LOW/HIGHを同時実行し、信頼ラベルはHIGHの自己確信度で決める。遅延面では強いが、計算量は常に増える。"
     },
     {
       "scenario": "clean70_mixed_quality30",
@@ -914,7 +1231,8 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean70_mixed_quality30",
@@ -929,7 +1247,8 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean70_mixed_quality30",
@@ -944,12 +1263,13 @@
       "lost_final_reliable_rate": 0.0316,
       "cost_reduction_vs_final": 0.200676,
       "accept_rate_drop_vs_final": 0.0298,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean60_mixed_low_quality40",
       "method": "final_only",
-      "method_label": "finalのみ",
+      "method_label": "HIGHのみ",
       "accepted_accuracy": 0.996703,
       "accept_rate": 0.364,
       "reject_rate": 0.636,
@@ -959,12 +1279,13 @@
       "lost_final_reliable_rate": 0.0,
       "cost_reduction_vs_final": 0.0,
       "accept_rate_drop_vs_final": 0.0,
-      "valid": true
+      "valid": true,
+      "note": "HIGHを最後まで実行し、HIGHの自己確信度で信頼ラベルだけを出す。"
     },
     {
       "scenario": "clean60_mixed_low_quality40",
-      "method": "upper_only_best_cost",
-      "method_label": "上側早期終了のみ",
+      "method": "branchynet_upper_only",
+      "method_label": "BN",
       "accepted_accuracy": null,
       "accept_rate": null,
       "reject_rate": null,
@@ -974,7 +1295,40 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "早い出口で高確信なら終了し、それ以外は後段へ送る。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean60_mixed_low_quality40",
+      "method": "cascade_low_high",
+      "method_label": "カスケード",
+      "accepted_accuracy": null,
+      "accept_rate": null,
+      "reject_rate": null,
+      "early_reject_rate": null,
+      "final_rate": null,
+      "avg_cost": null,
+      "lost_final_reliable_rate": null,
+      "cost_reduction_vs_final": null,
+      "accept_rate_drop_vs_final": null,
+      "valid": false,
+      "note": "LOWを実行し、高確信でなければ独立したHIGHを追加実行する代表的カスケード。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean60_mixed_low_quality40",
+      "method": "parallel_low_high",
+      "method_label": "パラレル",
+      "accepted_accuracy": 0.996703,
+      "accept_rate": 0.364,
+      "reject_rate": 0.636,
+      "early_reject_rate": 0.0,
+      "final_rate": 1.0,
+      "avg_cost": 1.381818,
+      "lost_final_reliable_rate": 0.0,
+      "cost_reduction_vs_final": -0.381818,
+      "accept_rate_drop_vs_final": 0.0,
+      "valid": true,
+      "note": "LOW/HIGHを同時実行し、信頼ラベルはHIGHの自己確信度で決める。遅延面では強いが、計算量は常に増える。"
     },
     {
       "scenario": "clean60_mixed_low_quality40",
@@ -989,7 +1343,8 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean60_mixed_low_quality40",
@@ -1004,7 +1359,8 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean60_mixed_low_quality40",
@@ -1019,12 +1375,13 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean40_mixed_low_quality60",
       "method": "final_only",
-      "method_label": "finalのみ",
+      "method_label": "HIGHのみ",
       "accepted_accuracy": 0.997436,
       "accept_rate": 0.234,
       "reject_rate": 0.766,
@@ -1034,12 +1391,13 @@
       "lost_final_reliable_rate": 0.0,
       "cost_reduction_vs_final": 0.0,
       "accept_rate_drop_vs_final": 0.0,
-      "valid": true
+      "valid": true,
+      "note": "HIGHを最後まで実行し、HIGHの自己確信度で信頼ラベルだけを出す。"
     },
     {
       "scenario": "clean40_mixed_low_quality60",
-      "method": "upper_only_best_cost",
-      "method_label": "上側早期終了のみ",
+      "method": "branchynet_upper_only",
+      "method_label": "BN",
       "accepted_accuracy": null,
       "accept_rate": null,
       "reject_rate": null,
@@ -1049,7 +1407,40 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "早い出口で高確信なら終了し、それ以外は後段へ送る。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean40_mixed_low_quality60",
+      "method": "cascade_low_high",
+      "method_label": "カスケード",
+      "accepted_accuracy": null,
+      "accept_rate": null,
+      "reject_rate": null,
+      "early_reject_rate": null,
+      "final_rate": null,
+      "avg_cost": null,
+      "lost_final_reliable_rate": null,
+      "cost_reduction_vs_final": null,
+      "accept_rate_drop_vs_final": null,
+      "valid": false,
+      "note": "LOWを実行し、高確信でなければ独立したHIGHを追加実行する代表的カスケード。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean40_mixed_low_quality60",
+      "method": "parallel_low_high",
+      "method_label": "パラレル",
+      "accepted_accuracy": 0.997436,
+      "accept_rate": 0.234,
+      "reject_rate": 0.766,
+      "early_reject_rate": 0.0,
+      "final_rate": 1.0,
+      "avg_cost": 1.381818,
+      "lost_final_reliable_rate": 0.0,
+      "cost_reduction_vs_final": -0.381818,
+      "accept_rate_drop_vs_final": 0.0,
+      "valid": true,
+      "note": "LOW/HIGHを同時実行し、信頼ラベルはHIGHの自己確信度で決める。遅延面では強いが、計算量は常に増える。"
     },
     {
       "scenario": "clean40_mixed_low_quality60",
@@ -1064,7 +1455,8 @@
       "lost_final_reliable_rate": 0.0102,
       "cost_reduction_vs_final": 0.163164,
       "accept_rate_drop_vs_final": 0.0078,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean40_mixed_low_quality60",
@@ -1079,7 +1471,8 @@
       "lost_final_reliable_rate": 0.0218,
       "cost_reduction_vs_final": 0.2096,
       "accept_rate_drop_vs_final": 0.0194,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean40_mixed_low_quality60",
@@ -1094,12 +1487,13 @@
       "lost_final_reliable_rate": 0.052,
       "cost_reduction_vs_final": 0.392407,
       "accept_rate_drop_vs_final": 0.0496,
-      "valid": true
+      "valid": true,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean40_mixed_severe60",
       "method": "final_only",
-      "method_label": "finalのみ",
+      "method_label": "HIGHのみ",
       "accepted_accuracy": 0.993562,
       "accept_rate": 0.1864,
       "reject_rate": 0.8136,
@@ -1109,12 +1503,13 @@
       "lost_final_reliable_rate": 0.0,
       "cost_reduction_vs_final": 0.0,
       "accept_rate_drop_vs_final": 0.0,
-      "valid": true
+      "valid": true,
+      "note": "HIGHを最後まで実行し、HIGHの自己確信度で信頼ラベルだけを出す。"
     },
     {
       "scenario": "clean40_mixed_severe60",
-      "method": "upper_only_best_cost",
-      "method_label": "上側早期終了のみ",
+      "method": "branchynet_upper_only",
+      "method_label": "BN",
       "accepted_accuracy": null,
       "accept_rate": null,
       "reject_rate": null,
@@ -1124,7 +1519,40 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "早い出口で高確信なら終了し、それ以外は後段へ送る。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean40_mixed_severe60",
+      "method": "cascade_low_high",
+      "method_label": "カスケード",
+      "accepted_accuracy": null,
+      "accept_rate": null,
+      "reject_rate": null,
+      "early_reject_rate": null,
+      "final_rate": null,
+      "avg_cost": null,
+      "lost_final_reliable_rate": null,
+      "cost_reduction_vs_final": null,
+      "accept_rate_drop_vs_final": null,
+      "valid": false,
+      "note": "LOWを実行し、高確信でなければ独立したHIGHを追加実行する代表的カスケード。低確信の早期棄却はしない。"
+    },
+    {
+      "scenario": "clean40_mixed_severe60",
+      "method": "parallel_low_high",
+      "method_label": "パラレル",
+      "accepted_accuracy": 0.993562,
+      "accept_rate": 0.1864,
+      "reject_rate": 0.8136,
+      "early_reject_rate": 0.0,
+      "final_rate": 1.0,
+      "avg_cost": 1.381818,
+      "lost_final_reliable_rate": 0.0,
+      "cost_reduction_vs_final": -0.381818,
+      "accept_rate_drop_vs_final": 0.0,
+      "valid": true,
+      "note": "LOW/HIGHを同時実行し、信頼ラベルはHIGHの自己確信度で決める。遅延面では強いが、計算量は常に増える。"
     },
     {
       "scenario": "clean40_mixed_severe60",
@@ -1139,7 +1567,8 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean40_mixed_severe60",
@@ -1154,7 +1583,8 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     },
     {
       "scenario": "clean40_mixed_severe60",
@@ -1169,7 +1599,8 @@
       "lost_final_reliable_rate": null,
       "cost_reduction_vs_final": null,
       "accept_rate_drop_vs_final": null,
-      "valid": false
+      "valid": false,
+      "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
     }
   ],
   "scenario_summary": [
@@ -1177,7 +1608,9 @@
       "scenario": "clean40_mixed_low_quality60",
       "final_accept_rate": 0.234,
       "final_accuracy": 0.997436,
-      "upper_only_valid": false,
+      "bn_valid": false,
+      "cascade_valid": false,
+      "parallel_cost_reduction": -0.381818,
       "best_dual": {
         "scenario": "clean40_mixed_low_quality60",
         "method": "dual_side_best_cost_lost_final_reliable_le_5pct",
@@ -1191,7 +1624,8 @@
         "lost_final_reliable_rate": 0.052,
         "cost_reduction_vs_final": 0.392407,
         "accept_rate_drop_vs_final": 0.0496,
-        "valid": true
+        "valid": true,
+        "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
       },
       "verdict": "clear_dual_win"
     },
@@ -1199,7 +1633,9 @@
       "scenario": "clean40_mixed_severe60",
       "final_accept_rate": 0.1864,
       "final_accuracy": 0.993562,
-      "upper_only_valid": false,
+      "bn_valid": false,
+      "cascade_valid": false,
+      "parallel_cost_reduction": -0.381818,
       "best_dual": null,
       "verdict": "no_clear_win"
     },
@@ -1207,7 +1643,9 @@
       "scenario": "clean60_mixed_low_quality40",
       "final_accept_rate": 0.364,
       "final_accuracy": 0.996703,
-      "upper_only_valid": false,
+      "bn_valid": false,
+      "cascade_valid": false,
+      "parallel_cost_reduction": -0.381818,
       "best_dual": null,
       "verdict": "no_clear_win"
     },
@@ -1215,7 +1653,9 @@
       "scenario": "clean70_mixed_quality30",
       "final_accept_rate": 0.3606,
       "final_accuracy": 0.990017,
-      "upper_only_valid": false,
+      "bn_valid": false,
+      "cascade_valid": false,
+      "parallel_cost_reduction": -0.381818,
       "best_dual": null,
       "verdict": "no_clear_win"
     },
@@ -1223,7 +1663,9 @@
       "scenario": "clean75_blur_r2_25",
       "final_accept_rate": 0.4172,
       "final_accuracy": 0.995686,
-      "upper_only_valid": false,
+      "bn_valid": false,
+      "cascade_valid": false,
+      "parallel_cost_reduction": -0.381818,
       "best_dual": {
         "scenario": "clean75_blur_r2_25",
         "method": "dual_side_best_cost_lost_final_reliable_le_5pct",
@@ -1237,7 +1679,8 @@
         "lost_final_reliable_rate": 0.0562,
         "cost_reduction_vs_final": 0.199222,
         "accept_rate_drop_vs_final": 0.0542,
-        "valid": true
+        "valid": true,
+        "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
       },
       "verdict": "clear_dual_win"
     },
@@ -1245,7 +1688,9 @@
       "scenario": "clean75_jpeg10_25",
       "final_accept_rate": 0.4174,
       "final_accuracy": 0.992333,
-      "upper_only_valid": false,
+      "bn_valid": false,
+      "cascade_valid": false,
+      "parallel_cost_reduction": -0.381818,
       "best_dual": {
         "scenario": "clean75_jpeg10_25",
         "method": "dual_side_best_cost_lost_final_reliable_le_5pct",
@@ -1259,7 +1704,8 @@
         "lost_final_reliable_rate": 0.045,
         "cost_reduction_vs_final": 0.238473,
         "accept_rate_drop_vs_final": 0.0434,
-        "valid": true
+        "valid": true,
+        "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
       },
       "verdict": "clear_dual_win"
     },
@@ -1267,7 +1713,9 @@
       "scenario": "clean75_noise25_25",
       "final_accept_rate": 0.3228,
       "final_accuracy": 0.991945,
-      "upper_only_valid": false,
+      "bn_valid": false,
+      "cascade_valid": false,
+      "parallel_cost_reduction": -0.381818,
       "best_dual": null,
       "verdict": "no_clear_win"
     },
@@ -1275,7 +1723,9 @@
       "scenario": "clean75_occlude16_25",
       "final_accept_rate": 0.4218,
       "final_accuracy": 0.994784,
-      "upper_only_valid": false,
+      "bn_valid": false,
+      "cascade_valid": false,
+      "parallel_cost_reduction": -0.381818,
       "best_dual": {
         "scenario": "clean75_occlude16_25",
         "method": "dual_side_best_cost_lost_final_reliable_le_5pct",
@@ -1289,7 +1739,8 @@
         "lost_final_reliable_rate": 0.0614,
         "cost_reduction_vs_final": 0.344938,
         "accept_rate_drop_vs_final": 0.0558,
-        "valid": true
+        "valid": true,
+        "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
       },
       "verdict": "clear_dual_win"
     },
@@ -1297,7 +1748,9 @@
       "scenario": "clean80_mild_quality20",
       "final_accept_rate": 0.473,
       "final_accuracy": 0.991966,
-      "upper_only_valid": false,
+      "bn_valid": false,
+      "cascade_valid": false,
+      "parallel_cost_reduction": -0.381818,
       "best_dual": {
         "scenario": "clean80_mild_quality20",
         "method": "dual_side_best_cost_lost_final_reliable_le_5pct",
@@ -1311,7 +1764,8 @@
         "lost_final_reliable_rate": 0.0582,
         "cost_reduction_vs_final": 0.211571,
         "accept_rate_drop_vs_final": 0.0572,
-        "valid": true
+        "valid": true,
+        "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
       },
       "verdict": "clear_dual_win"
     },
@@ -1319,7 +1773,9 @@
       "scenario": "clean90_mild_quality10",
       "final_accept_rate": 0.5142,
       "final_accuracy": 0.993777,
-      "upper_only_valid": false,
+      "bn_valid": false,
+      "cascade_valid": false,
+      "parallel_cost_reduction": -0.381818,
       "best_dual": {
         "scenario": "clean90_mild_quality10",
         "method": "dual_side_best_cost_lost_final_reliable_le_5pct",
@@ -1333,7 +1789,8 @@
         "lost_final_reliable_rate": 0.052,
         "cost_reduction_vs_final": 0.222996,
         "accept_rate_drop_vs_final": 0.0486,
-        "valid": true
+        "valid": true,
+        "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
       },
       "verdict": "clear_dual_win"
     },
@@ -1341,7 +1798,9 @@
       "scenario": "clean_only",
       "final_accept_rate": 0.6102,
       "final_accuracy": 0.993773,
-      "upper_only_valid": false,
+      "bn_valid": false,
+      "cascade_valid": false,
+      "parallel_cost_reduction": -0.381818,
       "best_dual": {
         "scenario": "clean_only",
         "method": "dual_side_best_cost_lost_final_reliable_le_5pct",
@@ -1355,7 +1814,8 @@
         "lost_final_reliable_rate": 0.0356,
         "cost_reduction_vs_final": 0.177411,
         "accept_rate_drop_vs_final": 0.0312,
-        "valid": true
+        "valid": true,
+        "note": "高確信なら早期ラベル出力、低確信なら早期棄却、中間だけ後段へ送る。"
       },
       "verdict": "clear_dual_win"
     }
