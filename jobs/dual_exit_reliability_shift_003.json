@@ -1,6 +1,6 @@
 {
   "id": "dual_exit_reliability_shift_003",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 7200,
   "result_file": "results/dual_exit_reliability_shift_003.json",
   "note": "Retry of dual_exit_reliability_shift_002 after fixing PIL Image import for Gaussian noise scenario. Keeps the broader low-quality scenario sweep and SVG summary.",
-  "created_at": "2026-08-13T23:55:00+09:00"
+  "created_at": "2026-08-13T23:55:00+09:00",
+  "updated_at": "2026-08-13T14:58:07.114526+00:00",
+  "started_at": "2026-08-13T14:58:07.114506+00:00"
 }
