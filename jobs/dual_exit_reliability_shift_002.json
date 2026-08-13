@@ -1,6 +1,6 @@
 {
   "id": "dual_exit_reliability_shift_002",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 7200,
   "result_file": "results/dual_exit_reliability_shift_002_summary.json",
   "note": "Broader reliability-oriented dual-sided early-exit stress test. Adds mild/severe mixtures, Gaussian noise, JPEG degradation, brightness shift, and a slide-ready SVG summary to identify scenarios where lower-threshold early rejection is useful.",
-  "created_at": "2026-08-13T18:20:00+09:00"
+  "created_at": "2026-08-13T18:20:00+09:00",
+  "updated_at": "2026-08-13T14:48:50.249457+00:00",
+  "started_at": "2026-08-13T14:48:50.249438+00:00"
 }
