@@ -20,7 +20,7 @@ from typing import Any
 
 import numpy as np
 import torch
-from PIL import ImageEnhance, ImageFilter, ImageDraw
+from PIL import Image, ImageEnhance, ImageFilter, ImageDraw
 from torch.utils.data import DataLoader
 
 from scripts.branchynet_cifar_sweep import (
