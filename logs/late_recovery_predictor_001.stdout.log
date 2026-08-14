@@ -1843,4 +1843,6 @@ Collecting BranchyNet outputs:  92%|█████████▎| 37/40 [00:05
 Collecting BranchyNet outputs:  98%|█████████▊| 39/40 [00:05<00:00,  9.32it/s]
 Collecting BranchyNet outputs: 100%|██████████| 40/40 [00:05<00:00,  7.50it/s]
 Training late-recovery predictors scenario=clean_only
+Training late-recovery predictors scenario=clean90_mild_quality10
+Training late-recovery predictors scenario=clean80_mild_quality20
 T
