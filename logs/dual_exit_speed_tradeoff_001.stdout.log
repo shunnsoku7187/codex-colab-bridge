@@ -1839,4 +1839,11 @@ Collecting BranchyNet outputs:  95%|█████████▌| 38/40 [00:05
 Collecting BranchyNet outputs:  98%|█████████▊| 39/40 [00:05<00:00,  8.40it/s]
 Collecting BranchyNet outputs: 100%|██████████| 40/40 [00:05<00:00,  7.28it/s]
 Sweeping speed trade-off scenario=clean_only target_accuracy=0.98
+Sweeping speed trade-off scenario=clean_only target_accuracy=0.99
+Sweeping speed trade-off scenario=clean_only target_accuracy=0.995
+Sweeping speed trade-off scenario=clean90_mild_quality10 target_accuracy=0.98
+Sweeping speed trade-off scenario=clean90_mild_quality10 target_accuracy=0.99
+Sweeping speed trade-off scenario=clean90_mild_quality10 target_accuracy=0.995
+Sweeping speed trade-off scenario=clean80_mild_quality20 target_accuracy=0.98
+Sweeping speed trade-off scenario=clean80_mild_quality20 target_accuracy=0.99
 S
