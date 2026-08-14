@@ -1,6 +1,6 @@
 {
   "id": "dual_exit_speed_tradeoff_001",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 7200,
   "result_file": "results/dual_exit_speed_tradeoff_001_summary.json",
   "note": "Speed-oriented safe-pass trade-off: compare HIGH-only, BN, cascade, parallel, and proposed dual-sided early exit under false-pass constraints 2%, 1%, and 0.5%.",
-  "created_at": "2026-08-14T00:00:00+09:00"
+  "created_at": "2026-08-14T00:00:00+09:00",
+  "updated_at": "2026-08-14T12:13:05.422079+00:00",
+  "started_at": "2026-08-14T12:13:05.422055+00:00"
 }
