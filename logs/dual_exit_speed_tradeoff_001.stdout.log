@@ -1855,4 +1855,10 @@ Sweeping speed trade-off scenario=clean75_jpeg10_25 target_accuracy=0.99
 Sweeping speed trade-off scenario=clean75_jpeg10_25 target_accuracy=0.995
 Sweeping speed trade-off scenario=clean40_mixed_low_quality60 target_accuracy=0.98
 Sweeping speed trade-off scenario=clean40_mixed_low_quality60 target_accuracy=0.99
-S
+Sweeping speed trade-off scenario=clean40_mixed_low_quality60 target_accuracy=0.995
+{
+  "wrote": "results/dual_exit_speed_tradeoff_001_summary.json",
+  "markdown": "docs/dual_exit_speed_tradeoff_001.md",
+  "svg": "results/dual_exit_speed_tradeoff_001.svg",
+  "rows": 126
+}

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="530" viewBox="0 0 1180 530">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#0f172a;font-size:14px}.title{font-size:22px;font-weight:700}.small{font-size:12px;fill:#475569}</style>
+<text x="34" y="36" class="title">Speed-oriented safe-pass trade-off</text>
+<text x="34" y="58" class="small">False pass <= 1%. Bars show normalized compute reduction versus HIGH-only.</text>
+<text x="34" y="98">clean40 mixed low quality60</text>
+<rect x="360" y="83" width="500" height="20" fill="#e2e8f0"/>
+<rect x="360" y="83" width="500.0" height="20" fill="#16a34a"/>
+<text x="878" y="98">-39.2% cost</text>
+<text x="995" y="98" class="small">pass 18.4%, final 57.9%, false pass 0.54%</text>
+<text x="34" y="136">clean75 occlude16 25</text>
+<rect x="360" y="121" width="500" height="20" fill="#e2e8f0"/>
+<rect x="360" y="121" width="439.5" height="20" fill="#16a34a"/>
+<text x="878" y="136">-34.5% cost</text>
+<text x="995" y="136" class="small">pass 36.6%, final 47.4%, false pass 0.71%</text>
+<text x="34" y="174">clean75 jpeg10 25</text>
+<rect x="360" y="159" width="500" height="20" fill="#e2e8f0"/>
+<rect x="360" y="159" width="303.9" height="20" fill="#16a34a"/>
+<text x="878" y="174">-23.8% cost</text>
+<text x="995" y="174" class="small">pass 37.4%, final 72.3%, false pass 0.70%</text>
+<text x="34" y="212">clean90 mild quality10</text>
+<rect x="360" y="197" width="500" height="20" fill="#e2e8f0"/>
+<rect x="360" y="197" width="284.1" height="20" fill="#16a34a"/>
+<text x="878" y="212">-22.3% cost</text>
+<text x="995" y="212" class="small">pass 46.6%, final 67.0%, false pass 0.77%</text>
+<text x="34" y="250">clean75 occlude16 25</text>
+<rect x="360" y="235" width="500" height="20" fill="#e2e8f0"/>
+<rect x="360" y="235" width="282.2" height="20" fill="#16a34a"/>
+<text x="878" y="250">-22.2% cost</text>
+<text x="995" y="250" class="small">pass 40.1%, final 70.2%, false pass 0.60%</text>
+<text x="34" y="288">clean80 mild quality20</text>
+<rect x="360" y="273" width="500" height="20" fill="#e2e8f0"/>
+<rect x="360" y="273" width="269.6" height="20" fill="#16a34a"/>
+<text x="878" y="288">-21.2% cost</text>
+<text x="995" y="288" class="small">pass 41.6%, final 71.4%, false pass 0.77%</text>
+<text x="34" y="326">clean40 mixed low quality60</text>
+<rect x="360" y="311" width="500" height="20" fill="#e2e8f0"/>
+<rect x="360" y="311" width="267.1" height="20" fill="#16a34a"/>
+<text x="878" y="326">-21.0% cost</text>
+<text x="995" y="326" class="small">pass 21.5%, final 77.0%, false pass 0.47%</text>
+<text x="34" y="364">clean only</text>
+<rect x="360" y="349" width="500" height="20" fill="#e2e8f0"/>
+<rect x="360" y="349" width="226.1" height="20" fill="#16a34a"/>
+<text x="878" y="364">-17.7% cost</text>
+<text x="995" y="364" class="small">pass 57.9%, final 76.0%, false pass 0.83%</text>
+<text x="34" y="402">clean75 jpeg10 25</text>
+<rect x="360" y="387" width="500" height="20" fill="#e2e8f0"/>
+<rect x="360" y="387" width="213.9" height="20" fill="#16a34a"/>
+<text x="878" y="402">-16.8% cost</text>
+<text x="995" y="402" class="small">pass 39.5%, final 74.0%, false pass 0.66%</text>
+<text x="34" y="440">clean40 mixed low quality60</text>
+<rect x="360" y="425" width="500" height="20" fill="#e2e8f0"/>
+<rect x="360" y="425" width="207.9" height="20" fill="#16a34a"/>
+<text x="878" y="440">-16.3% cost</text>
+<text x="995" y="440" class="small">pass 22.6%, final 76.4%, false pass 0.44%</text>
+</svg>
