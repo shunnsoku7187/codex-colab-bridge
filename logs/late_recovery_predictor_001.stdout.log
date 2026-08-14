@@ -1845,4 +1845,12 @@ Collecting BranchyNet outputs: 100%|██████████| 40/40 [00:05
 Training late-recovery predictors scenario=clean_only
 Training late-recovery predictors scenario=clean90_mild_quality10
 Training late-recovery predictors scenario=clean80_mild_quality20
-T
+Training late-recovery predictors scenario=clean75_occlude16_25
+Training late-recovery predictors scenario=clean75_jpeg10_25
+Training late-recovery predictors scenario=clean40_mixed_low_quality60
+{
+  "wrote": "results/late_recovery_predictor_001_summary.json",
+  "markdown": "docs/late_recovery_predictor_001.md",
+  "svg": "results/late_recovery_predictor_001.svg",
+  "rows": 900
+}
