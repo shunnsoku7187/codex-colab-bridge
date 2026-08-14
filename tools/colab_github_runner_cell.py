@@ -35,6 +35,7 @@ LOGS_DIR = REPO_DIR / "logs"
 RESULTS_DIR = REPO_DIR / "results"
 ARTIFACTS_DIR = REPO_DIR / "artifacts"
 EXECUTED_NOTEBOOKS_DIR = REPO_DIR / "executed_notebooks"
+DOCS_DIR = REPO_DIR / "docs"
 
 GIT_USER_NAME = "colab-runner"
 GIT_USER_EMAIL = "colab-runner@example.invalid"
@@ -79,7 +80,7 @@ def setup_repo():
         run(f"git remote set-url origin {shlex.quote(REPO_URL)}", cwd=REPO_DIR)
     run(f"git config user.name {shlex.quote(GIT_USER_NAME)}", cwd=REPO_DIR)
     run(f"git config user.email {shlex.quote(GIT_USER_EMAIL)}", cwd=REPO_DIR)
-    for directory in [JOBS_DIR, LOGS_DIR, RESULTS_DIR, ARTIFACTS_DIR, EXECUTED_NOTEBOOKS_DIR]:
+    for directory in [JOBS_DIR, LOGS_DIR, RESULTS_DIR, ARTIFACTS_DIR, EXECUTED_NOTEBOOKS_DIR, DOCS_DIR]:
         directory.mkdir(parents=True, exist_ok=True)
     setup_persistent_cache()
 
@@ -146,7 +147,7 @@ def pull_latest():
 
 
 def push_updates(message):
-    run("git add jobs logs results artifacts executed_notebooks", cwd=REPO_DIR)
+    run("git add jobs logs results artifacts executed_notebooks docs", cwd=REPO_DIR)
     diff = run("git diff --cached --quiet", cwd=REPO_DIR, check=False)
     if diff.returncode == 0:
         return
