@@ -1,6 +1,6 @@
 {
   "id": "late_recovery_predictor_001",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 7200,
   "result_file": "results/late_recovery_predictor_001.json",
   "note": "Train tiny lower-exit predictors that estimate whether a sample will recover to a reliable final accepted label; compare confidence-only threshold, logistic, shallow trees, and tiny MLP under lost-final-reliable constraints.",
-  "created_at": "2026-08-14T00:00:00+09:00"
+  "created_at": "2026-08-14T00:00:00+09:00",
+  "updated_at": "2026-08-14T12:58:01.507444+00:00",
+  "started_at": "2026-08-14T12:58:01.507421+00:00"
 }
