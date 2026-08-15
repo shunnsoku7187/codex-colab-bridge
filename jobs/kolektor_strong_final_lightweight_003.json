@@ -1,6 +1,6 @@
 {
   "id": "kolektor_strong_final_lightweight_003",
-  "status": "running",
+  "status": "done",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -10,6 +10,8 @@
   "result_file": "results/kolektor_strong_final_lightweight_003.json",
   "note": "Lightweight final-only KolektorSDD candidates for FPGA-oriented tradeoff discussion. Compare MobileNetV3-Small, ShuffleNetV2, and ResNet18.",
   "created_at": "2026-08-15T00:00:00+09:00",
-  "updated_at": "2026-08-15T11:36:04.891471+00:00",
-  "started_at": "2026-08-15T11:36:04.891448+00:00"
+  "updated_at": "2026-08-15T12:05:22.069455+00:00",
+  "started_at": "2026-08-15T11:36:04.891448+00:00",
+  "returncode": 0,
+  "finished_at": "2026-08-15T12:05:22.067780+00:00"
 }
