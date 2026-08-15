@@ -1,6 +1,6 @@
 {
   "id": "kolektor_late_recovery_001",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 7200,
   "result_file": "results/kolektor_late_recovery_001.json",
   "note": "Non-CIFAR validation on KolektorSDD industrial surface-defect images. Train a small BranchyNet-like binary inspection model and test lower-side late-recovery predictors under false-pass/good-loss constraints.",
-  "created_at": "2026-08-15T00:00:00+09:00"
+  "created_at": "2026-08-15T00:00:00+09:00",
+  "updated_at": "2026-08-15T10:05:45.865119+00:00",
+  "started_at": "2026-08-15T10:05:45.865103+00:00"
 }
