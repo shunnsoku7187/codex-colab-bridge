@@ -1,6 +1,6 @@
 {
   "id": "kolektor_dual_exit_significance_001",
-  "status": "running",
+  "status": "done",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -10,6 +10,8 @@
   "result_file": "results/kolektor_dual_exit_significance_001.json",
   "note": "Significance experiment for the proposed dual-sided early exit on KolektorSDD. Compare final-only selective classification, ordinary upper-only BranchyNet, and dual-sided early exit under identical validation-selected inspection constraints.",
   "created_at": "2026-08-16T00:00:00+09:00",
-  "updated_at": "2026-08-15T18:22:36.725532+00:00",
-  "started_at": "2026-08-15T18:22:36.725505+00:00"
+  "updated_at": "2026-08-15T18:38:44.608606+00:00",
+  "started_at": "2026-08-15T18:22:36.725505+00:00",
+  "returncode": 0,
+  "finished_at": "2026-08-15T18:38:44.607937+00:00"
 }
