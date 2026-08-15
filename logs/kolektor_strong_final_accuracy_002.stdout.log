@@ -1,0 +1,284 @@
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 1)) (3.10.0)
+Requirement already satisfied: matplotlib-venn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 2)) (1.1.2)
+Requirement already satisfied: torchinfo in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 3)) (1.8.0)
+Requirement already satisfied: transformers in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 4)) (5.13.1)
+Requirement already satisfied: opencv-python-headless in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 5)) (5.0.0.93)
+Requirement already satisfied: scikit-learn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 6)) (1.6.1)
+Requirement already satisfied: lightgbm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 7)) (4.6.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 8)) (4.67.3)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (4.63.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (1.5.0)
+Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (2.0.2)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (26.2)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (11.3.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (2.9.0.post0)
+Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 2)) (1.16.3)
+Requirement already satisfied: huggingface-hub<2.0,>=1.5.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (1.23.0)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (6.0.3)
+Requirement already satisfied: regex>=2025.10.22 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (2025.11.3)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (0.22.2)
+Requirement already satisfied: typer in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (0.26.8)
+Requirement already satisfied: safetensors>=0.8.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (0.8.0)
+Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 6)) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 6)) (3.6.0)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (8.4.2)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (3.29.7)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (2025.3.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.5.1 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (1.5.1)
+Requirement already satisfied: httpx<1,>=0.23.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (0.28.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (4.16.0)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.7->matplotlib->-r requirements-colab.txt (line 1)) (1.17.0)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (13.9.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (0.0.4)
+Requirement already satisfied: anyio in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (4.14.2)
+Requirement already satisfied: certifi in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (2026.6.17)
+Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (1.0.9)
+Requirement already satisfied: idna in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (3.18)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/dist-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (0.16.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (0.1.2)
+device=cuda
+Extracting /content/drive/MyDrive/Research_Experiment/data/kolektor_sdd/KolektorSDD.zip
+Downloading: "https://download.pytorch.org/models/resnet34-b627a593.pth" to /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/checkpoints/resnet34-b627a593.pth
+
+  0%|          | 0.00/83.3M [00:00<?, ?B/s]
+  2%|▏         | 1.62M/83.3M [00:00<00:05, 17.0MB/s]
+  6%|▌         | 4.62M/83.3M [00:00<00:03, 25.0MB/s]
+  9%|▉         | 7.62M/83.3M [00:00<00:02, 27.6MB/s]
+ 15%|█▌        | 12.6M/83.3M [00:00<00:01, 37.3MB/s]
+ 21%|██        | 17.2M/83.3M [00:00<00:01, 41.3MB/s]
+ 27%|██▋       | 22.8M/83.3M [00:00<00:01, 46.7MB/s]
+ 33%|███▎      | 27.2M/83.3M [00:00<00:01, 44.2MB/s]
+ 41%|████      | 34.2M/83.3M [00:00<00:00, 52.3MB/s]
+ 47%|████▋     | 39.4M/83.3M [00:00<00:00, 49.1MB/s]
+ 53%|█████▎    | 44.1M/83.3M [00:01<00:00, 48.9MB/s]
+ 59%|█████▊    | 48.9M/83.3M [00:01<00:00, 48.0MB/s]
+ 66%|██████▌   | 54.6M/83.3M [00:01<00:00, 51.3MB/s]
+ 72%|███████▏  | 60.1M/83.3M [00:01<00:00, 53.1MB/s]
+ 80%|████████  | 66.6M/83.3M [00:01<00:00, 57.1MB/s]
+ 87%|████████▋ | 72.1M/83.3M [00:01<00:00, 54.7MB/s]
+ 93%|█████████▎| 77.6M/83.3M [00:01<00:00, 55.4MB/s]
+100%|█████████▉| 83.1M/83.3M [00:01<00:00, 55.9MB/s]
+100%|██████████| 83.3M/83.3M [00:01<00:00, 48.8MB/s]
+
+resnet34 epoch 1/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet34 epoch 1/45:   7%|▋         | 1/15 [00:03<00:45,  3.27s/it]
+resnet34 epoch 1/45:  13%|█▎        | 2/15 [00:03<00:18,  1.46s/it]
+resnet34 epoch 1/45:  20%|██        | 3/15 [00:03<00:10,  1.14it/s]
+resnet34 epoch 1/45:  27%|██▋       | 4/15 [00:03<00:06,  1.64it/s]
+resnet34 epoch 1/45:  33%|███▎      | 5/15 [00:04<00:04,  2.21it/s]
+resnet34 epoch 1/45:  40%|████      | 6/15 [00:04<00:04,  1.86it/s]
+resnet34 epoch 1/45:  47%|████▋     | 7/15 [00:05<00:03,  2.14it/s]
+resnet34 epoch 1/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.80it/s]
+resnet34 epoch 1/45:  60%|██████    | 9/15 [00:06<00:03,  1.87it/s]
+resnet34 epoch 1/45:  67%|██████▋   | 10/15 [00:07<00:03,  1.65it/s]
+resnet34 epoch 1/45:  73%|███████▎  | 11/15 [00:07<00:01,  2.06it/s]
+resnet34 epoch 1/45:  80%|████████  | 12/15 [00:07<00:01,  1.98it/s]
+resnet34 epoch 1/45:  87%|████████▋ | 13/15 [00:08<00:00,  2.30it/s]
+resnet34 epoch 1/45:  93%|█████████▎| 14/15 [00:08<00:00,  2.15it/s]
+resnet34 epoch 1/45: 100%|██████████| 15/15 [00:08<00:00,  2.64it/s]
+                                                                    
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:00<00:02,  1.55it/s]
+eval:  60%|██████    | 3/5 [00:01<00:00,  2.65it/s]
+eval: 100%|██████████| 5/5 [00:01<00:00,  3.63it/s]
+                                                   
+{"arch": "resnet34", "epoch": 1, "loss": 0.428431, "threshold": 0.5, "accuracy": 0.1375, "good_recall": 0.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.8625, "good_loss_rate_good": 1.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet34 epoch 2/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet34 epoch 2/45:   7%|▋         | 1/15 [00:01<00:19,  1.36s/it]
+resnet34 epoch 2/45:  13%|█▎        | 2/15 [00:01<00:08,  1.48it/s]
+resnet34 epoch 2/45:  20%|██        | 3/15 [00:02<00:07,  1.57it/s]
+resnet34 epoch 2/45:  27%|██▋       | 4/15 [00:02<00:05,  2.16it/s]
+resnet34 epoch 2/45:  33%|███▎      | 5/15 [00:02<00:05,  1.97it/s]
+resnet34 epoch 2/45:  40%|████      | 6/15 [00:03<00:03,  2.53it/s]
+resnet34 epoch 2/45:  47%|████▋     | 7/15 [00:03<00:03,  2.16it/s]
+resnet34 epoch 2/45:  53%|█████▎    | 8/15 [00:03<00:02,  2.68it/s]
+resnet34 epoch 2/45:  60%|██████    | 9/15 [00:04<00:02,  2.33it/s]
+resnet34 epoch 2/45:  67%|██████▋   | 10/15 [00:04<00:01,  2.85it/s]
+resnet34 epoch 2/45:  73%|███████▎  | 11/15 [00:05<00:01,  2.41it/s]
+resnet34 epoch 2/45:  80%|████████  | 12/15 [00:05<00:01,  2.92it/s]
+resnet34 epoch 2/45:  87%|████████▋ | 13/15 [00:05<00:00,  2.75it/s]
+resnet34 epoch 2/45:  93%|█████████▎| 14/15 [00:05<00:00,  3.25it/s]
+resnet34 epoch 2/45: 100%|██████████| 15/15 [00:06<00:00,  3.10it/s]
+                                                                    
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.23s/it]
+eval:  60%|██████    | 3/5 [00:01<00:01,  1.66it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.41it/s]
+                                                   
+{"arch": "resnet34", "epoch": 2, "loss": 0.103937, "threshold": 0.5, "accuracy": 0.8375, "good_recall": 0.811594, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.1625, "good_loss_rate_good": 0.188406, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet34 epoch 3/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet34 epoch 3/45:   7%|▋         | 1/15 [00:01<00:25,  1.82s/it]
+resnet34 epoch 3/45:  13%|█▎        | 2/15 [00:02<00:11,  1.14it/s]
+resnet34 epoch 3/45:  20%|██        | 3/15 [00:02<00:09,  1.20it/s]
+resnet34 epoch 3/45:  27%|██▋       | 4/15 [00:03<00:07,  1.54it/s]
+resnet34 epoch 3/45:  33%|███▎      | 5/15 [00:03<00:05,  1.67it/s]
+resnet34 epoch 3/45:  40%|████      | 6/15 [00:04<00:04,  1.92it/s]
+resnet34 epoch 3/45:  47%|████▋     | 7/15 [00:04<00:04,  1.95it/s]
+resnet34 epoch 3/45:  53%|█████▎    | 8/15 [00:04<00:02,  2.42it/s]
+resnet34 epoch 3/45:  60%|██████    | 9/15 [00:05<00:02,  2.11it/s]
+resnet34 epoch 3/45:  67%|██████▋   | 10/15 [00:05<00:01,  2.58it/s]
+resnet34 epoch 3/45:  73%|███████▎  | 11/15 [00:06<00:01,  2.19it/s]
+resnet34 epoch 3/45:  80%|████████  | 12/15 [00:06<00:01,  2.67it/s]
+resnet34 epoch 3/45:  87%|████████▋ | 13/15 [00:07<00:00,  2.07it/s]
+resnet34 epoch 3/45:  93%|█████████▎| 14/15 [00:07<00:00,  2.55it/s]
+resnet34 epoch 3/45: 100%|██████████| 15/15 [00:07<00:00,  2.62it/s]
+                                                                    
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:00<00:02,  1.44it/s]
+eval:  60%|██████    | 3/5 [00:01<00:00,  2.51it/s]
+eval: 100%|██████████| 5/5 [00:01<00:00,  3.46it/s]
+                                                   
+{"arch": "resnet34", "epoch": 3, "loss": 0.055081, "threshold": 0.5, "accuracy": 0.975, "good_recall": 0.971014, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.025, "good_loss_rate_good": 0.028986, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet34 epoch 4/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet34 epoch 4/45:   7%|▋         | 1/15 [00:01<00:20,  1.44s/it]
+resnet34 epoch 4/45:  13%|█▎        | 2/15 [00:01<00:09,  1.42it/s]
+resnet34 epoch 4/45:  20%|██        | 3/15 [00:02<00:07,  1.57it/s]
+resnet34 epoch 4/45:  27%|██▋       | 4/15 [00:02<00:05,  2.19it/s]
+resnet34 epoch 4/45:  33%|███▎      | 5/15 [00:02<00:05,  2.00it/s]
+resnet34 epoch 4/45:  40%|████      | 6/15 [00:03<00:03,  2.50it/s]
+resnet34 epoch 4/45:  47%|████▋     | 7/15 [00:03<00:03,  2.19it/s]
+resnet34 epoch 4/45:  53%|█████▎    | 8/15 [00:03<00:02,  2.72it/s]
+resnet34 epoch 4/45:  60%|██████    | 9/15 [00:04<00:03,  1.79it/s]
+resnet34 epoch 4/45:  67%|██████▋   | 10/15 [00:05<00:02,  2.24it/s]
+resnet34 epoch 4/45:  73%|███████▎  | 11/15 [00:06<00:02,  1.66it/s]
+resnet34 epoch 4/45:  80%|████████  | 12/15 [00:06<00:01,  2.08it/s]
+resnet34 epoch 4/45:  87%|████████▋ | 13/15 [00:07<00:01,  1.64it/s]
+resnet34 epoch 4/45:  93%|█████████▎| 14/15 [00:07<00:00,  2.07it/s]
+resnet34 epoch 4/45: 100%|██████████| 15/15 [00:07<00:00,  2.04it/s]
+                                                                    
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.15s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.58it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.51it/s]
+                                                   
+{"arch": "resnet34", "epoch": 4, "loss": 0.056574, "threshold": 0.5, "accuracy": 1.0, "good_recall": 1.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet34 epoch 5/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet34 epoch 5/45:   7%|▋         | 1/15 [00:01<00:20,  1.47s/it]
+resnet34 epoch 5/45:  13%|█▎        | 2/15 [00:01<00:09,  1.39it/s]
+resnet34 epoch 5/45:  20%|██        | 3/15 [00:02<00:07,  1.50it/s]
+resnet34 epoch 5/45:  27%|██▋       | 4/15 [00:02<00:05,  2.10it/s]
+resnet34 epoch 5/45:  33%|███▎      | 5/15 [00:03<00:06,  1.46it/s]
+resnet34 epoch 5/45:  40%|████      | 6/15 [00:03<00:04,  1.86it/s]
+resnet34 epoch 5/45:  47%|████▋     | 7/15 [00:04<00:06,  1.31it/s]
+resnet34 epoch 5/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.71it/s]
+resnet34 epoch 5/45:  60%|██████    | 9/15 [00:05<00:03,  1.59it/s]
+resnet34 epoch 5/45:  67%|██████▋   | 10/15 [00:06<00:02,  2.02it/s]
+resnet34 epoch 5/45:  73%|███████▎  | 11/15 [00:06<00:02,  1.86it/s]
+resnet34 epoch 5/45:  80%|████████  | 12/15 [00:06<00:01,  2.32it/s]
+resnet34 epoch 5/45:  87%|████████▋ | 13/15 [00:07<00:00,  2.28it/s]
+resnet34 epoch 5/45:  93%|█████████▎| 14/15 [00:07<00:00,  2.78it/s]
+resnet34 epoch 5/45: 100%|██████████| 15/15 [00:07<00:00,  2.63it/s]
+                                                                    
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:00<00:02,  1.43it/s]
+eval:  60%|██████    | 3/5 [00:01<00:00,  2.16it/s]
+eval: 100%|██████████| 5/5 [00:01<00:00,  2.88it/s]
+                                                   
+{"arch": "resnet34", "epoch": 5, "loss": 0.048527, "threshold": 0.5, "accuracy": 1.0, "good_recall": 1.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet34 epoch 6/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet34 epoch 6/45:   7%|▋         | 1/15 [00:01<00:23,  1.65s/it]
+resnet34 epoch 6/45:  13%|█▎        | 2/15 [00:01<00:10,  1.26it/s]
+resnet34 epoch 6/45:  20%|██        | 3/15 [00:02<00:11,  1.08it/s]
+resnet34 epoch 6/45:  27%|██▋       | 4/15 [00:03<00:07,  1.57it/s]
+resnet34 epoch 6/45:  33%|███▎      | 5/15 [00:04<00:07,  1.32it/s]
+resnet34 epoch 6/45:  40%|████      | 6/15 [00:04<00:05,  1.77it/s]
+resnet34 epoch 6/45:  47%|████▋     | 7/15 [00:05<00:05,  1.41it/s]
+resnet34 epoch 6/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.82it/s]
+resnet34 epoch 6/45:  60%|██████    | 9/15 [00:06<00:03,  1.62it/s]
+resnet34 epoch 6/45:  67%|██████▋   | 10/15 [00:06<00:02,  2.07it/s]
+resnet34 epoch 6/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.92it/s]
+resnet34 epoch 6/45:  80%|████████  | 12/15 [00:07<00:01,  2.35it/s]
+resnet34 epoch 6/45:  87%|████████▋ | 13/15 [00:07<00:00,  2.05it/s]
+resnet34 epoch 6/45:  93%|█████████▎| 14/15 [00:08<00:00,  2.52it/s]
+resnet34 epoch 6/45: 100%|██████████| 15/15 [00:08<00:00,  2.58it/s]
+                                                                    
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:00<00:03,  1.32it/s]
+eval:  60%|██████    | 3/5 [00:01<00:00,  2.37it/s]
+eval: 100%|██████████| 5/5 [00:01<00:00,  3.35it/s]
+                                                   
+{"arch": "resnet34", "epoch": 6, "loss": 0.044867, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet34 epoch 7/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet34 epoch 7/45:   7%|▋         | 1/15 [00:00<00:13,  1.07it/s]
+resnet34 epoch 7/45:  13%|█▎        | 2/15 [00:01<00:06,  2.02it/s]
+resnet34 epoch 7/45:  20%|██        | 3/15 [00:02<00:09,  1.31it/s]
+resnet34 epoch 7/45:  27%|██▋       | 4/15 [00:02<00:05,  1.85it/s]
+resnet34 epoch 7/45:  33%|███▎      | 5/15 [00:03<00:05,  1.75it/s]
+resnet34 epoch 7/45:  40%|████      | 6/15 [00:03<00:03,  2.29it/s]
+resnet34 epoch 7/45:  47%|████▋     | 7/15 [00:03<00:04,  1.98it/s]
+resnet34 epoch 7/45:  53%|█████▎    | 8/15 [00:04<00:02,  2.43it/s]
+resnet34 epoch 7/45:  60%|██████    | 9/15 [00:04<00:02,  2.06it/s]
+resnet34 epoch 7/45:  67%|██████▋   | 10/15 [00:04<00:01,  2.55it/s]
+resnet34 epoch 7/45:  73%|███████▎  | 11/15 [00:05<00:01,  2.07it/s]
+resnet34 epoch 7/45:  80%|████████  | 12/15 [00:05<00:01,  2.52it/s]
+resnet34 epoch 7/45:  87%|████████▋ | 13/15 [00:06<00:00,  2.02it/s]
+resnet34 epoch 7/45:  93%|█████████▎| 14/15 [00:06<00:00,  2.48it/s]
+resnet34 epoch 7/45: 100%|██████████| 15/15 [00:07<00:00,  2.21it/s]
+                                                                    
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.23s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.46it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.19it/s]
+                                                   
+{"arch": "resnet34", "epoch": 7, "loss": 0.047806, "threshold": 0.5, "accuracy": 1.0, "good_recall": 1.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet34 epoch 8/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet34 epoch 8/45:   7%|▋         | 1/15 [00:01<00:19,  1.37s/it]
+resnet34 epoch 8/45:  13%|█▎        | 2/15 [00:01<00:10,  1.20it/s]
+resnet34 epoch 8/45:  20%|██        | 3/15 [00:02<00:11,  1.07it/s]
+resnet34 epoch 8/45:  27%|██▋       | 4/15 [00:03<00:07,  1.56it/s]
+resnet34 epoch 8/45:  33%|███▎      | 5/15 [00:03<00:06,  1.55it/s]
+resnet34 epoch 8/45:  40%|████      | 6/15 [00:03<00:04,  2.04it/s]
+resnet34 epoch 8/45:  47%|████▋     | 7/15 [00:04<00:04,  1.88it/s]
+resnet34 epoch 8/45:  53%|█████▎    | 8/15 [00:04<00:02,  2.37it/s]
+resnet34 epoch 8/45:  60%|██████    | 9/15 [00:05<00:02,  2.13it/s]
+resnet34 epoch 8/45:  67%|██████▋   | 10/15 [00:05<00:01,  2.63it/s]
+resnet34 epoch 8/45:  73%|███████▎  | 11/15 [00:06<00:01,  2.14it/s]
+resnet34 epoch 8/45:  80%|████████  | 12/15 [00:06<00:01,  2.63it/s]
+resnet34 epoch 8/45:  87%|████████▋ | 13/15 [00:06<00:00,  2.16it/s]
+resnet34 epoch 8/45:  93%|█████████▎| 14/15 [00:07<00:00,  2.64it/s]
+resnet34 epoch 8/45: 100%|██████████| 15/15 [00:07<00:00,  2.72it/s]
+                                                                    
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:00<00:03,  1.32it/s]
+eval:  60%|██████    | 3/5 [00:01<00:00,  2.26it/s]
+eval: 100%|██████████| 5/5 [00:01<00:00,  3.27it/s]
+                                                   
+{"arch": "resnet34", "epoch": 8, "loss": 0.044704, "threshold": 0.5, "accuracy": 1.0, "good_recall": 1.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet34 epoch 9/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet34 epoch 9/45:   7%|▋         | 1/15 [00:00<00:13,  1.01it/s]
+resnet34 epoch 9/45:  13%|█▎        | 2/15 [00:01<00:06,  1.93it/s]
+resnet34 epoch 9/45:  20%|██        | 3/15 [00:01<00:07,  1.58it/s]
+resnet34 epoch 9/45:  27%|██▋       | 4/15 [00:02<00:05,  1.97it/s]
+resnet34 epoch 9/45:  33%|███▎      | 5/15 [00:03<00:05,  1.69it/s]
+resnet34 epoch 9/45:  40%|████      | 6/15 [00:03<00:04,  2.11it/s]
+resnet34 epoch 9/45:  47%|████▋     | 7/15 [00:04<00:04,  1.69it/s]
+resnet34 epoch 9/45:  53%|█████▎    | 8/15 [00:04<00:03,  1.92it/s]
+resnet34 epoch 9/45:  60%|██████    | 9/15 [00:05<00:03,  1.59it/s]
+resnet34 epoch 9/45:  67%|██████▋   | 10/15 [00:05<00:02,  1.73it/s]
+resnet34 epoch 9/45:  73%|███████▎  | 11/15 [00:06<00:02,  1.34it/s]
+resnet34 epoch 9/45:  80%|████████  | 12/15 [00:07<00:01,  1.73it/s]
+resnet34 epoch 9/45:  87%|████████▋ | 13/15 [00:07<00:01,  1.53it/s]
+resnet34 epoch 9/45:  93%|█████████▎| 14/15 [00:08<00:00,  1.96it/s]
+r
