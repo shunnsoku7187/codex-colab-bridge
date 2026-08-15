@@ -1,0 +1,13 @@
+{
+  "id": "kolektor_dual_exit_significance_001",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.kolektor_dual_exit_significance --output results/kolektor_dual_exit_significance_001_summary.json --markdown docs/kolektor_dual_exit_significance_001.md --svg results/kolektor_dual_exit_significance_001.svg --checkpoint artifacts/kolektor_dual_exit_significance_001/resnet18_branchy.pt --epochs 45 --batch-size 16 --image-height 512 --image-width 256 --seed 123 --max-false-pass-rates 0.0 0.1 --min-good-pass-rates 0.95 0.98 --require-cuda",
+  "max_runtime_sec": 9000,
+  "result_file": "results/kolektor_dual_exit_significance_001.json",
+  "note": "Significance experiment for the proposed dual-sided early exit on KolektorSDD. Compare final-only selective classification, ordinary upper-only BranchyNet, and dual-sided early exit under identical validation-selected inspection constraints.",
+  "created_at": "2026-08-16T00:00:00+09:00"
+}
