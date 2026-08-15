@@ -1194,4 +1194,246 @@ eval: 100%|██████████| 5/5 [00:02<00:00,  2.06it/s]
 
 eval:   0%|          | 0/5 [00:00<?, ?it/s]
 eval:  20%|██        | 1/5 [00:01<00:06,  1.51s/it]
-e
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.39it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.10it/s]
+                                                   
+Downloading: "https://download.pytorch.org/models/shufflenetv2_x1-5666bf0f80.pth" to /content/drive/MyDrive/Research_Experiment/.colab_cache/torch/hub/checkpoints/shufflenetv2_x1-5666bf0f80.pth
+
+  0%|          | 0.00/8.79M [00:00<?, ?B/s]
+ 57%|█████▋    | 5.00M/8.79M [00:00<00:00, 52.3MB/s]
+100%|██████████| 8.79M/8.79M [00:00<00:00, 67.0MB/s]
+
+shufflenet_v2_x1_0 epoch 1/45:   0%|          | 0/15 [00:00<?, ?it/s]
+shufflenet_v2_x1_0 epoch 1/45:   7%|▋         | 1/15 [00:01<00:23,  1.69s/it]
+shufflenet_v2_x1_0 epoch 1/45:  13%|█▎        | 2/15 [00:01<00:10,  1.20it/s]
+shufflenet_v2_x1_0 epoch 1/45:  20%|██        | 3/15 [00:02<00:11,  1.09it/s]
+shufflenet_v2_x1_0 epoch 1/45:  27%|██▋       | 4/15 [00:03<00:06,  1.58it/s]
+shufflenet_v2_x1_0 epoch 1/45:  33%|███▎      | 5/15 [00:04<00:08,  1.13it/s]
+shufflenet_v2_x1_0 epoch 1/45:  40%|████      | 6/15 [00:04<00:05,  1.54it/s]
+shufflenet_v2_x1_0 epoch 1/45:  47%|████▋     | 7/15 [00:05<00:06,  1.24it/s]
+shufflenet_v2_x1_0 epoch 1/45:  53%|█████▎    | 8/15 [00:06<00:04,  1.62it/s]
+shufflenet_v2_x1_0 epoch 1/45:  60%|██████    | 9/15 [00:07<00:04,  1.21it/s]
+shufflenet_v2_x1_0 epoch 1/45:  67%|██████▋   | 10/15 [00:07<00:03,  1.56it/s]
+shufflenet_v2_x1_0 epoch 1/45:  73%|███████▎  | 11/15 [00:08<00:03,  1.26it/s]
+shufflenet_v2_x1_0 epoch 1/45:  80%|████████  | 12/15 [00:08<00:01,  1.63it/s]
+shufflenet_v2_x1_0 epoch 1/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.57it/s]
+shufflenet_v2_x1_0 epoch 1/45:  93%|█████████▎| 14/15 [00:09<00:00,  2.03it/s]
+shufflenet_v2_x1_0 epoch 1/45: 100%|██████████| 15/15 [00:10<00:00,  1.94it/s]
+                                                                              
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.19s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.38it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  1.98it/s]
+                                                   
+{"arch": "shufflenet_v2_x1_0", "epoch": 1, "loss": 0.644031, "threshold": 0.5, "accuracy": 0.1375, "good_recall": 0.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.8625, "good_loss_rate_good": 1.0, "auroc_defect": 0.501976, "average_precision_defect": 0.227742}
+
+shufflenet_v2_x1_0 epoch 2/45:   0%|          | 0/15 [00:00<?, ?it/s]
+shufflenet_v2_x1_0 epoch 2/45:   7%|▋         | 1/15 [00:01<00:24,  1.76s/it]
+shufflenet_v2_x1_0 epoch 2/45:  13%|█▎        | 2/15 [00:01<00:10,  1.18it/s]
+shufflenet_v2_x1_0 epoch 2/45:  20%|██        | 3/15 [00:02<00:10,  1.13it/s]
+shufflenet_v2_x1_0 epoch 2/45:  27%|██▋       | 4/15 [00:03<00:06,  1.70it/s]
+shufflenet_v2_x1_0 epoch 2/45:  33%|███▎      | 5/15 [00:04<00:07,  1.29it/s]
+shufflenet_v2_x1_0 epoch 2/45:  40%|████      | 6/15 [00:04<00:05,  1.69it/s]
+shufflenet_v2_x1_0 epoch 2/45:  47%|████▋     | 7/15 [00:05<00:05,  1.37it/s]
+shufflenet_v2_x1_0 epoch 2/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.73it/s]
+shufflenet_v2_x1_0 epoch 2/45:  60%|██████    | 9/15 [00:06<00:04,  1.47it/s]
+shufflenet_v2_x1_0 epoch 2/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.89it/s]
+shufflenet_v2_x1_0 epoch 2/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.47it/s]
+shufflenet_v2_x1_0 epoch 2/45:  80%|████████  | 12/15 [00:07<00:01,  1.86it/s]
+shufflenet_v2_x1_0 epoch 2/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.56it/s]
+shufflenet_v2_x1_0 epoch 2/45:  93%|█████████▎| 14/15 [00:08<00:00,  2.05it/s]
+shufflenet_v2_x1_0 epoch 2/45: 100%|██████████| 15/15 [00:09<00:00,  2.02it/s]
+                                                                              
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.17s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.48it/s]
+eval:  80%|████████  | 4/5 [00:02<00:00,  2.09it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  1.98it/s]
+                                                   
+{"arch": "shufflenet_v2_x1_0", "epoch": 2, "loss": 0.568754, "threshold": 0.5, "accuracy": 0.1375, "good_recall": 0.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.8625, "good_loss_rate_good": 1.0, "auroc_defect": 0.640316, "average_precision_defect": 0.310899}
+
+shufflenet_v2_x1_0 epoch 3/45:   0%|          | 0/15 [00:00<?, ?it/s]
+shufflenet_v2_x1_0 epoch 3/45:   7%|▋         | 1/15 [00:01<00:20,  1.44s/it]
+shufflenet_v2_x1_0 epoch 3/45:  13%|█▎        | 2/15 [00:01<00:09,  1.38it/s]
+shufflenet_v2_x1_0 epoch 3/45:  20%|██        | 3/15 [00:03<00:13,  1.09s/it]
+shufflenet_v2_x1_0 epoch 3/45:  27%|██▋       | 4/15 [00:03<00:08,  1.34it/s]
+shufflenet_v2_x1_0 epoch 3/45:  33%|███▎      | 5/15 [00:04<00:08,  1.11it/s]
+shufflenet_v2_x1_0 epoch 3/45:  40%|████      | 6/15 [00:04<00:06,  1.50it/s]
+shufflenet_v2_x1_0 epoch 3/45:  47%|████▋     | 7/15 [00:05<00:06,  1.28it/s]
+shufflenet_v2_x1_0 epoch 3/45:  53%|█████▎    | 8/15 [00:06<00:04,  1.65it/s]
+shufflenet_v2_x1_0 epoch 3/45:  60%|██████    | 9/15 [00:07<00:04,  1.39it/s]
+shufflenet_v2_x1_0 epoch 3/45:  67%|██████▋   | 10/15 [00:07<00:02,  1.69it/s]
+shufflenet_v2_x1_0 epoch 3/45:  73%|███████▎  | 11/15 [00:08<00:02,  1.45it/s]
+shufflenet_v2_x1_0 epoch 3/45:  80%|████████  | 12/15 [00:08<00:01,  1.83it/s]
+shufflenet_v2_x1_0 epoch 3/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.90it/s]
+shufflenet_v2_x1_0 epoch 3/45:  93%|█████████▎| 14/15 [00:09<00:00,  2.37it/s]
+shufflenet_v2_x1_0 epoch 3/45: 100%|██████████| 15/15 [00:09<00:00,  2.34it/s]
+                                                                              
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.16s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.51it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.20it/s]
+                                                   
+{"arch": "shufflenet_v2_x1_0", "epoch": 3, "loss": 0.48069, "threshold": 0.5, "accuracy": 0.1375, "good_recall": 0.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.8625, "good_loss_rate_good": 1.0, "auroc_defect": 0.798419, "average_precision_defect": 0.495635}
+
+shufflenet_v2_x1_0 epoch 4/45:   0%|          | 0/15 [00:00<?, ?it/s]
+shufflenet_v2_x1_0 epoch 4/45:   7%|▋         | 1/15 [00:01<00:27,  1.96s/it]
+shufflenet_v2_x1_0 epoch 4/45:  13%|█▎        | 2/15 [00:02<00:11,  1.09it/s]
+shufflenet_v2_x1_0 epoch 4/45:  20%|██        | 3/15 [00:03<00:11,  1.05it/s]
+shufflenet_v2_x1_0 epoch 4/45:  27%|██▋       | 4/15 [00:03<00:07,  1.49it/s]
+shufflenet_v2_x1_0 epoch 4/45:  33%|███▎      | 5/15 [00:04<00:07,  1.27it/s]
+shufflenet_v2_x1_0 epoch 4/45:  40%|████      | 6/15 [00:04<00:05,  1.68it/s]
+shufflenet_v2_x1_0 epoch 4/45:  47%|████▋     | 7/15 [00:05<00:06,  1.28it/s]
+shufflenet_v2_x1_0 epoch 4/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.65it/s]
+shufflenet_v2_x1_0 epoch 4/45:  60%|██████    | 9/15 [00:06<00:04,  1.43it/s]
+shufflenet_v2_x1_0 epoch 4/45:  67%|██████▋   | 10/15 [00:07<00:02,  1.86it/s]
+shufflenet_v2_x1_0 epoch 4/45:  73%|███████▎  | 11/15 [00:08<00:02,  1.40it/s]
+shufflenet_v2_x1_0 epoch 4/45:  80%|████████  | 12/15 [00:08<00:01,  1.77it/s]
+shufflenet_v2_x1_0 epoch 4/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.49it/s]
+shufflenet_v2_x1_0 epoch 4/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.93it/s]
+shufflenet_v2_x1_0 epoch 4/45: 100%|██████████| 15/15 [00:10<00:00,  1.89it/s]
+                                                                              
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.15s/it]
+eval:  40%|████      | 2/5 [00:01<00:01,  1.74it/s]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.58it/s]
+eval:  80%|████████  | 4/5 [00:02<00:00,  1.76it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.10it/s]
+                                                   
+{"arch": "shufflenet_v2_x1_0", "epoch": 4, "loss": 0.378795, "threshold": 0.5, "accuracy": 0.1375, "good_recall": 0.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.8625, "good_loss_rate_good": 1.0, "auroc_defect": 0.990777, "average_precision_defect": 0.948301}
+
+shufflenet_v2_x1_0 epoch 5/45:   0%|          | 0/15 [00:00<?, ?it/s]
+shufflenet_v2_x1_0 epoch 5/45:   7%|▋         | 1/15 [00:01<00:26,  1.89s/it]
+shufflenet_v2_x1_0 epoch 5/45:  13%|█▎        | 2/15 [00:02<00:11,  1.17it/s]
+shufflenet_v2_x1_0 epoch 5/45:  20%|██        | 3/15 [00:03<00:11,  1.01it/s]
+shufflenet_v2_x1_0 epoch 5/45:  27%|██▋       | 4/15 [00:03<00:07,  1.50it/s]
+shufflenet_v2_x1_0 epoch 5/45:  33%|███▎      | 5/15 [00:04<00:08,  1.23it/s]
+shufflenet_v2_x1_0 epoch 5/45:  40%|████      | 6/15 [00:04<00:05,  1.67it/s]
+shufflenet_v2_x1_0 epoch 5/45:  47%|████▋     | 7/15 [00:05<00:05,  1.43it/s]
+shufflenet_v2_x1_0 epoch 5/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.65it/s]
+shufflenet_v2_x1_0 epoch 5/45:  60%|██████    | 9/15 [00:06<00:04,  1.41it/s]
+shufflenet_v2_x1_0 epoch 5/45:  67%|██████▋   | 10/15 [00:07<00:02,  1.84it/s]
+shufflenet_v2_x1_0 epoch 5/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.48it/s]
+shufflenet_v2_x1_0 epoch 5/45:  80%|████████  | 12/15 [00:08<00:01,  1.87it/s]
+shufflenet_v2_x1_0 epoch 5/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.53it/s]
+shufflenet_v2_x1_0 epoch 5/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.88it/s]
+shufflenet_v2_x1_0 epoch 5/45: 100%|██████████| 15/15 [00:09<00:00,  1.95it/s]
+                                                                              
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.21s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.46it/s]
+eval:  80%|████████  | 4/5 [00:02<00:00,  2.00it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.06it/s]
+                                                   
+{"arch": "shufflenet_v2_x1_0", "epoch": 5, "loss": 0.284816, "threshold": 0.5, "accuracy": 0.1375, "good_recall": 0.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.8625, "good_loss_rate_good": 1.0, "auroc_defect": 0.998682, "average_precision_defect": 0.992424}
+
+shufflenet_v2_x1_0 epoch 6/45:   0%|          | 0/15 [00:00<?, ?it/s]
+shufflenet_v2_x1_0 epoch 6/45:   7%|▋         | 1/15 [00:01<00:23,  1.66s/it]
+shufflenet_v2_x1_0 epoch 6/45:  13%|█▎        | 2/15 [00:01<00:10,  1.25it/s]
+shufflenet_v2_x1_0 epoch 6/45:  20%|██        | 3/15 [00:03<00:11,  1.03it/s]
+shufflenet_v2_x1_0 epoch 6/45:  27%|██▋       | 4/15 [00:03<00:07,  1.53it/s]
+shufflenet_v2_x1_0 epoch 6/45:  33%|███▎      | 5/15 [00:04<00:08,  1.22it/s]
+shufflenet_v2_x1_0 epoch 6/45:  40%|████      | 6/15 [00:04<00:05,  1.54it/s]
+shufflenet_v2_x1_0 epoch 6/45:  47%|████▋     | 7/15 [00:05<00:05,  1.49it/s]
+shufflenet_v2_x1_0 epoch 6/45:  53%|█████▎    | 8/15 [00:06<00:04,  1.46it/s]
+shufflenet_v2_x1_0 epoch 6/45:  60%|██████    | 9/15 [00:06<00:03,  1.62it/s]
+shufflenet_v2_x1_0 epoch 6/45:  67%|██████▋   | 10/15 [00:07<00:03,  1.53it/s]
+shufflenet_v2_x1_0 epoch 6/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.58it/s]
+shufflenet_v2_x1_0 epoch 6/45:  80%|████████  | 12/15 [00:08<00:02,  1.47it/s]
+shufflenet_v2_x1_0 epoch 6/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.69it/s]
+shufflenet_v2_x1_0 epoch 6/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.56it/s]
+shufflenet_v2_x1_0 epoch 6/45: 100%|██████████| 15/15 [00:09<00:00,  2.05it/s]
+                                                                              
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:05,  1.27s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.55it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.28it/s]
+                                                   
+{"arch": "shufflenet_v2_x1_0", "epoch": 6, "loss": 0.21958, "threshold": 0.5, "accuracy": 0.1375, "good_recall": 0.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.8625, "good_loss_rate_good": 1.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+shufflenet_v2_x1_0 epoch 7/45:   0%|          | 0/15 [00:00<?, ?it/s]
+shufflenet_v2_x1_0 epoch 7/45:   7%|▋         | 1/15 [00:01<00:24,  1.78s/it]
+shufflenet_v2_x1_0 epoch 7/45:  13%|█▎        | 2/15 [00:01<00:11,  1.18it/s]
+shufflenet_v2_x1_0 epoch 7/45:  20%|██        | 3/15 [00:02<00:10,  1.15it/s]
+shufflenet_v2_x1_0 epoch 7/45:  27%|██▋       | 4/15 [00:03<00:06,  1.68it/s]
+shufflenet_v2_x1_0 epoch 7/45:  33%|███▎      | 5/15 [00:04<00:07,  1.30it/s]
+shufflenet_v2_x1_0 epoch 7/45:  40%|████      | 6/15 [00:04<00:05,  1.72it/s]
+shufflenet_v2_x1_0 epoch 7/45:  47%|████▋     | 7/15 [00:05<00:05,  1.44it/s]
+shufflenet_v2_x1_0 epoch 7/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.69it/s]
+shufflenet_v2_x1_0 epoch 7/45:  60%|██████    | 9/15 [00:06<00:04,  1.43it/s]
+shufflenet_v2_x1_0 epoch 7/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.82it/s]
+shufflenet_v2_x1_0 epoch 7/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.44it/s]
+shufflenet_v2_x1_0 epoch 7/45:  80%|████████  | 12/15 [00:08<00:01,  1.83it/s]
+shufflenet_v2_x1_0 epoch 7/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.52it/s]
+shufflenet_v2_x1_0 epoch 7/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.75it/s]
+shufflenet_v2_x1_0 epoch 7/45: 100%|██████████| 15/15 [00:09<00:00,  1.84it/s]
+                                                                              
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.25s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.54it/s]
+eval:  80%|████████  | 4/5 [00:02<00:00,  2.02it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.07it/s]
+                                                   
+{"arch": "shufflenet_v2_x1_0", "epoch": 7, "loss": 0.197406, "threshold": 0.5, "accuracy": 0.1375, "good_recall": 0.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.8625, "good_loss_rate_good": 1.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+shufflenet_v2_x1_0 epoch 8/45:   0%|          | 0/15 [00:00<?, ?it/s]
+shufflenet_v2_x1_0 epoch 8/45:   7%|▋         | 1/15 [00:01<00:21,  1.55s/it]
+shufflenet_v2_x1_0 epoch 8/45:  13%|█▎        | 2/15 [00:01<00:09,  1.31it/s]
+shufflenet_v2_x1_0 epoch 8/45:  20%|██        | 3/15 [00:03<00:11,  1.01it/s]
+shufflenet_v2_x1_0 epoch 8/45:  27%|██▋       | 4/15 [00:03<00:07,  1.46it/s]
+shufflenet_v2_x1_0 epoch 8/45:  33%|███▎      | 5/15 [00:04<00:08,  1.23it/s]
+shufflenet_v2_x1_0 epoch 8/45:  40%|████      | 6/15 [00:04<00:05,  1.63it/s]
+shufflenet_v2_x1_0 epoch 8/45:  47%|████▋     | 7/15 [00:05<00:05,  1.36it/s]
+shufflenet_v2_x1_0 epoch 8/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.70it/s]
+shufflenet_v2_x1_0 epoch 8/45:  60%|██████    | 9/15 [00:06<00:04,  1.38it/s]
+shufflenet_v2_x1_0 epoch 8/45:  67%|██████▋   | 10/15 [00:07<00:02,  1.75it/s]
+shufflenet_v2_x1_0 epoch 8/45:  73%|███████▎  | 11/15 [00:08<00:02,  1.43it/s]
+shufflenet_v2_x1_0 epoch 8/45:  80%|████████  | 12/15 [00:08<00:01,  1.80it/s]
+shufflenet_v2_x1_0 epoch 8/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.57it/s]
+shufflenet_v2_x1_0 epoch 8/45:  93%|█████████▎| 14/15 [00:09<00:00,  2.00it/s]
+shufflenet_v2_x1_0 epoch 8/45: 100%|██████████| 15/15 [00:09<00:00,  2.03it/s]
+                                                                              
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.06s/it]
+eval:  40%|████      | 2/5 [00:01<00:01,  1.74it/s]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.45it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.20it/s]
+                                                   
+{"arch": "shufflenet_v2_x1_0", "epoch": 8, "loss": 0.185419, "threshold": 0.5, "accuracy": 0.1375, "good_recall": 0.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.8625, "good_loss_rate_good": 1.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+shufflenet_v2_x1_0 epoch 9/45:   0%|          | 0/15 [00:00<?, ?it/s]
+shufflenet_v2_x1_0 epoch 9/45:   7%|▋         | 1/15 [00:01<00:20,  1.48s/it]
+shufflenet_v2_x1_0 epoch 9/45:  13%|█▎        | 2/15 [00:01<00:09,  1.37it/s]
+shufflenet_v2_x1_0 epoch 9/45:  20%|██        | 3/15 [00:03<00:13,  1.10s/it]
+shufflenet_v2_x1_0 epoch 9/45:  27%|██▋       | 4/15 [00:03<00:08,  1.34it/s]
+shufflenet_v2_x1_0 epoch 9/45:  33%|███▎      | 5/15 [00:04<00:08,  1.16it/s]
+shufflenet_v2_x1_0 epoch 9/45:  40%|████      | 6/15 [00:04<00:05,  1.54it/s]
+shufflenet_v2_x1_0 epoch 9/45:  47%|████▋     | 7/15 [00:05<00:06,  1.26it/s]
+shufflenet_v2_x1_0 epoch 9/45:  53%|█████▎    | 8/15 [00:06<00:04,  1.61it/s]
+shufflenet_v2_x1_0 epoch 9/45:  60%|██████    | 9/15 [00:07<00:04,  1.31it/s]
+shufflenet_v2_x1_0 epoch 9/45:  67%|██████▋   | 10/15 [00:07<00:02,  1.74it/s]
+shufflenet_v2_x1_0 epoch 9/45:  73%|███████▎  | 11/15 [00:08<00:02,  1.38it/s]
+shufflenet_v2_x1_0 epoch 9/45:  80%|████████  | 12/15 [00:08<00:01,  1.77it/s]
+shufflenet_v2_x1_0 epoch 9/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.47it/s]
+shufflenet_v2_x1_0 epoch 9/45: 100%|██████████| 15/15 [00:10<00:00,  1.87it/s]
+                                                                              
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.22s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.57it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.31it/s]
+                                                   
+{"arch": "shufflenet_v2_x1_0", "epoch": 9, "loss": 0.14408, "threshold": 0.5, "accuracy": 0.1375, "good_recall": 0.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.8625, "good_loss_rate_good": 1.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+shufflenet_v2_x1_0 epoch 10/45:   0%|          | 0/15 [00:00<?, ?it/s]
+shufflenet_v2_x1_0 epoch 10/45:   7%|▋         | 1/15 [00:01<00:20,  1.48s/it]
+shufflenet_v2_x1_0 epoch 10/45:  20%|██        | 3/15 [00:02<00:10,  1.09it/s]
+s
