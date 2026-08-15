@@ -161,8 +161,13 @@ def simulate_dual(data: dict[str, np.ndarray], pass0: float, rej0: float, pass1:
 
 
 def candidates(values: np.ndarray) -> list[float]:
-    qs = np.asarray([0.0, 0.01, 0.03, 0.05, 0.1, 0.2, 0.4, 0.6, 0.8, 0.9, 0.95, 0.98, 1.0])
-    out = sorted(set(float(x) for x in np.quantile(values, qs)))
+    unique = np.unique(np.asarray(values, dtype=np.float32))
+    mids = (unique[:-1] + unique[1:]) / 2.0 if len(unique) >= 2 else np.asarray([], dtype=np.float32)
+    qs = np.asarray([0.0, 0.01, 0.03, 0.05, 0.1, 0.2, 0.4, 0.5, 0.6, 0.8, 0.9, 0.95, 0.98, 1.0])
+    # Use sample values, midpoints, common thresholds, and quantiles.  The
+    # midpoint terms matter on tiny inspection splits because a feasible
+    # threshold can exist between two observed probabilities.
+    out = sorted(set(float(x) for x in np.concatenate([unique, mids, np.quantile(unique, qs), np.asarray([0.0, 0.5, 1.0])])))
     return out
 
 
