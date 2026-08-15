@@ -1,0 +1,1 @@
+stderr is merged into stdout by the Colab runner to avoid pipe deadlocks.
