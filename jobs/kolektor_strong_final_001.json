@@ -1,6 +1,6 @@
 {
   "id": "kolektor_strong_final_001",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 7200,
   "result_file": "results/kolektor_strong_final_001.json",
   "note": "Train stronger final-only KolektorSDD inspection baselines before evaluating dual-sided early exit. Uses ImageNet-initialized ResNet18 and EfficientNet-B0, reports false-pass/good-loss safety threshold curves.",
-  "created_at": "2026-08-15T00:00:00+09:00"
+  "created_at": "2026-08-15T00:00:00+09:00",
+  "updated_at": "2026-08-15T10:26:55.673081+00:00",
+  "started_at": "2026-08-15T10:26:55.673066+00:00"
 }
