@@ -194,6 +194,16 @@ def make_model(arch: str, pretrained: bool) -> nn.Module:
         model = models.efficientnet_b0(weights=weights)
         model.classifier[-1] = nn.Linear(model.classifier[-1].in_features, 2)
         return model
+    if arch == "mobilenet_v3_small":
+        weights = models.MobileNet_V3_Small_Weights.DEFAULT if pretrained else None
+        model = models.mobilenet_v3_small(weights=weights)
+        model.classifier[-1] = nn.Linear(model.classifier[-1].in_features, 2)
+        return model
+    if arch == "shufflenet_v2_x1_0":
+        weights = models.ShuffleNet_V2_X1_0_Weights.DEFAULT if pretrained else None
+        model = models.shufflenet_v2_x1_0(weights=weights)
+        model.fc = nn.Linear(model.fc.in_features, 2)
+        return model
     raise ValueError(f"Unknown arch: {arch}")
 
 

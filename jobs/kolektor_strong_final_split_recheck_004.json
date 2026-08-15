@@ -1,0 +1,13 @@
+{
+  "id": "kolektor_strong_final_split_recheck_004",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.train_kolektor_strong_final --output results/kolektor_strong_final_split_recheck_004_summary.json --markdown docs/kolektor_strong_final_split_recheck_004.md --svg results/kolektor_strong_final_split_recheck_004.svg --checkpoint-dir artifacts/kolektor_strong_final_split_recheck_004 --archs resnet18 efficientnet_b0 --epochs 35 --batch-size 16 --image-height 512 --image-width 256 --seed 456 --require-cuda",
+  "max_runtime_sec": 7200,
+  "result_file": "results/kolektor_strong_final_split_recheck_004.json",
+  "note": "Different item split for reproducibility check. Same strong final candidates as the first run, seed 456.",
+  "created_at": "2026-08-15T00:00:00+09:00"
+}

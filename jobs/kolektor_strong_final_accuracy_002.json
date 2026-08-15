@@ -1,0 +1,13 @@
+{
+  "id": "kolektor_strong_final_accuracy_002",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.train_kolektor_strong_final --output results/kolektor_strong_final_accuracy_002_summary.json --markdown docs/kolektor_strong_final_accuracy_002.md --svg results/kolektor_strong_final_accuracy_002.svg --checkpoint-dir artifacts/kolektor_strong_final_accuracy_002 --archs resnet34 efficientnet_b0 --epochs 45 --batch-size 16 --image-height 512 --image-width 256 --seed 123 --require-cuda",
+  "max_runtime_sec": 9000,
+  "result_file": "results/kolektor_strong_final_accuracy_002.json",
+  "note": "Accuracy-oriented final-only KolektorSDD baselines. Compare deeper ResNet34 against EfficientNet-B0 before adding early exits.",
+  "created_at": "2026-08-15T00:00:00+09:00"
+}
