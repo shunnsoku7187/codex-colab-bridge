@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="520" viewBox="0 0 1120 520">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#0f172a;font-size:14px}.title{font-size:22px;font-weight:700}.small{fill:#475569;font-size:12px}</style>
+<text x="34" y="36" class="title">KolektorSDD: lower-side late-recovery predictor</text>
+<text x="34" y="58" class="small">Bars show normalized compute reduction versus final-only on a real industrial surface-defect dataset.</text>
+<text x="34" y="96">pass 95.0%, loss 2.0%</text>
+<rect x="300" y="80" width="470" height="22" fill="#e2e8f0"/>
+<rect x="300" y="80" width="144.6" height="22" fill="#2563eb"/>
+<text x="788" y="96">-4.5% cost</text>
+<text x="904" y="96" class="small">trace logistic_l2, reject 10.0%</text>
+<text x="34" y="138">pass 95.0%, loss 5.0%</text>
+<rect x="300" y="122" width="470" height="22" fill="#e2e8f0"/>
+<rect x="300" y="122" width="313.3" height="22" fill="#2563eb"/>
+<text x="788" y="138">-9.8% cost</text>
+<text x="904" y="138" class="small">prob_good_only raw_prob_good_threshold, reject 12.5%</text>
+<text x="34" y="180">pass 95.0%, loss 10.0%</text>
+<rect x="300" y="164" width="470" height="22" fill="#e2e8f0"/>
+<rect x="300" y="164" width="470.0" height="22" fill="#2563eb"/>
+<text x="788" y="180">-14.6% cost</text>
+<text x="904" y="180" class="small">prob_good_only raw_prob_good_threshold, reject 18.8%</text>
+<text x="34" y="222">pass 98.0%, loss 2.0%</text>
+<rect x="300" y="206" width="470" height="22" fill="#e2e8f0"/>
+<rect x="300" y="206" width="144.6" height="22" fill="#2563eb"/>
+<text x="788" y="222">-4.5% cost</text>
+<text x="904" y="222" class="small">trace logistic_l2, reject 10.0%</text>
+<text x="34" y="264">pass 98.0%, loss 5.0%</text>
+<rect x="300" y="248" width="470" height="22" fill="#e2e8f0"/>
+<rect x="300" y="248" width="470.0" height="22" fill="#2563eb"/>
+<text x="788" y="264">-14.6% cost</text>
+<text x="904" y="264" class="small">prob_good_only raw_prob_good_threshold, reject 18.8%</text>
+<text x="34" y="306">pass 98.0%, loss 10.0%</text>
+<rect x="300" y="290" width="470" height="22" fill="#e2e8f0"/>
+<rect x="300" y="290" width="470.0" height="22" fill="#2563eb"/>
+<text x="788" y="306">-14.6% cost</text>
+<text x="904" y="306" class="small">prob_good_only raw_prob_good_threshold, reject 18.8%</text>
+<text x="34" y="348">pass 99.0%, loss 2.0%</text>
+<rect x="300" y="332" width="470" height="22" fill="#e2e8f0"/>
+<rect x="300" y="332" width="144.6" height="22" fill="#2563eb"/>
+<text x="788" y="348">-4.5% cost</text>
+<text x="904" y="348" class="small">trace logistic_l2, reject 10.0%</text>
+<text x="34" y="390">pass 99.0%, loss 5.0%</text>
+<rect x="300" y="374" width="470" height="22" fill="#e2e8f0"/>
+<rect x="300" y="374" width="470.0" height="22" fill="#2563eb"/>
+<text x="788" y="390">-14.6% cost</text>
+<text x="904" y="390" class="small">prob_good_only raw_prob_good_threshold, reject 18.8%</text>
+<text x="34" y="432">pass 99.0%, loss 10.0%</text>
+<rect x="300" y="416" width="470" height="22" fill="#e2e8f0"/>
+<rect x="300" y="416" width="470.0" height="22" fill="#2563eb"/>
+<text x="788" y="432">-14.6% cost</text>
+<text x="904" y="432" class="small">prob_good_only raw_prob_good_threshold, reject 18.8%</text>
+</svg>

@@ -156,4 +156,202 @@ Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
 Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.77it/s]
 Collecting outputs:  60%|██████    | 3/5 [00:00<00:00,  3.57it/s]
 Collecting outputs:  80%|████████  | 4/5 [00:01<00:00,  3.05it/s]
-Collect
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.37it/s]
+{"epoch": 15, "loss": 0.338853, "val_final_acc": 0.9, "val_defect_recall": 0.272727}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:01,  2.13it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:00<00:00,  4.29it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:00<00:00,  5.98it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.96it/s]
+{"epoch": 16, "loss": 0.339514, "val_final_acc": 0.9125, "val_defect_recall": 0.545455}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:03,  1.20it/s]
+Collecting outputs:  40%|████      | 2/5 [00:01<00:01,  2.23it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  2.83it/s]
+Collecting outputs:  80%|████████  | 4/5 [00:01<00:00,  3.24it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.98it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  2.90it/s]
+{"epoch": 17, "loss": 0.311649, "val_final_acc": 0.9, "val_defect_recall": 0.272727}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.82it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:00<00:00,  3.28it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.53it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.68it/s]
+{"epoch": 18, "loss": 0.35189, "val_final_acc": 0.575, "val_defect_recall": 0.909091}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:03,  1.24it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  2.56it/s]
+Collecting outputs:  80%|████████  | 4/5 [00:01<00:00,  3.23it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.23it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  2.72it/s]
+{"epoch": 19, "loss": 0.277178, "val_final_acc": 0.9125, "val_defect_recall": 0.363636}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.46it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  3.06it/s]
+Collecting outputs:  80%|████████  | 4/5 [00:01<00:00,  3.81it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.03it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.28it/s]
+{"epoch": 20, "loss": 0.295557, "val_final_acc": 0.9, "val_defect_recall": 0.272727}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.54it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:00<00:00,  3.38it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.75it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.76it/s]
+{"epoch": 21, "loss": 0.285656, "val_final_acc": 0.9, "val_defect_recall": 0.272727}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:03,  1.20it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  2.37it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.38it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  2.71it/s]
+{"epoch": 22, "loss": 0.247511, "val_final_acc": 0.9, "val_defect_recall": 0.272727}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.59it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  3.26it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.51it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.63it/s]
+{"epoch": 23, "loss": 0.265886, "val_final_acc": 0.9, "val_defect_recall": 0.272727}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.51it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  3.32it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.56it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.69it/s]
+{"epoch": 24, "loss": 0.20944, "val_final_acc": 0.375, "val_defect_recall": 0.909091}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.52it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  3.29it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.55it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.69it/s]
+{"epoch": 25, "loss": 0.232692, "val_final_acc": 0.8875, "val_defect_recall": 0.272727}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:03,  1.19it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  2.34it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.32it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  2.71it/s]
+{"epoch": 26, "loss": 0.303155, "val_final_acc": 0.425, "val_defect_recall": 0.909091}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.49it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  3.33it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.69it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.68it/s]
+{"epoch": 27, "loss": 0.256288, "val_final_acc": 0.8375, "val_defect_recall": 0.363636}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.78it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:00<00:00,  3.50it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.77it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.90it/s]
+{"epoch": 28, "loss": 0.205511, "val_final_acc": 0.775, "val_defect_recall": 0.454545}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.47it/s]
+Collecting outputs:  40%|████      | 2/5 [00:00<00:01,  2.39it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  2.85it/s]
+Collecting outputs:  80%|████████  | 4/5 [00:01<00:00,  2.72it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.39it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  2.73it/s]
+{"epoch": 29, "loss": 0.199868, "val_final_acc": 0.9, "val_defect_recall": 0.272727}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.63it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:00<00:00,  3.33it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.61it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.72it/s]
+{"epoch": 30, "loss": 0.192346, "val_final_acc": 0.9125, "val_defect_recall": 0.363636}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.54it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  3.25it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.62it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.65it/s]
+{"epoch": 31, "loss": 0.198965, "val_final_acc": 0.9, "val_defect_recall": 0.272727}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.51it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  3.25it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.64it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.69it/s]
+{"epoch": 32, "loss": 0.234521, "val_final_acc": 0.875, "val_defect_recall": 0.090909}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:03,  1.20it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  2.45it/s]
+Collecting outputs:  80%|████████  | 4/5 [00:01<00:00,  3.12it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.19it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  2.61it/s]
+{"epoch": 33, "loss": 0.184927, "val_final_acc": 0.1625, "val_defect_recall": 1.0}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.63it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:00<00:00,  3.40it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.79it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.82it/s]
+{"epoch": 34, "loss": 0.189986, "val_final_acc": 0.8875, "val_defect_recall": 0.363636}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.74it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:00<00:00,  3.64it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  5.06it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.12it/s]
+{"epoch": 35, "loss": 0.21189, "val_final_acc": 0.875, "val_defect_recall": 0.363636}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.53it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  2.91it/s]
+Collecting outputs:  80%|████████  | 4/5 [00:01<00:00,  3.34it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.28it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  2.83it/s]
+{"epoch": 36, "loss": 0.191246, "val_final_acc": 0.875, "val_defect_recall": 0.090909}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.56it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:00<00:00,  3.38it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.75it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.71it/s]
+{"epoch": 37, "loss": 0.189797, "val_final_acc": 0.875, "val_defect_recall": 0.272727}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:01,  2.06it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:00<00:00,  3.67it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.92it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.00it/s]
+{"epoch": 38, "loss": 0.220073, "val_final_acc": 0.7125, "val_defect_recall": 0.818182}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.73it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:00<00:00,  3.52it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.88it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.94it/s]
+{"epoch": 39, "loss": 0.171106, "val_final_acc": 0.775, "val_defect_recall": 0.636364}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:03,  1.19it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  2.49it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.45it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  2.81it/s]
+{"epoch": 40, "loss": 0.169805, "val_final_acc": 0.9, "val_defect_recall": 0.272727}
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:02,  1.41it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:01<00:00,  2.38it/s]
+Collecting outputs:  80%|████████  | 4/5 [00:01<00:00,  2.84it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.00it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  2.58it/s]
+
+Collecting outputs:   0%|          | 0/5 [00:00<?, ?it/s]
+Collecting outputs:  20%|██        | 1/5 [00:00<00:01,  2.28it/s]
+Collecting outputs:  60%|██████    | 3/5 [00:00<00:00,  3.14it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  4.45it/s]
+Collecting outputs: 100%|██████████| 5/5 [00:01<00:00,  3.75it/s]
+{

@@ -1,0 +1,5275 @@
+{
+  "purpose": "Non-CIFAR real industrial inspection validation for lower-side late-recovery predictor.",
+  "dataset": {
+    "name": "KolektorSDD",
+    "url": "https://data.vicos.si/datasets/KSDD/KolektorSDD.zip",
+    "sample_count": 399,
+    "defect_count": 52,
+    "good_count": 347,
+    "split_counts": {
+      "train": {
+        "samples": 239,
+        "defects": 31,
+        "good": 208
+      },
+      "val": {
+        "samples": 80,
+        "defects": 11,
+        "good": 69
+      },
+      "eval": {
+        "samples": 80,
+        "defects": 10,
+        "good": 70
+      }
+    }
+  },
+  "model": {
+    "arch": "TinyInspectionBranchyNet",
+    "exit_names": [
+      "exit0",
+      "exit1",
+      "final"
+    ],
+    "exit_costs": [
+      0.2199999988079071,
+      0.550000011920929,
+      1.0
+    ],
+    "image_size": [
+      256,
+      128
+    ],
+    "epochs": 40,
+    "training": {
+      "history": [
+        {
+          "epoch": 1,
+          "loss": 1.18145,
+          "val_final_acc": 0.825,
+          "val_defect_recall": 0.0
+        },
+        {
+          "epoch": 2,
+          "loss": 0.813298,
+          "val_final_acc": 0.1375,
+          "val_defect_recall": 1.0
+        },
+        {
+          "epoch": 3,
+          "loss": 0.555985,
+          "val_final_acc": 0.2,
+          "val_defect_recall": 0.818182
+        },
+        {
+          "epoch": 4,
+          "loss": 0.548502,
+          "val_final_acc": 0.7125,
+          "val_defect_recall": 0.454545
+        },
+        {
+          "epoch": 5,
+          "loss": 0.499975,
+          "val_final_acc": 0.675,
+          "val_defect_recall": 0.545455
+        },
+        {
+          "epoch": 6,
+          "loss": 0.436819,
+          "val_final_acc": 0.8875,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 7,
+          "loss": 0.426573,
+          "val_final_acc": 0.8875,
+          "val_defect_recall": 0.363636
+        },
+        {
+          "epoch": 8,
+          "loss": 0.416932,
+          "val_final_acc": 0.8875,
+          "val_defect_recall": 0.363636
+        },
+        {
+          "epoch": 9,
+          "loss": 0.38739,
+          "val_final_acc": 0.9,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 10,
+          "loss": 0.400559,
+          "val_final_acc": 0.825,
+          "val_defect_recall": 0.454545
+        },
+        {
+          "epoch": 11,
+          "loss": 0.39963,
+          "val_final_acc": 0.8875,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 12,
+          "loss": 0.40595,
+          "val_final_acc": 0.725,
+          "val_defect_recall": 0.909091
+        },
+        {
+          "epoch": 13,
+          "loss": 0.387557,
+          "val_final_acc": 0.9,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 14,
+          "loss": 0.378907,
+          "val_final_acc": 0.8625,
+          "val_defect_recall": 0.545455
+        },
+        {
+          "epoch": 15,
+          "loss": 0.338853,
+          "val_final_acc": 0.9,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 16,
+          "loss": 0.339514,
+          "val_final_acc": 0.9125,
+          "val_defect_recall": 0.545455
+        },
+        {
+          "epoch": 17,
+          "loss": 0.311649,
+          "val_final_acc": 0.9,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 18,
+          "loss": 0.35189,
+          "val_final_acc": 0.575,
+          "val_defect_recall": 0.909091
+        },
+        {
+          "epoch": 19,
+          "loss": 0.277178,
+          "val_final_acc": 0.9125,
+          "val_defect_recall": 0.363636
+        },
+        {
+          "epoch": 20,
+          "loss": 0.295557,
+          "val_final_acc": 0.9,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 21,
+          "loss": 0.285656,
+          "val_final_acc": 0.9,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 22,
+          "loss": 0.247511,
+          "val_final_acc": 0.9,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 23,
+          "loss": 0.265886,
+          "val_final_acc": 0.9,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 24,
+          "loss": 0.20944,
+          "val_final_acc": 0.375,
+          "val_defect_recall": 0.909091
+        },
+        {
+          "epoch": 25,
+          "loss": 0.232692,
+          "val_final_acc": 0.8875,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 26,
+          "loss": 0.303155,
+          "val_final_acc": 0.425,
+          "val_defect_recall": 0.909091
+        },
+        {
+          "epoch": 27,
+          "loss": 0.256288,
+          "val_final_acc": 0.8375,
+          "val_defect_recall": 0.363636
+        },
+        {
+          "epoch": 28,
+          "loss": 0.205511,
+          "val_final_acc": 0.775,
+          "val_defect_recall": 0.454545
+        },
+        {
+          "epoch": 29,
+          "loss": 0.199868,
+          "val_final_acc": 0.9,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 30,
+          "loss": 0.192346,
+          "val_final_acc": 0.9125,
+          "val_defect_recall": 0.363636
+        },
+        {
+          "epoch": 31,
+          "loss": 0.198965,
+          "val_final_acc": 0.9,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 32,
+          "loss": 0.234521,
+          "val_final_acc": 0.875,
+          "val_defect_recall": 0.090909
+        },
+        {
+          "epoch": 33,
+          "loss": 0.184927,
+          "val_final_acc": 0.1625,
+          "val_defect_recall": 1.0
+        },
+        {
+          "epoch": 34,
+          "loss": 0.189986,
+          "val_final_acc": 0.8875,
+          "val_defect_recall": 0.363636
+        },
+        {
+          "epoch": 35,
+          "loss": 0.21189,
+          "val_final_acc": 0.875,
+          "val_defect_recall": 0.363636
+        },
+        {
+          "epoch": 36,
+          "loss": 0.191246,
+          "val_final_acc": 0.875,
+          "val_defect_recall": 0.090909
+        },
+        {
+          "epoch": 37,
+          "loss": 0.189797,
+          "val_final_acc": 0.875,
+          "val_defect_recall": 0.272727
+        },
+        {
+          "epoch": 38,
+          "loss": 0.220073,
+          "val_final_acc": 0.7125,
+          "val_defect_recall": 0.818182
+        },
+        {
+          "epoch": 39,
+          "loss": 0.171106,
+          "val_final_acc": 0.775,
+          "val_defect_recall": 0.636364
+        },
+        {
+          "epoch": 40,
+          "loss": 0.169805,
+          "val_final_acc": 0.9,
+          "val_defect_recall": 0.272727
+        }
+      ],
+      "best_score": 1.634091
+    }
+  },
+  "eval_final": {
+    "accuracy": 0.625,
+    "good_recall": 0.642857,
+    "defect_recall": 0.5
+  },
+  "definitions": {
+    "pass_precision": "precision among samples accepted as good",
+    "lost_final_reliable_rate": "fraction of all samples that final-only would reliably pass as good but early rejector rejects",
+    "early_reject_rate": "fraction of samples stopped before final execution",
+    "avg_cost": "normalized mean compute cost; final-only is 1.0"
+  },
+  "rows": [
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.99581,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.838384,
+        "average_precision_non_reliable": 0.805547
+      },
+      "early_reject_rate": 0.0875,
+      "final_execution_rate": 0.9125,
+      "avg_cost": 0.960625,
+      "speedup_vs_final_only": 1.040989,
+      "cost_reduction_vs_final_only": 0.039375,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.842701,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.838384,
+        "average_precision_non_reliable": 0.805547
+      },
+      "early_reject_rate": 0.0875,
+      "final_execution_rate": 0.9125,
+      "avg_cost": 0.960625,
+      "speedup_vs_final_only": 1.040989,
+      "cost_reduction_vs_final_only": 0.039375,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.865427,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.838384,
+        "average_precision_non_reliable": 0.805547
+      },
+      "early_reject_rate": 0.0875,
+      "final_execution_rate": 0.9125,
+      "avg_cost": 0.960625,
+      "speedup_vs_final_only": 1.040989,
+      "cost_reduction_vs_final_only": 0.039375,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.874696,
+        "early_reject_rate": 0.09375,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.792298,
+        "average_precision_non_reliable": 0.770418
+      },
+      "early_reject_rate": 0.1,
+      "final_execution_rate": 0.9,
+      "avg_cost": 0.955,
+      "speedup_vs_final_only": 1.04712,
+      "cost_reduction_vs_final_only": 0.045,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.875,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.943124,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.734217,
+        "average_precision_non_reliable": 0.742333
+      },
+      "early_reject_rate": 0.0375,
+      "final_execution_rate": 0.9625,
+      "avg_cost": 0.983125,
+      "speedup_vs_final_only": 1.017165,
+      "cost_reduction_vs_final_only": 0.016875,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.874696,
+        "early_reject_rate": 0.09375,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.792298,
+        "average_precision_non_reliable": 0.770418
+      },
+      "early_reject_rate": 0.1,
+      "final_execution_rate": 0.9,
+      "avg_cost": 0.955,
+      "speedup_vs_final_only": 1.04712,
+      "cost_reduction_vs_final_only": 0.045,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.875,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.928367,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.719066,
+        "average_precision_non_reliable": 0.73984
+      },
+      "early_reject_rate": 0.05,
+      "final_execution_rate": 0.95,
+      "avg_cost": 0.9775,
+      "speedup_vs_final_only": 1.023018,
+      "cost_reduction_vs_final_only": 0.0225,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.883786,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.668561,
+        "average_precision_non_reliable": 0.673547
+      },
+      "early_reject_rate": 0.125,
+      "final_execution_rate": 0.875,
+      "avg_cost": 0.9025,
+      "speedup_vs_final_only": 1.108033,
+      "cost_reduction_vs_final_only": 0.0975,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.7,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.782715,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.668561,
+        "average_precision_non_reliable": 0.673547
+      },
+      "early_reject_rate": 0.125,
+      "final_execution_rate": 0.875,
+      "avg_cost": 0.9025,
+      "speedup_vs_final_only": 1.108033,
+      "cost_reduction_vs_final_only": 0.0975,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.7,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.718785,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.668561,
+        "average_precision_non_reliable": 0.673547
+      },
+      "early_reject_rate": 0.125,
+      "final_execution_rate": 0.875,
+      "avg_cost": 0.9025,
+      "speedup_vs_final_only": 1.108033,
+      "cost_reduction_vs_final_only": 0.0975,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.7,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.782715,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.668561,
+        "average_precision_non_reliable": 0.673547
+      },
+      "early_reject_rate": 0.125,
+      "final_execution_rate": 0.875,
+      "avg_cost": 0.9025,
+      "speedup_vs_final_only": 1.108033,
+      "cost_reduction_vs_final_only": 0.0975,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.7,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.716137,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.668561,
+        "average_precision_non_reliable": 0.673547
+      },
+      "early_reject_rate": 0.125,
+      "final_execution_rate": 0.875,
+      "avg_cost": 0.9025,
+      "speedup_vs_final_only": 1.108033,
+      "cost_reduction_vs_final_only": 0.0975,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.7,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.993644,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.838384,
+        "average_precision_non_reliable": 0.805547
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.795704,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.838384,
+        "average_precision_non_reliable": 0.805547
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.824685,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.719066,
+        "average_precision_non_reliable": 0.698721
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.810231,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.838384,
+        "average_precision_non_reliable": 0.805547
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.871133,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.792298,
+        "average_precision_non_reliable": 0.770418
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.881602,
+        "early_reject_rate": 0.15625,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.8
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.734217,
+        "average_precision_non_reliable": 0.742333
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.871133,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.792298,
+        "average_precision_non_reliable": 0.770418
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.859087,
+        "early_reject_rate": 0.15625,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.8
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.719066,
+        "average_precision_non_reliable": 0.73984
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.879985,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.668561,
+        "average_precision_non_reliable": 0.673547
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.05,
+      "reject_precision_non_reliable": 0.733333,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.716702,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.668561,
+        "average_precision_non_reliable": 0.673547
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.05,
+      "reject_precision_non_reliable": 0.733333,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.649832,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.5
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.517992,
+        "average_precision_non_reliable": 0.466369
+      },
+      "early_reject_rate": 0.2625,
+      "final_execution_rate": 0.7375,
+      "avg_cost": 0.79525,
+      "speedup_vs_final_only": 1.257466,
+      "cost_reduction_vs_final_only": 0.20475,
+      "lost_final_reliable_rate": 0.1875,
+      "reject_precision_non_reliable": 0.285714,
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.812072,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.5
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.497159,
+        "average_precision_non_reliable": 0.438948
+      },
+      "early_reject_rate": 0.2625,
+      "final_execution_rate": 0.7375,
+      "avg_cost": 0.79525,
+      "speedup_vs_final_only": 1.257466,
+      "cost_reduction_vs_final_only": 0.20475,
+      "lost_final_reliable_rate": 0.1875,
+      "reject_precision_non_reliable": 0.285714,
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.658302,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.668561,
+        "average_precision_non_reliable": 0.673547
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.05,
+      "reject_precision_non_reliable": 0.733333,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.716702,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.668561,
+        "average_precision_non_reliable": 0.673547
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.05,
+      "reject_precision_non_reliable": 0.733333,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.649832,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.5
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.517992,
+        "average_precision_non_reliable": 0.466369
+      },
+      "early_reject_rate": 0.2625,
+      "final_execution_rate": 0.7375,
+      "avg_cost": 0.79525,
+      "speedup_vs_final_only": 1.257466,
+      "cost_reduction_vs_final_only": 0.20475,
+      "lost_final_reliable_rate": 0.1875,
+      "reject_precision_non_reliable": 0.285714,
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.812072,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.5
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.497159,
+        "average_precision_non_reliable": 0.438948
+      },
+      "early_reject_rate": 0.2625,
+      "final_execution_rate": 0.7375,
+      "avg_cost": 0.79525,
+      "speedup_vs_final_only": 1.257466,
+      "cost_reduction_vs_final_only": 0.20475,
+      "lost_final_reliable_rate": 0.1875,
+      "reject_precision_non_reliable": 0.285714,
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.658199,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.668561,
+        "average_precision_non_reliable": 0.673547
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.05,
+      "reject_precision_non_reliable": 0.733333,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.991796,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.838384,
+        "average_precision_non_reliable": 0.805547
+      },
+      "early_reject_rate": 0.1375,
+      "final_execution_rate": 0.8625,
+      "avg_cost": 0.938125,
+      "speedup_vs_final_only": 1.065956,
+      "cost_reduction_vs_final_only": 0.061875,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.909091,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.749248,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.838384,
+        "average_precision_non_reliable": 0.805547
+      },
+      "early_reject_rate": 0.1375,
+      "final_execution_rate": 0.8625,
+      "avg_cost": 0.938125,
+      "speedup_vs_final_only": 1.065956,
+      "cost_reduction_vs_final_only": 0.061875,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.909091,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.824685,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.719066,
+        "average_precision_non_reliable": 0.698721
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.751885,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.838384,
+        "average_precision_non_reliable": 0.805547
+      },
+      "early_reject_rate": 0.1375,
+      "final_execution_rate": 0.8625,
+      "avg_cost": 0.938125,
+      "speedup_vs_final_only": 1.065956,
+      "cost_reduction_vs_final_only": 0.061875,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.909091,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.794419,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.792298,
+        "average_precision_non_reliable": 0.770418
+      },
+      "early_reject_rate": 0.15,
+      "final_execution_rate": 0.85,
+      "avg_cost": 0.9325,
+      "speedup_vs_final_only": 1.072386,
+      "cost_reduction_vs_final_only": 0.0675,
+      "lost_final_reliable_rate": 0.025,
+      "reject_precision_non_reliable": 0.833333,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.862068,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.734217,
+        "average_precision_non_reliable": 0.742333
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.794419,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.792298,
+        "average_precision_non_reliable": 0.770418
+      },
+      "early_reject_rate": 0.15,
+      "final_execution_rate": 0.85,
+      "avg_cost": 0.9325,
+      "speedup_vs_final_only": 1.072386,
+      "cost_reduction_vs_final_only": 0.0675,
+      "lost_final_reliable_rate": 0.025,
+      "reject_precision_non_reliable": 0.833333,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.838445,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.719066,
+        "average_precision_non_reliable": 0.73984
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.99581,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.0875,
+      "final_execution_rate": 0.9125,
+      "avg_cost": 0.960625,
+      "speedup_vs_final_only": 1.040989,
+      "cost_reduction_vs_final_only": 0.039375,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.752955,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.0875,
+      "final_execution_rate": 0.9125,
+      "avg_cost": 0.960625,
+      "speedup_vs_final_only": 1.040989,
+      "cost_reduction_vs_final_only": 0.039375,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.891026,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.0875,
+      "final_execution_rate": 0.9125,
+      "avg_cost": 0.960625,
+      "speedup_vs_final_only": 1.040989,
+      "cost_reduction_vs_final_only": 0.039375,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.845595,
+        "early_reject_rate": 0.0625,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.1,
+      "final_execution_rate": 0.9,
+      "avg_cost": 0.955,
+      "speedup_vs_final_only": 1.04712,
+      "cost_reduction_vs_final_only": 0.045,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.875,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.975164,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.682927,
+        "average_precision_non_reliable": 0.738067
+      },
+      "early_reject_rate": 0.05,
+      "final_execution_rate": 0.95,
+      "avg_cost": 0.9775,
+      "speedup_vs_final_only": 1.023018,
+      "cost_reduction_vs_final_only": 0.0225,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.845595,
+        "early_reject_rate": 0.0625,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.1,
+      "final_execution_rate": 0.9,
+      "avg_cost": 0.955,
+      "speedup_vs_final_only": 1.04712,
+      "cost_reduction_vs_final_only": 0.045,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.875,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.969567,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.677298,
+        "average_precision_non_reliable": 0.733288
+      },
+      "early_reject_rate": 0.05,
+      "final_execution_rate": 0.95,
+      "avg_cost": 0.9775,
+      "speedup_vs_final_only": 1.023018,
+      "cost_reduction_vs_final_only": 0.0225,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.880553,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.723224,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.734796,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.723224,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.720124,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.993644,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.714239,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.767753,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.769231,
+        "average_precision_non_reliable": 0.724268
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.857873,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.745779,
+        "average_precision_non_reliable": 0.722474
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.844838,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.81188,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.937676,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.682927,
+        "average_precision_non_reliable": 0.738067
+      },
+      "early_reject_rate": 0.075,
+      "final_execution_rate": 0.925,
+      "avg_cost": 0.96625,
+      "speedup_vs_final_only": 1.034929,
+      "cost_reduction_vs_final_only": 0.03375,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.81188,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.927312,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.677298,
+        "average_precision_non_reliable": 0.733288
+      },
+      "early_reject_rate": 0.0875,
+      "final_execution_rate": 0.9125,
+      "avg_cost": 0.960625,
+      "speedup_vs_final_only": 1.040989,
+      "cost_reduction_vs_final_only": 0.039375,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.857143,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.879595,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.706909,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.720748,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.706909,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.706395,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.991796,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.1375,
+      "final_execution_rate": 0.8625,
+      "avg_cost": 0.938125,
+      "speedup_vs_final_only": 1.065956,
+      "cost_reduction_vs_final_only": 0.061875,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.909091,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.680319,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.1375,
+      "final_execution_rate": 0.8625,
+      "avg_cost": 0.938125,
+      "speedup_vs_final_only": 1.065956,
+      "cost_reduction_vs_final_only": 0.061875,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.909091,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.767753,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.769231,
+        "average_precision_non_reliable": 0.724268
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.689876,
+        "early_reject_rate": 0.34375,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.727273
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.745779,
+        "average_precision_non_reliable": 0.722474
+      },
+      "early_reject_rate": 0.2125,
+      "final_execution_rate": 0.7875,
+      "avg_cost": 0.904375,
+      "speedup_vs_final_only": 1.105736,
+      "cost_reduction_vs_final_only": 0.095625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.823529,
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.795077,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.1375,
+      "final_execution_rate": 0.8625,
+      "avg_cost": 0.938125,
+      "speedup_vs_final_only": 1.065956,
+      "cost_reduction_vs_final_only": 0.061875,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.909091,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.752854,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.15,
+      "final_execution_rate": 0.85,
+      "avg_cost": 0.9325,
+      "speedup_vs_final_only": 1.072386,
+      "cost_reduction_vs_final_only": 0.0675,
+      "lost_final_reliable_rate": 0.025,
+      "reject_precision_non_reliable": 0.833333,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth3",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.835119,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.611007,
+        "average_precision_non_reliable": 0.610745
+      },
+      "early_reject_rate": 0.125,
+      "final_execution_rate": 0.875,
+      "avg_cost": 0.94375,
+      "speedup_vs_final_only": 1.059603,
+      "cost_reduction_vs_final_only": 0.05625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.7,
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.916919,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.682927,
+        "average_precision_non_reliable": 0.738067
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.752854,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.15,
+      "final_execution_rate": 0.85,
+      "avg_cost": 0.9325,
+      "speedup_vs_final_only": 1.072386,
+      "cost_reduction_vs_final_only": 0.0675,
+      "lost_final_reliable_rate": 0.025,
+      "reject_precision_non_reliable": 0.833333,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.835119,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.611007,
+        "average_precision_non_reliable": 0.610745
+      },
+      "early_reject_rate": 0.125,
+      "final_execution_rate": 0.875,
+      "avg_cost": 0.94375,
+      "speedup_vs_final_only": 1.059603,
+      "cost_reduction_vs_final_only": 0.05625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.7,
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.907836,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.677298,
+        "average_precision_non_reliable": 0.733288
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.99581,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.0875,
+      "final_execution_rate": 0.9125,
+      "avg_cost": 0.960625,
+      "speedup_vs_final_only": 1.040989,
+      "cost_reduction_vs_final_only": 0.039375,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.752955,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.0875,
+      "final_execution_rate": 0.9125,
+      "avg_cost": 0.960625,
+      "speedup_vs_final_only": 1.040989,
+      "cost_reduction_vs_final_only": 0.039375,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.891026,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.0875,
+      "final_execution_rate": 0.9125,
+      "avg_cost": 0.960625,
+      "speedup_vs_final_only": 1.040989,
+      "cost_reduction_vs_final_only": 0.039375,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.845595,
+        "early_reject_rate": 0.0625,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.1,
+      "final_execution_rate": 0.9,
+      "avg_cost": 0.955,
+      "speedup_vs_final_only": 1.04712,
+      "cost_reduction_vs_final_only": 0.045,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.875,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.975164,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.682927,
+        "average_precision_non_reliable": 0.738067
+      },
+      "early_reject_rate": 0.05,
+      "final_execution_rate": 0.95,
+      "avg_cost": 0.9775,
+      "speedup_vs_final_only": 1.023018,
+      "cost_reduction_vs_final_only": 0.0225,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.845595,
+        "early_reject_rate": 0.0625,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.1,
+      "final_execution_rate": 0.9,
+      "avg_cost": 0.955,
+      "speedup_vs_final_only": 1.04712,
+      "cost_reduction_vs_final_only": 0.045,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.875,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.969567,
+        "early_reject_rate": 0.03125,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.677298,
+        "average_precision_non_reliable": 0.733288
+      },
+      "early_reject_rate": 0.05,
+      "final_execution_rate": 0.95,
+      "avg_cost": 0.9775,
+      "speedup_vs_final_only": 1.023018,
+      "cost_reduction_vs_final_only": 0.0225,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.880553,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.723224,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.734796,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.723224,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.720124,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.993644,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.714239,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.767753,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.769231,
+        "average_precision_non_reliable": 0.724268
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.857873,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.745779,
+        "average_precision_non_reliable": 0.722474
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.844838,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.81188,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.937676,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.682927,
+        "average_precision_non_reliable": 0.738067
+      },
+      "early_reject_rate": 0.075,
+      "final_execution_rate": 0.925,
+      "avg_cost": 0.96625,
+      "speedup_vs_final_only": 1.034929,
+      "cost_reduction_vs_final_only": 0.03375,
+      "lost_final_reliable_rate": 0.0,
+      "reject_precision_non_reliable": 1.0,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.81188,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.927312,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.677298,
+        "average_precision_non_reliable": 0.733288
+      },
+      "early_reject_rate": 0.0875,
+      "final_execution_rate": 0.9125,
+      "avg_cost": 0.960625,
+      "speedup_vs_final_only": 1.040989,
+      "cost_reduction_vs_final_only": 0.039375,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.857143,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.879595,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.706909,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.720748,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.706909,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.706395,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.991796,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.1375,
+      "final_execution_rate": 0.8625,
+      "avg_cost": 0.938125,
+      "speedup_vs_final_only": 1.065956,
+      "cost_reduction_vs_final_only": 0.061875,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.909091,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.680319,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.1375,
+      "final_execution_rate": 0.8625,
+      "avg_cost": 0.938125,
+      "speedup_vs_final_only": 1.065956,
+      "cost_reduction_vs_final_only": 0.061875,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.909091,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.767753,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.769231,
+        "average_precision_non_reliable": 0.724268
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "tree_depth3",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.689876,
+        "early_reject_rate": 0.34375,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.727273
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.745779,
+        "average_precision_non_reliable": 0.722474
+      },
+      "early_reject_rate": 0.2125,
+      "final_execution_rate": 0.7875,
+      "avg_cost": 0.904375,
+      "speedup_vs_final_only": 1.105736,
+      "cost_reduction_vs_final_only": 0.095625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.823529,
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "scalar",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.795077,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.848655,
+        "average_precision_non_reliable": 0.834516
+      },
+      "early_reject_rate": 0.1375,
+      "final_execution_rate": 0.8625,
+      "avg_cost": 0.938125,
+      "speedup_vs_final_only": 1.065956,
+      "cost_reduction_vs_final_only": 0.061875,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.909091,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.752854,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.15,
+      "final_execution_rate": 0.85,
+      "avg_cost": 0.9325,
+      "speedup_vs_final_only": 1.072386,
+      "cost_reduction_vs_final_only": 0.0675,
+      "lost_final_reliable_rate": 0.025,
+      "reject_precision_non_reliable": 0.833333,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "tree_depth3",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.835119,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.611007,
+        "average_precision_non_reliable": 0.610745
+      },
+      "early_reject_rate": 0.125,
+      "final_execution_rate": 0.875,
+      "avg_cost": 0.94375,
+      "speedup_vs_final_only": 1.059603,
+      "cost_reduction_vs_final_only": 0.05625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.7,
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.916919,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.682927,
+        "average_precision_non_reliable": 0.738067
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "tiny nonlinear head"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.752854,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.15,
+      "final_execution_rate": 0.85,
+      "avg_cost": 0.9325,
+      "speedup_vs_final_only": 1.072386,
+      "cost_reduction_vs_final_only": 0.0675,
+      "lost_final_reliable_rate": 0.025,
+      "reject_precision_non_reliable": 0.833333,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": false,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth2",
+      "reason": "no threshold satisfies max_lost",
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "tree_depth3",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.835119,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.611007,
+        "average_precision_non_reliable": 0.610745
+      },
+      "early_reject_rate": 0.125,
+      "final_execution_rate": 0.875,
+      "avg_cost": 0.94375,
+      "speedup_vs_final_only": 1.059603,
+      "cost_reduction_vs_final_only": 0.05625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.7,
+      "fpga_note": "small comparator tree"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 1,
+      "feature_set": "class_aware",
+      "predictor": "mlp_8",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.907836,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.677298,
+        "average_precision_non_reliable": 0.733288
+      },
+      "early_reject_rate": 0.1125,
+      "final_execution_rate": 0.8875,
+      "avg_cost": 0.949375,
+      "speedup_vs_final_only": 1.053325,
+      "cost_reduction_vs_final_only": 0.050625,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.888889,
+      "fpga_note": "tiny nonlinear head"
+    }
+  ],
+  "best_rows_strict_eval": [
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.874696,
+        "early_reject_rate": 0.09375,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.792298,
+        "average_precision_non_reliable": 0.770418
+      },
+      "early_reject_rate": 0.1,
+      "final_execution_rate": 0.9,
+      "avg_cost": 0.955,
+      "speedup_vs_final_only": 1.04712,
+      "cost_reduction_vs_final_only": 0.045,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.875,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.883786,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.668561,
+        "average_precision_non_reliable": 0.673547
+      },
+      "early_reject_rate": 0.125,
+      "final_execution_rate": 0.875,
+      "avg_cost": 0.9025,
+      "speedup_vs_final_only": 1.108033,
+      "cost_reduction_vs_final_only": 0.0975,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.7,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.879985,
+        "early_reject_rate": 0.21875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.571429
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.668561,
+        "average_precision_non_reliable": 0.673547
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.05,
+      "reject_precision_non_reliable": 0.733333,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.845595,
+        "early_reject_rate": 0.0625,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.1,
+      "final_execution_rate": 0.9,
+      "avg_cost": 0.955,
+      "speedup_vs_final_only": 1.04712,
+      "cost_reduction_vs_final_only": 0.045,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.875,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.880553,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.879595,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.845595,
+        "early_reject_rate": 0.0625,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.1,
+      "final_execution_rate": 0.9,
+      "avg_cost": 0.955,
+      "speedup_vs_final_only": 1.04712,
+      "cost_reduction_vs_final_only": 0.045,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.875,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.880553,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.879595,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "single comparator on good probability"
+    }
+  ],
+  "best_rows_validation_selected": [
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.874696,
+        "early_reject_rate": 0.09375,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.792298,
+        "average_precision_non_reliable": 0.770418
+      },
+      "early_reject_rate": 0.1,
+      "final_execution_rate": 0.9,
+      "avg_cost": 0.955,
+      "speedup_vs_final_only": 1.04712,
+      "cost_reduction_vs_final_only": 0.045,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.875,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.883786,
+        "early_reject_rate": 0.125,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.75
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.668561,
+        "average_precision_non_reliable": 0.673547
+      },
+      "early_reject_rate": 0.125,
+      "final_execution_rate": 0.875,
+      "avg_cost": 0.9025,
+      "speedup_vs_final_only": 1.108033,
+      "cost_reduction_vs_final_only": 0.0975,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.7,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.95,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "scalar",
+      "predictor": "tree_depth2",
+      "validation_final_threshold": {
+        "threshold": 0.507982,
+        "pass_rate": 0.6125,
+        "pass_precision": 0.979592
+      },
+      "selected_threshold": {
+        "threshold": 0.649832,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.5
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.55,
+        "auroc_non_reliable": 0.517992,
+        "average_precision_non_reliable": 0.466369
+      },
+      "early_reject_rate": 0.2625,
+      "final_execution_rate": 0.7375,
+      "avg_cost": 0.79525,
+      "speedup_vs_final_only": 1.257466,
+      "cost_reduction_vs_final_only": 0.20475,
+      "lost_final_reliable_rate": 0.1875,
+      "reject_precision_non_reliable": 0.285714,
+      "fpga_note": "few comparators / LUT"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.845595,
+        "early_reject_rate": 0.0625,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.1,
+      "final_execution_rate": 0.9,
+      "avg_cost": 0.955,
+      "speedup_vs_final_only": 1.04712,
+      "cost_reduction_vs_final_only": 0.045,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.875,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.880553,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.98,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.879595,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.02,
+      "exit_idx": 1,
+      "feature_set": "trace",
+      "predictor": "logistic_l2",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.845595,
+        "early_reject_rate": 0.0625,
+        "lost_final_reliable_rate": 0.0,
+        "reject_precision_non_reliable": 1.0
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.737961,
+        "average_precision_non_reliable": 0.757149
+      },
+      "early_reject_rate": 0.1,
+      "final_execution_rate": 0.9,
+      "avg_cost": 0.955,
+      "speedup_vs_final_only": 1.04712,
+      "cost_reduction_vs_final_only": 0.045,
+      "lost_final_reliable_rate": 0.0125,
+      "reject_precision_non_reliable": 0.875,
+      "fpga_note": "fixed-point linear score"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.05,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.880553,
+        "early_reject_rate": 0.1875,
+        "lost_final_reliable_rate": 0.03125,
+        "reject_precision_non_reliable": 0.833333
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "single comparator on good probability"
+    },
+    {
+      "valid": true,
+      "target_pass_precision": 0.99,
+      "max_lost_final_reliable_rate": 0.1,
+      "exit_idx": 0,
+      "feature_set": "prob_good_only",
+      "predictor": "raw_prob_good_threshold",
+      "validation_final_threshold": {
+        "threshold": 0.592872,
+        "pass_rate": 0.5125,
+        "pass_precision": 1.0
+      },
+      "selected_threshold": {
+        "threshold": 0.879595,
+        "early_reject_rate": 0.25,
+        "lost_final_reliable_rate": 0.09375,
+        "reject_precision_non_reliable": 0.625
+      },
+      "score_quality_eval": {
+        "final_reliable_good_rate": 0.5125,
+        "auroc_non_reliable": 0.666041,
+        "average_precision_non_reliable": 0.703335
+      },
+      "early_reject_rate": 0.1875,
+      "final_execution_rate": 0.8125,
+      "avg_cost": 0.85375,
+      "speedup_vs_final_only": 1.171303,
+      "cost_reduction_vs_final_only": 0.14625,
+      "lost_final_reliable_rate": 0.0375,
+      "reject_precision_non_reliable": 0.8,
+      "fpga_note": "single comparator on good probability"
+    }
+  ]
+}
