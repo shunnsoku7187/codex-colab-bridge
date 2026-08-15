@@ -1,6 +1,6 @@
 {
   "id": "kolektor_strong_final_split_recheck_004",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 7200,
   "result_file": "results/kolektor_strong_final_split_recheck_004.json",
   "note": "Different item split for reproducibility check. Same strong final candidates as the first run, seed 456.",
-  "created_at": "2026-08-15T00:00:00+09:00"
+  "created_at": "2026-08-15T00:00:00+09:00",
+  "updated_at": "2026-08-15T12:05:23.325929+00:00",
+  "started_at": "2026-08-15T12:05:23.325905+00:00"
 }
