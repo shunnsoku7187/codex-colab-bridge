@@ -469,4 +469,243 @@ mobilenet_v3_small epoch 17/45:  47%|████▋     | 7/15 [00:05<00:05,  1
 mobilenet_v3_small epoch 17/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.83it/s]
 mobilenet_v3_small epoch 17/45:  60%|██████    | 9/15 [00:06<00:04,  1.42it/s]
 mobilenet_v3_small epoch 17/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.79it/s]
-mobilenet_v3_small epoch 17/45:  73%|███████▎  | 1
+mobilenet_v3_small epoch 17/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.34it/s]
+mobilenet_v3_small epoch 17/45:  80%|████████  | 12/15 [00:07<00:01,  1.78it/s]
+mobilenet_v3_small epoch 17/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.41it/s]
+mobilenet_v3_small epoch 17/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.57it/s]
+mobilenet_v3_small epoch 17/45: 100%|██████████| 15/15 [00:09<00:00,  1.69it/s]
+                                                                               
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.24s/it]
+eval:  40%|████      | 2/5 [00:01<00:01,  1.66it/s]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.31it/s]
+eval:  80%|████████  | 4/5 [00:02<00:00,  1.85it/s]
+eval: 100%|██████████| 5/5 [00:03<00:00,  1.95it/s]
+                                                   
+{"arch": "mobilenet_v3_small", "epoch": 17, "loss": 0.045964, "threshold": 0.5, "accuracy": 0.8, "good_recall": 0.927536, "defect_recall": 0.0, "false_pass_rate_all": 0.1375, "false_pass_rate_defect": 1.0, "good_loss_rate_all": 0.0625, "good_loss_rate_good": 0.072464, "auroc_defect": 0.400527, "average_precision_defect": 0.118281}
+
+mobilenet_v3_small epoch 18/45:   0%|          | 0/15 [00:00<?, ?it/s]
+mobilenet_v3_small epoch 18/45:   7%|▋         | 1/15 [00:01<00:17,  1.24s/it]
+mobilenet_v3_small epoch 18/45:  13%|█▎        | 2/15 [00:01<00:08,  1.52it/s]
+mobilenet_v3_small epoch 18/45:  20%|██        | 3/15 [00:02<00:10,  1.12it/s]
+mobilenet_v3_small epoch 18/45:  27%|██▋       | 4/15 [00:02<00:07,  1.50it/s]
+mobilenet_v3_small epoch 18/45:  33%|███▎      | 5/15 [00:03<00:07,  1.36it/s]
+mobilenet_v3_small epoch 18/45:  40%|████      | 6/15 [00:04<00:05,  1.60it/s]
+mobilenet_v3_small epoch 18/45:  47%|████▋     | 7/15 [00:04<00:05,  1.51it/s]
+mobilenet_v3_small epoch 18/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.62it/s]
+mobilenet_v3_small epoch 18/45:  60%|██████    | 9/15 [00:06<00:04,  1.43it/s]
+mobilenet_v3_small epoch 18/45:  67%|██████▋   | 10/15 [00:06<00:03,  1.65it/s]
+mobilenet_v3_small epoch 18/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.48it/s]
+mobilenet_v3_small epoch 18/45:  80%|████████  | 12/15 [00:07<00:01,  1.75it/s]
+mobilenet_v3_small epoch 18/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.57it/s]
+mobilenet_v3_small epoch 18/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.81it/s]
+mobilenet_v3_small epoch 18/45: 100%|██████████| 15/15 [00:09<00:00,  2.04it/s]
+                                                                               
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.17s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.37it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  1.94it/s]
+                                                   
+{"arch": "mobilenet_v3_small", "epoch": 18, "loss": 0.042617, "threshold": 0.5, "accuracy": 0.8, "good_recall": 0.927536, "defect_recall": 0.0, "false_pass_rate_all": 0.1375, "false_pass_rate_defect": 1.0, "good_loss_rate_all": 0.0625, "good_loss_rate_good": 0.072464, "auroc_defect": 0.401845, "average_precision_defect": 0.117493}
+
+mobilenet_v3_small epoch 19/45:   0%|          | 0/15 [00:00<?, ?it/s]
+mobilenet_v3_small epoch 19/45:   7%|▋         | 1/15 [00:01<00:18,  1.33s/it]
+mobilenet_v3_small epoch 19/45:  13%|█▎        | 2/15 [00:01<00:10,  1.27it/s]
+mobilenet_v3_small epoch 19/45:  20%|██        | 3/15 [00:02<00:11,  1.06it/s]
+mobilenet_v3_small epoch 19/45:  27%|██▋       | 4/15 [00:03<00:08,  1.33it/s]
+mobilenet_v3_small epoch 19/45:  33%|███▎      | 5/15 [00:04<00:08,  1.25it/s]
+mobilenet_v3_small epoch 19/45:  40%|████      | 6/15 [00:04<00:05,  1.50it/s]
+mobilenet_v3_small epoch 19/45:  47%|████▋     | 7/15 [00:05<00:05,  1.34it/s]
+mobilenet_v3_small epoch 19/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.66it/s]
+mobilenet_v3_small epoch 19/45:  60%|██████    | 9/15 [00:06<00:04,  1.43it/s]
+mobilenet_v3_small epoch 19/45:  67%|██████▋   | 10/15 [00:07<00:03,  1.64it/s]
+mobilenet_v3_small epoch 19/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.50it/s]
+mobilenet_v3_small epoch 19/45:  80%|████████  | 12/15 [00:08<00:01,  1.76it/s]
+mobilenet_v3_small epoch 19/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.61it/s]
+mobilenet_v3_small epoch 19/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.91it/s]
+mobilenet_v3_small epoch 19/45: 100%|██████████| 15/15 [00:09<00:00,  2.02it/s]
+                                                                               
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:00<00:03,  1.06it/s]
+eval:  40%|████      | 2/5 [00:01<00:01,  1.84it/s]
+eval:  60%|██████    | 3/5 [00:01<00:01,  1.62it/s]
+eval:  80%|████████  | 4/5 [00:02<00:00,  2.01it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.25it/s]
+                                                   
+{"arch": "mobilenet_v3_small", "epoch": 19, "loss": 0.045823, "threshold": 0.5, "accuracy": 0.8, "good_recall": 0.927536, "defect_recall": 0.0, "false_pass_rate_all": 0.1375, "false_pass_rate_defect": 1.0, "good_loss_rate_all": 0.0625, "good_loss_rate_good": 0.072464, "auroc_defect": 0.42029, "average_precision_defect": 0.12065}
+
+mobilenet_v3_small epoch 20/45:   0%|          | 0/15 [00:00<?, ?it/s]
+mobilenet_v3_small epoch 20/45:   7%|▋         | 1/15 [00:01<00:22,  1.61s/it]
+mobilenet_v3_small epoch 20/45:  13%|█▎        | 2/15 [00:01<00:10,  1.30it/s]
+mobilenet_v3_small epoch 20/45:  20%|██        | 3/15 [00:03<00:11,  1.02it/s]
+mobilenet_v3_small epoch 20/45:  27%|██▋       | 4/15 [00:03<00:07,  1.50it/s]
+mobilenet_v3_small epoch 20/45:  33%|███▎      | 5/15 [00:04<00:08,  1.24it/s]
+mobilenet_v3_small epoch 20/45:  40%|████      | 6/15 [00:04<00:05,  1.75it/s]
+mobilenet_v3_small epoch 20/45:  47%|████▋     | 7/15 [00:05<00:06,  1.25it/s]
+mobilenet_v3_small epoch 20/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.66it/s]
+mobilenet_v3_small epoch 20/45:  60%|██████    | 9/15 [00:06<00:04,  1.37it/s]
+mobilenet_v3_small epoch 20/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.81it/s]
+mobilenet_v3_small epoch 20/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.45it/s]
+mobilenet_v3_small epoch 20/45:  80%|████████  | 12/15 [00:08<00:01,  1.88it/s]
+mobilenet_v3_small epoch 20/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.48it/s]
+mobilenet_v3_small epoch 20/45: 100%|██████████| 15/15 [00:09<00:00,  1.86it/s]
+                                                                               
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.23s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.47it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.08it/s]
+                                                   
+{"arch": "mobilenet_v3_small", "epoch": 20, "loss": 0.050003, "threshold": 0.5, "accuracy": 0.7875, "good_recall": 0.913043, "defect_recall": 0.0, "false_pass_rate_all": 0.1375, "false_pass_rate_defect": 1.0, "good_loss_rate_all": 0.075, "good_loss_rate_good": 0.086957, "auroc_defect": 0.403162, "average_precision_defect": 0.117588}
+
+mobilenet_v3_small epoch 21/45:   0%|          | 0/15 [00:00<?, ?it/s]
+mobilenet_v3_small epoch 21/45:   7%|▋         | 1/15 [00:01<00:22,  1.60s/it]
+mobilenet_v3_small epoch 21/45:  13%|█▎        | 2/15 [00:01<00:09,  1.31it/s]
+mobilenet_v3_small epoch 21/45:  20%|██        | 3/15 [00:03<00:12,  1.02s/it]
+mobilenet_v3_small epoch 21/45:  27%|██▋       | 4/15 [00:03<00:07,  1.49it/s]
+mobilenet_v3_small epoch 21/45:  33%|███▎      | 5/15 [00:04<00:07,  1.31it/s]
+mobilenet_v3_small epoch 21/45:  40%|████      | 6/15 [00:04<00:05,  1.74it/s]
+mobilenet_v3_small epoch 21/45:  47%|████▋     | 7/15 [00:05<00:05,  1.42it/s]
+mobilenet_v3_small epoch 21/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.86it/s]
+mobilenet_v3_small epoch 21/45:  60%|██████    | 9/15 [00:06<00:04,  1.43it/s]
+mobilenet_v3_small epoch 21/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.87it/s]
+mobilenet_v3_small epoch 21/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.49it/s]
+mobilenet_v3_small epoch 21/45:  80%|████████  | 12/15 [00:07<00:01,  1.89it/s]
+mobilenet_v3_small epoch 21/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.48it/s]
+mobilenet_v3_small epoch 21/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.93it/s]
+mobilenet_v3_small epoch 21/45: 100%|██████████| 15/15 [00:09<00:00,  1.90it/s]
+                                                                               
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.18s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.49it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.04it/s]
+                                                   
+{"arch": "mobilenet_v3_small", "epoch": 21, "loss": 0.043302, "threshold": 0.5, "accuracy": 0.775, "good_recall": 0.898551, "defect_recall": 0.0, "false_pass_rate_all": 0.1375, "false_pass_rate_defect": 1.0, "good_loss_rate_all": 0.0875, "good_loss_rate_good": 0.101449, "auroc_defect": 0.40448, "average_precision_defect": 0.117868}
+
+mobilenet_v3_small epoch 22/45:   0%|          | 0/15 [00:00<?, ?it/s]
+mobilenet_v3_small epoch 22/45:   7%|▋         | 1/15 [00:01<00:22,  1.64s/it]
+mobilenet_v3_small epoch 22/45:  13%|█▎        | 2/15 [00:01<00:09,  1.35it/s]
+mobilenet_v3_small epoch 22/45:  20%|██        | 3/15 [00:03<00:12,  1.03s/it]
+mobilenet_v3_small epoch 22/45:  27%|██▋       | 4/15 [00:03<00:07,  1.48it/s]
+mobilenet_v3_small epoch 22/45:  33%|███▎      | 5/15 [00:04<00:08,  1.18it/s]
+mobilenet_v3_small epoch 22/45:  40%|████      | 6/15 [00:04<00:05,  1.62it/s]
+mobilenet_v3_small epoch 22/45:  47%|████▋     | 7/15 [00:05<00:06,  1.28it/s]
+mobilenet_v3_small epoch 22/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.66it/s]
+mobilenet_v3_small epoch 22/45:  60%|██████    | 9/15 [00:07<00:04,  1.30it/s]
+mobilenet_v3_small epoch 22/45:  67%|██████▋   | 10/15 [00:07<00:02,  1.71it/s]
+mobilenet_v3_small epoch 22/45:  73%|███████▎  | 11/15 [00:08<00:02,  1.39it/s]
+mobilenet_v3_small epoch 22/45:  80%|████████  | 12/15 [00:08<00:01,  1.73it/s]
+mobilenet_v3_small epoch 22/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.40it/s]
+mobilenet_v3_small epoch 22/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.86it/s]
+mobilenet_v3_small epoch 22/45: 100%|██████████| 15/15 [00:10<00:00,  1.78it/s]
+                                                                               
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.16s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.59it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.34it/s]
+                                                   
+{"arch": "mobilenet_v3_small", "epoch": 22, "loss": 0.044937, "threshold": 0.5, "accuracy": 0.7625, "good_recall": 0.884058, "defect_recall": 0.0, "false_pass_rate_all": 0.1375, "false_pass_rate_defect": 1.0, "good_loss_rate_all": 0.1, "good_loss_rate_good": 0.115942, "auroc_defect": 0.400527, "average_precision_defect": 0.117522}
+
+mobilenet_v3_small epoch 23/45:   0%|          | 0/15 [00:00<?, ?it/s]
+mobilenet_v3_small epoch 23/45:   7%|▋         | 1/15 [00:01<00:22,  1.59s/it]
+mobilenet_v3_small epoch 23/45:  13%|█▎        | 2/15 [00:01<00:09,  1.32it/s]
+mobilenet_v3_small epoch 23/45:  20%|██        | 3/15 [00:02<00:11,  1.04it/s]
+mobilenet_v3_small epoch 23/45:  27%|██▋       | 4/15 [00:03<00:07,  1.54it/s]
+mobilenet_v3_small epoch 23/45:  33%|███▎      | 5/15 [00:04<00:07,  1.28it/s]
+mobilenet_v3_small epoch 23/45:  40%|████      | 6/15 [00:04<00:05,  1.77it/s]
+mobilenet_v3_small epoch 23/45:  47%|████▋     | 7/15 [00:05<00:05,  1.40it/s]
+mobilenet_v3_small epoch 23/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.85it/s]
+mobilenet_v3_small epoch 23/45:  60%|██████    | 9/15 [00:06<00:04,  1.36it/s]
+mobilenet_v3_small epoch 23/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.74it/s]
+mobilenet_v3_small epoch 23/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.46it/s]
+mobilenet_v3_small epoch 23/45:  80%|████████  | 12/15 [00:08<00:01,  1.74it/s]
+mobilenet_v3_small epoch 23/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.41it/s]
+mobilenet_v3_small epoch 23/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.70it/s]
+mobilenet_v3_small epoch 23/45: 100%|██████████| 15/15 [00:10<00:00,  1.67it/s]
+                                                                               
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:05,  1.31s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.46it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.06it/s]
+                                                   
+{"arch": "mobilenet_v3_small", "epoch": 23, "loss": 0.045588, "threshold": 0.5, "accuracy": 0.7625, "good_recall": 0.884058, "defect_recall": 0.0, "false_pass_rate_all": 0.1375, "false_pass_rate_defect": 1.0, "good_loss_rate_all": 0.1, "good_loss_rate_good": 0.115942, "auroc_defect": 0.400527, "average_precision_defect": 0.117841}
+
+mobilenet_v3_small epoch 24/45:   0%|          | 0/15 [00:00<?, ?it/s]
+mobilenet_v3_small epoch 24/45:   7%|▋         | 1/15 [00:01<00:20,  1.45s/it]
+mobilenet_v3_small epoch 24/45:  13%|█▎        | 2/15 [00:01<00:09,  1.44it/s]
+mobilenet_v3_small epoch 24/45:  20%|██        | 3/15 [00:02<00:11,  1.00it/s]
+mobilenet_v3_small epoch 24/45:  27%|██▋       | 4/15 [00:03<00:07,  1.49it/s]
+mobilenet_v3_small epoch 24/45:  33%|███▎      | 5/15 [00:04<00:08,  1.24it/s]
+mobilenet_v3_small epoch 24/45:  40%|████      | 6/15 [00:04<00:05,  1.68it/s]
+mobilenet_v3_small epoch 24/45:  47%|████▋     | 7/15 [00:05<00:06,  1.31it/s]
+mobilenet_v3_small epoch 24/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.71it/s]
+mobilenet_v3_small epoch 24/45:  60%|██████    | 9/15 [00:06<00:04,  1.44it/s]
+mobilenet_v3_small epoch 24/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.87it/s]
+mobilenet_v3_small epoch 24/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.48it/s]
+mobilenet_v3_small epoch 24/45:  80%|████████  | 12/15 [00:08<00:01,  1.87it/s]
+mobilenet_v3_small epoch 24/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.57it/s]
+mobilenet_v3_small epoch 24/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.90it/s]
+mobilenet_v3_small epoch 24/45: 100%|██████████| 15/15 [00:09<00:00,  1.90it/s]
+                                                                               
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.18s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.51it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.11it/s]
+                                                   
+{"arch": "mobilenet_v3_small", "epoch": 24, "loss": 0.046329, "threshold": 0.5, "accuracy": 0.7625, "good_recall": 0.884058, "defect_recall": 0.0, "false_pass_rate_all": 0.1375, "false_pass_rate_defect": 1.0, "good_loss_rate_all": 0.1, "good_loss_rate_good": 0.115942, "auroc_defect": 0.408432, "average_precision_defect": 0.120506}
+
+mobilenet_v3_small epoch 25/45:   0%|          | 0/15 [00:00<?, ?it/s]
+mobilenet_v3_small epoch 25/45:   7%|▋         | 1/15 [00:01<00:21,  1.55s/it]
+mobilenet_v3_small epoch 25/45:  13%|█▎        | 2/15 [00:01<00:09,  1.37it/s]
+mobilenet_v3_small epoch 25/45:  20%|██        | 3/15 [00:03<00:12,  1.03s/it]
+mobilenet_v3_small epoch 25/45:  27%|██▋       | 4/15 [00:03<00:07,  1.42it/s]
+mobilenet_v3_small epoch 25/45:  33%|███▎      | 5/15 [00:04<00:08,  1.16it/s]
+mobilenet_v3_small epoch 25/45:  40%|████      | 6/15 [00:04<00:05,  1.60it/s]
+mobilenet_v3_small epoch 25/45:  47%|████▋     | 7/15 [00:05<00:06,  1.26it/s]
+mobilenet_v3_small epoch 25/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.68it/s]
+mobilenet_v3_small epoch 25/45:  60%|██████    | 9/15 [00:06<00:04,  1.35it/s]
+mobilenet_v3_small epoch 25/45:  67%|██████▋   | 10/15 [00:07<00:02,  1.73it/s]
+mobilenet_v3_small epoch 25/45:  73%|███████▎  | 11/15 [00:08<00:02,  1.34it/s]
+mobilenet_v3_small epoch 25/45:  80%|████████  | 12/15 [00:08<00:01,  1.75it/s]
+mobilenet_v3_small epoch 25/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.43it/s]
+mobilenet_v3_small epoch 25/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.85it/s]
+mobilenet_v3_small epoch 25/45: 100%|██████████| 15/15 [00:10<00:00,  1.89it/s]
+                                                                               
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.21s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.44it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.12it/s]
+                                                   
+{"arch": "mobilenet_v3_small", "epoch": 25, "loss": 0.047137, "threshold": 0.5, "accuracy": 0.775, "good_recall": 0.898551, "defect_recall": 0.0, "false_pass_rate_all": 0.1375, "false_pass_rate_defect": 1.0, "good_loss_rate_all": 0.0875, "good_loss_rate_good": 0.101449, "auroc_defect": 0.421607, "average_precision_defect": 0.122744}
+
+mobilenet_v3_small epoch 26/45:   0%|          | 0/15 [00:00<?, ?it/s]
+mobilenet_v3_small epoch 26/45:   7%|▋         | 1/15 [00:01<00:20,  1.43s/it]
+mobilenet_v3_small epoch 26/45:  13%|█▎        | 2/15 [00:01<00:08,  1.45it/s]
+mobilenet_v3_small epoch 26/45:  20%|██        | 3/15 [00:02<00:10,  1.15it/s]
+mobilenet_v3_small epoch 26/45:  27%|██▋       | 4/15 [00:03<00:07,  1.51it/s]
+mobilenet_v3_small epoch 26/45:  33%|███▎      | 5/15 [00:04<00:07,  1.28it/s]
+mobilenet_v3_small epoch 26/45:  40%|████      | 6/15 [00:04<00:05,  1.78it/s]
+mobilenet_v3_small epoch 26/45:  47%|████▋     | 7/15 [00:05<00:05,  1.42it/s]
+mobilenet_v3_small epoch 26/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.72it/s]
+mobilenet_v3_small epoch 26/45:  60%|██████    | 9/15 [00:06<00:03,  1.53it/s]
+mobilenet_v3_small epoch 26/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.70it/s]
+mobilenet_v3_small epoch 26/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.60it/s]
+mobilenet_v3_small epoch 26/45:  80%|████████  | 12/15 [00:07<00:01,  1.72it/s]
+mobilenet_v3_small epoch 26/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.38it/s]
+mobilenet_v3_small epoch 26/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.70it/s]
+mobilenet_v3_small epoch 26/45: 100%|██████████| 15/15 [00:09<00:00,  1.76it/s]
+                                                                               
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:05,  1.31s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.45it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.08it/s]
+ 
