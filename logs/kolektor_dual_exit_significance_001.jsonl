@@ -3,3 +3,4 @@
 {"time": "2026-08-15T18:22:39.907777+00:00", "event": "process_start", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.kolektor_dual_exit_significance --output results/kolektor_dual_exit_significance_001_summary.json --markdown docs/kolektor_dual_exit_significance_001.md --svg results/kolektor_dual_exit_significance_001.svg --checkpoint artifacts/kolektor_dual_exit_significance_001/resnet18_branchy.pt --epochs 45 --batch-size 16 --image-height 512 --image-width 256 --seed 123 --max-false-pass-rates 0.0 0.1 --min-good-pass-rates 0.95 0.98 --require-cuda", "cwd": "/content/codex_colab_bridge/codex-colab-bridge"}
 {"time": "2026-08-15T18:24:39.973787+00:00", "event": "process_heartbeat", "elapsed_sec": 120.066}
 {"time": "2026-08-15T18:26:41.722856+00:00", "event": "process_heartbeat", "elapsed_sec": 241.815}
+{"time": "2026-08-15T18:28:43.807675+00:00", "event": "process_heartbeat", "elapsed_sec": 363.9}
