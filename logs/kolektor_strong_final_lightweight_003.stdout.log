@@ -2906,4 +2906,258 @@ resnet18 epoch 22/45:  33%|███▎      | 5/15 [00:03<00:07,  1.39it/s]
 resnet18 epoch 22/45:  40%|████      | 6/15 [00:04<00:05,  1.66it/s]
 resnet18 epoch 22/45:  47%|████▋     | 7/15 [00:04<00:05,  1.55it/s]
 resnet18 epoch 22/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.69it/s]
-r
+resnet18 epoch 22/45:  60%|██████    | 9/15 [00:06<00:03,  1.68it/s]
+resnet18 epoch 22/45:  67%|██████▋   | 10/15 [00:06<00:03,  1.66it/s]
+resnet18 epoch 22/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.68it/s]
+resnet18 epoch 22/45:  80%|████████  | 12/15 [00:07<00:01,  1.68it/s]
+resnet18 epoch 22/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.78it/s]
+resnet18 epoch 22/45:  93%|█████████▎| 14/15 [00:08<00:00,  1.69it/s]
+resnet18 epoch 22/45: 100%|██████████| 15/15 [00:09<00:00,  2.03it/s]
+                                                                     
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.20s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.52it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.28it/s]
+                                                   
+{"arch": "resnet18", "epoch": 22, "loss": 0.048948, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet18 epoch 23/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet18 epoch 23/45:   7%|▋         | 1/15 [00:01<00:21,  1.52s/it]
+resnet18 epoch 23/45:  13%|█▎        | 2/15 [00:01<00:09,  1.41it/s]
+resnet18 epoch 23/45:  20%|██        | 3/15 [00:02<00:10,  1.10it/s]
+resnet18 epoch 23/45:  27%|██▋       | 4/15 [00:02<00:06,  1.65it/s]
+resnet18 epoch 23/45:  33%|███▎      | 5/15 [00:04<00:07,  1.30it/s]
+resnet18 epoch 23/45:  40%|████      | 6/15 [00:04<00:04,  1.82it/s]
+resnet18 epoch 23/45:  47%|████▋     | 7/15 [00:05<00:05,  1.39it/s]
+resnet18 epoch 23/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.89it/s]
+resnet18 epoch 23/45:  60%|██████    | 9/15 [00:06<00:04,  1.42it/s]
+resnet18 epoch 23/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.89it/s]
+resnet18 epoch 23/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.45it/s]
+resnet18 epoch 23/45:  80%|████████  | 12/15 [00:07<00:01,  1.92it/s]
+resnet18 epoch 23/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.49it/s]
+resnet18 epoch 23/45:  93%|█████████▎| 14/15 [00:08<00:00,  1.98it/s]
+resnet18 epoch 23/45: 100%|██████████| 15/15 [00:09<00:00,  1.83it/s]
+                                                                     
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:05,  1.27s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.54it/s]
+eval:  80%|████████  | 4/5 [00:02<00:00,  1.98it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.01it/s]
+                                                   
+{"arch": "resnet18", "epoch": 23, "loss": 0.044632, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet18 epoch 24/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet18 epoch 24/45:   7%|▋         | 1/15 [00:01<00:20,  1.45s/it]
+resnet18 epoch 24/45:  13%|█▎        | 2/15 [00:01<00:09,  1.31it/s]
+resnet18 epoch 24/45:  20%|██        | 3/15 [00:02<00:10,  1.13it/s]
+resnet18 epoch 24/45:  27%|██▋       | 4/15 [00:02<00:06,  1.59it/s]
+resnet18 epoch 24/45:  33%|███▎      | 5/15 [00:03<00:07,  1.38it/s]
+resnet18 epoch 24/45:  40%|████      | 6/15 [00:04<00:04,  1.92it/s]
+resnet18 epoch 24/45:  47%|████▋     | 7/15 [00:04<00:04,  1.60it/s]
+resnet18 epoch 24/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.92it/s]
+resnet18 epoch 24/45:  60%|██████    | 9/15 [00:05<00:03,  1.69it/s]
+resnet18 epoch 24/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.83it/s]
+resnet18 epoch 24/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.64it/s]
+resnet18 epoch 24/45:  80%|████████  | 12/15 [00:07<00:01,  1.86it/s]
+resnet18 epoch 24/45:  87%|████████▋ | 13/15 [00:07<00:01,  1.93it/s]
+resnet18 epoch 24/45:  93%|█████████▎| 14/15 [00:08<00:00,  1.61it/s]
+resnet18 epoch 24/45: 100%|██████████| 15/15 [00:08<00:00,  2.14it/s]
+                                                                     
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.20s/it]
+eval:  40%|████      | 2/5 [00:01<00:01,  1.77it/s]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.52it/s]
+eval:  80%|████████  | 4/5 [00:02<00:00,  1.95it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.14it/s]
+                                                   
+{"arch": "resnet18", "epoch": 24, "loss": 0.044826, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet18 epoch 25/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet18 epoch 25/45:   7%|▋         | 1/15 [00:01<00:23,  1.70s/it]
+resnet18 epoch 25/45:  13%|█▎        | 2/15 [00:01<00:10,  1.26it/s]
+resnet18 epoch 25/45:  20%|██        | 3/15 [00:03<00:12,  1.06s/it]
+resnet18 epoch 25/45:  27%|██▋       | 4/15 [00:03<00:07,  1.44it/s]
+resnet18 epoch 25/45:  33%|███▎      | 5/15 [00:04<00:07,  1.30it/s]
+resnet18 epoch 25/45:  40%|████      | 6/15 [00:04<00:05,  1.80it/s]
+resnet18 epoch 25/45:  47%|████▋     | 7/15 [00:05<00:05,  1.37it/s]
+resnet18 epoch 25/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.86it/s]
+resnet18 epoch 25/45:  60%|██████    | 9/15 [00:06<00:04,  1.41it/s]
+resnet18 epoch 25/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.89it/s]
+resnet18 epoch 25/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.44it/s]
+resnet18 epoch 25/45:  80%|████████  | 12/15 [00:08<00:01,  1.92it/s]
+resnet18 epoch 25/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.65it/s]
+resnet18 epoch 25/45:  93%|█████████▎| 14/15 [00:08<00:00,  2.16it/s]
+resnet18 epoch 25/45: 100%|██████████| 15/15 [00:09<00:00,  2.07it/s]
+                                                                     
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.19s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.56it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.30it/s]
+                                                   
+{"arch": "resnet18", "epoch": 25, "loss": 0.044776, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet18 epoch 26/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet18 epoch 26/45:   7%|▋         | 1/15 [00:01<00:18,  1.35s/it]
+resnet18 epoch 26/45:  13%|█▎        | 2/15 [00:01<00:10,  1.24it/s]
+resnet18 epoch 26/45:  20%|██        | 3/15 [00:02<00:10,  1.14it/s]
+resnet18 epoch 26/45:  27%|██▋       | 4/15 [00:02<00:06,  1.59it/s]
+resnet18 epoch 26/45:  33%|███▎      | 5/15 [00:03<00:06,  1.47it/s]
+resnet18 epoch 26/45:  40%|████      | 6/15 [00:04<00:05,  1.73it/s]
+resnet18 epoch 26/45:  47%|████▋     | 7/15 [00:05<00:05,  1.46it/s]
+resnet18 epoch 26/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.97it/s]
+resnet18 epoch 26/45:  60%|██████    | 9/15 [00:06<00:04,  1.44it/s]
+resnet18 epoch 26/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.92it/s]
+resnet18 epoch 26/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.46it/s]
+resnet18 epoch 26/45:  80%|████████  | 12/15 [00:07<00:01,  1.94it/s]
+resnet18 epoch 26/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.50it/s]
+resnet18 epoch 26/45:  93%|█████████▎| 14/15 [00:08<00:00,  1.97it/s]
+resnet18 epoch 26/45: 100%|██████████| 15/15 [00:09<00:00,  1.83it/s]
+                                                                     
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.18s/it]
+eval:  40%|████      | 2/5 [00:01<00:01,  1.68it/s]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.54it/s]
+eval:  80%|████████  | 4/5 [00:02<00:00,  1.95it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  1.94it/s]
+                                                   
+{"arch": "resnet18", "epoch": 26, "loss": 0.040277, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet18 epoch 27/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet18 epoch 27/45:   7%|▋         | 1/15 [00:02<00:28,  2.03s/it]
+resnet18 epoch 27/45:  13%|█▎        | 2/15 [00:02<00:11,  1.09it/s]
+resnet18 epoch 27/45:  20%|██        | 3/15 [00:03<00:10,  1.12it/s]
+resnet18 epoch 27/45:  27%|██▋       | 4/15 [00:03<00:06,  1.69it/s]
+resnet18 epoch 27/45:  33%|███▎      | 5/15 [00:04<00:07,  1.33it/s]
+resnet18 epoch 27/45:  40%|████      | 6/15 [00:04<00:04,  1.86it/s]
+resnet18 epoch 27/45:  47%|████▋     | 7/15 [00:05<00:05,  1.47it/s]
+resnet18 epoch 27/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.94it/s]
+resnet18 epoch 27/45:  60%|██████    | 9/15 [00:06<00:03,  1.57it/s]
+resnet18 epoch 27/45:  67%|██████▋   | 10/15 [00:06<00:02,  2.07it/s]
+resnet18 epoch 27/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.56it/s]
+resnet18 epoch 27/45:  80%|████████  | 12/15 [00:07<00:01,  2.07it/s]
+resnet18 epoch 27/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.95it/s]
+resnet18 epoch 27/45:  93%|█████████▎| 14/15 [00:08<00:00,  2.52it/s]
+resnet18 epoch 27/45: 100%|██████████| 15/15 [00:08<00:00,  2.35it/s]
+                                                                     
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.17s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.61it/s]
+eval:  80%|████████  | 4/5 [00:02<00:00,  2.15it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.19it/s]
+                                                   
+{"arch": "resnet18", "epoch": 27, "loss": 0.044928, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet18 epoch 28/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet18 epoch 28/45:   7%|▋         | 1/15 [00:01<00:19,  1.43s/it]
+resnet18 epoch 28/45:  13%|█▎        | 2/15 [00:01<00:08,  1.48it/s]
+resnet18 epoch 28/45:  20%|██        | 3/15 [00:02<00:11,  1.08it/s]
+resnet18 epoch 28/45:  27%|██▋       | 4/15 [00:02<00:06,  1.63it/s]
+resnet18 epoch 28/45:  33%|███▎      | 5/15 [00:03<00:07,  1.30it/s]
+resnet18 epoch 28/45:  40%|████      | 6/15 [00:04<00:04,  1.82it/s]
+resnet18 epoch 28/45:  47%|████▋     | 7/15 [00:05<00:05,  1.37it/s]
+resnet18 epoch 28/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.85it/s]
+resnet18 epoch 28/45:  60%|██████    | 9/15 [00:06<00:04,  1.35it/s]
+resnet18 epoch 28/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.82it/s]
+resnet18 epoch 28/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.36it/s]
+resnet18 epoch 28/45:  80%|████████  | 12/15 [00:07<00:01,  1.81it/s]
+resnet18 epoch 28/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.41it/s]
+resnet18 epoch 28/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.88it/s]
+resnet18 epoch 28/45: 100%|██████████| 15/15 [00:09<00:00,  1.74it/s]
+                                                                     
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.23s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.52it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.27it/s]
+                                                   
+{"arch": "resnet18", "epoch": 28, "loss": 0.039136, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet18 epoch 29/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet18 epoch 29/45:   7%|▋         | 1/15 [00:01<00:21,  1.52s/it]
+resnet18 epoch 29/45:  13%|█▎        | 2/15 [00:01<00:09,  1.40it/s]
+resnet18 epoch 29/45:  20%|██        | 3/15 [00:02<00:11,  1.05it/s]
+resnet18 epoch 29/45:  27%|██▋       | 4/15 [00:03<00:06,  1.59it/s]
+resnet18 epoch 29/45:  33%|███▎      | 5/15 [00:04<00:07,  1.27it/s]
+resnet18 epoch 29/45:  40%|████      | 6/15 [00:04<00:05,  1.76it/s]
+resnet18 epoch 29/45:  47%|████▋     | 7/15 [00:05<00:05,  1.52it/s]
+resnet18 epoch 29/45:  53%|█████▎    | 8/15 [00:05<00:03,  2.01it/s]
+resnet18 epoch 29/45:  60%|██████    | 9/15 [00:06<00:03,  1.57it/s]
+resnet18 epoch 29/45:  67%|██████▋   | 10/15 [00:06<00:02,  2.02it/s]
+resnet18 epoch 29/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.52it/s]
+resnet18 epoch 29/45:  80%|████████  | 12/15 [00:07<00:01,  2.01it/s]
+resnet18 epoch 29/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.50it/s]
+resnet18 epoch 29/45:  93%|█████████▎| 14/15 [00:08<00:00,  1.98it/s]
+resnet18 epoch 29/45: 100%|██████████| 15/15 [00:09<00:00,  1.84it/s]
+                                                                     
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:05,  1.26s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.46it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.08it/s]
+                                                   
+{"arch": "resnet18", "epoch": 29, "loss": 0.043289, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet18 epoch 30/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet18 epoch 30/45:   7%|▋         | 1/15 [00:01<00:20,  1.46s/it]
+resnet18 epoch 30/45:  13%|█▎        | 2/15 [00:01<00:08,  1.46it/s]
+resnet18 epoch 30/45:  20%|██        | 3/15 [00:02<00:10,  1.18it/s]
+resnet18 epoch 30/45:  27%|██▋       | 4/15 [00:03<00:08,  1.30it/s]
+resnet18 epoch 30/45:  33%|███▎      | 5/15 [00:03<00:06,  1.57it/s]
+resnet18 epoch 30/45:  40%|████      | 6/15 [00:04<00:06,  1.38it/s]
+resnet18 epoch 30/45:  47%|████▋     | 7/15 [00:04<00:04,  1.89it/s]
+resnet18 epoch 30/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.57it/s]
+resnet18 epoch 30/45:  60%|██████    | 9/15 [00:05<00:02,  2.09it/s]
+resnet18 epoch 30/45:  67%|██████▋   | 10/15 [00:06<00:03,  1.60it/s]
+resnet18 epoch 30/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.85it/s]
+resnet18 epoch 30/45:  80%|████████  | 12/15 [00:07<00:01,  1.66it/s]
+resnet18 epoch 30/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.76it/s]
+resnet18 epoch 30/45:  93%|█████████▎| 14/15 [00:08<00:00,  1.70it/s]
+resnet18 epoch 30/45: 100%|██████████| 15/15 [00:09<00:00,  2.12it/s]
+                                                                     
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.16s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.63it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.43it/s]
+                                                   
+{"arch": "resnet18", "epoch": 30, "loss": 0.052219, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet18 epoch 31/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet18 epoch 31/45:   7%|▋         | 1/15 [00:01<00:20,  1.44s/it]
+resnet18 epoch 31/45:  13%|█▎        | 2/15 [00:01<00:08,  1.47it/s]
+resnet18 epoch 31/45:  20%|██        | 3/15 [00:02<00:10,  1.10it/s]
+resnet18 epoch 31/45:  27%|██▋       | 4/15 [00:02<00:06,  1.66it/s]
+resnet18 epoch 31/45:  33%|███▎      | 5/15 [00:03<00:07,  1.30it/s]
+resnet18 epoch 31/45:  40%|████      | 6/15 [00:04<00:04,  1.82it/s]
+resnet18 epoch 31/45:  47%|████▋     | 7/15 [00:05<00:05,  1.44it/s]
+resnet18 epoch 31/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.95it/s]
+resnet18 epoch 31/45:  60%|██████    | 9/15 [00:06<00:04,  1.48it/s]
+resnet18 epoch 31/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.97it/s]
+resnet18 epoch 31/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.42it/s]
+resnet18 epoch 31/45:  80%|████████  | 12/15 [00:07<00:01,  1.87it/s]
+resnet18 epoch 31/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.53it/s]
+resnet18 epoch 31/45:  93%|█████████▎| 14/15 [00:08<00:00,  1.76it/s]
+resnet18 epoch 31/45: 100%|██████████| 15/15 [00:09<00:00,  1.81it/s]
+                                                                     
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.14s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.49it/s]
+eval:  80%|████████  | 4/5 [00:02<00:00,  2.07it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.11it/s]
+                                                   
+{"arch": "resnet18", "epoch": 31, "loss": 0.05032, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet18 epoch 32/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet18 epoch 32/45:   7%|▋         | 1/15 [00:01<00:20,  1.49s/it]
+resnet18 epoch 32/45:  13%|█▎        | 2/15 [00:01<00:09,  1.44it/s]
+resnet18 epoch 32/45:  20%|██        | 3/15 [00:02<00:10,  1.12it/s]
+resnet18 epoch 32/45:  27%|██▋       | 4/15 [00:02<00:06,  1.67it/s]
+resnet18 epoch 32/45:  33%|███▎      | 5/15 [00:04<00:07,  1.28it/s]
+resnet18 epoch 32/45:  40%|████     
