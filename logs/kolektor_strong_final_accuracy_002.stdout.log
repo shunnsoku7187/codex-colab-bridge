@@ -1162,4 +1162,258 @@ resnet34 epoch 44/45:  33%|███▎      | 5/15 [00:03<00:06,  1.55it/s]
 resnet34 epoch 44/45:  40%|████      | 6/15 [00:03<00:04,  2.01it/s]
 resnet34 epoch 44/45:  47%|████▋     | 7/15 [00:04<00:05,  1.51it/s]
 resnet34 epoch 44/45:  53%|█████▎    | 8/15 [00:04<00:03,  1.94it/s]
-resnet34 epoch 44/45:  60%|██████    | 9/15 [00:05<
+resnet34 epoch 44/45:  60%|██████    | 9/15 [00:05<00:03,  1.65it/s]
+resnet34 epoch 44/45:  67%|██████▋   | 10/15 [00:05<00:02,  2.08it/s]
+resnet34 epoch 44/45:  73%|███████▎  | 11/15 [00:06<00:02,  1.55it/s]
+resnet34 epoch 44/45:  80%|████████  | 12/15 [00:06<00:01,  1.96it/s]
+resnet34 epoch 44/45:  87%|████████▋ | 13/15 [00:07<00:01,  1.56it/s]
+resnet34 epoch 44/45:  93%|█████████▎| 14/15 [00:07<00:00,  1.96it/s]
+resnet34 epoch 44/45: 100%|██████████| 15/15 [00:08<00:00,  2.20it/s]
+                                                                     
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:06,  1.50s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.39it/s]
+eval:  80%|████████  | 4/5 [00:02<00:00,  1.91it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.01it/s]
+                                                   
+{"arch": "resnet34", "epoch": 44, "loss": 0.049242, "threshold": 0.5, "accuracy": 1.0, "good_recall": 1.0, "defect_recall": 1.0, "false_pass_rate_all": 0.0, "false_pass_rate_defect": 0.0, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+resnet34 epoch 45/45:   0%|          | 0/15 [00:00<?, ?it/s]
+resnet34 epoch 45/45:   7%|▋         | 1/15 [00:01<00:22,  1.60s/it]
+resnet34 epoch 45/45:  13%|█▎        | 2/15 [00:01<00:10,  1.27it/s]
+resnet34 epoch 45/45:  20%|██        | 3/15 [00:03<00:11,  1.03it/s]
+resnet34 epoch 45/45:  27%|██▋       | 4/15 [00:03<00:07,  1.50it/s]
+resnet34 epoch 45/45:  33%|███▎      | 5/15 [00:04<00:07,  1.27it/s]
+resnet34 epoch 45/45:  40%|████      | 6/15 [00:04<00:05,  1.68it/s]
+resnet34 epoch 45/45:  47%|████▋     | 7/15 [00:05<00:05,  1.56it/s]
+resnet34 epoch 45/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.96it/s]
+resnet34 epoch 45/45:  60%|██████    | 9/15 [00:06<00:03,  1.62it/s]
+resnet34 epoch 45/45:  67%|██████▋   | 10/15 [00:06<00:02,  2.01it/s]
+resnet34 epoch 45/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.61it/s]
+resnet34 epoch 45/45:  80%|████████  | 12/15 [00:07<00:01,  2.03it/s]
+resnet34 epoch 45/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.94it/s]
+resnet34 epoch 45/45:  93%|█████████▎| 14/15 [00:08<00:00,  2.38it/s]
+resnet34 epoch 45/45: 100%|██████████| 15/15 [00:08<00:00,  2.39it/s]
+                                                                     
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:00<00:03,  1.12it/s]
+eval:  60%|██████    | 3/5 [00:01<00:01,  1.77it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.66it/s]
+                                                   
+{"arch": "resnet34", "epoch": 45, "loss": 0.042071, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 1.0, "average_precision_defect": 1.0}
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:05,  1.49s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.47it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.08it/s]
+                                                   
+
+efficientnet_b0 epoch 1/45:   0%|          | 0/15 [00:00<?, ?it/s]
+efficientnet_b0 epoch 1/45:   7%|▋         | 1/15 [00:02<00:30,  2.16s/it]
+efficientnet_b0 epoch 1/45:  13%|█▎        | 2/15 [00:02<00:13,  1.06s/it]
+efficientnet_b0 epoch 1/45:  20%|██        | 3/15 [00:03<00:10,  1.15it/s]
+efficientnet_b0 epoch 1/45:  27%|██▋       | 4/15 [00:03<00:06,  1.58it/s]
+efficientnet_b0 epoch 1/45:  33%|███▎      | 5/15 [00:04<00:07,  1.26it/s]
+efficientnet_b0 epoch 1/45:  40%|████      | 6/15 [00:04<00:05,  1.60it/s]
+efficientnet_b0 epoch 1/45:  47%|████▋     | 7/15 [00:05<00:06,  1.33it/s]
+efficientnet_b0 epoch 1/45:  53%|█████▎    | 8/15 [00:06<00:04,  1.64it/s]
+efficientnet_b0 epoch 1/45:  60%|██████    | 9/15 [00:06<00:04,  1.50it/s]
+efficientnet_b0 epoch 1/45:  67%|██████▋   | 10/15 [00:07<00:02,  1.88it/s]
+efficientnet_b0 epoch 1/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.62it/s]
+efficientnet_b0 epoch 1/45:  80%|████████  | 12/15 [00:08<00:01,  1.92it/s]
+efficientnet_b0 epoch 1/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.82it/s]
+efficientnet_b0 epoch 1/45:  93%|█████████▎| 14/15 [00:09<00:00,  2.21it/s]
+efficientnet_b0 epoch 1/45: 100%|██████████| 15/15 [00:09<00:00,  2.26it/s]
+                                                                           
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:00<00:03,  1.12it/s]
+eval:  60%|██████    | 3/5 [00:01<00:00,  2.12it/s]
+eval:  80%|████████  | 4/5 [00:01<00:00,  2.64it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.70it/s]
+                                                   
+{"arch": "efficientnet_b0", "epoch": 1, "loss": 0.481281, "threshold": 0.5, "accuracy": 0.775, "good_recall": 0.782609, "defect_recall": 0.727273, "false_pass_rate_all": 0.0375, "false_pass_rate_defect": 0.272727, "good_loss_rate_all": 0.1875, "good_loss_rate_good": 0.217391, "auroc_defect": 0.781291, "average_precision_defect": 0.637367}
+
+efficientnet_b0 epoch 2/45:   0%|          | 0/15 [00:00<?, ?it/s]
+efficientnet_b0 epoch 2/45:   7%|▋         | 1/15 [00:01<00:26,  1.92s/it]
+efficientnet_b0 epoch 2/45:  13%|█▎        | 2/15 [00:02<00:12,  1.05it/s]
+efficientnet_b0 epoch 2/45:  20%|██        | 3/15 [00:02<00:10,  1.13it/s]
+efficientnet_b0 epoch 2/45:  27%|██▋       | 4/15 [00:03<00:07,  1.55it/s]
+efficientnet_b0 epoch 2/45:  33%|███▎      | 5/15 [00:03<00:06,  1.62it/s]
+efficientnet_b0 epoch 2/45:  40%|████      | 6/15 [00:04<00:04,  1.95it/s]
+efficientnet_b0 epoch 2/45:  47%|████▋     | 7/15 [00:04<00:04,  1.66it/s]
+efficientnet_b0 epoch 2/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.87it/s]
+efficientnet_b0 epoch 2/45:  60%|██████    | 9/15 [00:06<00:03,  1.53it/s]
+efficientnet_b0 epoch 2/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.73it/s]
+efficientnet_b0 epoch 2/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.55it/s]
+efficientnet_b0 epoch 2/45:  80%|████████  | 12/15 [00:07<00:01,  1.65it/s]
+efficientnet_b0 epoch 2/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.46it/s]
+efficientnet_b0 epoch 2/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.79it/s]
+efficientnet_b0 epoch 2/45: 100%|██████████| 15/15 [00:09<00:00,  1.77it/s]
+                                                                           
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.24s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.46it/s]
+eval:  80%|████████  | 4/5 [00:02<00:00,  1.99it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.05it/s]
+                                                   
+{"arch": "efficientnet_b0", "epoch": 2, "loss": 0.285927, "threshold": 0.5, "accuracy": 0.5125, "good_recall": 0.463768, "defect_recall": 0.818182, "false_pass_rate_all": 0.025, "false_pass_rate_defect": 0.181818, "good_loss_rate_all": 0.4625, "good_loss_rate_good": 0.536232, "auroc_defect": 0.870883, "average_precision_defect": 0.8028}
+
+efficientnet_b0 epoch 3/45:   0%|          | 0/15 [00:00<?, ?it/s]
+efficientnet_b0 epoch 3/45:   7%|▋         | 1/15 [00:01<00:15,  1.12s/it]
+efficientnet_b0 epoch 3/45:  13%|█▎        | 2/15 [00:01<00:08,  1.59it/s]
+efficientnet_b0 epoch 3/45:  20%|██        | 3/15 [00:02<00:10,  1.14it/s]
+efficientnet_b0 epoch 3/45:  27%|██▋       | 4/15 [00:02<00:06,  1.59it/s]
+efficientnet_b0 epoch 3/45:  33%|███▎      | 5/15 [00:03<00:07,  1.29it/s]
+efficientnet_b0 epoch 3/45:  40%|████      | 6/15 [00:04<00:05,  1.62it/s]
+efficientnet_b0 epoch 3/45:  47%|████▋     | 7/15 [00:04<00:05,  1.55it/s]
+efficientnet_b0 epoch 3/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.86it/s]
+efficientnet_b0 epoch 3/45:  60%|██████    | 9/15 [00:05<00:03,  1.62it/s]
+efficientnet_b0 epoch 3/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.99it/s]
+efficientnet_b0 epoch 3/45:  73%|███████▎  | 11/15 [00:06<00:02,  1.71it/s]
+efficientnet_b0 epoch 3/45:  80%|████████  | 12/15 [00:07<00:01,  2.07it/s]
+efficientnet_b0 epoch 3/45:  87%|████████▋ | 13/15 [00:07<00:01,  1.97it/s]
+efficientnet_b0 epoch 3/45:  93%|█████████▎| 14/15 [00:08<00:00,  2.31it/s]
+efficientnet_b0 epoch 3/45: 100%|██████████| 15/15 [00:08<00:00,  2.55it/s]
+                                                                           
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:00<00:03,  1.14it/s]
+eval:  60%|██████    | 3/5 [00:01<00:01,  1.82it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.47it/s]
+                                                   
+{"arch": "efficientnet_b0", "epoch": 3, "loss": 0.150893, "threshold": 0.5, "accuracy": 0.9375, "good_recall": 0.942029, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.05, "good_loss_rate_good": 0.057971, "auroc_defect": 0.971014, "average_precision_defect": 0.932076}
+
+efficientnet_b0 epoch 4/45:   0%|          | 0/15 [00:00<?, ?it/s]
+efficientnet_b0 epoch 4/45:   7%|▋         | 1/15 [00:02<00:31,  2.22s/it]
+efficientnet_b0 epoch 4/45:  13%|█▎        | 2/15 [00:02<00:14,  1.08s/it]
+efficientnet_b0 epoch 4/45:  20%|██        | 3/15 [00:03<00:12,  1.04s/it]
+efficientnet_b0 epoch 4/45:  27%|██▋       | 4/15 [00:03<00:07,  1.39it/s]
+efficientnet_b0 epoch 4/45:  33%|███▎      | 5/15 [00:04<00:08,  1.16it/s]
+efficientnet_b0 epoch 4/45:  40%|████      | 6/15 [00:05<00:05,  1.52it/s]
+efficientnet_b0 epoch 4/45:  47%|████▋     | 7/15 [00:06<00:06,  1.26it/s]
+efficientnet_b0 epoch 4/45:  53%|█████▎    | 8/15 [00:06<00:04,  1.64it/s]
+efficientnet_b0 epoch 4/45:  60%|██████    | 9/15 [00:07<00:04,  1.38it/s]
+efficientnet_b0 epoch 4/45:  67%|██████▋   | 10/15 [00:07<00:02,  1.71it/s]
+efficientnet_b0 epoch 4/45:  73%|███████▎  | 11/15 [00:08<00:02,  1.37it/s]
+efficientnet_b0 epoch 4/45:  80%|████████  | 12/15 [00:08<00:01,  1.66it/s]
+efficientnet_b0 epoch 4/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.57it/s]
+efficientnet_b0 epoch 4/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.94it/s]
+efficientnet_b0 epoch 4/45: 100%|██████████| 15/15 [00:10<00:00,  2.06it/s]
+                                                                           
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:00<00:03,  1.22it/s]
+eval:  60%|██████    | 3/5 [00:01<00:01,  1.78it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.60it/s]
+                                                   
+{"arch": "efficientnet_b0", "epoch": 4, "loss": 0.12405, "threshold": 0.5, "accuracy": 0.975, "good_recall": 0.985507, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0125, "good_loss_rate_good": 0.014493, "auroc_defect": 0.963109, "average_precision_defect": 0.934732}
+
+efficientnet_b0 epoch 5/45:   0%|          | 0/15 [00:00<?, ?it/s]
+efficientnet_b0 epoch 5/45:   7%|▋         | 1/15 [00:01<00:27,  1.96s/it]
+efficientnet_b0 epoch 5/45:  13%|█▎        | 2/15 [00:02<00:12,  1.06it/s]
+efficientnet_b0 epoch 5/45:  20%|██        | 3/15 [00:02<00:10,  1.17it/s]
+efficientnet_b0 epoch 5/45:  27%|██▋       | 4/15 [00:03<00:06,  1.65it/s]
+efficientnet_b0 epoch 5/45:  33%|███▎      | 5/15 [00:03<00:06,  1.60it/s]
+efficientnet_b0 epoch 5/45:  40%|████      | 6/15 [00:04<00:04,  2.04it/s]
+efficientnet_b0 epoch 5/45:  47%|████▋     | 7/15 [00:04<00:04,  1.68it/s]
+efficientnet_b0 epoch 5/45:  53%|█████▎    | 8/15 [00:05<00:03,  2.06it/s]
+efficientnet_b0 epoch 5/45:  60%|██████    | 9/15 [00:05<00:03,  1.73it/s]
+efficientnet_b0 epoch 5/45:  67%|██████▋   | 10/15 [00:06<00:02,  2.11it/s]
+efficientnet_b0 epoch 5/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.64it/s]
+efficientnet_b0 epoch 5/45:  80%|████████  | 12/15 [00:07<00:01,  1.98it/s]
+efficientnet_b0 epoch 5/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.67it/s]
+efficientnet_b0 epoch 5/45:  93%|█████████▎| 14/15 [00:08<00:00,  2.07it/s]
+efficientnet_b0 epoch 5/45: 100%|██████████| 15/15 [00:08<00:00,  1.89it/s]
+                                                                           
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:05,  1.38s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.42it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.09it/s]
+                                                   
+{"arch": "efficientnet_b0", "epoch": 5, "loss": 0.108039, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 0.960474, "average_precision_defect": 0.933481}
+
+efficientnet_b0 epoch 6/45:   0%|          | 0/15 [00:00<?, ?it/s]
+efficientnet_b0 epoch 6/45:   7%|▋         | 1/15 [00:01<00:25,  1.80s/it]
+efficientnet_b0 epoch 6/45:  13%|█▎        | 2/15 [00:02<00:11,  1.10it/s]
+efficientnet_b0 epoch 6/45:  20%|██        | 3/15 [00:02<00:10,  1.11it/s]
+efficientnet_b0 epoch 6/45:  27%|██▋       | 4/15 [00:03<00:07,  1.42it/s]
+efficientnet_b0 epoch 6/45:  33%|███▎      | 5/15 [00:04<00:08,  1.24it/s]
+efficientnet_b0 epoch 6/45:  40%|████      | 6/15 [00:04<00:05,  1.55it/s]
+efficientnet_b0 epoch 6/45:  47%|████▋     | 7/15 [00:05<00:05,  1.35it/s]
+efficientnet_b0 epoch 6/45:  53%|█████▎    | 8/15 [00:06<00:04,  1.56it/s]
+efficientnet_b0 epoch 6/45:  60%|██████    | 9/15 [00:06<00:03,  1.52it/s]
+efficientnet_b0 epoch 6/45:  67%|██████▋   | 10/15 [00:07<00:02,  1.73it/s]
+efficientnet_b0 epoch 6/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.64it/s]
+efficientnet_b0 epoch 6/45:  80%|████████  | 12/15 [00:08<00:01,  2.01it/s]
+efficientnet_b0 epoch 6/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.78it/s]
+efficientnet_b0 epoch 6/45:  93%|█████████▎| 14/15 [00:09<00:00,  2.19it/s]
+efficientnet_b0 epoch 6/45: 100%|██████████| 15/15 [00:09<00:00,  2.28it/s]
+                                                                           
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:00<00:03,  1.18it/s]
+eval:  60%|██████    | 3/5 [00:01<00:00,  2.11it/s]
+eval:  80%|████████  | 4/5 [00:01<00:00,  2.70it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.65it/s]
+                                                   
+{"arch": "efficientnet_b0", "epoch": 6, "loss": 0.071997, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 0.963109, "average_precision_defect": 0.934732}
+
+efficientnet_b0 epoch 7/45:   0%|          | 0/15 [00:00<?, ?it/s]
+efficientnet_b0 epoch 7/45:   7%|▋         | 1/15 [00:01<00:24,  1.74s/it]
+efficientnet_b0 epoch 7/45:  13%|█▎        | 2/15 [00:01<00:11,  1.17it/s]
+efficientnet_b0 epoch 7/45:  20%|██        | 3/15 [00:02<00:10,  1.16it/s]
+efficientnet_b0 epoch 7/45:  27%|██▋       | 4/15 [00:03<00:07,  1.56it/s]
+efficientnet_b0 epoch 7/45:  33%|███▎      | 5/15 [00:04<00:07,  1.25it/s]
+efficientnet_b0 epoch 7/45:  40%|████      | 6/15 [00:04<00:05,  1.62it/s]
+efficientnet_b0 epoch 7/45:  47%|████▋     | 7/15 [00:05<00:05,  1.40it/s]
+efficientnet_b0 epoch 7/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.70it/s]
+efficientnet_b0 epoch 7/45:  60%|██████    | 9/15 [00:06<00:04,  1.34it/s]
+efficientnet_b0 epoch 7/45:  67%|██████▋   | 10/15 [00:07<00:03,  1.66it/s]
+efficientnet_b0 epoch 7/45:  73%|███████▎  | 11/15 [00:08<00:02,  1.38it/s]
+efficientnet_b0 epoch 7/45:  80%|████████  | 12/15 [00:08<00:01,  1.67it/s]
+efficientnet_b0 epoch 7/45:  87%|████████▋ | 13/15 [00:09<00:01,  1.48it/s]
+efficientnet_b0 epoch 7/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.80it/s]
+efficientnet_b0 epoch 7/45: 100%|██████████| 15/15 [00:10<00:00,  1.75it/s]
+                                                                           
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:04,  1.05s/it]
+eval:  60%|██████    | 3/5 [00:01<00:01,  1.64it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.52it/s]
+                                                   
+{"arch": "efficientnet_b0", "epoch": 7, "loss": 0.061691, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 0.993412, "average_precision_defect": 0.971591}
+
+efficientnet_b0 epoch 8/45:   0%|          | 0/15 [00:00<?, ?it/s]
+efficientnet_b0 epoch 8/45:   7%|▋         | 1/15 [00:00<00:13,  1.01it/s]
+efficientnet_b0 epoch 8/45:  13%|█▎        | 2/15 [00:01<00:06,  1.88it/s]
+efficientnet_b0 epoch 8/45:  20%|██        | 3/15 [00:02<00:09,  1.24it/s]
+efficientnet_b0 epoch 8/45:  27%|██▋       | 4/15 [00:02<00:06,  1.66it/s]
+efficientnet_b0 epoch 8/45:  33%|███▎      | 5/15 [00:03<00:07,  1.41it/s]
+efficientnet_b0 epoch 8/45:  40%|████      | 6/15 [00:03<00:05,  1.76it/s]
+efficientnet_b0 epoch 8/45:  47%|████▋     | 7/15 [00:04<00:05,  1.50it/s]
+efficientnet_b0 epoch 8/45:  53%|█████▎    | 8/15 [00:04<00:03,  1.83it/s]
+efficientnet_b0 epoch 8/45:  60%|██████    | 9/15 [00:05<00:03,  1.65it/s]
+efficientnet_b0 epoch 8/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.96it/s]
+efficientnet_b0 epoch 8/45:  73%|███████▎  | 11/15 [00:06<00:02,  1.84it/s]
+efficientnet_b0 epoch 8/45:  80%|████████  | 12/15 [00:06<00:01,  2.21it/s]
+efficientnet_b0 epoch 8/45:  87%|████████▋ | 13/15 [00:07<00:01,  1.86it/s]
+efficientnet_b0 epoch 8/45:  93%|█████████▎| 14/15 [00:07<00:00,  2.20it/s]
+efficientnet_b0 epoch 8/45: 100%|██████████| 15/15 [00:08<00:00,  2.25it/s]
+                                                                           
+
+eval:   0%|          | 0/5 [00:00<?, ?it/s]
+eval:  20%|██        | 1/5 [00:01<00:05,  1.30s/it]
+eval:  60%|██████    | 3/5 [00:02<00:01,  1.41it/s]
+eval: 100%|██████████| 5/5 [00:02<00:00,  2.00it/s]
+                                                   
+{"arch": "efficientnet_b0", "epoch": 8, "loss": 0.051403, "threshold": 0.5, "accuracy": 0.9875, "good_recall": 1.0, "defect_recall": 0.909091, "false_pass_rate_all": 0.0125, "false_pass_rate_defect": 0.090909, "good_loss_rate_all": 0.0, "good_loss_rate_good": 0.0, "auroc_defect": 0.993412, "average_precision_defect": 0.971591}
+
+efficientnet_b0 epoch 9/45:   0%|          | 0/15 [00:00<?, ?it/s]
+efficientnet_b0 epoch 9/45:   7%|▋         | 1/15 [00:01<00:21,  1.53s/it]
+efficientnet_b0 epoch 9/45:  13%|█▎        | 2/15 [00:01<00:10,  1.20it/s]
+e
