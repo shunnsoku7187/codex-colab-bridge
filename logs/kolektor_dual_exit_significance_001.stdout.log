@@ -47,4 +47,67 @@ Using cached torchinfo-1.8.0-py3-none-any.whl (23 kB)
 Installing collected packages: torchinfo
 Successfully installed torchinfo-1.8.0
 device=cuda
-E
+Extracting /content/drive/MyDrive/Research_Experiment/data/kolektor_sdd/KolektorSDD.zip
+
+branchy epoch 1/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 1/45:   7%|▋         | 1/15 [00:02<00:40,  2.89s/it]
+branchy epoch 1/45:  13%|█▎        | 2/15 [00:03<00:16,  1.27s/it]
+branchy epoch 1/45:  20%|██        | 3/15 [00:03<00:09,  1.33it/s]
+branchy epoch 1/45:  27%|██▋       | 4/15 [00:03<00:05,  1.97it/s]
+branchy epoch 1/45:  33%|███▎      | 5/15 [00:03<00:03,  2.74it/s]
+branchy epoch 1/45:  40%|████      | 6/15 [00:03<00:03,  2.41it/s]
+branchy epoch 1/45:  47%|████▋     | 7/15 [00:04<00:02,  2.85it/s]
+branchy epoch 1/45:  53%|█████▎    | 8/15 [00:04<00:02,  2.35it/s]
+branchy epoch 1/45:  60%|██████    | 9/15 [00:04<00:02,  2.87it/s]
+branchy epoch 1/45:  67%|██████▋   | 10/15 [00:05<00:01,  2.50it/s]
+branchy epoch 1/45:  73%|███████▎  | 11/15 [00:05<00:01,  2.80it/s]
+branchy epoch 1/45:  80%|████████  | 12/15 [00:06<00:01,  2.51it/s]
+branchy epoch 1/45:  87%|████████▋ | 13/15 [00:06<00:00,  2.79it/s]
+branchy epoch 1/45:  93%|█████████▎| 14/15 [00:06<00:00,  2.69it/s]
+branchy epoch 1/45: 100%|██████████| 15/15 [00:07<00:00,  3.21it/s]
+                                                                   
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.68it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.66it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.72it/s]
+                                                      
+{"epoch": 1, "loss": 1.059306, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.2, "reject_rate_all": 0.8, "good_pass_rate_good": 0.231884, "good_loss_rate_good": 0.768116, "false_pass_rate_defect": 0.0, "defect_recall": 1.0, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 0, "good_loss_count": 53}
+
+branchy epoch 2/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 2/45:   7%|▋         | 1/15 [00:01<00:21,  1.55s/it]
+branchy epoch 2/45:  13%|█▎        | 2/15 [00:01<00:09,  1.35it/s]
+branchy epoch 2/45:  20%|██        | 3/15 [00:02<00:09,  1.20it/s]
+branchy epoch 2/45:  27%|██▋       | 4/15 [00:02<00:06,  1.81it/s]
+branchy epoch 2/45:  33%|███▎      | 5/15 [00:03<00:07,  1.41it/s]
+branchy epoch 2/45:  40%|████      | 6/15 [00:03<00:04,  1.94it/s]
+branchy epoch 2/45:  47%|████▋     | 7/15 [00:04<00:05,  1.54it/s]
+branchy epoch 2/45:  53%|█████▎    | 8/15 [00:04<00:03,  2.06it/s]
+branchy epoch 2/45:  60%|██████    | 9/15 [00:05<00:03,  1.57it/s]
+branchy epoch 2/45:  67%|██████▋   | 10/15 [00:06<00:02,  2.09it/s]
+branchy epoch 2/45:  73%|███████▎  | 11/15 [00:06<00:02,  1.71it/s]
+branchy epoch 2/45:  80%|████████  | 12/15 [00:07<00:01,  2.24it/s]
+branchy epoch 2/45:  87%|████████▋ | 13/15 [00:07<00:00,  2.12it/s]
+branchy epoch 2/45:  93%|█████████▎| 14/15 [00:07<00:00,  2.74it/s]
+branchy epoch 2/45: 100%|██████████| 15/15 [00:08<00:00,  2.78it/s]
+                                                                   
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.54it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.49it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.49it/s]
+                                                      
+{"epoch": 2, "loss": 0.747957, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.3625, "reject_rate_all": 0.6375, "good_pass_rate_good": 0.42029, "good_loss_rate_good": 0.57971, "false_pass_rate_defect": 0.0, "defect_recall": 1.0, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 0, "good_loss_count": 40}
+
+branchy epoch 3/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 3/45:   7%|▋         | 1/15 [00:01<00:18,  1.31s/it]
+branchy epoch 3/45:  13%|█▎        | 2/15 [00:01<00:08,  1.58it/s]
+branchy epoch 3/45:  20%|██        | 3/15 [00:01<00:06,  1.80it/s]
+branchy epoch 3/45:  27%|██▋       | 4/15 [00:02<00:04,  2.53it/s]
+branchy epoch 3/45:  33%|███▎      | 5/15 [00:02<00:04,  2.20it/s]
+branchy epoch 3/45:  40%|████      | 6/15 [00:02<00:03,  2.90it/s]
+branchy epoch 3/45:  47%|████▋     | 7/15 [00:03<00:03,  2.60it/s]
+branchy epoch 3/45:  53%|█████▎    | 8/15 [00:03<00:02,  3.05it/s]
+branchy epoch 3/45:  60%|██████    | 9/15 [00:03<00:02,  2.54it/s]
+branchy epoch 3/45:  67%|██████▋   | 10/15 [00:04<00:01,  3.22it/s]
+b
