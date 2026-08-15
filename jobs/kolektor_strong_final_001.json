@@ -1,0 +1,13 @@
+{
+  "id": "kolektor_strong_final_001",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.train_kolektor_strong_final --output results/kolektor_strong_final_001_summary.json --markdown docs/kolektor_strong_final_001.md --svg results/kolektor_strong_final_001.svg --archs resnet18 efficientnet_b0 --epochs 35 --batch-size 16 --image-height 512 --image-width 256 --require-cuda",
+  "max_runtime_sec": 7200,
+  "result_file": "results/kolektor_strong_final_001.json",
+  "note": "Train stronger final-only KolektorSDD inspection baselines before evaluating dual-sided early exit. Uses ImageNet-initialized ResNet18 and EfficientNet-B0, reports false-pass/good-loss safety threshold curves.",
+  "created_at": "2026-08-15T00:00:00+09:00"
+}
