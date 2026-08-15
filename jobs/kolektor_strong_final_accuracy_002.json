@@ -1,6 +1,6 @@
 {
   "id": "kolektor_strong_final_accuracy_002",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 9000,
   "result_file": "results/kolektor_strong_final_accuracy_002.json",
   "note": "Accuracy-oriented final-only KolektorSDD baselines. Compare deeper ResNet34 against EfficientNet-B0 before adding early exits.",
-  "created_at": "2026-08-15T00:00:00+09:00"
+  "created_at": "2026-08-15T00:00:00+09:00",
+  "updated_at": "2026-08-15T11:18:20.789541+00:00",
+  "started_at": "2026-08-15T11:18:20.789524+00:00"
 }
