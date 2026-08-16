@@ -75,3 +75,5 @@
 {"time": "2026-08-16T01:32:42.748350+00:00", "event": "process_heartbeat", "elapsed_sec": 8742.034}
 {"time": "2026-08-16T01:34:44.160584+00:00", "event": "process_heartbeat", "elapsed_sec": 8863.447}
 {"time": "2026-08-16T01:36:45.506806+00:00", "event": "process_heartbeat", "elapsed_sec": 8984.793}
+{"time": "2026-08-16T01:37:00.779071+00:00", "event": "process_timeout", "max_runtime_sec": 9000}
+{"time": "2026-08-16T01:37:00.779364+00:00", "event": "process_end", "returncode": -9, "duration_sec": 9000.065}
