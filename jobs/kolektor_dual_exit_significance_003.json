@@ -1,0 +1,13 @@
+{
+  "id": "kolektor_dual_exit_significance_003",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.kolektor_dual_exit_significance --output results/kolektor_dual_exit_significance_003_summary.json --markdown docs/kolektor_dual_exit_significance_003.md --svg results/kolektor_dual_exit_significance_003.svg --checkpoint artifacts/kolektor_dual_exit_significance_003/resnet18_branchy.pt --epochs 45 --batch-size 16 --image-height 512 --image-width 256 --seed 123 --max-false-pass-rates 0.0 0.1 --min-good-pass-rates 0.95 0.98 --max-threshold-candidates 13 --require-cuda",
+  "max_runtime_sec": 9000,
+  "result_file": "results/kolektor_dual_exit_significance_003.json",
+  "note": "Rerun significance comparison with bounded threshold candidate search. The 002 job timed out because full observed/midpoint threshold sets caused a 5-D combinatorial search explosion.",
+  "created_at": "2026-08-16T00:00:00+09:00"
+}

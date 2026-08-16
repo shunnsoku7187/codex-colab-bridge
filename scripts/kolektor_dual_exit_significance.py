@@ -160,14 +160,21 @@ def simulate_dual(data: dict[str, np.ndarray], pass0: float, rej0: float, pass1:
     return decisions, costs
 
 
-def candidates(values: np.ndarray) -> list[float]:
+def candidates(values: np.ndarray, max_count: int) -> list[float]:
     unique = np.unique(np.asarray(values, dtype=np.float32))
     mids = (unique[:-1] + unique[1:]) / 2.0 if len(unique) >= 2 else np.asarray([], dtype=np.float32)
-    qs = np.asarray([0.0, 0.01, 0.03, 0.05, 0.1, 0.2, 0.4, 0.5, 0.6, 0.8, 0.9, 0.95, 0.98, 1.0])
+    if max_count < 5:
+        max_count = 5
+    qs = np.linspace(0.0, 1.0, max_count)
     # Use sample values, midpoints, common thresholds, and quantiles.  The
     # midpoint terms matter on tiny inspection splits because a feasible
-    # threshold can exist between two observed probabilities.
-    out = sorted(set(float(x) for x in np.concatenate([unique, mids, np.quantile(unique, qs), np.asarray([0.0, 0.5, 1.0])])))
+    # threshold can exist between two observed probabilities.  The final list
+    # must stay small because dual-sided thresholds are a 5-D search.
+    pooled = np.concatenate([unique, mids, np.quantile(unique, qs), np.asarray([0.0, 0.5, 1.0])])
+    pooled = np.unique(np.asarray(pooled, dtype=np.float32))
+    if len(pooled) > max_count:
+        pooled = np.unique(np.quantile(pooled, np.linspace(0.0, 1.0, max_count)).astype(np.float32))
+    out = sorted(set(float(x) for x in pooled))
     return out
 
 
@@ -194,11 +201,25 @@ def better(candidate: dict, current: dict | None) -> bool:
     )
 
 
-def select_policies(val_data: dict[str, np.ndarray], max_false_pass: float, min_good_pass: float) -> list[dict]:
+def select_policies(val_data: dict[str, np.ndarray], max_false_pass: float, min_good_pass: float, max_threshold_candidates: int) -> list[dict]:
     rows: list[dict] = []
-    cand0 = candidates(val_data["p_defect"][:, 0])
-    cand1 = candidates(val_data["p_defect"][:, 1])
-    candf = candidates(val_data["p_defect"][:, 2])
+    cand0 = candidates(val_data["p_defect"][:, 0], max_threshold_candidates)
+    cand1 = candidates(val_data["p_defect"][:, 1], max_threshold_candidates)
+    candf = candidates(val_data["p_defect"][:, 2], max_threshold_candidates)
+    print(
+        json.dumps(
+            {
+                "event": "threshold_search",
+                "max_false_pass": max_false_pass,
+                "min_good_pass": min_good_pass,
+                "cand0": len(cand0),
+                "cand1": len(cand1),
+                "candf": len(candf),
+            },
+            ensure_ascii=False,
+        ),
+        flush=True,
+    )
 
     best = None
     for tf in candf:
@@ -385,6 +406,7 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=123)
     parser.add_argument("--max-false-pass-rates", nargs="*", type=float, default=[0.0, 0.1])
     parser.add_argument("--min-good-pass-rates", nargs="*", type=float, default=[0.95, 0.98])
+    parser.add_argument("--max-threshold-candidates", type=int, default=13)
     parser.add_argument("--require-cuda", action="store_true")
     args = parser.parse_args()
 
@@ -413,7 +435,7 @@ def main() -> None:
     policy_rows = []
     for max_fp in args.max_false_pass_rates:
         for min_gp in args.min_good_pass_rates:
-            selected = select_policies(val_data, max_fp, min_gp)
+            selected = select_policies(val_data, max_fp, min_gp, args.max_threshold_candidates)
             for row in selected:
                 policy_rows.append(
                     {
