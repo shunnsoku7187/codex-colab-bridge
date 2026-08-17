@@ -1,15 +1,17 @@
 {
   "id": "ksdd2_unet_inspection_baseline_001",
-  "status": "running",
+  "status": "done",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.ksdd2_unet_inspection_baseline --output results/ksdd2_unet_inspection_baseline_001_summary.json --markdown docs/ksdd2_unet_inspection_baseline_001.md --checkpoint-dir artifacts/ksdd2_unet_inspection_baseline_001 --curve-png results/ksdd2_unet_inspection_baseline_001_tradeoff.png --epochs 20 --batch-size 12 --image-height 192 --image-width 512 --base-channels 24 --positive-pixel-weight 40.0 --topk-fraction 0.001 --seeds 123 456 --max-false-pass-rates 0.0 0.01 0.05 --min-good-pass-rates 0.90 0.95 --max-threshold-candidates 51 --curve-points 80 --require-cuda",
   "max_runtime_sec": 12000,
-  "result_file": "results/ksdd2_unet_inspection_baseline_001_summary.json",
+  "result_file": "results/ksdd2_unet_inspection_baseline_001.json",
   "note": "Train a lightweight U-Net segmentation baseline on KolektorSDD2 to establish a stronger final inspection model before adding early exits.",
   "created_at": "2026-08-18T00:00:00+09:00",
-  "updated_at": "2026-08-17T20:20:46.915773+00:00",
-  "started_at": "2026-08-17T20:20:46.915749+00:00"
+  "updated_at": "2026-08-17T22:49:38.759225+00:00",
+  "started_at": "2026-08-17T20:20:46.915749+00:00",
+  "returncode": 0,
+  "finished_at": "2026-08-17T22:49:38.758563+00:00"
 }
