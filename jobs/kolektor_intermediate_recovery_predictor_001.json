@@ -1,0 +1,13 @@
+{
+  "id": "kolektor_intermediate_recovery_predictor_001",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.kolektor_intermediate_recovery_predictor --output results/kolektor_intermediate_recovery_predictor_001_summary.json --markdown docs/kolektor_intermediate_recovery_predictor_001.md --checkpoint artifacts/kolektor_intermediate_recovery_predictor_001/resnet18_branchy.pt --epochs 45 --batch-size 16 --image-height 512 --image-width 256 --seed 123 --max-false-pass-rates 0.0 0.1 --min-good-pass-rates 0.95 0.98 --max-threshold-candidates 13 --require-cuda",
+  "max_runtime_sec": 9000,
+  "result_file": "results/kolektor_intermediate_recovery_predictor_001.json",
+  "note": "Use already-computed ResNet intermediate activations at early exits to predict whether a sample will recover to a reliable final good pass. No extra CNN is evaluated.",
+  "created_at": "2026-08-18T00:00:00+09:00"
+}
