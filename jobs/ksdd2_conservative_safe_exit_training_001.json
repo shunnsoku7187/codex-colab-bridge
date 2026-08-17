@@ -1,15 +1,17 @@
 {
   "id": "ksdd2_conservative_safe_exit_training_001",
-  "status": "running",
+  "status": "done",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
   "cwd": ".",
   "command": "python -m pip install -r requirements-colab.txt && python -m scripts.ksdd2_conservative_safe_exit_training --output results/ksdd2_conservative_safe_exit_training_001_summary.json --markdown docs/ksdd2_conservative_safe_exit_training_001.md --checkpoint-dir artifacts/ksdd2_conservative_safe_exit_training_001 --epochs 25 --batch-size 24 --image-height 256 --image-width 704 --seeds 123 456 --safe-loss-weight 1.0 --unsafe-loss-weight 4.0 --final-good-threshold 0.9 --safe-warmup-epochs 4 --max-false-pass-rates 0.0 0.05 0.1 --min-good-pass-rates 0.90 0.95 --max-threshold-candidates 15 --require-cuda",
   "max_runtime_sec": 12000,
-  "result_file": "results/ksdd2_conservative_safe_exit_training_001_summary.json",
+  "result_file": "results/ksdd2_conservative_safe_exit_training_001.json",
   "note": "Run the conservative dual-sided safe-exit evaluation on KolektorSDD2 to test whether KolektorSDD failures were caused by small data or split dependence.",
   "created_at": "2026-08-18T00:00:00+09:00",
-  "updated_at": "2026-08-17T17:37:14.806138+00:00",
-  "started_at": "2026-08-17T17:37:14.806119+00:00"
+  "updated_at": "2026-08-17T18:49:44.464590+00:00",
+  "started_at": "2026-08-17T17:37:14.806119+00:00",
+  "returncode": 0,
+  "finished_at": "2026-08-17T18:49:44.463830+00:00"
 }
