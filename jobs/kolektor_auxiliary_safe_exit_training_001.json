@@ -1,0 +1,13 @@
+{
+  "id": "kolektor_auxiliary_safe_exit_training_001",
+  "status": "pending",
+  "backend": "gpu",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt && python -m scripts.kolektor_auxiliary_safe_exit_training --output results/kolektor_auxiliary_safe_exit_training_001_summary.json --markdown docs/kolektor_auxiliary_safe_exit_training_001.md --checkpoint artifacts/kolektor_auxiliary_safe_exit_training_001/resnet18_safe_branchy.pt --epochs 45 --batch-size 16 --image-height 512 --image-width 256 --seed 123 --safe-loss-weight 1.0 --max-false-pass-rates 0.0 0.1 --min-good-pass-rates 0.95 0.98 --max-threshold-candidates 13 --require-cuda",
+  "max_runtime_sec": 9000,
+  "result_file": "results/kolektor_auxiliary_safe_exit_training_001.json",
+  "note": "Train BranchyNet early exits with auxiliary safe-good heads so lower exits are learned for inspection, not added after ordinary training.",
+  "created_at": "2026-08-18T00:00:00+09:00"
+}
