@@ -1,6 +1,6 @@
 {
   "id": "ksdd2_unet_inspection_baseline_001",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 12000,
   "result_file": "results/ksdd2_unet_inspection_baseline_001_summary.json",
   "note": "Train a lightweight U-Net segmentation baseline on KolektorSDD2 to establish a stronger final inspection model before adding early exits.",
-  "created_at": "2026-08-18T00:00:00+09:00"
+  "created_at": "2026-08-18T00:00:00+09:00",
+  "updated_at": "2026-08-17T20:20:46.915773+00:00",
+  "started_at": "2026-08-17T20:20:46.915749+00:00"
 }
