@@ -866,3 +866,276 @@ conservative safe epoch 33/35:  73%|███████▎  | 11/15 [00:07<00:
 conservative safe epoch 33/35:  80%|████████  | 12/15 [00:07<00:01,  1.77it/s]
 conservative safe epoch 33/35:  87%|████████▋ | 13/15 [00:08<00:01,  1.80it/s]
 conservative safe epoch 33/35:  93%|█████████▎| 14/15 [00:08<00:00,  2.33it/s]
+conservative safe epoch 33/35: 100%|██████████| 15/15 [00:08<00:00,  2.07it/s]
+                                                                              
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:01<00:04,  1.22s/it]
+collect:  40%|████      | 2/5 [00:01<00:01,  1.77it/s]
+collect:  60%|██████    | 3/5 [00:02<00:01,  1.53it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.47it/s]
+                                                      
+{"epoch": 33, "loss": 1.370037, "safe_positive_rate_train": 0.481172, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+conservative safe epoch 34/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 34/35:   7%|▋         | 1/15 [00:00<00:12,  1.14it/s]
+conservative safe epoch 34/35:  13%|█▎        | 2/15 [00:01<00:05,  2.19it/s]
+conservative safe epoch 34/35:  20%|██        | 3/15 [00:02<00:12,  1.06s/it]
+conservative safe epoch 34/35:  27%|██▋       | 4/15 [00:02<00:07,  1.44it/s]
+conservative safe epoch 34/35:  33%|███▎      | 5/15 [00:03<00:08,  1.22it/s]
+conservative safe epoch 34/35:  40%|████      | 6/15 [00:04<00:05,  1.69it/s]
+conservative safe epoch 34/35:  47%|████▋     | 7/15 [00:05<00:05,  1.35it/s]
+conservative safe epoch 34/35:  53%|█████▎    | 8/15 [00:05<00:03,  1.84it/s]
+conservative safe epoch 34/35:  60%|██████    | 9/15 [00:06<00:03,  1.58it/s]
+conservative safe epoch 34/35:  67%|██████▋   | 10/15 [00:06<00:02,  2.09it/s]
+conservative safe epoch 34/35:  73%|███████▎  | 11/15 [00:07<00:02,  1.79it/s]
+conservative safe epoch 34/35:  80%|████████  | 12/15 [00:07<00:01,  2.31it/s]
+conservative safe epoch 34/35:  87%|████████▋ | 13/15 [00:07<00:00,  2.02it/s]
+conservative safe epoch 34/35:  93%|█████████▎| 14/15 [00:07<00:00,  2.57it/s]
+conservative safe epoch 34/35: 100%|██████████| 15/15 [00:08<00:00,  2.40it/s]
+                                                                              
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.34it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.00it/s]
+collect:  80%|████████  | 4/5 [00:01<00:00,  2.66it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.56it/s]
+                                                      
+{"epoch": 34, "loss": 1.344321, "safe_positive_rate_train": 0.497908, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+conservative safe epoch 35/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 35/35:   7%|▋         | 1/15 [00:01<00:21,  1.51s/it]
+conservative safe epoch 35/35:  13%|█▎        | 2/15 [00:01<00:09,  1.38it/s]
+conservative safe epoch 35/35:  20%|██        | 3/15 [00:03<00:12,  1.05s/it]
+conservative safe epoch 35/35:  27%|██▋       | 4/15 [00:03<00:07,  1.45it/s]
+conservative safe epoch 35/35:  33%|███▎      | 5/15 [00:04<00:09,  1.08it/s]
+conservative safe epoch 35/35:  40%|████      | 6/15 [00:04<00:06,  1.48it/s]
+conservative safe epoch 35/35:  47%|████▋     | 7/15 [00:05<00:06,  1.29it/s]
+conservative safe epoch 35/35:  53%|█████▎    | 8/15 [00:05<00:04,  1.74it/s]
+conservative safe epoch 35/35:  60%|██████    | 9/15 [00:07<00:04,  1.36it/s]
+conservative safe epoch 35/35:  67%|██████▋   | 10/15 [00:07<00:02,  1.82it/s]
+conservative safe epoch 35/35:  73%|███████▎  | 11/15 [00:08<00:02,  1.39it/s]
+conservative safe epoch 35/35:  80%|████████  | 12/15 [00:08<00:01,  1.84it/s]
+conservative safe epoch 35/35:  87%|████████▋ | 13/15 [00:08<00:01,  1.80it/s]
+conservative safe epoch 35/35:  93%|█████████▎| 14/15 [00:09<00:00,  2.34it/s]
+conservative safe epoch 35/35: 100%|██████████| 15/15 [00:09<00:00,  2.30it/s]
+                                                                              
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.26it/s]
+collect:  60%|██████    | 3/5 [00:01<00:01,  1.97it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  2.91it/s]
+                                                      
+{"epoch": 35, "loss": 1.55954, "safe_positive_rate_train": 0.58159, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:01<00:05,  1.38s/it]
+collect:  60%|██████    | 3/5 [00:02<00:01,  1.68it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.62it/s]
+                                                      
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.33it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.22it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.21it/s]
+                                                      
+
+conservative safe epoch 1/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 1/35:   7%|▋         | 1/15 [00:01<00:18,  1.30s/it]
+conservative safe epoch 1/35:  13%|█▎        | 2/15 [00:01<00:08,  1.59it/s]
+conservative safe epoch 1/35:  20%|██        | 3/15 [00:02<00:08,  1.45it/s]
+conservative safe epoch 1/35:  27%|██▋       | 4/15 [00:02<00:05,  2.05it/s]
+conservative safe epoch 1/35:  33%|███▎      | 5/15 [00:03<00:06,  1.53it/s]
+conservative safe epoch 1/35:  40%|████      | 6/15 [00:03<00:04,  1.86it/s]
+conservative safe epoch 1/35:  47%|████▋     | 7/15 [00:04<00:04,  1.83it/s]
+conservative safe epoch 1/35:  53%|█████▎    | 8/15 [00:04<00:03,  2.02it/s]
+conservative safe epoch 1/35:  60%|██████    | 9/15 [00:05<00:03,  1.85it/s]
+conservative safe epoch 1/35:  67%|██████▋   | 10/15 [00:05<00:02,  1.93it/s]
+conservative safe epoch 1/35:  73%|███████▎  | 11/15 [00:06<00:02,  1.92it/s]
+conservative safe epoch 1/35:  80%|████████  | 12/15 [00:06<00:01,  2.23it/s]
+conservative safe epoch 1/35:  87%|████████▋ | 13/15 [00:07<00:01,  1.96it/s]
+conservative safe epoch 1/35:  93%|█████████▎| 14/15 [00:07<00:00,  2.53it/s]
+conservative safe epoch 1/35: 100%|██████████| 15/15 [00:07<00:00,  2.30it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.16it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.08it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.05it/s]
+                                                      
+{"epoch": 1, "loss": 1.086947, "safe_positive_rate_train": 0.0, "samples": 80, "good_count": 70, "defect_count": 10, "pass_rate_all": 0.0, "reject_rate_all": 1.0, "good_pass_rate_good": 0.0, "good_loss_rate_good": 1.0, "false_pass_rate_defect": 0.0, "defect_recall": 1.0, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 0, "good_loss_count": 70}
+
+conservative safe epoch 2/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 2/35:   7%|▋         | 1/15 [00:01<00:24,  1.78s/it]
+conservative safe epoch 2/35:  13%|█▎        | 2/15 [00:01<00:10,  1.20it/s]
+conservative safe epoch 2/35:  20%|██        | 3/15 [00:02<00:08,  1.46it/s]
+conservative safe epoch 2/35:  27%|██▋       | 4/15 [00:02<00:05,  2.14it/s]
+conservative safe epoch 2/35:  33%|███▎      | 5/15 [00:03<00:05,  1.68it/s]
+conservative safe epoch 2/35:  40%|████      | 6/15 [00:03<00:03,  2.26it/s]
+conservative safe epoch 2/35:  47%|████▋     | 7/15 [00:04<00:04,  1.61it/s]
+conservative safe epoch 2/35:  53%|█████▎    | 8/15 [00:04<00:03,  1.98it/s]
+conservative safe epoch 2/35:  60%|██████    | 9/15 [00:05<00:03,  1.56it/s]
+conservative safe epoch 2/35:  67%|██████▋   | 10/15 [00:06<00:02,  1.89it/s]
+conservative safe epoch 2/35:  73%|███████▎  | 11/15 [00:06<00:02,  1.78it/s]
+conservative safe epoch 2/35:  80%|████████  | 12/15 [00:07<00:01,  1.64it/s]
+conservative safe epoch 2/35:  87%|████████▋ | 13/15 [00:07<00:01,  1.72it/s]
+conservative safe epoch 2/35:  93%|█████████▎| 14/15 [00:08<00:00,  1.63it/s]
+conservative safe epoch 2/35: 100%|██████████| 15/15 [00:08<00:00,  1.98it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:01<00:04,  1.05s/it]
+collect:  40%|████      | 2/5 [00:01<00:01,  1.84it/s]
+collect:  60%|██████    | 3/5 [00:02<00:01,  1.40it/s]
+collect:  80%|████████  | 4/5 [00:02<00:00,  1.94it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.01it/s]
+                                                      
+{"epoch": 2, "loss": 0.796254, "safe_positive_rate_train": 0.0, "samples": 80, "good_count": 70, "defect_count": 10, "pass_rate_all": 0.625, "reject_rate_all": 0.375, "good_pass_rate_good": 0.7, "good_loss_rate_good": 0.3, "false_pass_rate_defect": 0.1, "defect_recall": 0.9, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 21}
+
+conservative safe epoch 3/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 3/35:   7%|▋         | 1/15 [00:01<00:25,  1.83s/it]
+conservative safe epoch 3/35:  13%|█▎        | 2/15 [00:01<00:10,  1.18it/s]
+conservative safe epoch 3/35:  20%|██        | 3/15 [00:02<00:10,  1.18it/s]
+conservative safe epoch 3/35:  27%|██▋       | 4/15 [00:02<00:06,  1.76it/s]
+conservative safe epoch 3/35:  33%|███▎      | 5/15 [00:03<00:05,  1.69it/s]
+conservative safe epoch 3/35:  40%|████      | 6/15 [00:03<00:03,  2.29it/s]
+conservative safe epoch 3/35:  47%|████▋     | 7/15 [00:04<00:04,  1.81it/s]
+conservative safe epoch 3/35:  53%|█████▎    | 8/15 [00:04<00:02,  2.38it/s]
+conservative safe epoch 3/35:  60%|██████    | 9/15 [00:05<00:03,  1.91it/s]
+conservative safe epoch 3/35:  67%|██████▋   | 10/15 [00:05<00:02,  2.49it/s]
+conservative safe epoch 3/35:  73%|███████▎  | 11/15 [00:06<00:02,  1.83it/s]
+conservative safe epoch 3/35:  80%|████████  | 12/15 [00:06<00:01,  2.37it/s]
+conservative safe epoch 3/35:  87%|████████▋ | 13/15 [00:07<00:01,  1.89it/s]
+conservative safe epoch 3/35:  93%|█████████▎| 14/15 [00:07<00:00,  2.43it/s]
+conservative safe epoch 3/35: 100%|██████████| 15/15 [00:07<00:00,  2.33it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.12it/s]
+collect:  60%|██████    | 3/5 [00:01<00:01,  1.85it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.78it/s]
+                                                      
+{"epoch": 3, "loss": 0.642354, "safe_positive_rate_train": 0.0, "samples": 80, "good_count": 70, "defect_count": 10, "pass_rate_all": 0.9, "reject_rate_all": 0.1, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.2, "defect_recall": 0.8, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 2, "good_loss_count": 0}
+
+conservative safe epoch 4/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 4/35:   7%|▋         | 1/15 [00:01<00:24,  1.72s/it]
+conservative safe epoch 4/35:  13%|█▎        | 2/15 [00:01<00:10,  1.25it/s]
+conservative safe epoch 4/35:  20%|██        | 3/15 [00:02<00:10,  1.12it/s]
+conservative safe epoch 4/35:  27%|██▋       | 4/15 [00:03<00:06,  1.67it/s]
+conservative safe epoch 4/35:  33%|███▎      | 5/15 [00:04<00:08,  1.22it/s]
+conservative safe epoch 4/35:  40%|████      | 6/15 [00:04<00:05,  1.68it/s]
+conservative safe epoch 4/35:  47%|████▋     | 7/15 [00:05<00:06,  1.33it/s]
+conservative safe epoch 4/35:  53%|█████▎    | 8/15 [00:05<00:03,  1.79it/s]
+conservative safe epoch 4/35:  60%|██████    | 9/15 [00:06<00:04,  1.37it/s]
+conservative safe epoch 4/35:  67%|██████▋   | 10/15 [00:06<00:02,  1.81it/s]
+conservative safe epoch 4/35:  73%|███████▎  | 11/15 [00:07<00:02,  1.44it/s]
+conservative safe epoch 4/35:  80%|████████  | 12/15 [00:08<00:01,  1.92it/s]
+conservative safe epoch 4/35:  87%|████████▋ | 13/15 [00:09<00:01,  1.51it/s]
+conservative safe epoch 4/35:  93%|█████████▎| 14/15 [00:09<00:00,  1.99it/s]
+conservative safe epoch 4/35: 100%|██████████| 15/15 [00:09<00:00,  1.75it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.13it/s]
+collect:  60%|██████    | 3/5 [00:01<00:01,  1.77it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.66it/s]
+                                                      
+{"epoch": 4, "loss": 0.576617, "safe_positive_rate_train": 0.0, "samples": 80, "good_count": 70, "defect_count": 10, "pass_rate_all": 0.9125, "reject_rate_all": 0.0875, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.3, "defect_recall": 0.7, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 3, "good_loss_count": 0}
+
+conservative safe epoch 5/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 5/35:   7%|▋         | 1/15 [00:00<00:13,  1.03it/s]
+conservative safe epoch 5/35:  13%|█▎        | 2/15 [00:01<00:06,  2.06it/s]
+conservative safe epoch 5/35:  20%|██        | 3/15 [00:02<00:09,  1.27it/s]
+conservative safe epoch 5/35:  27%|██▋       | 4/15 [00:02<00:05,  1.86it/s]
+conservative safe epoch 5/35:  33%|███▎      | 5/15 [00:03<00:06,  1.48it/s]
+conservative safe epoch 5/35:  40%|████      | 6/15 [00:03<00:05,  1.75it/s]
+conservative safe epoch 5/35:  47%|████▋     | 7/15 [00:04<00:05,  1.53it/s]
+conservative safe epoch 5/35:  53%|█████▎    | 8/15 [00:04<00:03,  2.05it/s]
+conservative safe epoch 5/35:  60%|██████    | 9/15 [00:05<00:03,  1.72it/s]
+conservative safe epoch 5/35:  67%|██████▋   | 10/15 [00:05<00:02,  2.28it/s]
+conservative safe epoch 5/35:  73%|███████▎  | 11/15 [00:06<00:01,  2.03it/s]
+conservative safe epoch 5/35:  80%|████████  | 12/15 [00:06<00:01,  2.54it/s]
+conservative safe epoch 5/35:  87%|████████▋ | 13/15 [00:07<00:01,  1.99it/s]
+conservative safe epoch 5/35:  93%|█████████▎| 14/15 [00:07<00:00,  2.57it/s]
+conservative safe epoch 5/35: 100%|██████████| 15/15 [00:07<00:00,  2.41it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:01<00:05,  1.30s/it]
+collect:  60%|██████    | 3/5 [00:02<00:01,  1.42it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.11it/s]
+                                                      
+{"epoch": 5, "loss": 0.540181, "safe_positive_rate_train": 0.0, "samples": 80, "good_count": 70, "defect_count": 10, "pass_rate_all": 0.9, "reject_rate_all": 0.1, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.2, "defect_recall": 0.8, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 2, "good_loss_count": 0}
+
+conservative safe epoch 6/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 6/35:   7%|▋         | 1/15 [00:01<00:22,  1.62s/it]
+conservative safe epoch 6/35:  13%|█▎        | 2/15 [00:01<00:09,  1.31it/s]
+conservative safe epoch 6/35:  20%|██        | 3/15 [00:03<00:12,  1.07s/it]
+conservative safe epoch 6/35:  27%|██▋       | 4/15 [00:03<00:07,  1.41it/s]
+conservative safe epoch 6/35:  33%|███▎      | 5/15 [00:04<00:08,  1.17it/s]
+conservative safe epoch 6/35:  40%|████      | 6/15 [00:04<00:05,  1.64it/s]
+conservative safe epoch 6/35:  47%|████▋     | 7/15 [00:05<00:06,  1.28it/s]
+conservative safe epoch 6/35:  53%|█████▎    | 8/15 [00:05<00:04,  1.71it/s]
+conservative safe epoch 6/35:  60%|██████    | 9/15 [00:07<00:04,  1.34it/s]
+conservative safe epoch 6/35:  67%|██████▋   | 10/15 [00:07<00:02,  1.79it/s]
+conservative safe epoch 6/35:  73%|███████▎  | 11/15 [00:08<00:02,  1.51it/s]
+conservative safe epoch 6/35:  80%|████████  | 12/15 [00:08<00:01,  1.99it/s]
+conservative safe epoch 6/35:  87%|████████▋ | 13/15 [00:08<00:01,  1.88it/s]
+conservative safe epoch 6/35:  93%|█████████▎| 14/15 [00:08<00:00,  2.42it/s]
+conservative safe epoch 6/35: 100%|██████████| 15/15 [00:09<00:00,  2.40it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.15it/s]
+collect:  60%|██████    | 3/5 [00:01<00:01,  1.88it/s]
+collect:  80%|████████  | 4/5 [00:01<00:00,  2.36it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.56it/s]
+                                                      
+{"epoch": 6, "loss": 2.320753, "safe_positive_rate_train": 0.372385, "samples": 80, "good_count": 70, "defect_count": 10, "pass_rate_all": 0.9, "reject_rate_all": 0.1, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.2, "defect_recall": 0.8, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 2, "good_loss_count": 0}
+
+conservative safe epoch 7/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 7/35:   7%|▋         | 1/15 [00:00<00:13,  1.04it/s]
+conservative safe epoch 7/35:  13%|█▎        | 2/15 [00:01<00:06,  2.01it/s]
+conservative safe epoch 7/35:  20%|██        | 3/15 [00:02<00:09,  1.29it/s]
+conservative safe epoch 7/35:  27%|██▋       | 4/15 [00:02<00:05,  1.92it/s]
+conservative safe epoch 7/35:  33%|███▎      | 5/15 [00:03<00:07,  1.42it/s]
+conservative safe epoch 7/35:  40%|████      | 6/15 [00:03<00:04,  1.96it/s]
+conservative safe epoch 7/35:  47%|████▋     | 7/15 [00:04<00:04,  1.64it/s]
+conservative safe epoch 7/35:  53%|█████▎    | 8/15 [00:04<00:03,  2.18it/s]
+conservative safe epoch 7/35:  60%|██████    | 9/15 [00:05<00:03,  1.55it/s]
+conservative safe epoch 7/35:  67%|██████▋   | 10/15 [00:05<00:02,  2.03it/s]
+conservative safe epoch 7/35:  73%|███████▎  | 11/15 [00:06<00:02,  1.72it/s]
+conservative safe epoch 7/35:  80%|████████  | 12/15 [00:06<00:01,  2.22it/s]
+conservative safe epoch 7/35:  87%|████████▋ | 13/15 [00:07<00:01,  1.62it/s]
+conservative safe epoch 7/35:  93%|█████████▎| 14/15 [00:07<00:00,  2.13it/s]
+conservative safe epoch 7/35: 100%|██████████| 15/15 [00:08<00:00,  1.90it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:01<00:05,  1.26s/it]
+collect:  60%|██████    | 3/5 [00:02<00:01,  1.46it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.05it/s]
+                                                      
+{"epoch": 7, "loss": 2.027862, "safe_positive_rate_train": 0.502092, "samples": 80, "good_count": 70, "defect_count": 10, "pass_rate_all": 0.925, "reject_rate_all": 0.075, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.4, "defect_recall": 0.6, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 4, "good_loss_count": 0}
+
+conservative safe epoch 8/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 8/35:   7%|▋         | 1/15 [00:01<00:19,  1.42s/it]
+conservative safe epoch 8/35:  13%|█▎        | 2/15 [00:01<00:08,  1.47it/s]
+conservative safe epoch 8/35:  20%|██        | 3/15 [00:02<00:10,  1.13it/s]
+conservative safe epoch 8/35:  27%|██▋       | 4/15 [00:02<00:06,  1.70it/s]
+conservative safe epoch 8/35:  33%|███▎      | 5/15 [00:03<00:07,  1.35it/s]
+conservative safe epoch 8/35:  40%|████      | 6/15 [00:04<00:04,  1.82it/s]
+conservative safe epoch 8/35:  47%|████▋     | 7/15 [00:04<00:05,  1.56it/s]
+conservative safe epoch 8/35:  53%|█████▎    | 8/15 [00:05<00:03,  2.06it/s]
+conservative safe epoch 8/35:  60%|██████    | 9/15 [00:05<00:03,  1.77it/s]
+conservative safe epoch 8/35:  67%|██████▋   | 10/15 [00:05<00:02,  2.29it/s]
+conservative safe epoch 8/35:  73%|███████▎  | 11/15 [00:06<00:02,  1.86it/s]
+conservative safe epoch 8/35:  80%|████████  | 12/15 [00:06<00:01,  2.42it/s]
+conservative safe epoch 8/35:  87%|████████▋ | 13/15 [00:07<00:00,  2.12it/s]
+conservative safe epoch 8/35:  93%|█████████▎| 14/15 [00:07<00:00,  2.69it/s]
+conservative safe epoch 8/35: 100%|██████████| 15/15 [00:07<00:00,  2.62it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.15it/s]
+c
