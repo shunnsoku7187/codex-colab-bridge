@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="194" viewBox="0 0 1120 194">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#111827;font-size:13px}.title{font-size:22px;font-weight:700}.small{fill:#4b5563;font-size:12px}</style>
+<text x="34" y="36" class="title">KolektorSDD policy comparison</text>
+<text x="34" y="58" class="small">Lower cost is better; all policies use validation-selected thresholds.</text>
+<text x="34" y="104">final_selective  FP<=10% GP>=95%</text>
+<rect x="500" y="86" width="360" height="20" fill="#e5e7eb"/>
+<rect x="500" y="86" width="297.6" height="20" fill="#2563eb"/>
+<text x="880" y="102">1.00x</text>
+<text x="950" y="102" class="small">good 97.1%, false pass 0.0%</text>
+<text x="34" y="138">branchynet_upper_only  FP<=10% GP>=95%</text>
+<rect x="500" y="120" width="360" height="20" fill="#e5e7eb"/>
+<rect x="500" y="120" width="360.0" height="20" fill="#2563eb"/>
+<text x="880" y="136">1.21x</text>
+<text x="950" y="136" class="small">good 100.0%, false pass 30.0%</text>
+<text x="34" y="172">dual_sided_early_exit  FP<=10% GP>=95%</text>
+<rect x="500" y="154" width="360" height="20" fill="#e5e7eb"/>
+<rect x="500" y="154" width="360.0" height="20" fill="#2563eb"/>
+<text x="880" y="170">1.21x</text>
+<text x="950" y="170" class="small">good 100.0%, false pass 30.0%</text>
+</svg>

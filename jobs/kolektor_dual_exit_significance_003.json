@@ -1,6 +1,6 @@
 {
   "id": "kolektor_dual_exit_significance_003",
-  "status": "running",
+  "status": "done",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -10,6 +10,8 @@
   "result_file": "results/kolektor_dual_exit_significance_003.json",
   "note": "Rerun significance comparison with bounded threshold candidate search. The 002 job timed out because full observed/midpoint threshold sets caused a 5-D combinatorial search explosion.",
   "created_at": "2026-08-16T00:00:00+09:00",
-  "updated_at": "2026-08-17T14:10:56.510240+00:00",
-  "started_at": "2026-08-17T14:10:56.510223+00:00"
+  "updated_at": "2026-08-17T14:26:49.604972+00:00",
+  "started_at": "2026-08-17T14:10:56.510223+00:00",
+  "returncode": 0,
+  "finished_at": "2026-08-17T14:26:49.604507+00:00"
 }
