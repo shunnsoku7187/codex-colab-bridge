@@ -1,6 +1,6 @@
 {
   "id": "ksdd2_conservative_safe_exit_training_001",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 12000,
   "result_file": "results/ksdd2_conservative_safe_exit_training_001_summary.json",
   "note": "Run the conservative dual-sided safe-exit evaluation on KolektorSDD2 to test whether KolektorSDD failures were caused by small data or split dependence.",
-  "created_at": "2026-08-18T00:00:00+09:00"
+  "created_at": "2026-08-18T00:00:00+09:00",
+  "updated_at": "2026-08-17T17:37:14.806138+00:00",
+  "started_at": "2026-08-17T17:37:14.806119+00:00"
 }
