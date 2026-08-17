@@ -1,6 +1,6 @@
 {
   "id": "kolektor_conservative_safe_exit_training_001",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 12000,
   "result_file": "results/kolektor_conservative_safe_exit_training_001.json",
   "note": "Improved conservative safe-exit training: safe target is final-high-confidence good, ambiguous good is unsafe, defects are strongly penalized, and evaluation is aggregated over multiple seeds.",
-  "created_at": "2026-08-18T00:00:00+09:00"
+  "created_at": "2026-08-18T00:00:00+09:00",
+  "updated_at": "2026-08-17T16:39:39.165530+00:00",
+  "started_at": "2026-08-17T16:39:39.165506+00:00"
 }
