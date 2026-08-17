@@ -300,6 +300,16 @@ def apply_policy(data: dict[str, np.ndarray], row: dict) -> dict:
     return metric(data["labels"], decisions, costs)
 
 
+def eval_feasible(row: dict) -> bool:
+    constraint = row["constraint"]
+    metric_row = row["eval_metric"]
+    return feasible(
+        metric_row,
+        float(constraint["max_false_pass_rate_defect"]),
+        float(constraint["min_good_pass_rate_good"]),
+    )
+
+
 def train_model(model: ResNet18Branchy, train_loader, val_loader, weights, epochs: int, device: torch.device) -> dict:
     opt = torch.optim.AdamW(model.parameters(), lr=2e-4, weight_decay=1e-4)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=max(epochs, 1))
@@ -348,15 +358,15 @@ def write_markdown(payload: dict, path: Path) -> None:
         "",
         "## Eval comparison",
         "",
-        "| max false pass | min good pass | policy | eval good pass | eval false pass | eval avg cost | speedup |",
-        "|---:|---:|---|---:|---:|---:|---:|",
+        "| max false pass | min good pass | policy | eval feasible | eval good pass | eval false pass | eval avg cost | speedup |",
+        "|---:|---:|---|---:|---:|---:|---:|---:|",
     ]
     for row in payload["policy_rows"]:
         e = row["eval_metric"]
         lines.append(
             f"| {100 * row['constraint']['max_false_pass_rate_defect']:.1f}% | "
             f"{100 * row['constraint']['min_good_pass_rate_good']:.1f}% | "
-            f"{row['policy']} | {100 * e['good_pass_rate_good']:.2f}% | "
+            f"{row['policy']} | {'yes' if row.get('eval_feasible') else 'no'} | {100 * e['good_pass_rate_good']:.2f}% | "
             f"{100 * e['false_pass_rate_defect']:.2f}% | {e['avg_cost']:.4f} | {e['speedup_vs_final_only']:.2f}x |"
         )
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -373,14 +383,15 @@ def write_svg(payload: dict, path: Path) -> None:
         '<rect width="100%" height="100%" fill="white"/>',
         '<style>text{font-family:Arial,sans-serif;fill:#111827;font-size:13px}.title{font-size:22px;font-weight:700}.small{fill:#4b5563;font-size:12px}</style>',
         '<text x="34" y="36" class="title">KolektorSDD policy comparison</text>',
-        '<text x="34" y="58" class="small">Lower cost is better; all policies use validation-selected thresholds.</text>',
+        '<text x="34" y="58" class="small">Lower cost is useful only when the evaluation constraint is still satisfied.</text>',
     ]
     max_speed = max(float(r["eval_metric"]["speedup_vs_final_only"]) for r in rows) if rows else 1.0
     for i, row in enumerate(rows):
         y = 86 + i * row_h
         speed = float(row["eval_metric"]["speedup_vs_final_only"])
         bw = 360 * speed / max_speed
-        label = f"{row['policy']}  FP<={100*row['constraint']['max_false_pass_rate_defect']:.0f}% GP>={100*row['constraint']['min_good_pass_rate_good']:.0f}%"
+        status = "OK" if row.get("eval_feasible") else "NG"
+        label = f"{status} {row['policy']}  FP<={100*row['constraint']['max_false_pass_rate_defect']:.0f}% GP>={100*row['constraint']['min_good_pass_rate_good']:.0f}%"
         parts += [
             f'<text x="34" y="{y + 18}">{label}</text>',
             f'<rect x="500" y="{y}" width="360" height="20" fill="#e5e7eb"/>',
@@ -437,13 +448,13 @@ def main() -> None:
         for min_gp in args.min_good_pass_rates:
             selected = select_policies(val_data, max_fp, min_gp, args.max_threshold_candidates)
             for row in selected:
-                policy_rows.append(
-                    {
-                        "constraint": {"max_false_pass_rate_defect": max_fp, "min_good_pass_rate_good": min_gp},
-                        **row,
-                        "eval_metric": apply_policy(eval_data, row),
-                    }
-                )
+                row_out = {
+                    "constraint": {"max_false_pass_rate_defect": max_fp, "min_good_pass_rate_good": min_gp},
+                    **row,
+                    "eval_metric": apply_policy(eval_data, row),
+                }
+                row_out["eval_feasible"] = eval_feasible(row_out)
+                policy_rows.append(row_out)
 
     payload = {
         "purpose": "Show whether proposed dual-sided early exit is useful under fixed inspection constraints.",
