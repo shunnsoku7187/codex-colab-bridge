@@ -674,3 +674,305 @@ branchy epoch 25/45: 100%|██████████| 15/15 [00:07<00:00,  2
 
 collect:   0%|          | 0/5 [00:00<?, ?it/s]
 collect:  20%|██        | 1/5 [00:01<00:04,  1.04s/it]
+collect:  40%|████      | 2/5 [00:01<00:01,  1.87it/s]
+collect:  60%|██████    | 3/5 [00:02<00:01,  1.45it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.16it/s]
+                                                      
+{"epoch": 25, "loss": 0.420678, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 26/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 26/45:   7%|▋         | 1/15 [00:01<00:17,  1.24s/it]
+branchy epoch 26/45:  13%|█▎        | 2/15 [00:01<00:07,  1.66it/s]
+branchy epoch 26/45:  20%|██        | 3/15 [00:01<00:07,  1.68it/s]
+branchy epoch 26/45:  27%|██▋       | 4/15 [00:02<00:04,  2.41it/s]
+branchy epoch 26/45:  33%|███▎      | 5/15 [00:03<00:07,  1.40it/s]
+branchy epoch 26/45:  40%|████      | 6/15 [00:03<00:04,  1.93it/s]
+branchy epoch 26/45:  47%|████▋     | 7/15 [00:04<00:05,  1.52it/s]
+branchy epoch 26/45:  53%|█████▎    | 8/15 [00:04<00:03,  2.04it/s]
+branchy epoch 26/45:  60%|██████    | 9/15 [00:05<00:03,  1.60it/s]
+branchy epoch 26/45:  67%|██████▋   | 10/15 [00:05<00:02,  2.10it/s]
+branchy epoch 26/45:  73%|███████▎  | 11/15 [00:06<00:02,  1.89it/s]
+branchy epoch 26/45:  80%|████████  | 12/15 [00:06<00:01,  2.44it/s]
+branchy epoch 26/45:  87%|████████▋ | 13/15 [00:07<00:00,  2.10it/s]
+branchy epoch 26/45:  93%|█████████▎| 14/15 [00:07<00:00,  2.70it/s]
+branchy epoch 26/45: 100%|██████████| 15/15 [00:07<00:00,  2.59it/s]
+                                                                    
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.28it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.33it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.30it/s]
+                                                      
+{"epoch": 26, "loss": 0.396913, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 27/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 27/45:   7%|▋         | 1/15 [00:01<00:25,  1.85s/it]
+branchy epoch 27/45:  13%|█▎        | 2/15 [00:02<00:11,  1.17it/s]
+branchy epoch 27/45:  20%|██        | 3/15 [00:02<00:10,  1.13it/s]
+branchy epoch 27/45:  27%|██▋       | 4/15 [00:03<00:06,  1.68it/s]
+branchy epoch 27/45:  33%|███▎      | 5/15 [00:04<00:07,  1.34it/s]
+branchy epoch 27/45:  40%|████      | 6/15 [00:04<00:04,  1.86it/s]
+branchy epoch 27/45:  47%|████▋     | 7/15 [00:05<00:05,  1.44it/s]
+branchy epoch 27/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.94it/s]
+branchy epoch 27/45:  60%|██████    | 9/15 [00:06<00:03,  1.52it/s]
+branchy epoch 27/45:  67%|██████▋   | 10/15 [00:06<00:02,  2.02it/s]
+branchy epoch 27/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.58it/s]
+branchy epoch 27/45:  80%|████████  | 12/15 [00:07<00:01,  2.08it/s]
+branchy epoch 27/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.78it/s]
+branchy epoch 27/45:  93%|█████████▎| 14/15 [00:08<00:00,  2.32it/s]
+branchy epoch 27/45: 100%|██████████| 15/15 [00:08<00:00,  2.14it/s]
+                                                                    
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.29it/s]
+collect:  40%|████      | 2/5 [00:00<00:01,  2.44it/s]
+collect:  60%|██████    | 3/5 [00:01<00:01,  1.91it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.78it/s]
+                                                      
+{"epoch": 27, "loss": 0.382913, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 28/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 28/45:   7%|▋         | 1/15 [00:00<00:13,  1.07it/s]
+branchy epoch 28/45:  13%|█▎        | 2/15 [00:01<00:06,  2.14it/s]
+branchy epoch 28/45:  20%|██        | 3/15 [00:02<00:09,  1.25it/s]
+branchy epoch 28/45:  27%|██▋       | 4/15 [00:02<00:05,  1.85it/s]
+branchy epoch 28/45:  33%|███▎      | 5/15 [00:03<00:06,  1.58it/s]
+branchy epoch 28/45:  40%|████      | 6/15 [00:03<00:04,  2.16it/s]
+branchy epoch 28/45:  47%|████▋     | 7/15 [00:04<00:04,  1.90it/s]
+branchy epoch 28/45:  53%|█████▎    | 8/15 [00:04<00:02,  2.47it/s]
+branchy epoch 28/45:  60%|██████    | 9/15 [00:04<00:02,  2.04it/s]
+branchy epoch 28/45:  67%|██████▋   | 10/15 [00:04<00:01,  2.61it/s]
+branchy epoch 28/45:  73%|███████▎  | 11/15 [00:05<00:01,  2.18it/s]
+branchy epoch 28/45:  80%|████████  | 12/15 [00:05<00:01,  2.78it/s]
+branchy epoch 28/45:  87%|████████▋ | 13/15 [00:06<00:00,  2.21it/s]
+branchy epoch 28/45:  93%|█████████▎| 14/15 [00:06<00:00,  2.81it/s]
+branchy epoch 28/45: 100%|██████████| 15/15 [00:06<00:00,  2.63it/s]
+                                                                    
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.48it/s]
+collect:  60%|██████    | 3/5 [00:01<00:01,  1.94it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.63it/s]
+                                                      
+{"epoch": 28, "loss": 0.396271, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 29/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 29/45:   7%|▋         | 1/15 [00:01<00:21,  1.52s/it]
+branchy epoch 29/45:  13%|█▎        | 2/15 [00:01<00:09,  1.40it/s]
+branchy epoch 29/45:  20%|██        | 3/15 [00:02<00:11,  1.05it/s]
+branchy epoch 29/45:  27%|██▋       | 4/15 [00:03<00:06,  1.58it/s]
+branchy epoch 29/45:  33%|███▎      | 5/15 [00:04<00:07,  1.29it/s]
+branchy epoch 29/45:  40%|████      | 6/15 [00:04<00:05,  1.79it/s]
+branchy epoch 29/45:  47%|████▋     | 7/15 [00:05<00:05,  1.45it/s]
+branchy epoch 29/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.96it/s]
+branchy epoch 29/45:  60%|██████    | 9/15 [00:06<00:04,  1.47it/s]
+branchy epoch 29/45:  67%|██████▋   | 10/15 [00:06<00:02,  1.95it/s]
+branchy epoch 29/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.58it/s]
+branchy epoch 29/45:  80%|████████  | 12/15 [00:07<00:01,  2.07it/s]
+branchy epoch 29/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.90it/s]
+branchy epoch 29/45:  93%|█████████▎| 14/15 [00:08<00:00,  2.46it/s]
+branchy epoch 29/45: 100%|██████████| 15/15 [00:08<00:00,  2.44it/s]
+                                                                    
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.25it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.19it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  2.94it/s]
+                                                      
+{"epoch": 29, "loss": 0.460899, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 30/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 30/45:   7%|▋         | 1/15 [00:01<00:24,  1.73s/it]
+branchy epoch 30/45:  13%|█▎        | 2/15 [00:01<00:10,  1.25it/s]
+branchy epoch 30/45:  20%|██        | 3/15 [00:02<00:08,  1.38it/s]
+branchy epoch 30/45:  27%|██▋       | 4/15 [00:02<00:05,  2.01it/s]
+branchy epoch 30/45:  33%|███▎      | 5/15 [00:03<00:05,  1.99it/s]
+branchy epoch 30/45:  40%|████      | 6/15 [00:03<00:03,  2.63it/s]
+branchy epoch 30/45:  47%|████▋     | 7/15 [00:03<00:03,  2.12it/s]
+branchy epoch 30/45:  53%|█████▎    | 8/15 [00:04<00:02,  2.76it/s]
+branchy epoch 30/45:  60%|██████    | 9/15 [00:04<00:02,  2.29it/s]
+branchy epoch 30/45:  67%|██████▋   | 10/15 [00:04<00:01,  2.91it/s]
+branchy epoch 30/45:  73%|███████▎  | 11/15 [00:05<00:01,  2.29it/s]
+branchy epoch 30/45:  80%|████████  | 12/15 [00:05<00:01,  2.90it/s]
+branchy epoch 30/45:  87%|████████▋ | 13/15 [00:06<00:00,  2.19it/s]
+branchy epoch 30/45:  93%|█████████▎| 14/15 [00:06<00:00,  2.79it/s]
+branchy epoch 30/45: 100%|██████████| 15/15 [00:06<00:00,  2.54it/s]
+                                                                    
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:01<00:04,  1.06s/it]
+collect:  40%|████      | 2/5 [00:01<00:01,  1.95it/s]
+collect:  60%|██████    | 3/5 [00:02<00:01,  1.43it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.10it/s]
+                                                      
+{"epoch": 30, "loss": 0.44318, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 31/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 31/45:   7%|▋         | 1/15 [00:01<00:18,  1.35s/it]
+branchy epoch 31/45:  13%|█▎        | 2/15 [00:01<00:08,  1.53it/s]
+branchy epoch 31/45:  20%|██        | 3/15 [00:02<00:12,  1.01s/it]
+branchy epoch 31/45:  27%|██▋       | 4/15 [00:03<00:07,  1.50it/s]
+branchy epoch 31/45:  33%|███▎      | 5/15 [00:04<00:08,  1.24it/s]
+branchy epoch 31/45:  40%|████      | 6/15 [00:04<00:05,  1.72it/s]
+branchy epoch 31/45:  47%|████▋     | 7/15 [00:05<00:05,  1.47it/s]
+branchy epoch 31/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.98it/s]
+branchy epoch 31/45:  60%|██████    | 9/15 [00:06<00:03,  1.76it/s]
+branchy epoch 31/45:  67%|██████▋   | 10/15 [00:06<00:02,  2.27it/s]
+branchy epoch 31/45:  73%|███████▎  | 11/15 [00:06<00:02,  2.00it/s]
+branchy epoch 31/45:  80%|████████  | 12/15 [00:06<00:01,  2.57it/s]
+branchy epoch 31/45:  87%|████████▋ | 13/15 [00:07<00:00,  2.19it/s]
+branchy epoch 31/45:  93%|█████████▎| 14/15 [00:07<00:00,  2.79it/s]
+branchy epoch 31/45: 100%|██████████| 15/15 [00:08<00:00,  2.61it/s]
+                                                                    
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.29it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.08it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.06it/s]
+                                                      
+{"epoch": 31, "loss": 0.428535, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 32/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 32/45:   7%|▋         | 1/15 [00:00<00:11,  1.24it/s]
+branchy epoch 32/45:  13%|█▎        | 2/15 [00:00<00:05,  2.37it/s]
+branchy epoch 32/45:  20%|██        | 3/15 [00:02<00:09,  1.33it/s]
+branchy epoch 32/45:  27%|██▋       | 4/15 [00:02<00:05,  1.96it/s]
+branchy epoch 32/45:  33%|███▎      | 5/15 [00:03<00:06,  1.55it/s]
+branchy epoch 32/45:  40%|████      | 6/15 [00:03<00:04,  2.13it/s]
+branchy epoch 32/45:  47%|████▋     | 7/15 [00:04<00:04,  1.77it/s]
+branchy epoch 32/45:  53%|█████▎    | 8/15 [00:04<00:03,  2.32it/s]
+branchy epoch 32/45:  60%|██████    | 9/15 [00:05<00:03,  1.68it/s]
+branchy epoch 32/45:  67%|██████▋   | 10/15 [00:05<00:02,  2.20it/s]
+branchy epoch 32/45:  73%|███████▎  | 11/15 [00:06<00:02,  1.60it/s]
+branchy epoch 32/45:  80%|████████  | 12/15 [00:06<00:01,  2.09it/s]
+branchy epoch 32/45:  87%|████████▋ | 13/15 [00:07<00:01,  1.75it/s]
+branchy epoch 32/45:  93%|█████████▎| 14/15 [00:07<00:00,  2.27it/s]
+branchy epoch 32/45: 100%|██████████| 15/15 [00:07<00:00,  2.02it/s]
+                                                                    
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:01<00:04,  1.10s/it]
+collect:  60%|██████    | 3/5 [00:02<00:01,  1.48it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.14it/s]
+                                                      
+{"epoch": 32, "loss": 0.441725, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 33/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 33/45:   7%|▋         | 1/15 [00:01<00:18,  1.32s/it]
+branchy epoch 33/45:  13%|█▎        | 2/15 [00:01<00:08,  1.56it/s]
+branchy epoch 33/45:  20%|██        | 3/15 [00:02<00:09,  1.25it/s]
+branchy epoch 33/45:  27%|██▋       | 4/15 [00:02<00:06,  1.63it/s]
+branchy epoch 33/45:  33%|███▎      | 5/15 [00:03<00:06,  1.45it/s]
+branchy epoch 33/45:  40%|████      | 6/15 [00:03<00:04,  1.87it/s]
+branchy epoch 33/45:  47%|████▋     | 7/15 [00:04<00:04,  1.84it/s]
+branchy epoch 33/45:  53%|█████▎    | 8/15 [00:04<00:03,  2.07it/s]
+branchy epoch 33/45:  60%|██████    | 9/15 [00:05<00:02,  2.09it/s]
+branchy epoch 33/45:  67%|██████▋   | 10/15 [00:05<00:02,  2.12it/s]
+branchy epoch 33/45:  73%|███████▎  | 11/15 [00:06<00:01,  2.34it/s]
+branchy epoch 33/45:  80%|████████  | 12/15 [00:06<00:01,  2.27it/s]
+branchy epoch 33/45:  87%|████████▋ | 13/15 [00:06<00:00,  2.40it/s]
+branchy epoch 33/45:  93%|█████████▎| 14/15 [00:07<00:00,  2.35it/s]
+branchy epoch 33/45: 100%|██████████| 15/15 [00:07<00:00,  2.70it/s]
+                                                                    
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.50it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.22it/s]
+collect:  80%|████████  | 4/5 [00:01<00:00,  2.88it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  2.84it/s]
+                                                      
+{"epoch": 33, "loss": 0.415683, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 34/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 34/45:   7%|▋         | 1/15 [00:00<00:12,  1.09it/s]
+branchy epoch 34/45:  13%|█▎        | 2/15 [00:01<00:06,  2.15it/s]
+branchy epoch 34/45:  20%|██        | 3/15 [00:02<00:09,  1.25it/s]
+branchy epoch 34/45:  27%|██▋       | 4/15 [00:02<00:05,  1.85it/s]
+branchy epoch 34/45:  33%|███▎      | 5/15 [00:03<00:07,  1.39it/s]
+branchy epoch 34/45:  40%|████      | 6/15 [00:03<00:04,  1.91it/s]
+branchy epoch 34/45:  47%|████▋     | 7/15 [00:04<00:05,  1.52it/s]
+branchy epoch 34/45:  53%|█████▎    | 8/15 [00:04<00:03,  2.03it/s]
+branchy epoch 34/45:  60%|██████    | 9/15 [00:05<00:04,  1.48it/s]
+branchy epoch 34/45:  67%|██████▋   | 10/15 [00:05<00:02,  1.95it/s]
+branchy epoch 34/45:  73%|███████▎  | 11/15 [00:06<00:02,  1.44it/s]
+branchy epoch 34/45:  80%|████████  | 12/15 [00:07<00:01,  1.91it/s]
+branchy epoch 34/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.53it/s]
+branchy epoch 34/45:  93%|█████████▎| 14/15 [00:08<00:00,  2.01it/s]
+branchy epoch 34/45: 100%|██████████| 15/15 [00:08<00:00,  1.86it/s]
+                                                                    
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.06it/s]
+collect:  40%|████      | 2/5 [00:01<00:02,  1.46it/s]
+collect:  60%|██████    | 3/5 [00:01<00:01,  1.90it/s]
+collect:  80%|████████  | 4/5 [00:02<00:00,  1.94it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.59it/s]
+                                                      
+{"epoch": 34, "loss": 0.440911, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 35/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 35/45:   7%|▋         | 1/15 [00:00<00:12,  1.16it/s]
+branchy epoch 35/45:  13%|█▎        | 2/15 [00:01<00:05,  2.24it/s]
+branchy epoch 35/45:  20%|██        | 3/15 [00:02<00:09,  1.33it/s]
+branchy epoch 35/45:  27%|██▋       | 4/15 [00:02<00:05,  1.98it/s]
+branchy epoch 35/45:  33%|███▎      | 5/15 [00:03<00:06,  1.56it/s]
+branchy epoch 35/45:  40%|████      | 6/15 [00:03<00:04,  2.11it/s]
+branchy epoch 35/45:  47%|████▋     | 7/15 [00:04<00:04,  1.79it/s]
+branchy epoch 35/45:  53%|█████▎    | 8/15 [00:04<00:02,  2.36it/s]
+branchy epoch 35/45:  60%|██████    | 9/15 [00:04<00:03,  1.94it/s]
+branchy epoch 35/45:  67%|██████▋   | 10/15 [00:05<00:02,  2.46it/s]
+branchy epoch 35/45:  73%|███████▎  | 11/15 [00:05<00:01,  2.13it/s]
+branchy epoch 35/45:  80%|████████  | 12/15 [00:05<00:01,  2.66it/s]
+branchy epoch 35/45:  87%|████████▋ | 13/15 [00:06<00:00,  2.25it/s]
+branchy epoch 35/45:  93%|█████████▎| 14/15 [00:06<00:00,  2.86it/s]
+branchy epoch 35/45: 100%|██████████| 15/15 [00:07<00:00,  2.57it/s]
+                                                                    
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.37it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.08it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  2.86it/s]
+                                                      
+{"epoch": 35, "loss": 0.486037, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 36/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 36/45:   7%|▋         | 1/15 [00:01<00:18,  1.29s/it]
+branchy epoch 36/45:  13%|█▎        | 2/15 [00:01<00:08,  1.53it/s]
+branchy epoch 36/45:  20%|██        | 3/15 [00:02<00:10,  1.10it/s]
+branchy epoch 36/45:  27%|██▋       | 4/15 [00:02<00:07,  1.53it/s]
+branchy epoch 36/45:  33%|███▎      | 5/15 [00:03<00:07,  1.32it/s]
+branchy epoch 36/45:  40%|████      | 6/15 [00:04<00:05,  1.56it/s]
+branchy epoch 36/45:  47%|████▋     | 7/15 [00:05<00:05,  1.45it/s]
+branchy epoch 36/45:  53%|█████▎    | 8/15 [00:05<00:04,  1.66it/s]
+branchy epoch 36/45:  60%|██████    | 9/15 [00:06<00:03,  1.74it/s]
+branchy epoch 36/45:  67%|██████▋   | 10/15 [00:06<00:03,  1.51it/s]
+branchy epoch 36/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.72it/s]
+branchy epoch 36/45:  80%|████████  | 12/15 [00:08<00:02,  1.48it/s]
+branchy epoch 36/45:  87%|████████▋ | 13/15 [00:08<00:01,  1.79it/s]
+branchy epoch 36/45:  93%|█████████▎| 14/15 [00:09<00:00,  1.58it/s]
+branchy epoch 36/45: 100%|██████████| 15/15 [00:09<00:00,  2.09it/s]
+                                                                    
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.56it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.16it/s]
+collect:  80%|████████  | 4/5 [00:01<00:00,  2.76it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  2.82it/s]
+                                                      
+{"epoch": 36, "loss": 0.459133, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 37/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 37/45:   7%|▋         | 1/15 [00:00<00:13,  1.05it/s]
+branchy epoch 37/45:  13%|█▎        | 2/15 [00:01<00:06,  2.12it/s]
+branchy epoch 37/45:  20%|██        | 3/15 [00:02<00:08,  1.38it/s]
+branchy epoch 37/45:  27%|██▋       | 4/15 [00:02<00:05,  2.03it/s]
+branchy epoch 37/45:  33%|███▎      | 5/15 [00:03<00:06,  1.49it/s]
+branchy epoch 37/45:  40%|████      | 6/15 [00:03<00:04,  2.03it/s]
+branchy epoch 37/45:  47%|████▋     | 7/15 [00:04<00:04,  1.84it/s]
+branchy epoch 37/45:  53%|█████▎    | 8/15 [00:04<00:03,  2.33it/s]
+branchy epoch 37/45:  60%|██████    | 9/15 [00:04<00:02,  2.05it/s]
+branchy epoch 37/45:  67%|██████▋   | 10/15 [00:05<00:02,  2.19it/s]
+branchy epoch 37/45:  73%|███████▎  | 11/15 [00:05<00:02,  1.99it/s]
+branchy epoch 37/45:  80%|████████  | 12/15 [00:06<00:01,  2.37it/s]
+branchy epoch 37/45:  87%|████████▋ | 13/15 [00:06<00:00,  2.10it/s]
+b
