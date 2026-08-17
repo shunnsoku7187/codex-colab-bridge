@@ -3,3 +3,4 @@
 {"time": "2026-08-17T16:12:17.206736+00:00", "event": "process_start", "command": "python -m pip install -r requirements-colab.txt && python -m scripts.kolektor_auxiliary_safe_exit_training --output results/kolektor_auxiliary_safe_exit_training_001_summary.json --markdown docs/kolektor_auxiliary_safe_exit_training_001.md --checkpoint artifacts/kolektor_auxiliary_safe_exit_training_001/resnet18_safe_branchy.pt --epochs 45 --batch-size 16 --image-height 512 --image-width 256 --seed 123 --safe-loss-weight 1.0 --max-false-pass-rates 0.0 0.1 --min-good-pass-rates 0.95 0.98 --max-threshold-candidates 13 --require-cuda", "cwd": "/content/codex_colab_bridge/codex-colab-bridge"}
 {"time": "2026-08-17T16:14:17.207848+00:00", "event": "process_heartbeat", "elapsed_sec": 120.001}
 {"time": "2026-08-17T16:16:19.316971+00:00", "event": "process_heartbeat", "elapsed_sec": 242.11}
+{"time": "2026-08-17T16:18:21.137735+00:00", "event": "process_heartbeat", "elapsed_sec": 363.931}
