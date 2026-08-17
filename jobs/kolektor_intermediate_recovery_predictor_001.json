@@ -1,6 +1,6 @@
 {
   "id": "kolektor_intermediate_recovery_predictor_001",
-  "status": "running",
+  "status": "done",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -10,6 +10,8 @@
   "result_file": "results/kolektor_intermediate_recovery_predictor_001.json",
   "note": "Use already-computed ResNet intermediate activations at early exits to predict whether a sample will recover to a reliable final good pass. No extra CNN is evaluated.",
   "created_at": "2026-08-18T00:00:00+09:00",
-  "updated_at": "2026-08-17T15:32:40.708000+00:00",
-  "started_at": "2026-08-17T15:32:40.707976+00:00"
+  "updated_at": "2026-08-17T15:50:45.831680+00:00",
+  "started_at": "2026-08-17T15:32:40.707976+00:00",
+  "returncode": 0,
+  "finished_at": "2026-08-17T15:50:45.829499+00:00"
 }
