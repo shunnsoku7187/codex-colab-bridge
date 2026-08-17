@@ -1,6 +1,6 @@
 {
   "id": "kolektor_late_recovery_predictor_001",
-  "status": "running",
+  "status": "done",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -10,6 +10,8 @@
   "result_file": "results/kolektor_late_recovery_predictor_001.json",
   "note": "Test a learned late-recovery predictor: predict whether a sample will become a reliable final good pass, then early-reject samples predicted not to recover. Compare against final-only selective and upper-only BranchyNet.",
   "created_at": "2026-08-17T00:00:00+09:00",
-  "updated_at": "2026-08-17T14:48:04.047185+00:00",
-  "started_at": "2026-08-17T14:48:04.047164+00:00"
+  "updated_at": "2026-08-17T14:56:17.888507+00:00",
+  "started_at": "2026-08-17T14:48:04.047164+00:00",
+  "returncode": 0,
+  "finished_at": "2026-08-17T14:56:17.887907+00:00"
 }
