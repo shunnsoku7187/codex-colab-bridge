@@ -1,0 +1,285 @@
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 1)) (3.10.0)
+Requirement already satisfied: matplotlib-venn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 2)) (1.1.2)
+Requirement already satisfied: torchinfo in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 3)) (1.8.0)
+Requirement already satisfied: transformers in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 4)) (5.13.1)
+Requirement already satisfied: opencv-python-headless in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 5)) (5.0.0.93)
+Requirement already satisfied: scikit-learn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 6)) (1.6.1)
+Requirement already satisfied: lightgbm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 7)) (4.6.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 8)) (4.67.3)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (4.63.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (1.5.0)
+Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (2.0.2)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (26.2)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (11.3.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (2.9.0.post0)
+Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 2)) (1.16.3)
+Requirement already satisfied: huggingface-hub<2.0,>=1.5.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (1.23.0)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (6.0.3)
+Requirement already satisfied: regex>=2025.10.22 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (2025.11.3)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (0.22.2)
+Requirement already satisfied: typer in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (0.26.8)
+Requirement already satisfied: safetensors>=0.8.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (0.8.0)
+Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 6)) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 6)) (3.6.0)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (8.4.2)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (3.29.7)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (2025.3.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.5.1 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (1.5.1)
+Requirement already satisfied: httpx<1,>=0.23.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (0.28.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (4.16.0)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.7->matplotlib->-r requirements-colab.txt (line 1)) (1.17.0)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (13.9.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (0.0.4)
+Requirement already satisfied: anyio in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (4.14.2)
+Requirement already satisfied: certifi in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (2026.6.17)
+Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (1.0.9)
+Requirement already satisfied: idna in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (3.18)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/dist-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (0.16.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (0.1.2)
+device=cuda
+Extracting /content/drive/MyDrive/Research_Experiment/data/kolektor_sdd/KolektorSDD.zip
+
+conservative safe epoch 1/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 1/35:   7%|▋         | 1/15 [00:02<00:35,  2.53s/it]
+conservative safe epoch 1/35:  13%|█▎        | 2/15 [00:02<00:14,  1.13s/it]
+conservative safe epoch 1/35:  20%|██        | 3/15 [00:02<00:08,  1.49it/s]
+conservative safe epoch 1/35:  27%|██▋       | 4/15 [00:02<00:05,  2.18it/s]
+conservative safe epoch 1/35:  33%|███▎      | 5/15 [00:03<00:03,  2.98it/s]
+conservative safe epoch 1/35:  40%|████      | 6/15 [00:03<00:03,  2.52it/s]
+conservative safe epoch 1/35:  47%|████▋     | 7/15 [00:03<00:03,  2.63it/s]
+conservative safe epoch 1/35:  53%|█████▎    | 8/15 [00:04<00:02,  2.58it/s]
+conservative safe epoch 1/35:  60%|██████    | 9/15 [00:04<00:02,  2.73it/s]
+conservative safe epoch 1/35:  67%|██████▋   | 10/15 [00:05<00:01,  2.60it/s]
+conservative safe epoch 1/35:  73%|███████▎  | 11/15 [00:05<00:01,  2.85it/s]
+conservative safe epoch 1/35:  80%|████████  | 12/15 [00:05<00:01,  2.61it/s]
+conservative safe epoch 1/35:  87%|████████▋ | 13/15 [00:06<00:00,  2.71it/s]
+conservative safe epoch 1/35:  93%|█████████▎| 14/15 [00:06<00:00,  2.59it/s]
+conservative safe epoch 1/35: 100%|██████████| 15/15 [00:06<00:00,  3.03it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.61it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.40it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.46it/s]
+                                                      
+{"epoch": 1, "loss": 1.014055, "safe_positive_rate_train": 0.0, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.6, "reject_rate_all": 0.4, "good_pass_rate_good": 0.681159, "good_loss_rate_good": 0.318841, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 22}
+
+conservative safe epoch 2/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 2/35:   7%|▋         | 1/15 [00:01<00:18,  1.35s/it]
+conservative safe epoch 2/35:  13%|█▎        | 2/15 [00:01<00:08,  1.57it/s]
+conservative safe epoch 2/35:  20%|██        | 3/15 [00:02<00:07,  1.61it/s]
+conservative safe epoch 2/35:  27%|██▋       | 4/15 [00:02<00:05,  2.12it/s]
+conservative safe epoch 2/35:  33%|███▎      | 5/15 [00:02<00:05,  1.97it/s]
+conservative safe epoch 2/35:  40%|████      | 6/15 [00:03<00:03,  2.26it/s]
+conservative safe epoch 2/35:  47%|████▋     | 7/15 [00:04<00:04,  1.75it/s]
+conservative safe epoch 2/35:  53%|█████▎    | 8/15 [00:04<00:03,  2.03it/s]
+conservative safe epoch 2/35:  60%|██████    | 9/15 [00:05<00:03,  1.59it/s]
+conservative safe epoch 2/35:  67%|██████▋   | 10/15 [00:05<00:02,  2.11it/s]
+conservative safe epoch 2/35:  73%|███████▎  | 11/15 [00:06<00:02,  1.71it/s]
+conservative safe epoch 2/35:  80%|████████  | 12/15 [00:06<00:01,  2.24it/s]
+conservative safe epoch 2/35:  87%|████████▋ | 13/15 [00:07<00:01,  1.76it/s]
+conservative safe epoch 2/35:  93%|█████████▎| 14/15 [00:07<00:00,  2.28it/s]
+conservative safe epoch 2/35: 100%|██████████| 15/15 [00:07<00:00,  2.07it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:01<00:04,  1.12s/it]
+collect:  60%|██████    | 3/5 [00:01<00:01,  1.77it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.79it/s]
+                                                      
+{"epoch": 2, "loss": 0.73997, "safe_positive_rate_train": 0.0, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+conservative safe epoch 3/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 3/35:   7%|▋         | 1/15 [00:01<00:20,  1.44s/it]
+conservative safe epoch 3/35:  13%|█▎        | 2/15 [00:01<00:08,  1.50it/s]
+conservative safe epoch 3/35:  20%|██        | 3/15 [00:02<00:06,  1.72it/s]
+conservative safe epoch 3/35:  27%|██▋       | 4/15 [00:02<00:04,  2.49it/s]
+conservative safe epoch 3/35:  33%|███▎      | 5/15 [00:02<00:05,  1.96it/s]
+conservative safe epoch 3/35:  40%|████      | 6/15 [00:02<00:03,  2.65it/s]
+conservative safe epoch 3/35:  47%|████▋     | 7/15 [00:03<00:03,  2.22it/s]
+conservative safe epoch 3/35:  53%|█████▎    | 8/15 [00:03<00:02,  2.87it/s]
+conservative safe epoch 3/35:  60%|██████    | 9/15 [00:04<00:02,  2.29it/s]
+conservative safe epoch 3/35:  67%|██████▋   | 10/15 [00:04<00:01,  2.95it/s]
+conservative safe epoch 3/35:  73%|███████▎  | 11/15 [00:05<00:01,  2.35it/s]
+conservative safe epoch 3/35:  80%|████████  | 12/15 [00:05<00:01,  2.93it/s]
+conservative safe epoch 3/35:  87%|████████▋ | 13/15 [00:05<00:00,  2.42it/s]
+conservative safe epoch 3/35:  93%|█████████▎| 14/15 [00:05<00:00,  3.03it/s]
+conservative safe epoch 3/35: 100%|██████████| 15/15 [00:06<00:00,  2.86it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.53it/s]
+collect:  40%|████      | 2/5 [00:00<00:01,  2.78it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.17it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.17it/s]
+                                                      
+{"epoch": 3, "loss": 0.658469, "safe_positive_rate_train": 0.0, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+conservative safe epoch 4/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 4/35:   7%|▋         | 1/15 [00:01<00:14,  1.03s/it]
+conservative safe epoch 4/35:  13%|█▎        | 2/15 [00:01<00:06,  1.94it/s]
+conservative safe epoch 4/35:  20%|██        | 3/15 [00:02<00:09,  1.22it/s]
+conservative safe epoch 4/35:  27%|██▋       | 4/15 [00:02<00:06,  1.70it/s]
+conservative safe epoch 4/35:  33%|███▎      | 5/15 [00:03<00:06,  1.49it/s]
+conservative safe epoch 4/35:  40%|████      | 6/15 [00:03<00:05,  1.66it/s]
+conservative safe epoch 4/35:  47%|████▋     | 7/15 [00:04<00:05,  1.49it/s]
+conservative safe epoch 4/35:  53%|█████▎    | 8/15 [00:05<00:04,  1.72it/s]
+conservative safe epoch 4/35:  60%|██████    | 9/15 [00:05<00:03,  1.53it/s]
+conservative safe epoch 4/35:  67%|██████▋   | 10/15 [00:06<00:02,  1.91it/s]
+conservative safe epoch 4/35:  73%|███████▎  | 11/15 [00:07<00:02,  1.56it/s]
+conservative safe epoch 4/35:  80%|████████  | 12/15 [00:07<00:01,  1.90it/s]
+conservative safe epoch 4/35:  87%|████████▋ | 13/15 [00:08<00:01,  1.68it/s]
+conservative safe epoch 4/35:  93%|█████████▎| 14/15 [00:08<00:00,  2.22it/s]
+conservative safe epoch 4/35: 100%|██████████| 15/15 [00:08<00:00,  2.34it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.48it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.30it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.37it/s]
+                                                      
+{"epoch": 4, "loss": 0.600799, "safe_positive_rate_train": 0.0, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+conservative safe epoch 5/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 5/35:   7%|▋         | 1/15 [00:00<00:11,  1.20it/s]
+conservative safe epoch 5/35:  13%|█▎        | 2/15 [00:01<00:05,  2.25it/s]
+conservative safe epoch 5/35:  20%|██        | 3/15 [00:01<00:07,  1.61it/s]
+conservative safe epoch 5/35:  27%|██▋       | 4/15 [00:02<00:05,  2.03it/s]
+conservative safe epoch 5/35:  33%|███▎      | 5/15 [00:02<00:05,  1.73it/s]
+conservative safe epoch 5/35:  40%|████      | 6/15 [00:03<00:04,  2.16it/s]
+conservative safe epoch 5/35:  47%|████▋     | 7/15 [00:03<00:03,  2.07it/s]
+conservative safe epoch 5/35:  53%|█████▎    | 8/15 [00:03<00:02,  2.51it/s]
+conservative safe epoch 5/35:  60%|██████    | 9/15 [00:04<00:02,  2.17it/s]
+conservative safe epoch 5/35:  67%|██████▋   | 10/15 [00:04<00:01,  2.81it/s]
+conservative safe epoch 5/35:  73%|███████▎  | 11/15 [00:05<00:01,  2.36it/s]
+conservative safe epoch 5/35:  80%|████████  | 12/15 [00:05<00:01,  2.96it/s]
+conservative safe epoch 5/35:  87%|████████▋ | 13/15 [00:05<00:00,  2.38it/s]
+conservative safe epoch 5/35:  93%|█████████▎| 14/15 [00:06<00:00,  3.02it/s]
+conservative safe epoch 5/35: 100%|██████████| 15/15 [00:06<00:00,  2.85it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.44it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.15it/s]
+collect:  80%|████████  | 4/5 [00:01<00:00,  2.87it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.61it/s]
+                                                      
+{"epoch": 5, "loss": 0.545589, "safe_positive_rate_train": 0.0, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+conservative safe epoch 6/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 6/35:   7%|▋         | 1/15 [00:01<00:20,  1.50s/it]
+conservative safe epoch 6/35:  13%|█▎        | 2/15 [00:01<00:09,  1.41it/s]
+conservative safe epoch 6/35:  20%|██        | 3/15 [00:03<00:12,  1.01s/it]
+conservative safe epoch 6/35:  27%|██▋       | 4/15 [00:03<00:07,  1.48it/s]
+conservative safe epoch 6/35:  33%|███▎      | 5/15 [00:04<00:08,  1.14it/s]
+conservative safe epoch 6/35:  40%|████      | 6/15 [00:04<00:05,  1.61it/s]
+conservative safe epoch 6/35:  47%|████▋     | 7/15 [00:05<00:05,  1.34it/s]
+conservative safe epoch 6/35:  53%|█████▎    | 8/15 [00:05<00:03,  1.78it/s]
+conservative safe epoch 6/35:  60%|██████    | 9/15 [00:06<00:03,  1.65it/s]
+conservative safe epoch 6/35:  67%|██████▋   | 10/15 [00:06<00:02,  2.18it/s]
+conservative safe epoch 6/35:  73%|███████▎  | 11/15 [00:07<00:02,  1.93it/s]
+conservative safe epoch 6/35:  80%|████████  | 12/15 [00:07<00:01,  2.50it/s]
+conservative safe epoch 6/35:  87%|████████▋ | 13/15 [00:07<00:00,  2.18it/s]
+conservative safe epoch 6/35:  93%|█████████▎| 14/15 [00:08<00:00,  2.78it/s]
+conservative safe epoch 6/35: 100%|██████████| 15/15 [00:08<00:00,  2.70it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.40it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.19it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.28it/s]
+                                                      
+{"epoch": 6, "loss": 1.951949, "safe_positive_rate_train": 0.384937, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+conservative safe epoch 7/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 7/35:   7%|▋         | 1/15 [00:00<00:12,  1.15it/s]
+conservative safe epoch 7/35:  13%|█▎        | 2/15 [00:01<00:05,  2.23it/s]
+conservative safe epoch 7/35:  20%|██        | 3/15 [00:02<00:08,  1.34it/s]
+conservative safe epoch 7/35:  27%|██▋       | 4/15 [00:02<00:05,  1.98it/s]
+conservative safe epoch 7/35:  33%|███▎      | 5/15 [00:02<00:05,  1.81it/s]
+conservative safe epoch 7/35:  40%|████      | 6/15 [00:03<00:03,  2.41it/s]
+conservative safe epoch 7/35:  47%|████▋     | 7/15 [00:03<00:03,  2.02it/s]
+conservative safe epoch 7/35:  53%|█████▎    | 8/15 [00:03<00:02,  2.56it/s]
+conservative safe epoch 7/35:  60%|██████    | 9/15 [00:04<00:02,  2.21it/s]
+conservative safe epoch 7/35:  67%|██████▋   | 10/15 [00:04<00:01,  2.82it/s]
+conservative safe epoch 7/35:  73%|███████▎  | 11/15 [00:05<00:01,  2.20it/s]
+conservative safe epoch 7/35:  80%|████████  | 12/15 [00:05<00:01,  2.79it/s]
+conservative safe epoch 7/35:  87%|████████▋ | 13/15 [00:06<00:01,  1.96it/s]
+conservative safe epoch 7/35:  93%|█████████▎| 14/15 [00:06<00:00,  2.52it/s]
+conservative safe epoch 7/35: 100%|██████████| 15/15 [00:07<00:00,  2.13it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:01<00:04,  1.10s/it]
+collect:  60%|██████    | 3/5 [00:02<00:01,  1.52it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.23it/s]
+                                                      
+{"epoch": 7, "loss": 1.743665, "safe_positive_rate_train": 0.41841, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+conservative safe epoch 8/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 8/35:   7%|▋         | 1/15 [00:01<00:19,  1.37s/it]
+conservative safe epoch 8/35:  13%|█▎        | 2/15 [00:01<00:08,  1.54it/s]
+conservative safe epoch 8/35:  20%|██        | 3/15 [00:02<00:10,  1.09it/s]
+conservative safe epoch 8/35:  27%|██▋       | 4/15 [00:03<00:07,  1.39it/s]
+conservative safe epoch 8/35:  33%|███▎      | 5/15 [00:03<00:06,  1.51it/s]
+conservative safe epoch 8/35:  40%|████      | 6/15 [00:03<00:04,  1.91it/s]
+conservative safe epoch 8/35:  47%|████▋     | 7/15 [00:04<00:04,  1.91it/s]
+conservative safe epoch 8/35:  53%|█████▎    | 8/15 [00:04<00:03,  2.20it/s]
+conservative safe epoch 8/35:  60%|██████    | 9/15 [00:05<00:02,  2.14it/s]
+conservative safe epoch 8/35:  67%|██████▋   | 10/15 [00:05<00:02,  2.27it/s]
+conservative safe epoch 8/35:  73%|███████▎  | 11/15 [00:06<00:01,  2.21it/s]
+conservative safe epoch 8/35:  80%|████████  | 12/15 [00:06<00:01,  2.50it/s]
+conservative safe epoch 8/35:  87%|████████▋ | 13/15 [00:06<00:00,  2.33it/s]
+conservative safe epoch 8/35:  93%|█████████▎| 14/15 [00:07<00:00,  2.59it/s]
+conservative safe epoch 8/35: 100%|██████████| 15/15 [00:07<00:00,  2.60it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.77it/s]
+collect:  40%|████      | 2/5 [00:00<00:00,  3.34it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.19it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.14it/s]
+                                                      
+{"epoch": 8, "loss": 1.651871, "safe_positive_rate_train": 0.430962, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+conservative safe epoch 9/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 9/35:   7%|▋         | 1/15 [00:00<00:11,  1.21it/s]
+conservative safe epoch 9/35:  13%|█▎        | 2/15 [00:00<00:05,  2.36it/s]
+conservative safe epoch 9/35:  20%|██        | 3/15 [00:02<00:09,  1.31it/s]
+conservative safe epoch 9/35:  27%|██▋       | 4/15 [00:02<00:05,  1.91it/s]
+conservative safe epoch 9/35:  33%|███▎      | 5/15 [00:03<00:05,  1.69it/s]
+conservative safe epoch 9/35:  40%|████      | 6/15 [00:03<00:03,  2.28it/s]
+conservative safe epoch 9/35:  47%|████▋     | 7/15 [00:04<00:05,  1.57it/s]
+conservative safe epoch 9/35:  53%|█████▎    | 8/15 [00:04<00:03,  2.08it/s]
+conservative safe epoch 9/35:  60%|██████    | 9/15 [00:05<00:03,  1.56it/s]
+conservative safe epoch 9/35:  67%|██████▋   | 10/15 [00:05<00:02,  2.04it/s]
+conservative safe epoch 9/35:  73%|███████▎  | 11/15 [00:06<00:02,  1.52it/s]
+conservative safe epoch 9/35:  80%|████████  | 12/15 [00:06<00:01,  2.00it/s]
+conservative safe epoch 9/35:  87%|████████▋ | 13/15 [00:07<00:01,  1.55it/s]
+conservative safe epoch 9/35:  93%|█████████▎| 14/15 [00:07<00:00,  2.05it/s]
+conservative safe epoch 9/35: 100%|██████████| 15/15 [00:08<00:00,  1.88it/s]
+                                                                             
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:01<00:04,  1.04s/it]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.06it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.98it/s]
+                                                      
+{"epoch": 9, "loss": 1.57555, "safe_positive_rate_train": 0.472803, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+conservative safe epoch 10/35:   0%|          | 0/15 [00:00<?, ?it/s]
+conservative safe epoch 10/35:   7%|▋         | 1/15 [00:00<00:11,  1.23it/s]
+conservative safe epoch 10/35:  13%|█▎        | 2/15 [00:00<00:05,  2.40it/s]
+conservative safe epoch 10/35:  20%|██        | 3/15 [00:02<00:09,  1.28it/s]
+conservative safe epoch 10/35:  27%|██▋       | 4/15 [00:02<00:05,  1.92it/s]
+conservative safe epoch 10/35:  33%|███▎      | 5/15 [00:02<00:05,  1.71it/s]
+conservative safe epoch 10/35:  40%|████      | 6/15 [00:03<00:03,  2.28it/s]
+conservative safe epoch 10/35:  47%|████▋     | 7/15 [00:03<00:04,  1.93it/s]
+conservative safe epoch 10/35:  53%|█████▎    | 8/15 [00:03<00:02,  2.55it/s]
+c
