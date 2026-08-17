@@ -1,0 +1,291 @@
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 1)) (3.10.0)
+Requirement already satisfied: matplotlib-venn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 2)) (1.1.2)
+Requirement already satisfied: torchinfo in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 3)) (1.8.0)
+Requirement already satisfied: transformers in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 4)) (5.13.1)
+Requirement already satisfied: opencv-python-headless in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 5)) (5.0.0.93)
+Requirement already satisfied: scikit-learn in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 6)) (1.6.1)
+Requirement already satisfied: lightgbm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 7)) (4.6.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from -r requirements-colab.txt (line 8)) (4.67.3)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (4.63.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (1.5.0)
+Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (2.0.2)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (26.2)
+Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (11.3.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib->-r requirements-colab.txt (line 1)) (2.9.0.post0)
+Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from matplotlib-venn->-r requirements-colab.txt (line 2)) (1.16.3)
+Requirement already satisfied: huggingface-hub<2.0,>=1.5.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (1.23.0)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (6.0.3)
+Requirement already satisfied: regex>=2025.10.22 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (2025.11.3)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (0.22.2)
+Requirement already satisfied: typer in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (0.26.8)
+Requirement already satisfied: safetensors>=0.8.0 in /usr/local/lib/python3.12/dist-packages (from transformers->-r requirements-colab.txt (line 4)) (0.8.0)
+Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 6)) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn->-r requirements-colab.txt (line 6)) (3.6.0)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (8.4.2)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (3.29.7)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (2025.3.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.5.1 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (1.5.1)
+Requirement already satisfied: httpx<1,>=0.23.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (0.28.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (4.16.0)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.7->matplotlib->-r requirements-colab.txt (line 1)) (1.17.0)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (13.9.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/lib/python3.12/dist-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (0.0.4)
+Requirement already satisfied: anyio in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (4.14.2)
+Requirement already satisfied: certifi in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (2026.6.17)
+Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (1.0.9)
+Requirement already satisfied: idna in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (3.18)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/dist-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers->-r requirements-colab.txt (line 4)) (0.16.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (0.1.2)
+device=cuda
+Extracting /content/drive/MyDrive/Research_Experiment/data/kolektor_sdd/KolektorSDD.zip
+
+branchy epoch 1/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 1/45:   7%|▋         | 1/15 [00:01<00:26,  1.91s/it]
+branchy epoch 1/45:  13%|█▎        | 2/15 [00:02<00:11,  1.15it/s]
+branchy epoch 1/45:  20%|██        | 3/15 [00:02<00:06,  1.88it/s]
+branchy epoch 1/45:  27%|██▋       | 4/15 [00:02<00:04,  2.72it/s]
+branchy epoch 1/45:  33%|███▎      | 5/15 [00:02<00:03,  3.30it/s]
+branchy epoch 1/45:  40%|████      | 6/15 [00:02<00:03,  2.71it/s]
+branchy epoch 1/45:  47%|████▋     | 7/15 [00:03<00:02,  2.76it/s]
+branchy epoch 1/45:  53%|█████▎    | 8/15 [00:03<00:03,  2.30it/s]
+branchy epoch 1/45:  60%|██████    | 9/15 [00:04<00:02,  2.43it/s]
+branchy epoch 1/45:  67%|██████▋   | 10/15 [00:04<00:02,  2.29it/s]
+branchy epoch 1/45:  73%|███████▎  | 11/15 [00:05<00:01,  2.23it/s]
+branchy epoch 1/45:  80%|████████  | 12/15 [00:05<00:01,  1.88it/s]
+branchy epoch 1/45:  87%|████████▋ | 13/15 [00:06<00:00,  2.03it/s]
+branchy epoch 1/45:  93%|█████████▎| 14/15 [00:06<00:00,  1.97it/s]
+branchy epoch 1/45: 100%|██████████| 15/15 [00:07<00:00,  2.25it/s]
+                                                                   
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.05it/s]
+collect:  60%|██████    | 3/5 [00:01<00:01,  1.72it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.48it/s]
+                                                      
+{"epoch": 1, "loss": 1.060268, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.175, "reject_rate_all": 0.825, "good_pass_rate_good": 0.202899, "good_loss_rate_good": 0.797101, "false_pass_rate_defect": 0.0, "defect_recall": 1.0, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 0, "good_loss_count": 55}
+
+branchy epoch 2/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 2/45:   7%|▋         | 1/15 [00:01<00:18,  1.30s/it]
+branchy epoch 2/45:  13%|█▎        | 2/15 [00:01<00:07,  1.64it/s]
+branchy epoch 2/45:  20%|██        | 3/15 [00:01<00:06,  1.87it/s]
+branchy epoch 2/45:  27%|██▋       | 4/15 [00:02<00:04,  2.67it/s]
+branchy epoch 2/45:  33%|███▎      | 5/15 [00:02<00:04,  2.16it/s]
+branchy epoch 2/45:  40%|████      | 6/15 [00:02<00:03,  2.89it/s]
+branchy epoch 2/45:  47%|████▋     | 7/15 [00:03<00:03,  2.32it/s]
+branchy epoch 2/45:  53%|█████▎    | 8/15 [00:03<00:02,  2.98it/s]
+branchy epoch 2/45:  60%|██████    | 9/15 [00:03<00:02,  2.56it/s]
+branchy epoch 2/45:  67%|██████▋   | 10/15 [00:04<00:01,  3.27it/s]
+branchy epoch 2/45:  73%|███████▎  | 11/15 [00:04<00:01,  2.35it/s]
+branchy epoch 2/45:  80%|████████  | 12/15 [00:04<00:01,  2.97it/s]
+branchy epoch 2/45:  87%|████████▋ | 13/15 [00:05<00:00,  2.59it/s]
+branchy epoch 2/45:  93%|█████████▎| 14/15 [00:05<00:00,  3.30it/s]
+branchy epoch 2/45: 100%|██████████| 15/15 [00:05<00:00,  2.98it/s]
+                                                                   
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.49it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.56it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.62it/s]
+                                                      
+{"epoch": 2, "loss": 0.749484, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.55, "reject_rate_all": 0.45, "good_pass_rate_good": 0.637681, "good_loss_rate_good": 0.362319, "false_pass_rate_defect": 0.0, "defect_recall": 1.0, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 0, "good_loss_count": 25}
+
+branchy epoch 3/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 3/45:   7%|▋         | 1/15 [00:01<00:18,  1.31s/it]
+branchy epoch 3/45:  13%|█▎        | 2/15 [00:01<00:08,  1.59it/s]
+branchy epoch 3/45:  20%|██        | 3/15 [00:02<00:07,  1.70it/s]
+branchy epoch 3/45:  27%|██▋       | 4/15 [00:02<00:04,  2.23it/s]
+branchy epoch 3/45:  33%|███▎      | 5/15 [00:03<00:05,  1.68it/s]
+branchy epoch 3/45:  40%|████      | 6/15 [00:03<00:03,  2.28it/s]
+branchy epoch 3/45:  47%|████▋     | 7/15 [00:04<00:05,  1.59it/s]
+branchy epoch 3/45:  53%|█████▎    | 8/15 [00:04<00:03,  2.07it/s]
+branchy epoch 3/45:  60%|██████    | 9/15 [00:05<00:03,  1.67it/s]
+branchy epoch 3/45:  67%|██████▋   | 10/15 [00:05<00:02,  2.02it/s]
+branchy epoch 3/45:  73%|███████▎  | 11/15 [00:06<00:02,  1.51it/s]
+branchy epoch 3/45:  80%|████████  | 12/15 [00:06<00:01,  1.96it/s]
+branchy epoch 3/45:  87%|████████▋ | 13/15 [00:07<00:01,  1.60it/s]
+branchy epoch 3/45:  93%|█████████▎| 14/15 [00:07<00:00,  2.12it/s]
+branchy epoch 3/45: 100%|██████████| 15/15 [00:08<00:00,  2.01it/s]
+                                                                   
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.55it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.46it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.50it/s]
+                                                      
+{"epoch": 3, "loss": 0.671007, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 4/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 4/45:   7%|▋         | 1/15 [00:01<00:17,  1.27s/it]
+branchy epoch 4/45:  13%|█▎        | 2/15 [00:01<00:08,  1.53it/s]
+branchy epoch 4/45:  20%|██        | 3/15 [00:02<00:07,  1.63it/s]
+branchy epoch 4/45:  27%|██▋       | 4/15 [00:02<00:04,  2.39it/s]
+branchy epoch 4/45:  33%|███▎      | 5/15 [00:02<00:04,  2.14it/s]
+branchy epoch 4/45:  40%|████      | 6/15 [00:02<00:03,  2.84it/s]
+branchy epoch 4/45:  47%|████▋     | 7/15 [00:03<00:03,  2.32it/s]
+branchy epoch 4/45:  53%|█████▎    | 8/15 [00:03<00:02,  2.53it/s]
+branchy epoch 4/45:  60%|██████    | 9/15 [00:04<00:02,  2.33it/s]
+branchy epoch 4/45:  67%|██████▋   | 10/15 [00:04<00:01,  2.79it/s]
+branchy epoch 4/45:  73%|███████▎  | 11/15 [00:05<00:01,  2.36it/s]
+branchy epoch 4/45:  80%|████████  | 12/15 [00:05<00:01,  2.98it/s]
+branchy epoch 4/45:  87%|████████▋ | 13/15 [00:05<00:00,  2.41it/s]
+branchy epoch 4/45:  93%|█████████▎| 14/15 [00:05<00:00,  3.08it/s]
+branchy epoch 4/45: 100%|██████████| 15/15 [00:06<00:00,  2.71it/s]
+                                                                   
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.44it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.29it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  2.94it/s]
+                                                      
+{"epoch": 4, "loss": 0.617268, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 5/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 5/45:   7%|▋         | 1/15 [00:01<00:21,  1.57s/it]
+branchy epoch 5/45:  13%|█▎        | 2/15 [00:01<00:09,  1.35it/s]
+branchy epoch 5/45:  20%|██        | 3/15 [00:02<00:11,  1.05it/s]
+branchy epoch 5/45:  27%|██▋       | 4/15 [00:03<00:07,  1.48it/s]
+branchy epoch 5/45:  33%|███▎      | 5/15 [00:04<00:07,  1.26it/s]
+branchy epoch 5/45:  40%|████      | 6/15 [00:04<00:05,  1.75it/s]
+branchy epoch 5/45:  47%|████▋     | 7/15 [00:05<00:05,  1.42it/s]
+branchy epoch 5/45:  53%|█████▎    | 8/15 [00:05<00:03,  1.94it/s]
+branchy epoch 5/45:  60%|██████    | 9/15 [00:06<00:03,  1.53it/s]
+branchy epoch 5/45:  67%|██████▋   | 10/15 [00:06<00:02,  2.05it/s]
+branchy epoch 5/45:  73%|███████▎  | 11/15 [00:07<00:02,  1.87it/s]
+branchy epoch 5/45:  80%|████████  | 12/15 [00:07<00:01,  2.42it/s]
+branchy epoch 5/45:  87%|████████▋ | 13/15 [00:07<00:00,  2.16it/s]
+branchy epoch 5/45:  93%|█████████▎| 14/15 [00:07<00:00,  2.78it/s]
+branchy epoch 5/45: 100%|██████████| 15/15 [00:08<00:00,  2.73it/s]
+                                                                   
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.48it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.25it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.33it/s]
+                                                      
+{"epoch": 5, "loss": 0.555201, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 6/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 6/45:   7%|▋         | 1/15 [00:00<00:12,  1.13it/s]
+branchy epoch 6/45:  13%|█▎        | 2/15 [00:01<00:05,  2.26it/s]
+branchy epoch 6/45:  20%|██        | 3/15 [00:02<00:08,  1.42it/s]
+branchy epoch 6/45:  27%|██▋       | 4/15 [00:02<00:05,  2.09it/s]
+branchy epoch 6/45:  33%|███▎      | 5/15 [00:02<00:05,  1.88it/s]
+branchy epoch 6/45:  40%|████      | 6/15 [00:02<00:03,  2.55it/s]
+branchy epoch 6/45:  47%|████▋     | 7/15 [00:03<00:03,  2.12it/s]
+branchy epoch 6/45:  53%|█████▎    | 8/15 [00:03<00:02,  2.78it/s]
+branchy epoch 6/45:  60%|██████    | 9/15 [00:04<00:02,  2.29it/s]
+branchy epoch 6/45:  67%|██████▋   | 10/15 [00:04<00:01,  2.94it/s]
+branchy epoch 6/45:  73%|███████▎  | 11/15 [00:05<00:01,  2.27it/s]
+branchy epoch 6/45:  80%|████████  | 12/15 [00:05<00:01,  2.90it/s]
+branchy epoch 6/45:  87%|████████▋ | 13/15 [00:05<00:00,  2.34it/s]
+branchy epoch 6/45:  93%|█████████▎| 14/15 [00:05<00:00,  2.98it/s]
+branchy epoch 6/45: 100%|██████████| 15/15 [00:06<00:00,  2.65it/s]
+                                                                   
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:01<00:04,  1.08s/it]
+collect:  40%|████      | 2/5 [00:01<00:01,  1.76it/s]
+collect:  60%|██████    | 3/5 [00:02<00:01,  1.57it/s]
+collect:  80%|████████  | 4/5 [00:02<00:00,  2.03it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.06it/s]
+                                                      
+{"epoch": 6, "loss": 0.525424, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 7/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 7/45:   7%|▋         | 1/15 [00:01<00:20,  1.43s/it]
+branchy epoch 7/45:  13%|█▎        | 2/15 [00:01<00:08,  1.48it/s]
+branchy epoch 7/45:  20%|██        | 3/15 [00:02<00:11,  1.04it/s]
+branchy epoch 7/45:  27%|██▋       | 4/15 [00:03<00:07,  1.56it/s]
+branchy epoch 7/45:  33%|███▎      | 5/15 [00:03<00:06,  1.46it/s]
+branchy epoch 7/45:  40%|████      | 6/15 [00:03<00:04,  2.04it/s]
+branchy epoch 7/45:  47%|████▋     | 7/15 [00:04<00:04,  1.92it/s]
+branchy epoch 7/45:  53%|█████▎    | 8/15 [00:04<00:02,  2.54it/s]
+branchy epoch 7/45:  60%|██████    | 9/15 [00:05<00:02,  2.28it/s]
+branchy epoch 7/45:  67%|██████▋   | 10/15 [00:05<00:01,  2.87it/s]
+branchy epoch 7/45:  73%|███████▎  | 11/15 [00:06<00:01,  2.15it/s]
+branchy epoch 7/45:  80%|████████  | 12/15 [00:06<00:01,  2.79it/s]
+branchy epoch 7/45:  87%|████████▋ | 13/15 [00:06<00:00,  2.32it/s]
+branchy epoch 7/45:  93%|█████████▎| 14/15 [00:06<00:00,  2.94it/s]
+branchy epoch 7/45: 100%|██████████| 15/15 [00:07<00:00,  2.80it/s]
+                                                                   
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.41it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.32it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.41it/s]
+                                                      
+{"epoch": 7, "loss": 0.490188, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 8/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 8/45:   7%|▋         | 1/15 [00:00<00:12,  1.15it/s]
+branchy epoch 8/45:  13%|█▎        | 2/15 [00:01<00:05,  2.24it/s]
+branchy epoch 8/45:  20%|██        | 3/15 [00:02<00:08,  1.38it/s]
+branchy epoch 8/45:  27%|██▋       | 4/15 [00:02<00:05,  2.04it/s]
+branchy epoch 8/45:  33%|███▎      | 5/15 [00:02<00:05,  1.87it/s]
+branchy epoch 8/45:  40%|████      | 6/15 [00:02<00:03,  2.51it/s]
+branchy epoch 8/45:  47%|████▋     | 7/15 [00:03<00:03,  2.15it/s]
+branchy epoch 8/45:  53%|█████▎    | 8/15 [00:03<00:02,  2.82it/s]
+branchy epoch 8/45:  60%|██████    | 9/15 [00:04<00:02,  2.19it/s]
+branchy epoch 8/45:  67%|██████▋   | 10/15 [00:04<00:01,  2.79it/s]
+branchy epoch 8/45:  73%|███████▎  | 11/15 [00:05<00:02,  2.00it/s]
+branchy epoch 8/45:  80%|████████  | 12/15 [00:05<00:01,  2.20it/s]
+branchy epoch 8/45:  87%|████████▋ | 13/15 [00:06<00:01,  1.77it/s]
+branchy epoch 8/45:  93%|█████████▎| 14/15 [00:06<00:00,  1.99it/s]
+branchy epoch 8/45: 100%|██████████| 15/15 [00:07<00:00,  2.12it/s]
+                                                                   
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:01<00:04,  1.10s/it]
+collect:  60%|██████    | 3/5 [00:01<00:01,  1.64it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.31it/s]
+                                                      
+{"epoch": 8, "loss": 0.47041, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 9/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 9/45:   7%|▋         | 1/15 [00:01<00:17,  1.24s/it]
+branchy epoch 9/45:  13%|█▎        | 2/15 [00:01<00:07,  1.65it/s]
+branchy epoch 9/45:  20%|██        | 3/15 [00:02<00:08,  1.48it/s]
+branchy epoch 9/45:  27%|██▋       | 4/15 [00:02<00:06,  1.68it/s]
+branchy epoch 9/45:  33%|███▎      | 5/15 [00:03<00:05,  1.80it/s]
+branchy epoch 9/45:  40%|████      | 6/15 [00:03<00:04,  2.17it/s]
+branchy epoch 9/45:  47%|████▋     | 7/15 [00:03<00:03,  2.12it/s]
+branchy epoch 9/45:  53%|█████▎    | 8/15 [00:04<00:02,  2.38it/s]
+branchy epoch 9/45:  60%|██████    | 9/15 [00:04<00:02,  2.16it/s]
+branchy epoch 9/45:  67%|██████▋   | 10/15 [00:04<00:01,  2.79it/s]
+branchy epoch 9/45:  73%|███████▎  | 11/15 [00:05<00:01,  2.45it/s]
+branchy epoch 9/45:  80%|████████  | 12/15 [00:05<00:00,  3.09it/s]
+branchy epoch 9/45:  87%|████████▋ | 13/15 [00:06<00:00,  2.36it/s]
+branchy epoch 9/45:  93%|█████████▎| 14/15 [00:06<00:00,  3.02it/s]
+branchy epoch 9/45: 100%|██████████| 15/15 [00:06<00:00,  2.77it/s]
+                                                                   
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.53it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.28it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.28it/s]
+                                                      
+{"epoch": 9, "loss": 0.505311, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+branchy epoch 10/45:   0%|          | 0/15 [00:00<?, ?it/s]
+branchy epoch 10/45:   7%|▋         | 1/15 [00:00<00:12,  1.15it/s]
+branchy epoch 10/45:  13%|█▎        | 2/15 [00:01<00:05,  2.25it/s]
+branchy epoch 10/45:  20%|██        | 3/15 [00:02<00:08,  1.38it/s]
+branchy epoch 10/45:  27%|██▋       | 4/15 [00:02<00:05,  1.99it/s]
+branchy epoch 10/45:  33%|███▎      | 5/15 [00:03<00:07,  1.40it/s]
+branchy epoch 10/45:  40%|████      | 6/15 [00:03<00:04,  1.93it/s]
+branchy epoch 10/45:  47%|████▋     | 7/15 [00:04<00:05,  1.55it/s]
+branchy epoch 10/45:  53%|█████▎    | 8/15 [00:04<00:03,  2.05it/s]
+branchy epoch 10/45:  60%|██████    | 9/15 [00:05<00:03,  1.54it/s]
+branchy epoch 10/45:  67%|██████▋   | 10/15 [00:05<00:02,  2.04it/s]
+branchy epoch 10/45:  73%|███████▎  | 11/15 [00:06<00:02,  1.58it/s]
+branchy epoch 10/45:  80%|████████  | 12/15 [00:06<00:01,  2.08it/s]
+branchy epoch 10/45:  87%|████████▋ | 13/15 [00:07<00:01,  1.63it/s]
+branchy epoch 10/45:  93%|█████████▎| 14/15 [00:07<00:00,  2.14it/s]
+branchy epoch 10/45: 100%|██████████| 15/15 [00:08<00:00,  1.93it/s]
+ 
