@@ -1,6 +1,6 @@
 {
   "id": "kolektor_auxiliary_safe_exit_training_001",
-  "status": "running",
+  "status": "done",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -10,6 +10,8 @@
   "result_file": "results/kolektor_auxiliary_safe_exit_training_001.json",
   "note": "Train BranchyNet early exits with auxiliary safe-good heads so lower exits are learned for inspection, not added after ordinary training.",
   "created_at": "2026-08-18T00:00:00+09:00",
-  "updated_at": "2026-08-17T16:12:13.588731+00:00",
-  "started_at": "2026-08-17T16:12:13.588708+00:00"
+  "updated_at": "2026-08-17T16:20:31.766100+00:00",
+  "started_at": "2026-08-17T16:12:13.588708+00:00",
+  "returncode": 0,
+  "finished_at": "2026-08-17T16:20:31.765145+00:00"
 }

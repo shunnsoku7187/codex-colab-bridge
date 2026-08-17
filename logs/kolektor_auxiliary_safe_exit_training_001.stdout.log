@@ -1178,4 +1178,22 @@ collect:  20%|██        | 1/5 [00:00<00:03,  1.25it/s]
 collect:  60%|██████    | 3/5 [00:01<00:00,  2.04it/s]
 collect:  80%|████████  | 4/5 [00:01<00:00,  2.77it/s]
 collect: 100%|██████████| 5/5 [00:02<00:00,  2.88it/s]
-                              
+                                                      
+{"epoch": 45, "loss": 1.006583, "samples": 80, "good_count": 69, "defect_count": 11, "pass_rate_all": 0.875, "reject_rate_all": 0.125, "good_pass_rate_good": 1.0, "good_loss_rate_good": 0.0, "false_pass_rate_defect": 0.090909, "defect_recall": 0.909091, "avg_cost": 1.0, "speedup_vs_final_only": 1.0, "false_pass_count": 1, "good_loss_count": 0}
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:03,  1.24it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.67it/s]
+collect: 100%|██████████| 5/5 [00:01<00:00,  3.95it/s]
+                                                      
+
+collect:   0%|          | 0/5 [00:00<?, ?it/s]
+collect:  20%|██        | 1/5 [00:00<00:02,  1.83it/s]
+collect:  60%|██████    | 3/5 [00:01<00:00,  2.12it/s]
+collect: 100%|██████████| 5/5 [00:02<00:00,  2.18it/s]
+                                                      
+{
+  "wrote": "results/kolektor_auxiliary_safe_exit_training_001_summary.json",
+  "markdown": "docs/kolektor_auxiliary_safe_exit_training_001.md",
+  "rows": 3
+}
