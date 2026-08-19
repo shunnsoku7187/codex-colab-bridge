@@ -47,3 +47,10 @@ Summarize all local KSDD2 baseline results:
 ```powershell
 python -m scripts.summarize_ksdd2_baselines
 ```
+
+When a caviar9 follow-up job saves `results/<job>_scores/`, check whether
+seed averaging improves the operating point:
+
+```powershell
+python -m scripts.summarize_ksdd2_score_ensembles --scores-dir results/<job>_scores
+```

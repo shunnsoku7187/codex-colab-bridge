@@ -12,7 +12,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$remoteCommand = "cd $RemoteRepo && find results docs logs -maxdepth 1 -type f -name '$Job*' -print | tar -czf - -T - | base64"
+$remoteCommand = "cd $RemoteRepo && find results docs logs -type f -print | grep '$Job' | tar -czf - -T - | base64"
 $konbuCommand = "ssh -A $GpuHost ""sh -lc '$remoteCommand'"""
 
 New-Item -ItemType Directory -Force -Path $Destination | Out-Null

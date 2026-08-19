@@ -92,6 +92,18 @@ def run_one_seed(args: argparse.Namespace, samples, seed: int, device: torch.dev
 
     val_scores = collect_scores(model, val_loader, device, args.topk_fraction)
     test_scores = collect_scores(model, test_loader, device, args.topk_fraction)
+    if args.scores_dir:
+        scores_dir = Path(args.scores_dir)
+        scores_dir.mkdir(parents=True, exist_ok=True)
+        np.savez_compressed(
+            scores_dir / f"seed_{seed}_scores.npz",
+            val_labels=val_scores["labels"],
+            val_max_score=val_scores["max_score"],
+            val_topk_score=val_scores["topk_score"],
+            test_labels=test_scores["labels"],
+            test_max_score=test_scores["max_score"],
+            test_topk_score=test_scores["topk_score"],
+        )
     curve_rows = {name: make_curve_rows(test_scores, name, args.curve_points) for name in ["max_score", "topk_score"]}
     if seed == args.seeds[0]:
         plot_curve(curve_rows, Path(args.curve_png))
@@ -131,6 +143,7 @@ def main() -> None:
     parser.add_argument("--min-good-pass-rates", nargs="*", type=float, default=[0.90, 0.95])
     parser.add_argument("--max-threshold-candidates", type=int, default=101)
     parser.add_argument("--curve-points", type=int, default=120)
+    parser.add_argument("--scores-dir", default="")
     parser.add_argument("--require-cuda", action="store_true")
     args = parser.parse_args()
 
