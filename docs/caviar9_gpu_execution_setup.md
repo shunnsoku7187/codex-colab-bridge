@@ -56,8 +56,25 @@ From Codex/local machine:
 Then check status:
 
 ```powershell
-ssh -A -J shunya@ssh.arch.info.mie-u.ac.jp shunya@konbu.arch.info.mie-u.ac.jp "ssh -A caviar9 'cd ~/codex-gpu-work/colab-github-bridge && tail -80 logs/ksdd2_smp_final_inspection_baseline_001.remote_runner.log && cat results/ksdd2_smp_final_inspection_baseline_001.remote_status.json 2>/dev/null || true'"
+.\tools\check_caviar9_job.ps1 -Job ksdd2_smp_final_inspection_baseline_caviar9_001
 ```
+
+Fetch completed logs/results:
+
+```powershell
+.\tools\fetch_caviar9_job_outputs.ps1 -Job ksdd2_smp_final_inspection_baseline_caviar9_001
+```
+
+Prepared KSDD2 follow-up jobs:
+
+- `ksdd2_smp_final_inspection_baseline_caviar9_001`: current Unet++/ResNet34
+  baseline rerun on caviar9.
+- `ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001`: stronger
+  U-Net/ResNet50 alternative if the current final-only baseline is not safe
+  enough.
+- `ksdd2_smp_final_inspection_baseline_caviar9_fpn_resnet50_001`: FPN/ResNet50
+  alternative to check whether a different decoder gives a better
+  false-pass/good-pass trade-off.
 
 ## Difference from Colab runner
 
