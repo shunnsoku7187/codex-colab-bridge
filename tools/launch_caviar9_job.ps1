@@ -16,7 +16,7 @@ $ErrorActionPreference = "Stop"
 $runnerLog = "logs/$Job.remote_runner.log"
 
 if ($Background) {
-    $remoteCommand = "cd $RemoteRepo && git pull --ff-only origin main && nohup $PythonBin tools/caviar9_run_job.py --job $Job > $runnerLog 2>&1 < /dev/null &"
+    $remoteCommand = "cd $RemoteRepo && git pull --ff-only origin main && setsid -f $PythonBin tools/caviar9_run_job.py --job $Job > $runnerLog 2>&1 < /dev/null"
 } else {
     $remoteCommand = "cd $RemoteRepo && git pull --ff-only origin main && $PythonBin tools/caviar9_run_job.py --job $Job"
 }
