@@ -18451,3 +18451,8 @@ collect unet:  98%|█████████▊| 124/126 [00:49<00:00,  2.88it
 collect unet:  99%|█████████▉| 125/126 [00:49<00:00,  3.00it/s]
 collect unet: 100%|██████████| 126/126 [00:49<00:00,  3.75it/s]
                                                                
+{
+  "wrote": "results/ksdd2_smp_final_inspection_baseline_001_summary.json",
+  "markdown": "docs/ksdd2_smp_final_inspection_baseline_001.md",
+  "curve_png": "results/ksdd2_smp_final_inspection_baseline_001_tradeoff.png"
+}
