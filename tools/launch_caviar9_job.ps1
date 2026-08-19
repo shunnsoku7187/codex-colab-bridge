@@ -21,5 +21,6 @@ if ($Background) {
     $remoteCommand = "cd $RemoteRepo && git pull --ff-only origin main && $PythonBin tools/caviar9_run_job.py --job $Job"
 }
 
-$konbuCommand = "ssh -A $GpuHost '$remoteCommand'"
+$escapedRemoteCommand = $remoteCommand.Replace("'", "'\''")
+$konbuCommand = "ssh -A $GpuHost ""sh -lc '$escapedRemoteCommand'"""
 ssh -A -J $JumpHost $KonbuHost $konbuCommand
