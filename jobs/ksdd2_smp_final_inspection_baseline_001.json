@@ -1,6 +1,6 @@
 {
   "id": "ksdd2_smp_final_inspection_baseline_001",
-  "status": "pending",
+  "status": "running",
   "backend": "gpu",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 16000,
   "result_file": "results/ksdd2_smp_final_inspection_baseline_001_summary.json",
   "note": "Use an off-the-shelf pretrained Unet++ segmentation model as the KSDD2 final inspection baseline before adding early exits.",
-  "created_at": "2026-08-19T00:00:00+09:00"
+  "created_at": "2026-08-19T00:00:00+09:00",
+  "updated_at": "2026-08-19T07:34:52.560963+00:00",
+  "started_at": "2026-08-19T07:34:52.560943+00:00"
 }
