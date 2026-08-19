@@ -1,0 +1,13 @@
+{
+  "id": "caviar9_gpu_smoke_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m scripts.gpu_inference_smoke",
+  "max_runtime_sec": 600,
+  "result_file": "results/gpu_inference_smoke_output.json",
+  "note": "Small SSH-runner smoke test for caviar9 GPU execution.",
+  "created_at": "2026-08-20T00:00:00+09:00"
+}
