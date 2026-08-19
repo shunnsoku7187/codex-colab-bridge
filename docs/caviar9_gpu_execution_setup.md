@@ -65,6 +65,12 @@ Fetch completed logs/results:
 .\tools\fetch_caviar9_job_outputs.ps1 -Job ksdd2_smp_final_inspection_baseline_caviar9_001
 ```
 
+Fetch, commit, and push completed logs/results from the local machine:
+
+```powershell
+.\tools\publish_caviar9_job_outputs.ps1 -Job ksdd2_smp_final_inspection_baseline_caviar9_001
+```
+
 Prepared KSDD2 follow-up jobs:
 
 - `ksdd2_smp_final_inspection_baseline_caviar9_001`: current Unet++/ResNet34
@@ -80,8 +86,9 @@ Prepared KSDD2 follow-up jobs:
 
 The Colab runner commits results back to GitHub.
 
-The caviar9 runner currently does not push results.  It writes logs and result
-files in the remote repository directory.  Codex reads them through SSH.
+The caviar9 runner currently does not push results directly.  It writes logs
+and result files in the remote repository directory.  Codex fetches those files
+over SSH, then commits and pushes them from the local machine.
 It also does not rewrite tracked job JSON files; runtime state is written to
 `results/<job_id>.remote_status.json` so `git pull --ff-only` remains reliable.
 

@@ -7,36 +7,23 @@ param(
     [string]$JumpHost = "shunya@ssh.arch.info.mie-u.ac.jp",
     [string]$KonbuHost = "shunya@konbu.arch.info.mie-u.ac.jp",
     [string]$GpuHost = "caviar9",
-    [string]$GpuUser = "shunya",
     [string]$RemoteRepo = "/home/shunya/codex-gpu-work/colab-github-bridge"
 )
 
 $ErrorActionPreference = "Stop"
 
-$destPath = Join-Path $Destination $Job
-New-Item -ItemType Directory -Force -Path $destPath | Out-Null
+$remoteCommand = "cd $RemoteRepo && find results docs logs -maxdepth 1 -type f -name '$Job*' -print | tar -czf - -T - | base64"
+$konbuCommand = "ssh -A $GpuHost ""sh -lc '$remoteCommand'"""
 
-$remoteFiles = @(
-    "results/$Job.remote_status.json",
-    "results/$Job.json",
-    "results/${Job}_summary.json",
-    "results/${Job}_tradeoff.png",
-    "docs/$Job.md",
-    "logs/$Job.stdout.log",
-    "logs/$Job.stderr.log",
-    "logs/$Job.remote_runner.log"
-)
-
-foreach ($file in $remoteFiles) {
-    $target = Join-Path $destPath (Split-Path $file -Leaf)
-    $source = "${GpuUser}@${GpuHost}:$RemoteRepo/$file"
-    try {
-        scp -o "ProxyJump=$JumpHost,$KonbuHost" $source $target | Out-Null
-    } catch {
-        if (Test-Path $target) {
-            Remove-Item -LiteralPath $target
-        }
-    }
+New-Item -ItemType Directory -Force -Path $Destination | Out-Null
+$archive = Join-Path $Destination "$Job.tar.gz"
+$base64 = ssh -A -J $JumpHost $KonbuHost $konbuCommand
+if ($LASTEXITCODE -ne 0) {
+    throw "remote fetch failed with exit code $LASTEXITCODE"
 }
+$bytes = [Convert]::FromBase64String(($base64 -join ""))
+[IO.File]::WriteAllBytes((Resolve-Path $Destination).Path + [IO.Path]::DirectorySeparatorChar + "$Job.tar.gz", $bytes)
+tar -xzf $archive -C .
+Remove-Item -LiteralPath $archive
 
-Write-Host "Fetched available files to $destPath"
+Write-Host "Fetched available job outputs into repository paths."

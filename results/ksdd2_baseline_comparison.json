@@ -2,9 +2,25 @@
   "purpose": "Compare KSDD2 final-only inspection baselines before selecting a base model for early-exit experiments.",
   "inputs": [
     "results\\ksdd2_smp_final_inspection_baseline_001_summary.json",
+    "results\\ksdd2_smp_final_inspection_baseline_caviar9_001_summary.json",
     "results\\ksdd2_unet_inspection_baseline_001_summary.json"
   ],
   "rows": [
+    {
+      "path": "results\\ksdd2_smp_final_inspection_baseline_caviar9_001_summary.json",
+      "dataset": "KolektorSDD2",
+      "model": "unetplusplus/resnet34",
+      "score": "topk_score",
+      "constraint_false_pass": 0.0,
+      "constraint_good_pass": 0.9,
+      "feasible_seeds": 0,
+      "seeds": 1,
+      "mean_good_pass": 0.887025,
+      "worst_good_pass": 0.887025,
+      "mean_false_pass": 0.045455,
+      "worst_false_pass": 0.045455,
+      "curve_png": "results/ksdd2_smp_final_inspection_baseline_caviar9_001_tradeoff.png"
+    },
     {
       "path": "results\\ksdd2_smp_final_inspection_baseline_001_summary.json",
       "dataset": "KolektorSDD2",

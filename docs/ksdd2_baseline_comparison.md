@@ -4,6 +4,7 @@ This table compares final-only inspection baselines.  Lower defect false-pass is
 
 | result | model | score | target false-pass | target good-pass | feasible seeds | worst false-pass | worst good-pass | curve |
 |---|---|---|---:|---:|---:|---:|---:|---|
+| ksdd2_smp_final_inspection_baseline_caviar9_001_summary.json | unetplusplus/resnet34 | topk_score | 0.00% | 90.00% | 0/1 | 4.55% | 88.70% | results/ksdd2_smp_final_inspection_baseline_caviar9_001_tradeoff.png |
 | ksdd2_smp_final_inspection_baseline_001_summary.json | unetplusplus/resnet34 | max_score | 0.00% | 95.00% | 0/1 | 5.45% | 98.32% | results/ksdd2_smp_final_inspection_baseline_001_tradeoff.png |
 | ksdd2_unet_inspection_baseline_001_summary.json | ksdd2_unet_inspection_baseline_001 | topk_score | 0.00% | 90.00% | 0/2 | 5.45% | 93.40% | results/ksdd2_unet_inspection_baseline_001_tradeoff.png |
 
