@@ -1,0 +1,39 @@
+{
+  "purpose": "Compare KSDD2 final-only inspection baselines before selecting a base model for early-exit experiments.",
+  "inputs": [
+    "results\\ksdd2_smp_final_inspection_baseline_001_summary.json",
+    "results\\ksdd2_unet_inspection_baseline_001_summary.json"
+  ],
+  "rows": [
+    {
+      "path": "results\\ksdd2_smp_final_inspection_baseline_001_summary.json",
+      "dataset": "KolektorSDD2",
+      "model": "unetplusplus/resnet34",
+      "score": "max_score",
+      "constraint_false_pass": 0.0,
+      "constraint_good_pass": 0.95,
+      "feasible_seeds": 0,
+      "seeds": 1,
+      "mean_good_pass": 0.983221,
+      "worst_good_pass": 0.983221,
+      "mean_false_pass": 0.054545,
+      "worst_false_pass": 0.054545,
+      "curve_png": "results/ksdd2_smp_final_inspection_baseline_001_tradeoff.png"
+    },
+    {
+      "path": "results\\ksdd2_unet_inspection_baseline_001_summary.json",
+      "dataset": "KolektorSDD2",
+      "model": "ksdd2_unet_inspection_baseline_001",
+      "score": "topk_score",
+      "constraint_false_pass": 0.0,
+      "constraint_good_pass": 0.9,
+      "feasible_seeds": 0,
+      "seeds": 2,
+      "mean_good_pass": 0.935123,
+      "worst_good_pass": 0.934004,
+      "mean_false_pass": 0.05,
+      "worst_false_pass": 0.054545,
+      "curve_png": "results/ksdd2_unet_inspection_baseline_001_tradeoff.png"
+    }
+  ]
+}
