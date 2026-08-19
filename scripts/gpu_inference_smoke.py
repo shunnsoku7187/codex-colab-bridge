@@ -1,5 +1,7 @@
+import argparse
 import json
 import time
+from pathlib import Path
 
 import torch
 from torch import nn
@@ -23,6 +25,10 @@ class TinyClassifier(nn.Module):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", default=str(RESULTS_DIR / "gpu_inference_smoke_output.json"))
+    args = parser.parse_args()
+
     ensure_dirs()
     if not torch.cuda.is_available():
         raise RuntimeError("CUDA is not available. Set Colab runtime to GPU and rerun the job.")
@@ -56,7 +62,10 @@ def main():
         "first_row_probability_sum": round(float(probs[0].sum().detach().cpu().item()), 6),
         "max_memory_allocated_mb": round(torch.cuda.max_memory_allocated() / (1024 * 1024), 3),
     }
-    output_path = RESULTS_DIR / "gpu_inference_smoke_output.json"
+    output_path = Path(args.output)
+    if not output_path.is_absolute():
+        output_path = RESULTS_DIR.parent / output_path
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False, indent=2), flush=True)
 

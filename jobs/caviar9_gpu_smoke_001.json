@@ -5,9 +5,9 @@
   "requires_gpu": true,
   "type": "shell",
   "cwd": ".",
-  "command": "python -m scripts.gpu_inference_smoke",
+  "command": "python -m scripts.gpu_inference_smoke --output results/caviar9_gpu_smoke_001_output.json",
   "max_runtime_sec": 600,
-  "result_file": "results/gpu_inference_smoke_output.json",
+  "result_file": "results/caviar9_gpu_smoke_001_output.json",
   "note": "Small SSH-runner smoke test for caviar9 GPU execution.",
   "created_at": "2026-08-20T00:00:00+09:00"
 }

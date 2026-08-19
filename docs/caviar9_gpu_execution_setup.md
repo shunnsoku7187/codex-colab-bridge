@@ -65,6 +65,8 @@ The Colab runner commits results back to GitHub.
 
 The caviar9 runner currently does not push results.  It writes logs and result
 files in the remote repository directory.  Codex reads them through SSH.
+It also does not rewrite tracked job JSON files; runtime state is written to
+`results/<job_id>.remote_status.json` so `git pull --ff-only` remains reliable.
 
 This is intentional for the first stage because it avoids storing GitHub write
 credentials on lab machines.

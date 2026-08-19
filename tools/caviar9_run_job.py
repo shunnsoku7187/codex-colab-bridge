@@ -32,10 +32,6 @@ def load_job(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def save_job(path: Path, job: dict[str, Any]) -> None:
-    path.write_text(json.dumps(job, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-
 def find_job(job_id: str | None) -> tuple[Path, dict[str, Any]]:
     candidates = sorted(JOBS_DIR.glob("*.json"))
     if job_id:
@@ -67,6 +63,7 @@ def run_job(job_path: Path, job: dict[str, Any], python_bin: str, data_dir: str)
     cwd = REPO_ROOT / str(job.get("cwd", "."))
     stdout_path = LOGS_DIR / f"{job_id}.stdout.log"
     stderr_path = LOGS_DIR / f"{job_id}.stderr.log"
+    status_path = RESULTS_DIR / f"{job_id}.remote_status.json"
 
     env = os.environ.copy()
     env["PATH"] = str(Path(python_bin).parent) + os.pathsep + env.get("PATH", "")
@@ -75,12 +72,43 @@ def run_job(job_path: Path, job: dict[str, Any], python_bin: str, data_dir: str)
     env["MPLBACKEND"] = "Agg"
 
     if job.get("requires_gpu") and not cuda_available(python_bin):
-        job.update({"status": "error", "updated_at": now(), "finished_at": now(), "returncode": 97, "error": "CUDA is not available"})
-        save_job(job_path, job)
+        status_path.write_text(
+            json.dumps(
+                {
+                    "id": job_id,
+                    "status": "error",
+                    "returncode": 97,
+                    "error": "CUDA is not available",
+                    "job_file": str(job_path),
+                    "finished_at": now(),
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
         return 97
 
-    job.update({"status": "running", "updated_at": now(), "started_at": now(), "runner": "caviar9_run_job.py"})
-    save_job(job_path, job)
+    started_at = now()
+    status_path.write_text(
+        json.dumps(
+            {
+                "id": job_id,
+                "status": "running",
+                "returncode": None,
+                "job_file": str(job_path),
+                "stdout": str(stdout_path),
+                "stderr": str(stderr_path),
+                "result_file": job.get("result_file"),
+                "started_at": started_at,
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
 
     with stdout_path.open("w", encoding="utf-8") as out, stderr_path.open("w", encoding="utf-8") as err:
         out.write(f"[{now()}] host=caviar9 job={job_id}\n")
@@ -89,19 +117,18 @@ def run_job(job_path: Path, job: dict[str, Any], python_bin: str, data_dir: str)
         out.flush()
         completed = subprocess.run(command, cwd=cwd, env=env, shell=True, stdout=out, stderr=err)
 
-    job.update({"status": "done" if completed.returncode == 0 else "error", "updated_at": now(), "finished_at": now(), "returncode": completed.returncode})
-    save_job(job_path, job)
-
     summary = {
         "id": job_id,
-        "status": job["status"],
+        "status": "done" if completed.returncode == 0 else "error",
         "returncode": completed.returncode,
+        "job_file": str(job_path),
         "stdout": str(stdout_path),
         "stderr": str(stderr_path),
         "result_file": job.get("result_file"),
-        "finished_at": job["finished_at"],
+        "started_at": started_at,
+        "finished_at": now(),
     }
-    (RESULTS_DIR / f"{job_id}.remote_status.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    status_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False, indent=2), flush=True)
     return completed.returncode
 
