@@ -1,5 +1,5 @@
 {
-  "purpose": "Compare KSDD2 final-only inspection baselines before selecting a base model for early-exit experiments.",
+  "purpose": "Compare KSDD2 baselines as foundations, then identify where early-exit or FPGA implementation can add value.",
   "inputs": [
     "results\\ksdd2_smp_final_inspection_baseline_001_summary.json",
     "results\\ksdd2_smp_final_inspection_baseline_caviar9_001_summary.json",
@@ -11,6 +11,8 @@
       "dataset": "KolektorSDD2",
       "model": "unetplusplus/resnet34",
       "score": "topk_score",
+      "mean_test_auroc": 0.977934,
+      "mean_test_aupr": 0.937412,
       "constraint_false_pass": 0.0,
       "constraint_good_pass": 0.9,
       "feasible_seeds": 0,
@@ -26,6 +28,8 @@
       "dataset": "KolektorSDD2",
       "model": "unetplusplus/resnet34",
       "score": "max_score",
+      "mean_test_auroc": 0.973955,
+      "mean_test_aupr": 0.941993,
       "constraint_false_pass": 0.0,
       "constraint_good_pass": 0.95,
       "feasible_seeds": 0,
@@ -41,6 +45,8 @@
       "dataset": "KolektorSDD2",
       "model": "ksdd2_unet_inspection_baseline_001",
       "score": "topk_score",
+      "mean_test_auroc": 0.976113,
+      "mean_test_aupr": 0.940315,
       "constraint_false_pass": 0.0,
       "constraint_good_pass": 0.9,
       "feasible_seeds": 0,
