@@ -50,7 +50,7 @@ Subdirectories:
 From Codex/local machine:
 
 ```powershell
-ssh -A -J shunya@ssh.arch.info.mie-u.ac.jp shunya@konbu.arch.info.mie-u.ac.jp "ssh -A caviar9 'cd ~/codex-gpu-work/colab-github-bridge && git pull --ff-only origin main && nohup ~/miniconda3/envs/cuda/bin/python tools/caviar9_run_job.py --job ksdd2_smp_final_inspection_baseline_001 > logs/ksdd2_smp_final_inspection_baseline_001.remote_runner.log 2>&1 < /dev/null &'"
+.\tools\launch_caviar9_job.ps1 -Job ksdd2_smp_final_inspection_baseline_001 -Background
 ```
 
 Then check status:
