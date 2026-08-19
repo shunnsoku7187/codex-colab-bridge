@@ -24,6 +24,7 @@ $paths = @(
     "results/$Job.json",
     "results/${Job}_summary.json",
     "results/${Job}_tradeoff.png",
+    "results/${Job}_scores",
     "docs/$Job.md",
     "logs/$Job.stdout.log",
     "logs/$Job.stderr.log",
