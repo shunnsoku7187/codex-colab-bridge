@@ -7,7 +7,9 @@ param(
     [string]$JumpHost = "shunya@ssh.arch.info.mie-u.ac.jp",
     [string]$KonbuHost = "shunya@konbu.arch.info.mie-u.ac.jp",
     [string]$GpuHost = "caviar9",
-    [string]$RemoteRepo = "/home/shunya/codex-gpu-work/colab-github-bridge"
+    [string]$RemoteRepo = "/home/shunya/codex-gpu-work/colab-github-bridge",
+    [int]$ConnectTimeout = 10,
+    [int]$RetryCount = 3
 )
 
 $ErrorActionPreference = "Stop"
@@ -17,7 +19,9 @@ $ErrorActionPreference = "Stop"
     -JumpHost $JumpHost `
     -KonbuHost $KonbuHost `
     -GpuHost $GpuHost `
-    -RemoteRepo $RemoteRepo
+    -RemoteRepo $RemoteRepo `
+    -ConnectTimeout $ConnectTimeout `
+    -RetryCount $RetryCount
 
 $paths = @(
     "results/$Job.remote_status.json",

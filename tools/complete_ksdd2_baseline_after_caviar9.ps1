@@ -6,7 +6,8 @@ param(
     [string]$KonbuHost = "shunya@konbu.arch.info.mie-u.ac.jp",
     [string]$GpuHost = "caviar9",
     [string]$RemoteRepo = "/home/shunya/codex-gpu-work/colab-github-bridge",
-    [int]$ConnectTimeout = 10
+    [int]$ConnectTimeout = 10,
+    [int]$RetryCount = 3
 )
 
 $ErrorActionPreference = "Stop"
@@ -28,7 +29,9 @@ Write-Host "== fetching and publishing outputs =="
     -JumpHost $JumpHost `
     -KonbuHost $KonbuHost `
     -GpuHost $GpuHost `
-    -RemoteRepo $RemoteRepo
+    -RemoteRepo $RemoteRepo `
+    -ConnectTimeout $ConnectTimeout `
+    -RetryCount $RetryCount
 
 Write-Host ""
 Write-Host "== refreshing KSDD2 baseline comparison =="
