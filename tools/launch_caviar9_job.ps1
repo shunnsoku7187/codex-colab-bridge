@@ -9,6 +9,7 @@ param(
     [string]$GpuHost = "caviar9",
     [string]$RemoteRepo = "~/codex-gpu-work/colab-github-bridge",
     [string]$PythonBin = "~/miniconda3/envs/cuda/bin/python",
+    [switch]$UseKonbu,
     [int]$ConnectTimeout = 10
 )
 
@@ -24,5 +25,9 @@ if ($Background) {
 
 $escapedRemoteCommand = $remoteCommand.Replace("'", "'\''")
 $innerSshOptions = "-o ConnectTimeout=$ConnectTimeout -o ServerAliveInterval=30 -o ServerAliveCountMax=3"
-$konbuCommand = "ssh -A $innerSshOptions $GpuHost ""sh -lc '$escapedRemoteCommand'"""
-ssh -A -o ConnectTimeout=$ConnectTimeout -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -J $JumpHost $KonbuHost $konbuCommand
+if ($UseKonbu) {
+    $konbuCommand = "ssh -A $innerSshOptions $GpuHost ""sh -lc '$escapedRemoteCommand'"""
+    ssh -A -o ConnectTimeout=$ConnectTimeout -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -J $JumpHost $KonbuHost $konbuCommand
+} else {
+    ssh -A -o ConnectTimeout=$ConnectTimeout -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -J $JumpHost "shunya@$GpuHost" "sh -lc '$escapedRemoteCommand'"
+}

@@ -8,6 +8,7 @@ param(
     [string]$KonbuHost = "shunya@konbu.arch.info.mie-u.ac.jp",
     [string]$GpuHost = "caviar9",
     [string]$RemoteRepo = "/home/shunya/codex-gpu-work/colab-github-bridge",
+    [switch]$UseKonbu,
     [int]$ConnectTimeout = 10,
     [int]$RetryCount = 3
 )
@@ -20,6 +21,7 @@ $ErrorActionPreference = "Stop"
     -KonbuHost $KonbuHost `
     -GpuHost $GpuHost `
     -RemoteRepo $RemoteRepo `
+    -UseKonbu:$UseKonbu `
     -ConnectTimeout $ConnectTimeout `
     -RetryCount $RetryCount
 

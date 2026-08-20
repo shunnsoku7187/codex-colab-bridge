@@ -2,6 +2,7 @@ param(
     [string]$JumpHost = "shunya@ssh.arch.info.mie-u.ac.jp",
     [string]$KonbuHost = "shunya@konbu.arch.info.mie-u.ac.jp",
     [string]$GpuHost = "caviar9",
+    [switch]$UseKonbu,
     [int]$ConnectTimeout = 8
 )
 
@@ -43,6 +44,12 @@ Test-Step "konbu via jump" {
     ssh @sshOptions -J $JumpHost $KonbuHost "date"
 }
 
-Test-Step "caviar9 via konbu" {
-    ssh @sshOptions -J $JumpHost $KonbuHost "ssh -A -o ConnectTimeout=$ConnectTimeout -o ServerAliveInterval=30 -o ServerAliveCountMax=3 $GpuHost 'date; hostname; nvidia-smi --query-gpu=name,utilization.gpu,memory.used,memory.total --format=csv,noheader'"
+if ($UseKonbu) {
+    Test-Step "caviar9 via konbu" {
+        ssh @sshOptions -J $JumpHost $KonbuHost "ssh -A -o ConnectTimeout=$ConnectTimeout -o ServerAliveInterval=30 -o ServerAliveCountMax=3 $GpuHost 'date; hostname; nvidia-smi --query-gpu=name,utilization.gpu,memory.used,memory.total --format=csv,noheader'"
+    }
+} else {
+    Test-Step "caviar9 via jump" {
+        ssh @sshOptions -J $JumpHost "shunya@$GpuHost" "date; hostname; nvidia-smi --query-gpu=name,utilization.gpu,memory.used,memory.total --format=csv,noheader"
+    }
 }

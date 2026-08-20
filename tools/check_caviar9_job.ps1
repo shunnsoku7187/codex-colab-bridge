@@ -8,6 +8,7 @@ param(
     [string]$KonbuHost = "shunya@konbu.arch.info.mie-u.ac.jp",
     [string]$GpuHost = "caviar9",
     [string]$RemoteRepo = "/home/shunya/codex-gpu-work/colab-github-bridge",
+    [switch]$UseKonbu,
     [int]$ConnectTimeout = 10
 )
 
@@ -15,7 +16,11 @@ $ErrorActionPreference = "Stop"
 
 function Invoke-Caviar9 {
     param([Parameter(Mandatory = $true)][string]$Command)
-    ssh -A -o ConnectTimeout=$ConnectTimeout -J $JumpHost $KonbuHost "ssh -A -o ConnectTimeout=$ConnectTimeout $GpuHost '$Command'"
+    if ($UseKonbu) {
+        ssh -A -o ConnectTimeout=$ConnectTimeout -J $JumpHost $KonbuHost "ssh -A -o ConnectTimeout=$ConnectTimeout $GpuHost '$Command'"
+    } else {
+        ssh -A -o ConnectTimeout=$ConnectTimeout -J $JumpHost "shunya@$GpuHost" $Command
+    }
 }
 
 Write-Host "== remote status =="
