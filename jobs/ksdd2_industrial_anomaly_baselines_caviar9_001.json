@@ -1,6 +1,6 @@
 {
   "id": "ksdd2_industrial_anomaly_baselines_caviar9_001",
-  "status": "pending",
+  "status": "running",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 14400,
   "result_file": "results/ksdd2_industrial_anomaly_baselines_caviar9_001.json",
   "note": "Compare existing inspection-style anomaly detection baselines on KSDD2. PatchCore-lite is a performance/insurance candidate; PaDiM-diagonal is a more FPGA-friendly reference.",
-  "created_at": "2026-08-21T17:34:00+09:00"
+  "created_at": "2026-08-21T17:34:00+09:00",
+  "updated_at": "2026-08-21T08:41:00.633941+00:00",
+  "started_at": "2026-08-21T08:41:00.633917+00:00"
 }
