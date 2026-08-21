@@ -78,6 +78,7 @@ import json
 from pathlib import Path
 
 gpu_backends = {"gpu", "cuda", "caviar9"}
+jobs = []
 for path in sorted(Path("jobs").glob("*.json")):
     try:
         job = json.loads(path.read_text(encoding="utf-8"))
@@ -86,9 +87,16 @@ for path in sorted(Path("jobs").glob("*.json")):
     if job.get("status", "pending") != "pending":
         continue
     if job.get("requires_gpu") or job.get("backend") in gpu_backends:
-        print(job.get("id") or path.stem)
-        raise SystemExit(0)
-raise SystemExit(2)
+        jobs.append(str(job.get("id") or path.stem))
+if len(jobs) == 1:
+    print(jobs[0])
+    raise SystemExit(0)
+if not jobs:
+    raise SystemExit(2)
+print("multiple pending GPU jobs found; specify one with --job:", file=__import__("sys").stderr)
+for job_id in jobs:
+    print(f"  {job_id}", file=__import__("sys").stderr)
+raise SystemExit(3)
 PY
 }
 
