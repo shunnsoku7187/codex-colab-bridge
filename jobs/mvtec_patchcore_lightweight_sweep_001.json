@@ -1,0 +1,13 @@
+{
+  "id": "mvtec_patchcore_lightweight_sweep_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt timm pyarrow && python -m scripts.mvtec_patchcore_lightweight_sweep --output results/mvtec_patchcore_lightweight_sweep_001_summary.json --markdown docs/mvtec_patchcore_lightweight_sweep_001.md --figure results/mvtec_patchcore_lightweight_sweep_001.png --materialized-root /home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2 --categories bottle hazelnut tile cable pill screw --false-pass-targets 0.0 0.01 0.05 --score-name topk_score --require-cuda",
+  "max_runtime_sec": 21600,
+  "result_file": "results/mvtec_patchcore_lightweight_sweep_001.json",
+  "note": "Sweep PatchCore-lite lightweight settings on representative easy/hard MVTec AD categories to find FPGA-oriented cost/performance tradeoffs.",
+  "created_at": "2026-08-21T22:55:00+09:00"
+}
