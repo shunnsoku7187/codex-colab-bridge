@@ -11,6 +11,7 @@ the early-exit/FPGA work.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import io
 import json
 import os
@@ -103,10 +104,18 @@ def decode_image_cell(value) -> Image.Image | None:
     return None
 
 
-def safe_stem(value: str, fallback: str) -> str:
+def safe_stem(value: str, fallback: str, max_len: int = 80) -> str:
     stem = Path(str(value)).stem if value else fallback
     cleaned = "".join(ch if ch.isalnum() or ch in "-_." else "_" for ch in stem)
-    return cleaned or fallback
+    cleaned = cleaned.strip("._")
+    return (cleaned or fallback)[:max_len]
+
+
+def stable_row_stem(parquet_path: Path, row_idx: int) -> str:
+    shard = safe_stem(parquet_path.stem, "shard", max_len=42)
+    key = f"{parquet_path.name}:{row_idx}".encode("utf-8", errors="replace")
+    digest = hashlib.sha1(key).hexdigest()[:12]
+    return f"{shard}_{row_idx:06d}_{digest}"
 
 
 def find_parquet_files(dataset_root: Path) -> list[Path]:
@@ -152,7 +161,9 @@ def materialize_from_parquet(dataset_root: Path, output_root: Path, categories: 
             if image is None:
                 continue
 
-            base_name = safe_stem(str(row.get("image_path") or ""), f"{parquet_path.stem}_{row_idx:06d}")
+            # Some HF Image rows expose bytes-like data through image_path.  Never
+            # trust dataset metadata as a filesystem name.
+            base_name = stable_row_stem(parquet_path, row_idx)
             category_dir = output_root / category
             image_dir = category_dir / split / defect
             image_dir.mkdir(parents=True, exist_ok=True)

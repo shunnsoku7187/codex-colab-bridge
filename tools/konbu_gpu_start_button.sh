@@ -172,8 +172,13 @@ start_job() {
   remote_command="cd '$REMOTE_REPO' && \
     git fetch origin && git checkout '$BRANCH' && git pull --ff-only origin '$BRANCH' && \
     mkdir -p logs results artifacts docs && \
-    nohup bash tools/caviar9_run_once.sh --job '$JOB_ID' > 'logs/${JOB_ID}.remote_runner.log' 2>&1 < /dev/null & \
-    echo \$!"
+    rm -f 'logs/${JOB_ID}.remote_runner.pid' && \
+    (nohup bash -lc 'echo \$\$ > \"logs/${JOB_ID}.remote_runner.pid\"; exec bash tools/caviar9_run_once.sh --job \"${JOB_ID}\"' > 'logs/${JOB_ID}.remote_runner.log' 2>&1 < /dev/null & disown) && \
+    for i in \$(seq 1 20); do \
+      if [ -s 'logs/${JOB_ID}.remote_runner.pid' ]; then cat 'logs/${JOB_ID}.remote_runner.pid'; exit 0; fi; \
+      sleep 0.5; \
+    done; \
+    echo 'pid-not-yet-written'"
 
   echo "== launch on ${GPU_HOST} =="
   local pid
