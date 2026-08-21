@@ -1,0 +1,13 @@
+{
+  "id": "mvtec_ad_parquet_probe_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt timm pyarrow && python -m scripts.mvtec_ad_parquet_anomaly_probe --output results/mvtec_ad_parquet_probe_001_summary.json --markdown docs/mvtec_ad_parquet_probe_001.md --curve-png results/mvtec_ad_parquet_probe_001_tradeoff.png --categories bottle cable hazelnut metal_nut screw --methods patchcore_lite padim_diag --backbone wide_resnet50_2 --out-indices 1 2 --image-height 224 --image-width 224 --patch-grid-height 14 --patch-grid-width 14 --batch-size 16 --topk-fraction 0.01 --patchcore-bank-patches 12000 --nn-chunk-size 4096 --false-pass-targets 0.0 0.01 0.05 --curve-points 120 --require-cuda",
+  "max_runtime_sec": 14400,
+  "result_file": "results/mvtec_ad_parquet_probe_001.json",
+  "note": "Read the Hugging Face Parquet mirror of MVTec AD, materialize selected categories, then probe PatchCore-lite and PaDiM-diagonal as stronger inspection baselines.",
+  "created_at": "2026-08-21T20:15:00+09:00"
+}
