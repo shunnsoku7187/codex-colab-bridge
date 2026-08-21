@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_lightweight_sweep_001",
-  "status": "running",
+  "status": "done",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -10,6 +10,11 @@
   "result_file": "results/mvtec_patchcore_lightweight_sweep_001.json",
   "note": "Sweep PatchCore-lite lightweight settings on representative easy/hard MVTec AD categories to find FPGA-oriented cost/performance tradeoffs.",
   "created_at": "2026-08-21T22:55:00+09:00",
-  "updated_at": "2026-08-21T15:00:30.963864+00:00",
-  "started_at": "2026-08-21T15:00:30.963842+00:00"
+  "updated_at": "2026-08-21T15:04:00.305636+00:00",
+  "started_at": "2026-08-21T15:00:30.963842+00:00",
+  "returncode": 0,
+  "duration_sec": 203.235,
+  "stdout": "logs/mvtec_patchcore_lightweight_sweep_001.stdout.log",
+  "stderr": "logs/mvtec_patchcore_lightweight_sweep_001.stderr.log",
+  "finished_at": "2026-08-21T15:04:00.297862+00:00"
 }
