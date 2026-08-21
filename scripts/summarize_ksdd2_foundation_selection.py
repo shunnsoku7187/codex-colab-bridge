@@ -17,6 +17,7 @@ from typing import Any
 RESULT_FILES = [
     Path("results/ksdd2_smp_final_inspection_baseline_caviar9_001_summary.json"),
     Path("results/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_summary.json"),
+    Path("results/ksdd2_unet_resnet50_foundation_recheck_caviar9_001_summary.json"),
     Path("results/ksdd2_smp_final_inspection_baseline_caviar9_fpn_resnet50_001_summary.json"),
     Path("results/ksdd2_unet_inspection_baseline_001_summary.json"),
     Path("results/ksdd2_industrial_anomaly_baselines_caviar9_001_summary.json"),
@@ -270,7 +271,7 @@ def main() -> None:
         "",
         "PatchCoreは保険テーマとしては残せますが、今回のKSDD2実験では土台モデルとして最有力とは言えません。もしPatchCore FPGA化を主題にするなら、まずPatchCore本体をより忠実に再現し、性能面でU-Net/ResNet50に近づくか上回ることを確認する必要があります。",
         "",
-        "次にやるべきことは、`unet/resnet50` を固定土台として、閾値校正とseed/split安定性を再確認することです。その後、この固定土台に対して両側早期終了またはFPGA化による計算量削減を評価します。",
+        "再確認の結果、`unet/resnet50` は暫定土台として残すが、validation閾値のtest安定性は不十分でした。次にやるべきことは、土台モデルをむやみに替えることではなく、閾値校正・校正セット設計・保守的な安全閾値選択を整理することです。その後、この固定土台に対して両側早期終了またはFPGA化による計算量削減を評価します。",
         "",
     ]
     out_md.write_text("\n".join(lines), encoding="utf-8")

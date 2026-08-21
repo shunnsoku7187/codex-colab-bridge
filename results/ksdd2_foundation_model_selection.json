@@ -136,6 +136,22 @@
       "model": "small_unet/base24"
     },
     {
+      "score_name": "topk_score",
+      "seed_count": 3,
+      "mean_test_auroc": 0.982713,
+      "mean_test_aupr": 0.947557,
+      "best_good_pass_when_false_pass_le_5_mean": 0.87733,
+      "best_good_pass_when_false_pass_le_5_worst": 0.757271,
+      "false_pass_near_good_pass_90_mean": 0.048485,
+      "false_pass_near_good_pass_90_worst": 0.063636,
+      "selected_5fp_90gp_feasible": 0,
+      "selected_5fp_90gp_seeds": 3,
+      "selected_0fp_90gp_feasible": 0,
+      "selected_0fp_90gp_seeds": 2,
+      "result_file": "ksdd2_unet_resnet50_foundation_recheck_caviar9_001_summary.json",
+      "model": "unet/resnet50"
+    },
+    {
       "score_name": "max_score",
       "seed_count": 2,
       "mean_test_auroc": 0.983745,
@@ -150,6 +166,22 @@
       "selected_0fp_90gp_seeds": 0,
       "result_file": "ksdd2_smp_final_inspection_baseline_caviar9_fpn_resnet50_001_summary.json",
       "model": "fpn/resnet50"
+    },
+    {
+      "score_name": "max_score",
+      "seed_count": 3,
+      "mean_test_auroc": 0.982771,
+      "mean_test_aupr": 0.945066,
+      "best_good_pass_when_false_pass_le_5_mean": 0.868754,
+      "best_good_pass_when_false_pass_le_5_worst": 0.750559,
+      "false_pass_near_good_pass_90_mean": 0.042424,
+      "false_pass_near_good_pass_90_worst": 0.063636,
+      "selected_5fp_90gp_feasible": 0,
+      "selected_5fp_90gp_seeds": 3,
+      "selected_0fp_90gp_feasible": 0,
+      "selected_0fp_90gp_seeds": 2,
+      "result_file": "ksdd2_unet_resnet50_foundation_recheck_caviar9_001_summary.json",
+      "model": "unet/resnet50"
     },
     {
       "score_name": "topk_score",

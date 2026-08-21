@@ -27,11 +27,13 @@
 | 5 | fpn/resnet50 | topk_score | ksdd2_smp_final_inspection_baseline_caviar9_fpn_resnet50_001_summary.json | 0.98737 | 0.950233 | 91.22% | 4.55% | 0/2 |
 | 6 | small_unet/base24 | topk_score | ksdd2_unet_inspection_baseline_001_summary.json | 0.976113 | 0.940315 | 88.81% | 5.00% | 0/2 |
 | 7 | small_unet/base24 | max_score | ksdd2_unet_inspection_baseline_001_summary.json | 0.974588 | 0.940527 | 88.03% | 4.55% | 0/2 |
-| 8 | fpn/resnet50 | max_score | ksdd2_smp_final_inspection_baseline_caviar9_fpn_resnet50_001_summary.json | 0.983745 | 0.928622 | 86.91% | 4.55% | 0/2 |
-| 9 | patchcore_lite | topk_score | ksdd2_industrial_anomaly_baselines_caviar9_001_summary.json | 0.938951 | 0.850823 | 58.50% | 15.00% | 0/0 |
-| 10 | patchcore_lite | max_score | ksdd2_industrial_anomaly_baselines_caviar9_001_summary.json | 0.934843 | 0.833829 | 55.15% | 15.00% | 0/0 |
-| 11 | padim_diag | topk_score | ksdd2_industrial_anomaly_baselines_caviar9_001_summary.json | 0.883903 | 0.592429 | 46.59% | 30.91% | 0/0 |
-| 12 | padim_diag | max_score | ksdd2_industrial_anomaly_baselines_caviar9_001_summary.json | 0.875331 | 0.575167 | 43.23% | 32.27% | 0/0 |
+| 8 | unet/resnet50 | topk_score | ksdd2_unet_resnet50_foundation_recheck_caviar9_001_summary.json | 0.982713 | 0.947557 | 87.73% | 4.85% | 0/3 |
+| 9 | fpn/resnet50 | max_score | ksdd2_smp_final_inspection_baseline_caviar9_fpn_resnet50_001_summary.json | 0.983745 | 0.928622 | 86.91% | 4.55% | 0/2 |
+| 10 | unet/resnet50 | max_score | ksdd2_unet_resnet50_foundation_recheck_caviar9_001_summary.json | 0.982771 | 0.945066 | 86.88% | 4.24% | 0/3 |
+| 11 | patchcore_lite | topk_score | ksdd2_industrial_anomaly_baselines_caviar9_001_summary.json | 0.938951 | 0.850823 | 58.50% | 15.00% | 0/0 |
+| 12 | patchcore_lite | max_score | ksdd2_industrial_anomaly_baselines_caviar9_001_summary.json | 0.934843 | 0.833829 | 55.15% | 15.00% | 0/0 |
+| 13 | padim_diag | topk_score | ksdd2_industrial_anomaly_baselines_caviar9_001_summary.json | 0.883903 | 0.592429 | 46.59% | 30.91% | 0/0 |
+| 14 | padim_diag | max_score | ksdd2_industrial_anomaly_baselines_caviar9_001_summary.json | 0.875331 | 0.575167 | 43.23% | 32.27% | 0/0 |
 
 ## 今後の評価軸
 
@@ -57,4 +59,4 @@
 
 PatchCoreは保険テーマとしては残せますが、今回のKSDD2実験では土台モデルとして最有力とは言えません。もしPatchCore FPGA化を主題にするなら、まずPatchCore本体をより忠実に再現し、性能面でU-Net/ResNet50に近づくか上回ることを確認する必要があります。
 
-次にやるべきことは、`unet/resnet50` を固定土台として、閾値校正とseed/split安定性を再確認することです。その後、この固定土台に対して両側早期終了またはFPGA化による計算量削減を評価します。
+再確認の結果、`unet/resnet50` は暫定土台として残すが、validation閾値のtest安定性は不十分でした。次にやるべきことは、土台モデルをむやみに替えることではなく、閾値校正・校正セット設計・保守的な安全閾値選択を整理することです。その後、この固定土台に対して両側早期終了またはFPGA化による計算量削減を評価します。
