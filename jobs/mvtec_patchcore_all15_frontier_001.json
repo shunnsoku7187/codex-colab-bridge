@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_all15_frontier_001",
-  "status": "running",
+  "status": "done",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -10,6 +10,11 @@
   "result_file": "results/mvtec_patchcore_all15_frontier_001.json",
   "note": "All-15 MVTec AD PatchCore-lite design-space frontier for FPGA-oriented category profiling under defect false-pass constraints.",
   "created_at": "2026-08-22T00:00:00+09:00",
-  "updated_at": "2026-08-21T17:06:48.492780+00:00",
-  "started_at": "2026-08-21T17:06:48.492759+00:00"
+  "updated_at": "2026-08-21T17:22:56.614073+00:00",
+  "started_at": "2026-08-21T17:06:48.492759+00:00",
+  "returncode": 0,
+  "duration_sec": 962.352,
+  "stdout": "logs/mvtec_patchcore_all15_frontier_001.stdout.log",
+  "stderr": "logs/mvtec_patchcore_all15_frontier_001.stderr.log",
+  "finished_at": "2026-08-21T17:22:56.606693+00:00"
 }
