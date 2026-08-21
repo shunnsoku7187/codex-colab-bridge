@@ -1,0 +1,13 @@
+{
+  "id": "mvtec_ad_hf_download_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": false,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install huggingface_hub && python -m scripts.download_mvtec_ad_hf --repo-id TheoM55/mvtec_all_objects_split --local-dir-name mvtec_ad --output results/mvtec_ad_hf_download_001.json --markdown docs/mvtec_ad_hf_download_001.md --resume",
+  "max_runtime_sec": 21600,
+  "result_file": "results/mvtec_ad_hf_download_001.json",
+  "note": "Download MVTec AD from the reachable Hugging Face mirror into the persistent caviar9 data root and audit category structure. No training in this job.",
+  "created_at": "2026-08-21T19:46:00+09:00"
+}
