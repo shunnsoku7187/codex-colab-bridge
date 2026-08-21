@@ -1,6 +1,6 @@
 {
   "id": "ksdd2_split_bias_deep_audit_001",
-  "status": "running",
+  "status": "done",
   "backend": "caviar9",
   "requires_gpu": false,
   "type": "shell",
@@ -10,6 +10,11 @@
   "result_file": "results/ksdd2_split_bias_deep_audit_001.json",
   "note": "Phase 0: join saved foundation scores with KSDD2 image paths, mask area, and false-pass samples to explain whether seed 456 is a split/difficulty outlier.",
   "created_at": "2026-08-21T19:34:00+09:00",
-  "updated_at": "2026-08-21T10:41:08.283965+00:00",
-  "started_at": "2026-08-21T10:41:08.283928+00:00"
+  "updated_at": "2026-08-21T10:43:02.856177+00:00",
+  "started_at": "2026-08-21T10:41:08.283928+00:00",
+  "returncode": 0,
+  "duration_sec": 108.894,
+  "stdout": "logs/ksdd2_split_bias_deep_audit_001.stdout.log",
+  "stderr": "logs/ksdd2_split_bias_deep_audit_001.stderr.log",
+  "finished_at": "2026-08-21T10:43:02.843539+00:00"
 }
