@@ -3,6 +3,7 @@
   "inputs": [
     "results\\ksdd2_smp_final_inspection_baseline_001_summary.json",
     "results\\ksdd2_smp_final_inspection_baseline_caviar9_001_summary.json",
+    "results\\ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_summary.json",
     "results\\ksdd2_unet_inspection_baseline_001_summary.json"
   ],
   "rows": [
@@ -56,6 +57,23 @@
       "mean_false_pass": 0.05,
       "worst_false_pass": 0.054545,
       "curve_png": "results/ksdd2_unet_inspection_baseline_001_tradeoff.png"
+    },
+    {
+      "path": "results\\ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_summary.json",
+      "dataset": "KolektorSDD2",
+      "model": "unet/resnet50",
+      "score": "max_score",
+      "mean_test_auroc": 0.988301,
+      "mean_test_aupr": 0.950604,
+      "constraint_false_pass": 0.05,
+      "constraint_good_pass": 0.95,
+      "feasible_seeds": 0,
+      "seeds": 1,
+      "mean_good_pass": 0.982103,
+      "worst_good_pass": 0.982103,
+      "mean_false_pass": 0.090909,
+      "worst_false_pass": 0.090909,
+      "curve_png": "results/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_tradeoff.png"
     }
   ]
 }

@@ -1,0 +1,324 @@
+{
+  "purpose": "Check whether score averaging stabilizes the KSDD2 final-inspection operating point.",
+  "scores_dir": "results\\ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_scores",
+  "inputs": [
+    "results\\ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_scores\\seed_123_scores.npz",
+    "results\\ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_scores\\seed_456_scores.npz"
+  ],
+  "ensemble_status": "skipped",
+  "ensemble_note": "Score files use different validation/test ordering or splits; sample-wise seed averaging is not valid.",
+  "rows": [
+    {
+      "name": "seed_123/max_score",
+      "max_false_pass_rate_defect": 0.0,
+      "min_good_pass_rate_good": 0.9,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.987411,
+      "image_aupr": 0.954545
+    },
+    {
+      "name": "seed_123/max_score",
+      "max_false_pass_rate_defect": 0.0,
+      "min_good_pass_rate_good": 0.95,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.987411,
+      "image_aupr": 0.954545
+    },
+    {
+      "name": "seed_123/max_score",
+      "max_false_pass_rate_defect": 0.01,
+      "min_good_pass_rate_good": 0.9,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.987411,
+      "image_aupr": 0.954545
+    },
+    {
+      "name": "seed_123/max_score",
+      "max_false_pass_rate_defect": 0.01,
+      "min_good_pass_rate_good": 0.95,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.987411,
+      "image_aupr": 0.954545
+    },
+    {
+      "name": "seed_123/max_score",
+      "max_false_pass_rate_defect": 0.05,
+      "min_good_pass_rate_good": 0.9,
+      "feasible_on_val": true,
+      "test_feasible": false,
+      "threshold": 0.989555,
+      "test_metric": {
+        "samples": 1004,
+        "good_count": 894,
+        "defect_count": 110,
+        "threshold": 0.989555,
+        "good_pass_rate_good": 0.982103,
+        "good_loss_rate_good": 0.017897,
+        "false_pass_rate_defect": 0.090909,
+        "defect_recall": 0.909091,
+        "false_pass_count": 10,
+        "good_loss_count": 16
+      },
+      "image_auroc": 0.987411,
+      "image_aupr": 0.954545
+    },
+    {
+      "name": "seed_123/max_score",
+      "max_false_pass_rate_defect": 0.05,
+      "min_good_pass_rate_good": 0.95,
+      "feasible_on_val": true,
+      "test_feasible": false,
+      "threshold": 0.989555,
+      "test_metric": {
+        "samples": 1004,
+        "good_count": 894,
+        "defect_count": 110,
+        "threshold": 0.989555,
+        "good_pass_rate_good": 0.982103,
+        "good_loss_rate_good": 0.017897,
+        "false_pass_rate_defect": 0.090909,
+        "defect_recall": 0.909091,
+        "false_pass_count": 10,
+        "good_loss_count": 16
+      },
+      "image_auroc": 0.987411,
+      "image_aupr": 0.954545
+    },
+    {
+      "name": "seed_123/topk_score",
+      "max_false_pass_rate_defect": 0.0,
+      "min_good_pass_rate_good": 0.9,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.990106,
+      "image_aupr": 0.960474
+    },
+    {
+      "name": "seed_123/topk_score",
+      "max_false_pass_rate_defect": 0.0,
+      "min_good_pass_rate_good": 0.95,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.990106,
+      "image_aupr": 0.960474
+    },
+    {
+      "name": "seed_123/topk_score",
+      "max_false_pass_rate_defect": 0.01,
+      "min_good_pass_rate_good": 0.9,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.990106,
+      "image_aupr": 0.960474
+    },
+    {
+      "name": "seed_123/topk_score",
+      "max_false_pass_rate_defect": 0.01,
+      "min_good_pass_rate_good": 0.95,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.990106,
+      "image_aupr": 0.960474
+    },
+    {
+      "name": "seed_123/topk_score",
+      "max_false_pass_rate_defect": 0.05,
+      "min_good_pass_rate_good": 0.9,
+      "feasible_on_val": true,
+      "test_feasible": false,
+      "threshold": 0.944229,
+      "test_metric": {
+        "samples": 1004,
+        "good_count": 894,
+        "defect_count": 110,
+        "threshold": 0.944229,
+        "good_pass_rate_good": 0.994407,
+        "good_loss_rate_good": 0.005593,
+        "false_pass_rate_defect": 0.1,
+        "defect_recall": 0.9,
+        "false_pass_count": 11,
+        "good_loss_count": 5
+      },
+      "image_auroc": 0.990106,
+      "image_aupr": 0.960474
+    },
+    {
+      "name": "seed_123/topk_score",
+      "max_false_pass_rate_defect": 0.05,
+      "min_good_pass_rate_good": 0.95,
+      "feasible_on_val": true,
+      "test_feasible": false,
+      "threshold": 0.944229,
+      "test_metric": {
+        "samples": 1004,
+        "good_count": 894,
+        "defect_count": 110,
+        "threshold": 0.944229,
+        "good_pass_rate_good": 0.994407,
+        "good_loss_rate_good": 0.005593,
+        "false_pass_rate_defect": 0.1,
+        "defect_recall": 0.9,
+        "false_pass_count": 11,
+        "good_loss_count": 5
+      },
+      "image_auroc": 0.990106,
+      "image_aupr": 0.960474
+    },
+    {
+      "name": "seed_456/max_score",
+      "max_false_pass_rate_defect": 0.0,
+      "min_good_pass_rate_good": 0.9,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.989191,
+      "image_aupr": 0.946663
+    },
+    {
+      "name": "seed_456/max_score",
+      "max_false_pass_rate_defect": 0.0,
+      "min_good_pass_rate_good": 0.95,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.989191,
+      "image_aupr": 0.946663
+    },
+    {
+      "name": "seed_456/max_score",
+      "max_false_pass_rate_defect": 0.01,
+      "min_good_pass_rate_good": 0.9,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.989191,
+      "image_aupr": 0.946663
+    },
+    {
+      "name": "seed_456/max_score",
+      "max_false_pass_rate_defect": 0.01,
+      "min_good_pass_rate_good": 0.95,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.989191,
+      "image_aupr": 0.946663
+    },
+    {
+      "name": "seed_456/max_score",
+      "max_false_pass_rate_defect": 0.05,
+      "min_good_pass_rate_good": 0.9,
+      "feasible_on_val": true,
+      "test_feasible": true,
+      "threshold": 0.943197,
+      "test_metric": {
+        "samples": 1004,
+        "good_count": 894,
+        "defect_count": 110,
+        "threshold": 0.943197,
+        "good_pass_rate_good": 0.940716,
+        "good_loss_rate_good": 0.059284,
+        "false_pass_rate_defect": 0.036364,
+        "defect_recall": 0.963636,
+        "false_pass_count": 4,
+        "good_loss_count": 53
+      },
+      "image_auroc": 0.989191,
+      "image_aupr": 0.946663
+    },
+    {
+      "name": "seed_456/max_score",
+      "max_false_pass_rate_defect": 0.05,
+      "min_good_pass_rate_good": 0.95,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.989191,
+      "image_aupr": 0.946663
+    },
+    {
+      "name": "seed_456/topk_score",
+      "max_false_pass_rate_defect": 0.0,
+      "min_good_pass_rate_good": 0.9,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.986292,
+      "image_aupr": 0.953526
+    },
+    {
+      "name": "seed_456/topk_score",
+      "max_false_pass_rate_defect": 0.0,
+      "min_good_pass_rate_good": 0.95,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.986292,
+      "image_aupr": 0.953526
+    },
+    {
+      "name": "seed_456/topk_score",
+      "max_false_pass_rate_defect": 0.01,
+      "min_good_pass_rate_good": 0.9,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.986292,
+      "image_aupr": 0.953526
+    },
+    {
+      "name": "seed_456/topk_score",
+      "max_false_pass_rate_defect": 0.01,
+      "min_good_pass_rate_good": 0.95,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.986292,
+      "image_aupr": 0.953526
+    },
+    {
+      "name": "seed_456/topk_score",
+      "max_false_pass_rate_defect": 0.05,
+      "min_good_pass_rate_good": 0.9,
+      "feasible_on_val": true,
+      "test_feasible": true,
+      "threshold": 0.645489,
+      "test_metric": {
+        "samples": 1004,
+        "good_count": 894,
+        "defect_count": 110,
+        "threshold": 0.645489,
+        "good_pass_rate_good": 0.94519,
+        "good_loss_rate_good": 0.05481,
+        "false_pass_rate_defect": 0.036364,
+        "defect_recall": 0.963636,
+        "false_pass_count": 4,
+        "good_loss_count": 49
+      },
+      "image_auroc": 0.986292,
+      "image_aupr": 0.953526
+    },
+    {
+      "name": "seed_456/topk_score",
+      "max_false_pass_rate_defect": 0.05,
+      "min_good_pass_rate_good": 0.95,
+      "feasible_on_val": false,
+      "test_feasible": false,
+      "threshold": null,
+      "image_auroc": 0.986292,
+      "image_aupr": 0.953526
+    }
+  ]
+}

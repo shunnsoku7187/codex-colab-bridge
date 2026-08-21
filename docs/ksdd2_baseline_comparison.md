@@ -13,6 +13,7 @@
 | ksdd2_smp_final_inspection_baseline_caviar9_001_summary.json | unetplusplus/resnet34 | topk_score | 0.9779 | 0.9374 | 0.00% | 90.00% | 0/1 | 4.55% | 88.70% | 欠陥スコアは有効だが、運用閾値には改善余地がある。校正・選択的判定・FPGA化の効果を見る。 |
 | ksdd2_smp_final_inspection_baseline_001_summary.json | unetplusplus/resnet34 | max_score | 0.9740 | 0.9420 | 0.00% | 95.00% | 0/1 | 5.45% | 98.32% | 欠陥スコアは有効だが、運用閾値には改善余地がある。校正・選択的判定・FPGA化の効果を見る。 |
 | ksdd2_unet_inspection_baseline_001_summary.json | ksdd2_unet_inspection_baseline_001 | topk_score | 0.9761 | 0.9403 | 0.00% | 90.00% | 0/2 | 5.45% | 93.40% | 欠陥スコアは有効だが、運用閾値には改善余地がある。校正・選択的判定・FPGA化の効果を見る。 |
+| ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_summary.json | unet/resnet50 | max_score | 0.9883 | 0.9506 | 5.00% | 95.00% | 0/1 | 9.09% | 98.21% | 欠陥スコアは有効だが、運用閾値には改善余地がある。校正・選択的判定・FPGA化の効果を見る。 |
 
 次に見るべきこと:
 
