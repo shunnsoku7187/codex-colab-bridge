@@ -1,0 +1,137 @@
+[2026-08-19T18:22:07.845202+00:00] host=caviar9 job=ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001
+[2026-08-19T18:22:07.845222+00:00] cwd=/home/shunya/codex-gpu-work/colab-github-bridge
+[2026-08-19T18:22:07.845247+00:00] command=python -m pip install -r requirements-colab.txt segmentation-models-pytorch timm && python -m scripts.ksdd2_smp_final_inspection_baseline --output results/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_summary.json --markdown docs/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001.md --checkpoint-dir artifacts/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001 --curve-png results/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_tradeoff.png --scores-dir results/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_scores --architecture unet --encoder resnet50 --encoder-weights imagenet --epochs 30 --batch-size 6 --image-height 256 --image-width 704 --positive-pixel-weight 60.0 --topk-fraction 0.001 --seeds 123 456 --max-false-pass-rates 0.0 0.01 0.05 --min-good-pass-rates 0.90 0.95 --max-threshold-candidates 101 --curve-points 120 --require-cuda
+Requirement already satisfied: segmentation-models-pytorch in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (0.5.0)
+Requirement already satisfied: timm in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (1.0.28)
+Requirement already satisfied: matplotlib in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from -r requirements-colab.txt (line 1)) (3.11.1)
+Requirement already satisfied: matplotlib-venn in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from -r requirements-colab.txt (line 2)) (1.1.2)
+Requirement already satisfied: torchinfo in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from -r requirements-colab.txt (line 3)) (1.8.0)
+Requirement already satisfied: transformers in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from -r requirements-colab.txt (line 4)) (5.15.1)
+Requirement already satisfied: opencv-python-headless in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from -r requirements-colab.txt (line 5)) (5.0.0.93)
+Requirement already satisfied: scikit-learn in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from -r requirements-colab.txt (line 6)) (1.9.0)
+Requirement already satisfied: lightgbm in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from -r requirements-colab.txt (line 7)) (4.7.0)
+Requirement already satisfied: tqdm in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from -r requirements-colab.txt (line 8)) (4.70.0)
+Requirement already satisfied: huggingface-hub>=0.24 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from segmentation-models-pytorch) (1.28.0)
+Requirement already satisfied: numpy>=1.19.3 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from segmentation-models-pytorch) (2.4.6)
+Requirement already satisfied: pillow>=8 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from segmentation-models-pytorch) (12.3.0)
+Requirement already satisfied: safetensors>=0.3.1 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from segmentation-models-pytorch) (0.8.0)
+Requirement already satisfied: torch>=1.8 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from segmentation-models-pytorch) (2.7.1+cu118)
+Requirement already satisfied: torchvision>=0.9 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from segmentation-models-pytorch) (0.22.1+cu118)
+Requirement already satisfied: pyyaml in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from timm) (6.0.3)
+Requirement already satisfied: contourpy>=1.0.1 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from matplotlib->-r requirements-colab.txt (line 1)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from matplotlib->-r requirements-colab.txt (line 1)) (0.12.1)
+Requirement already satisfied: fonttools>=4.28.2 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from matplotlib->-r requirements-colab.txt (line 1)) (4.63.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from matplotlib->-r requirements-colab.txt (line 1)) (1.5.0)
+Requirement already satisfied: packaging>=20.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from matplotlib->-r requirements-colab.txt (line 1)) (26.3)
+Requirement already satisfied: pyparsing>=3 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from matplotlib->-r requirements-colab.txt (line 1)) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from matplotlib->-r requirements-colab.txt (line 1)) (2.9.0.post0)
+Requirement already satisfied: scipy in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from matplotlib-venn->-r requirements-colab.txt (line 2)) (1.17.1)
+Requirement already satisfied: regex>=2025.10.22 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from transformers->-r requirements-colab.txt (line 4)) (2026.7.19)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from transformers->-r requirements-colab.txt (line 4)) (0.22.2)
+Requirement already satisfied: typer in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from transformers->-r requirements-colab.txt (line 4)) (0.27.1)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from huggingface-hub>=0.24->segmentation-models-pytorch) (8.4.2)
+Requirement already satisfied: filelock>=3.10.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from huggingface-hub>=0.24->segmentation-models-pytorch) (3.32.3)
+Requirement already satisfied: fsspec>=2023.5.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from huggingface-hub>=0.24->segmentation-models-pytorch) (2026.7.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.5.2 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from huggingface-hub>=0.24->segmentation-models-pytorch) (1.6.0)
+Requirement already satisfied: httpx<1,>=0.23.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from huggingface-hub>=0.24->segmentation-models-pytorch) (0.28.1)
+Requirement already satisfied: typing-extensions>=4.1.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from huggingface-hub>=0.24->segmentation-models-pytorch) (4.16.0)
+Requirement already satisfied: anyio in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub>=0.24->segmentation-models-pytorch) (4.14.2)
+Requirement already satisfied: certifi in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub>=0.24->segmentation-models-pytorch) (2026.7.22)
+Requirement already satisfied: httpcore==1.* in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub>=0.24->segmentation-models-pytorch) (1.0.9)
+Requirement already satisfied: idna in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub>=0.24->segmentation-models-pytorch) (3.19)
+Requirement already satisfied: h11>=0.16 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub>=0.24->segmentation-models-pytorch) (0.16.0)
+Requirement already satisfied: joblib>=1.4.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from scikit-learn->-r requirements-colab.txt (line 6)) (1.5.3)
+Requirement already satisfied: narwhals>=2.0.1 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from scikit-learn->-r requirements-colab.txt (line 6)) (2.24.0)
+Requirement already satisfied: threadpoolctl>=3.5.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from scikit-learn->-r requirements-colab.txt (line 6)) (3.6.0)
+Requirement already satisfied: six>=1.5 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib->-r requirements-colab.txt (line 1)) (1.17.0)
+Requirement already satisfied: sympy>=1.13.3 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (1.14.0)
+Requirement already satisfied: networkx in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (3.6.1)
+Requirement already satisfied: jinja2 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (3.1.6)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.8.89 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (11.8.89)
+Requirement already satisfied: nvidia-cuda-runtime-cu11==11.8.89 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (11.8.89)
+Requirement already satisfied: nvidia-cuda-cupti-cu11==11.8.87 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (11.8.87)
+Requirement already satisfied: nvidia-cudnn-cu11==9.1.0.70 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu11==11.11.3.6 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (11.11.3.6)
+Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (10.9.0.58)
+Requirement already satisfied: nvidia-curand-cu11==10.3.0.86 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (10.3.0.86)
+Requirement already satisfied: nvidia-cusolver-cu11==11.4.1.48 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (11.4.1.48)
+Requirement already satisfied: nvidia-cusparse-cu11==11.7.5.86 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (11.7.5.86)
+Requirement already satisfied: nvidia-nccl-cu11==2.21.5 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (2.21.5)
+Requirement already satisfied: nvidia-nvtx-cu11==11.8.86 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (11.8.86)
+Requirement already satisfied: triton==3.3.1 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from torch>=1.8->segmentation-models-pytorch) (3.3.1)
+Requirement already satisfied: setuptools>=40.8.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from triton==3.3.1->torch>=1.8->segmentation-models-pytorch) (84.0.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from sympy>=1.13.3->torch>=1.8->segmentation-models-pytorch) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from jinja2->torch>=1.8->segmentation-models-pytorch) (3.0.3)
+Requirement already satisfied: shellingham>=1.3.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (15.0.0)
+Requirement already satisfied: annotated-doc>=0.0.2 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from typer->transformers->-r requirements-colab.txt (line 4)) (0.0.5)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (2.21.0)
+Requirement already satisfied: mdurl~=0.1 in /home/shunya/miniconda3/envs/cuda/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers->-r requirements-colab.txt (line 4)) (0.1.2)
+device=cuda
+Extracting /home/shunya/codex-gpu-work/data/kolektor_sdd2/KolektorSDD2.zip
+{"epoch": 1, "loss": 1.323058, "image_auroc": 0.971682, "image_aupr": 0.851606}
+{"epoch": 2, "loss": 1.051779, "image_auroc": 0.910965, "image_aupr": 0.757874}
+{"epoch": 3, "loss": 1.000034, "image_auroc": 0.980295, "image_aupr": 0.865724}
+{"epoch": 4, "loss": 0.873909, "image_auroc": 0.985161, "image_aupr": 0.889968}
+{"epoch": 5, "loss": 0.836394, "image_auroc": 0.983015, "image_aupr": 0.84305}
+{"epoch": 6, "loss": 0.773814, "image_auroc": 0.968357, "image_aupr": 0.849899}
+{"epoch": 7, "loss": 0.74645, "image_auroc": 0.975187, "image_aupr": 0.886853}
+{"epoch": 8, "loss": 0.691649, "image_auroc": 0.976094, "image_aupr": 0.885371}
+{"epoch": 9, "loss": 0.660638, "image_auroc": 0.971591, "image_aupr": 0.931309}
+{"epoch": 10, "loss": 0.63725, "image_auroc": 0.93747, "image_aupr": 0.756743}
+{"epoch": 11, "loss": 0.6887, "image_auroc": 0.9851, "image_aupr": 0.937618}
+{"epoch": 12, "loss": 0.623537, "image_auroc": 0.978361, "image_aupr": 0.926692}
+{"epoch": 13, "loss": 0.624571, "image_auroc": 0.985312, "image_aupr": 0.932354}
+{"epoch": 14, "loss": 0.591745, "image_auroc": 0.973223, "image_aupr": 0.937974}
+{"epoch": 15, "loss": 0.578774, "image_auroc": 0.969626, "image_aupr": 0.936202}
+{"epoch": 16, "loss": 0.587529, "image_auroc": 0.987609, "image_aupr": 0.946301}
+{"epoch": 17, "loss": 0.555602, "image_auroc": 0.974492, "image_aupr": 0.945676}
+{"epoch": 18, "loss": 0.555602, "image_auroc": 0.973737, "image_aupr": 0.943931}
+{"epoch": 19, "loss": 0.554983, "image_auroc": 0.978179, "image_aupr": 0.95179}
+{"epoch": 20, "loss": 0.544309, "image_auroc": 0.970684, "image_aupr": 0.948144}
+{"epoch": 21, "loss": 0.546627, "image_auroc": 0.971379, "image_aupr": 0.945096}
+{"epoch": 22, "loss": 0.54702, "image_auroc": 0.97419, "image_aupr": 0.951193}
+{"epoch": 23, "loss": 0.542976, "image_auroc": 0.969506, "image_aupr": 0.948363}
+{"epoch": 24, "loss": 0.536037, "image_auroc": 0.973042, "image_aupr": 0.950666}
+{"epoch": 25, "loss": 0.529662, "image_auroc": 0.971228, "image_aupr": 0.951421}
+{"epoch": 26, "loss": 0.523562, "image_auroc": 0.974794, "image_aupr": 0.950772}
+{"epoch": 27, "loss": 0.528943, "image_auroc": 0.975097, "image_aupr": 0.950026}
+{"epoch": 28, "loss": 0.536792, "image_auroc": 0.977212, "image_aupr": 0.952526}
+{"epoch": 29, "loss": 0.537162, "image_auroc": 0.975278, "image_aupr": 0.951576}
+{"epoch": 30, "loss": 0.51692, "image_auroc": 0.977424, "image_aupr": 0.954479}
+{"epoch": 1, "loss": 1.244027, "image_auroc": 0.990147, "image_aupr": 0.914898}
+{"epoch": 2, "loss": 1.145455, "image_auroc": 0.988092, "image_aupr": 0.939478}
+{"epoch": 3, "loss": 0.951699, "image_auroc": 0.978905, "image_aupr": 0.917582}
+{"epoch": 4, "loss": 0.903977, "image_auroc": 0.989603, "image_aupr": 0.939598}
+{"epoch": 5, "loss": 0.935877, "image_auroc": 0.945449, "image_aupr": 0.661935}
+{"epoch": 6, "loss": 0.86352, "image_auroc": 0.985493, "image_aupr": 0.920915}
+{"epoch": 7, "loss": 0.819457, "image_auroc": 0.987065, "image_aupr": 0.922752}
+{"epoch": 8, "loss": 0.726605, "image_auroc": 0.98368, "image_aupr": 0.908298}
+{"epoch": 9, "loss": 0.697457, "image_auroc": 0.991387, "image_aupr": 0.933827}
+{"epoch": 10, "loss": 0.83313, "image_auroc": 0.975762, "image_aupr": 0.93188}
+{"epoch": 11, "loss": 0.75356, "image_auroc": 0.987851, "image_aupr": 0.933324}
+{"epoch": 12, "loss": 0.677798, "image_auroc": 0.97694, "image_aupr": 0.922982}
+{"epoch": 13, "loss": 0.653499, "image_auroc": 0.988455, "image_aupr": 0.941293}
+{"epoch": 14, "loss": 0.626425, "image_auroc": 0.973586, "image_aupr": 0.869118}
+{"epoch": 15, "loss": 0.602387, "image_auroc": 0.974099, "image_aupr": 0.921627}
+{"epoch": 16, "loss": 0.591246, "image_auroc": 0.967783, "image_aupr": 0.917486}
+{"epoch": 17, "loss": 0.607561, "image_auroc": 0.985433, "image_aupr": 0.938522}
+{"epoch": 18, "loss": 0.585866, "image_auroc": 0.960167, "image_aupr": 0.906921}
+{"epoch": 19, "loss": 0.589966, "image_auroc": 0.971802, "image_aupr": 0.915738}
+{"epoch": 20, "loss": 0.55627, "image_auroc": 0.974371, "image_aupr": 0.92112}
+{"epoch": 21, "loss": 0.553663, "image_auroc": 0.973314, "image_aupr": 0.914354}
+{"epoch": 22, "loss": 0.57939, "image_auroc": 0.972558, "image_aupr": 0.912343}
+{"epoch": 23, "loss": 0.561104, "image_auroc": 0.971017, "image_aupr": 0.887189}
+{"epoch": 24, "loss": 0.546246, "image_auroc": 0.974402, "image_aupr": 0.913327}
+{"epoch": 25, "loss": 0.548115, "image_auroc": 0.978723, "image_aupr": 0.916614}
+{"epoch": 26, "loss": 0.536305, "image_auroc": 0.976668, "image_aupr": 0.907868}
+{"epoch": 27, "loss": 0.555824, "image_auroc": 0.978995, "image_aupr": 0.885121}
+{"epoch": 28, "loss": 0.533833, "image_auroc": 0.975278, "image_aupr": 0.882664}
+{"epoch": 29, "loss": 0.531273, "image_auroc": 0.973404, "image_aupr": 0.869092}
+{"epoch": 30, "loss": 0.543382, "image_auroc": 0.977696, "image_aupr": 0.883703}
+{
+  "wrote": "results/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_summary.json",
+  "markdown": "docs/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001.md",
+  "curve_png": "results/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_tradeoff.png"
+}
