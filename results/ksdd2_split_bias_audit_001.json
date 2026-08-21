@@ -1,0 +1,367 @@
+{
+  "purpose": "Audit split/seed sensitivity using saved U-Net/ResNet50 foundation recheck scores.",
+  "scores_dir": "results/ksdd2_unet_resnet50_foundation_recheck_caviar9_001_scores",
+  "rows": [
+    {
+      "seed": 123,
+      "score_name": "max_score",
+      "auroc": 0.985987,
+      "aupr": 0.94736,
+      "test_counts": {
+        "samples": 1004,
+        "good": 894,
+        "defect": 110
+      },
+      "defect_score_quantiles": {
+        "0.0": 0.021571,
+        "0.05": 0.983452,
+        "0.1": 0.999034,
+        "0.25": 0.999971,
+        "0.5": 0.999999,
+        "0.75": 1.0,
+        "0.9": 1.0,
+        "0.95": 1.0,
+        "1.0": 1.0
+      },
+      "good_score_quantiles": {
+        "0.0": 0.002046,
+        "0.05": 0.003032,
+        "0.1": 0.003911,
+        "0.25": 0.007552,
+        "0.5": 0.014333,
+        "0.75": 0.250132,
+        "0.9": 0.96482,
+        "0.95": 0.996002,
+        "1.0": 0.999991
+      },
+      "best_under_false_pass_5": {
+        "threshold": 0.977589,
+        "good_pass_rate": 0.910515,
+        "good_loss_rate": 0.089485,
+        "false_pass_rate": 0.045455,
+        "false_pass_count": 5,
+        "defect_count": 110,
+        "good_count": 894
+      },
+      "best_under_false_pass_3": {
+        "threshold": 0.967056,
+        "good_pass_rate": 0.901566,
+        "good_loss_rate": 0.098434,
+        "false_pass_rate": 0.027273,
+        "false_pass_count": 3,
+        "defect_count": 110,
+        "good_count": 894
+      },
+      "near_good_pass_90": {
+        "threshold": 0.967056,
+        "good_pass_rate": 0.901566,
+        "good_loss_rate": 0.098434,
+        "false_pass_rate": 0.027273,
+        "false_pass_count": 3,
+        "defect_count": 110,
+        "good_count": 894
+      }
+    },
+    {
+      "seed": 123,
+      "score_name": "topk_score",
+      "auroc": 0.986923,
+      "aupr": 0.95211,
+      "test_counts": {
+        "samples": 1004,
+        "good": 894,
+        "defect": 110
+      },
+      "defect_score_quantiles": {
+        "0.0": 0.002817,
+        "0.05": 0.718141,
+        "0.1": 0.987058,
+        "0.25": 0.999899,
+        "0.5": 0.999995,
+        "0.75": 1.0,
+        "0.9": 1.0,
+        "0.95": 1.0,
+        "1.0": 1.0
+      },
+      "good_score_quantiles": {
+        "0.0": 0.000208,
+        "0.05": 0.00027,
+        "0.1": 0.000299,
+        "0.25": 0.000455,
+        "0.5": 0.001417,
+        "0.75": 0.029304,
+        "0.9": 0.400061,
+        "0.95": 0.882736,
+        "1.0": 0.999983
+      },
+      "best_under_false_pass_5": {
+        "threshold": 0.654744,
+        "good_pass_rate": 0.92953,
+        "good_loss_rate": 0.07047,
+        "false_pass_rate": 0.045455,
+        "false_pass_count": 5,
+        "defect_count": 110,
+        "good_count": 894
+      },
+      "best_under_false_pass_3": {
+        "threshold": 0.329405,
+        "good_pass_rate": 0.89038,
+        "good_loss_rate": 0.10962,
+        "false_pass_rate": 0.027273,
+        "false_pass_count": 3,
+        "defect_count": 110,
+        "good_count": 894
+      },
+      "near_good_pass_90": {
+        "threshold": 0.396256,
+        "good_pass_rate": 0.899329,
+        "good_loss_rate": 0.100671,
+        "false_pass_rate": 0.045455,
+        "false_pass_count": 5,
+        "defect_count": 110,
+        "good_count": 894
+      }
+    },
+    {
+      "seed": 456,
+      "score_name": "max_score",
+      "auroc": 0.97469,
+      "aupr": 0.929531,
+      "test_counts": {
+        "samples": 1004,
+        "good": 894,
+        "defect": 110
+      },
+      "defect_score_quantiles": {
+        "0.0": 0.445709,
+        "0.05": 0.871461,
+        "0.1": 0.957245,
+        "0.25": 0.990703,
+        "0.5": 0.998292,
+        "0.75": 0.999701,
+        "0.9": 0.999942,
+        "0.95": 0.999983,
+        "1.0": 0.999997
+      },
+      "good_score_quantiles": {
+        "0.0": 0.324255,
+        "0.05": 0.363327,
+        "0.1": 0.374549,
+        "0.25": 0.403773,
+        "0.5": 0.644668,
+        "0.75": 0.835257,
+        "0.9": 0.924924,
+        "0.95": 0.951918,
+        "1.0": 0.988353
+      },
+      "best_under_false_pass_5": {
+        "threshold": 0.837368,
+        "good_pass_rate": 0.752796,
+        "good_loss_rate": 0.247204,
+        "false_pass_rate": 0.045455,
+        "false_pass_count": 5,
+        "defect_count": 110,
+        "good_count": 894
+      },
+      "best_under_false_pass_3": {
+        "threshold": 0.826509,
+        "good_pass_rate": 0.736018,
+        "good_loss_rate": 0.263982,
+        "false_pass_rate": 0.027273,
+        "false_pass_count": 3,
+        "defect_count": 110,
+        "good_count": 894
+      },
+      "near_good_pass_90": {
+        "threshold": 0.92577,
+        "good_pass_rate": 0.900447,
+        "good_loss_rate": 0.099553,
+        "false_pass_rate": 0.063636,
+        "false_pass_count": 7,
+        "defect_count": 110,
+        "good_count": 894
+      }
+    },
+    {
+      "seed": 456,
+      "score_name": "topk_score",
+      "auroc": 0.974202,
+      "aupr": 0.932238,
+      "test_counts": {
+        "samples": 1004,
+        "good": 894,
+        "defect": 110
+      },
+      "defect_score_quantiles": {
+        "0.0": 0.28889,
+        "0.05": 0.818674,
+        "0.1": 0.935642,
+        "0.25": 0.98627,
+        "0.5": 0.997949,
+        "0.75": 0.999533,
+        "0.9": 0.99992,
+        "0.95": 0.999979,
+        "1.0": 0.999997
+      },
+      "good_score_quantiles": {
+        "0.0": 0.18691,
+        "0.05": 0.210945,
+        "0.1": 0.224856,
+        "0.25": 0.284407,
+        "0.5": 0.512768,
+        "0.75": 0.761007,
+        "0.9": 0.889769,
+        "0.95": 0.927627,
+        "1.0": 0.986112
+      },
+      "best_under_false_pass_5": {
+        "threshold": 0.767567,
+        "good_pass_rate": 0.756152,
+        "good_loss_rate": 0.243848,
+        "false_pass_rate": 0.045455,
+        "false_pass_count": 5,
+        "defect_count": 110,
+        "good_count": 894
+      },
+      "best_under_false_pass_3": {
+        "threshold": 0.740276,
+        "good_pass_rate": 0.729306,
+        "good_loss_rate": 0.270694,
+        "false_pass_rate": 0.027273,
+        "false_pass_count": 3,
+        "defect_count": 110,
+        "good_count": 894
+      },
+      "near_good_pass_90": {
+        "threshold": 0.890259,
+        "good_pass_rate": 0.900447,
+        "good_loss_rate": 0.099553,
+        "false_pass_rate": 0.063636,
+        "false_pass_count": 7,
+        "defect_count": 110,
+        "good_count": 894
+      }
+    },
+    {
+      "seed": 789,
+      "score_name": "max_score",
+      "auroc": 0.987635,
+      "aupr": 0.958308,
+      "test_counts": {
+        "samples": 1004,
+        "good": 894,
+        "defect": 110
+      },
+      "defect_score_quantiles": {
+        "0.0": 0.003156,
+        "0.05": 0.986711,
+        "0.1": 0.999427,
+        "0.25": 0.999998,
+        "0.5": 1.0,
+        "0.75": 1.0,
+        "0.9": 1.0,
+        "0.95": 1.0,
+        "1.0": 1.0
+      },
+      "good_score_quantiles": {
+        "0.0": 0.001851,
+        "0.05": 0.00223,
+        "0.1": 0.002429,
+        "0.25": 0.002756,
+        "0.5": 0.00337,
+        "0.75": 0.02393,
+        "0.9": 0.671919,
+        "0.95": 0.981675,
+        "1.0": 0.999997
+      },
+      "best_under_false_pass_5": {
+        "threshold": 0.984944,
+        "good_pass_rate": 0.951902,
+        "good_loss_rate": 0.048098,
+        "false_pass_rate": 0.045455,
+        "false_pass_count": 5,
+        "defect_count": 110,
+        "good_count": 894
+      },
+      "best_under_false_pass_3": {
+        "threshold": 0.641532,
+        "good_pass_rate": 0.89821,
+        "good_loss_rate": 0.10179,
+        "false_pass_rate": 0.027273,
+        "false_pass_count": 3,
+        "defect_count": 110,
+        "good_count": 894
+      },
+      "near_good_pass_90": {
+        "threshold": 0.687722,
+        "good_pass_rate": 0.900447,
+        "good_loss_rate": 0.099553,
+        "false_pass_rate": 0.036364,
+        "false_pass_count": 4,
+        "defect_count": 110,
+        "good_count": 894
+      }
+    },
+    {
+      "seed": 789,
+      "score_name": "topk_score",
+      "auroc": 0.987014,
+      "aupr": 0.958322,
+      "test_counts": {
+        "samples": 1004,
+        "good": 894,
+        "defect": 110
+      },
+      "defect_score_quantiles": {
+        "0.0": 0.000349,
+        "0.05": 0.376362,
+        "0.1": 0.906824,
+        "0.25": 0.999979,
+        "0.5": 1.0,
+        "0.75": 1.0,
+        "0.9": 1.0,
+        "0.95": 1.0,
+        "1.0": 1.0
+      },
+      "good_score_quantiles": {
+        "0.0": 0.000161,
+        "0.05": 0.000211,
+        "0.1": 0.000224,
+        "0.25": 0.000275,
+        "0.5": 0.000434,
+        "0.75": 0.002657,
+        "0.9": 0.103602,
+        "0.95": 0.328917,
+        "1.0": 0.999448
+      },
+      "best_under_false_pass_5": {
+        "threshold": 0.345339,
+        "good_pass_rate": 0.951902,
+        "good_loss_rate": 0.048098,
+        "false_pass_rate": 0.045455,
+        "false_pass_count": 5,
+        "defect_count": 110,
+        "good_count": 894
+      },
+      "best_under_false_pass_3": {
+        "threshold": 0.04859,
+        "good_pass_rate": 0.87472,
+        "good_loss_rate": 0.12528,
+        "false_pass_rate": 0.027273,
+        "false_pass_count": 3,
+        "defect_count": 110,
+        "good_count": 894
+      },
+      "near_good_pass_90": {
+        "threshold": 0.105218,
+        "good_pass_rate": 0.900447,
+        "good_loss_rate": 0.099553,
+        "false_pass_rate": 0.036364,
+        "false_pass_count": 4,
+        "defect_count": 110,
+        "good_count": 894
+      }
+    }
+  ],
+  "figure": "results/ksdd2_split_bias_audit_001_defect_score_distributions.png"
+}
