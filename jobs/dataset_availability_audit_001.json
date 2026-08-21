@@ -1,6 +1,6 @@
 {
   "id": "dataset_availability_audit_001",
-  "status": "running",
+  "status": "done",
   "backend": "caviar9",
   "requires_gpu": false,
   "type": "shell",
@@ -10,6 +10,11 @@
   "result_file": "results/dataset_availability_audit_001.json",
   "note": "Phase 1/2/3 preparation: check whether MVTec AD, VisA, and MVTec AD 2 are already present or reachable from caviar9/konbu data root before creating download/probe jobs.",
   "created_at": "2026-08-21T19:34:00+09:00",
-  "updated_at": "2026-08-21T10:43:18.662569+00:00",
-  "started_at": "2026-08-21T10:43:18.662537+00:00"
+  "updated_at": "2026-08-21T10:43:44.130660+00:00",
+  "started_at": "2026-08-21T10:43:18.662537+00:00",
+  "returncode": 0,
+  "duration_sec": 19.624,
+  "stdout": "logs/dataset_availability_audit_001.stdout.log",
+  "stderr": "logs/dataset_availability_audit_001.stderr.log",
+  "finished_at": "2026-08-21T10:43:44.122078+00:00"
 }
