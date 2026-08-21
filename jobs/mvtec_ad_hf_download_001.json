@@ -1,6 +1,6 @@
 {
   "id": "mvtec_ad_hf_download_001",
-  "status": "pending",
+  "status": "running",
   "backend": "caviar9",
   "requires_gpu": false,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 21600,
   "result_file": "results/mvtec_ad_hf_download_001.json",
   "note": "Download MVTec AD from the reachable Hugging Face mirror into the persistent caviar9 data root and audit category structure. No training in this job.",
-  "created_at": "2026-08-21T19:46:00+09:00"
+  "created_at": "2026-08-21T19:46:00+09:00",
+  "updated_at": "2026-08-21T10:52:13.575590+00:00",
+  "started_at": "2026-08-21T10:52:13.575576+00:00"
 }
