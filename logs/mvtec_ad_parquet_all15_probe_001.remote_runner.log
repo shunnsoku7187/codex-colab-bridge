@@ -127,3 +127,33 @@ read parquet shards:  35%|███▌      | 11/31 [07:27<16:30, 49.51s/it]
 read parquet shards:  39%|███▊      | 12/31 [07:29<11:08, 35.16s/it]
 read parquet shards:  42%|████▏     | 13/31 [07:37<08:03, 26.86s/it]
 $ git add jobs logs results artifacts docs
+$ git diff --cached --quiet
+$ git commit -m 'caviar9: heartbeat mvtec_ad_parquet_all15_probe_001'
+[main d62010a] caviar9: heartbeat mvtec_ad_parquet_all15_probe_001
+ 3 files changed, 21 insertions(+)
+$ git push origin main
+To github.com:shunnsoku7187/codex-colab-bridge.git
+   61ff025..d62010a  main -> main
+read parquet shards:  45%|████▌     | 14/31 [08:47<11:17, 39.86s/it]
+read parquet shards:  48%|████▊     | 15/31 [11:15<19:21, 72.58s/it]
+read parquet shards:  52%|█████▏    | 16/31 [11:16<12:46, 51.10s/it]
+read parquet shards:  55%|█████▍    | 17/31 [11:18<08:28, 36.32s/it]
+read parquet shards:  55%|█████▍    | 17/31 [11:19<09:19, 39.98s/it]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/shunya/codex-gpu-work/colab-github-bridge/scripts/mvtec_ad_parquet_anomaly_probe.py", line 518, in <module>
+    main()
+  File "/home/shunya/codex-gpu-work/colab-github-bridge/scripts/mvtec_ad_parquet_anomaly_probe.py", line 454, in main
+    materialization = materialize_from_parquet(dataset_root, materialized_root, args.categories, args.limit_per_category)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shunya/codex-gpu-work/colab-github-bridge/scripts/mvtec_ad_parquet_anomaly_probe.py", line 160, in materialize_from_parquet
+    if image_path.exists():
+       ^^^^^^^^^^^^^^^^^^^
+  File "/home/shunya/miniconda3/envs/cuda/lib/python3.11/pathlib.py", line 1235, in exists
+    self.stat()
+  File "/home/shunya/miniconda3/envs/cuda/lib/python3.11/pathlib.py", line 1013, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 36] File name too long: '/home/shunya/codex-gpu-work/data/mvtec_ad_materialized/pill/test/crack/_xf6_x11r__x12_xf6_x0e_x8e8_xb0_x14_xbb9_xbb_xee_x9c_xb8_xb0_xbe__xe9d_xf4_x98_xfd__xf2S_xa4_xba_xbd_x98_xa5_x01_xddu_xe4_xe6__u__0xu_xee_xbd__xec_xf1u_x16_xe0_x1c_J__xd0_xcd_x19_xb3_xdf_xe1__xa1_xaf_x15_xf2_rxM__xf2__xae_x9f_xbf_x90c_xc0W_xa19_x9b5Q__x8a_xcf_xf5_xc7Z_xe8j_x14_xc8FH_xfby_x17_xa0_xdaNv_xb8zgpZ_xaa_xcer__xac_xa9_xf3_x91_x0e_x15_xfb_V_x01_j_xe7_xdb9_x87_xdc_xf7_x80_xb1_x9c___e_xc5T_x7f_xccP_xe5_xf9_xf0_xb9_x07_xd8__t_x94_x81_xee_x90_xd44_xdb_xf3__x00_xce_xe7_xd79__x7f_xe1_xf3___O_xd5_xf3_xc3_xba_xa8_xdb_x95_x8bjS_xe8_xb4_xf60OH_xb8_xaa_xbd___xe8__x9e_x12_xc8_xbe_xcc4._x05_xa2_zTk.__xe7_xeb_7__xdc_G_xe60fII_xffI_xcf_xb7_xed__5_xff_xe40_x0c__x93k_xf3_xb4_xeb_xf0_x1e_xf6F__xdc_xa2_xf9_xc9__xb1_x10o_xf4x9_xc6V_xce_x8c_xfaS_x1b__Yp_x81n_x89_xb5_x8b_xd6__xc1for_xe9_xf7-_x13_xe6__xf4__n_xb96cr__xfb_x91._x19_Do_xee_x91_xfav-Eq_x03_x17t_xc4h_x01__xa7___x19__x95r_xb3_x0c_xe9_xad_xb2_x14_x11_x1c__xa1_xa2_xd8O_xefoj_xdam_x__xbd_x0b_x0cpr_x8d_xa9___xd5_x9a_x04_x00__x15_xeb_xae_x85_xd0___xa6_xfe8_xa2b_xb1sh__x96j_xec_xf9_xff_x00_PD___x81H_xb3_x00_x00_x00_x00IEND_xaeB__x82____path____017.png'
+$ git add jobs logs results artifacts docs
