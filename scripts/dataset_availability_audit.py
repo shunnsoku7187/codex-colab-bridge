@@ -43,6 +43,14 @@ KNOWN_DATASETS = {
             "spot_diff_repo": "https://github.com/amazon-research/spot-diff",
         },
     },
+    "mvtec_ad_2": {
+        "candidate_dirs": ["mvtec_ad_2", "mvtec_ad2", "MVTecAD2", "MVTec_AD_2"],
+        "categories": ["can", "fabric", "fruit_jelly", "sheet_metal", "vial", "wallplugs", "walnuts", "woriceod"],
+        "network_checks": {
+            "official_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad-2",
+            "benchmark_page": "https://benchmark.mvtec.com/",
+        },
+    },
 }
 
 
@@ -131,6 +139,7 @@ def write_markdown(payload: dict, path: Path) -> None:
         "- If not present but the Hugging Face mirror is reachable, prepare an automated download job.",
         "- If only official gated download is usable, download manually once to the data root and keep it there.",
         "- If VisA network access is reachable, prepare a separate download/format audit because the archive is large.",
+        "- If MVTec AD 2 is reachable only through the official form/evaluation server, treat it as a medium-term dataset and record the manual setup steps.",
         "",
     ]
     path.write_text("\n".join(lines), encoding="utf-8")

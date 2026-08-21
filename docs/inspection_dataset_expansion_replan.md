@@ -279,17 +279,17 @@ KSDD2より大きいデータで、分割依存が緩和されるかを見る。
    - seed 456がなぜ悪いかを調べる。
    - 欠陥面積・系列・スコア分布・誤通過画像を出す。
 
-2. `mvtec_ad_availability_audit_001`
-   - caviar9/konbu上でMVTec ADを取得できるか確認。
-   - 取得済み/未取得、容量、カテゴリ一覧、評価コード方針を返す。
+2. `dataset_availability_audit_001`
+   - caviar9/konbu上でMVTec AD、VisA、MVTec AD 2を取得・利用できるか確認。
+   - 取得済み/未取得、容量、カテゴリ一覧、ネットワーク到達性、手動ダウンロード要否を返す。
 
 3. `mvtec_ad_patchcore_efficientad_probe_001`
    - 3カテゴリだけで検品評価軸を試す。
    - ここで強い土台候補が見えたら全カテゴリへ拡張。
 
-4. `visa_availability_audit_001`
-   - VisAを取得できるか確認。
-   - 容量とフォーマット変換方針を確認する。
+4. `visa_or_mvtec_ad2_format_audit_001`
+   - availability auditの結果に応じて、VisAまたはMVTec AD 2のフォーマット変換方針を確認する。
+   - これはデータが手元にある、または自動取得可能だと分かった後に作る。
 
 ## 判断基準
 

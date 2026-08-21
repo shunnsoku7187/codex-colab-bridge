@@ -2,7 +2,8 @@
 
 ## Goal
 
-Run the first experiments from the dataset-expansion replan.
+Run the first experiments from the dataset-expansion replan, including the
+light audits for VisA and MVTec AD 2.
 
 These are light audit jobs, not long training jobs.
 
@@ -25,6 +26,12 @@ jobs/dataset_availability_audit_001.json
 The KSDD2 U-Net/ResNet50 recheck showed large seed variation.  The next step is
 not more model tweaking, but checking whether the variation is caused by
 split/difficulty bias and whether larger inspection datasets can be introduced.
+
+The dataset availability audit should cover:
+
+- MVTec AD,
+- VisA,
+- MVTec AD 2.
 
 ## Requested action
 
@@ -61,7 +68,7 @@ Include:
 - whether both jobs completed,
 - pushed commit hash,
 - short interpretation of seed 456 from the deep audit,
-- whether MVTec AD or VisA are already present,
+- whether MVTec AD, VisA, or MVTec AD 2 are already present,
 - whether network/download routes look usable,
 - final `git status --short --branch`.
 
