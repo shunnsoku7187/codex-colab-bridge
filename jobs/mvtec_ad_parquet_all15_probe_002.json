@@ -1,6 +1,6 @@
 {
   "id": "mvtec_ad_parquet_all15_probe_002",
-  "status": "running",
+  "status": "done",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -10,6 +10,11 @@
   "result_file": "results/mvtec_ad_parquet_all15_probe_002.json",
   "note": "Retry all-15 MVTec AD probe after fixing short deterministic materialized filenames and konbu start-button detachment.",
   "created_at": "2026-08-21T21:35:00+09:00",
-  "updated_at": "2026-08-21T13:00:35.194938+00:00",
-  "started_at": "2026-08-21T13:00:35.194915+00:00"
+  "updated_at": "2026-08-21T13:40:08.098551+00:00",
+  "started_at": "2026-08-21T13:00:35.194915+00:00",
+  "returncode": 0,
+  "duration_sec": 2367.088,
+  "stdout": "logs/mvtec_ad_parquet_all15_probe_002.stdout.log",
+  "stderr": "logs/mvtec_ad_parquet_all15_probe_002.stderr.log",
+  "finished_at": "2026-08-21T13:40:08.091197+00:00"
 }
