@@ -1,0 +1,13 @@
+{
+  "id": "ksdd2_unet_resnet50_foundation_recheck_caviar9_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt segmentation-models-pytorch timm && python -m scripts.ksdd2_smp_final_inspection_baseline --output results/ksdd2_unet_resnet50_foundation_recheck_caviar9_001_summary.json --markdown docs/ksdd2_unet_resnet50_foundation_recheck_caviar9_001.md --checkpoint-dir artifacts/ksdd2_unet_resnet50_foundation_recheck_caviar9_001 --curve-png results/ksdd2_unet_resnet50_foundation_recheck_caviar9_001_tradeoff.png --scores-dir results/ksdd2_unet_resnet50_foundation_recheck_caviar9_001_scores --architecture unet --encoder resnet50 --encoder-weights imagenet --epochs 30 --batch-size 6 --image-height 256 --image-width 704 --positive-pixel-weight 60.0 --topk-fraction 0.001 --seeds 123 456 789 --max-false-pass-rates 0.0 0.01 0.03 0.05 --min-good-pass-rates 0.85 0.90 0.95 --max-threshold-candidates 151 --curve-points 160 --require-cuda",
+  "max_runtime_sec": 21600,
+  "result_file": "results/ksdd2_unet_resnet50_foundation_recheck_caviar9_001.json",
+  "note": "Reconfirm the currently selected KSDD2 foundation detector. Keep architecture fixed to U-Net/ResNet50 and check threshold stability with an extra seed and denser operating constraints.",
+  "created_at": "2026-08-21T17:52:00+09:00"
+}
