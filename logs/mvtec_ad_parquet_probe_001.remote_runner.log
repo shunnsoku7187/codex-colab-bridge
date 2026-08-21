@@ -306,3 +306,15 @@ patchcore nn:  88%|████████▊ | 7/8 [00:00<00:00, 11.79it/s]
   "curve_png": "results/mvtec_ad_parquet_probe_001_tradeoff.png"
 }
 $ git add jobs logs results artifacts docs
+$ git diff --cached --quiet
+$ git commit -m 'caviar9: finish mvtec_ad_parquet_probe_001'
+[main ac7c4d1] caviar9: finish mvtec_ad_parquet_probe_001
+ 7 files changed, 18139 insertions(+), 3 deletions(-)
+ create mode 100644 docs/mvtec_ad_parquet_probe_001.md
+ create mode 100644 results/mvtec_ad_parquet_probe_001.json
+ create mode 100644 results/mvtec_ad_parquet_probe_001_summary.json
+ create mode 100644 results/mvtec_ad_parquet_probe_001_tradeoff.png
+$ git push origin main
+To github.com:shunnsoku7187/codex-colab-bridge.git
+   06e5091..ac7c4d1  main -> main
+2026-08-21T11:30:43.604980+00:00 caviar9 run-once finished.
