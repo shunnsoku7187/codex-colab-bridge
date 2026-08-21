@@ -1,0 +1,13 @@
+{
+  "id": "ksdd2_split_bias_deep_audit_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": false,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m scripts.ksdd2_split_bias_deep_audit --scores-dir results/ksdd2_unet_resnet50_foundation_recheck_caviar9_001_scores --output results/ksdd2_split_bias_deep_audit_001.json --markdown docs/ksdd2_split_bias_deep_audit_001.md --csv results/ksdd2_split_bias_deep_audit_001_samples.csv --gallery results/ksdd2_split_bias_deep_audit_001_false_pass_gallery.jpg --seeds 123 456 789 --score-names max_score topk_score --max-threshold-candidates 300 --max-gallery-images 18",
+  "max_runtime_sec": 1800,
+  "result_file": "results/ksdd2_split_bias_deep_audit_001.json",
+  "note": "Phase 0: join saved foundation scores with KSDD2 image paths, mask area, and false-pass samples to explain whether seed 456 is a split/difficulty outlier.",
+  "created_at": "2026-08-21T19:34:00+09:00"
+}

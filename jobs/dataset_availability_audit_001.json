@@ -1,0 +1,13 @@
+{
+  "id": "dataset_availability_audit_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": false,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m scripts.dataset_availability_audit --output results/dataset_availability_audit_001.json --markdown docs/dataset_availability_audit_001.md --timeout 20",
+  "max_runtime_sec": 900,
+  "result_file": "results/dataset_availability_audit_001.json",
+  "note": "Phase 1/2 preparation: check whether MVTec AD and VisA are already present or reachable from caviar9/konbu data root before creating download/probe jobs.",
+  "created_at": "2026-08-21T19:34:00+09:00"
+}
