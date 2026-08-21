@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_all15_deep_frontier_001",
-  "status": "pending",
+  "status": "running",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 43200,
   "result_file": "results/mvtec_patchcore_all15_deep_frontier_001.json",
   "note": "Large overnight all-15 MVTec AD PatchCore-lite frontier sweep. Explores bank/grid/layer/backbone reductions for FPGA-oriented category profiling under stricter false-pass constraints.",
-  "created_at": "2026-08-22T02:30:00+09:00"
+  "created_at": "2026-08-22T02:30:00+09:00",
+  "updated_at": "2026-08-21T17:58:57.677006+00:00",
+  "started_at": "2026-08-21T17:58:57.676984+00:00"
 }
