@@ -292,12 +292,14 @@ def write_markdown(payload: dict, path: Path) -> None:
         "|---|---|---:|---:|---:|---:|---:|---:|",
     ]
     for row in payload["rows"]:
+        measured_nn_time = "" if row["relative_online_nn_time"] is None else f"{row['relative_online_nn_time']:.4f}x"
+        measured_total_time = (
+            "" if row["relative_online_total_time"] is None else f"{row['relative_online_total_time']:.4f}x"
+        )
         lines.append(
             f"| {row['category']} | `{row['selected_config']}` | {row['patch_ratio']:.4f}x | "
             f"{row['bank_ratio']:.4f}x | {row['feature_dim_ratio']:.4f}x | "
-            f"{row['relative_nn_ops']:.4f}x | "
-            f"{'' if row['relative_online_nn_time'] is None else f'{row['relative_online_nn_time']:.4f}x'} | "
-            f"{'' if row['relative_online_total_time'] is None else f'{row['relative_online_total_time']:.4f}x'} |"
+            f"{row['relative_nn_ops']:.4f}x | {measured_nn_time} | {measured_total_time} |"
         )
     lines += [
         "",
