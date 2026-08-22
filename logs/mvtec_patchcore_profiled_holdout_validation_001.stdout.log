@@ -22101,3 +22101,12 @@ patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
                                                    
 
 patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+{
+  "wrote": "results/mvtec_patchcore_profiled_holdout_validation_001_summary.json",
+  "markdown": "docs/mvtec_patchcore_profiled_holdout_validation_001.md",
+  "figure": "results/mvtec_patchcore_profiled_holdout_validation_001.png",
+  "validation_rows": 2250,
+  "categories": 15,
+  "feature_profiles": 26
+}
