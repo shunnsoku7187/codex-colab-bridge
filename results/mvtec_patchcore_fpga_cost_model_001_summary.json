@@ -1,0 +1,986 @@
+{
+  "purpose": "FPGA-facing cost model for category-profiled minimal PatchCore.",
+  "config": {
+    "cost_summary": "results/mvtec_patchcore_cost_credibility_audit_002_summary.json",
+    "holdout_summary": "results/mvtec_patchcore_profiled_holdout_validation_001_summary.json",
+    "output": "results/mvtec_patchcore_fpga_cost_model_001_summary.json",
+    "csv": "results/mvtec_patchcore_fpga_cost_model_001.csv",
+    "markdown": "docs/mvtec_patchcore_fpga_cost_model_001.md",
+    "figure": "results/mvtec_patchcore_fpga_cost_model_001.png",
+    "image_height": 224,
+    "image_width": 224,
+    "clock_mhz": 200.0,
+    "distance_op_weight": 3.0,
+    "knn_lanes": [
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ]
+  },
+  "aggregate": {
+    "mean_relative_cnn_macs": 0.549228,
+    "median_relative_cnn_macs": 0.421469,
+    "mean_relative_nn_ops": 0.010923,
+    "median_relative_nn_ops": 0.003472,
+    "mean_relative_total_proxy_ops": 0.268678,
+    "median_relative_total_proxy_ops": 0.20351,
+    "mean_relative_bank_bytes_int8": 0.024947,
+    "median_relative_bank_bytes_int8": 0.006944,
+    "mean_relative_stream_bytes_int8": 0.010923,
+    "median_relative_stream_bytes_int8": 0.003472,
+    "mean_relative_cached_bytes_int8": 0.027507,
+    "median_relative_cached_bytes_int8": 0.010331
+  },
+  "rows": [
+    {
+      "category": "bottle",
+      "selected_config": "res18_l23_g5_b250_topk0p005",
+      "holdout_baseline_good_pass": 1.0,
+      "holdout_selected_good_pass": 0.94,
+      "holdout_selected_false_pass": 0.051613,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 991479680,
+      "relative_cnn_macs": 0.199354,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 1200000,
+      "relative_nn_ops": 0.000664,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 995079680,
+      "relative_total_proxy_ops": 0.09575,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 48000,
+      "relative_bank_bytes_int8": 0.005208,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 1200000,
+      "relative_stream_bytes_int8": 0.000664,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 52800,
+      "relative_cached_bytes_int8": 0.005637,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 18750,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.09375
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 9375,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.046875
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 4688,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.02344
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 2344,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.01172
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 1172,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.00586
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 586,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.00293
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "selected_config": "res18_l23_g7_b1500_topk0p05",
+      "holdout_baseline_good_pass": 0.337931,
+      "holdout_selected_good_pass": 0.337931,
+      "holdout_selected_false_pass": 0.026087,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 991479680,
+      "relative_cnn_macs": 0.199354,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 14112000,
+      "relative_nn_ops": 0.007812,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 1033815680,
+      "relative_total_proxy_ops": 0.099477,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 288000,
+      "relative_bank_bytes_int8": 0.03125,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 14112000,
+      "relative_stream_bytes_int8": 0.007812,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 297408,
+      "relative_cached_bytes_int8": 0.031752,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 220500,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 1.1025
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 110250,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.55125
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 55125,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.275625
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 27563,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.137815
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 13782,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.06891
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 6891,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.034455
+        }
+      }
+    },
+    {
+      "category": "capsule",
+      "selected_config": "wrn_l2_g14_b125_topk0p05",
+      "holdout_baseline_good_pass": 0.363636,
+      "holdout_selected_good_pass": 0.218182,
+      "holdout_selected_false_pass": 0.054545,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 2096156288,
+      "relative_cnn_macs": 0.421469,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 6272000,
+      "relative_nn_ops": 0.003472,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 2114972288,
+      "relative_total_proxy_ops": 0.20351,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 32000,
+      "relative_bank_bytes_int8": 0.003472,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 6272000,
+      "relative_stream_bytes_int8": 0.003472,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 82176,
+      "relative_cached_bytes_int8": 0.008773,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 98000,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.49
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 49000,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.245
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 24500,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.1225
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 12250,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.06125
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 6125,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.030625
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 3063,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.015315
+        }
+      }
+    },
+    {
+      "category": "carpet",
+      "selected_config": "wrn_l3_g8_b125_topk0p005",
+      "holdout_baseline_good_pass": 0.614286,
+      "holdout_selected_good_pass": 0.685714,
+      "holdout_selected_false_pass": 0.048889,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 4973458048,
+      "relative_cnn_macs": 1.0,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 4096000,
+      "relative_nn_ops": 0.002268,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 4985746048,
+      "relative_total_proxy_ops": 0.479746,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 64000,
+      "relative_bank_bytes_int8": 0.006944,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 4096000,
+      "relative_stream_bytes_int8": 0.002268,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 96768,
+      "relative_cached_bytes_int8": 0.010331,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 64000,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.32
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 32000,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.16
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 16000,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.08
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 8000,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.04
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 4000,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.02
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 2000,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.01
+        }
+      }
+    },
+    {
+      "category": "grid",
+      "selected_config": "res18_l23_g7_b6000_topk0p005",
+      "holdout_baseline_good_pass": 0.490909,
+      "holdout_selected_good_pass": 0.381818,
+      "holdout_selected_false_pass": 0.041379,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 991479680,
+      "relative_cnn_macs": 0.199354,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 56448000,
+      "relative_nn_ops": 0.03125,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 1160823680,
+      "relative_total_proxy_ops": 0.111699,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 1152000,
+      "relative_bank_bytes_int8": 0.125,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 56448000,
+      "relative_stream_bytes_int8": 0.03125,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 1161408,
+      "relative_cached_bytes_int8": 0.123996,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 882000,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 4.41
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 441000,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 2.205
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 220500,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 1.1025
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 110250,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.55125
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 55125,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.275625
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 27563,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.137815
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "selected_config": "res18_l23_g14_b500_topk0p02",
+      "holdout_baseline_good_pass": 0.96,
+      "holdout_selected_good_pass": 0.92,
+      "holdout_selected_false_pass": 0.011429,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 991479680,
+      "relative_cnn_macs": 0.199354,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 18816000,
+      "relative_nn_ops": 0.010417,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 1047927680,
+      "relative_total_proxy_ops": 0.100835,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 96000,
+      "relative_bank_bytes_int8": 0.010417,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 18816000,
+      "relative_stream_bytes_int8": 0.010417,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 133632,
+      "relative_cached_bytes_int8": 0.014267,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 294000,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 1.47
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 147000,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.735
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 73500,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.3675
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 36750,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.18375
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 18375,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.091875
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 9188,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.04594
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "selected_config": "wrn_l3_g10_b125_topk0p005",
+      "holdout_baseline_good_pass": 1.0,
+      "holdout_selected_good_pass": 0.9375,
+      "holdout_selected_false_pass": 0.03913,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 4973458048,
+      "relative_cnn_macs": 1.0,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 6400000,
+      "relative_nn_ops": 0.003543,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 4992658048,
+      "relative_total_proxy_ops": 0.480411,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 64000,
+      "relative_bank_bytes_int8": 0.006944,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 6400000,
+      "relative_stream_bytes_int8": 0.003543,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 115200,
+      "relative_cached_bytes_int8": 0.012299,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 100000,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.5
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 50000,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.25
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 25000,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.125
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 12500,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.0625
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 6250,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.03125
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 3125,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.015625
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "selected_config": "wrn_l3_g6_b1000_topk0p005",
+      "holdout_baseline_good_pass": 0.436363,
+      "holdout_selected_good_pass": 0.4,
+      "holdout_selected_false_pass": 0.06383,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 4973458048,
+      "relative_cnn_macs": 1.0,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 18432000,
+      "relative_nn_ops": 0.010204,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 5028754048,
+      "relative_total_proxy_ops": 0.483885,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 512000,
+      "relative_bank_bytes_int8": 0.055556,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 18432000,
+      "relative_stream_bytes_int8": 0.010204,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 530432,
+      "relative_cached_bytes_int8": 0.056631,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 288000,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 1.44
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 144000,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.72
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 72000,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.36
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 36000,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.18
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 18000,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.09
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 9000,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.045
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "selected_config": "res18_l23_g5_b125_topk0p005",
+      "holdout_baseline_good_pass": 0.153846,
+      "holdout_selected_good_pass": 0.184615,
+      "holdout_selected_false_pass": 0.028169,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 991479680,
+      "relative_cnn_macs": 0.199354,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 600000,
+      "relative_nn_ops": 0.000332,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 993279680,
+      "relative_total_proxy_ops": 0.095577,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 24000,
+      "relative_bank_bytes_int8": 0.002604,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 600000,
+      "relative_stream_bytes_int8": 0.000332,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 28800,
+      "relative_cached_bytes_int8": 0.003075,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 9375,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.046875
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 4688,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.02344
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 2344,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.01172
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 1172,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.00586
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 586,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.00293
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 293,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.001465
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "selected_config": "res18_l23_g14_b125_topk0p05",
+      "holdout_baseline_good_pass": 0.219047,
+      "holdout_selected_good_pass": 0.038095,
+      "holdout_selected_false_pass": 0.057627,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 991479680,
+      "relative_cnn_macs": 0.199354,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 4704000,
+      "relative_nn_ops": 0.002604,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 1005591680,
+      "relative_total_proxy_ops": 0.096762,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 24000,
+      "relative_bank_bytes_int8": 0.002604,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 4704000,
+      "relative_stream_bytes_int8": 0.002604,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 61632,
+      "relative_cached_bytes_int8": 0.00658,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 73500,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.3675
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 36750,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.18375
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 18375,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.091875
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 9188,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.04594
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 4594,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.02297
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 2297,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.011485
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "selected_config": "wrn_l3_g7_b125_topk0p005",
+      "holdout_baseline_good_pass": 0.776471,
+      "holdout_selected_good_pass": 0.77647,
+      "holdout_selected_false_pass": 0.038095,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 4973458048,
+      "relative_cnn_macs": 1.0,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 3136000,
+      "relative_nn_ops": 0.001736,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 4982866048,
+      "relative_total_proxy_ops": 0.479469,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 64000,
+      "relative_bank_bytes_int8": 0.006944,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 3136000,
+      "relative_stream_bytes_int8": 0.001736,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 89088,
+      "relative_cached_bytes_int8": 0.009511,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 49000,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.245
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 24500,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.1225
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 12250,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.06125
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 6125,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.030625
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 3063,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.015315
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 1532,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.00766
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "selected_config": "wrn_l2_g5_b125_topk0p005",
+      "holdout_baseline_good_pass": 0.6,
+      "holdout_selected_good_pass": 0.433333,
+      "holdout_selected_false_pass": 0.066667,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 2096156288,
+      "relative_cnn_macs": 0.421469,
+      "baseline_nn_ops_per_image": 1770209280,
+      "selected_nn_ops_per_image": 800000,
+      "relative_nn_ops": 0.000452,
+      "baseline_total_proxy_ops": 10284085888,
+      "selected_total_proxy_ops": 2098556288,
+      "relative_total_proxy_ops": 0.204059,
+      "baseline_bank_bytes_int8": 9031680,
+      "selected_bank_bytes_int8": 32000,
+      "relative_bank_bytes_int8": 0.003543,
+      "baseline_stream_bytes_int8_per_image": 1770209280,
+      "selected_stream_bytes_int8_per_image": 800000,
+      "relative_stream_bytes_int8": 0.000452,
+      "baseline_cached_bytes_int8_per_image": 9182208,
+      "selected_cached_bytes_int8_per_image": 38400,
+      "relative_cached_bytes_int8": 0.004182,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 27659520,
+          "selected_knn_cycles": 12500,
+          "baseline_knn_ms": 138.2976,
+          "selected_knn_ms": 0.0625
+        },
+        "128": {
+          "baseline_knn_cycles": 13829760,
+          "selected_knn_cycles": 6250,
+          "baseline_knn_ms": 69.1488,
+          "selected_knn_ms": 0.03125
+        },
+        "256": {
+          "baseline_knn_cycles": 6914880,
+          "selected_knn_cycles": 3125,
+          "baseline_knn_ms": 34.5744,
+          "selected_knn_ms": 0.015625
+        },
+        "512": {
+          "baseline_knn_cycles": 3457440,
+          "selected_knn_cycles": 1563,
+          "baseline_knn_ms": 17.2872,
+          "selected_knn_ms": 0.007815
+        },
+        "1024": {
+          "baseline_knn_cycles": 1728720,
+          "selected_knn_cycles": 782,
+          "baseline_knn_ms": 8.6436,
+          "selected_knn_ms": 0.00391
+        },
+        "2048": {
+          "baseline_knn_cycles": 864360,
+          "selected_knn_cycles": 391,
+          "baseline_knn_ms": 4.3218,
+          "selected_knn_ms": 0.001955
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "selected_config": "wrn_l3_g6_b500_topk0p005",
+      "holdout_baseline_good_pass": 0.526667,
+      "holdout_selected_good_pass": 0.473333,
+      "holdout_selected_false_pass": 0.11,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 4973458048,
+      "relative_cnn_macs": 1.0,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 9216000,
+      "relative_nn_ops": 0.005102,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 5001106048,
+      "relative_total_proxy_ops": 0.481224,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 256000,
+      "relative_bank_bytes_int8": 0.027778,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 9216000,
+      "relative_stream_bytes_int8": 0.005102,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 274432,
+      "relative_cached_bytes_int8": 0.029299,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 144000,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.72
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 72000,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.36
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 36000,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.18
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 18000,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.09
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 9000,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.045
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 4500,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.0225
+        }
+      }
+    },
+    {
+      "category": "wood",
+      "selected_config": "res18_l23_g7_b125_topk0p005",
+      "holdout_baseline_good_pass": 0.8,
+      "holdout_selected_good_pass": 0.711111,
+      "holdout_selected_false_pass": 0.02,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 991479680,
+      "relative_cnn_macs": 0.199354,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 1176000,
+      "relative_nn_ops": 0.000651,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 995007680,
+      "relative_total_proxy_ops": 0.095743,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 24000,
+      "relative_bank_bytes_int8": 0.002604,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 1176000,
+      "relative_stream_bytes_int8": 0.000651,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 33408,
+      "relative_cached_bytes_int8": 0.003567,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 18375,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.091875
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 9188,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.04594
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 4594,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.02297
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 2297,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.011485
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 1149,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.005745
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 575,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.002875
+        }
+      }
+    },
+    {
+      "category": "zipper",
+      "selected_config": "wrn_l3_g14_b1500_topk0p05",
+      "holdout_baseline_good_pass": 0.7,
+      "holdout_selected_good_pass": 0.75,
+      "holdout_selected_false_pass": 0.027118,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 4973458048,
+      "relative_cnn_macs": 1.0,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 150528000,
+      "relative_nn_ops": 0.083333,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 5425042048,
+      "relative_total_proxy_ops": 0.522017,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 768000,
+      "relative_bank_bytes_int8": 0.083333,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 150528000,
+      "relative_stream_bytes_int8": 0.083333,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 868352,
+      "relative_cached_bytes_int8": 0.092708,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 2352000,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 11.76
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 1176000,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 5.88
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 588000,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 2.94
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 294000,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 1.47
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 147000,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.735
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 73500,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.3675
+        }
+      }
+    }
+  ],
+  "csv": "results/mvtec_patchcore_fpga_cost_model_001.csv",
+  "figure": "results/mvtec_patchcore_fpga_cost_model_001.png"
+}
