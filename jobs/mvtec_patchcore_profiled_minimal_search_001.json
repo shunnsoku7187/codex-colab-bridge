@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_profiled_minimal_search_001",
-  "status": "pending",
+  "status": "running",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 43200,
   "result_file": "results/mvtec_patchcore_profiled_minimal_search_001.json",
   "note": "Ultra-wide profiled PatchCore minimal-configuration search. Computes category-specific minimal configs that preserve baseline good-pass under defect false-pass constraints, with feature extraction cached per profile.",
-  "created_at": "2026-08-22T04:00:00+09:00"
+  "created_at": "2026-08-22T04:00:00+09:00",
+  "updated_at": "2026-08-22T07:11:08.351917+00:00",
+  "started_at": "2026-08-22T07:11:08.351894+00:00"
 }
