@@ -93,6 +93,8 @@ def build_mode_rows(rows: list[dict], bandwidths: list[float], lane_choices: lis
                 "selected_config": row["selected_config"],
                 "good_pass": row["holdout_selected_good_pass"],
                 "false_pass": row["holdout_selected_false_pass"],
+                "baseline_bank_bytes_int8": baseline_bank,
+                "selected_bank_bytes_int8": selected_bank,
                 "baseline_bank_mib": round_float(bytes_to_mib(baseline_bank)),
                 "selected_bank_kib": round_float(bytes_to_kib(selected_bank)),
                 "selected_bank_mib": round_float(bytes_to_mib(selected_bank)),
