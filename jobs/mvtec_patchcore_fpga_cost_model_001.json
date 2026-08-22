@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_fpga_cost_model_001",
-  "status": "pending",
+  "status": "running",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 3600,
   "result_file": "results/mvtec_patchcore_fpga_cost_model_001.json",
   "note": "Builds FPGA-facing pre-implementation cost model: CNN MACs, NN ops, memory-bank size, memory traffic, and KNN-lane latency estimates.",
-  "created_at": "2026-08-22T22:15:00+09:00"
+  "created_at": "2026-08-22T22:15:00+09:00",
+  "updated_at": "2026-08-22T14:40:51.325990+00:00",
+  "started_at": "2026-08-22T14:40:51.325967+00:00"
 }
