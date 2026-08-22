@@ -1,0 +1,516 @@
+{
+  "purpose": "Close all non-FPGA-implementation experiments and decide implementation entry.",
+  "inputs": [
+    "results/mvtec_patchcore_all15_deep_frontier_001_summary.json",
+    "results/mvtec_patchcore_profiled_holdout_validation_001_summary.json",
+    "results/mvtec_patchcore_fpga_cost_model_001_summary.json",
+    "results/mvtec_patchcore_mode_switch_analysis_003_summary.json"
+  ],
+  "report_setting": {
+    "target_false_pass_rate_defect": 0.01,
+    "allowed_good_pass_drop": 0.02,
+    "quality_false_pass_limit_for_first_target": 0.03
+  },
+  "uniform_comparison": {
+    "全カテゴリ共通: 基準構成": {
+      "config": "wrn_l23_g14_b12000",
+      "target_false_pass_rate_defect": 0.01,
+      "categories_done": 15,
+      "mean_good_pass_rate_good": 0.593367,
+      "min_good_pass_rate_good": 0.076923,
+      "mean_auc": 0.962636,
+      "mean_approx_nn_ops": 207627485184,
+      "relative_nn_ops": 1.0,
+      "comment": "最も重い参照点。"
+    },
+    "全カテゴリ共通: 良品通過最大": {
+      "config": "wrn_l23_g14_b12000",
+      "target_false_pass_rate_defect": 0.01,
+      "categories_done": 15,
+      "mean_good_pass_rate_good": 0.593367,
+      "min_good_pass_rate_good": 0.076923,
+      "mean_auc": 0.962636,
+      "mean_approx_nn_ops": 207627485184,
+      "relative_nn_ops": 1.0,
+      "comment": "良品通過を最大化すると基準構成から小さくならない。"
+    },
+    "全カテゴリ共通: KNN 20%以下": {
+      "config": "wrn_l3_g14_b3000",
+      "target_false_pass_rate_defect": 0.01,
+      "categories_done": 15,
+      "mean_good_pass_rate_good": 0.571866,
+      "min_good_pass_rate_good": 0.0,
+      "mean_auc": 0.928711,
+      "mean_approx_nn_ops": 34621440000,
+      "relative_nn_ops": 0.166748,
+      "comment": "共通軽量化で品質を残せる限界の目安。"
+    },
+    "全カテゴリ共通: KNN 10%以下": {
+      "config": "wrn_l23_g14_b1000",
+      "target_false_pass_rate_defect": 0.01,
+      "categories_done": 15,
+      "mean_good_pass_rate_good": 0.44878,
+      "min_good_pass_rate_good": 0.0,
+      "mean_auc": 0.901553,
+      "mean_approx_nn_ops": 17310720000,
+      "relative_nn_ops": 0.083374,
+      "comment": "さらに軽くすると良品通過が大きく下がる。"
+    }
+  },
+  "holdout_report_setting": {
+    "target_false_pass_rate_defect": 0.01,
+    "allowed_good_pass_drop": 0.02,
+    "rows": 75,
+    "categories": 15,
+    "split_seeds": 5,
+    "baseline_holdout_good_pass_mean": 0.59861,
+    "selected_holdout_good_pass_mean": 0.545874,
+    "holdout_good_pass_drop_mean": 0.052737,
+    "baseline_holdout_false_pass_mean": 0.012166,
+    "selected_holdout_false_pass_mean": 0.045639,
+    "holdout_false_pass_delta_mean": 0.033473,
+    "relative_nn_ops_mean": 0.02063,
+    "relative_nn_ops_median": 0.003543,
+    "nn_ops_reduction_mean": 0.97937,
+    "relative_bank_int8_mean": 0.044625,
+    "selected_holdout_constraint_violations": 51
+  },
+  "quality_summary": {
+    "categories": 15,
+    "categories_false_pass_le_1pct": 0,
+    "categories_false_pass_le_3pct": 5,
+    "categories_false_pass_le_5pct": 9,
+    "mean_false_pass": 0.045639,
+    "median_false_pass": 0.041379,
+    "mean_good_pass": 0.545873,
+    "median_good_pass": 0.473333,
+    "mean_total_proxy_ratio": 0.268678,
+    "median_total_proxy_ratio": 0.20351,
+    "mean_nn_ratio": 0.010923,
+    "median_nn_ratio": 0.003472,
+    "mean_bank_ratio": 0.024947,
+    "median_bank_ratio": 0.006944
+  },
+  "cost_summary": {
+    "mean_relative_cnn_macs": 0.549228,
+    "median_relative_cnn_macs": 0.421469,
+    "mean_relative_nn_ops": 0.010923,
+    "median_relative_nn_ops": 0.003472,
+    "mean_relative_total_proxy_ops": 0.268678,
+    "median_relative_total_proxy_ops": 0.20351,
+    "mean_relative_bank_bytes_int8": 0.024947,
+    "median_relative_bank_bytes_int8": 0.006944,
+    "mean_relative_stream_bytes_int8": 0.010923,
+    "median_relative_stream_bytes_int8": 0.003472,
+    "mean_relative_cached_bytes_int8": 0.027507,
+    "median_relative_cached_bytes_int8": 0.010331
+  },
+  "mode_switch_summary": {
+    "categories": 15,
+    "quality_false_pass_limit": 0.03,
+    "quality_rows": 5,
+    "baseline_all_category_bank_mib": 131.660156,
+    "selected_all_category_bank_mib": 3.288269,
+    "all_category_bank_ratio": 0.024975,
+    "all_category_bank_reduction": 0.975025,
+    "baseline_active_bank_mib": 8.789062,
+    "max_selected_active_bank_mib": 1.098633,
+    "median_selected_active_bank_mib": 0.061035,
+    "max_active_bank_ratio": 0.125,
+    "median_active_bank_ratio": 0.006944,
+    "selected_all_bank_switch_time_ms": {
+      "100_MiB_s": 32.88269,
+      "500_MiB_s": 6.576538,
+      "1000_MiB_s": 3.288269,
+      "5000_MiB_s": 0.657654
+    },
+    "max_selected_bank_switch_time_ms": {
+      "100_MiB_s": 10.986328,
+      "500_MiB_s": 2.197266,
+      "1000_MiB_s": 1.098633,
+      "5000_MiB_s": 0.219727
+    },
+    "profiled_mean_knn_ms_512": 0.192667,
+    "profiled_worst_knn_ms_512": 1.47
+  },
+  "recommended_first_targets": [
+    {
+      "category": "hazelnut",
+      "selected_config": "res18_l23_g14_b500_topk0p02",
+      "holdout_baseline_good_pass": 0.96,
+      "holdout_selected_good_pass": 0.92,
+      "holdout_selected_false_pass": 0.011429,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 991479680,
+      "relative_cnn_macs": 0.199354,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 18816000,
+      "relative_nn_ops": 0.010417,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 1047927680,
+      "relative_total_proxy_ops": 0.100835,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 96000,
+      "relative_bank_bytes_int8": 0.010417,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 18816000,
+      "relative_stream_bytes_int8": 0.010417,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 133632,
+      "relative_cached_bytes_int8": 0.014267,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 294000,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 1.47
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 147000,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.735
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 73500,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.3675
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 36750,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.18375
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 18375,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.091875
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 9188,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.04594
+        }
+      }
+    },
+    {
+      "category": "zipper",
+      "selected_config": "wrn_l3_g14_b1500_topk0p05",
+      "holdout_baseline_good_pass": 0.7,
+      "holdout_selected_good_pass": 0.75,
+      "holdout_selected_false_pass": 0.027118,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 4973458048,
+      "relative_cnn_macs": 1.0,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 150528000,
+      "relative_nn_ops": 0.083333,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 5425042048,
+      "relative_total_proxy_ops": 0.522017,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 768000,
+      "relative_bank_bytes_int8": 0.083333,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 150528000,
+      "relative_stream_bytes_int8": 0.083333,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 868352,
+      "relative_cached_bytes_int8": 0.092708,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 2352000,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 11.76
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 1176000,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 5.88
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 588000,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 2.94
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 294000,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 1.47
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 147000,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.735
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 73500,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.3675
+        }
+      }
+    },
+    {
+      "category": "wood",
+      "selected_config": "res18_l23_g7_b125_topk0p005",
+      "holdout_baseline_good_pass": 0.8,
+      "holdout_selected_good_pass": 0.711111,
+      "holdout_selected_false_pass": 0.02,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 991479680,
+      "relative_cnn_macs": 0.199354,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 1176000,
+      "relative_nn_ops": 0.000651,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 995007680,
+      "relative_total_proxy_ops": 0.095743,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 24000,
+      "relative_bank_bytes_int8": 0.002604,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 1176000,
+      "relative_stream_bytes_int8": 0.000651,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 33408,
+      "relative_cached_bytes_int8": 0.003567,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 18375,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.091875
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 9188,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.04594
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 4594,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.02297
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 2297,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.011485
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 1149,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.005745
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 575,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.002875
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "selected_config": "res18_l23_g7_b1500_topk0p05",
+      "holdout_baseline_good_pass": 0.337931,
+      "holdout_selected_good_pass": 0.337931,
+      "holdout_selected_false_pass": 0.026087,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 991479680,
+      "relative_cnn_macs": 0.199354,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 14112000,
+      "relative_nn_ops": 0.007812,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 1033815680,
+      "relative_total_proxy_ops": 0.099477,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 288000,
+      "relative_bank_bytes_int8": 0.03125,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 14112000,
+      "relative_stream_bytes_int8": 0.007812,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 297408,
+      "relative_cached_bytes_int8": 0.031752,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 220500,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 1.1025
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 110250,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.55125
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 55125,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.275625
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 27563,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.137815
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 13782,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.06891
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 6891,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.034455
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "selected_config": "res18_l23_g5_b125_topk0p005",
+      "holdout_baseline_good_pass": 0.153846,
+      "holdout_selected_good_pass": 0.184615,
+      "holdout_selected_false_pass": 0.028169,
+      "baseline_cnn_macs": 4973458048,
+      "selected_cnn_macs": 991479680,
+      "relative_cnn_macs": 0.199354,
+      "baseline_nn_ops_per_image": 1806336000,
+      "selected_nn_ops_per_image": 600000,
+      "relative_nn_ops": 0.000332,
+      "baseline_total_proxy_ops": 10392466048,
+      "selected_total_proxy_ops": 993279680,
+      "relative_total_proxy_ops": 0.095577,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 24000,
+      "relative_bank_bytes_int8": 0.002604,
+      "baseline_stream_bytes_int8_per_image": 1806336000,
+      "selected_stream_bytes_int8_per_image": 600000,
+      "relative_stream_bytes_int8": 0.000332,
+      "baseline_cached_bytes_int8_per_image": 9366528,
+      "selected_cached_bytes_int8_per_image": 28800,
+      "relative_cached_bytes_int8": 0.003075,
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_cycles": 28224000,
+          "selected_knn_cycles": 9375,
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.046875
+        },
+        "128": {
+          "baseline_knn_cycles": 14112000,
+          "selected_knn_cycles": 4688,
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.02344
+        },
+        "256": {
+          "baseline_knn_cycles": 7056000,
+          "selected_knn_cycles": 2344,
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.01172
+        },
+        "512": {
+          "baseline_knn_cycles": 3528000,
+          "selected_knn_cycles": 1172,
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.00586
+        },
+        "1024": {
+          "baseline_knn_cycles": 1764000,
+          "selected_knn_cycles": 586,
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.00293
+        },
+        "2048": {
+          "baseline_knn_cycles": 882000,
+          "selected_knn_cycles": 293,
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.001465
+        }
+      }
+    }
+  ],
+  "closed_questions": [
+    {
+      "question": "小さいPatchCoreバンク/探索で本当に計算を減らせるか",
+      "status": "完了",
+      "evidence": "mean NN ops 0.0109x, median 0.0035x"
+    },
+    {
+      "question": "98%級のKNN削減は単なる測定ノイズではないか",
+      "status": "完了",
+      "evidence": "演算回数、バンクサイズ、探索時間の監査が同じ方向を示した。"
+    },
+    {
+      "question": "全カテゴリ共通の軽量設定で十分か",
+      "status": "否定的",
+      "evidence": "共通設定ではカテゴリ依存の良品通過低下が出る。カテゴリ別プロファイルの方が筋が良い。"
+    },
+    {
+      "question": "15カテゴリすべてで厳しい検品品質を満たせるか",
+      "status": "否定的",
+      "evidence": "欠陥誤通過 <= 3% を満たすのは 5/15 カテゴリのみ。"
+    },
+    {
+      "question": "モード切替構造に技術的な意味はあるか",
+      "status": "完了",
+      "evidence": "全カテゴリ分バンクが 131.660 MiB -> 3.288 MiB。"
+    }
+  ],
+  "deferred_or_rejected": [
+    {
+      "item": "広いGPU探索の追加",
+      "decision": "いったん停止",
+      "reason": "初回FPGAターゲットは大きく変わりにくく、現在のボトルネックは実装して実測差を見ること。"
+    },
+    {
+      "item": "全カテゴリでの安全な完成検品器という主張",
+      "decision": "現時点では不可",
+      "reason": "holdoutでの欠陥誤通過がカテゴリごとに大きく異なる。"
+    },
+    {
+      "item": "正確な電力・実行時間",
+      "decision": "実装評価へ回す",
+      "reason": "実際のデータパス、メモリ配置、クロック、合成・配置配線が必要。"
+    },
+    {
+      "item": "固定小数点/int8での品質保証",
+      "decision": "実装受け入れ試験へ回す",
+      "reason": "バンク削減率はビット幅に依存しないが、スコア変動は採用する数値形式で決まる。"
+    },
+    {
+      "item": "新規データセット追加",
+      "decision": "スコープ拡大時のみ",
+      "reason": "MVTec ADで15種類の工業検品カテゴリを扱えており、次に欠けている証拠はハードウェア実測。"
+    }
+  ],
+  "closure_decision": {
+    "short": "カテゴリ別プロファイル型PatchCore-liteとしてFPGA実装へ進む。初回ターゲットはhazelnut、wood/cable/zipperは比較・バックアップ候補にする。",
+    "implementation_entry_conditions": [
+      "まず1カテゴリの特徴抽出・メモリバンク・距離計算構成を実装する。",
+      "欠陥誤通過と良品通過を分けて報告し、AUROCだけで品質低下を隠さない。",
+      "総コスト近似と実際のFPGA遅延・資源量・電力の差を測る。",
+      "その後、単一カテゴリ実装からモード切替型の複数カテゴリ対応へ拡張する。"
+    ]
+  }
+}
