@@ -1,0 +1,13 @@
+{
+  "id": "mvtec_patchcore_mode_switch_analysis_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": false,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt matplotlib && python -m scripts.mvtec_patchcore_mode_switch_analysis --fpga-cost-summary results/mvtec_patchcore_fpga_cost_model_001_summary.json --output results/mvtec_patchcore_mode_switch_analysis_001_summary.json --markdown docs/mvtec_patchcore_mode_switch_analysis_001.md --figure results/mvtec_patchcore_mode_switch_analysis_001.png --bandwidths-mib-s 100 500 1000 5000 --lane-choices 64 128 256 512 1024 2048 --report-lane 512 --quality-false-pass-limit 0.03",
+  "max_runtime_sec": 1800,
+  "result_file": "results/mvtec_patchcore_mode_switch_analysis_001.json",
+  "note": "Analyzes category-mode switching for profiled PatchCore FPGA design: active-load vs all-resident banks, switch load time, resident memory, and fixed-mode KNN latency.",
+  "created_at": "2026-08-23T00:20:00+09:00"
+}
