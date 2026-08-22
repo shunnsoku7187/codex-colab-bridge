@@ -1,0 +1,13 @@
+{
+  "id": "mvtec_patchcore_cost_credibility_audit_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt timm pyarrow && python -m scripts.mvtec_patchcore_cost_credibility_audit --holdout-summary results/mvtec_patchcore_profiled_holdout_validation_001_summary.json --output results/mvtec_patchcore_cost_credibility_audit_001_summary.json --markdown docs/mvtec_patchcore_cost_credibility_audit_001.md --figure results/mvtec_patchcore_cost_credibility_audit_001.png --materialized-root /home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2 --baseline-config wrn_l23_g14_b12000_topk0p01 --report-false-pass-target 0.01 --report-tolerance 0.02 --batch-size 16 --nn-chunk-size 4096 --require-cuda",
+  "max_runtime_sec": 14400,
+  "result_file": "results/mvtec_patchcore_cost_credibility_audit_001.json",
+  "note": "Audit whether the reported ~98% PatchCore NN-search reduction is credible: decomposes the formula and measures feature extraction, NN search, and total online runtime for baseline vs selected profiled configs.",
+  "created_at": "2026-08-22T20:10:00+09:00"
+}
