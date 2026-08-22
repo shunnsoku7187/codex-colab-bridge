@@ -1,0 +1,13 @@
+{
+  "id": "mvtec_patchcore_fpga_cost_model_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt timm torchinfo && python -m scripts.mvtec_patchcore_fpga_cost_model --cost-summary results/mvtec_patchcore_cost_credibility_audit_002_summary.json --holdout-summary results/mvtec_patchcore_profiled_holdout_validation_001_summary.json --output results/mvtec_patchcore_fpga_cost_model_001_summary.json --csv results/mvtec_patchcore_fpga_cost_model_001.csv --markdown docs/mvtec_patchcore_fpga_cost_model_001.md --figure results/mvtec_patchcore_fpga_cost_model_001.png --clock-mhz 200 --distance-op-weight 3 --knn-lanes 64 128 256 512 1024 2048",
+  "max_runtime_sec": 3600,
+  "result_file": "results/mvtec_patchcore_fpga_cost_model_001.json",
+  "note": "Builds FPGA-facing pre-implementation cost model: CNN MACs, NN ops, memory-bank size, memory traffic, and KNN-lane latency estimates.",
+  "created_at": "2026-08-22T22:15:00+09:00"
+}
