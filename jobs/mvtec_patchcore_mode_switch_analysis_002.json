@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_mode_switch_analysis_002",
-  "status": "running",
+  "status": "failed",
   "backend": "caviar9",
   "requires_gpu": false,
   "type": "shell",
@@ -10,6 +10,11 @@
   "result_file": "results/mvtec_patchcore_mode_switch_analysis_002.json",
   "note": "Retry after carrying baseline/selected bank bytes into mode rows.",
   "created_at": "2026-08-23T00:30:00+09:00",
-  "updated_at": "2026-08-22T16:14:18.079635+00:00",
-  "started_at": "2026-08-22T16:14:18.079594+00:00"
+  "updated_at": "2026-08-22T16:14:39.769491+00:00",
+  "started_at": "2026-08-22T16:14:18.079594+00:00",
+  "returncode": 1,
+  "duration_sec": 15.807,
+  "stdout": "logs/mvtec_patchcore_mode_switch_analysis_002.stdout.log",
+  "stderr": "logs/mvtec_patchcore_mode_switch_analysis_002.stderr.log",
+  "finished_at": "2026-08-22T16:14:39.762240+00:00"
 }
