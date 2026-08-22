@@ -47,7 +47,7 @@ def summarize_mode_storage(rows: list[dict], bandwidths: list[float], quality_fa
     baseline_bank_max = max(row["baseline_bank_bytes_int8"] for row in rows)
     selected_bank_max = max(row["selected_bank_bytes_int8"] for row in rows)
     selected_bank_median = float(np.median([row["selected_bank_bytes_int8"] for row in rows]))
-    quality_rows = [row for row in rows if row["holdout_selected_false_pass"] <= quality_false_pass_limit]
+    quality_rows = [row for row in rows if row["false_pass"] <= quality_false_pass_limit]
     return {
         "categories": len(rows),
         "quality_false_pass_limit": quality_false_pass_limit,
