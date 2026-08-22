@@ -1,0 +1,13 @@
+{
+  "id": "mvtec_patchcore_profiled_holdout_validation_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt timm pyarrow && python -m scripts.mvtec_patchcore_profiled_holdout_validation --output results/mvtec_patchcore_profiled_holdout_validation_001_summary.json --markdown docs/mvtec_patchcore_profiled_holdout_validation_001.md --figure results/mvtec_patchcore_profiled_holdout_validation_001.png --materialized-root /home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2 --categories bottle cable capsule carpet grid hazelnut leather metal_nut pill screw tile toothbrush transistor wood zipper --bank-patches 12000 9000 6000 4000 3000 2000 1500 1000 750 500 250 125 --topk-fractions 0.005 0.01 0.02 0.05 --split-seeds 101 202 303 404 505 --val-fraction 0.5 --false-pass-targets 0.0 0.005 0.01 0.02 0.03 0.05 --tolerances 0.0 0.01 0.02 0.05 0.10 --baseline-config wrn_l23_g14_b12000_topk0p01 --report-false-pass-target 0.01 --report-tolerance 0.02 --score-name topk_score --threshold-points 180 --require-cuda",
+  "max_runtime_sec": 43200,
+  "result_file": "results/mvtec_patchcore_profiled_holdout_validation_001.json",
+  "note": "Final validation/test split re-experiment for category-profiled minimal PatchCore FPGA theme. Selects config and threshold on validation only, evaluates on holdout across multiple split seeds.",
+  "created_at": "2026-08-22T18:30:00+09:00"
+}
