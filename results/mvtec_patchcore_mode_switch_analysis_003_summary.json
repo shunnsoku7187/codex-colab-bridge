@@ -1,0 +1,881 @@
+{
+  "purpose": "Mode-switching architecture analysis for category-profiled PatchCore FPGA design.",
+  "config": {
+    "fpga_cost_summary": "results/mvtec_patchcore_fpga_cost_model_001_summary.json",
+    "output": "results/mvtec_patchcore_mode_switch_analysis_003_summary.json",
+    "markdown": "docs/mvtec_patchcore_mode_switch_analysis_003.md",
+    "figure": "results/mvtec_patchcore_mode_switch_analysis_003.png",
+    "bandwidths_mib_s": [
+      100.0,
+      500.0,
+      1000.0,
+      5000.0
+    ],
+    "lane_choices": [
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "report_lane": 512,
+    "quality_false_pass_limit": 0.03
+  },
+  "storage_summary": {
+    "categories": 15,
+    "quality_false_pass_limit": 0.03,
+    "quality_rows": 5,
+    "baseline_all_category_bank_mib": 131.660156,
+    "selected_all_category_bank_mib": 3.288269,
+    "all_category_bank_ratio": 0.024975,
+    "all_category_bank_reduction": 0.975025,
+    "baseline_active_bank_mib": 8.789062,
+    "max_selected_active_bank_mib": 1.098633,
+    "median_selected_active_bank_mib": 0.061035,
+    "max_active_bank_ratio": 0.125,
+    "median_active_bank_ratio": 0.006944,
+    "selected_all_bank_switch_time_ms": {
+      "100_MiB_s": 32.88269,
+      "500_MiB_s": 6.576538,
+      "1000_MiB_s": 3.288269,
+      "5000_MiB_s": 0.657654
+    },
+    "max_selected_bank_switch_time_ms": {
+      "100_MiB_s": 10.986328,
+      "500_MiB_s": 2.197266,
+      "1000_MiB_s": 1.098633,
+      "5000_MiB_s": 0.219727
+    }
+  },
+  "architecture_options": [
+    {
+      "name": "full_baseline_mode",
+      "description": "Use the full baseline PatchCore configuration for every product category.",
+      "resident_bank_mib": 131.660156,
+      "active_bank_mib": 8.789062,
+      "mean_knn_ms": 17.61648,
+      "worst_knn_ms": 17.64,
+      "strength": "highest reference capacity",
+      "weakness": "large bank storage and KNN latency"
+    },
+    {
+      "name": "profiled_active_load",
+      "description": "Load only the selected category bank before inspection starts.",
+      "resident_bank_mib": 1.098633,
+      "active_bank_mib": 1.098633,
+      "mean_knn_ms": 0.192667,
+      "worst_knn_ms": 1.47,
+      "strength": "minimum on-chip active memory and deterministic during inspection",
+      "weakness": "mode switch must load the next category bank"
+    },
+    {
+      "name": "profiled_all_resident",
+      "description": "Keep all selected category banks resident and switch pointers/configs.",
+      "resident_bank_mib": 3.288269,
+      "active_bank_mib": 1.098633,
+      "mean_knn_ms": 0.192667,
+      "worst_knn_ms": 1.47,
+      "strength": "near-zero mode switch latency after initialization",
+      "weakness": "requires enough on-chip/off-chip storage for every selected bank"
+    }
+  ],
+  "mode_rows": [
+    {
+      "category": "bottle",
+      "selected_config": "res18_l23_g5_b250_topk0p005",
+      "good_pass": 0.94,
+      "false_pass": 0.051613,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 48000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 46.875,
+      "selected_bank_mib": 0.045776,
+      "bank_ratio": 0.005208,
+      "stream_ratio": 0.000664,
+      "nn_ratio": 0.000664,
+      "total_proxy_ratio": 0.09575,
+      "switch_time_ms": {
+        "100_MiB_s": 0.457764,
+        "500_MiB_s": 0.091553,
+        "1000_MiB_s": 0.045776,
+        "5000_MiB_s": 0.009155
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.09375,
+          "speedup": 1505.28
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.046875,
+          "speedup": 1505.28
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.02344,
+          "speedup": 1505.119454
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.01172,
+          "speedup": 1505.119454
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.00586,
+          "speedup": 1505.119454
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.00293,
+          "speedup": 1505.119454
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "selected_config": "res18_l23_g7_b1500_topk0p05",
+      "good_pass": 0.337931,
+      "false_pass": 0.026087,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 288000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 281.25,
+      "selected_bank_mib": 0.274658,
+      "bank_ratio": 0.03125,
+      "stream_ratio": 0.007812,
+      "nn_ratio": 0.007812,
+      "total_proxy_ratio": 0.099477,
+      "switch_time_ms": {
+        "100_MiB_s": 2.746582,
+        "500_MiB_s": 0.549316,
+        "1000_MiB_s": 0.274658,
+        "5000_MiB_s": 0.054932
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 1.1025,
+          "speedup": 128.0
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.55125,
+          "speedup": 128.0
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.275625,
+          "speedup": 128.0
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.137815,
+          "speedup": 127.997678
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.06891,
+          "speedup": 127.993034
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.034455,
+          "speedup": 127.993034
+        }
+      }
+    },
+    {
+      "category": "capsule",
+      "selected_config": "wrn_l2_g14_b125_topk0p05",
+      "good_pass": 0.218182,
+      "false_pass": 0.054545,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 32000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 31.25,
+      "selected_bank_mib": 0.030518,
+      "bank_ratio": 0.003472,
+      "stream_ratio": 0.003472,
+      "nn_ratio": 0.003472,
+      "total_proxy_ratio": 0.20351,
+      "switch_time_ms": {
+        "100_MiB_s": 0.305176,
+        "500_MiB_s": 0.061035,
+        "1000_MiB_s": 0.030518,
+        "5000_MiB_s": 0.006104
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.49,
+          "speedup": 288.0
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.245,
+          "speedup": 288.0
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.1225,
+          "speedup": 288.0
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.06125,
+          "speedup": 288.0
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.030625,
+          "speedup": 288.0
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.015315,
+          "speedup": 287.952987
+        }
+      }
+    },
+    {
+      "category": "carpet",
+      "selected_config": "wrn_l3_g8_b125_topk0p005",
+      "good_pass": 0.685714,
+      "false_pass": 0.048889,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 64000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 62.5,
+      "selected_bank_mib": 0.061035,
+      "bank_ratio": 0.006944,
+      "stream_ratio": 0.002268,
+      "nn_ratio": 0.002268,
+      "total_proxy_ratio": 0.479746,
+      "switch_time_ms": {
+        "100_MiB_s": 0.610352,
+        "500_MiB_s": 0.12207,
+        "1000_MiB_s": 0.061035,
+        "5000_MiB_s": 0.012207
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.32,
+          "speedup": 441.0
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.16,
+          "speedup": 441.0
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.08,
+          "speedup": 441.0
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.04,
+          "speedup": 441.0
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.02,
+          "speedup": 441.0
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.01,
+          "speedup": 441.0
+        }
+      }
+    },
+    {
+      "category": "grid",
+      "selected_config": "res18_l23_g7_b6000_topk0p005",
+      "good_pass": 0.381818,
+      "false_pass": 0.041379,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 1152000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 1125.0,
+      "selected_bank_mib": 1.098633,
+      "bank_ratio": 0.125,
+      "stream_ratio": 0.03125,
+      "nn_ratio": 0.03125,
+      "total_proxy_ratio": 0.111699,
+      "switch_time_ms": {
+        "100_MiB_s": 10.986328,
+        "500_MiB_s": 2.197266,
+        "1000_MiB_s": 1.098633,
+        "5000_MiB_s": 0.219727
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 4.41,
+          "speedup": 32.0
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 2.205,
+          "speedup": 32.0
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 1.1025,
+          "speedup": 32.0
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.55125,
+          "speedup": 32.0
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.275625,
+          "speedup": 32.0
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.137815,
+          "speedup": 31.99942
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "selected_config": "res18_l23_g14_b500_topk0p02",
+      "good_pass": 0.92,
+      "false_pass": 0.011429,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 96000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 93.75,
+      "selected_bank_mib": 0.091553,
+      "bank_ratio": 0.010417,
+      "stream_ratio": 0.010417,
+      "nn_ratio": 0.010417,
+      "total_proxy_ratio": 0.100835,
+      "switch_time_ms": {
+        "100_MiB_s": 0.915527,
+        "500_MiB_s": 0.183105,
+        "1000_MiB_s": 0.091553,
+        "5000_MiB_s": 0.018311
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 1.47,
+          "speedup": 96.0
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.735,
+          "speedup": 96.0
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.3675,
+          "speedup": 96.0
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.18375,
+          "speedup": 96.0
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.091875,
+          "speedup": 96.0
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.04594,
+          "speedup": 95.994776
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "selected_config": "wrn_l3_g10_b125_topk0p005",
+      "good_pass": 0.9375,
+      "false_pass": 0.03913,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 64000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 62.5,
+      "selected_bank_mib": 0.061035,
+      "bank_ratio": 0.006944,
+      "stream_ratio": 0.003543,
+      "nn_ratio": 0.003543,
+      "total_proxy_ratio": 0.480411,
+      "switch_time_ms": {
+        "100_MiB_s": 0.610352,
+        "500_MiB_s": 0.12207,
+        "1000_MiB_s": 0.061035,
+        "5000_MiB_s": 0.012207
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.5,
+          "speedup": 282.24
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.25,
+          "speedup": 282.24
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.125,
+          "speedup": 282.24
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.0625,
+          "speedup": 282.24
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.03125,
+          "speedup": 282.24
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.015625,
+          "speedup": 282.24
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "selected_config": "wrn_l3_g6_b1000_topk0p005",
+      "good_pass": 0.4,
+      "false_pass": 0.06383,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 512000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 500.0,
+      "selected_bank_mib": 0.488281,
+      "bank_ratio": 0.055556,
+      "stream_ratio": 0.010204,
+      "nn_ratio": 0.010204,
+      "total_proxy_ratio": 0.483885,
+      "switch_time_ms": {
+        "100_MiB_s": 4.882812,
+        "500_MiB_s": 0.976562,
+        "1000_MiB_s": 0.488281,
+        "5000_MiB_s": 0.097656
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 1.44,
+          "speedup": 98.0
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.72,
+          "speedup": 98.0
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.36,
+          "speedup": 98.0
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.18,
+          "speedup": 98.0
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.09,
+          "speedup": 98.0
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.045,
+          "speedup": 98.0
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "selected_config": "res18_l23_g5_b125_topk0p005",
+      "good_pass": 0.184615,
+      "false_pass": 0.028169,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 24000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 23.4375,
+      "selected_bank_mib": 0.022888,
+      "bank_ratio": 0.002604,
+      "stream_ratio": 0.000332,
+      "nn_ratio": 0.000332,
+      "total_proxy_ratio": 0.095577,
+      "switch_time_ms": {
+        "100_MiB_s": 0.228882,
+        "500_MiB_s": 0.045776,
+        "1000_MiB_s": 0.022888,
+        "5000_MiB_s": 0.004578
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.046875,
+          "speedup": 3010.56
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.02344,
+          "speedup": 3010.238908
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.01172,
+          "speedup": 3010.238908
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.00586,
+          "speedup": 3010.238908
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.00293,
+          "speedup": 3010.238908
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.001465,
+          "speedup": 3010.238908
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "selected_config": "res18_l23_g14_b125_topk0p05",
+      "good_pass": 0.038095,
+      "false_pass": 0.057627,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 24000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 23.4375,
+      "selected_bank_mib": 0.022888,
+      "bank_ratio": 0.002604,
+      "stream_ratio": 0.002604,
+      "nn_ratio": 0.002604,
+      "total_proxy_ratio": 0.096762,
+      "switch_time_ms": {
+        "100_MiB_s": 0.228882,
+        "500_MiB_s": 0.045776,
+        "1000_MiB_s": 0.022888,
+        "5000_MiB_s": 0.004578
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.3675,
+          "speedup": 384.0
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.18375,
+          "speedup": 384.0
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.091875,
+          "speedup": 384.0
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.04594,
+          "speedup": 383.979103
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.02297,
+          "speedup": 383.979103
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.011485,
+          "speedup": 383.979103
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "selected_config": "wrn_l3_g7_b125_topk0p005",
+      "good_pass": 0.77647,
+      "false_pass": 0.038095,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 64000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 62.5,
+      "selected_bank_mib": 0.061035,
+      "bank_ratio": 0.006944,
+      "stream_ratio": 0.001736,
+      "nn_ratio": 0.001736,
+      "total_proxy_ratio": 0.479469,
+      "switch_time_ms": {
+        "100_MiB_s": 0.610352,
+        "500_MiB_s": 0.12207,
+        "1000_MiB_s": 0.061035,
+        "5000_MiB_s": 0.012207
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.245,
+          "speedup": 576.0
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.1225,
+          "speedup": 576.0
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.06125,
+          "speedup": 576.0
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.030625,
+          "speedup": 576.0
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.015315,
+          "speedup": 575.905975
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.00766,
+          "speedup": 575.718016
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "selected_config": "wrn_l2_g5_b125_topk0p005",
+      "good_pass": 0.433333,
+      "false_pass": 0.066667,
+      "baseline_bank_bytes_int8": 9031680,
+      "selected_bank_bytes_int8": 32000,
+      "baseline_bank_mib": 8.613281,
+      "selected_bank_kib": 31.25,
+      "selected_bank_mib": 0.030518,
+      "bank_ratio": 0.003543,
+      "stream_ratio": 0.000452,
+      "nn_ratio": 0.000452,
+      "total_proxy_ratio": 0.204059,
+      "switch_time_ms": {
+        "100_MiB_s": 0.305176,
+        "500_MiB_s": 0.061035,
+        "1000_MiB_s": 0.030518,
+        "5000_MiB_s": 0.006104
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 138.2976,
+          "selected_knn_ms": 0.0625,
+          "speedup": 2212.7616
+        },
+        "128": {
+          "baseline_knn_ms": 69.1488,
+          "selected_knn_ms": 0.03125,
+          "speedup": 2212.7616
+        },
+        "256": {
+          "baseline_knn_ms": 34.5744,
+          "selected_knn_ms": 0.015625,
+          "speedup": 2212.7616
+        },
+        "512": {
+          "baseline_knn_ms": 17.2872,
+          "selected_knn_ms": 0.007815,
+          "speedup": 2212.053743
+        },
+        "1024": {
+          "baseline_knn_ms": 8.6436,
+          "selected_knn_ms": 0.00391,
+          "speedup": 2210.639386
+        },
+        "2048": {
+          "baseline_knn_ms": 4.3218,
+          "selected_knn_ms": 0.001955,
+          "speedup": 2210.639386
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "selected_config": "wrn_l3_g6_b500_topk0p005",
+      "good_pass": 0.473333,
+      "false_pass": 0.11,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 256000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 250.0,
+      "selected_bank_mib": 0.244141,
+      "bank_ratio": 0.027778,
+      "stream_ratio": 0.005102,
+      "nn_ratio": 0.005102,
+      "total_proxy_ratio": 0.481224,
+      "switch_time_ms": {
+        "100_MiB_s": 2.441406,
+        "500_MiB_s": 0.488281,
+        "1000_MiB_s": 0.244141,
+        "5000_MiB_s": 0.048828
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.72,
+          "speedup": 196.0
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.36,
+          "speedup": 196.0
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.18,
+          "speedup": 196.0
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.09,
+          "speedup": 196.0
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.045,
+          "speedup": 196.0
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.0225,
+          "speedup": 196.0
+        }
+      }
+    },
+    {
+      "category": "wood",
+      "selected_config": "res18_l23_g7_b125_topk0p005",
+      "good_pass": 0.711111,
+      "false_pass": 0.02,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 24000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 23.4375,
+      "selected_bank_mib": 0.022888,
+      "bank_ratio": 0.002604,
+      "stream_ratio": 0.000651,
+      "nn_ratio": 0.000651,
+      "total_proxy_ratio": 0.095743,
+      "switch_time_ms": {
+        "100_MiB_s": 0.228882,
+        "500_MiB_s": 0.045776,
+        "1000_MiB_s": 0.022888,
+        "5000_MiB_s": 0.004578
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 0.091875,
+          "speedup": 1536.0
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 0.04594,
+          "speedup": 1535.916413
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 0.02297,
+          "speedup": 1535.916413
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 0.011485,
+          "speedup": 1535.916413
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.005745,
+          "speedup": 1535.248042
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.002875,
+          "speedup": 1533.913043
+        }
+      }
+    },
+    {
+      "category": "zipper",
+      "selected_config": "wrn_l3_g14_b1500_topk0p05",
+      "good_pass": 0.75,
+      "false_pass": 0.027118,
+      "baseline_bank_bytes_int8": 9216000,
+      "selected_bank_bytes_int8": 768000,
+      "baseline_bank_mib": 8.789062,
+      "selected_bank_kib": 750.0,
+      "selected_bank_mib": 0.732422,
+      "bank_ratio": 0.083333,
+      "stream_ratio": 0.083333,
+      "nn_ratio": 0.083333,
+      "total_proxy_ratio": 0.522017,
+      "switch_time_ms": {
+        "100_MiB_s": 7.324219,
+        "500_MiB_s": 1.464844,
+        "1000_MiB_s": 0.732422,
+        "5000_MiB_s": 0.146484
+      },
+      "lane_estimates": {
+        "64": {
+          "baseline_knn_ms": 141.12,
+          "selected_knn_ms": 11.76,
+          "speedup": 12.0
+        },
+        "128": {
+          "baseline_knn_ms": 70.56,
+          "selected_knn_ms": 5.88,
+          "speedup": 12.0
+        },
+        "256": {
+          "baseline_knn_ms": 35.28,
+          "selected_knn_ms": 2.94,
+          "speedup": 12.0
+        },
+        "512": {
+          "baseline_knn_ms": 17.64,
+          "selected_knn_ms": 1.47,
+          "speedup": 12.0
+        },
+        "1024": {
+          "baseline_knn_ms": 8.82,
+          "selected_knn_ms": 0.735,
+          "speedup": 12.0
+        },
+        "2048": {
+          "baseline_knn_ms": 4.41,
+          "selected_knn_ms": 0.3675,
+          "speedup": 12.0
+        }
+      }
+    }
+  ],
+  "figure": "results/mvtec_patchcore_mode_switch_analysis_003.png"
+}
