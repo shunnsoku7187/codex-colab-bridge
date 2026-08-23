@@ -14293,3 +14293,1405 @@ patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
 mobv3l_l23_g7 wood train:   0%|          | 0/16 [00:00<?, ?it/s]
 mobv3l_l23_g7 wood train:   6%|▋         | 1/16 [00:00<00:09,  1.56it/s]
 m$ git add jobs logs results artifacts docs
+$ git diff --cached --quiet
+$ git commit -m 'caviar9: heartbeat mvtec_patchcore_backbone_floor_probe_001'
+[main acfff8a] caviar9: heartbeat mvtec_patchcore_backbone_floor_probe_001
+ 3 files changed, 3057 insertions(+)
+$ git push origin main
+To github.com:shunnsoku7187/codex-colab-bridge.git
+   92fe9c7..acfff8a  main -> main
+obv3l_l23_g7 wood train:  19%|█▉        | 3/16 [00:01<00:04,  2.68it/s]
+mobv3l_l23_g7 wood train:  31%|███▏      | 5/16 [00:01<00:03,  3.10it/s]
+mobv3l_l23_g7 wood train:  44%|████▍     | 7/16 [00:02<00:02,  3.32it/s]
+mobv3l_l23_g7 wood train:  56%|█████▋    | 9/16 [00:02<00:02,  3.44it/s]
+mobv3l_l23_g7 wood train:  69%|██████▉   | 11/16 [00:03<00:01,  3.50it/s]
+mobv3l_l23_g7 wood train:  81%|████████▏ | 13/16 [00:03<00:00,  3.54it/s]
+mobv3l_l23_g7 wood train:  94%|█████████▍| 15/16 [00:04<00:00,  3.57it/s]
+                                                                         
+
+mobv3l_l23_g7 wood test:   0%|          | 0/5 [00:00<?, ?it/s]
+mobv3l_l23_g7 wood test:  20%|██        | 1/5 [00:00<00:02,  1.56it/s]
+mobv3l_l23_g7 wood test:  60%|██████    | 3/5 [00:01<00:00,  2.70it/s]
+mobv3l_l23_g7 wood test: 100%|██████████| 5/5 [00:01<00:00,  3.28it/s]
+                                                                      
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g7 zipper train:   0%|          | 0/15 [00:00<?, ?it/s]
+mobv3l_l23_g7 zipper train:   7%|▋         | 1/15 [00:00<00:06,  2.05it/s]
+mobv3l_l23_g7 zipper train:  20%|██        | 3/15 [00:00<00:03,  3.65it/s]
+mobv3l_l23_g7 zipper train:  33%|███▎      | 5/15 [00:01<00:02,  4.23it/s]
+mobv3l_l23_g7 zipper train:  47%|████▋     | 7/15 [00:01<00:01,  4.50it/s]
+mobv3l_l23_g7 zipper train:  60%|██████    | 9/15 [00:02<00:01,  4.67it/s]
+mobv3l_l23_g7 zipper train:  73%|███████▎  | 11/15 [00:02<00:00,  4.78it/s]
+mobv3l_l23_g7 zipper train:  87%|████████▋ | 13/15 [00:02<00:00,  4.85it/s]
+mobv3l_l23_g7 zipper train: 100%|██████████| 15/15 [00:03<00:00,  4.95it/s]
+                                                                           
+
+mobv3l_l23_g7 zipper test:   0%|          | 0/10 [00:00<?, ?it/s]
+mobv3l_l23_g7 zipper test:  10%|█         | 1/10 [00:00<00:04,  1.99it/s]
+mobv3l_l23_g7 zipper test:  30%|███       | 3/10 [00:00<00:01,  3.59it/s]
+mobv3l_l23_g7 zipper test:  50%|█████     | 5/10 [00:01<00:01,  4.17it/s]
+mobv3l_l23_g7 zipper test:  70%|███████   | 7/10 [00:01<00:00,  4.49it/s]
+mobv3l_l23_g7 zipper test:  90%|█████████ | 9/10 [00:02<00:00,  4.69it/s]
+                                                                         
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+
+mobv3l_l23_g5 bottle train:   0%|          | 0/14 [00:00<?, ?it/s]
+mobv3l_l23_g5 bottle train:   7%|▋         | 1/14 [00:00<00:05,  2.27it/s]
+mobv3l_l23_g5 bottle train:  21%|██▏       | 3/14 [00:00<00:02,  4.09it/s]
+mobv3l_l23_g5 bottle train:  36%|███▌      | 5/14 [00:01<00:01,  4.75it/s]
+mobv3l_l23_g5 bottle train:  50%|█████     | 7/14 [00:01<00:01,  5.09it/s]
+mobv3l_l23_g5 bottle train:  64%|██████▍   | 9/14 [00:01<00:00,  5.23it/s]
+mobv3l_l23_g5 bottle train:  79%|███████▊  | 11/14 [00:02<00:00,  5.37it/s]
+mobv3l_l23_g5 bottle train:  93%|█████████▎| 13/14 [00:02<00:00,  5.51it/s]
+                                                                           
+
+mobv3l_l23_g5 bottle test:   0%|          | 0/6 [00:00<?, ?it/s]
+mobv3l_l23_g5 bottle test:  17%|█▋        | 1/6 [00:00<00:02,  2.27it/s]
+mobv3l_l23_g5 bottle test:  50%|█████     | 3/6 [00:00<00:00,  4.28it/s]
+mobv3l_l23_g5 bottle test:  83%|████████▎ | 5/6 [00:01<00:00,  5.22it/s]
+                                                                        
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 cable train:   0%|          | 0/14 [00:00<?, ?it/s]
+mobv3l_l23_g5 cable train:   7%|▋         | 1/14 [00:00<00:08,  1.59it/s]
+mobv3l_l23_g5 cable train:  21%|██▏       | 3/14 [00:01<00:04,  2.75it/s]
+mobv3l_l23_g5 cable train:  36%|███▌      | 5/14 [00:01<00:02,  3.15it/s]
+mobv3l_l23_g5 cable train:  50%|█████     | 7/14 [00:02<00:02,  3.34it/s]
+mobv3l_l23_g5 cable train:  64%|██████▍   | 9/14 [00:02<00:01,  3.45it/s]
+mobv3l_l23_g5 cable train:  79%|███████▊  | 11/14 [00:03<00:00,  3.53it/s]
+mobv3l_l23_g5 cable train:  93%|█████████▎| 13/14 [00:03<00:00,  3.58it/s]
+                                                                          
+
+mobv3l_l23_g5 cable test:   0%|          | 0/10 [00:00<?, ?it/s]
+mobv3l_l23_g5 cable test:  10%|█         | 1/10 [00:00<00:05,  1.58it/s]
+mobv3l_l23_g5 cable test:  30%|███       | 3/10 [00:01<00:02,  2.73it/s]
+mobv3l_l23_g5 cable test:  50%|█████     | 5/10 [00:01<00:01,  3.13it/s]
+mobv3l_l23_g5 cable test:  70%|███████   | 7/10 [00:02<00:00,  3.32it/s]
+mobv3l_l23_g5 cable test:  90%|█████████ | 9/10 [00:02<00:00,  3.49it/s]
+                                                                        
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 capsule train:   0%|          | 0/14 [00:00<?, ?it/s]
+mobv3l_l23_g5 capsule train:   7%|▋         | 1/14 [00:00<00:07,  1.63it/s]
+mobv3l_l23_g5 capsule train:  21%|██▏       | 3/14 [00:01<00:03,  2.83it/s]
+mobv3l_l23_g5 capsule train:  36%|███▌      | 5/14 [00:01<00:02,  3.27it/s]
+mobv3l_l23_g5 capsule train:  50%|█████     | 7/14 [00:02<00:02,  3.47it/s]
+mobv3l_l23_g5 capsule train:  64%|██████▍   | 9/14 [00:02<00:01,  3.59it/s]
+mobv3l_l23_g5 capsule train:  79%|███████▊  | 11/14 [00:03<00:00,  3.67it/s]
+mobv3l_l23_g5 capsule train:  93%|█████████▎| 13/14 [00:03<00:00,  3.74it/s]
+                                                                            
+
+mobv3l_l23_g5 capsule test:   0%|          | 0/9 [00:00<?, ?it/s]
+mobv3l_l23_g5 capsule test:  11%|█         | 1/9 [00:00<00:04,  1.64it/s]
+mobv3l_l23_g5 capsule test:  33%|███▎      | 3/9 [00:01<00:02,  2.84it/s]
+mobv3l_l23_g5 capsule test:  56%|█████▌    | 5/9 [00:01<00:01,  3.26it/s]
+mobv3l_l23_g5 capsule test:  78%|███████▊  | 7/9 [00:02<00:00,  3.46it/s]
+mobv3l_l23_g5 capsule test: 100%|██████████| 9/9 [00:02<00:00,  4.91it/s]
+                                                                         
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 carpet train:   0%|          | 0/18 [00:00<?, ?it/s]
+mobv3l_l23_g5 carpet train:   6%|▌         | 1/18 [00:00<00:10,  1.69it/s]
+mobv3l_l23_g5 carpet train:  17%|█▋        | 3/18 [00:01<00:05,  2.96it/s]
+mobv3l_l23_g5 carpet train:  28%|██▊       | 5/18 [00:01<00:03,  3.41it/s]
+mobv3l_l23_g5 carpet train:  39%|███▉      | 7/18 [00:02<00:03,  3.63it/s]
+mobv3l_l23_g5 carpet train:  50%|█████     | 9/18 [00:02<00:02,  3.76it/s]
+mobv3l_l23_g5 carpet train:  61%|██████    | 11/18 [00:03<00:01,  3.84it/s]
+mobv3l_l23_g5 carpet train:  72%|███████▏  | 13/18 [00:03<00:01,  3.89it/s]
+mobv3l_l23_g5 carpet train:  83%|████████▎ | 15/18 [00:04<00:00,  3.93it/s]
+mobv3l_l23_g5 carpet train:  94%|█████████▍| 17/18 [00:04<00:00,  3.98it/s]
+                                                                           
+
+mobv3l_l23_g5 carpet test:   0%|          | 0/8 [00:00<?, ?it/s]
+mobv3l_l23_g5 carpet test:  12%|█▎        | 1/8 [00:00<00:04,  1.69it/s]
+mobv3l_l23_g5 carpet test:  38%|███▊      | 3/8 [00:01<00:01,  2.95it/s]
+mobv3l_l23_g5 carpet test:  62%|██████▎   | 5/8 [00:01<00:00,  3.39it/s]
+mobv3l_l23_g5 carpet test:  88%|████████▊ | 7/8 [00:02<00:00,  3.68it/s]
+                                                                        
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 grid train:   0%|          | 0/17 [00:00<?, ?it/s]
+mobv3l_l23_g5 grid train:   6%|▌         | 1/17 [00:00<00:07,  2.13it/s]
+mobv3l_l23_g5 grid train:  18%|█▊        | 3/17 [00:00<00:03,  3.81it/s]
+mobv3l_l23_g5 grid train:  29%|██▉       | 5/17 [00:01<00:02,  4.41it/s]
+mobv3l_l23_g5 grid train:  41%|████      | 7/17 [00:01<00:02,  4.68it/s]
+mobv3l_l23_g5 grid train:  53%|█████▎    | 9/17 [00:02<00:01,  4.73it/s]
+mobv3l_l23_g5 grid train:  65%|██████▍   | 11/17 [00:02<00:01,  4.74it/s]
+mobv3l_l23_g5 grid train:  76%|███████▋  | 13/17 [00:02<00:00,  4.77it/s]
+mobv3l_l23_g5 grid train:  88%|████████▊ | 15/17 [00:03<00:00,  4.78it/s]
+mobv3l_l23_g5 grid train: 100%|██████████| 17/17 [00:03<00:00,  5.70it/s]
+                                                                         
+
+mobv3l_l23_g5 grid test:   0%|          | 0/5 [00:00<?, ?it/s]
+mobv3l_l23_g5 grid test:  20%|██        | 1/5 [00:00<00:02,  1.99it/s]
+mobv3l_l23_g5 grid test:  60%|██████    | 3/5 [00:00<00:00,  3.43it/s]
+mobv3l_l23_g5 grid test: 100%|██████████| 5/5 [00:01<00:00,  4.27it/s]
+                                                                      
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 hazelnut train:   0%|          | 0/25 [00:00<?, ?it/s]
+mobv3l_l23_g5 hazelnut train:   4%|▍         | 1/25 [00:00<00:16,  1.47it/s]
+mobv3l_l23_g5 hazelnut train:  12%|█▏        | 3/25 [00:01<00:08,  2.54it/s]
+mobv3l_l23_g5 hazelnut train:  20%|██        | 5/25 [00:01<00:06,  2.91it/s]
+mobv3l_l23_g5 hazelnut train:  28%|██▊       | 7/25 [00:02<00:05,  3.09it/s]
+mobv3l_l23_g5 hazelnut train:  36%|███▌      | 9/25 [00:03<00:05,  3.20it/s]
+mobv3l_l23_g5 hazelnut train:  44%|████▍     | 11/25 [00:03<00:04,  3.26it/s]
+mobv3l_l23_g5 hazelnut train:  52%|█████▏    | 13/25 [00:04<00:03,  3.30it/s]
+mobv3l_l23_g5 hazelnut train:  60%|██████    | 15/25 [00:04<00:03,  3.33it/s]
+mobv3l_l23_g5 hazelnut train:  68%|██████▊   | 17/25 [00:05<00:02,  3.35it/s]
+mobv3l_l23_g5 hazelnut train:  76%|███████▌  | 19/25 [00:05<00:01,  3.36it/s]
+mobv3l_l23_g5 hazelnut train:  84%|████████▍ | 21/25 [00:06<00:01,  3.37it/s]
+mobv3l_l23_g5 hazelnut train:  92%|█████████▏| 23/25 [00:07<00:00,  3.37it/s]
+mobv3l_l23_g5 hazelnut train: 100%|██████████| 25/25 [00:07<00:00,  4.09it/s]
+                                                                             
+
+mobv3l_l23_g5 hazelnut test:   0%|          | 0/7 [00:00<?, ?it/s]
+mobv3l_l23_g5 hazelnut test:  14%|█▍        | 1/7 [00:00<00:04,  1.47it/s]
+mobv3l_l23_g5 hazelnut test:  43%|████▎     | 3/7 [00:01<00:01,  2.53it/s]
+mobv3l_l23_g5 hazelnut test:  71%|███████▏  | 5/7 [00:01<00:00,  2.91it/s]
+mobv3l_l23_g5 hazelnut test: 100%|██████████| 7/7 [00:02<00:00,  3.31it/s]
+                                                                          
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 leather train:   0%|          | 0/16 [00:00<?, ?it/s]
+mobv3l_l23_g5 leather train:   6%|▋         | 1/16 [00:00<00:09,  1.50it/s]
+mobv3l_l23_g5 leather train:  19%|█▉        | 3/16 [00:01<00:05,  2.57it/s]
+mobv3l_l23_g5 leather train:  31%|███▏      | 5/16 [00:01<00:03,  2.98it/s]
+mobv3l_l23_g5 leather train:  44%|████▍     | 7/16 [00:02<00:02,  3.19it/s]
+mobv3l_l23_g5 leather train:  56%|█████▋    | 9/16 [00:02<00:02,  3.30it/s]
+mobv3l_l23_g5 leather train:  69%|██████▉   | 11/16 [00:03<00:01,  3.37it/s]
+mobv3l_l23_g5 leather train:  81%|████████▏ | 13/16 [00:04<00:00,  3.41it/s]
+mobv3l_l23_g5 leather train:  94%|█████████▍| 15/16 [00:04<00:00,  3.47it/s]
+                                                                            
+
+mobv3l_l23_g5 leather test:   0%|          | 0/8 [00:00<?, ?it/s]
+mobv3l_l23_g5 leather test:  12%|█▎        | 1/8 [00:00<00:04,  1.56it/s]
+mobv3l_l23_g5 leather test:  38%|███▊      | 3/8 [00:01<00:01,  2.67it/s]
+mobv3l_l23_g5 leather test:  62%|██████▎   | 5/8 [00:01<00:00,  3.06it/s]
+mobv3l_l23_g5 leather test:  88%|████████▊ | 7/8 [00:02<00:00,  3.27it/s]
+                                                                         
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 metal_nut train:   0%|          | 0/14 [00:00<?, ?it/s]
+mobv3l_l23_g5 metal_nut train:   7%|▋         | 1/14 [00:00<00:04,  2.78it/s]
+mobv3l_l23_g5 metal_nut train:  21%|██▏       | 3/14 [00:00<00:02,  5.16it/s]
+mobv3l_l23_g5 metal_nut train:  36%|███▌      | 5/14 [00:00<00:01,  6.07it/s]
+mobv3l_l23_g5 metal_nut train:  50%|█████     | 7/14 [00:01<00:01,  6.53it/s]
+mobv3l_l23_g5 metal_nut train:  64%|██████▍   | 9/14 [00:01<00:00,  6.79it/s]
+mobv3l_l23_g5 metal_nut train:  79%|███████▊  | 11/14 [00:01<00:00,  6.96it/s]
+mobv3l_l23_g5 metal_nut train:  93%|█████████▎| 13/14 [00:02<00:00,  7.07it/s]
+                                                                              
+
+mobv3l_l23_g5 metal_nut test:   0%|          | 0/8 [00:00<?, ?it/s]
+mobv3l_l23_g5 metal_nut test:  12%|█▎        | 1/8 [00:00<00:02,  2.79it/s]
+mobv3l_l23_g5 metal_nut test:  38%|███▊      | 3/8 [00:00<00:00,  5.17it/s]
+mobv3l_l23_g5 metal_nut test:  62%|██████▎   | 5/8 [00:00<00:00,  6.07it/s]
+mobv3l_l23_g5 metal_nut test:  88%|████████▊ | 7/8 [00:01<00:00,  6.54it/s]
+                                                                           
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 pill train:   0%|          | 0/17 [00:00<?, ?it/s]
+mobv3l_l23_g5 pill train:   6%|▌         | 1/17 [00:00<00:07,  2.25it/s]
+mobv3l_l23_g5 pill train:  18%|█▊        | 3/17 [00:00<00:03,  4.07it/s]
+mobv3l_l23_g5 pill train:  29%|██▉       | 5/17 [00:01<00:02,  4.61it/s]
+mobv3l_l23_g5 pill train:  41%|████      | 7/17 [00:01<00:02,  4.93it/s]
+mobv3l_l23_g5 pill train:  53%|█████▎    | 9/17 [00:01<00:01,  5.11it/s]
+mobv3l_l23_g5 pill train:  65%|██████▍   | 11/17 [00:02<00:01,  5.25it/s]
+mobv3l_l23_g5 pill train:  76%|███████▋  | 13/17 [00:02<00:00,  5.33it/s]
+mobv3l_l23_g5 pill train:  88%|████████▊ | 15/17 [00:02<00:00,  5.40it/s]
+mobv3l_l23_g5 pill train: 100%|██████████| 17/17 [00:03<00:00,  6.08it/s]
+                                                                         
+
+mobv3l_l23_g5 pill test:   0%|          | 0/11 [00:00<?, ?it/s]
+mobv3l_l23_g5 pill test:   9%|▉         | 1/11 [00:00<00:04,  2.16it/s]
+mobv3l_l23_g5 pill test:  27%|██▋       | 3/11 [00:00<00:02,  3.96it/s]
+mobv3l_l23_g5 pill test:  45%|████▌     | 5/11 [00:01<00:01,  4.64it/s]
+mobv3l_l23_g5 pill test:  64%|██████▎   | 7/11 [00:01<00:00,  4.98it/s]
+mobv3l_l23_g5 pill test:  82%|████████▏ | 9/11 [00:01<00:00,  5.17it/s]
+mobv3l_l23_g5 pill test: 100%|██████████| 11/11 [00:02<00:00,  6.54it/s]
+                                                                        
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 screw train:   0%|          | 0/20 [00:00<?, ?it/s]
+mobv3l_l23_g5 screw train:   5%|▌         | 1/20 [00:00<00:09,  1.94it/s]
+mobv3l_l23_g5 screw train:  15%|█▌        | 3/20 [00:00<00:04,  3.44it/s]
+mobv3l_l23_g5 screw train:  25%|██▌       | 5/20 [00:01<00:03,  3.99it/s]
+mobv3l_l23_g5 screw train:  35%|███▌      | 7/20 [00:01<00:03,  4.26it/s]
+mobv3l_l23_g5 screw train:  45%|████▌     | 9/20 [00:02<00:02,  4.42it/s]
+mobv3l_l23_g5 screw train:  55%|█████▌    | 11/20 [00:02<00:01,  4.50it/s]
+mobv3l_l23_g5 screw train:  65%|██████▌   | 13/20 [00:03<00:01,  4.52it/s]
+mobv3l_l23_g5 screw train:  75%|███████▌  | 15/20 [00:03<00:01,  4.57it/s]
+mobv3l_l23_g5 screw train:  85%|████████▌ | 17/20 [00:03<00:00,  4.61it/s]
+mobv3l_l23_g5 screw train:  95%|█████████▌| 19/20 [00:04<00:00,  4.64it/s]
+                                                                          
+
+mobv3l_l23_g5 screw test:   0%|          | 0/10 [00:00<?, ?it/s]
+mobv3l_l23_g5 screw test:  10%|█         | 1/10 [00:00<00:04,  2.00it/s]
+mobv3l_l23_g5 screw test:  30%|███       | 3/10 [00:00<00:01,  3.67it/s]
+mobv3l_l23_g5 screw test:  50%|█████     | 5/10 [00:01<00:01,  4.28it/s]
+mobv3l_l23_g5 screw test:  70%|███████   | 7/10 [00:01<00:00,  4.58it/s]
+mobv3l_l23_g5 screw test:  90%|█████████ | 9/10 [00:02<00:00,  4.76it/s]
+                                                                        
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 tile train:   0%|          | 0/15 [00:00<?, ?it/s]
+mobv3l_l23_g5 tile train:   7%|▋         | 1/15 [00:00<00:06,  2.21it/s]
+mobv3l_l23_g5 tile train:  20%|██        | 3/15 [00:00<00:03,  3.98it/s]
+mobv3l_l23_g5 tile train:  33%|███▎      | 5/15 [00:01<00:02,  4.62it/s]
+mobv3l_l23_g5 tile train:  47%|████▋     | 7/15 [00:01<00:01,  4.93it/s]
+mobv3l_l23_g5 tile train:  60%|██████    | 9/15 [00:01<00:01,  5.11it/s]
+mobv3l_l23_g5 tile train:  73%|███████▎  | 11/15 [00:02<00:00,  5.22it/s]
+mobv3l_l23_g5 tile train:  87%|████████▋ | 13/15 [00:02<00:00,  5.30it/s]
+mobv3l_l23_g5 tile train: 100%|██████████| 15/15 [00:02<00:00,  6.72it/s]
+                                                                         
+
+mobv3l_l23_g5 tile test:   0%|          | 0/8 [00:00<?, ?it/s]
+mobv3l_l23_g5 tile test:  12%|█▎        | 1/8 [00:00<00:03,  2.21it/s]
+mobv3l_l23_g5 tile test:  38%|███▊      | 3/8 [00:00<00:01,  3.97it/s]
+mobv3l_l23_g5 tile test:  62%|██████▎   | 5/8 [00:01<00:00,  4.61it/s]
+mobv3l_l23_g5 tile test:  88%|████████▊ | 7/8 [00:01<00:00,  5.01it/s]
+                                                                      
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 toothbrush train:   0%|          | 0/4 [00:00<?, ?it/s]
+mobv3l_l23_g5 toothbrush train:  25%|██▌       | 1/4 [00:00<00:01,  1.63it/s]
+mobv3l_l23_g5 toothbrush train:  75%|███████▌  | 3/4 [00:01<00:00,  2.88it/s]
+                                                                             
+
+mobv3l_l23_g5 toothbrush test:   0%|          | 0/3 [00:00<?, ?it/s]
+mobv3l_l23_g5 toothbrush test:  33%|███▎      | 1/3 [00:00<00:01,  1.66it/s]
+mobv3l_l23_g5 toothbrush test: 100%|██████████| 3/3 [00:00<00:00,  3.74it/s]
+                                                                            
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 transistor train:   0%|          | 0/14 [00:00<?, ?it/s]
+mobv3l_l23_g5 transistor train:   7%|▋         | 1/14 [00:00<00:08,  1.55it/s]
+mobv3l_l23_g5 transistor train:  21%|██▏       | 3/14 [00:01<00:04,  2.70it/s]
+mobv3l_l23_g5 transistor train:  36%|███▌      | 5/14 [00:01<00:02,  3.10it/s]
+mobv3l_l23_g5 transistor train:  50%|█████     | 7/14 [00:02<00:02,  3.29it/s]
+mobv3l_l23_g5 transistor train:  64%|██████▍   | 9/14 [00:02<00:01,  3.40it/s]
+mobv3l_l23_g5 transistor train:  79%|███████▊  | 11/14 [00:03<00:00,  3.47it/s]
+mobv3l_l23_g5 transistor train:  93%|█████████▎| 13/14 [00:03<00:00,  3.57it/s]
+                                                                               
+
+mobv3l_l23_g5 transistor test:   0%|          | 0/7 [00:00<?, ?it/s]
+mobv3l_l23_g5 transistor test:  14%|█▍        | 1/7 [00:00<00:03,  1.56it/s]
+mobv3l_l23_g5 transistor test:  43%|████▎     | 3/7 [00:01<00:01,  2.70it/s]
+mobv3l_l23_g5 transistor test:  71%|███████▏  | 5/7 [00:01<00:00,  3.09it/s]
+mobv3l_l23_g5 transistor test: 100%|██████████| 7/7 [00:01<00:00,  4.66it/s]
+                                                                            
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 wood train:   0%|          | 0/16 [00:00<?, ?it/s]
+mobv3l_l23_g5 wood train:   6%|▋         | 1/16 [00:00<00:09,  1.65it/s]
+mobv3l_l23_g5 wood train:  19%|█▉        | 3/16 [00:01<00:04,  2.86it/s]
+mobv3l_l23_g5 wood train:  31%|███▏      | 5/16 [00:01<00:03,  3.29it/s]
+mobv3l_l23_g5 wood train:  44%|████▍     | 7/16 [00:02<00:02,  3.51it/s]
+mobv3l_l23_g5 wood train:  56%|█████▋    | 9/16 [00:02<00:01,  3.65it/s]
+mobv3l_l23_g5 wood train:  69%|██████▉   | 11/16 [00:03<00:01,  3.72it/s]
+mobv3l_l23_g5 wood train:  81%|████████▏ | 13/16 [00:03<00:00,  3.76it/s]
+mobv3l_l23_g5 wood train:  94%|█████████▍| 15/16 [00:04<00:00,  3.83it/s]
+                                                                         
+
+mobv3l_l23_g5 wood test:   0%|          | 0/5 [00:00<?, ?it/s]
+mobv3l_l23_g5 wood test:  20%|██        | 1/5 [00:00<00:02,  1.66it/s]
+mobv3l_l23_g5 wood test:  60%|██████    | 3/5 [00:01<00:00,  2.87it/s]
+mobv3l_l23_g5 wood test: 100%|██████████| 5/5 [00:01<00:00,  3.50it/s]
+                                                                      
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+mobv3l_l23_g5 zipper train:   0%|          | 0/15 [00:00<?, ?it/s]
+mobv3l_l23_g5 zipper train:   7%|▋         | 1/15 [00:00<00:06,  2.20it/s]
+mobv3l_l23_g5 zipper train:  20%|██        | 3/15 [00:00<00:03,  3.91it/s]
+mobv3l_l23_g5 zipper train:  33%|███▎      | 5/15 [00:01<00:02,  4.41it/s]
+mobv3l_l23_g5 zipper train:  47%|████▋     | 7/15 [00:01<00:01,  4.64it/s]
+mobv3l_l23_g5 zipper train:  60%|██████    | 9/15 [00:02<00:01,  4.77it/s]
+mobv3l_l23_g5 zipper train:  73%|███████▎  | 11/15 [00:02<00:00,  4.84it/s]
+mobv3l_l23_g5 zipper train:  87%|████████▋ | 13/15 [00:02<00:00,  4.88it/s]
+mobv3l_l23_g5 zipper train: 100%|██████████| 15/15 [00:03<00:00,  4.97it/s]
+                                                                           
+
+mobv3l_l23_g5 zipper test:   0%|          | 0/10 [00:00<?, ?it/s]
+mobv3l_l23_g5 zipper test:  10%|█         | 1/10 [00:00<00:04,  2.00it/s]
+mobv3l_l23_g5 zipper test:  30%|███       | 3/10 [00:00<00:01,  3.62it/s]
+mobv3l_l23_g5 zipper test:  50%|█████     | 5/10 [00:01<00:01,  4.18it/s]
+mobv3l_l23_g5 zipper test:  70%|███████   | 7/10 [00:01<00:00,  4.49it/s]
+mobv3l_l23_g5 zipper test:  90%|█████████ | 9/10 [00:02<00:00,  4.70it/s]
+                                                                         
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+
+effb0_l23_g14 bottle train:   0%|          | 0/14 [00:00<?, ?it/s]
+effb0_l23_g14 bottle train:   7%|▋         | 1/14 [00:00<00:06,  2.07it/s]
+effb0_l23_g14 bottle train:  21%|██▏       | 3/14 [00:00<00:02,  4.19it/s]
+effb0_l23_g14 bottle train:  36%|███▌      | 5/14 [00:01<00:01,  4.84it/s]
+effb0_l23_g14 bottle train:  50%|█████     | 7/14 [00:01<00:01,  5.15it/s]
+effb0_l23_g14 bottle train:  64%|██████▍   | 9/14 [00:01<00:00,  5.33it/s]
+effb0_l23_g14 bottle train:  79%|███████▊  | 11/14 [00:02<00:00,  5.44it/s]
+effb0_l23_g14 bottle train:  93%|█████████▎| 13/14 [00:02<00:00,  5.55it/s]
+                                                                           
+
+effb0_l23_g14 bottle test:   0%|          | 0/6 [00:00<?, ?it/s]
+effb0_l23_g14 bottle test:  17%|█▋        | 1/6 [00:00<00:02,  2.27it/s]
+effb0_l23_g14 bottle test:  50%|█████     | 3/6 [00:00<00:00,  4.09it/s]
+effb0_l23_g14 bottle test:  83%|████████▎ | 5/6 [00:01<00:00,  4.81it/s]
+                                                                        
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+patchcore nn:  75%|███████▌  | 3/4 [00:00<00:00, 29.43it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+patchcore nn: 100%|██████████| 4/4 [00:00<00:00, 38.61it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+effb0_l23_g14 cable train:   0%|          | 0/14 [00:00<?, ?it/s]
+effb0_l23_g14 cable train:   7%|▋         | 1/14 [00:00<00:08,  1.50it/s]
+effb0_l23_g14 cable train:  21%|██▏       | 3/14 [00:01<00:04,  2.59it/s]
+effb0_l23_g14 cable train:  36%|███▌      | 5/14 [00:01<00:03,  2.97it/s]
+effb0_l23_g14 cable train:  50%|█████     | 7/14 [00:02<00:02,  3.14it/s]
+effb0_l23_g14 cable train:  64%|██████▍   | 9/14 [00:02<00:01,  3.25it/s]
+effb0_l23_g14 cable train:  79%|███████▊  | 11/14 [00:03<00:00,  3.32it/s]
+effb0_l23_g14 cable train:  93%|█████████▎| 13/14 [00:04<00:00,  3.34it/s]
+                                                                          
+
+effb0_l23_g14 cable test:   0%|          | 0/10 [00:00<?, ?it/s]
+effb0_l23_g14 cable test:  10%|█         | 1/10 [00:00<00:06,  1.49it/s]
+effb0_l23_g14 cable test:  30%|███       | 3/10 [00:01<00:02,  2.58it/s]
+effb0_l23_g14 cable test:  50%|█████     | 5/10 [00:01<00:01,  2.95it/s]
+effb0_l23_g14 cable test:  70%|███████   | 7/10 [00:02<00:00,  3.14it/s]
+effb0_l23_g14 cable test:  90%|█████████ | 9/10 [00:02<00:00,  3.28it/s]
+                                                                        
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+patchcore nn:  38%|███▊      | 3/8 [00:00<00:00, 29.16it/s]
+patchcore nn:  75%|███████▌  | 6/8 [00:00<00:00, 29.23it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+patchcore nn:  50%|█████     | 4/8 [00:00<00:00, 37.70it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+patchcore nn:  75%|███████▌  | 6/8 [00:00<00:00, 53.78it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                   
+
+effb0_l23_g14 capsule train:   0%|          | 0/14 [00:00<?, ?it/s]
+effb0_l23_g14 capsule train:   7%|▋         | 1/14 [00:00<00:08,  1.54it/s]
+effb0_l23_g14 capsule train:  21%|██▏       | 3/14 [00:01<00:04,  2.67it/s]
+effb0_l23_g14 capsule train:  36%|███▌      | 5/14 [00:01<00:02,  3.07it/s]
+effb0_l23_g14 capsule train:  50%|█████     | 7/14 [00:02<00:02,  3.27it/s]
+effb0_l23_g14 capsule train:  64%|██████▍   | 9/14 [00:02<00:01,  3.38it/s]
+effb0_l23_g14 capsule train:  79%|███████▊  | 11/14 [00:03<00:00,  3.44it/s]
+effb0_l23_g14 capsule train:  93%|█████████▎| 13/14 [00:03<00:00,  3.51it/s]
+                                                                            
+
+effb0_l23_g14 capsule test:   0%|          | 0/9 [00:00<?, ?it/s]
+effb0_l23_g14 capsule test:  11%|█         | 1/9 [00:00<00:05,  1.54it/s]
+effb0_l23_g14 capsule test:  33%|███▎      | 3/9 [00:01<00:02,  2.68it/s]
+effb0_l23_g14 capsule test:  56%|█████▌    | 5/9 [00:01<00:01,  3.08it/s]
+effb0_l23_g14 capsule test:  78%|███████▊  | 7/9 [00:02<00:00,  3.27it/s]
+effb0_l23_g14 capsule test: 100%|██████████| 9/9 [00:02<00:00,  4.55it/s]
+                                                                         
+
+patchcore nn:   0%|          | 0/7 [00:00<?, ?it/s]
+patchcore nn:  43%|████▎     | 3/7 [00:00<00:00, 29.18it/s]
+patchcore nn:  86%|████████▌ | 6/7 [00:00<00:00, 29.26it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/7 [00:00<?, ?it/s]
+patchcore nn:  57%|█████▋    | 4/7 [00:00<00:00, 38.64it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/7 [00:00<?, ?it/s]
+patchcore nn: 100%|██████████| 7/7 [00:00<00:00, 66.82it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                   
+
+effb0_l23_g14 carpet train:   0%|          | 0/18 [00:00<?, ?it/s]
+effb0_l23_g14 carpet train:   6%|▌         | 1/18 [00:00<00:11,  1.45it/s]
+effb0_l23_g14 carpet train:  17%|█▋        | 3/18 [00:01<00:06,  2.46it/s]
+effb0_l23_g14 carpet train:  28%|██▊       | 5/18 [00:01<00:04,  2.97it/s]
+effb0_l23_g14 carpet train:  39%|███▉      | 7/18 [00:02<00:03,  3.26it/s]
+effb0_l23_g14 carpet train:  50%|█████     | 9/18 [00:02<00:02,  3.43it/s]
+effb0_l23_g14 carpet train:  61%|██████    | 11/18 [00:03<00:01,  3.53it/s]
+effb0_l23_g14 carpet train:  72%|███████▏  | 13/18 [00:03<00:01,  3.60it/s]
+effb0_l23_g14 carpet train:  83%|████████▎ | 15/18 [00:04<00:00,  3.66it/s]
+effb0_l23_g14 carpet train:  94%|█████████▍| 17/18 [00:05<00:00,  3.72it/s]
+                                                                           
+
+effb0_l23_g14 carpet test:   0%|          | 0/8 [00:00<?, ?it/s]
+effb0_l23_g14 carpet test:  12%|█▎        | 1/8 [00:00<00:04,  1.60it/s]
+effb0_l23_g14 carpet test:  38%|███▊      | 3/8 [00:01<00:01,  2.78it/s]
+effb0_l23_g14 carpet test:  62%|██████▎   | 5/8 [00:01<00:00,  3.20it/s]
+effb0_l23_g14 carpet test:  88%|████████▊ | 7/8 [00:02<00:00,  3.45it/s]
+                                                                        
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+patchcore nn:  50%|█████     | 3/6 [00:00<00:00, 29.39it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+patchcore nn:  67%|██████▋   | 4/6 [00:00<00:00, 34.74it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+effb0_l23_g14 grid train:   0%|          | 0/17 [00:00<?, ?it/s]
+effb0_l23_g14 grid train:   6%|▌         | 1/17 [00:00<00:08,  1.98it/s]
+effb0_l23_g14 grid train:  18%|█▊        | 3/17 [00:00<00:03,  3.52it/s]
+effb0_l23_g14 grid train:  29%|██▉       | 5/17 [00:01<00:02,  4.09it/s]
+effb0_l23_g14 grid train:  41%|████      | 7/17 [00:01<00:02,  4.36it/s]
+effb0_l23_g14 grid train:  53%|█████▎    | 9/17 [00:02<00:01,  4.64it/s]
+effb0_l23_g14 grid train:  65%|██████▍   | 11/17 [00:02<00:01,  4.80it/s]
+effb0_l23_g14 grid train:  76%|███████▋  | 13/17 [00:02<00:00,  4.92it/s]
+effb0_l23_g14 grid train:  88%|████████▊ | 15/17 [00:03<00:00,  5.00it/s]
+effb0_l23_g14 grid train: 100%|██████████| 17/17 [00:03<00:00,  6.05it/s]
+                                                                         
+
+effb0_l23_g14 grid test:   0%|          | 0/5 [00:00<?, ?it/s]
+effb0_l23_g14 grid test:  20%|██        | 1/5 [00:00<00:01,  2.11it/s]
+effb0_l23_g14 grid test:  60%|██████    | 3/5 [00:00<00:00,  3.74it/s]
+effb0_l23_g14 grid test: 100%|██████████| 5/5 [00:01<00:00,  4.61it/s]
+                                                                      
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+patchcore nn:  75%|███████▌  | 3/4 [00:00<00:00, 29.35it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+effb0_l23_g14 hazelnut train:   0%|          | 0/25 [00:00<?, ?it/s]
+effb0_l23_g14 hazelnut train:   4%|▍         | 1/25 [00:00<00:15,  1.55it/s]
+effb0_l23_g14 hazelnut train:  12%|█▏        | 3/25 [00:01<00:08,  2.67it/s]
+effb0_l23_g14 hazelnut train:  20%|██        | 5/25 [00:01<00:06,  3.07it/s]
+effb0_l23_g14 hazelnut train:  28%|██▊       | 7/25 [00:02<00:05,  3.27it/s]
+effb0_l23_g14 hazelnut train:  36%|███▌      | 9/25 [00:02<00:04,  3.37it/s]
+effb0_l23_g14 hazelnut train:  44%|████▍     | 11/25 [00:03<00:04,  3.44it/s]
+effb0_l23_g14 hazelnut train:  52%|█████▏    | 13/25 [00:04<00:03,  3.49it/s]
+effb0_l23_g14 hazelnut train:  60%|██████    | 15/25 [00:04<00:02,  3.52it/s]
+effb0_l23_g14 hazelnut train:  68%|██████▊   | 17/25 [00:05<00:02,  3.54it/s]
+effb0_l23_g14 hazelnut train:  76%|███████▌  | 19/25 [00:05<00:01,  3.55it/s]
+effb0_l23_g14 hazelnut train:  84%|████████▍ | 21/25 [00:06<00:01,  3.55it/s]
+effb0_l23_g14 hazelnut train:  92%|█████████▏| 23/25 [00:06<00:00,  3.56it/s]
+effb0_l23_g14 hazelnut train: 100%|██████████| 25/25 [00:07<00:00,  4.28it/s]
+                                                                             
+
+effb0_l23_g14 hazelnut test:   0%|          | 0/7 [00:00<?, ?it/s]
+effb0_l23_g14 hazelnut test:  14%|█▍        | 1/7 [00:00<00:03,  1.55it/s]
+effb0_l23_g14 hazelnut test:  43%|████▎     | 3/7 [00:01<00:01,  2.68it/s]
+effb0_l23_g14 hazelnut test:  71%|███████▏  | 5/7 [00:01<00:00,  3.07it/s]
+effb0_l23_g14 hazelnut test: 100%|██████████| 7/7 [00:02<00:00,  3.46it/s]
+                                                                          
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+patchcore nn:  50%|█████     | 3/6 [00:00<00:00, 27.25it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+patchcore nn:  67%|██████▋   | 4/6 [00:00<00:00, 38.52it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+effb0_l23_g14 leather train:   0%|          | 0/16 [00:00<?, ?it/s]
+effb0_l23_g14 leather train:   6%|▋         | 1/16 [00:00<00:09,  1.51it/s]
+effb0_l23_g14 leather train:  19%|█▉        | 3/16 [00:01<00:04,  2.62it/s]
+effb0_l23_g14 leather train:  31%|███▏      | 5/16 [00:01<00:03,  3.01it/s]
+effb0_l23_g14 leather train:  44%|████▍     | 7/16 [00:02<00:02,  3.21it/s]
+effb0_l23_g14 leather train:  56%|█████▋    | 9/16 [00:02<00:02,  3.31it/s]
+effb0_l23_g14 leather train:  69%|██████▉   | 11/16 [00:03<00:01,  3.38it/s]
+effb0_l23_g14 leather train:  81%|████████▏ | 13/16 [00:04<00:00,  3.41it/s]
+effb0_l23_g14 leather train:  94%|█████████▍| 15/16 [00:04<00:00,  3.48it/s]
+                                                                            
+
+effb0_l23_g14 leather test:   0%|          | 0/8 [00:00<?, ?it/s]
+effb0_l23_g14 leather test:  12%|█▎        | 1/8 [00:00<00:04,  1.55it/s]
+effb0_l23_g14 leather test:  38%|███▊      | 3/8 [00:01<00:01,  2.66it/s]
+effb0_l23_g14 leather test:  62%|██████▎   | 5/8 [00:01<00:00,  3.06it/s]
+effb0_l23_g14 leather test:  88%|████████▊ | 7/8 [00:02<00:00,  3.27it/s]
+                                                                         
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+patchcore nn:  50%|█████     | 3/6 [00:00<00:00, 28.95it/s]
+patchcore nn: 100%|██████████| 6/6 [00:00<00:00, 29.37it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+patchcore nn:  67%|██████▋   | 4/6 [00:00<00:00, 38.47it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+effb0_l23_g14 metal_nut train:   0%|          | 0/14 [00:00<?, ?it/s]
+effb0_l23_g14 metal_nut train:   7%|▋         | 1/14 [00:00<00:04,  2.72it/s]
+effb0_l23_g14 metal_nut train:  21%|██▏       | 3/14 [00:00<00:02,  5.11it/s]
+effb0_l23_g14 metal_nut train:  36%|███▌      | 5/14 [00:00<00:01,  6.02it/s]
+effb0_l23_g14 metal_nut train:  50%|█████     | 7/14 [00:01<00:01,  6.49it/s]
+effb0_l23_g14 metal_nut train:  64%|██████▍   | 9/14 [00:01<00:00,  6.76it/s]
+effb0_l23_g14 metal_nut train:  79%|███████▊  | 11/14 [00:01<00:00,  6.93it/s]
+effb0_l23_g14 metal_nut train:  93%|█████████▎| 13/14 [00:02<00:00,  7.04it/s]
+                                                                              
+
+effb0_l23_g14 metal_nut test:   0%|          | 0/8 [00:00<?, ?it/s]
+effb0_l23_g14 metal_nut test:  12%|█▎        | 1/8 [00:00<00:02,  2.65it/s]
+effb0_l23_g14 metal_nut test:  38%|███▊      | 3/8 [00:00<00:01,  4.97it/s]
+effb0_l23_g14 metal_nut test:  62%|██████▎   | 5/8 [00:00<00:00,  5.85it/s]
+effb0_l23_g14 metal_nut test:  88%|████████▊ | 7/8 [00:01<00:00,  6.34it/s]
+                                                                           
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+patchcore nn:  50%|█████     | 3/6 [00:00<00:00, 29.53it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+patchcore nn:  67%|██████▋   | 4/6 [00:00<00:00, 38.77it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+effb0_l23_g14 pill train:   0%|          | 0/17 [00:00<?, ?it/s]
+effb0_l23_g14 pill train:   6%|▌         | 1/17 [00:00<00:07,  2.23it/s]
+effb0_l23_g14 pill train:  18%|█▊        | 3/17 [00:00<00:03,  4.04it/s]
+effb0_l23_g14 pill train:  29%|██▉       | 5/17 [00:01<00:02,  4.68it/s]
+effb0_l23_g14 pill train:  41%|████      | 7/17 [00:01<00:01,  5.01it/s]
+effb0_l23_g14 pill train:  53%|█████▎    | 9/17 [00:01<00:01,  5.18it/s]
+effb0_l23_g14 pill train:  65%|██████▍   | 11/17 [00:02<00:01,  5.29it/s]
+effb0_l23_g14 pill train:  76%|███████▋  | 13/17 [00:02<00:00,  5.36it/s]
+effb0_l23_g14 pill train:  88%|████████▊ | 15/17 [00:02<00:00,  5.41it/s]
+effb0_l23_g14 pill train: 100%|██████████| 17/17 [00:03<00:00,  6.05it/s]
+                                                                         
+
+effb0_l23_g14 pill test:   0%|          | 0/11 [00:00<?, ?it/s]
+effb0_l23_g14 pill test:   9%|▉         | 1/11 [00:00<00:04,  2.20it/s]
+effb0_l23_g14 pill test:  27%|██▋       | 3/11 [00:00<00:02,  3.97it/s]
+effb0_l23_g14 pill test:  45%|████▌     | 5/11 [00:01<00:01,  4.63it/s]
+effb0_l23_g14 pill test:  64%|██████▎   | 7/11 [00:01<00:00,  4.97it/s]
+effb0_l23_g14 pill test:  82%|████████▏ | 9/11 [00:01<00:00,  5.16it/s]
+effb0_l23_g14 pill test: 100%|██████████| 11/11 [00:02<00:00,  6.54it/s]
+                                                                        
+
+$ git add jobs logs results artifacts docs
