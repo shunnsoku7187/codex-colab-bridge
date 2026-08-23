@@ -1,0 +1,2028 @@
+{
+  "purpose": "Audit PatchCore-lite reductions that are not explained only by memory-bank shrinkage.",
+  "config": {
+    "source": "results\\mvtec_patchcore_profiled_minimal_search_001_summary.json",
+    "target_false_pass_rate_defect": 0.03,
+    "factor_tolerance": 0.02,
+    "min_interpretable_good_pass": 0.5,
+    "baseline_config": "wrn_l23_g14_b12000_topk0p01",
+    "available_backbones": [
+      "resnet18",
+      "wide_resnet50_2"
+    ],
+    "available_patch_grids": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "available_bank_patches": [
+      125,
+      250,
+      500,
+      750,
+      1000,
+      1500,
+      2000,
+      3000,
+      4000,
+      6000,
+      9000,
+      12000
+    ]
+  },
+  "aggregate": {
+    "status_counts": {
+      "backbone_res18": {
+        "ok": 3,
+        "ng": 9,
+        "borderline": 2,
+        "baseline_weak": 1
+      },
+      "grid_le7": {
+        "ok": 3,
+        "ng": 10,
+        "borderline": 1,
+        "baseline_weak": 1
+      },
+      "grid_le5": {
+        "ok": 1,
+        "ng": 13,
+        "baseline_weak": 1
+      },
+      "single_layer": {
+        "ok": 12,
+        "ng": 1,
+        "borderline": 1,
+        "baseline_weak": 1
+      }
+    },
+    "category_class_counts": {
+      "大きく削れる": 2,
+      "一点だけ削れる": 8,
+      "強い構成が必要": 2,
+      "一部を削れる": 2,
+      "土台精度が弱く、削減可否の主張には使いにくい": 1
+    },
+    "mean_best_all_good_pass": 0.920625,
+    "mean_best_res18_good_pass": 0.804204,
+    "mean_best_grid_le7_good_pass": 0.762879,
+    "mean_best_single_layer_good_pass": 0.904841,
+    "by_category_type": {
+      "object": {
+        "categories": 10,
+        "mean_best_all_good_pass": 0.884509,
+        "mean_best_res18_good_pass": 0.761029,
+        "mean_best_grid_le7_good_pass": 0.722701,
+        "mean_best_single_layer_good_pass": 0.860833
+      },
+      "texture": {
+        "categories": 5,
+        "mean_best_all_good_pass": 0.992857,
+        "mean_best_res18_good_pass": 0.890556,
+        "mean_best_grid_le7_good_pass": 0.843233,
+        "mean_best_single_layer_good_pass": 0.992857
+      }
+    }
+  },
+  "category_rows": [
+    {
+      "category": "bottle",
+      "category_type": "object",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 1.0,
+      "best_all": {
+        "config": "res18_l23_g7_b500_topk0p005",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.002604,
+        "relative_bank_int8": 0.010417,
+        "backbone": "resnet18",
+        "patch_grid": 7,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 500,
+        "feature_dim": 192,
+        "patch_count": 49
+      },
+      "best_wrn": {
+        "config": "wrn_l3_g10_b125_topk0p05",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.003543,
+        "relative_bank_int8": 0.006944,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 10,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 125,
+        "feature_dim": 512,
+        "patch_count": 100
+      },
+      "best_res18": {
+        "config": "res18_l23_g7_b500_topk0p005",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.002604,
+        "relative_bank_int8": 0.010417,
+        "backbone": "resnet18",
+        "patch_grid": 7,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 500,
+        "feature_dim": 192,
+        "patch_count": 49
+      },
+      "best_grid_le7": {
+        "config": "res18_l23_g7_b500_topk0p005",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.002604,
+        "relative_bank_int8": 0.010417,
+        "backbone": "resnet18",
+        "patch_grid": 7,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 500,
+        "feature_dim": 192,
+        "patch_count": 49
+      },
+      "best_grid_le5": {
+        "config": "res18_l23_g5_b12000_topk0p005",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.013884,
+        "relative_bank_int8": 0.108854,
+        "backbone": "resnet18",
+        "patch_grid": 5,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 5225,
+        "feature_dim": 192,
+        "patch_count": 25
+      },
+      "best_single_layer": {
+        "config": "wrn_l3_g10_b125_topk0p05",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.003543,
+        "relative_bank_int8": 0.006944,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 10,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 125,
+        "feature_dim": 512,
+        "patch_count": 100
+      },
+      "best_multi_layer": {
+        "config": "res18_l23_g7_b500_topk0p005",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.002604,
+        "relative_bank_int8": 0.010417,
+        "backbone": "resnet18",
+        "patch_grid": 7,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 500,
+        "feature_dim": 192,
+        "patch_count": 49
+      },
+      "statuses": {
+        "backbone_res18": "ok",
+        "grid_le7": "ok",
+        "grid_le5": "ok",
+        "single_layer": "ok"
+      },
+      "category_class": "大きく削れる"
+    },
+    {
+      "category": "cable",
+      "category_type": "object",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 0.517241,
+      "best_all": {
+        "config": "wrn_l3_g14_b4000_topk0p05",
+        "good_pass": 0.896552,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.222222,
+        "relative_bank_int8": 0.222222,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 4000,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_wrn": {
+        "config": "wrn_l3_g14_b4000_topk0p05",
+        "good_pass": 0.896552,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.222222,
+        "relative_bank_int8": 0.222222,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 4000,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_res18": {
+        "config": "res18_l23_g14_b9000_topk0p05",
+        "good_pass": 0.689655,
+        "delta_from_best_all": 0.206897,
+        "relative_nn_ops": 0.1875,
+        "relative_bank_int8": 0.1875,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 9000,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_grid_le7": {
+        "config": "wrn_l3_g7_b6000_topk0p05",
+        "good_pass": 0.793103,
+        "delta_from_best_all": 0.103449,
+        "relative_nn_ops": 0.083333,
+        "relative_bank_int8": 0.333333,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 7,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 6000,
+        "feature_dim": 512,
+        "patch_count": 49
+      },
+      "best_grid_le5": {
+        "config": "wrn_l23_g5_b3000_topk0p005",
+        "good_pass": 0.431034,
+        "delta_from_best_all": 0.465518,
+        "relative_nn_ops": 0.031888,
+        "relative_bank_int8": 0.25,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 5,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 3000,
+        "feature_dim": 768,
+        "patch_count": 25
+      },
+      "best_single_layer": {
+        "config": "wrn_l3_g14_b4000_topk0p05",
+        "good_pass": 0.896552,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.222222,
+        "relative_bank_int8": 0.222222,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 4000,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_multi_layer": {
+        "config": "wrn_l23_g14_b3000_topk0p05",
+        "good_pass": 0.724138,
+        "delta_from_best_all": 0.172414,
+        "relative_nn_ops": 0.25,
+        "relative_bank_int8": 0.25,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 3000,
+        "feature_dim": 768,
+        "patch_count": 196
+      },
+      "statuses": {
+        "backbone_res18": "ng",
+        "grid_le7": "ng",
+        "grid_le5": "ng",
+        "single_layer": "ok"
+      },
+      "category_class": "一点だけ削れる"
+    },
+    {
+      "category": "capsule",
+      "category_type": "object",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 0.434783,
+      "best_all": {
+        "config": "wrn_l23_g16_b12000_topk0p01",
+        "good_pass": 0.913043,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 1.306122,
+        "relative_bank_int8": 1.0,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 16,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 12000,
+        "feature_dim": 768,
+        "patch_count": 256
+      },
+      "best_wrn": {
+        "config": "wrn_l23_g16_b12000_topk0p01",
+        "good_pass": 0.913043,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 1.306122,
+        "relative_bank_int8": 1.0,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 16,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 12000,
+        "feature_dim": 768,
+        "patch_count": 256
+      },
+      "best_res18": {
+        "config": "res18_l23_g14_b12000_topk0p01",
+        "good_pass": 0.695652,
+        "delta_from_best_all": 0.217391,
+        "relative_nn_ops": 0.25,
+        "relative_bank_int8": 0.25,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 12000,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_grid_le7": {
+        "config": "wrn_l23_g6_b3000_topk0p05",
+        "good_pass": 0.521739,
+        "delta_from_best_all": 0.391304,
+        "relative_nn_ops": 0.045918,
+        "relative_bank_int8": 0.25,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 6,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 3000,
+        "feature_dim": 768,
+        "patch_count": 36
+      },
+      "best_grid_le5": {
+        "config": "wrn_l23_g4_b1000_topk0p005",
+        "good_pass": 0.391304,
+        "delta_from_best_all": 0.521739,
+        "relative_nn_ops": 0.006803,
+        "relative_bank_int8": 0.083333,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 4,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 1000,
+        "feature_dim": 768,
+        "patch_count": 16
+      },
+      "best_single_layer": {
+        "config": "wrn_l3_g16_b12000_topk0p05",
+        "good_pass": 0.73913,
+        "delta_from_best_all": 0.173913,
+        "relative_nn_ops": 0.870748,
+        "relative_bank_int8": 0.666667,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 16,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 12000,
+        "feature_dim": 512,
+        "patch_count": 256
+      },
+      "best_multi_layer": {
+        "config": "wrn_l23_g16_b12000_topk0p01",
+        "good_pass": 0.913043,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 1.306122,
+        "relative_bank_int8": 1.0,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 16,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 12000,
+        "feature_dim": 768,
+        "patch_count": 256
+      },
+      "statuses": {
+        "backbone_res18": "ng",
+        "grid_le7": "ng",
+        "grid_le5": "ng",
+        "single_layer": "ng"
+      },
+      "category_class": "強い構成が必要"
+    },
+    {
+      "category": "carpet",
+      "category_type": "texture",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 0.821429,
+      "best_all": {
+        "config": "wrn_l3_g14_b4000_topk0p005",
+        "good_pass": 0.964286,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.222222,
+        "relative_bank_int8": 0.222222,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 4000,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_wrn": {
+        "config": "wrn_l3_g14_b4000_topk0p005",
+        "good_pass": 0.964286,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.222222,
+        "relative_bank_int8": 0.222222,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 4000,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_res18": {
+        "config": "res18_l23_g14_b750_topk0p01",
+        "good_pass": 0.821429,
+        "delta_from_best_all": 0.142857,
+        "relative_nn_ops": 0.015625,
+        "relative_bank_int8": 0.015625,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 750,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_grid_le7": {
+        "config": "wrn_l3_g7_b125_topk0p005",
+        "good_pass": 0.75,
+        "delta_from_best_all": 0.214286,
+        "relative_nn_ops": 0.001736,
+        "relative_bank_int8": 0.006944,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 7,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 125,
+        "feature_dim": 512,
+        "patch_count": 49
+      },
+      "best_grid_le5": {
+        "config": "wrn_l3_g5_b250_topk0p005",
+        "good_pass": 0.214286,
+        "delta_from_best_all": 0.75,
+        "relative_nn_ops": 0.001772,
+        "relative_bank_int8": 0.013889,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 5,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 250,
+        "feature_dim": 512,
+        "patch_count": 25
+      },
+      "best_single_layer": {
+        "config": "wrn_l3_g14_b4000_topk0p005",
+        "good_pass": 0.964286,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.222222,
+        "relative_bank_int8": 0.222222,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 4000,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_multi_layer": {
+        "config": "wrn_l23_g14_b3000_topk0p005",
+        "good_pass": 0.892857,
+        "delta_from_best_all": 0.071429,
+        "relative_nn_ops": 0.25,
+        "relative_bank_int8": 0.25,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 3000,
+        "feature_dim": 768,
+        "patch_count": 196
+      },
+      "statuses": {
+        "backbone_res18": "ng",
+        "grid_le7": "ng",
+        "grid_le5": "ng",
+        "single_layer": "ok"
+      },
+      "category_class": "一点だけ削れる"
+    },
+    {
+      "category": "grid",
+      "category_type": "texture",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 0.52381,
+      "best_all": {
+        "config": "wrn_l2_g14_b12000_topk0p01",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.333333,
+        "relative_bank_int8": 0.333333,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1
+        ],
+        "layer_kind": "l2",
+        "bank_patches": 12000,
+        "feature_dim": 256,
+        "patch_count": 196
+      },
+      "best_wrn": {
+        "config": "wrn_l2_g14_b12000_topk0p01",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.333333,
+        "relative_bank_int8": 0.333333,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1
+        ],
+        "layer_kind": "l2",
+        "bank_patches": 12000,
+        "feature_dim": 256,
+        "patch_count": 196
+      },
+      "best_res18": {
+        "config": "res18_l23_g14_b9000_topk0p01",
+        "good_pass": 0.714286,
+        "delta_from_best_all": 0.285714,
+        "relative_nn_ops": 0.1875,
+        "relative_bank_int8": 0.1875,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 9000,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_grid_le7": {
+        "config": "res18_l23_g7_b6000_topk0p005",
+        "good_pass": 0.571429,
+        "delta_from_best_all": 0.428571,
+        "relative_nn_ops": 0.03125,
+        "relative_bank_int8": 0.125,
+        "backbone": "resnet18",
+        "patch_grid": 7,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 6000,
+        "feature_dim": 192,
+        "patch_count": 49
+      },
+      "best_grid_le5": {
+        "config": "wrn_l3_g5_b12000_topk0p005",
+        "good_pass": 0.571429,
+        "delta_from_best_all": 0.428571,
+        "relative_nn_ops": 0.046769,
+        "relative_bank_int8": 0.366667,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 5,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 6600,
+        "feature_dim": 512,
+        "patch_count": 25
+      },
+      "best_single_layer": {
+        "config": "wrn_l2_g14_b12000_topk0p01",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.333333,
+        "relative_bank_int8": 0.333333,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1
+        ],
+        "layer_kind": "l2",
+        "bank_patches": 12000,
+        "feature_dim": 256,
+        "patch_count": 196
+      },
+      "best_multi_layer": {
+        "config": "wrn_l23_g12_b12000_topk0p005",
+        "good_pass": 0.761905,
+        "delta_from_best_all": 0.238095,
+        "relative_nn_ops": 0.734694,
+        "relative_bank_int8": 1.0,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 12,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 12000,
+        "feature_dim": 768,
+        "patch_count": 144
+      },
+      "statuses": {
+        "backbone_res18": "ng",
+        "grid_le7": "ng",
+        "grid_le5": "ng",
+        "single_layer": "ok"
+      },
+      "category_class": "一点だけ削れる"
+    },
+    {
+      "category": "hazelnut",
+      "category_type": "object",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 1.0,
+      "best_all": {
+        "config": "res18_l23_g14_b500_topk0p02",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.010417,
+        "relative_bank_int8": 0.010417,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 500,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_wrn": {
+        "config": "wrn_l3_g14_b750_topk0p05",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.041667,
+        "relative_bank_int8": 0.041667,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 750,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_res18": {
+        "config": "res18_l23_g14_b500_topk0p02",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.010417,
+        "relative_bank_int8": 0.010417,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 500,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_grid_le7": {
+        "config": "wrn_l3_g7_b6000_topk0p05",
+        "good_pass": 0.95,
+        "delta_from_best_all": 0.05,
+        "relative_nn_ops": 0.083333,
+        "relative_bank_int8": 0.333333,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 7,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 6000,
+        "feature_dim": 512,
+        "patch_count": 49
+      },
+      "best_grid_le5": {
+        "config": "wrn_l2_g5_b125_topk0p005",
+        "good_pass": 0.4,
+        "delta_from_best_all": 0.6,
+        "relative_nn_ops": 0.000443,
+        "relative_bank_int8": 0.003472,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 5,
+        "out_indices": [
+          1
+        ],
+        "layer_kind": "l2",
+        "bank_patches": 125,
+        "feature_dim": 256,
+        "patch_count": 25
+      },
+      "best_single_layer": {
+        "config": "wrn_l3_g14_b750_topk0p05",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.041667,
+        "relative_bank_int8": 0.041667,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 750,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_multi_layer": {
+        "config": "res18_l23_g14_b500_topk0p02",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.010417,
+        "relative_bank_int8": 0.010417,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 500,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "statuses": {
+        "backbone_res18": "ok",
+        "grid_le7": "borderline",
+        "grid_le5": "ng",
+        "single_layer": "ok"
+      },
+      "category_class": "一部を削れる"
+    },
+    {
+      "category": "leather",
+      "category_type": "texture",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 1.0,
+      "best_all": {
+        "config": "res18_l23_g14_b125_topk0p01",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.002604,
+        "relative_bank_int8": 0.002604,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 125,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_wrn": {
+        "config": "wrn_l3_g8_b250_topk0p005",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.004535,
+        "relative_bank_int8": 0.013889,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 8,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 250,
+        "feature_dim": 512,
+        "patch_count": 64
+      },
+      "best_res18": {
+        "config": "res18_l23_g14_b125_topk0p01",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.002604,
+        "relative_bank_int8": 0.002604,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 125,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_grid_le7": {
+        "config": "wrn_l3_g7_b1500_topk0p05",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.020833,
+        "relative_bank_int8": 0.083333,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 7,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 1500,
+        "feature_dim": 512,
+        "patch_count": 49
+      },
+      "best_grid_le5": {
+        "config": "wrn_l3_g5_b250_topk0p005",
+        "good_pass": 0.34375,
+        "delta_from_best_all": 0.65625,
+        "relative_nn_ops": 0.001772,
+        "relative_bank_int8": 0.013889,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 5,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 250,
+        "feature_dim": 512,
+        "patch_count": 25
+      },
+      "best_single_layer": {
+        "config": "wrn_l3_g8_b250_topk0p005",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.004535,
+        "relative_bank_int8": 0.013889,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 8,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 250,
+        "feature_dim": 512,
+        "patch_count": 64
+      },
+      "best_multi_layer": {
+        "config": "res18_l23_g14_b125_topk0p01",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.002604,
+        "relative_bank_int8": 0.002604,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 125,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "statuses": {
+        "backbone_res18": "ok",
+        "grid_le7": "ok",
+        "grid_le5": "ng",
+        "single_layer": "ok"
+      },
+      "category_class": "大きく削れる"
+    },
+    {
+      "category": "metal_nut",
+      "category_type": "object",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 0.954545,
+      "best_all": {
+        "config": "wrn_l3_g14_b4000_topk0p005",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.222222,
+        "relative_bank_int8": 0.222222,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 4000,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_wrn": {
+        "config": "wrn_l3_g14_b4000_topk0p005",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.222222,
+        "relative_bank_int8": 0.222222,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 4000,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_res18": {
+        "config": "res18_l23_g14_b12000_topk0p01",
+        "good_pass": 0.909091,
+        "delta_from_best_all": 0.090909,
+        "relative_nn_ops": 0.25,
+        "relative_bank_int8": 0.25,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 12000,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_grid_le7": {
+        "config": "wrn_l3_g7_b6000_topk0p05",
+        "good_pass": 0.727273,
+        "delta_from_best_all": 0.272727,
+        "relative_nn_ops": 0.083333,
+        "relative_bank_int8": 0.333333,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 7,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 6000,
+        "feature_dim": 512,
+        "patch_count": 49
+      },
+      "best_grid_le5": {
+        "config": "wrn_l3_g4_b250_topk0p005",
+        "good_pass": 0.227273,
+        "delta_from_best_all": 0.772727,
+        "relative_nn_ops": 0.001134,
+        "relative_bank_int8": 0.013889,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 4,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 250,
+        "feature_dim": 512,
+        "patch_count": 16
+      },
+      "best_single_layer": {
+        "config": "wrn_l3_g14_b4000_topk0p005",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.222222,
+        "relative_bank_int8": 0.222222,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 4000,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_multi_layer": {
+        "config": "wrn_l23_g14_b6000_topk0p005",
+        "good_pass": 0.954545,
+        "delta_from_best_all": 0.045455,
+        "relative_nn_ops": 0.5,
+        "relative_bank_int8": 0.5,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 6000,
+        "feature_dim": 768,
+        "patch_count": 196
+      },
+      "statuses": {
+        "backbone_res18": "ng",
+        "grid_le7": "ng",
+        "grid_le5": "ng",
+        "single_layer": "ok"
+      },
+      "category_class": "一点だけ削れる"
+    },
+    {
+      "category": "pill",
+      "category_type": "object",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 0.423077,
+      "best_all": {
+        "config": "wrn_l23_g14_b6000_topk0p01",
+        "good_pass": 0.692308,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.5,
+        "relative_bank_int8": 0.5,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 6000,
+        "feature_dim": 768,
+        "patch_count": 196
+      },
+      "best_wrn": {
+        "config": "wrn_l23_g14_b6000_topk0p01",
+        "good_pass": 0.692308,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.5,
+        "relative_bank_int8": 0.5,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 6000,
+        "feature_dim": 768,
+        "patch_count": 196
+      },
+      "best_res18": {
+        "config": "res18_l23_g14_b12000_topk0p005",
+        "good_pass": 0.653846,
+        "delta_from_best_all": 0.038462,
+        "relative_nn_ops": 0.25,
+        "relative_bank_int8": 0.25,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 12000,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_grid_le7": {
+        "config": "wrn_l3_g7_b12000_topk0p005",
+        "good_pass": 0.615385,
+        "delta_from_best_all": 0.076923,
+        "relative_nn_ops": 0.166667,
+        "relative_bank_int8": 0.666667,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 7,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 12000,
+        "feature_dim": 512,
+        "patch_count": 49
+      },
+      "best_grid_le5": {
+        "config": "res18_l23_g5_b6000_topk0p005",
+        "good_pass": 0.423077,
+        "delta_from_best_all": 0.269231,
+        "relative_nn_ops": 0.015944,
+        "relative_bank_int8": 0.125,
+        "backbone": "resnet18",
+        "patch_grid": 5,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 6000,
+        "feature_dim": 192,
+        "patch_count": 25
+      },
+      "best_single_layer": {
+        "config": "wrn_l3_g14_b500_topk0p005",
+        "good_pass": 0.653846,
+        "delta_from_best_all": 0.038462,
+        "relative_nn_ops": 0.027778,
+        "relative_bank_int8": 0.027778,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 500,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_multi_layer": {
+        "config": "wrn_l23_g14_b6000_topk0p01",
+        "good_pass": 0.692308,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.5,
+        "relative_bank_int8": 0.5,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 6000,
+        "feature_dim": 768,
+        "patch_count": 196
+      },
+      "statuses": {
+        "backbone_res18": "borderline",
+        "grid_le7": "ng",
+        "grid_le5": "ng",
+        "single_layer": "borderline"
+      },
+      "category_class": "強い構成が必要"
+    },
+    {
+      "category": "screw",
+      "category_type": "object",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 0.317073,
+      "best_all": {
+        "config": "wrn_l23_g16_b12000_topk0p05",
+        "good_pass": 0.439024,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 1.306122,
+        "relative_bank_int8": 1.0,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 16,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 12000,
+        "feature_dim": 768,
+        "patch_count": 256
+      },
+      "best_wrn": {
+        "config": "wrn_l23_g16_b12000_topk0p05",
+        "good_pass": 0.439024,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 1.306122,
+        "relative_bank_int8": 1.0,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 16,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 12000,
+        "feature_dim": 768,
+        "patch_count": 256
+      },
+      "best_res18": {
+        "config": "res18_l23_g14_b12000_topk0p005",
+        "good_pass": 0.268293,
+        "delta_from_best_all": 0.170731,
+        "relative_nn_ops": 0.25,
+        "relative_bank_int8": 0.25,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 12000,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_grid_le7": {
+        "config": "res18_l23_g7_b9000_topk0p05",
+        "good_pass": 0.219512,
+        "delta_from_best_all": 0.219512,
+        "relative_nn_ops": 0.046875,
+        "relative_bank_int8": 0.1875,
+        "backbone": "resnet18",
+        "patch_grid": 7,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 9000,
+        "feature_dim": 192,
+        "patch_count": 49
+      },
+      "best_grid_le5": {
+        "config": "res18_l23_g5_b6000_topk0p005",
+        "good_pass": 0.146341,
+        "delta_from_best_all": 0.292683,
+        "relative_nn_ops": 0.015944,
+        "relative_bank_int8": 0.125,
+        "backbone": "resnet18",
+        "patch_grid": 5,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 6000,
+        "feature_dim": 192,
+        "patch_count": 25
+      },
+      "best_single_layer": {
+        "config": "wrn_l3_g12_b12000_topk0p05",
+        "good_pass": 0.414634,
+        "delta_from_best_all": 0.02439,
+        "relative_nn_ops": 0.489796,
+        "relative_bank_int8": 0.666667,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 12,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 12000,
+        "feature_dim": 512,
+        "patch_count": 144
+      },
+      "best_multi_layer": {
+        "config": "wrn_l23_g16_b12000_topk0p05",
+        "good_pass": 0.439024,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 1.306122,
+        "relative_bank_int8": 1.0,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 16,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 12000,
+        "feature_dim": 768,
+        "patch_count": 256
+      },
+      "statuses": {
+        "backbone_res18": "baseline_weak",
+        "grid_le7": "baseline_weak",
+        "grid_le5": "baseline_weak",
+        "single_layer": "baseline_weak"
+      },
+      "category_class": "土台精度が弱く、削減可否の主張には使いにくい"
+    },
+    {
+      "category": "tile",
+      "category_type": "texture",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 0.909091,
+      "best_all": {
+        "config": "wrn_l3_g8_b125_topk0p05",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.002268,
+        "relative_bank_int8": 0.006944,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 8,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 125,
+        "feature_dim": 512,
+        "patch_count": 64
+      },
+      "best_wrn": {
+        "config": "wrn_l3_g8_b125_topk0p05",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.002268,
+        "relative_bank_int8": 0.006944,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 8,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 125,
+        "feature_dim": 512,
+        "patch_count": 64
+      },
+      "best_res18": {
+        "config": "res18_l23_g14_b6000_topk0p05",
+        "good_pass": 0.969697,
+        "delta_from_best_all": 0.030303,
+        "relative_nn_ops": 0.125,
+        "relative_bank_int8": 0.125,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 6000,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_grid_le7": {
+        "config": "wrn_l3_g7_b250_topk0p05",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.003472,
+        "relative_bank_int8": 0.013889,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 7,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 250,
+        "feature_dim": 512,
+        "patch_count": 49
+      },
+      "best_grid_le5": {
+        "config": "wrn_l23_g5_b3000_topk0p005",
+        "good_pass": 0.848485,
+        "delta_from_best_all": 0.151515,
+        "relative_nn_ops": 0.031888,
+        "relative_bank_int8": 0.25,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 5,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 3000,
+        "feature_dim": 768,
+        "patch_count": 25
+      },
+      "best_single_layer": {
+        "config": "wrn_l3_g8_b125_topk0p05",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.002268,
+        "relative_bank_int8": 0.006944,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 8,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 125,
+        "feature_dim": 512,
+        "patch_count": 64
+      },
+      "best_multi_layer": {
+        "config": "wrn_l23_g7_b250_topk0p05",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.005208,
+        "relative_bank_int8": 0.020833,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 7,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 250,
+        "feature_dim": 768,
+        "patch_count": 49
+      },
+      "statuses": {
+        "backbone_res18": "borderline",
+        "grid_le7": "ok",
+        "grid_le5": "ng",
+        "single_layer": "ok"
+      },
+      "category_class": "一部を削れる"
+    },
+    {
+      "category": "toothbrush",
+      "category_type": "object",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 0.75,
+      "best_all": {
+        "config": "wrn_l2_g14_b12000_topk0p01",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.333333,
+        "relative_bank_int8": 0.333333,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1
+        ],
+        "layer_kind": "l2",
+        "bank_patches": 11760,
+        "feature_dim": 256,
+        "patch_count": 196
+      },
+      "best_wrn": {
+        "config": "wrn_l2_g14_b12000_topk0p01",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.333333,
+        "relative_bank_int8": 0.333333,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1
+        ],
+        "layer_kind": "l2",
+        "bank_patches": 11760,
+        "feature_dim": 256,
+        "patch_count": 196
+      },
+      "best_res18": {
+        "config": "res18_l23_g14_b9000_topk0p02",
+        "good_pass": 0.916667,
+        "delta_from_best_all": 0.083333,
+        "relative_nn_ops": 0.191327,
+        "relative_bank_int8": 0.191327,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 9000,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_grid_le7": {
+        "config": "wrn_l23_g7_b1000_topk0p005",
+        "good_pass": 0.916667,
+        "delta_from_best_all": 0.083333,
+        "relative_nn_ops": 0.021259,
+        "relative_bank_int8": 0.085034,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 7,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 1000,
+        "feature_dim": 768,
+        "patch_count": 49
+      },
+      "best_grid_le5": {
+        "config": "wrn_l2_g5_b500_topk0p005",
+        "good_pass": 0.75,
+        "delta_from_best_all": 0.25,
+        "relative_nn_ops": 0.001808,
+        "relative_bank_int8": 0.014172,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 5,
+        "out_indices": [
+          1
+        ],
+        "layer_kind": "l2",
+        "bank_patches": 500,
+        "feature_dim": 256,
+        "patch_count": 25
+      },
+      "best_single_layer": {
+        "config": "wrn_l2_g14_b12000_topk0p01",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.333333,
+        "relative_bank_int8": 0.333333,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1
+        ],
+        "layer_kind": "l2",
+        "bank_patches": 11760,
+        "feature_dim": 256,
+        "patch_count": 196
+      },
+      "best_multi_layer": {
+        "config": "wrn_l23_g7_b1000_topk0p005",
+        "good_pass": 0.916667,
+        "delta_from_best_all": 0.083333,
+        "relative_nn_ops": 0.021259,
+        "relative_bank_int8": 0.085034,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 7,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 1000,
+        "feature_dim": 768,
+        "patch_count": 49
+      },
+      "statuses": {
+        "backbone_res18": "ng",
+        "grid_le7": "ng",
+        "grid_le5": "ng",
+        "single_layer": "ok"
+      },
+      "category_class": "一点だけ削れる"
+    },
+    {
+      "category": "transistor",
+      "category_type": "object",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 0.716667,
+      "best_all": {
+        "config": "wrn_l3_g14_b9000_topk0p01",
+        "good_pass": 0.966667,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.5,
+        "relative_bank_int8": 0.5,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 9000,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_wrn": {
+        "config": "wrn_l3_g14_b9000_topk0p01",
+        "good_pass": 0.966667,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.5,
+        "relative_bank_int8": 0.5,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 9000,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_res18": {
+        "config": "res18_l23_g14_b6000_topk0p005",
+        "good_pass": 0.633333,
+        "delta_from_best_all": 0.333334,
+        "relative_nn_ops": 0.125,
+        "relative_bank_int8": 0.125,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 6000,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_grid_le7": {
+        "config": "wrn_l3_g7_b6000_topk0p05",
+        "good_pass": 0.733333,
+        "delta_from_best_all": 0.233334,
+        "relative_nn_ops": 0.083333,
+        "relative_bank_int8": 0.333333,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 7,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 6000,
+        "feature_dim": 512,
+        "patch_count": 49
+      },
+      "best_grid_le5": {
+        "config": "wrn_l3_g5_b12000_topk0p005",
+        "good_pass": 0.483333,
+        "delta_from_best_all": 0.483334,
+        "relative_nn_ops": 0.037734,
+        "relative_bank_int8": 0.295833,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 5,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 5325,
+        "feature_dim": 512,
+        "patch_count": 25
+      },
+      "best_single_layer": {
+        "config": "wrn_l3_g14_b9000_topk0p01",
+        "good_pass": 0.966667,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.5,
+        "relative_bank_int8": 0.5,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 9000,
+        "feature_dim": 512,
+        "patch_count": 196
+      },
+      "best_multi_layer": {
+        "config": "wrn_l23_g14_b12000_topk0p01",
+        "good_pass": 0.716667,
+        "delta_from_best_all": 0.25,
+        "relative_nn_ops": 1.0,
+        "relative_bank_int8": 1.0,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 12000,
+        "feature_dim": 768,
+        "patch_count": 196
+      },
+      "statuses": {
+        "backbone_res18": "ng",
+        "grid_le7": "ng",
+        "grid_le5": "ng",
+        "single_layer": "ok"
+      },
+      "category_class": "一点だけ削れる"
+    },
+    {
+      "category": "wood",
+      "category_type": "texture",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 0.842105,
+      "best_all": {
+        "config": "wrn_l2_g14_b250_topk0p005",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.006944,
+        "relative_bank_int8": 0.006944,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1
+        ],
+        "layer_kind": "l2",
+        "bank_patches": 250,
+        "feature_dim": 256,
+        "patch_count": 196
+      },
+      "best_wrn": {
+        "config": "wrn_l2_g14_b250_topk0p005",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.006944,
+        "relative_bank_int8": 0.006944,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1
+        ],
+        "layer_kind": "l2",
+        "bank_patches": 250,
+        "feature_dim": 256,
+        "patch_count": 196
+      },
+      "best_res18": {
+        "config": "res18_l23_g14_b3000_topk0p005",
+        "good_pass": 0.947368,
+        "delta_from_best_all": 0.052632,
+        "relative_nn_ops": 0.0625,
+        "relative_bank_int8": 0.0625,
+        "backbone": "resnet18",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 3000,
+        "feature_dim": 192,
+        "patch_count": 196
+      },
+      "best_grid_le7": {
+        "config": "res18_l23_g7_b250_topk0p005",
+        "good_pass": 0.894737,
+        "delta_from_best_all": 0.105263,
+        "relative_nn_ops": 0.001302,
+        "relative_bank_int8": 0.005208,
+        "backbone": "resnet18",
+        "patch_grid": 7,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 250,
+        "feature_dim": 192,
+        "patch_count": 49
+      },
+      "best_grid_le5": {
+        "config": "wrn_l23_g5_b125_topk0p005",
+        "good_pass": 0.789474,
+        "delta_from_best_all": 0.210526,
+        "relative_nn_ops": 0.001329,
+        "relative_bank_int8": 0.010417,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 5,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 125,
+        "feature_dim": 768,
+        "patch_count": 25
+      },
+      "best_single_layer": {
+        "config": "wrn_l2_g14_b250_topk0p005",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.006944,
+        "relative_bank_int8": 0.006944,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1
+        ],
+        "layer_kind": "l2",
+        "bank_patches": 250,
+        "feature_dim": 256,
+        "patch_count": 196
+      },
+      "best_multi_layer": {
+        "config": "wrn_l23_g14_b1500_topk0p05",
+        "good_pass": 1.0,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.125,
+        "relative_bank_int8": 0.125,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 1500,
+        "feature_dim": 768,
+        "patch_count": 196
+      },
+      "statuses": {
+        "backbone_res18": "ng",
+        "grid_le7": "ng",
+        "grid_le5": "ng",
+        "single_layer": "ok"
+      },
+      "category_class": "一点だけ削れる"
+    },
+    {
+      "category": "zipper",
+      "category_type": "object",
+      "target_false_pass_rate_defect": 0.03,
+      "baseline_good_pass": 0.90625,
+      "best_all": {
+        "config": "wrn_l3_g10_b12000_topk0p05",
+        "good_pass": 0.9375,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.340136,
+        "relative_bank_int8": 0.666667,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 10,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 12000,
+        "feature_dim": 512,
+        "patch_count": 100
+      },
+      "best_wrn": {
+        "config": "wrn_l3_g10_b12000_topk0p05",
+        "good_pass": 0.9375,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.340136,
+        "relative_bank_int8": 0.666667,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 10,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 12000,
+        "feature_dim": 512,
+        "patch_count": 100
+      },
+      "best_res18": {
+        "config": "res18_l23_g10_b4000_topk0p05",
+        "good_pass": 0.84375,
+        "delta_from_best_all": 0.09375,
+        "relative_nn_ops": 0.042517,
+        "relative_bank_int8": 0.083333,
+        "backbone": "resnet18",
+        "patch_grid": 10,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 4000,
+        "feature_dim": 192,
+        "patch_count": 100
+      },
+      "best_grid_le7": {
+        "config": "wrn_l3_g6_b250_topk0p05",
+        "good_pass": 0.75,
+        "delta_from_best_all": 0.1875,
+        "relative_nn_ops": 0.002551,
+        "relative_bank_int8": 0.013889,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 6,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 250,
+        "feature_dim": 512,
+        "patch_count": 36
+      },
+      "best_grid_le5": {
+        "config": "res18_l23_g5_b2000_topk0p005",
+        "good_pass": 0.53125,
+        "delta_from_best_all": 0.40625,
+        "relative_nn_ops": 0.005315,
+        "relative_bank_int8": 0.041667,
+        "backbone": "resnet18",
+        "patch_grid": 5,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 2000,
+        "feature_dim": 192,
+        "patch_count": 25
+      },
+      "best_single_layer": {
+        "config": "wrn_l3_g10_b12000_topk0p05",
+        "good_pass": 0.9375,
+        "delta_from_best_all": 0.0,
+        "relative_nn_ops": 0.340136,
+        "relative_bank_int8": 0.666667,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 10,
+        "out_indices": [
+          2
+        ],
+        "layer_kind": "l3",
+        "bank_patches": 12000,
+        "feature_dim": 512,
+        "patch_count": 100
+      },
+      "best_multi_layer": {
+        "config": "wrn_l23_g14_b4000_topk0p02",
+        "good_pass": 0.90625,
+        "delta_from_best_all": 0.03125,
+        "relative_nn_ops": 0.333333,
+        "relative_bank_int8": 0.333333,
+        "backbone": "wide_resnet50_2",
+        "patch_grid": 14,
+        "out_indices": [
+          1,
+          2
+        ],
+        "layer_kind": "multi",
+        "bank_patches": 4000,
+        "feature_dim": 768,
+        "patch_count": 196
+      },
+      "statuses": {
+        "backbone_res18": "ng",
+        "grid_le7": "ng",
+        "grid_le5": "ng",
+        "single_layer": "ok"
+      },
+      "category_class": "一点だけ削れる"
+    }
+  ],
+  "outputs": {
+    "csv": "results\\mvtec_patchcore_nonbank_factor_audit_001.csv",
+    "markdown": "docs\\mvtec_patchcore_nonbank_factor_audit_001.md",
+    "figure": "results\\mvtec_patchcore_nonbank_factor_audit_001.png"
+  }
+}

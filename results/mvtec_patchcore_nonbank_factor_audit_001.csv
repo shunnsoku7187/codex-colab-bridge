@@ -1,0 +1,16 @@
+category,category_type,category_class,baseline_good_pass,best_all_good,best_all_config,best_all_rel_nn_ops,res18_good,res18_delta,res18_status,grid_le7_good,grid_le7_delta,grid_le7_status,grid_le5_good,grid_le5_delta,grid_le5_status,single_layer_good,single_layer_delta,single_layer_status
+bottle,object,大きく削れる,1.0,1.0,res18_l23_g7_b500_topk0p005,0.002604,1.0,0.0,ok,1.0,0.0,ok,1.0,0.0,ok,1.0,0.0,ok
+cable,object,一点だけ削れる,0.517241,0.896552,wrn_l3_g14_b4000_topk0p05,0.222222,0.689655,0.206897,ng,0.793103,0.103449,ng,0.431034,0.465518,ng,0.896552,0.0,ok
+capsule,object,強い構成が必要,0.434783,0.913043,wrn_l23_g16_b12000_topk0p01,1.306122,0.695652,0.217391,ng,0.521739,0.391304,ng,0.391304,0.521739,ng,0.73913,0.173913,ng
+carpet,texture,一点だけ削れる,0.821429,0.964286,wrn_l3_g14_b4000_topk0p005,0.222222,0.821429,0.142857,ng,0.75,0.214286,ng,0.214286,0.75,ng,0.964286,0.0,ok
+grid,texture,一点だけ削れる,0.52381,1.0,wrn_l2_g14_b12000_topk0p01,0.333333,0.714286,0.285714,ng,0.571429,0.428571,ng,0.571429,0.428571,ng,1.0,0.0,ok
+hazelnut,object,一部を削れる,1.0,1.0,res18_l23_g14_b500_topk0p02,0.010417,1.0,0.0,ok,0.95,0.05,borderline,0.4,0.6,ng,1.0,0.0,ok
+leather,texture,大きく削れる,1.0,1.0,res18_l23_g14_b125_topk0p01,0.002604,1.0,0.0,ok,1.0,0.0,ok,0.34375,0.65625,ng,1.0,0.0,ok
+metal_nut,object,一点だけ削れる,0.954545,1.0,wrn_l3_g14_b4000_topk0p005,0.222222,0.909091,0.090909,ng,0.727273,0.272727,ng,0.227273,0.772727,ng,1.0,0.0,ok
+pill,object,強い構成が必要,0.423077,0.692308,wrn_l23_g14_b6000_topk0p01,0.5,0.653846,0.038462,borderline,0.615385,0.076923,ng,0.423077,0.269231,ng,0.653846,0.038462,borderline
+screw,object,土台精度が弱く、削減可否の主張には使いにくい,0.317073,0.439024,wrn_l23_g16_b12000_topk0p05,1.306122,0.268293,0.170731,baseline_weak,0.219512,0.219512,baseline_weak,0.146341,0.292683,baseline_weak,0.414634,0.02439,baseline_weak
+tile,texture,一部を削れる,0.909091,1.0,wrn_l3_g8_b125_topk0p05,0.002268,0.969697,0.030303,borderline,1.0,0.0,ok,0.848485,0.151515,ng,1.0,0.0,ok
+toothbrush,object,一点だけ削れる,0.75,1.0,wrn_l2_g14_b12000_topk0p01,0.333333,0.916667,0.083333,ng,0.916667,0.083333,ng,0.75,0.25,ng,1.0,0.0,ok
+transistor,object,一点だけ削れる,0.716667,0.966667,wrn_l3_g14_b9000_topk0p01,0.5,0.633333,0.333334,ng,0.733333,0.233334,ng,0.483333,0.483334,ng,0.966667,0.0,ok
+wood,texture,一点だけ削れる,0.842105,1.0,wrn_l2_g14_b250_topk0p005,0.006944,0.947368,0.052632,ng,0.894737,0.105263,ng,0.789474,0.210526,ng,1.0,0.0,ok
+zipper,object,一点だけ削れる,0.90625,0.9375,wrn_l3_g10_b12000_topk0p05,0.340136,0.84375,0.09375,ng,0.75,0.1875,ng,0.53125,0.40625,ng,0.9375,0.0,ok
