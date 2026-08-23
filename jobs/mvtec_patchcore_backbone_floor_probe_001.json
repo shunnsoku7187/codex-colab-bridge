@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_backbone_floor_probe_001",
-  "status": "running",
+  "status": "done",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -10,6 +10,11 @@
   "result_file": "results/mvtec_patchcore_backbone_floor_probe_001.json",
   "note": "Large all-15 MVTec AD probe for the PatchCore-lite backbone floor. It adds resnet34, resnet18, MobileNetV3 small/large, and EfficientNet-B0 profiles while sweeping grid, memory-bank size, and top-k scoring in the profiled runner so bank effects and non-bank effects can be separated.",
   "created_at": "2026-08-23T00:00:00+09:00",
-  "updated_at": "2026-08-23T07:59:49.547798+00:00",
-  "started_at": "2026-08-23T07:59:49.547776+00:00"
+  "updated_at": "2026-08-23T08:39:17.159925+00:00",
+  "started_at": "2026-08-23T07:59:49.547776+00:00",
+  "returncode": 0,
+  "duration_sec": 2361.804,
+  "stdout": "logs/mvtec_patchcore_backbone_floor_probe_001.stdout.log",
+  "stderr": "logs/mvtec_patchcore_backbone_floor_probe_001.stderr.log",
+  "finished_at": "2026-08-23T08:39:17.144536+00:00"
 }
