@@ -1,0 +1,13 @@
+{
+  "id": "mvtec_patchcore_reduction_limit_probe_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt timm pyarrow && python -m scripts.mvtec_patchcore_reduction_limit_probe --source-summary results/mvtec_patchcore_backbone_floor_probe_001_summary.json --output results/mvtec_patchcore_reduction_limit_probe_001_summary.json --markdown docs/mvtec_patchcore_reduction_limit_probe_001.md --figure results/mvtec_patchcore_reduction_limit_probe_001.png --materialized-root /home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2 --categories bottle cable capsule carpet grid hazelnut leather metal_nut pill screw tile toothbrush transistor wood zipper --false-pass-target 0.03 --tolerance 0.02 --strong-good-pass 0.80 --baseline-bank-patches 12000 --baseline-topk-fraction 0.01 --score-name topk_score --curve-points 180 --require-cuda",
+  "max_runtime_sec": 43200,
+  "result_file": "results/mvtec_patchcore_reduction_limit_probe_001.json",
+  "note": "Theory-facing PatchCore-lite reduction limit probe. Re-evaluates baseline and category-selected reduced profiles, then reports coverage radius, score margin, defect collision, and the P*B*D nearest-neighbor cost formula so reduction decisions are not just 'tried and worked'.",
+  "created_at": "2026-08-24T00:00:00+09:00"
+}
