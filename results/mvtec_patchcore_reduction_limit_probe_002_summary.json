@@ -1,0 +1,2430 @@
+{
+  "purpose": "explain category-specific PatchCore-lite reduction limits with coverage, margin, collision, and cost-product formulas",
+  "config": {
+    "source_summary": "results/mvtec_patchcore_backbone_floor_probe_001_summary.json",
+    "output": "results/mvtec_patchcore_reduction_limit_probe_002_summary.json",
+    "markdown": "docs/mvtec_patchcore_reduction_limit_probe_002.md",
+    "figure": "results/mvtec_patchcore_reduction_limit_probe_002.png",
+    "materialized_root": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2",
+    "categories": [
+      "bottle",
+      "cable",
+      "capsule",
+      "carpet",
+      "grid",
+      "hazelnut",
+      "leather",
+      "metal_nut",
+      "pill",
+      "screw",
+      "tile",
+      "toothbrush",
+      "transistor",
+      "wood",
+      "zipper"
+    ],
+    "false_pass_target": 0.03,
+    "tolerance": 0.02,
+    "strong_good_pass": 0.8,
+    "baseline_bank_patches": 12000,
+    "baseline_topk_fraction": 0.01,
+    "score_name": "topk_score",
+    "image_height": 224,
+    "image_width": 224,
+    "batch_size": 16,
+    "nn_chunk_size": 4096,
+    "curve_points": 180,
+    "seed": 7,
+    "require_cuda": true,
+    "device": "cuda"
+  },
+  "category_rows": [
+    {
+      "category": "bottle",
+      "source_selected_config": "effb0_l23_g10_b500_topk0p05",
+      "baseline": {
+        "label": "baseline",
+        "category": "bottle",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 209,
+          "test_images": 83,
+          "test_good_images": 20,
+          "test_defect_images": 63
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.092168,
+            "q50": 0.051678,
+            "q90": 0.236717,
+            "q95": 0.26433,
+            "q99": 0.320842,
+            "max": 0.562655
+          },
+          "defect_patch_collision_under_train_q95": 0.754778
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.356008,
+            "q50": 0.352075,
+            "q90": 0.385171,
+            "q95": 0.393607,
+            "q99": 0.419129,
+            "max": 0.42551
+          },
+          "defect": {
+            "mean": 0.650398,
+            "q50": 0.663536,
+            "q90": 0.708902,
+            "q95": 0.713957,
+            "q99": 0.735059,
+            "max": 0.739814
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.502559,
+          "good_pass_at_threshold": 1.0,
+          "margin_vs_good_q95": 0.108952,
+          "margin_vs_good_q99": 0.08343,
+          "overlap_defect_in_good95_region": 0.0
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.435147
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "bottle",
+        "config": {
+          "profile_name": "effb0_l23_g10",
+          "backbone": "efficientnet_b0",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 10,
+          "bank_patches": 500,
+          "topk_fraction": 0.05
+        },
+        "sample_counts": {
+          "train_normal_images": 209,
+          "test_images": 83,
+          "test_good_images": 20,
+          "test_defect_images": 63
+        },
+        "footprint": {
+          "patch_count": 100,
+          "feature_dim": 64,
+          "bank_patches": 500,
+          "per_image_nn_ops": 3200000,
+          "bank_feature_values": 32000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.211159,
+            "q50": 0.187617,
+            "q90": 0.453095,
+            "q95": 0.513841,
+            "q99": 0.636907,
+            "max": 1.059301
+          },
+          "defect_patch_collision_under_train_q95": 0.848254
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.583307,
+            "q50": 0.576481,
+            "q90": 0.636918,
+            "q95": 0.673022,
+            "q99": 0.708776,
+            "max": 0.717714
+          },
+          "defect": {
+            "mean": 0.873763,
+            "q50": 0.873434,
+            "q90": 0.98993,
+            "q95": 1.021791,
+            "q99": 1.061078,
+            "max": 1.073414
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.69297,
+          "good_pass_at_threshold": 0.95,
+          "margin_vs_good_q95": 0.019948,
+          "margin_vs_good_q99": -0.015806,
+          "overlap_defect_in_good95_region": 0.015873
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.95,
+          "good_loss_rate_good": 0.05,
+          "threshold": 0.673165
+        },
+        "relative_to_baseline": {
+          "patch_count": 0.510204,
+          "feature_dim": 0.083333,
+          "bank_patches": 0.041667,
+          "per_image_nn_ops": 0.001772,
+          "bank_feature_values": 0.003472
+        }
+      },
+      "hypothesis_reason": "reducible: positive margin remains"
+    },
+    {
+      "category": "cable",
+      "source_selected_config": "res18_l23_g7_b1500_topk0p05",
+      "baseline": {
+        "label": "baseline",
+        "category": "cable",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 224,
+          "test_images": 150,
+          "test_good_images": 58,
+          "test_defect_images": 92
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.265555,
+            "q50": 0.336435,
+            "q90": 0.429977,
+            "q95": 0.457351,
+            "q99": 0.49869,
+            "max": 0.580384
+          },
+          "defect_patch_collision_under_train_q95": 0.871173
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.519552,
+            "q50": 0.519316,
+            "q90": 0.54146,
+            "q95": 0.548956,
+            "q99": 0.559747,
+            "max": 0.566955
+          },
+          "defect": {
+            "mean": 0.606612,
+            "q50": 0.606057,
+            "q90": 0.668957,
+            "q95": 0.703083,
+            "q99": 0.739891,
+            "max": 0.742157
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.52487,
+          "good_pass_at_threshold": 0.603448,
+          "margin_vs_good_q95": -0.024086,
+          "margin_vs_good_q99": -0.034878,
+          "overlap_defect_in_good95_region": 0.141304
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.534483,
+          "good_loss_rate_good": 0.465517,
+          "threshold": 0.520443
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "cable",
+        "config": {
+          "profile_name": "res18_l23_g7",
+          "backbone": "resnet18",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 7,
+          "bank_patches": 1500,
+          "topk_fraction": 0.05
+        },
+        "sample_counts": {
+          "train_normal_images": 224,
+          "test_images": 150,
+          "test_good_images": 58,
+          "test_defect_images": 92
+        },
+        "footprint": {
+          "patch_count": 49,
+          "feature_dim": 192,
+          "bank_patches": 1500,
+          "per_image_nn_ops": 14112000,
+          "bank_feature_values": 288000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.282361,
+            "q50": 0.310863,
+            "q90": 0.409386,
+            "q95": 0.443771,
+            "q99": 0.50469,
+            "max": 0.63456
+          },
+          "defect_patch_collision_under_train_q95": 0.890195
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.485416,
+            "q50": 0.482343,
+            "q90": 0.526104,
+            "q95": 0.542204,
+            "q99": 0.550034,
+            "max": 0.550562
+          },
+          "defect": {
+            "mean": 0.532434,
+            "q50": 0.530473,
+            "q90": 0.585593,
+            "q95": 0.612129,
+            "q99": 0.648857,
+            "max": 0.654204
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.464773,
+          "good_pass_at_threshold": 0.241379,
+          "margin_vs_good_q95": -0.077431,
+          "margin_vs_good_q99": -0.08526,
+          "overlap_defect_in_good95_region": 0.630435
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.241379,
+          "good_loss_rate_good": 0.758621,
+          "threshold": 0.463291
+        },
+        "relative_to_baseline": {
+          "patch_count": 0.25,
+          "feature_dim": 0.25,
+          "bank_patches": 0.125,
+          "per_image_nn_ops": 0.007812,
+          "bank_feature_values": 0.03125
+        }
+      },
+      "hypothesis_reason": "limit: normal/defect score overlap"
+    },
+    {
+      "category": "capsule",
+      "source_selected_config": "effb0_l23_g14_b500_topk0p02",
+      "baseline": {
+        "label": "baseline",
+        "category": "capsule",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 219,
+          "test_images": 132,
+          "test_good_images": 23,
+          "test_defect_images": 109
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.129562,
+            "q50": 0.155418,
+            "q90": 0.225488,
+            "q95": 0.242691,
+            "q99": 0.291612,
+            "max": 0.538321
+          },
+          "defect_patch_collision_under_train_q95": 0.843803
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.319937,
+            "q50": 0.306855,
+            "q90": 0.396777,
+            "q95": 0.405691,
+            "q99": 0.430815,
+            "max": 0.437734
+          },
+          "defect": {
+            "mean": 0.454997,
+            "q50": 0.434658,
+            "q90": 0.579744,
+            "q95": 0.616956,
+            "q99": 0.646896,
+            "max": 0.665597
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.336271,
+          "good_pass_at_threshold": 0.652174,
+          "margin_vs_good_q95": -0.069421,
+          "margin_vs_good_q99": -0.094544,
+          "overlap_defect_in_good95_region": 0.376147
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.652174,
+          "good_loss_rate_good": 0.347826,
+          "threshold": 0.33406
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "capsule",
+        "config": {
+          "profile_name": "effb0_l23_g14",
+          "backbone": "efficientnet_b0",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 500,
+          "topk_fraction": 0.02
+        },
+        "sample_counts": {
+          "train_normal_images": 219,
+          "test_images": 132,
+          "test_good_images": 23,
+          "test_defect_images": 109
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 64,
+          "bank_patches": 500,
+          "per_image_nn_ops": 6272000,
+          "bank_feature_values": 32000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.28255,
+            "q50": 0.273314,
+            "q90": 0.412613,
+            "q95": 0.475945,
+            "q99": 0.824238,
+            "max": 1.043464
+          },
+          "defect_patch_collision_under_train_q95": 0.924265
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.775762,
+            "q50": 0.772428,
+            "q90": 0.871451,
+            "q95": 0.883859,
+            "q99": 0.892484,
+            "max": 0.894636
+          },
+          "defect": {
+            "mean": 0.812626,
+            "q50": 0.811814,
+            "q90": 0.880822,
+            "q95": 0.898055,
+            "q99": 0.955808,
+            "max": 0.978756
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.699488,
+          "good_pass_at_threshold": 0.043478,
+          "margin_vs_good_q95": -0.184371,
+          "margin_vs_good_q99": -0.192996,
+          "overlap_defect_in_good95_region": 0.917431
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.043478,
+          "good_loss_rate_good": 0.956522,
+          "threshold": 0.673588
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 0.083333,
+          "bank_patches": 0.041667,
+          "per_image_nn_ops": 0.003472,
+          "bank_feature_values": 0.003472
+        }
+      },
+      "hypothesis_reason": "limit: normal/defect score overlap"
+    },
+    {
+      "category": "carpet",
+      "source_selected_config": "res18_l23_g14_b750_topk0p01",
+      "baseline": {
+        "label": "baseline",
+        "category": "carpet",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 280,
+          "test_images": 117,
+          "test_good_images": 28,
+          "test_defect_images": 89
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.237194,
+            "q50": 0.294195,
+            "q90": 0.331127,
+            "q95": 0.341726,
+            "q99": 0.363204,
+            "max": 0.440464
+          },
+          "defect_patch_collision_under_train_q95": 0.845047
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.38369,
+            "q50": 0.38333,
+            "q90": 0.402715,
+            "q95": 0.408568,
+            "q99": 0.418171,
+            "max": 0.421163
+          },
+          "defect": {
+            "mean": 0.526885,
+            "q50": 0.528097,
+            "q90": 0.608984,
+            "q95": 0.617314,
+            "q99": 0.634076,
+            "max": 0.638152
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.400919,
+          "good_pass_at_threshold": 0.857143,
+          "margin_vs_good_q95": -0.007649,
+          "margin_vs_good_q99": -0.017252,
+          "overlap_defect_in_good95_region": 0.044944
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.857143,
+          "good_loss_rate_good": 0.142857,
+          "threshold": 0.398158
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "carpet",
+        "config": {
+          "profile_name": "res18_l23_g14",
+          "backbone": "resnet18",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 750,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 280,
+          "test_images": 117,
+          "test_good_images": 28,
+          "test_defect_images": 89
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 192,
+          "bank_patches": 750,
+          "per_image_nn_ops": 28224000,
+          "bank_feature_values": 144000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.249336,
+            "q50": 0.250053,
+            "q90": 0.28342,
+            "q95": 0.295333,
+            "q99": 0.321676,
+            "max": 0.395182
+          },
+          "defect_patch_collision_under_train_q95": 0.854792
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.347563,
+            "q50": 0.344609,
+            "q90": 0.373196,
+            "q95": 0.375953,
+            "q99": 0.381558,
+            "max": 0.383427
+          },
+          "defect": {
+            "mean": 0.468006,
+            "q50": 0.459275,
+            "q90": 0.556593,
+            "q95": 0.571255,
+            "q99": 0.677797,
+            "max": 0.677883
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.35935,
+          "good_pass_at_threshold": 0.714286,
+          "margin_vs_good_q95": -0.016603,
+          "margin_vs_good_q99": -0.022208,
+          "overlap_defect_in_good95_region": 0.101124
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.714286,
+          "good_loss_rate_good": 0.285714,
+          "threshold": 0.356304
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 0.25,
+          "bank_patches": 0.0625,
+          "per_image_nn_ops": 0.015625,
+          "bank_feature_values": 0.015625
+        }
+      },
+      "hypothesis_reason": "limit: normal/defect score overlap"
+    },
+    {
+      "category": "grid",
+      "source_selected_config": "res34_l23_g10_b750_topk0p02",
+      "baseline": {
+        "label": "baseline",
+        "category": "grid",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 264,
+          "test_images": 78,
+          "test_good_images": 21,
+          "test_defect_images": 57
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.163069,
+            "q50": 0.184481,
+            "q90": 0.286363,
+            "q95": 0.314646,
+            "q99": 0.355512,
+            "max": 0.449986
+          },
+          "defect_patch_collision_under_train_q95": 0.861081
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.389602,
+            "q50": 0.385018,
+            "q90": 0.415299,
+            "q95": 0.420026,
+            "q99": 0.434324,
+            "max": 0.437898
+          },
+          "defect": {
+            "mean": 0.472626,
+            "q50": 0.469082,
+            "q90": 0.53372,
+            "q95": 0.544694,
+            "q99": 0.572031,
+            "max": 0.58073
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.396691,
+          "good_pass_at_threshold": 0.666667,
+          "margin_vs_good_q95": -0.023335,
+          "margin_vs_good_q99": -0.037633,
+          "overlap_defect_in_good95_region": 0.175439
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.666667,
+          "good_loss_rate_good": 0.333333,
+          "threshold": 0.396207
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "grid",
+        "config": {
+          "profile_name": "res34_l23_g10",
+          "backbone": "resnet34",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 10,
+          "bank_patches": 750,
+          "topk_fraction": 0.02
+        },
+        "sample_counts": {
+          "train_normal_images": 264,
+          "test_images": 78,
+          "test_good_images": 21,
+          "test_defect_images": 57
+        },
+        "footprint": {
+          "patch_count": 100,
+          "feature_dim": 192,
+          "bank_patches": 750,
+          "per_image_nn_ops": 14400000,
+          "bank_feature_values": 144000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.296389,
+            "q50": 0.304114,
+            "q90": 0.36185,
+            "q95": 0.37859,
+            "q99": 0.411707,
+            "max": 0.49942
+          },
+          "defect_patch_collision_under_train_q95": 0.911228
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.413936,
+            "q50": 0.412185,
+            "q90": 0.436103,
+            "q95": 0.438905,
+            "q99": 0.454375,
+            "max": 0.458243
+          },
+          "defect": {
+            "mean": 0.448328,
+            "q50": 0.442112,
+            "q90": 0.491075,
+            "q95": 0.501622,
+            "q99": 0.517991,
+            "max": 0.526862
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.396131,
+          "good_pass_at_threshold": 0.238095,
+          "margin_vs_good_q95": -0.042774,
+          "margin_vs_good_q99": -0.058244,
+          "overlap_defect_in_good95_region": 0.403509
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.238095,
+          "good_loss_rate_good": 0.761905,
+          "threshold": 0.393429
+        },
+        "relative_to_baseline": {
+          "patch_count": 0.510204,
+          "feature_dim": 0.25,
+          "bank_patches": 0.0625,
+          "per_image_nn_ops": 0.007972,
+          "bank_feature_values": 0.015625
+        }
+      },
+      "hypothesis_reason": "limit: normal/defect score overlap"
+    },
+    {
+      "category": "hazelnut",
+      "source_selected_config": "res34_l23_g14_b500_topk0p02",
+      "baseline": {
+        "label": "baseline",
+        "category": "hazelnut",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 391,
+          "test_images": 110,
+          "test_good_images": 40,
+          "test_defect_images": 70
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.246612,
+            "q50": 0.246873,
+            "q90": 0.414883,
+            "q95": 0.445509,
+            "q99": 0.491362,
+            "max": 0.629532
+          },
+          "defect_patch_collision_under_train_q95": 0.873907
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.498874,
+            "q50": 0.495362,
+            "q90": 0.519687,
+            "q95": 0.523886,
+            "q99": 0.537191,
+            "max": 0.543257
+          },
+          "defect": {
+            "mean": 0.631815,
+            "q50": 0.624061,
+            "q90": 0.690192,
+            "q95": 0.703305,
+            "q99": 0.73791,
+            "max": 0.780175
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.571928,
+          "good_pass_at_threshold": 1.0,
+          "margin_vs_good_q95": 0.048042,
+          "margin_vs_good_q99": 0.034737,
+          "overlap_defect_in_good95_region": 0.0
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.547
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "hazelnut",
+        "config": {
+          "profile_name": "res34_l23_g14",
+          "backbone": "resnet34",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 500,
+          "topk_fraction": 0.02
+        },
+        "sample_counts": {
+          "train_normal_images": 391,
+          "test_images": 110,
+          "test_good_images": 40,
+          "test_defect_images": 70
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 192,
+          "bank_patches": 500,
+          "per_image_nn_ops": 18816000,
+          "bank_feature_values": 96000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.226961,
+            "q50": 0.188667,
+            "q90": 0.365279,
+            "q95": 0.390913,
+            "q99": 0.432639,
+            "max": 0.560478
+          },
+          "defect_patch_collision_under_train_q95": 0.898834
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.429671,
+            "q50": 0.430573,
+            "q90": 0.444646,
+            "q95": 0.448256,
+            "q99": 0.459288,
+            "max": 0.466283
+          },
+          "defect": {
+            "mean": 0.506027,
+            "q50": 0.501104,
+            "q90": 0.54952,
+            "q95": 0.567802,
+            "q99": 0.610117,
+            "max": 0.632305
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.451845,
+          "good_pass_at_threshold": 0.975,
+          "margin_vs_good_q95": 0.003589,
+          "margin_vs_good_q99": -0.007444,
+          "overlap_defect_in_good95_region": 0.014286
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.975,
+          "good_loss_rate_good": 0.025,
+          "threshold": 0.449812
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 0.25,
+          "bank_patches": 0.041667,
+          "per_image_nn_ops": 0.010417,
+          "bank_feature_values": 0.010417
+        }
+      },
+      "hypothesis_reason": "reducible: positive margin remains"
+    },
+    {
+      "category": "leather",
+      "source_selected_config": "effb0_l23_g14_b125_topk0p005",
+      "baseline": {
+        "label": "baseline",
+        "category": "leather",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 245,
+          "test_images": 124,
+          "test_good_images": 32,
+          "test_defect_images": 92
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.216452,
+            "q50": 0.280829,
+            "q90": 0.310853,
+            "q95": 0.319742,
+            "q99": 0.338181,
+            "max": 0.394181
+          },
+          "defect_patch_collision_under_train_q95": 0.737522
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.363978,
+            "q50": 0.361303,
+            "q90": 0.37743,
+            "q95": 0.379567,
+            "q99": 0.382943,
+            "max": 0.38387
+          },
+          "defect": {
+            "mean": 0.560521,
+            "q50": 0.552934,
+            "q90": 0.650587,
+            "q95": 0.679276,
+            "q99": 0.7234,
+            "max": 0.727475
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.472919,
+          "good_pass_at_threshold": 1.0,
+          "margin_vs_good_q95": 0.093352,
+          "margin_vs_good_q99": 0.089977,
+          "overlap_defect_in_good95_region": 0.0
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.432326
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "leather",
+        "config": {
+          "profile_name": "effb0_l23_g14",
+          "backbone": "efficientnet_b0",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 125,
+          "topk_fraction": 0.005
+        },
+        "sample_counts": {
+          "train_normal_images": 245,
+          "test_images": 124,
+          "test_good_images": 32,
+          "test_defect_images": 92
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 64,
+          "bank_patches": 125,
+          "per_image_nn_ops": 1568000,
+          "bank_feature_values": 8000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.464996,
+            "q50": 0.46255,
+            "q90": 0.535964,
+            "q95": 0.560423,
+            "q99": 0.608135,
+            "max": 0.820691
+          },
+          "defect_patch_collision_under_train_q95": 0.883374
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.652823,
+            "q50": 0.648769,
+            "q90": 0.695572,
+            "q95": 0.707835,
+            "q99": 0.751045,
+            "max": 0.765906
+          },
+          "defect": {
+            "mean": 1.01069,
+            "q50": 1.01069,
+            "q90": 1.172342,
+            "q95": 1.223658,
+            "q99": 1.318163,
+            "max": 1.323486
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.760368,
+          "good_pass_at_threshold": 0.96875,
+          "margin_vs_good_q95": 0.052533,
+          "margin_vs_good_q99": 0.009323,
+          "overlap_defect_in_good95_region": 0.01087
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.96875,
+          "good_loss_rate_good": 0.03125,
+          "threshold": 0.720345
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 0.083333,
+          "bank_patches": 0.010417,
+          "per_image_nn_ops": 0.000868,
+          "bank_feature_values": 0.000868
+        }
+      },
+      "hypothesis_reason": "reducible: positive margin remains"
+    },
+    {
+      "category": "metal_nut",
+      "source_selected_config": "wrn_l3_g14_b1500_topk0p01",
+      "baseline": {
+        "label": "baseline",
+        "category": "metal_nut",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 220,
+          "test_images": 115,
+          "test_good_images": 22,
+          "test_defect_images": 93
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.195018,
+            "q50": 0.20542,
+            "q90": 0.387285,
+            "q95": 0.416823,
+            "q99": 0.457729,
+            "max": 0.600585
+          },
+          "defect_patch_collision_under_train_q95": 0.793504
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.476132,
+            "q50": 0.47339,
+            "q90": 0.509261,
+            "q95": 0.520499,
+            "q99": 0.522944,
+            "max": 0.523455
+          },
+          "defect": {
+            "mean": 0.58947,
+            "q50": 0.589747,
+            "q90": 0.62977,
+            "q95": 0.637389,
+            "q99": 0.647666,
+            "max": 0.65655
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.525123,
+          "good_pass_at_threshold": 1.0,
+          "margin_vs_good_q95": 0.004624,
+          "margin_vs_good_q99": 0.002179,
+          "overlap_defect_in_good95_region": 0.032258
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.909091,
+          "good_loss_rate_good": 0.090909,
+          "threshold": 0.510617
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "metal_nut",
+        "config": {
+          "profile_name": "wrn_l3_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 1500,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 220,
+          "test_images": 115,
+          "test_good_images": 22,
+          "test_defect_images": 93
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 512,
+          "bank_patches": 1500,
+          "per_image_nn_ops": 150528000,
+          "bank_feature_values": 768000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.360884,
+            "q50": 0.358605,
+            "q90": 0.534817,
+            "q95": 0.565871,
+            "q99": 0.613839,
+            "max": 0.719871
+          },
+          "defect_patch_collision_under_train_q95": 0.835473
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.624258,
+            "q50": 0.619809,
+            "q90": 0.654182,
+            "q95": 0.656153,
+            "q99": 0.669394,
+            "max": 0.672888
+          },
+          "defect": {
+            "mean": 0.710029,
+            "q50": 0.711177,
+            "q90": 0.742207,
+            "q95": 0.749653,
+            "q99": 0.762784,
+            "max": 0.767327
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.647574,
+          "good_pass_at_threshold": 0.818182,
+          "margin_vs_good_q95": -0.008579,
+          "margin_vs_good_q99": -0.021821,
+          "overlap_defect_in_good95_region": 0.064516
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.772727,
+          "good_loss_rate_good": 0.227273,
+          "threshold": 0.642715
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 0.666667,
+          "bank_patches": 0.125,
+          "per_image_nn_ops": 0.083333,
+          "bank_feature_values": 0.083333
+        }
+      },
+      "hypothesis_reason": "limit: normal/defect score overlap"
+    },
+    {
+      "category": "pill",
+      "source_selected_config": "mobv3l_l23_g7_b2000_topk0p05",
+      "baseline": {
+        "label": "baseline",
+        "category": "pill",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 267,
+          "test_images": 167,
+          "test_good_images": 26,
+          "test_defect_images": 141
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.187811,
+            "q50": 0.207301,
+            "q90": 0.336449,
+            "q95": 0.36271,
+            "q99": 0.408577,
+            "max": 0.559616
+          },
+          "defect_patch_collision_under_train_q95": 0.884897
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.428128,
+            "q50": 0.428574,
+            "q90": 0.448692,
+            "q95": 0.45527,
+            "q99": 0.469827,
+            "max": 0.474469
+          },
+          "defect": {
+            "mean": 0.506495,
+            "q50": 0.500555,
+            "q90": 0.571069,
+            "q95": 0.581246,
+            "q99": 0.612094,
+            "max": 0.62194
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.432716,
+          "good_pass_at_threshold": 0.538462,
+          "margin_vs_good_q95": -0.022554,
+          "margin_vs_good_q99": -0.037112,
+          "overlap_defect_in_good95_region": 0.120567
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.538462,
+          "good_loss_rate_good": 0.461538,
+          "threshold": 0.431207
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "pill",
+        "config": {
+          "profile_name": "mobv3l_l23_g7",
+          "backbone": "mobilenetv3_large_100",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 7,
+          "bank_patches": 2000,
+          "topk_fraction": 0.05
+        },
+        "sample_counts": {
+          "train_normal_images": 267,
+          "test_images": 167,
+          "test_good_images": 26,
+          "test_defect_images": 141
+        },
+        "footprint": {
+          "patch_count": 49,
+          "feature_dim": 64,
+          "bank_patches": 2000,
+          "per_image_nn_ops": 6272000,
+          "bank_feature_values": 128000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.199113,
+            "q50": 0.156171,
+            "q90": 0.430865,
+            "q95": 0.501311,
+            "q99": 0.583499,
+            "max": 0.726138
+          },
+          "defect_patch_collision_under_train_q95": 0.909249
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.53233,
+            "q50": 0.535016,
+            "q90": 0.562917,
+            "q95": 0.566503,
+            "q99": 0.605321,
+            "max": 0.618135
+          },
+          "defect": {
+            "mean": 0.624777,
+            "q50": 0.601055,
+            "q90": 0.703472,
+            "q95": 0.753217,
+            "q99": 0.952427,
+            "max": 0.960964
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.523871,
+          "good_pass_at_threshold": 0.346154,
+          "margin_vs_good_q95": -0.042631,
+          "margin_vs_good_q99": -0.08145,
+          "overlap_defect_in_good95_region": 0.219858
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.307692,
+          "good_loss_rate_good": 0.692308,
+          "threshold": 0.516807
+        },
+        "relative_to_baseline": {
+          "patch_count": 0.25,
+          "feature_dim": 0.083333,
+          "bank_patches": 0.166667,
+          "per_image_nn_ops": 0.003472,
+          "bank_feature_values": 0.013889
+        }
+      },
+      "hypothesis_reason": "limit: normal/defect score overlap"
+    },
+    {
+      "category": "screw",
+      "source_selected_config": "res34_l23_g14_b9000_topk0p05",
+      "baseline": {
+        "label": "baseline",
+        "category": "screw",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 320,
+          "test_images": 160,
+          "test_good_images": 41,
+          "test_defect_images": 119
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.214983,
+            "q50": 0.251664,
+            "q90": 0.31222,
+            "q95": 0.335822,
+            "q99": 0.402891,
+            "max": 0.549592
+          },
+          "defect_patch_collision_under_train_q95": 0.90096
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.433402,
+            "q50": 0.428167,
+            "q90": 0.478757,
+            "q95": 0.48923,
+            "q99": 0.492741,
+            "max": 0.49402
+          },
+          "defect": {
+            "mean": 0.47375,
+            "q50": 0.471224,
+            "q90": 0.518511,
+            "q95": 0.535633,
+            "q99": 0.555879,
+            "max": 0.558798
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.421098,
+          "good_pass_at_threshold": 0.390244,
+          "margin_vs_good_q95": -0.068133,
+          "margin_vs_good_q99": -0.071643,
+          "overlap_defect_in_good95_region": 0.722689
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.390244,
+          "good_loss_rate_good": 0.609756,
+          "threshold": 0.419996
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "screw",
+        "config": {
+          "profile_name": "res34_l23_g14",
+          "backbone": "resnet34",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 9000,
+          "topk_fraction": 0.05
+        },
+        "sample_counts": {
+          "train_normal_images": 320,
+          "test_images": 160,
+          "test_good_images": 41,
+          "test_defect_images": 119
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 192,
+          "bank_patches": 9000,
+          "per_image_nn_ops": 338688000,
+          "bank_feature_values": 1728000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.146603,
+            "q50": 0.152663,
+            "q90": 0.229048,
+            "q95": 0.268955,
+            "q99": 0.332695,
+            "max": 0.430651
+          },
+          "defect_patch_collision_under_train_q95": 0.920168
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.312228,
+            "q50": 0.314673,
+            "q90": 0.32831,
+            "q95": 0.335854,
+            "q99": 0.342622,
+            "max": 0.346351
+          },
+          "defect": {
+            "mean": 0.331709,
+            "q50": 0.332689,
+            "q90": 0.351488,
+            "q95": 0.356184,
+            "q99": 0.370479,
+            "max": 0.373481
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.296391,
+          "good_pass_at_threshold": 0.170732,
+          "margin_vs_good_q95": -0.039462,
+          "margin_vs_good_q99": -0.04623,
+          "overlap_defect_in_good95_region": 0.563025
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.170732,
+          "good_loss_rate_good": 0.829268,
+          "threshold": 0.295961
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 0.25,
+          "bank_patches": 0.75,
+          "per_image_nn_ops": 0.1875,
+          "bank_feature_values": 0.1875
+        }
+      },
+      "hypothesis_reason": "limit: normal/defect score overlap"
+    },
+    {
+      "category": "tile",
+      "source_selected_config": "effb0_l23_g14_b250_topk0p02",
+      "baseline": {
+        "label": "baseline",
+        "category": "tile",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 230,
+          "test_images": 117,
+          "test_good_images": 33,
+          "test_defect_images": 84
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.267844,
+            "q50": 0.353311,
+            "q90": 0.391109,
+            "q95": 0.402852,
+            "q99": 0.427059,
+            "max": 0.534147
+          },
+          "defect_patch_collision_under_train_q95": 0.758989
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.437737,
+            "q50": 0.43708,
+            "q90": 0.459366,
+            "q95": 0.473323,
+            "q99": 0.475977,
+            "max": 0.476724
+          },
+          "defect": {
+            "mean": 0.566693,
+            "q50": 0.560325,
+            "q90": 0.655329,
+            "q95": 0.671564,
+            "q99": 0.694576,
+            "max": 0.709267
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.478085,
+          "good_pass_at_threshold": 1.0,
+          "margin_vs_good_q95": 0.004762,
+          "margin_vs_good_q99": 0.002109,
+          "overlap_defect_in_good95_region": 0.02381
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.477017
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "tile",
+        "config": {
+          "profile_name": "effb0_l23_g14",
+          "backbone": "efficientnet_b0",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 250,
+          "topk_fraction": 0.02
+        },
+        "sample_counts": {
+          "train_normal_images": 230,
+          "test_images": 117,
+          "test_good_images": 33,
+          "test_defect_images": 84
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 64,
+          "bank_patches": 250,
+          "per_image_nn_ops": 3136000,
+          "bank_feature_values": 16000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.646098,
+            "q50": 0.648544,
+            "q90": 0.728482,
+            "q95": 0.751396,
+            "q99": 0.793812,
+            "max": 1.035035
+          },
+          "defect_patch_collision_under_train_q95": 0.860726
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.795298,
+            "q50": 0.791446,
+            "q90": 0.821073,
+            "q95": 0.833862,
+            "q99": 0.838399,
+            "max": 0.838893
+          },
+          "defect": {
+            "mean": 0.891096,
+            "q50": 0.887013,
+            "q90": 0.936999,
+            "q95": 0.976652,
+            "q99": 0.985987,
+            "max": 0.996582
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.82229,
+          "good_pass_at_threshold": 0.909091,
+          "margin_vs_good_q95": -0.011572,
+          "margin_vs_good_q99": -0.016109,
+          "overlap_defect_in_good95_region": 0.107143
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.878788,
+          "good_loss_rate_good": 0.121212,
+          "threshold": 0.817094
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 0.083333,
+          "bank_patches": 0.020833,
+          "per_image_nn_ops": 0.001736,
+          "bank_feature_values": 0.001736
+        }
+      },
+      "hypothesis_reason": "reducible but margin is tight"
+    },
+    {
+      "category": "toothbrush",
+      "source_selected_config": "effb0_l23_g10_b750_topk0p05",
+      "baseline": {
+        "label": "baseline",
+        "category": "toothbrush",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 11760,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 60,
+          "test_images": 42,
+          "test_good_images": 12,
+          "test_defect_images": 30
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 11760,
+          "per_image_nn_ops": 1770209280,
+          "bank_feature_values": 9031680
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.000284,
+            "q50": 0.0,
+            "q90": 0.000772,
+            "q95": 0.000846,
+            "q99": 0.001036,
+            "max": 0.001337
+          },
+          "defect_patch_collision_under_train_q95": 0.0
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.408139,
+            "q50": 0.386037,
+            "q90": 0.463401,
+            "q95": 0.470456,
+            "q99": 0.477151,
+            "max": 0.478825
+          },
+          "defect": {
+            "mean": 0.587677,
+            "q50": 0.593835,
+            "q90": 0.692199,
+            "q95": 0.698739,
+            "q99": 0.705138,
+            "max": 0.70683
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.453397,
+          "good_pass_at_threshold": 0.75,
+          "margin_vs_good_q95": -0.017059,
+          "margin_vs_good_q99": -0.023754,
+          "overlap_defect_in_good95_region": 0.1
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.75,
+          "good_loss_rate_good": 0.25,
+          "threshold": 0.426237
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "toothbrush",
+        "config": {
+          "profile_name": "effb0_l23_g10",
+          "backbone": "efficientnet_b0",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 10,
+          "bank_patches": 750,
+          "topk_fraction": 0.05
+        },
+        "sample_counts": {
+          "train_normal_images": 60,
+          "test_images": 42,
+          "test_good_images": 12,
+          "test_defect_images": 30
+        },
+        "footprint": {
+          "patch_count": 100,
+          "feature_dim": 64,
+          "bank_patches": 750,
+          "per_image_nn_ops": 4800000,
+          "bank_feature_values": 48000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.225883,
+            "q50": 0.156466,
+            "q90": 0.565529,
+            "q95": 0.645418,
+            "q99": 0.757412,
+            "max": 0.923617
+          },
+          "defect_patch_collision_under_train_q95": 0.899333
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.702998,
+            "q50": 0.696828,
+            "q90": 0.733468,
+            "q95": 0.755077,
+            "q99": 0.77507,
+            "max": 0.780069
+          },
+          "defect": {
+            "mean": 0.847505,
+            "q50": 0.848573,
+            "q90": 0.967684,
+            "q95": 0.993863,
+            "q99": 1.015954,
+            "max": 1.02411
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.726113,
+          "good_pass_at_threshold": 0.833333,
+          "margin_vs_good_q95": -0.028964,
+          "margin_vs_good_q99": -0.048958,
+          "overlap_defect_in_good95_region": 0.133333
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.75,
+          "good_loss_rate_good": 0.25,
+          "threshold": 0.713305
+        },
+        "relative_to_baseline": {
+          "patch_count": 0.510204,
+          "feature_dim": 0.083333,
+          "bank_patches": 0.063776,
+          "per_image_nn_ops": 0.002712,
+          "bank_feature_values": 0.005315
+        }
+      },
+      "hypothesis_reason": "limit: normal/defect score overlap"
+    },
+    {
+      "category": "transistor",
+      "source_selected_config": "res34_l23_g10_b6000_topk0p005",
+      "baseline": {
+        "label": "baseline",
+        "category": "transistor",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 213,
+          "test_images": 100,
+          "test_good_images": 60,
+          "test_defect_images": 40
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.185345,
+            "q50": 0.217199,
+            "q90": 0.338329,
+            "q95": 0.369114,
+            "q99": 0.424315,
+            "max": 0.561688
+          },
+          "defect_patch_collision_under_train_q95": 0.832908
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.448152,
+            "q50": 0.449653,
+            "q90": 0.488426,
+            "q95": 0.498798,
+            "q99": 0.528241,
+            "max": 0.532368
+          },
+          "defect": {
+            "mean": 0.548842,
+            "q50": 0.544122,
+            "q90": 0.610732,
+            "q95": 0.618185,
+            "q99": 0.688447,
+            "max": 0.696833
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.456,
+          "good_pass_at_threshold": 0.6,
+          "margin_vs_good_q95": -0.042798,
+          "margin_vs_good_q99": -0.072241,
+          "overlap_defect_in_good95_region": 0.125
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.6,
+          "good_loss_rate_good": 0.4,
+          "threshold": 0.455124
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "transistor",
+        "config": {
+          "profile_name": "res34_l23_g10",
+          "backbone": "resnet34",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 10,
+          "bank_patches": 6000,
+          "topk_fraction": 0.005
+        },
+        "sample_counts": {
+          "train_normal_images": 213,
+          "test_images": 100,
+          "test_good_images": 60,
+          "test_defect_images": 40
+        },
+        "footprint": {
+          "patch_count": 100,
+          "feature_dim": 192,
+          "bank_patches": 6000,
+          "per_image_nn_ops": 115200000,
+          "bank_feature_values": 1152000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.153109,
+            "q50": 0.172198,
+            "q90": 0.288366,
+            "q95": 0.326505,
+            "q99": 0.389853,
+            "max": 0.499649
+          },
+          "defect_patch_collision_under_train_q95": 0.84325
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.400229,
+            "q50": 0.402163,
+            "q90": 0.432514,
+            "q95": 0.439326,
+            "q99": 0.463004,
+            "max": 0.467268
+          },
+          "defect": {
+            "mean": 0.476946,
+            "q50": 0.470892,
+            "q90": 0.553328,
+            "q95": 0.566657,
+            "q99": 0.593557,
+            "max": 0.601181
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.399934,
+          "good_pass_at_threshold": 0.45,
+          "margin_vs_good_q95": -0.039393,
+          "margin_vs_good_q99": -0.063071,
+          "overlap_defect_in_good95_region": 0.25
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.4,
+          "good_loss_rate_good": 0.6,
+          "threshold": 0.395638
+        },
+        "relative_to_baseline": {
+          "patch_count": 0.510204,
+          "feature_dim": 0.25,
+          "bank_patches": 0.5,
+          "per_image_nn_ops": 0.063776,
+          "bank_feature_values": 0.125
+        }
+      },
+      "hypothesis_reason": "limit: normal/defect score overlap"
+    },
+    {
+      "category": "wood",
+      "source_selected_config": "mobv3s_l23_g7_b125_topk0p005",
+      "baseline": {
+        "label": "baseline",
+        "category": "wood",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 247,
+          "test_images": 79,
+          "test_good_images": 19,
+          "test_defect_images": 60
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.245633,
+            "q50": 0.316206,
+            "q90": 0.360777,
+            "q95": 0.373178,
+            "q99": 0.400359,
+            "max": 0.541733
+          },
+          "defect_patch_collision_under_train_q95": 0.712755
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.422579,
+            "q50": 0.411847,
+            "q90": 0.47678,
+            "q95": 0.494317,
+            "q99": 0.495135,
+            "max": 0.49534
+          },
+          "defect": {
+            "mean": 0.596975,
+            "q50": 0.596894,
+            "q90": 0.648901,
+            "q95": 0.669415,
+            "q99": 0.67339,
+            "max": 0.677442
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.490509,
+          "good_pass_at_threshold": 0.894737,
+          "margin_vs_good_q95": -0.003808,
+          "margin_vs_good_q99": -0.004626,
+          "overlap_defect_in_good95_region": 0.033333
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.842105,
+          "good_loss_rate_good": 0.157895,
+          "threshold": 0.460192
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "wood",
+        "config": {
+          "profile_name": "mobv3s_l23_g7",
+          "backbone": "mobilenetv3_small_100",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 7,
+          "bank_patches": 125,
+          "topk_fraction": 0.005
+        },
+        "sample_counts": {
+          "train_normal_images": 247,
+          "test_images": 79,
+          "test_good_images": 19,
+          "test_defect_images": 60
+        },
+        "footprint": {
+          "patch_count": 49,
+          "feature_dim": 40,
+          "bank_patches": 125,
+          "per_image_nn_ops": 245000,
+          "bank_feature_values": 5000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.266882,
+            "q50": 0.265404,
+            "q90": 0.325459,
+            "q95": 0.347386,
+            "q99": 0.38906,
+            "max": 0.516657
+          },
+          "defect_patch_collision_under_train_q95": 0.844898
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.374171,
+            "q50": 0.360251,
+            "q90": 0.459064,
+            "q95": 0.484262,
+            "q99": 0.492377,
+            "max": 0.494405
+          },
+          "defect": {
+            "mean": 0.626801,
+            "q50": 0.542981,
+            "q90": 0.9368,
+            "q95": 0.986471,
+            "q99": 1.124836,
+            "max": 1.175876
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.394421,
+          "good_pass_at_threshold": 0.736842,
+          "margin_vs_good_q95": -0.089841,
+          "margin_vs_good_q99": -0.097955,
+          "overlap_defect_in_good95_region": 0.283333
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.526316,
+          "good_loss_rate_good": 0.473684,
+          "threshold": 0.360309
+        },
+        "relative_to_baseline": {
+          "patch_count": 0.25,
+          "feature_dim": 0.052083,
+          "bank_patches": 0.010417,
+          "per_image_nn_ops": 0.000136,
+          "bank_feature_values": 0.000543
+        }
+      },
+      "hypothesis_reason": "limit: normal/defect score overlap"
+    },
+    {
+      "category": "zipper",
+      "source_selected_config": "wrn_l3_g14_b1500_topk0p05",
+      "baseline": {
+        "label": "baseline",
+        "category": "zipper",
+        "config": {
+          "profile_name": "wrn_l23_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 12000,
+          "topk_fraction": 0.01
+        },
+        "sample_counts": {
+          "train_normal_images": 240,
+          "test_images": 151,
+          "test_good_images": 32,
+          "test_defect_images": 119
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 768,
+          "bank_patches": 12000,
+          "per_image_nn_ops": 1806336000,
+          "bank_feature_values": 9216000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.137185,
+            "q50": 0.178226,
+            "q90": 0.239065,
+            "q95": 0.251886,
+            "q99": 0.278917,
+            "max": 0.410038
+          },
+          "defect_patch_collision_under_train_q95": 0.76059
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.32214,
+            "q50": 0.311351,
+            "q90": 0.372983,
+            "q95": 0.401837,
+            "q99": 0.419051,
+            "max": 0.425632
+          },
+          "defect": {
+            "mean": 0.479184,
+            "q50": 0.455913,
+            "q90": 0.617563,
+            "q95": 0.657047,
+            "q99": 0.692494,
+            "max": 0.708974
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.369763,
+          "good_pass_at_threshold": 0.875,
+          "margin_vs_good_q95": -0.032074,
+          "margin_vs_good_q99": -0.049288,
+          "overlap_defect_in_good95_region": 0.168067
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.875,
+          "good_loss_rate_good": 0.125,
+          "threshold": 0.358354
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 1.0,
+          "bank_patches": 1.0,
+          "per_image_nn_ops": 1.0,
+          "bank_feature_values": 1.0
+        }
+      },
+      "reduced": {
+        "label": "reduced",
+        "category": "zipper",
+        "config": {
+          "profile_name": "wrn_l3_g14",
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "patch_grid": 14,
+          "bank_patches": 1500,
+          "topk_fraction": 0.05
+        },
+        "sample_counts": {
+          "train_normal_images": 240,
+          "test_images": 151,
+          "test_good_images": 32,
+          "test_defect_images": 119
+        },
+        "footprint": {
+          "patch_count": 196,
+          "feature_dim": 512,
+          "bank_patches": 1500,
+          "per_image_nn_ops": 150528000,
+          "bank_feature_values": 768000
+        },
+        "coverage": {
+          "normal_train_patch_to_bank_distance": {
+            "mean": 0.223775,
+            "q50": 0.244452,
+            "q90": 0.303568,
+            "q95": 0.323581,
+            "q99": 0.36689,
+            "max": 0.582764
+          },
+          "defect_patch_collision_under_train_q95": 0.815984
+        },
+        "image_score_distribution": {
+          "good": {
+            "mean": 0.361801,
+            "q50": 0.355433,
+            "q90": 0.399759,
+            "q95": 0.409076,
+            "q99": 0.425584,
+            "max": 0.430452
+          },
+          "defect": {
+            "mean": 0.470294,
+            "q50": 0.458542,
+            "q90": 0.557987,
+            "q95": 0.572128,
+            "q99": 0.626022,
+            "max": 0.668393
+          }
+        },
+        "margin": {
+          "threshold_from_defect_quantile": 0.386306,
+          "good_pass_at_threshold": 0.84375,
+          "margin_vs_good_q95": -0.02277,
+          "margin_vs_good_q99": -0.039278,
+          "overlap_defect_in_good95_region": 0.159664
+        },
+        "constraint_result": {
+          "false_pass_target": 0.03,
+          "good_pass_rate_good": 0.84375,
+          "good_loss_rate_good": 0.15625,
+          "threshold": 0.381083
+        },
+        "relative_to_baseline": {
+          "patch_count": 1.0,
+          "feature_dim": 0.666667,
+          "bank_patches": 0.125,
+          "per_image_nn_ops": 0.083333,
+          "bank_feature_values": 0.083333
+        }
+      },
+      "hypothesis_reason": "reducible but margin is tight"
+    }
+  ],
+  "outputs": {
+    "markdown": "docs/mvtec_patchcore_reduction_limit_probe_002.md",
+    "figure": "results/mvtec_patchcore_reduction_limit_probe_002.png"
+  }
+}

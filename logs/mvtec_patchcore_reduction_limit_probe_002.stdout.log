@@ -473,3 +473,463 @@ patchcore nn:   0%|          | 0/12 [00:00<?, ?it/s]
                                                     
 
 patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+baseline metal_nut train:   0%|          | 0/14 [00:00<?, ?it/s]
+baseline metal_nut train:   7%|▋         | 1/14 [00:00<00:05,  2.48it/s]
+baseline metal_nut train:  21%|██▏       | 3/14 [00:00<00:02,  4.78it/s]
+baseline metal_nut train:  36%|███▌      | 5/14 [00:00<00:01,  5.77it/s]
+baseline metal_nut train:  50%|█████     | 7/14 [00:01<00:01,  6.28it/s]
+baseline metal_nut train:  64%|██████▍   | 9/14 [00:01<00:00,  6.62it/s]
+baseline metal_nut train:  79%|███████▊  | 11/14 [00:01<00:00,  6.83it/s]
+baseline metal_nut train:  93%|█████████▎| 13/14 [00:02<00:00,  7.00it/s]
+                                                                         
+
+baseline metal_nut test:   0%|          | 0/8 [00:00<?, ?it/s]
+baseline metal_nut test:  12%|█▎        | 1/8 [00:00<00:02,  2.67it/s]
+baseline metal_nut test:  38%|███▊      | 3/8 [00:00<00:00,  5.07it/s]
+baseline metal_nut test:  62%|██████▎   | 5/8 [00:00<00:00,  6.01it/s]
+baseline metal_nut test:  88%|████████▊ | 7/8 [00:01<00:00,  6.49it/s]
+                                                                      
+
+patchcore nn:   0%|          | 0/11 [00:00<?, ?it/s]
+patchcore nn:  18%|█▊        | 2/11 [00:00<00:00, 11.82it/s]
+patchcore nn:  36%|███▋      | 4/11 [00:00<00:00, 12.00it/s]
+patchcore nn:  55%|█████▍    | 6/11 [00:00<00:00, 12.07it/s]
+patchcore nn:  73%|███████▎  | 8/11 [00:00<00:00, 12.08it/s]
+patchcore nn:  91%|█████████ | 10/11 [00:00<00:00, 12.06it/s]
+                                                             
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+patchcore nn:  33%|███▎      | 2/6 [00:00<00:00, 12.21it/s]
+patchcore nn:  67%|██████▋   | 4/6 [00:00<00:00, 12.19it/s]
+patchcore nn: 100%|██████████| 6/6 [00:00<00:00, 13.54it/s]
+                                                           
+
+reduced metal_nut train:   0%|          | 0/14 [00:00<?, ?it/s]
+reduced metal_nut train:   7%|▋         | 1/14 [00:00<00:04,  2.87it/s]
+reduced metal_nut train:  21%|██▏       | 3/14 [00:00<00:01,  5.58it/s]
+reduced metal_nut train:  36%|███▌      | 5/14 [00:00<00:01,  6.68it/s]
+reduced metal_nut train:  50%|█████     | 7/14 [00:01<00:00,  7.23it/s]
+reduced metal_nut train:  64%|██████▍   | 9/14 [00:01<00:00,  7.57it/s]
+reduced metal_nut train:  79%|███████▊  | 11/14 [00:01<00:00,  7.74it/s]
+reduced metal_nut train:  93%|█████████▎| 13/14 [00:01<00:00,  7.89it/s]
+                                                                        
+
+reduced metal_nut test:   0%|          | 0/8 [00:00<?, ?it/s]
+reduced metal_nut test:  12%|█▎        | 1/8 [00:00<00:02,  2.94it/s]
+reduced metal_nut test:  38%|███▊      | 3/8 [00:00<00:00,  5.63it/s]
+reduced metal_nut test:  62%|██████▎   | 5/8 [00:00<00:00,  6.71it/s]
+reduced metal_nut test:  88%|████████▊ | 7/8 [00:01<00:00,  7.35it/s]
+                                                                     
+
+patchcore nn:   0%|          | 0/11 [00:00<?, ?it/s]
+                                                    
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+baseline pill train:   0%|          | 0/17 [00:00<?, ?it/s]
+baseline pill train:   6%|▌         | 1/17 [00:00<00:07,  2.14it/s]
+baseline pill train:  18%|█▊        | 3/17 [00:00<00:03,  3.98it/s]
+baseline pill train:  29%|██▉       | 5/17 [00:01<00:02,  4.64it/s]
+baseline pill train:  41%|████      | 7/17 [00:01<00:02,  4.99it/s]
+baseline pill train:  53%|█████▎    | 9/17 [00:01<00:01,  5.16it/s]
+baseline pill train:  65%|██████▍   | 11/17 [00:02<00:01,  5.28it/s]
+baseline pill train:  76%|███████▋  | 13/17 [00:02<00:00,  5.35it/s]
+baseline pill train:  88%|████████▊ | 15/17 [00:02<00:00,  5.42it/s]
+baseline pill train: 100%|██████████| 17/17 [00:03<00:00,  6.09it/s]
+                                                                    
+
+baseline pill test:   0%|          | 0/11 [00:00<?, ?it/s]
+baseline pill test:   9%|▉         | 1/11 [00:00<00:04,  2.15it/s]
+baseline pill test:  27%|██▋       | 3/11 [00:00<00:02,  3.93it/s]
+baseline pill test:  45%|████▌     | 5/11 [00:01<00:01,  4.60it/s]
+baseline pill test:  64%|██████▎   | 7/11 [00:01<00:00,  4.94it/s]
+baseline pill test:  82%|████████▏ | 9/11 [00:01<00:00,  5.11it/s]
+baseline pill test: 100%|██████████| 11/11 [00:02<00:00,  6.55it/s]
+                                                                   
+
+patchcore nn:   0%|          | 0/13 [00:00<?, ?it/s]
+patchcore nn:  15%|█▌        | 2/13 [00:00<00:00, 12.23it/s]
+patchcore nn:  31%|███       | 4/13 [00:00<00:00, 12.15it/s]
+patchcore nn:  46%|████▌     | 6/13 [00:00<00:00, 12.13it/s]
+patchcore nn:  62%|██████▏   | 8/13 [00:00<00:00, 12.11it/s]
+patchcore nn:  77%|███████▋  | 10/13 [00:00<00:00, 12.11it/s]
+patchcore nn:  92%|█████████▏| 12/13 [00:00<00:00, 12.06it/s]
+                                                             
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+patchcore nn:  25%|██▌       | 2/8 [00:00<00:00, 12.14it/s]
+patchcore nn:  50%|█████     | 4/8 [00:00<00:00, 12.12it/s]
+patchcore nn:  75%|███████▌  | 6/8 [00:00<00:00, 12.11it/s]
+patchcore nn: 100%|██████████| 8/8 [00:00<00:00, 12.11it/s]
+                                                           
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+
+reduced pill train:   0%|          | 0/17 [00:00<?, ?it/s]
+reduced pill train:   6%|▌         | 1/17 [00:00<00:07,  2.24it/s]
+reduced pill train:  18%|█▊        | 3/17 [00:00<00:03,  4.43it/s]
+reduced pill train:  29%|██▉       | 5/17 [00:01<00:02,  5.11it/s]
+reduced pill train:  41%|████      | 7/17 [00:01<00:01,  5.43it/s]
+reduced pill train:  53%|█████▎    | 9/17 [00:01<00:01,  5.63it/s]
+reduced pill train:  65%|██████▍   | 11/17 [00:02<00:01,  5.79it/s]
+reduced pill train:  76%|███████▋  | 13/17 [00:02<00:00,  5.90it/s]
+reduced pill train:  88%|████████▊ | 15/17 [00:02<00:00,  5.97it/s]
+reduced pill train: 100%|██████████| 17/17 [00:02<00:00,  6.61it/s]
+                                                                   
+
+reduced pill test:   0%|          | 0/11 [00:00<?, ?it/s]
+reduced pill test:   9%|▉         | 1/11 [00:00<00:04,  2.43it/s]
+reduced pill test:  27%|██▋       | 3/11 [00:00<00:01,  4.36it/s]
+reduced pill test:  45%|████▌     | 5/11 [00:01<00:01,  5.10it/s]
+reduced pill test:  64%|██████▎   | 7/11 [00:01<00:00,  5.45it/s]
+reduced pill test:  82%|████████▏ | 9/11 [00:01<00:00,  5.67it/s]
+reduced pill test: 100%|██████████| 11/11 [00:01<00:00,  6.97it/s]
+                                                                  
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+baseline screw train:   0%|          | 0/20 [00:00<?, ?it/s]
+baseline screw train:   5%|▌         | 1/20 [00:00<00:10,  1.87it/s]
+baseline screw train:  15%|█▌        | 3/20 [00:00<00:05,  3.40it/s]
+baseline screw train:  25%|██▌       | 5/20 [00:01<00:03,  3.97it/s]
+baseline screw train:  35%|███▌      | 7/20 [00:01<00:03,  4.25it/s]
+baseline screw train:  45%|████▌     | 9/20 [00:02<00:02,  4.40it/s]
+baseline screw train:  55%|█████▌    | 11/20 [00:02<00:02,  4.49it/s]
+baseline screw train:  65%|██████▌   | 13/20 [00:03<00:01,  4.53it/s]
+baseline screw train:  75%|███████▌  | 15/20 [00:03<00:01,  4.54it/s]
+baseline screw train:  85%|████████▌ | 17/20 [00:03<00:00,  4.54it/s]
+baseline screw train:  95%|█████████▌| 19/20 [00:04<00:00,  4.56it/s]
+                                                                     
+
+baseline screw test:   0%|          | 0/10 [00:00<?, ?it/s]
+baseline screw test:  10%|█         | 1/10 [00:00<00:04,  1.91it/s]
+baseline screw test:  30%|███       | 3/10 [00:00<00:02,  3.43it/s]
+baseline screw test:  50%|█████     | 5/10 [00:01<00:01,  3.96it/s]
+baseline screw test:  70%|███████   | 7/10 [00:01<00:00,  4.20it/s]
+baseline screw test:  90%|█████████ | 9/10 [00:02<00:00,  4.35it/s]
+                                                                   
+
+patchcore nn:   0%|          | 0/16 [00:00<?, ?it/s]
+patchcore nn:   6%|▋         | 1/16 [00:00<00:01,  9.46it/s]
+patchcore nn:  19%|█▉        | 3/16 [00:00<00:01, 11.05it/s]
+patchcore nn:  31%|███▏      | 5/16 [00:00<00:00, 11.41it/s]
+patchcore nn:  44%|████▍     | 7/16 [00:00<00:00, 11.56it/s]
+patchcore nn:  56%|█████▋    | 9/16 [00:00<00:00, 11.69it/s]
+patchcore nn:  69%|██████▉   | 11/16 [00:00<00:00, 11.72it/s]
+patchcore nn:  81%|████████▏ | 13/16 [00:01<00:00, 11.80it/s]
+patchcore nn:  94%|█████████▍| 15/16 [00:01<00:00, 11.79it/s]
+                                                             
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+patchcore nn:  25%|██▌       | 2/8 [00:00<00:00, 12.13it/s]
+patchcore nn:  50%|█████     | 4/8 [00:00<00:00, 12.15it/s]
+patchcore nn:  75%|███████▌  | 6/8 [00:00<00:00, 12.10it/s]
+patchcore nn: 100%|██████████| 8/8 [00:00<00:00, 12.90it/s]
+                                                           
+
+reduced screw train:   0%|          | 0/20 [00:00<?, ?it/s]
+reduced screw train:   5%|▌         | 1/20 [00:00<00:09,  2.05it/s]
+reduced screw train:  15%|█▌        | 3/20 [00:00<00:04,  3.69it/s]
+reduced screw train:  25%|██▌       | 5/20 [00:01<00:03,  4.29it/s]
+reduced screw train:  35%|███▌      | 7/20 [00:01<00:02,  4.59it/s]
+reduced screw train:  45%|████▌     | 9/20 [00:02<00:02,  4.74it/s]
+reduced screw train:  55%|█████▌    | 11/20 [00:02<00:01,  4.86it/s]
+reduced screw train:  65%|██████▌   | 13/20 [00:02<00:01,  4.95it/s]
+reduced screw train:  75%|███████▌  | 15/20 [00:03<00:01,  4.99it/s]
+reduced screw train:  85%|████████▌ | 17/20 [00:03<00:00,  5.03it/s]
+reduced screw train:  95%|█████████▌| 19/20 [00:04<00:00,  5.06it/s]
+                                                                    
+
+reduced screw test:   0%|          | 0/10 [00:00<?, ?it/s]
+reduced screw test:  10%|█         | 1/10 [00:00<00:04,  2.12it/s]
+reduced screw test:  30%|███       | 3/10 [00:00<00:01,  3.76it/s]
+reduced screw test:  50%|█████     | 5/10 [00:01<00:01,  4.34it/s]
+reduced screw test:  70%|███████   | 7/10 [00:01<00:00,  4.63it/s]
+reduced screw test:  90%|█████████ | 9/10 [00:02<00:00,  4.80it/s]
+                                                                  
+
+patchcore nn:   0%|          | 0/16 [00:00<?, ?it/s]
+patchcore nn:  25%|██▌       | 4/16 [00:00<00:00, 33.51it/s]
+patchcore nn:  50%|█████     | 8/16 [00:00<00:00, 33.43it/s]
+patchcore nn:  75%|███████▌  | 12/16 [00:00<00:00, 33.46it/s]
+patchcore nn: 100%|██████████| 16/16 [00:00<00:00, 35.62it/s]
+                                                             
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+patchcore nn:  50%|█████     | 4/8 [00:00<00:00, 33.49it/s]
+patchcore nn: 100%|██████████| 8/8 [00:00<00:00, 35.14it/s]
+                                                           
+
+baseline tile train:   0%|          | 0/15 [00:00<?, ?it/s]
+baseline tile train:   7%|▋         | 1/15 [00:00<00:07,  1.97it/s]
+baseline tile train:  20%|██        | 3/15 [00:00<00:03,  3.61it/s]
+baseline tile train:  33%|███▎      | 5/15 [00:01<00:02,  4.22it/s]
+baseline tile train:  47%|████▋     | 7/15 [00:01<00:01,  4.53it/s]
+baseline tile train:  60%|██████    | 9/15 [00:02<00:01,  4.70it/s]
+baseline tile train:  73%|███████▎  | 11/15 [00:02<00:00,  4.80it/s]
+baseline tile train:  87%|████████▋ | 13/15 [00:02<00:00,  4.87it/s]
+baseline tile train: 100%|██████████| 15/15 [00:03<00:00,  6.23it/s]
+                                                                    
+
+baseline tile test:   0%|          | 0/8 [00:00<?, ?it/s]
+baseline tile test:  12%|█▎        | 1/8 [00:00<00:03,  1.95it/s]
+baseline tile test:  38%|███▊      | 3/8 [00:00<00:01,  3.50it/s]
+baseline tile test:  62%|██████▎   | 5/8 [00:01<00:00,  4.11it/s]
+baseline tile test:  88%|████████▊ | 7/8 [00:01<00:00,  4.46it/s]
+                                                                 
+
+patchcore nn:   0%|          | 0/12 [00:00<?, ?it/s]
+patchcore nn:  17%|█▋        | 2/12 [00:00<00:00, 11.74it/s]
+patchcore nn:  33%|███▎      | 4/12 [00:00<00:00, 11.97it/s]
+patchcore nn:  50%|█████     | 6/12 [00:00<00:00, 11.98it/s]
+patchcore nn:  67%|██████▋   | 8/12 [00:00<00:00, 12.01it/s]
+patchcore nn:  83%|████████▎ | 10/12 [00:00<00:00, 12.01it/s]
+                                                             
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+patchcore nn:  33%|███▎      | 2/6 [00:00<00:00, 12.18it/s]
+patchcore nn:  67%|██████▋   | 4/6 [00:00<00:00, 12.09it/s]
+patchcore nn: 100%|██████████| 6/6 [00:00<00:00, 13.16it/s]
+                                                           
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+
+reduced tile train:   0%|          | 0/15 [00:00<?, ?it/s]
+reduced tile train:   7%|▋         | 1/15 [00:00<00:06,  2.17it/s]
+reduced tile train:  20%|██        | 3/15 [00:00<00:03,  3.95it/s]
+reduced tile train:  33%|███▎      | 5/15 [00:01<00:02,  4.62it/s]
+reduced tile train:  47%|████▋     | 7/15 [00:01<00:01,  4.94it/s]
+reduced tile train:  60%|██████    | 9/15 [00:01<00:01,  5.12it/s]
+reduced tile train:  73%|███████▎  | 11/15 [00:02<00:00,  5.24it/s]
+reduced tile train:  87%|████████▋ | 13/15 [00:02<00:00,  5.31it/s]
+reduced tile train: 100%|██████████| 15/15 [00:02<00:00,  6.55it/s]
+                                                                   
+
+reduced tile test:   0%|          | 0/8 [00:00<?, ?it/s]
+reduced tile test:  12%|█▎        | 1/8 [00:00<00:03,  2.24it/s]
+reduced tile test:  38%|███▊      | 3/8 [00:00<00:01,  3.98it/s]
+reduced tile test:  62%|██████▎   | 5/8 [00:01<00:00,  4.64it/s]
+reduced tile test:  88%|████████▊ | 7/8 [00:01<00:00,  5.03it/s]
+                                                                
+
+patchcore nn:   0%|          | 0/12 [00:00<?, ?it/s]
+                                                    
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                   
+
+baseline toothbrush train:   0%|          | 0/4 [00:00<?, ?it/s]
+baseline toothbrush train:  25%|██▌       | 1/4 [00:00<00:02,  1.49it/s]
+baseline toothbrush train:  75%|███████▌  | 3/4 [00:01<00:00,  2.66it/s]
+                                                                        
+
+baseline toothbrush test:   0%|          | 0/3 [00:00<?, ?it/s]
+baseline toothbrush test:  33%|███▎      | 1/3 [00:00<00:01,  1.54it/s]
+baseline toothbrush test: 100%|██████████| 3/3 [00:00<00:00,  3.45it/s]
+                                                                       
+
+patchcore nn:   0%|          | 0/3 [00:00<?, ?it/s]
+patchcore nn:  67%|██████▋   | 2/3 [00:00<00:00, 12.26it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/3 [00:00<?, ?it/s]
+patchcore nn:  67%|██████▋   | 2/3 [00:00<00:00, 12.30it/s]
+                                                           
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+
+reduced toothbrush train:   0%|          | 0/4 [00:00<?, ?it/s]
+reduced toothbrush train:  25%|██▌       | 1/4 [00:00<00:01,  1.60it/s]
+reduced toothbrush train:  75%|███████▌  | 3/4 [00:01<00:00,  2.86it/s]
+                                                                       
+
+reduced toothbrush test:   0%|          | 0/3 [00:00<?, ?it/s]
+reduced toothbrush test:  33%|███▎      | 1/3 [00:00<00:01,  1.68it/s]
+reduced toothbrush test: 100%|██████████| 3/3 [00:00<00:00,  3.61it/s]
+                                                                      
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/2 [00:00<?, ?it/s]
+                                                   
+
+baseline transistor train:   0%|          | 0/14 [00:00<?, ?it/s]
+baseline transistor train:   7%|▋         | 1/14 [00:00<00:09,  1.44it/s]
+baseline transistor train:  21%|██▏       | 3/14 [00:01<00:04,  2.51it/s]
+baseline transistor train:  36%|███▌      | 5/14 [00:01<00:03,  2.89it/s]
+baseline transistor train:  50%|█████     | 7/14 [00:02<00:02,  3.07it/s]
+baseline transistor train:  64%|██████▍   | 9/14 [00:03<00:01,  3.18it/s]
+baseline transistor train:  79%|███████▊  | 11/14 [00:03<00:00,  3.23it/s]
+baseline transistor train:  93%|█████████▎| 13/14 [00:04<00:00,  3.31it/s]
+                                                                          
+
+baseline transistor test:   0%|          | 0/7 [00:00<?, ?it/s]
+baseline transistor test:  14%|█▍        | 1/7 [00:00<00:05,  1.08it/s]
+baseline transistor test:  43%|████▎     | 3/7 [00:01<00:01,  2.18it/s]
+baseline transistor test:  71%|███████▏  | 5/7 [00:02<00:00,  2.67it/s]
+baseline transistor test: 100%|██████████| 7/7 [00:02<00:00,  4.14it/s]
+                                                                       
+
+patchcore nn:   0%|          | 0/11 [00:00<?, ?it/s]
+patchcore nn:   9%|▉         | 1/11 [00:00<00:01,  9.40it/s]
+patchcore nn:  27%|██▋       | 3/11 [00:00<00:00, 11.26it/s]
+patchcore nn:  45%|████▌     | 5/11 [00:00<00:00, 11.60it/s]
+patchcore nn:  64%|██████▎   | 7/11 [00:00<00:00, 11.77it/s]
+patchcore nn:  82%|████████▏ | 9/11 [00:00<00:00, 11.82it/s]
+patchcore nn: 100%|██████████| 11/11 [00:00<00:00, 13.55it/s]
+                                                             
+
+patchcore nn:   0%|          | 0/5 [00:00<?, ?it/s]
+patchcore nn:  40%|████      | 2/5 [00:00<00:00, 11.82it/s]
+patchcore nn:  80%|████████  | 4/5 [00:00<00:00, 11.94it/s]
+                                                           
+
+reduced transistor train:   0%|          | 0/14 [00:00<?, ?it/s]
+reduced transistor train:   7%|▋         | 1/14 [00:00<00:08,  1.55it/s]
+reduced transistor train:  21%|██▏       | 3/14 [00:01<00:04,  2.68it/s]
+reduced transistor train:  36%|███▌      | 5/14 [00:01<00:02,  3.08it/s]
+reduced transistor train:  50%|█████     | 7/14 [00:02<00:02,  3.27it/s]
+reduced transistor train:  64%|██████▍   | 9/14 [00:02<00:01,  3.38it/s]
+reduced transistor train:  79%|███████▊  | 11/14 [00:03<00:00,  3.45it/s]
+reduced transistor train:  93%|█████████▎| 13/14 [00:03<00:00,  3.56it/s]
+                                                                         
+
+reduced transistor test:   0%|          | 0/7 [00:00<?, ?it/s]
+reduced transistor test:  14%|█▍        | 1/7 [00:00<00:03,  1.59it/s]
+reduced transistor test:  43%|████▎     | 3/7 [00:01<00:01,  2.71it/s]
+reduced transistor test:  71%|███████▏  | 5/7 [00:01<00:00,  3.09it/s]
+reduced transistor test: 100%|██████████| 7/7 [00:01<00:00,  4.68it/s]
+                                                                      
+
+patchcore nn:   0%|          | 0/6 [00:00<?, ?it/s]
+patchcore nn:  83%|████████▎ | 5/6 [00:00<00:00, 46.00it/s]
+                                                           
+
+patchcore nn:   0%|          | 0/3 [00:00<?, ?it/s]
+                                                   
+
+baseline wood train:   0%|          | 0/16 [00:00<?, ?it/s]
+baseline wood train:   6%|▋         | 1/16 [00:00<00:09,  1.51it/s]
+baseline wood train:  19%|█▉        | 3/16 [00:01<00:04,  2.66it/s]
+baseline wood train:  31%|███▏      | 5/16 [00:01<00:03,  3.06it/s]
+baseline wood train:  44%|████▍     | 7/16 [00:02<00:02,  3.28it/s]
+baseline wood train:  56%|█████▋    | 9/16 [00:02<00:02,  3.39it/s]
+baseline wood train:  69%|██████▉   | 11/16 [00:03<00:01,  3.47it/s]
+baseline wood train:  81%|████████▏ | 13/16 [00:03<00:00,  3.50it/s]
+baseline wood train:  94%|█████████▍| 15/16 [00:04<00:00,  3.55it/s]
+                                                                    
+
+baseline wood test:   0%|          | 0/5 [00:00<?, ?it/s]
+baseline wood test:  20%|██        | 1/5 [00:00<00:02,  1.53it/s]
+baseline wood test:  60%|██████    | 3/5 [00:01<00:00,  2.64it/s]
+baseline wood test: 100%|██████████| 5/5 [00:01<00:00,  3.18it/s]
+                                                                 
+
+patchcore nn:   0%|          | 0/12 [00:00<?, ?it/s]
+patchcore nn:  17%|█▋        | 2/12 [00:00<00:00, 12.00it/s]
+patchcore nn:  33%|███▎      | 4/12 [00:00<00:00, 11.88it/s]
+patchcore nn:  50%|█████     | 6/12 [00:00<00:00, 11.86it/s]
+patchcore nn:  67%|██████▋   | 8/12 [00:00<00:00, 11.86it/s]
+patchcore nn:  83%|████████▎ | 10/12 [00:00<00:00, 11.86it/s]
+patchcore nn: 100%|██████████| 12/12 [00:00<00:00, 12.19it/s]
+                                                             
+
+patchcore nn:   0%|          | 0/4 [00:00<?, ?it/s]
+patchcore nn:  50%|█████     | 2/4 [00:00<00:00, 12.06it/s]
+patchcore nn: 100%|██████████| 4/4 [00:00<00:00, 12.80it/s]
+                                                           
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+
+reduced wood train:   0%|          | 0/16 [00:00<?, ?it/s]
+reduced wood train:   6%|▋         | 1/16 [00:00<00:09,  1.56it/s]
+reduced wood train:  19%|█▉        | 3/16 [00:01<00:04,  2.87it/s]
+reduced wood train:  31%|███▏      | 5/16 [00:01<00:03,  3.30it/s]
+reduced wood train:  44%|████▍     | 7/16 [00:02<00:02,  3.52it/s]
+reduced wood train:  56%|█████▋    | 9/16 [00:02<00:01,  3.64it/s]
+reduced wood train:  69%|██████▉   | 11/16 [00:03<00:01,  3.72it/s]
+reduced wood train:  81%|████████▏ | 13/16 [00:03<00:00,  3.77it/s]
+reduced wood train:  94%|█████████▍| 15/16 [00:04<00:00,  3.84it/s]
+                                                                   
+
+reduced wood test:   0%|          | 0/5 [00:00<?, ?it/s]
+reduced wood test:  20%|██        | 1/5 [00:00<00:02,  1.66it/s]
+reduced wood test:  60%|██████    | 3/5 [00:01<00:00,  2.87it/s]
+reduced wood test: 100%|██████████| 5/5 [00:01<00:00,  3.42it/s]
+                                                                
+
+patchcore nn:   0%|          | 0/3 [00:00<?, ?it/s]
+                                                   
+
+patchcore nn:   0%|          | 0/1 [00:00<?, ?it/s]
+                                                   
+
+baseline zipper train:   0%|          | 0/15 [00:00<?, ?it/s]
+baseline zipper train:   7%|▋         | 1/15 [00:00<00:07,  1.96it/s]
+baseline zipper train:  20%|██        | 3/15 [00:00<00:03,  3.59it/s]
+baseline zipper train:  33%|███▎      | 5/15 [00:01<00:02,  4.20it/s]
+baseline zipper train:  47%|████▋     | 7/15 [00:01<00:01,  4.48it/s]
+baseline zipper train:  60%|██████    | 9/15 [00:02<00:01,  4.66it/s]
+baseline zipper train:  73%|███████▎  | 11/15 [00:02<00:00,  4.77it/s]
+baseline zipper train:  87%|████████▋ | 13/15 [00:02<00:00,  4.79it/s]
+baseline zipper train: 100%|██████████| 15/15 [00:03<00:00,  4.90it/s]
+                                                                      
+
+baseline zipper test:   0%|          | 0/10 [00:00<?, ?it/s]
+baseline zipper test:  10%|█         | 1/10 [00:00<00:04,  1.99it/s]
+baseline zipper test:  30%|███       | 3/10 [00:00<00:01,  3.60it/s]
+baseline zipper test:  50%|█████     | 5/10 [00:01<00:01,  4.20it/s]
+baseline zipper test:  70%|███████   | 7/10 [00:01<00:00,  4.49it/s]
+baseline zipper test:  90%|█████████ | 9/10 [00:02<00:00,  4.72it/s]
+                                                                    
+
+patchcore nn:   0%|          | 0/12 [00:00<?, ?it/s]
+patchcore nn:  17%|█▋        | 2/12 [00:00<00:00, 12.04it/s]
+patchcore nn:  33%|███▎      | 4/12 [00:00<00:00, 11.80it/s]
+patchcore nn:  50%|█████     | 6/12 [00:00<00:00, 11.73it/s]
+patchcore nn:  67%|██████▋   | 8/12 [00:00<00:00, 11.71it/s]
+patchcore nn:  83%|████████▎ | 10/12 [00:00<00:00, 11.69it/s]
+patchcore nn: 100%|██████████| 12/12 [00:00<00:00, 12.66it/s]
+                                                             
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+patchcore nn:  25%|██▌       | 2/8 [00:00<00:00, 12.07it/s]
+patchcore nn:  50%|█████     | 4/8 [00:00<00:00, 11.87it/s]
+patchcore nn:  75%|███████▌  | 6/8 [00:00<00:00, 11.79it/s]
+patchcore nn: 100%|██████████| 8/8 [00:00<00:00, 13.54it/s]
+                                                           
+
+reduced zipper train:   0%|          | 0/15 [00:00<?, ?it/s]
+reduced zipper train:   7%|▋         | 1/15 [00:00<00:06,  2.11it/s]
+reduced zipper train:  20%|██        | 3/15 [00:00<00:03,  3.89it/s]
+reduced zipper train:  33%|███▎      | 5/15 [00:01<00:02,  4.55it/s]
+reduced zipper train:  47%|████▋     | 7/15 [00:01<00:01,  4.88it/s]
+reduced zipper train:  60%|██████    | 9/15 [00:01<00:01,  5.06it/s]
+reduced zipper train:  73%|███████▎  | 11/15 [00:02<00:00,  5.17it/s]
+reduced zipper train:  87%|████████▋ | 13/15 [00:02<00:00,  5.27it/s]
+reduced zipper train: 100%|██████████| 15/15 [00:03<00:00,  5.45it/s]
+                                                                     
+
+reduced zipper test:   0%|          | 0/10 [00:00<?, ?it/s]
+reduced zipper test:  10%|█         | 1/10 [00:00<00:04,  2.16it/s]
+reduced zipper test:  30%|███       | 3/10 [00:00<00:01,  3.93it/s]
+reduced zipper test:  50%|█████     | 5/10 [00:01<00:01,  4.59it/s]
+reduced zipper test:  70%|███████   | 7/10 [00:01<00:00,  4.92it/s]
+reduced zipper test:  90%|█████████ | 9/10 [00:01<00:00,  5.17it/s]
+                                                                   
+
+patchcore nn:   0%|          | 0/12 [00:00<?, ?it/s]
+                                                    
+
+patchcore nn:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                   
+{
+  "wrote": "results/mvtec_patchcore_reduction_limit_probe_002_summary.json",
+  "markdown": "docs/mvtec_patchcore_reduction_limit_probe_002.md",
+  "figure": "results/mvtec_patchcore_reduction_limit_probe_002.png",
+  "categories": 15
+}
