@@ -409,9 +409,11 @@ def main() -> None:
 
     source_summary = json.loads(args.source_summary.read_text(encoding="utf-8"))
     category_rows = build_rows(args, source_summary, args.materialized_root, device)
+    config = {key: (str(value) if isinstance(value, Path) else value) for key, value in vars(args).items()}
+    config["device"] = str(device)
     payload = {
         "purpose": "explain category-specific PatchCore-lite reduction limits with coverage, margin, collision, and cost-product formulas",
-        "config": vars(args) | {"device": str(device)},
+        "config": config,
         "category_rows": category_rows,
         "outputs": {
             "markdown": str(args.markdown),
