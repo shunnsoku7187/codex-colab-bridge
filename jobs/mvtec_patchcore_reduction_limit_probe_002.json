@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_reduction_limit_probe_002",
-  "status": "pending",
+  "status": "running",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 43200,
   "result_file": "results/mvtec_patchcore_reduction_limit_probe_002.json",
   "note": "Theory-facing PatchCore-lite reduction limit probe. Re-evaluates baseline and category-selected reduced profiles, then reports coverage radius, score margin, defect collision, and the P*B*D nearest-neighbor cost formula so reduction decisions are not just 'tried and worked'.",
-  "created_at": "2026-08-24T00:00:00+09:00"
+  "created_at": "2026-08-24T00:00:00+09:00",
+  "updated_at": "2026-08-24T11:36:39.442813+00:00",
+  "started_at": "2026-08-24T11:36:39.442790+00:00"
 }
