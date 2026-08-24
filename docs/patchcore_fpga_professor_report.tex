@@ -353,6 +353,72 @@ metal\_nutやzipperではWideResNet-50-2のlayer3が残った。
 また，カテゴリごとに必要なメモリだけを読み出せるため，
 FPGA上のBRAM/URAM配置や外部メモリアクセスの計画が立てやすい。
 
+\subsection{兼用検品システムとしての比較}
+
+以上を踏まえると，本研究の比較対象は単一カテゴリ専用PatchCoreではなく，
+複数カテゴリに対応する兼用検品システムである。
+カテゴリ$i$の出現頻度を$p_i$，そのカテゴリ用プロファイルの計算量を$C_i$とすると，
+提案する切替型システムの期待計算量は
+\[
+  E[C_{\mathrm{switch}}] = \sum_i p_i C_i
+\]
+である。
+一方，全カテゴリで同じ共通構成を使う兼用機では，
+毎回同じ計算量$C_{\mathrm{common}}$を支払う。
+したがって，提案方式が有利になる条件は
+\[
+  \sum_i p_i C_i < C_{\mathrm{common}}
+\]
+で表せる。
+カテゴリ使用頻度が一様なら，これはカテゴリ別計算量の平均が
+共通構成の計算量を下回るかどうかの比較になる。
+
+表\ref{tab:multicategory-system-compare}に，
+MVTec AD全15カテゴリを対象とした兼用検品システムの比較を示す。
+ここでは，標準共通PatchCoreを1.0倍とし，
+最近傍探索量$C_{\mathrm{NN}} = PBD$の相対値で比較した。
+
+\begin{table}[t]
+  \centering
+  \caption{多カテゴリ兼用PatchCore検品システムの比較}
+  \label{tab:multicategory-system-compare}
+  \begin{tabular}{p{43mm}rrrrp{42mm}}
+    \toprule
+    システム & 平均良品通過 & 最低良品通過 & 平均NN計算 & 最大NN計算 & 読み取り \\
+    \midrule
+    標準共通PatchCore & 74.11\% & 31.71\% & 1.000000倍 & 1.000000倍 &
+    全カテゴリで標準構成を使うため重い \\
+    品質維持の共通軽量 & 81.94\% & 31.71\% & 0.666667倍 & 0.666667倍 &
+    共通構成のままでは十分には軽くならない \\
+    10\%制約の共通軽量 & 68.41\% & 2.44\% & 0.083446倍 & 0.085034倍 &
+    軽くできるが一部カテゴリで品質が崩れる \\
+    bankだけ切替 & 76.28\% & 31.71\% & 0.234198倍 & 1.000000倍 &
+    メモリだけでは重いカテゴリが残る \\
+    提案: full profile切替 & 76.34\% & 43.48\% & 0.031596倍 & 0.187500倍 &
+    bank，grid，特徴次元を同時に削れる \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{mvtec_patchcore_multicategory_system_compare_001.png}
+  \caption{兼用検品システムとして見た場合の平均KNN計算量と平均良品通過率。}
+  \label{fig:multicategory-system-compare}
+\end{figure}
+
+この比較から，提案するfull profile切替は，標準共通PatchCoreに対して
+平均NN計算量を0.031596倍まで下げる。
+これは約96.84\%の削減である。
+また，bankだけ切替と比べても，平均良品通過は76.28\%と76.34\%でほぼ同等である一方，
+平均NN計算量は0.234198倍から0.031596倍へ下がる。
+すなわち，bankだけ切替に対してさらに約86.51\%のNN計算量削減が見込める。
+
+したがって，本研究の提案点は
+「1カテゴリ専用にチューニングできる」ことではなく，
+カテゴリ専用チューニング済みの複数プロファイルを1つのFPGA上で切り替え，
+兼用機でありながら専用機に近い計算効率を得る点である。
+
 \section{削減可否を説明する仮説とデータ}
 
 \subsection{仮説}

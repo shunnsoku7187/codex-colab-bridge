@@ -1,0 +1,1337 @@
+{
+  "purpose": "compare compatible multi-category PatchCore inspection systems",
+  "config": {
+    "source": "results\\mvtec_patchcore_backbone_floor_probe_001_summary.json",
+    "false_pass_target": 0.03,
+    "tolerance": 0.02,
+    "common_budget": 0.1
+  },
+  "systems": [
+    {
+      "name": "common_full_patchcore",
+      "description": "All categories use the standard full PatchCore profile.",
+      "category_rows": [
+        {
+          "category": "bottle",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "cable",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 0.517241,
+          "baseline_good_pass": 0.517241,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "capsule",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 0.434783,
+          "baseline_good_pass": 0.434783,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "carpet",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 0.821429,
+          "baseline_good_pass": 0.821429,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "grid",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 0.52381,
+          "baseline_good_pass": 0.52381,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "hazelnut",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "leather",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "metal_nut",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 0.954545,
+          "baseline_good_pass": 0.954545,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "pill",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 0.423077,
+          "baseline_good_pass": 0.423077,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "screw",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 0.317073,
+          "baseline_good_pass": 0.317073,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "tile",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 0.909091,
+          "baseline_good_pass": 0.909091,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "toothbrush",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 0.75,
+          "baseline_good_pass": 0.75,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 11760,
+          "feature_dim": 768
+        },
+        {
+          "category": "transistor",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 0.716667,
+          "baseline_good_pass": 0.716667,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "wood",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 0.842105,
+          "baseline_good_pass": 0.842105,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "zipper",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 0.90625,
+          "baseline_good_pass": 0.90625,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        }
+      ],
+      "mean_good_pass": 0.741071,
+      "min_good_pass": 0.317073,
+      "mean_relative_nn_ops": 1.0,
+      "median_relative_nn_ops": 1.0,
+      "max_relative_nn_ops": 1.0,
+      "mean_relative_bank": 1.0,
+      "max_relative_bank": 1.0
+    },
+    {
+      "name": "common_light_quality_constrained",
+      "description": "All categories use one shared profile, selected to stay within 2.00% of each baseline good-pass.",
+      "category_rows": [
+        {
+          "category": "bottle",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        },
+        {
+          "category": "cable",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 0.827586,
+          "baseline_good_pass": 0.517241,
+          "good_pass_drop_from_baseline": -0.310345,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        },
+        {
+          "category": "capsule",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 0.695652,
+          "baseline_good_pass": 0.434783,
+          "good_pass_drop_from_baseline": -0.260869,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        },
+        {
+          "category": "carpet",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 0.857143,
+          "baseline_good_pass": 0.821429,
+          "good_pass_drop_from_baseline": -0.035714,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        },
+        {
+          "category": "grid",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 0.619048,
+          "baseline_good_pass": 0.52381,
+          "good_pass_drop_from_baseline": -0.095238,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        },
+        {
+          "category": "hazelnut",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        },
+        {
+          "category": "leather",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        },
+        {
+          "category": "metal_nut",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 0.954545,
+          "baseline_good_pass": 0.954545,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        },
+        {
+          "category": "pill",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 0.538462,
+          "baseline_good_pass": 0.423077,
+          "good_pass_drop_from_baseline": -0.115385,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        },
+        {
+          "category": "screw",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 0.317073,
+          "baseline_good_pass": 0.317073,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        },
+        {
+          "category": "tile",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 1.0,
+          "baseline_good_pass": 0.909091,
+          "good_pass_drop_from_baseline": -0.090909,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        },
+        {
+          "category": "toothbrush",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 0.833333,
+          "baseline_good_pass": 0.75,
+          "good_pass_drop_from_baseline": -0.083333,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 11760,
+          "feature_dim": 512
+        },
+        {
+          "category": "transistor",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 0.9,
+          "baseline_good_pass": 0.716667,
+          "good_pass_drop_from_baseline": -0.183333,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        },
+        {
+          "category": "wood",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 0.842105,
+          "baseline_good_pass": 0.842105,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        },
+        {
+          "category": "zipper",
+          "config": "wrn_l3_g14_b12000_topk0p02",
+          "good_pass": 0.90625,
+          "baseline_good_pass": 0.90625,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.666667,
+          "relative_bank": 0.666667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 512
+        }
+      ],
+      "mean_good_pass": 0.819413,
+      "min_good_pass": 0.317073,
+      "mean_relative_nn_ops": 0.666667,
+      "median_relative_nn_ops": 0.666667,
+      "max_relative_nn_ops": 0.666667,
+      "mean_relative_bank": 0.666667,
+      "max_relative_bank": 0.666667,
+      "shared_config": "wrn_l3_g14_b12000_topk0p02"
+    },
+    {
+      "name": "common_light_budget_constrained",
+      "description": "All categories use one shared lightweight profile under mean NN ops <= 0.10x.",
+      "category_rows": [
+        {
+          "category": "bottle",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "cable",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 0.672414,
+          "baseline_good_pass": 0.517241,
+          "good_pass_drop_from_baseline": -0.155173,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "capsule",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 0.217391,
+          "baseline_good_pass": 0.434783,
+          "good_pass_drop_from_baseline": 0.217392,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "carpet",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 0.857143,
+          "baseline_good_pass": 0.821429,
+          "good_pass_drop_from_baseline": -0.035714,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "grid",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 0.285714,
+          "baseline_good_pass": 0.52381,
+          "good_pass_drop_from_baseline": 0.238096,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "hazelnut",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "leather",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "metal_nut",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 0.772727,
+          "baseline_good_pass": 0.954545,
+          "good_pass_drop_from_baseline": 0.181818,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "pill",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 0.5,
+          "baseline_good_pass": 0.423077,
+          "good_pass_drop_from_baseline": -0.076923,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "screw",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 0.02439,
+          "baseline_good_pass": 0.317073,
+          "good_pass_drop_from_baseline": 0.292683,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "tile",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 1.0,
+          "baseline_good_pass": 0.909091,
+          "good_pass_drop_from_baseline": -0.090909,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "toothbrush",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 0.75,
+          "baseline_good_pass": 0.75,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.085034,
+          "relative_bank": 0.085034,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "transistor",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 0.516667,
+          "baseline_good_pass": 0.716667,
+          "good_pass_drop_from_baseline": 0.2,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "wood",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 0.789474,
+          "baseline_good_pass": 0.842105,
+          "good_pass_drop_from_baseline": 0.052631,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "zipper",
+          "config": "wrn_l3_g14_b1500_topk0p02",
+          "good_pass": 0.875,
+          "baseline_good_pass": 0.90625,
+          "good_pass_drop_from_baseline": 0.03125,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        }
+      ],
+      "mean_good_pass": 0.684061,
+      "min_good_pass": 0.02439,
+      "mean_relative_nn_ops": 0.083446,
+      "median_relative_nn_ops": 0.083333,
+      "max_relative_nn_ops": 0.085034,
+      "mean_relative_bank": 0.083446,
+      "max_relative_bank": 0.085034,
+      "shared_config": "wrn_l3_g14_b1500_topk0p02"
+    },
+    {
+      "name": "bank_only_mode_switch",
+      "description": "The product mode switches only bank/top-k/threshold while keeping the full backbone/layers/grid fixed.",
+      "category_rows": [
+        {
+          "category": "bottle",
+          "config": "wrn_l23_g14_b500_topk0p005",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.041667,
+          "relative_bank": 0.041667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 500,
+          "feature_dim": 768
+        },
+        {
+          "category": "cable",
+          "config": "wrn_l23_g14_b1000_topk0p05",
+          "good_pass": 0.551724,
+          "baseline_good_pass": 0.517241,
+          "good_pass_drop_from_baseline": -0.034483,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 1000,
+          "feature_dim": 768
+        },
+        {
+          "category": "capsule",
+          "config": "wrn_l23_g14_b3000_topk0p05",
+          "good_pass": 0.521739,
+          "baseline_good_pass": 0.434783,
+          "good_pass_drop_from_baseline": -0.086956,
+          "relative_nn_ops": 0.25,
+          "relative_bank": 0.25,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 3000,
+          "feature_dim": 768
+        },
+        {
+          "category": "carpet",
+          "config": "wrn_l23_g14_b2000_topk0p005",
+          "good_pass": 0.821429,
+          "baseline_good_pass": 0.821429,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.166667,
+          "relative_bank": 0.166667,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 2000,
+          "feature_dim": 768
+        },
+        {
+          "category": "grid",
+          "config": "wrn_l23_g14_b6000_topk0p01",
+          "good_pass": 0.571429,
+          "baseline_good_pass": 0.52381,
+          "good_pass_drop_from_baseline": -0.047619,
+          "relative_nn_ops": 0.5,
+          "relative_bank": 0.5,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 6000,
+          "feature_dim": 768
+        },
+        {
+          "category": "hazelnut",
+          "config": "wrn_l23_g14_b750_topk0p02",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.0625,
+          "relative_bank": 0.0625,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 750,
+          "feature_dim": 768
+        },
+        {
+          "category": "leather",
+          "config": "wrn_l23_g14_b125_topk0p005",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.010417,
+          "relative_bank": 0.010417,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 125,
+          "feature_dim": 768
+        },
+        {
+          "category": "metal_nut",
+          "config": "wrn_l23_g14_b6000_topk0p005",
+          "good_pass": 0.954545,
+          "baseline_good_pass": 0.954545,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.5,
+          "relative_bank": 0.5,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 6000,
+          "feature_dim": 768
+        },
+        {
+          "category": "pill",
+          "config": "wrn_l23_g14_b1000_topk0p005",
+          "good_pass": 0.423077,
+          "baseline_good_pass": 0.423077,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 1000,
+          "feature_dim": 768
+        },
+        {
+          "category": "screw",
+          "config": "wrn_l23_g14_b12000_topk0p01",
+          "good_pass": 0.317073,
+          "baseline_good_pass": 0.317073,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 1.0,
+          "relative_bank": 1.0,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 12000,
+          "feature_dim": 768
+        },
+        {
+          "category": "tile",
+          "config": "wrn_l23_g14_b125_topk0p05",
+          "good_pass": 1.0,
+          "baseline_good_pass": 0.909091,
+          "good_pass_drop_from_baseline": -0.090909,
+          "relative_nn_ops": 0.010417,
+          "relative_bank": 0.010417,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 125,
+          "feature_dim": 768
+        },
+        {
+          "category": "toothbrush",
+          "config": "wrn_l23_g14_b1500_topk0p05",
+          "good_pass": 0.833333,
+          "baseline_good_pass": 0.75,
+          "good_pass_drop_from_baseline": -0.083333,
+          "relative_nn_ops": 0.127551,
+          "relative_bank": 0.127551,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 768
+        },
+        {
+          "category": "transistor",
+          "config": "wrn_l23_g14_b4000_topk0p005",
+          "good_pass": 0.7,
+          "baseline_good_pass": 0.716667,
+          "good_pass_drop_from_baseline": 0.016667,
+          "relative_nn_ops": 0.333333,
+          "relative_bank": 0.333333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 4000,
+          "feature_dim": 768
+        },
+        {
+          "category": "wood",
+          "config": "wrn_l23_g14_b125_topk0p01",
+          "good_pass": 0.842105,
+          "baseline_good_pass": 0.842105,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.010417,
+          "relative_bank": 0.010417,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 125,
+          "feature_dim": 768
+        },
+        {
+          "category": "zipper",
+          "config": "wrn_l23_g14_b4000_topk0p02",
+          "good_pass": 0.90625,
+          "baseline_good_pass": 0.90625,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.333333,
+          "relative_bank": 0.333333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 4000,
+          "feature_dim": 768
+        }
+      ],
+      "mean_good_pass": 0.762847,
+      "min_good_pass": 0.317073,
+      "mean_relative_nn_ops": 0.234198,
+      "median_relative_nn_ops": 0.127551,
+      "max_relative_nn_ops": 1.0,
+      "mean_relative_bank": 0.234198,
+      "max_relative_bank": 1.0
+    },
+    {
+      "name": "proposed_full_profile_mode_switch",
+      "description": "The product mode switches backbone/layers/grid/bank/top-k/threshold.",
+      "category_rows": [
+        {
+          "category": "bottle",
+          "config": "effb0_l23_g10_b500_topk0p05",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.001772,
+          "relative_bank": 0.003472,
+          "patch_grid": 10,
+          "backbone": "efficientnet_b0",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 500,
+          "feature_dim": 64
+        },
+        {
+          "category": "cable",
+          "config": "res18_l23_g7_b1500_topk0p05",
+          "good_pass": 0.534483,
+          "baseline_good_pass": 0.517241,
+          "good_pass_drop_from_baseline": -0.017242,
+          "relative_nn_ops": 0.007812,
+          "relative_bank": 0.03125,
+          "patch_grid": 7,
+          "backbone": "resnet18",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 192
+        },
+        {
+          "category": "capsule",
+          "config": "effb0_l23_g14_b500_topk0p02",
+          "good_pass": 0.434783,
+          "baseline_good_pass": 0.434783,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.003472,
+          "relative_bank": 0.003472,
+          "patch_grid": 14,
+          "backbone": "efficientnet_b0",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 500,
+          "feature_dim": 64
+        },
+        {
+          "category": "carpet",
+          "config": "res18_l23_g14_b750_topk0p01",
+          "good_pass": 0.821429,
+          "baseline_good_pass": 0.821429,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.015625,
+          "relative_bank": 0.015625,
+          "patch_grid": 14,
+          "backbone": "resnet18",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 750,
+          "feature_dim": 192
+        },
+        {
+          "category": "grid",
+          "config": "res34_l23_g10_b750_topk0p02",
+          "good_pass": 0.52381,
+          "baseline_good_pass": 0.52381,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.007972,
+          "relative_bank": 0.015625,
+          "patch_grid": 10,
+          "backbone": "resnet34",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 750,
+          "feature_dim": 192
+        },
+        {
+          "category": "hazelnut",
+          "config": "res34_l23_g14_b500_topk0p02",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.010417,
+          "relative_bank": 0.010417,
+          "patch_grid": 14,
+          "backbone": "resnet34",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 500,
+          "feature_dim": 192
+        },
+        {
+          "category": "leather",
+          "config": "effb0_l23_g14_b125_topk0p005",
+          "good_pass": 1.0,
+          "baseline_good_pass": 1.0,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.000868,
+          "relative_bank": 0.000868,
+          "patch_grid": 14,
+          "backbone": "efficientnet_b0",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 125,
+          "feature_dim": 64
+        },
+        {
+          "category": "metal_nut",
+          "config": "wrn_l3_g14_b1500_topk0p01",
+          "good_pass": 0.954545,
+          "baseline_good_pass": 0.954545,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        },
+        {
+          "category": "pill",
+          "config": "mobv3l_l23_g7_b2000_topk0p05",
+          "good_pass": 0.461538,
+          "baseline_good_pass": 0.423077,
+          "good_pass_drop_from_baseline": -0.038461,
+          "relative_nn_ops": 0.003472,
+          "relative_bank": 0.013889,
+          "patch_grid": 7,
+          "backbone": "mobilenetv3_large_100",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 2000,
+          "feature_dim": 64
+        },
+        {
+          "category": "screw",
+          "config": "res34_l23_g14_b9000_topk0p05",
+          "good_pass": 0.439024,
+          "baseline_good_pass": 0.317073,
+          "good_pass_drop_from_baseline": -0.121951,
+          "relative_nn_ops": 0.1875,
+          "relative_bank": 0.1875,
+          "patch_grid": 14,
+          "backbone": "resnet34",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 9000,
+          "feature_dim": 192
+        },
+        {
+          "category": "tile",
+          "config": "effb0_l23_g14_b250_topk0p02",
+          "good_pass": 1.0,
+          "baseline_good_pass": 0.909091,
+          "good_pass_drop_from_baseline": -0.090909,
+          "relative_nn_ops": 0.001736,
+          "relative_bank": 0.001736,
+          "patch_grid": 14,
+          "backbone": "efficientnet_b0",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 250,
+          "feature_dim": 64
+        },
+        {
+          "category": "toothbrush",
+          "config": "effb0_l23_g10_b750_topk0p05",
+          "good_pass": 0.833333,
+          "baseline_good_pass": 0.75,
+          "good_pass_drop_from_baseline": -0.083333,
+          "relative_nn_ops": 0.002712,
+          "relative_bank": 0.005315,
+          "patch_grid": 10,
+          "backbone": "efficientnet_b0",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 750,
+          "feature_dim": 64
+        },
+        {
+          "category": "transistor",
+          "config": "res34_l23_g10_b6000_topk0p005",
+          "good_pass": 0.7,
+          "baseline_good_pass": 0.716667,
+          "good_pass_drop_from_baseline": 0.016667,
+          "relative_nn_ops": 0.063776,
+          "relative_bank": 0.125,
+          "patch_grid": 10,
+          "backbone": "resnet34",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 6000,
+          "feature_dim": 192
+        },
+        {
+          "category": "wood",
+          "config": "mobv3s_l23_g7_b125_topk0p005",
+          "good_pass": 0.842105,
+          "baseline_good_pass": 0.842105,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.000136,
+          "relative_bank": 0.000543,
+          "patch_grid": 7,
+          "backbone": "mobilenetv3_small_100",
+          "out_indices": [
+            1,
+            2
+          ],
+          "bank_patches": 125,
+          "feature_dim": 40
+        },
+        {
+          "category": "zipper",
+          "config": "wrn_l3_g14_b1500_topk0p05",
+          "good_pass": 0.90625,
+          "baseline_good_pass": 0.90625,
+          "good_pass_drop_from_baseline": 0.0,
+          "relative_nn_ops": 0.083333,
+          "relative_bank": 0.083333,
+          "patch_grid": 14,
+          "backbone": "wide_resnet50_2",
+          "out_indices": [
+            2
+          ],
+          "bank_patches": 1500,
+          "feature_dim": 512
+        }
+      ],
+      "mean_good_pass": 0.76342,
+      "min_good_pass": 0.434783,
+      "mean_relative_nn_ops": 0.031596,
+      "median_relative_nn_ops": 0.007812,
+      "max_relative_nn_ops": 0.1875,
+      "mean_relative_bank": 0.038759,
+      "max_relative_bank": 0.1875
+    }
+  ],
+  "theory": {
+    "common_runtime_cost": "C_common",
+    "switching_expected_cost": "E[C_switch] = sum_i p_i C_i",
+    "uniform_category_usage": "if p_i = 1/K, E[C_switch] = mean_i C_i",
+    "nn_cost_formula": "C_NN(i) = P_i * B_i * D_i",
+    "relative_formula": "C'_NN / C_NN = (P'/P) * (B'/B) * (D'/D)",
+    "quality_constraint": "GoodPass_i(profile) >= GoodPass_i(baseline) - epsilon and FalsePass_i(profile) <= alpha",
+    "mode_switch_advantage_condition": "sum_i p_i C_i < C_common",
+    "all_resident_bank_proxy_sum_relative_to_one_full_bank": 0.581378,
+    "dedicated_multi_accelerator_compute_proxy": "roughly sum or duplicate of category-specific accelerators; proposed shares one configurable fabric",
+    "unused_placeholder": 0.1875
+  },
+  "outputs": {
+    "markdown": "docs\\mvtec_patchcore_multicategory_system_compare_001.md",
+    "figure": "results\\mvtec_patchcore_multicategory_system_compare_001.png"
+  }
+}
