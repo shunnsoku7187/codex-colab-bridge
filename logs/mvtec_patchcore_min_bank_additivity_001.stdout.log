@@ -1075,3 +1075,29 @@ cable mobv3s_l23_g7_b9000_topk0p05 test:   0%|          | 0/5 [00:00<?, ?it/s]
 cable mobv3s_l23_g7_b9000_topk0p05 test:  20%|██        | 1/5 [00:01<00:05,  1.29s/it]
 cable mobv3s_l23_g7_b9000_topk0p05 test:  60%|██████    | 3/5 [00:02<00:01,  1.32it/s]
 cable mobv3s_l23_g7_b9000_topk0p05 test: 100%|██████████| 5/5 [00:03<00:00,  1.78it/s]
+                                                                                      
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+
+carpet mobv3l_l23_g14_b9000_topk0p05 train:   0%|          | 0/9 [00:00<?, ?it/s]
+carpet mobv3l_l23_g14_b9000_topk0p05 train:  11%|█         | 1/9 [00:01<00:09,  1.22s/it]
+carpet mobv3l_l23_g14_b9000_topk0p05 train:  33%|███▎      | 3/9 [00:02<00:04,  1.40it/s]
+carpet mobv3l_l23_g14_b9000_topk0p05 train:  56%|█████▌    | 5/9 [00:03<00:02,  1.61it/s]
+carpet mobv3l_l23_g14_b9000_topk0p05 train:  78%|███████▊  | 7/9 [00:04<00:01,  1.72it/s]
+carpet mobv3l_l23_g14_b9000_topk0p05 train: 100%|██████████| 9/9 [00:05<00:00,  1.96it/s]
+                                                                                         
+
+carpet mobv3l_l23_g14_b9000_topk0p05 test:   0%|          | 0/4 [00:00<?, ?it/s]
+carpet mobv3l_l23_g14_b9000_topk0p05 test:  25%|██▌       | 1/4 [00:01<00:03,  1.20s/it]
+carpet mobv3l_l23_g14_b9000_topk0p05 test:  75%|███████▌  | 3/4 [00:02<00:00,  1.43it/s]
+                                                                                        
+
+capsule wrn_l3_g14_b125_topk0p02 train:   0%|          | 0/7 [00:00<?, ?it/s]
+capsule wrn_l3_g14_b125_topk0p02 train:  14%|█▍        | 1/7 [00:01<00:07,  1.28s/it]
+capsule wrn_l3_g14_b125_topk0p02 train:  43%|████▎     | 3/7 [00:02<00:02,  1.35it/s]
+capsule wrn_l3_g14_b125_topk0p02 train:  71%|███████▏  | 5/7 [00:03<00:01,  1.54it/s]
+capsule wrn_l3_g14_b125_topk0p02 train: 100%|██████████| 7/7 [00:04<00:00,  1.77it/s]
+                                                                                     
+
+capsule wrn_l3_g14_b125_topk0p02 test:   0%|          | 0/5 [00:00<?, ?it/s]
+capsule wrn_l3_g14_b125_topk0p02 test:  20%|██        | 1/5 [00:01<00:05,  1.28s/it]
+capsule wrn_l3_g14_b125_topk0p02 test:  60%|██████    | 3/5 [00:02<00:01,  1.35it/s]
