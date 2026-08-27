@@ -1,0 +1,3366 @@
+{
+  "purpose": "verify fair AB/ABC comparison candidates with true merged standard banks",
+  "config": {
+    "candidates": "results/mvtec_patchcore_subset_switch_search_001_summary.json",
+    "output": "results/mvtec_patchcore_subset_mixed_bank_verify_001_summary.json",
+    "markdown": "docs/mvtec_patchcore_subset_mixed_bank_verify_001.md",
+    "figure": "results/mvtec_patchcore_subset_mixed_bank_verify_001.png",
+    "materialized_root": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2",
+    "top_pairs": 5,
+    "top_triples": 5,
+    "false_pass_target": 0.03,
+    "bank_patches_per_category": 12000,
+    "topk_fraction": 0.01,
+    "score_name": "topk_score",
+    "seed": 123,
+    "image_height": 224,
+    "image_width": 224,
+    "batch_size": 32,
+    "nn_chunk_size": 16384,
+    "curve_points": 180,
+    "require_cuda": true,
+    "device": "cuda"
+  },
+  "verified_subsets": [
+    {
+      "subset": [
+        "toothbrush",
+        "wood"
+      ],
+      "true_mixed_standard": {
+        "name": "subset_standard_true_merged_bank",
+        "subset": [
+          "toothbrush",
+          "wood"
+        ],
+        "bank_patches_per_category": 12000,
+        "merged_bank_patches": 23760,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "denominator_per_image_nn_ops": 3576545280,
+        "mean_good_pass": 0.796053,
+        "min_good_pass": 0.75,
+        "category_rows": [
+          {
+            "category": "toothbrush",
+            "good_pass": 0.75,
+            "threshold": 0.426246,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 23760,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "wood",
+            "good_pass": 0.842105,
+            "threshold": 0.459943,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 23760,
+            "relative_nn_ops_to_subset_standard": 1.0
+          }
+        ],
+        "sample_counts": {
+          "toothbrush": {
+            "train_normal": 60,
+            "test": 42,
+            "test_good": 12,
+            "test_defect": 30,
+            "bank_patches": 11760
+          },
+          "wood": {
+            "train_normal": 247,
+            "test": 79,
+            "test_good": 19,
+            "test_defect": 60,
+            "bank_patches": 12000
+          }
+        }
+      },
+      "bank_only_switch": {
+        "name": "bank_only_switch",
+        "mean_good_pass": 0.796053,
+        "min_good_pass": 0.75,
+        "mean_relative_nn_ops_to_subset_standard": 0.5,
+        "max_relative_nn_ops_to_subset_standard": 0.505050505,
+        "mean_relative_bank_to_subset_standard": 0.5,
+        "category_rows": [
+          {
+            "category": "toothbrush",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 11760,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.75,
+            "threshold": 0.426237,
+            "relative_nn_ops_to_subset_standard": 0.494949495,
+            "relative_bank_to_subset_standard": 0.494949495
+          },
+          {
+            "category": "wood",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.842105,
+            "threshold": 0.459923,
+            "relative_nn_ops_to_subset_standard": 0.505050505,
+            "relative_bank_to_subset_standard": 0.505050505
+          }
+        ]
+      },
+      "fixed_profile_systems": [
+        {
+          "name": "profile_fixed_to_toothbrush_bank_switch",
+          "mean_good_pass": 0.747807,
+          "min_good_pass": 0.578947,
+          "mean_relative_nn_ops_to_subset_standard": 0.002684154,
+          "max_relative_nn_ops_to_subset_standard": 0.003578873,
+          "mean_relative_bank_to_subset_standard": 0.063131313,
+          "category_rows": [
+            {
+              "category": "toothbrush",
+              "config": "effb0_l23_g10_b1000_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 1000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.916667,
+              "threshold": 0.715893,
+              "relative_nn_ops_to_subset_standard": 0.001789436,
+              "relative_bank_to_subset_standard": 0.042087542
+            },
+            {
+              "category": "wood",
+              "config": "effb0_l23_g10_b2000_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 2000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.578947,
+              "threshold": 0.652876,
+              "relative_nn_ops_to_subset_standard": 0.003578873,
+              "relative_bank_to_subset_standard": 0.084175084
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_wood_bank_switch",
+          "mean_good_pass": 0.489035,
+          "min_good_pass": 0.083333,
+          "mean_relative_nn_ops_to_subset_standard": 0.000239757,
+          "max_relative_nn_ops_to_subset_standard": 0.000411011,
+          "mean_relative_bank_to_subset_standard": 0.0184133,
+          "category_rows": [
+            {
+              "category": "toothbrush",
+              "config": "mobv3s_l23_g7_b125_topk0p005",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 125,
+              "feature_dim": 40,
+              "topk_fraction": 0.005,
+              "good_pass": 0.083333,
+              "threshold": 0.433479,
+              "relative_nn_ops_to_subset_standard": 6.8502e-05,
+              "relative_bank_to_subset_standard": 0.005260943
+            },
+            {
+              "category": "wood",
+              "config": "mobv3s_l23_g7_b750_topk0p005",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 750,
+              "feature_dim": 40,
+              "topk_fraction": 0.005,
+              "good_pass": 0.894737,
+              "threshold": 0.342789,
+              "relative_nn_ops_to_subset_standard": 0.000411011,
+              "relative_bank_to_subset_standard": 0.031565657
+            }
+          ]
+        }
+      ],
+      "proposed_profile_and_bank_switch": {
+        "name": "proposed_profile_and_bank_switch",
+        "mean_good_pass": 0.837719,
+        "min_good_pass": 0.833333,
+        "mean_relative_nn_ops_to_subset_standard": 0.00070529,
+        "max_relative_nn_ops_to_subset_standard": 0.001342077,
+        "mean_relative_bank_to_subset_standard": 0.0184133,
+        "category_rows": [
+          {
+            "category": "toothbrush",
+            "config": "effb0_l23_g10_b750_topk0p05",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 10,
+            "patch_count": 100,
+            "bank_patches": 750,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 0.833333,
+            "threshold": 0.711949,
+            "relative_nn_ops_to_subset_standard": 0.001342077,
+            "relative_bank_to_subset_standard": 0.031565657
+          },
+          {
+            "category": "wood",
+            "config": "mobv3s_l23_g7_b125_topk0p005",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "patch_count": 49,
+            "bank_patches": 125,
+            "feature_dim": 40,
+            "topk_fraction": null,
+            "good_pass": 0.842105,
+            "threshold": 0.395526,
+            "relative_nn_ops_to_subset_standard": 6.8502e-05,
+            "relative_bank_to_subset_standard": 0.005260943
+          }
+        ]
+      },
+      "screening_claim_metrics": {
+        "proposed_vs_subset_standard_nn_reduction": 0.999295,
+        "proposed_vs_bank_only_nn_reduction": 0.998589,
+        "proposed_mean_good_pass": 0.837719,
+        "proposed_min_good_pass": 0.833333,
+        "best_fixed_profile_mean_good_pass": 0.747807,
+        "best_fixed_profile_min_good_pass": 0.578947,
+        "proposed_min_good_advantage_over_best_fixed": 0.254386,
+        "screening_score": 142.606454
+      }
+    },
+    {
+      "subset": [
+        "leather",
+        "wood"
+      ],
+      "true_mixed_standard": {
+        "name": "subset_standard_true_merged_bank",
+        "subset": [
+          "leather",
+          "wood"
+        ],
+        "bank_patches_per_category": 12000,
+        "merged_bank_patches": 24000,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "denominator_per_image_nn_ops": 3612672000,
+        "mean_good_pass": 0.921053,
+        "min_good_pass": 0.842105,
+        "category_rows": [
+          {
+            "category": "leather",
+            "good_pass": 1.0,
+            "threshold": 0.436109,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 24000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "wood",
+            "good_pass": 0.842105,
+            "threshold": 0.459943,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 24000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          }
+        ],
+        "sample_counts": {
+          "leather": {
+            "train_normal": 245,
+            "test": 124,
+            "test_good": 32,
+            "test_defect": 92,
+            "bank_patches": 12000
+          },
+          "wood": {
+            "train_normal": 247,
+            "test": 79,
+            "test_good": 19,
+            "test_defect": 60,
+            "bank_patches": 12000
+          }
+        }
+      },
+      "bank_only_switch": {
+        "name": "bank_only_switch",
+        "mean_good_pass": 0.921053,
+        "min_good_pass": 0.842105,
+        "mean_relative_nn_ops_to_subset_standard": 0.5,
+        "max_relative_nn_ops_to_subset_standard": 0.5,
+        "mean_relative_bank_to_subset_standard": 0.5,
+        "category_rows": [
+          {
+            "category": "leather",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 1.0,
+            "threshold": 0.436111,
+            "relative_nn_ops_to_subset_standard": 0.5,
+            "relative_bank_to_subset_standard": 0.5
+          },
+          {
+            "category": "wood",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.842105,
+            "threshold": 0.459923,
+            "relative_nn_ops_to_subset_standard": 0.5,
+            "relative_bank_to_subset_standard": 0.5
+          }
+        ]
+      },
+      "fixed_profile_systems": [
+        {
+          "name": "profile_fixed_to_leather_bank_switch",
+          "mean_good_pass": 0.894737,
+          "min_good_pass": 0.789474,
+          "mean_relative_nn_ops_to_subset_standard": 0.000434028,
+          "max_relative_nn_ops_to_subset_standard": 0.000434028,
+          "mean_relative_bank_to_subset_standard": 0.005208333,
+          "category_rows": [
+            {
+              "category": "leather",
+              "config": "effb0_l23_g14_b125_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 125,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 1.0,
+              "threshold": 0.748164,
+              "relative_nn_ops_to_subset_standard": 0.000434028,
+              "relative_bank_to_subset_standard": 0.005208333
+            },
+            {
+              "category": "wood",
+              "config": "effb0_l23_g14_b125_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 125,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 0.789474,
+              "threshold": 0.81923,
+              "relative_nn_ops_to_subset_standard": 0.000434028,
+              "relative_bank_to_subset_standard": 0.005208333
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_wood_bank_switch",
+          "mean_good_pass": 0.525494,
+          "min_good_pass": 0.15625,
+          "mean_relative_nn_ops_to_subset_standard": 0.000745985,
+          "max_relative_nn_ops_to_subset_standard": 0.001085069,
+          "mean_relative_bank_to_subset_standard": 0.057291667,
+          "category_rows": [
+            {
+              "category": "leather",
+              "config": "mobv3s_l23_g7_b2000_topk0p05",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 2000,
+              "feature_dim": 40,
+              "topk_fraction": 0.05,
+              "good_pass": 0.15625,
+              "threshold": 0.275597,
+              "relative_nn_ops_to_subset_standard": 0.001085069,
+              "relative_bank_to_subset_standard": 0.083333333
+            },
+            {
+              "category": "wood",
+              "config": "mobv3s_l23_g7_b750_topk0p005",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 750,
+              "feature_dim": 40,
+              "topk_fraction": 0.005,
+              "good_pass": 0.894737,
+              "threshold": 0.342789,
+              "relative_nn_ops_to_subset_standard": 0.000406901,
+              "relative_bank_to_subset_standard": 0.03125
+            }
+          ]
+        }
+      ],
+      "proposed_profile_and_bank_switch": {
+        "name": "proposed_profile_and_bank_switch",
+        "mean_good_pass": 0.921053,
+        "min_good_pass": 0.842105,
+        "mean_relative_nn_ops_to_subset_standard": 0.000250922,
+        "max_relative_nn_ops_to_subset_standard": 0.000434028,
+        "mean_relative_bank_to_subset_standard": 0.005208333,
+        "category_rows": [
+          {
+            "category": "leather",
+            "config": "effb0_l23_g14_b125_topk0p005",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 125,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 1.0,
+            "threshold": 0.748164,
+            "relative_nn_ops_to_subset_standard": 0.000434028,
+            "relative_bank_to_subset_standard": 0.005208333
+          },
+          {
+            "category": "wood",
+            "config": "mobv3s_l23_g7_b125_topk0p005",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "patch_count": 49,
+            "bank_patches": 125,
+            "feature_dim": 40,
+            "topk_fraction": null,
+            "good_pass": 0.842105,
+            "threshold": 0.395526,
+            "relative_nn_ops_to_subset_standard": 6.7817e-05,
+            "relative_bank_to_subset_standard": 0.005208333
+          }
+        ]
+      },
+      "screening_claim_metrics": {
+        "proposed_vs_subset_standard_nn_reduction": 0.999749,
+        "proposed_vs_bank_only_nn_reduction": 0.999498,
+        "proposed_mean_good_pass": 0.921053,
+        "proposed_min_good_pass": 0.842105,
+        "best_fixed_profile_mean_good_pass": 0.894737,
+        "best_fixed_profile_min_good_pass": 0.789474,
+        "proposed_min_good_advantage_over_best_fixed": 0.052631,
+        "screening_score": 132.591402
+      }
+    },
+    {
+      "subset": [
+        "tile",
+        "wood"
+      ],
+      "true_mixed_standard": {
+        "name": "subset_standard_true_merged_bank",
+        "subset": [
+          "tile",
+          "wood"
+        ],
+        "bank_patches_per_category": 12000,
+        "merged_bank_patches": 24000,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "denominator_per_image_nn_ops": 3612672000,
+        "mean_good_pass": 0.875598,
+        "min_good_pass": 0.842105,
+        "category_rows": [
+          {
+            "category": "tile",
+            "good_pass": 0.909091,
+            "threshold": 0.460244,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 24000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "wood",
+            "good_pass": 0.842105,
+            "threshold": 0.459943,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 24000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          }
+        ],
+        "sample_counts": {
+          "tile": {
+            "train_normal": 230,
+            "test": 117,
+            "test_good": 33,
+            "test_defect": 84,
+            "bank_patches": 12000
+          },
+          "wood": {
+            "train_normal": 247,
+            "test": 79,
+            "test_good": 19,
+            "test_defect": 60,
+            "bank_patches": 12000
+          }
+        }
+      },
+      "bank_only_switch": {
+        "name": "bank_only_switch",
+        "mean_good_pass": 0.875598,
+        "min_good_pass": 0.842105,
+        "mean_relative_nn_ops_to_subset_standard": 0.5,
+        "max_relative_nn_ops_to_subset_standard": 0.5,
+        "mean_relative_bank_to_subset_standard": 0.5,
+        "category_rows": [
+          {
+            "category": "tile",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.909091,
+            "threshold": 0.460246,
+            "relative_nn_ops_to_subset_standard": 0.5,
+            "relative_bank_to_subset_standard": 0.5
+          },
+          {
+            "category": "wood",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.842105,
+            "threshold": 0.459923,
+            "relative_nn_ops_to_subset_standard": 0.5,
+            "relative_bank_to_subset_standard": 0.5
+          }
+        ]
+      },
+      "fixed_profile_systems": [
+        {
+          "name": "profile_fixed_to_tile_bank_switch",
+          "mean_good_pass": 0.894737,
+          "min_good_pass": 0.789474,
+          "mean_relative_nn_ops_to_subset_standard": 0.000651042,
+          "max_relative_nn_ops_to_subset_standard": 0.000868056,
+          "mean_relative_bank_to_subset_standard": 0.0078125,
+          "category_rows": [
+            {
+              "category": "tile",
+              "config": "effb0_l23_g14_b250_topk0p02",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 250,
+              "feature_dim": 64,
+              "topk_fraction": 0.02,
+              "good_pass": 1.0,
+              "threshold": 0.826717,
+              "relative_nn_ops_to_subset_standard": 0.000868056,
+              "relative_bank_to_subset_standard": 0.010416667
+            },
+            {
+              "category": "wood",
+              "config": "effb0_l23_g14_b125_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 125,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 0.789474,
+              "threshold": 0.81923,
+              "relative_nn_ops_to_subset_standard": 0.000434028,
+              "relative_bank_to_subset_standard": 0.005208333
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_wood_bank_switch",
+          "mean_good_pass": 0.735248,
+          "min_good_pass": 0.575758,
+          "mean_relative_nn_ops_to_subset_standard": 0.001017253,
+          "max_relative_nn_ops_to_subset_standard": 0.001627604,
+          "mean_relative_bank_to_subset_standard": 0.078125,
+          "category_rows": [
+            {
+              "category": "tile",
+              "config": "mobv3s_l23_g7_b3000_topk0p05",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 3000,
+              "feature_dim": 40,
+              "topk_fraction": 0.05,
+              "good_pass": 0.575758,
+              "threshold": 0.432243,
+              "relative_nn_ops_to_subset_standard": 0.001627604,
+              "relative_bank_to_subset_standard": 0.125
+            },
+            {
+              "category": "wood",
+              "config": "mobv3s_l23_g7_b750_topk0p005",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 750,
+              "feature_dim": 40,
+              "topk_fraction": 0.005,
+              "good_pass": 0.894737,
+              "threshold": 0.342789,
+              "relative_nn_ops_to_subset_standard": 0.000406901,
+              "relative_bank_to_subset_standard": 0.03125
+            }
+          ]
+        }
+      ],
+      "proposed_profile_and_bank_switch": {
+        "name": "proposed_profile_and_bank_switch",
+        "mean_good_pass": 0.921053,
+        "min_good_pass": 0.842105,
+        "mean_relative_nn_ops_to_subset_standard": 0.000467936,
+        "max_relative_nn_ops_to_subset_standard": 0.000868056,
+        "mean_relative_bank_to_subset_standard": 0.0078125,
+        "category_rows": [
+          {
+            "category": "tile",
+            "config": "effb0_l23_g14_b250_topk0p02",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 250,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 1.0,
+            "threshold": 0.826717,
+            "relative_nn_ops_to_subset_standard": 0.000868056,
+            "relative_bank_to_subset_standard": 0.010416667
+          },
+          {
+            "category": "wood",
+            "config": "mobv3s_l23_g7_b125_topk0p005",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "patch_count": 49,
+            "bank_patches": 125,
+            "feature_dim": 40,
+            "topk_fraction": null,
+            "good_pass": 0.842105,
+            "threshold": 0.395526,
+            "relative_nn_ops_to_subset_standard": 6.7817e-05,
+            "relative_bank_to_subset_standard": 0.005208333
+          }
+        ]
+      },
+      "screening_claim_metrics": {
+        "proposed_vs_subset_standard_nn_reduction": 0.999532,
+        "proposed_vs_bank_only_nn_reduction": 0.999064,
+        "proposed_mean_good_pass": 0.921053,
+        "proposed_min_good_pass": 0.842105,
+        "best_fixed_profile_mean_good_pass": 0.894737,
+        "best_fixed_profile_min_good_pass": 0.789474,
+        "proposed_min_good_advantage_over_best_fixed": 0.052631,
+        "screening_score": 132.55668
+      }
+    },
+    {
+      "subset": [
+        "pill",
+        "toothbrush"
+      ],
+      "true_mixed_standard": {
+        "name": "subset_standard_true_merged_bank",
+        "subset": [
+          "pill",
+          "toothbrush"
+        ],
+        "bank_patches_per_category": 12000,
+        "merged_bank_patches": 23760,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "denominator_per_image_nn_ops": 3576545280,
+        "mean_good_pass": 0.586538,
+        "min_good_pass": 0.423077,
+        "category_rows": [
+          {
+            "category": "pill",
+            "good_pass": 0.423077,
+            "threshold": 0.421618,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 23760,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "toothbrush",
+            "good_pass": 0.75,
+            "threshold": 0.426246,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 23760,
+            "relative_nn_ops_to_subset_standard": 1.0
+          }
+        ],
+        "sample_counts": {
+          "pill": {
+            "train_normal": 267,
+            "test": 167,
+            "test_good": 26,
+            "test_defect": 141,
+            "bank_patches": 12000
+          },
+          "toothbrush": {
+            "train_normal": 60,
+            "test": 42,
+            "test_good": 12,
+            "test_defect": 30,
+            "bank_patches": 11760
+          }
+        }
+      },
+      "bank_only_switch": {
+        "name": "bank_only_switch",
+        "mean_good_pass": 0.586538,
+        "min_good_pass": 0.423077,
+        "mean_relative_nn_ops_to_subset_standard": 0.5,
+        "max_relative_nn_ops_to_subset_standard": 0.505050505,
+        "mean_relative_bank_to_subset_standard": 0.5,
+        "category_rows": [
+          {
+            "category": "pill",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.423077,
+            "threshold": 0.421643,
+            "relative_nn_ops_to_subset_standard": 0.505050505,
+            "relative_bank_to_subset_standard": 0.505050505
+          },
+          {
+            "category": "toothbrush",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 11760,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.75,
+            "threshold": 0.426237,
+            "relative_nn_ops_to_subset_standard": 0.494949495,
+            "relative_bank_to_subset_standard": 0.494949495
+          }
+        ]
+      },
+      "fixed_profile_systems": [
+        {
+          "name": "profile_fixed_to_pill_bank_switch",
+          "mean_good_pass": 0.397435,
+          "min_good_pass": 0.333333,
+          "mean_relative_nn_ops_to_subset_standard": 0.001205633,
+          "max_relative_nn_ops_to_subset_standard": 0.001753648,
+          "mean_relative_bank_to_subset_standard": 0.05787037,
+          "category_rows": [
+            {
+              "category": "pill",
+              "config": "mobv3l_l23_g7_b2000_topk0p05",
+              "backbone": "mobilenetv3_large_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 2000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.461538,
+              "threshold": 0.516536,
+              "relative_nn_ops_to_subset_standard": 0.001753648,
+              "relative_bank_to_subset_standard": 0.084175084
+            },
+            {
+              "category": "toothbrush",
+              "config": "mobv3l_l23_g7_b750_topk0p05",
+              "backbone": "mobilenetv3_large_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 750,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.333333,
+              "threshold": 0.453449,
+              "relative_nn_ops_to_subset_standard": 0.000657618,
+              "relative_bank_to_subset_standard": 0.031565657
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_toothbrush_bank_switch",
+          "mean_good_pass": 0.669872,
+          "min_good_pass": 0.423077,
+          "mean_relative_nn_ops_to_subset_standard": 0.008947182,
+          "max_relative_nn_ops_to_subset_standard": 0.016104927,
+          "mean_relative_bank_to_subset_standard": 0.21043771,
+          "category_rows": [
+            {
+              "category": "pill",
+              "config": "effb0_l23_g10_b9000_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 9000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.423077,
+              "threshold": 0.591641,
+              "relative_nn_ops_to_subset_standard": 0.016104927,
+              "relative_bank_to_subset_standard": 0.378787879
+            },
+            {
+              "category": "toothbrush",
+              "config": "effb0_l23_g10_b1000_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 1000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.916667,
+              "threshold": 0.715893,
+              "relative_nn_ops_to_subset_standard": 0.001789436,
+              "relative_bank_to_subset_standard": 0.042087542
+            }
+          ]
+        }
+      ],
+      "proposed_profile_and_bank_switch": {
+        "name": "proposed_profile_and_bank_switch",
+        "mean_good_pass": 0.647436,
+        "min_good_pass": 0.461538,
+        "mean_relative_nn_ops_to_subset_standard": 0.001547862,
+        "max_relative_nn_ops_to_subset_standard": 0.001753648,
+        "mean_relative_bank_to_subset_standard": 0.05787037,
+        "category_rows": [
+          {
+            "category": "pill",
+            "config": "mobv3l_l23_g7_b2000_topk0p05",
+            "backbone": "mobilenetv3_large_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "patch_count": 49,
+            "bank_patches": 2000,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 0.461538,
+            "threshold": 0.516536,
+            "relative_nn_ops_to_subset_standard": 0.001753648,
+            "relative_bank_to_subset_standard": 0.084175084
+          },
+          {
+            "category": "toothbrush",
+            "config": "effb0_l23_g10_b750_topk0p05",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 10,
+            "patch_count": 100,
+            "bank_patches": 750,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 0.833333,
+            "threshold": 0.711949,
+            "relative_nn_ops_to_subset_standard": 0.001342077,
+            "relative_bank_to_subset_standard": 0.031565657
+          }
+        ]
+      },
+      "screening_claim_metrics": {
+        "proposed_vs_subset_standard_nn_reduction": 0.998452,
+        "proposed_vs_bank_only_nn_reduction": 0.996904,
+        "proposed_mean_good_pass": 0.647436,
+        "proposed_min_good_pass": 0.461538,
+        "best_fixed_profile_mean_good_pass": 0.669872,
+        "best_fixed_profile_min_good_pass": 0.423077,
+        "proposed_min_good_advantage_over_best_fixed": 0.038461,
+        "screening_score": 131.675392
+      }
+    },
+    {
+      "subset": [
+        "hazelnut",
+        "tile"
+      ],
+      "true_mixed_standard": {
+        "name": "subset_standard_true_merged_bank",
+        "subset": [
+          "hazelnut",
+          "tile"
+        ],
+        "bank_patches_per_category": 12000,
+        "merged_bank_patches": 24000,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "denominator_per_image_nn_ops": 3612672000,
+        "mean_good_pass": 0.954546,
+        "min_good_pass": 0.909091,
+        "category_rows": [
+          {
+            "category": "hazelnut",
+            "good_pass": 1.0,
+            "threshold": 0.548525,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 24000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "tile",
+            "good_pass": 0.909091,
+            "threshold": 0.460244,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 24000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          }
+        ],
+        "sample_counts": {
+          "hazelnut": {
+            "train_normal": 391,
+            "test": 110,
+            "test_good": 40,
+            "test_defect": 70,
+            "bank_patches": 12000
+          },
+          "tile": {
+            "train_normal": 230,
+            "test": 117,
+            "test_good": 33,
+            "test_defect": 84,
+            "bank_patches": 12000
+          }
+        }
+      },
+      "bank_only_switch": {
+        "name": "bank_only_switch",
+        "mean_good_pass": 0.954546,
+        "min_good_pass": 0.909091,
+        "mean_relative_nn_ops_to_subset_standard": 0.5,
+        "max_relative_nn_ops_to_subset_standard": 0.5,
+        "mean_relative_bank_to_subset_standard": 0.5,
+        "category_rows": [
+          {
+            "category": "hazelnut",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 1.0,
+            "threshold": 0.548517,
+            "relative_nn_ops_to_subset_standard": 0.5,
+            "relative_bank_to_subset_standard": 0.5
+          },
+          {
+            "category": "tile",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.909091,
+            "threshold": 0.460246,
+            "relative_nn_ops_to_subset_standard": 0.5,
+            "relative_bank_to_subset_standard": 0.5
+          }
+        ]
+      },
+      "fixed_profile_systems": [
+        {
+          "name": "profile_fixed_to_hazelnut_bank_switch",
+          "mean_good_pass": 0.984849,
+          "min_good_pass": 0.969697,
+          "mean_relative_nn_ops_to_subset_standard": 0.049479167,
+          "max_relative_nn_ops_to_subset_standard": 0.09375,
+          "mean_relative_bank_to_subset_standard": 0.197916667,
+          "category_rows": [
+            {
+              "category": "hazelnut",
+              "config": "res34_l23_g14_b500_topk0p02",
+              "backbone": "resnet34",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 500,
+              "feature_dim": 192,
+              "topk_fraction": 0.02,
+              "good_pass": 1.0,
+              "threshold": 0.455648,
+              "relative_nn_ops_to_subset_standard": 0.005208333,
+              "relative_bank_to_subset_standard": 0.020833333
+            },
+            {
+              "category": "tile",
+              "config": "res34_l23_g14_b9000_topk0p05",
+              "backbone": "resnet34",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 9000,
+              "feature_dim": 192,
+              "topk_fraction": 0.05,
+              "good_pass": 0.969697,
+              "threshold": 0.339085,
+              "relative_nn_ops_to_subset_standard": 0.09375,
+              "relative_bank_to_subset_standard": 0.375
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_tile_bank_switch",
+          "mean_good_pass": 0.8625,
+          "min_good_pass": 0.725,
+          "mean_relative_nn_ops_to_subset_standard": 0.021267361,
+          "max_relative_nn_ops_to_subset_standard": 0.041666667,
+          "mean_relative_bank_to_subset_standard": 0.255208333,
+          "category_rows": [
+            {
+              "category": "hazelnut",
+              "config": "effb0_l23_g14_b12000_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 12000,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 0.725,
+              "threshold": 0.752232,
+              "relative_nn_ops_to_subset_standard": 0.041666667,
+              "relative_bank_to_subset_standard": 0.5
+            },
+            {
+              "category": "tile",
+              "config": "effb0_l23_g14_b250_topk0p02",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 250,
+              "feature_dim": 64,
+              "topk_fraction": 0.02,
+              "good_pass": 1.0,
+              "threshold": 0.826717,
+              "relative_nn_ops_to_subset_standard": 0.000868056,
+              "relative_bank_to_subset_standard": 0.010416667
+            }
+          ]
+        }
+      ],
+      "proposed_profile_and_bank_switch": {
+        "name": "proposed_profile_and_bank_switch",
+        "mean_good_pass": 1.0,
+        "min_good_pass": 1.0,
+        "mean_relative_nn_ops_to_subset_standard": 0.003038194,
+        "max_relative_nn_ops_to_subset_standard": 0.005208333,
+        "mean_relative_bank_to_subset_standard": 0.015625,
+        "category_rows": [
+          {
+            "category": "hazelnut",
+            "config": "res34_l23_g14_b500_topk0p02",
+            "backbone": "resnet34",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 500,
+            "feature_dim": 192,
+            "topk_fraction": null,
+            "good_pass": 1.0,
+            "threshold": 0.455648,
+            "relative_nn_ops_to_subset_standard": 0.005208333,
+            "relative_bank_to_subset_standard": 0.020833333
+          },
+          {
+            "category": "tile",
+            "config": "effb0_l23_g14_b250_topk0p02",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 250,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 1.0,
+            "threshold": 0.826717,
+            "relative_nn_ops_to_subset_standard": 0.000868056,
+            "relative_bank_to_subset_standard": 0.010416667
+          }
+        ]
+      },
+      "screening_claim_metrics": {
+        "proposed_vs_subset_standard_nn_reduction": 0.996962,
+        "proposed_vs_bank_only_nn_reduction": 0.993924,
+        "proposed_mean_good_pass": 1.0,
+        "proposed_min_good_pass": 1.0,
+        "best_fixed_profile_mean_good_pass": 0.984849,
+        "best_fixed_profile_min_good_pass": 0.969697,
+        "proposed_min_good_advantage_over_best_fixed": 0.030303,
+        "screening_score": 131.029039
+      }
+    },
+    {
+      "subset": [
+        "bottle",
+        "toothbrush",
+        "wood"
+      ],
+      "true_mixed_standard": {
+        "name": "subset_standard_true_merged_bank",
+        "subset": [
+          "bottle",
+          "toothbrush",
+          "wood"
+        ],
+        "bank_patches_per_category": 12000,
+        "merged_bank_patches": 35760,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "denominator_per_image_nn_ops": 5382881280,
+        "mean_good_pass": 0.864035,
+        "min_good_pass": 0.75,
+        "category_rows": [
+          {
+            "category": "bottle",
+            "good_pass": 1.0,
+            "threshold": 0.420442,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 35760,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "toothbrush",
+            "good_pass": 0.75,
+            "threshold": 0.426246,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 35760,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "wood",
+            "good_pass": 0.842105,
+            "threshold": 0.459943,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 35760,
+            "relative_nn_ops_to_subset_standard": 1.0
+          }
+        ],
+        "sample_counts": {
+          "bottle": {
+            "train_normal": 209,
+            "test": 83,
+            "test_good": 20,
+            "test_defect": 63,
+            "bank_patches": 12000
+          },
+          "toothbrush": {
+            "train_normal": 60,
+            "test": 42,
+            "test_good": 12,
+            "test_defect": 30,
+            "bank_patches": 11760
+          },
+          "wood": {
+            "train_normal": 247,
+            "test": 79,
+            "test_good": 19,
+            "test_defect": 60,
+            "bank_patches": 12000
+          }
+        }
+      },
+      "bank_only_switch": {
+        "name": "bank_only_switch",
+        "mean_good_pass": 0.864035,
+        "min_good_pass": 0.75,
+        "mean_relative_nn_ops_to_subset_standard": 0.333333333,
+        "max_relative_nn_ops_to_subset_standard": 0.33557047,
+        "mean_relative_bank_to_subset_standard": 0.333333333,
+        "category_rows": [
+          {
+            "category": "bottle",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 1.0,
+            "threshold": 0.420454,
+            "relative_nn_ops_to_subset_standard": 0.33557047,
+            "relative_bank_to_subset_standard": 0.33557047
+          },
+          {
+            "category": "toothbrush",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 11760,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.75,
+            "threshold": 0.426237,
+            "relative_nn_ops_to_subset_standard": 0.32885906,
+            "relative_bank_to_subset_standard": 0.32885906
+          },
+          {
+            "category": "wood",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.842105,
+            "threshold": 0.459923,
+            "relative_nn_ops_to_subset_standard": 0.33557047,
+            "relative_bank_to_subset_standard": 0.33557047
+          }
+        ]
+      },
+      "fixed_profile_systems": [
+        {
+          "name": "profile_fixed_to_bottle_bank_switch",
+          "mean_good_pass": 0.831871,
+          "min_good_pass": 0.578947,
+          "mean_relative_nn_ops_to_subset_standard": 0.001387113,
+          "max_relative_nn_ops_to_subset_standard": 0.002377909,
+          "mean_relative_bank_to_subset_standard": 0.032624907,
+          "category_rows": [
+            {
+              "category": "bottle",
+              "config": "effb0_l23_g10_b500_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 500,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 1.0,
+              "threshold": 0.710114,
+              "relative_nn_ops_to_subset_standard": 0.000594477,
+              "relative_bank_to_subset_standard": 0.013982103
+            },
+            {
+              "category": "toothbrush",
+              "config": "effb0_l23_g10_b1000_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 1000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.916667,
+              "threshold": 0.715893,
+              "relative_nn_ops_to_subset_standard": 0.001188954,
+              "relative_bank_to_subset_standard": 0.027964206
+            },
+            {
+              "category": "wood",
+              "config": "effb0_l23_g10_b2000_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 2000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.578947,
+              "threshold": 0.652876,
+              "relative_nn_ops_to_subset_standard": 0.002377909,
+              "relative_bank_to_subset_standard": 0.055928412
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_toothbrush_bank_switch",
+          "mean_good_pass": 0.831871,
+          "min_good_pass": 0.578947,
+          "mean_relative_nn_ops_to_subset_standard": 0.001387113,
+          "max_relative_nn_ops_to_subset_standard": 0.002377909,
+          "mean_relative_bank_to_subset_standard": 0.032624907,
+          "category_rows": [
+            {
+              "category": "bottle",
+              "config": "effb0_l23_g10_b500_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 500,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 1.0,
+              "threshold": 0.710114,
+              "relative_nn_ops_to_subset_standard": 0.000594477,
+              "relative_bank_to_subset_standard": 0.013982103
+            },
+            {
+              "category": "toothbrush",
+              "config": "effb0_l23_g10_b1000_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 1000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.916667,
+              "threshold": 0.715893,
+              "relative_nn_ops_to_subset_standard": 0.001188954,
+              "relative_bank_to_subset_standard": 0.027964206
+            },
+            {
+              "category": "wood",
+              "config": "effb0_l23_g10_b2000_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 2000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.578947,
+              "threshold": 0.652876,
+              "relative_nn_ops_to_subset_standard": 0.002377909,
+              "relative_bank_to_subset_standard": 0.055928412
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_wood_bank_switch",
+          "mean_good_pass": 0.64269,
+          "min_good_pass": 0.083333,
+          "mean_relative_nn_ops_to_subset_standard": 0.000136544,
+          "max_relative_nn_ops_to_subset_standard": 0.000273088,
+          "mean_relative_bank_to_subset_standard": 0.010486577,
+          "category_rows": [
+            {
+              "category": "bottle",
+              "config": "mobv3s_l23_g7_b250_topk0p05",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 250,
+              "feature_dim": 40,
+              "topk_fraction": 0.05,
+              "good_pass": 0.95,
+              "threshold": 0.486675,
+              "relative_nn_ops_to_subset_standard": 9.1029e-05,
+              "relative_bank_to_subset_standard": 0.006991051
+            },
+            {
+              "category": "toothbrush",
+              "config": "mobv3s_l23_g7_b125_topk0p005",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 125,
+              "feature_dim": 40,
+              "topk_fraction": 0.005,
+              "good_pass": 0.083333,
+              "threshold": 0.433479,
+              "relative_nn_ops_to_subset_standard": 4.5515e-05,
+              "relative_bank_to_subset_standard": 0.003495526
+            },
+            {
+              "category": "wood",
+              "config": "mobv3s_l23_g7_b750_topk0p005",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 750,
+              "feature_dim": 40,
+              "topk_fraction": 0.005,
+              "good_pass": 0.894737,
+              "threshold": 0.342789,
+              "relative_nn_ops_to_subset_standard": 0.000273088,
+              "relative_bank_to_subset_standard": 0.020973154
+            }
+          ]
+        }
+      ],
+      "proposed_profile_and_bank_switch": {
+        "name": "proposed_profile_and_bank_switch",
+        "mean_good_pass": 0.891813,
+        "min_good_pass": 0.833333,
+        "mean_relative_nn_ops_to_subset_standard": 0.000510569,
+        "max_relative_nn_ops_to_subset_standard": 0.000891716,
+        "mean_relative_bank_to_subset_standard": 0.012816928,
+        "category_rows": [
+          {
+            "category": "bottle",
+            "config": "effb0_l23_g10_b500_topk0p05",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 10,
+            "patch_count": 100,
+            "bank_patches": 500,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 1.0,
+            "threshold": 0.710114,
+            "relative_nn_ops_to_subset_standard": 0.000594477,
+            "relative_bank_to_subset_standard": 0.013982103
+          },
+          {
+            "category": "toothbrush",
+            "config": "effb0_l23_g10_b750_topk0p05",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 10,
+            "patch_count": 100,
+            "bank_patches": 750,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 0.833333,
+            "threshold": 0.711949,
+            "relative_nn_ops_to_subset_standard": 0.000891716,
+            "relative_bank_to_subset_standard": 0.020973154
+          },
+          {
+            "category": "wood",
+            "config": "mobv3s_l23_g7_b125_topk0p005",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "patch_count": 49,
+            "bank_patches": 125,
+            "feature_dim": 40,
+            "topk_fraction": null,
+            "good_pass": 0.842105,
+            "threshold": 0.395526,
+            "relative_nn_ops_to_subset_standard": 4.5515e-05,
+            "relative_bank_to_subset_standard": 0.003495526
+          }
+        ]
+      },
+      "screening_claim_metrics": {
+        "proposed_vs_subset_standard_nn_reduction": 0.999489,
+        "proposed_vs_bank_only_nn_reduction": 0.998468,
+        "proposed_mean_good_pass": 0.891813,
+        "proposed_min_good_pass": 0.833333,
+        "best_fixed_profile_mean_good_pass": 0.831871,
+        "best_fixed_profile_min_good_pass": 0.578947,
+        "proposed_min_good_advantage_over_best_fixed": 0.254386,
+        "screening_score": 142.622292
+      }
+    },
+    {
+      "subset": [
+        "leather",
+        "tile",
+        "wood"
+      ],
+      "true_mixed_standard": {
+        "name": "subset_standard_true_merged_bank",
+        "subset": [
+          "leather",
+          "tile",
+          "wood"
+        ],
+        "bank_patches_per_category": 12000,
+        "merged_bank_patches": 36000,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "denominator_per_image_nn_ops": 5419008000,
+        "mean_good_pass": 0.917065,
+        "min_good_pass": 0.842105,
+        "category_rows": [
+          {
+            "category": "leather",
+            "good_pass": 1.0,
+            "threshold": 0.436109,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 36000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "tile",
+            "good_pass": 0.909091,
+            "threshold": 0.460244,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 36000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "wood",
+            "good_pass": 0.842105,
+            "threshold": 0.459943,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 36000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          }
+        ],
+        "sample_counts": {
+          "leather": {
+            "train_normal": 245,
+            "test": 124,
+            "test_good": 32,
+            "test_defect": 92,
+            "bank_patches": 12000
+          },
+          "tile": {
+            "train_normal": 230,
+            "test": 117,
+            "test_good": 33,
+            "test_defect": 84,
+            "bank_patches": 12000
+          },
+          "wood": {
+            "train_normal": 247,
+            "test": 79,
+            "test_good": 19,
+            "test_defect": 60,
+            "bank_patches": 12000
+          }
+        }
+      },
+      "bank_only_switch": {
+        "name": "bank_only_switch",
+        "mean_good_pass": 0.917065,
+        "min_good_pass": 0.842105,
+        "mean_relative_nn_ops_to_subset_standard": 0.333333333,
+        "max_relative_nn_ops_to_subset_standard": 0.333333333,
+        "mean_relative_bank_to_subset_standard": 0.333333333,
+        "category_rows": [
+          {
+            "category": "leather",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 1.0,
+            "threshold": 0.436111,
+            "relative_nn_ops_to_subset_standard": 0.333333333,
+            "relative_bank_to_subset_standard": 0.333333333
+          },
+          {
+            "category": "tile",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.909091,
+            "threshold": 0.460246,
+            "relative_nn_ops_to_subset_standard": 0.333333333,
+            "relative_bank_to_subset_standard": 0.333333333
+          },
+          {
+            "category": "wood",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.842105,
+            "threshold": 0.459923,
+            "relative_nn_ops_to_subset_standard": 0.333333333,
+            "relative_bank_to_subset_standard": 0.333333333
+          }
+        ]
+      },
+      "fixed_profile_systems": [
+        {
+          "name": "profile_fixed_to_leather_bank_switch",
+          "mean_good_pass": 0.929825,
+          "min_good_pass": 0.789474,
+          "mean_relative_nn_ops_to_subset_standard": 0.000385802,
+          "max_relative_nn_ops_to_subset_standard": 0.000578704,
+          "mean_relative_bank_to_subset_standard": 0.00462963,
+          "category_rows": [
+            {
+              "category": "leather",
+              "config": "effb0_l23_g14_b125_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 125,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 1.0,
+              "threshold": 0.748164,
+              "relative_nn_ops_to_subset_standard": 0.000289352,
+              "relative_bank_to_subset_standard": 0.003472222
+            },
+            {
+              "category": "tile",
+              "config": "effb0_l23_g14_b250_topk0p02",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 250,
+              "feature_dim": 64,
+              "topk_fraction": 0.02,
+              "good_pass": 1.0,
+              "threshold": 0.826717,
+              "relative_nn_ops_to_subset_standard": 0.000578704,
+              "relative_bank_to_subset_standard": 0.006944444
+            },
+            {
+              "category": "wood",
+              "config": "effb0_l23_g14_b125_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 125,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 0.789474,
+              "threshold": 0.81923,
+              "relative_nn_ops_to_subset_standard": 0.000289352,
+              "relative_bank_to_subset_standard": 0.003472222
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_tile_bank_switch",
+          "mean_good_pass": 0.929825,
+          "min_good_pass": 0.789474,
+          "mean_relative_nn_ops_to_subset_standard": 0.000385802,
+          "max_relative_nn_ops_to_subset_standard": 0.000578704,
+          "mean_relative_bank_to_subset_standard": 0.00462963,
+          "category_rows": [
+            {
+              "category": "leather",
+              "config": "effb0_l23_g14_b125_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 125,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 1.0,
+              "threshold": 0.748164,
+              "relative_nn_ops_to_subset_standard": 0.000289352,
+              "relative_bank_to_subset_standard": 0.003472222
+            },
+            {
+              "category": "tile",
+              "config": "effb0_l23_g14_b250_topk0p02",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 250,
+              "feature_dim": 64,
+              "topk_fraction": 0.02,
+              "good_pass": 1.0,
+              "threshold": 0.826717,
+              "relative_nn_ops_to_subset_standard": 0.000578704,
+              "relative_bank_to_subset_standard": 0.006944444
+            },
+            {
+              "category": "wood",
+              "config": "effb0_l23_g14_b125_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 125,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 0.789474,
+              "threshold": 0.81923,
+              "relative_nn_ops_to_subset_standard": 0.000289352,
+              "relative_bank_to_subset_standard": 0.003472222
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_wood_bank_switch",
+          "mean_good_pass": 0.542248,
+          "min_good_pass": 0.15625,
+          "mean_relative_nn_ops_to_subset_standard": 0.000693239,
+          "max_relative_nn_ops_to_subset_standard": 0.001085069,
+          "mean_relative_bank_to_subset_standard": 0.053240741,
+          "category_rows": [
+            {
+              "category": "leather",
+              "config": "mobv3s_l23_g7_b2000_topk0p05",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 2000,
+              "feature_dim": 40,
+              "topk_fraction": 0.05,
+              "good_pass": 0.15625,
+              "threshold": 0.275597,
+              "relative_nn_ops_to_subset_standard": 0.00072338,
+              "relative_bank_to_subset_standard": 0.055555556
+            },
+            {
+              "category": "tile",
+              "config": "mobv3s_l23_g7_b3000_topk0p05",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 3000,
+              "feature_dim": 40,
+              "topk_fraction": 0.05,
+              "good_pass": 0.575758,
+              "threshold": 0.432243,
+              "relative_nn_ops_to_subset_standard": 0.001085069,
+              "relative_bank_to_subset_standard": 0.083333333
+            },
+            {
+              "category": "wood",
+              "config": "mobv3s_l23_g7_b750_topk0p005",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 750,
+              "feature_dim": 40,
+              "topk_fraction": 0.005,
+              "good_pass": 0.894737,
+              "threshold": 0.342789,
+              "relative_nn_ops_to_subset_standard": 0.000271267,
+              "relative_bank_to_subset_standard": 0.020833333
+            }
+          ]
+        }
+      ],
+      "proposed_profile_and_bank_switch": {
+        "name": "proposed_profile_and_bank_switch",
+        "mean_good_pass": 0.947368,
+        "min_good_pass": 0.842105,
+        "mean_relative_nn_ops_to_subset_standard": 0.000304422,
+        "max_relative_nn_ops_to_subset_standard": 0.000578704,
+        "mean_relative_bank_to_subset_standard": 0.00462963,
+        "category_rows": [
+          {
+            "category": "leather",
+            "config": "effb0_l23_g14_b125_topk0p005",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 125,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 1.0,
+            "threshold": 0.748164,
+            "relative_nn_ops_to_subset_standard": 0.000289352,
+            "relative_bank_to_subset_standard": 0.003472222
+          },
+          {
+            "category": "tile",
+            "config": "effb0_l23_g14_b250_topk0p02",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 250,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 1.0,
+            "threshold": 0.826717,
+            "relative_nn_ops_to_subset_standard": 0.000578704,
+            "relative_bank_to_subset_standard": 0.006944444
+          },
+          {
+            "category": "wood",
+            "config": "mobv3s_l23_g7_b125_topk0p005",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "patch_count": 49,
+            "bank_patches": 125,
+            "feature_dim": 40,
+            "topk_fraction": null,
+            "good_pass": 0.842105,
+            "threshold": 0.395526,
+            "relative_nn_ops_to_subset_standard": 4.5211e-05,
+            "relative_bank_to_subset_standard": 0.003472222
+          }
+        ]
+      },
+      "screening_claim_metrics": {
+        "proposed_vs_subset_standard_nn_reduction": 0.999696,
+        "proposed_vs_bank_only_nn_reduction": 0.999087,
+        "proposed_mean_good_pass": 0.947368,
+        "proposed_min_good_pass": 0.842105,
+        "best_fixed_profile_mean_good_pass": 0.929825,
+        "best_fixed_profile_min_good_pass": 0.789474,
+        "proposed_min_good_advantage_over_best_fixed": 0.052631,
+        "screening_score": 132.57371
+      }
+    },
+    {
+      "subset": [
+        "bottle",
+        "leather",
+        "wood"
+      ],
+      "true_mixed_standard": {
+        "name": "subset_standard_true_merged_bank",
+        "subset": [
+          "bottle",
+          "leather",
+          "wood"
+        ],
+        "bank_patches_per_category": 12000,
+        "merged_bank_patches": 36000,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "denominator_per_image_nn_ops": 5419008000,
+        "mean_good_pass": 0.947368,
+        "min_good_pass": 0.842105,
+        "category_rows": [
+          {
+            "category": "bottle",
+            "good_pass": 1.0,
+            "threshold": 0.420442,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 36000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "leather",
+            "good_pass": 1.0,
+            "threshold": 0.436109,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 36000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "wood",
+            "good_pass": 0.842105,
+            "threshold": 0.459943,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 36000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          }
+        ],
+        "sample_counts": {
+          "bottle": {
+            "train_normal": 209,
+            "test": 83,
+            "test_good": 20,
+            "test_defect": 63,
+            "bank_patches": 12000
+          },
+          "leather": {
+            "train_normal": 245,
+            "test": 124,
+            "test_good": 32,
+            "test_defect": 92,
+            "bank_patches": 12000
+          },
+          "wood": {
+            "train_normal": 247,
+            "test": 79,
+            "test_good": 19,
+            "test_defect": 60,
+            "bank_patches": 12000
+          }
+        }
+      },
+      "bank_only_switch": {
+        "name": "bank_only_switch",
+        "mean_good_pass": 0.947368,
+        "min_good_pass": 0.842105,
+        "mean_relative_nn_ops_to_subset_standard": 0.333333333,
+        "max_relative_nn_ops_to_subset_standard": 0.333333333,
+        "mean_relative_bank_to_subset_standard": 0.333333333,
+        "category_rows": [
+          {
+            "category": "bottle",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 1.0,
+            "threshold": 0.420454,
+            "relative_nn_ops_to_subset_standard": 0.333333333,
+            "relative_bank_to_subset_standard": 0.333333333
+          },
+          {
+            "category": "leather",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 1.0,
+            "threshold": 0.436111,
+            "relative_nn_ops_to_subset_standard": 0.333333333,
+            "relative_bank_to_subset_standard": 0.333333333
+          },
+          {
+            "category": "wood",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.842105,
+            "threshold": 0.459923,
+            "relative_nn_ops_to_subset_standard": 0.333333333,
+            "relative_bank_to_subset_standard": 0.333333333
+          }
+        ]
+      },
+      "fixed_profile_systems": [
+        {
+          "name": "profile_fixed_to_bottle_bank_switch",
+          "mean_good_pass": 0.713816,
+          "min_good_pass": 0.5625,
+          "mean_relative_nn_ops_to_subset_standard": 0.001082609,
+          "max_relative_nn_ops_to_subset_standard": 0.002362056,
+          "mean_relative_bank_to_subset_standard": 0.025462963,
+          "category_rows": [
+            {
+              "category": "bottle",
+              "config": "effb0_l23_g10_b500_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 500,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 1.0,
+              "threshold": 0.710114,
+              "relative_nn_ops_to_subset_standard": 0.000590514,
+              "relative_bank_to_subset_standard": 0.013888889
+            },
+            {
+              "category": "leather",
+              "config": "effb0_l23_g10_b250_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 250,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 0.5625,
+              "threshold": 0.690049,
+              "relative_nn_ops_to_subset_standard": 0.000295257,
+              "relative_bank_to_subset_standard": 0.006944444
+            },
+            {
+              "category": "wood",
+              "config": "effb0_l23_g10_b2000_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 2000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.578947,
+              "threshold": 0.652876,
+              "relative_nn_ops_to_subset_standard": 0.002362056,
+              "relative_bank_to_subset_standard": 0.055555556
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_leather_bank_switch",
+          "mean_good_pass": 0.929825,
+          "min_good_pass": 0.789474,
+          "mean_relative_nn_ops_to_subset_standard": 0.001350309,
+          "max_relative_nn_ops_to_subset_standard": 0.003472222,
+          "mean_relative_bank_to_subset_standard": 0.016203704,
+          "category_rows": [
+            {
+              "category": "bottle",
+              "config": "effb0_l23_g14_b1500_topk0p02",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 1500,
+              "feature_dim": 64,
+              "topk_fraction": 0.02,
+              "good_pass": 1.0,
+              "threshold": 0.678918,
+              "relative_nn_ops_to_subset_standard": 0.003472222,
+              "relative_bank_to_subset_standard": 0.041666667
+            },
+            {
+              "category": "leather",
+              "config": "effb0_l23_g14_b125_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 125,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 1.0,
+              "threshold": 0.748164,
+              "relative_nn_ops_to_subset_standard": 0.000289352,
+              "relative_bank_to_subset_standard": 0.003472222
+            },
+            {
+              "category": "wood",
+              "config": "effb0_l23_g14_b125_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 125,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 0.789474,
+              "threshold": 0.81923,
+              "relative_nn_ops_to_subset_standard": 0.000289352,
+              "relative_bank_to_subset_standard": 0.003472222
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_wood_bank_switch",
+          "mean_good_pass": 0.666996,
+          "min_good_pass": 0.15625,
+          "mean_relative_nn_ops_to_subset_standard": 0.00036169,
+          "max_relative_nn_ops_to_subset_standard": 0.00072338,
+          "mean_relative_bank_to_subset_standard": 0.027777778,
+          "category_rows": [
+            {
+              "category": "bottle",
+              "config": "mobv3s_l23_g7_b250_topk0p05",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 250,
+              "feature_dim": 40,
+              "topk_fraction": 0.05,
+              "good_pass": 0.95,
+              "threshold": 0.486675,
+              "relative_nn_ops_to_subset_standard": 9.0422e-05,
+              "relative_bank_to_subset_standard": 0.006944444
+            },
+            {
+              "category": "leather",
+              "config": "mobv3s_l23_g7_b2000_topk0p05",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 2000,
+              "feature_dim": 40,
+              "topk_fraction": 0.05,
+              "good_pass": 0.15625,
+              "threshold": 0.275597,
+              "relative_nn_ops_to_subset_standard": 0.00072338,
+              "relative_bank_to_subset_standard": 0.055555556
+            },
+            {
+              "category": "wood",
+              "config": "mobv3s_l23_g7_b750_topk0p005",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 750,
+              "feature_dim": 40,
+              "topk_fraction": 0.005,
+              "good_pass": 0.894737,
+              "threshold": 0.342789,
+              "relative_nn_ops_to_subset_standard": 0.000271267,
+              "relative_bank_to_subset_standard": 0.020833333
+            }
+          ]
+        }
+      ],
+      "proposed_profile_and_bank_switch": {
+        "name": "proposed_profile_and_bank_switch",
+        "mean_good_pass": 0.947368,
+        "min_good_pass": 0.842105,
+        "mean_relative_nn_ops_to_subset_standard": 0.000308359,
+        "max_relative_nn_ops_to_subset_standard": 0.000590514,
+        "mean_relative_bank_to_subset_standard": 0.006944444,
+        "category_rows": [
+          {
+            "category": "bottle",
+            "config": "effb0_l23_g10_b500_topk0p05",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 10,
+            "patch_count": 100,
+            "bank_patches": 500,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 1.0,
+            "threshold": 0.710114,
+            "relative_nn_ops_to_subset_standard": 0.000590514,
+            "relative_bank_to_subset_standard": 0.013888889
+          },
+          {
+            "category": "leather",
+            "config": "effb0_l23_g14_b125_topk0p005",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 125,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 1.0,
+            "threshold": 0.748164,
+            "relative_nn_ops_to_subset_standard": 0.000289352,
+            "relative_bank_to_subset_standard": 0.003472222
+          },
+          {
+            "category": "wood",
+            "config": "mobv3s_l23_g7_b125_topk0p005",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "patch_count": 49,
+            "bank_patches": 125,
+            "feature_dim": 40,
+            "topk_fraction": null,
+            "good_pass": 0.842105,
+            "threshold": 0.395526,
+            "relative_nn_ops_to_subset_standard": 4.5211e-05,
+            "relative_bank_to_subset_standard": 0.003472222
+          }
+        ]
+      },
+      "screening_claim_metrics": {
+        "proposed_vs_subset_standard_nn_reduction": 0.999692,
+        "proposed_vs_bank_only_nn_reduction": 0.999075,
+        "proposed_mean_good_pass": 0.947368,
+        "proposed_min_good_pass": 0.842105,
+        "best_fixed_profile_mean_good_pass": 0.929825,
+        "best_fixed_profile_min_good_pass": 0.789474,
+        "proposed_min_good_advantage_over_best_fixed": 0.052631,
+        "screening_score": 132.572962
+      }
+    },
+    {
+      "subset": [
+        "bottle",
+        "tile",
+        "wood"
+      ],
+      "true_mixed_standard": {
+        "name": "subset_standard_true_merged_bank",
+        "subset": [
+          "bottle",
+          "tile",
+          "wood"
+        ],
+        "bank_patches_per_category": 12000,
+        "merged_bank_patches": 36000,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "denominator_per_image_nn_ops": 5419008000,
+        "mean_good_pass": 0.917065,
+        "min_good_pass": 0.842105,
+        "category_rows": [
+          {
+            "category": "bottle",
+            "good_pass": 1.0,
+            "threshold": 0.420442,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 36000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "tile",
+            "good_pass": 0.909091,
+            "threshold": 0.460244,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 36000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "wood",
+            "good_pass": 0.842105,
+            "threshold": 0.459943,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 36000,
+            "relative_nn_ops_to_subset_standard": 1.0
+          }
+        ],
+        "sample_counts": {
+          "bottle": {
+            "train_normal": 209,
+            "test": 83,
+            "test_good": 20,
+            "test_defect": 63,
+            "bank_patches": 12000
+          },
+          "tile": {
+            "train_normal": 230,
+            "test": 117,
+            "test_good": 33,
+            "test_defect": 84,
+            "bank_patches": 12000
+          },
+          "wood": {
+            "train_normal": 247,
+            "test": 79,
+            "test_good": 19,
+            "test_defect": 60,
+            "bank_patches": 12000
+          }
+        }
+      },
+      "bank_only_switch": {
+        "name": "bank_only_switch",
+        "mean_good_pass": 0.917065,
+        "min_good_pass": 0.842105,
+        "mean_relative_nn_ops_to_subset_standard": 0.333333333,
+        "max_relative_nn_ops_to_subset_standard": 0.333333333,
+        "mean_relative_bank_to_subset_standard": 0.333333333,
+        "category_rows": [
+          {
+            "category": "bottle",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 1.0,
+            "threshold": 0.420454,
+            "relative_nn_ops_to_subset_standard": 0.333333333,
+            "relative_bank_to_subset_standard": 0.333333333
+          },
+          {
+            "category": "tile",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.909091,
+            "threshold": 0.460246,
+            "relative_nn_ops_to_subset_standard": 0.333333333,
+            "relative_bank_to_subset_standard": 0.333333333
+          },
+          {
+            "category": "wood",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.842105,
+            "threshold": 0.459923,
+            "relative_nn_ops_to_subset_standard": 0.333333333,
+            "relative_bank_to_subset_standard": 0.333333333
+          }
+        ]
+      },
+      "fixed_profile_systems": [
+        {
+          "name": "profile_fixed_to_bottle_bank_switch",
+          "mean_good_pass": 0.809144,
+          "min_good_pass": 0.578947,
+          "mean_relative_nn_ops_to_subset_standard": 0.003346246,
+          "max_relative_nn_ops_to_subset_standard": 0.007086168,
+          "mean_relative_bank_to_subset_standard": 0.078703704,
+          "category_rows": [
+            {
+              "category": "bottle",
+              "config": "effb0_l23_g10_b500_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 500,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 1.0,
+              "threshold": 0.710114,
+              "relative_nn_ops_to_subset_standard": 0.000590514,
+              "relative_bank_to_subset_standard": 0.013888889
+            },
+            {
+              "category": "tile",
+              "config": "effb0_l23_g10_b6000_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 6000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.848485,
+              "threshold": 0.732436,
+              "relative_nn_ops_to_subset_standard": 0.007086168,
+              "relative_bank_to_subset_standard": 0.166666667
+            },
+            {
+              "category": "wood",
+              "config": "effb0_l23_g10_b2000_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 2000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.578947,
+              "threshold": 0.652876,
+              "relative_nn_ops_to_subset_standard": 0.002362056,
+              "relative_bank_to_subset_standard": 0.055555556
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_tile_bank_switch",
+          "mean_good_pass": 0.929825,
+          "min_good_pass": 0.789474,
+          "mean_relative_nn_ops_to_subset_standard": 0.001446759,
+          "max_relative_nn_ops_to_subset_standard": 0.003472222,
+          "mean_relative_bank_to_subset_standard": 0.017361111,
+          "category_rows": [
+            {
+              "category": "bottle",
+              "config": "effb0_l23_g14_b1500_topk0p02",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 1500,
+              "feature_dim": 64,
+              "topk_fraction": 0.02,
+              "good_pass": 1.0,
+              "threshold": 0.678918,
+              "relative_nn_ops_to_subset_standard": 0.003472222,
+              "relative_bank_to_subset_standard": 0.041666667
+            },
+            {
+              "category": "tile",
+              "config": "effb0_l23_g14_b250_topk0p02",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 250,
+              "feature_dim": 64,
+              "topk_fraction": 0.02,
+              "good_pass": 1.0,
+              "threshold": 0.826717,
+              "relative_nn_ops_to_subset_standard": 0.000578704,
+              "relative_bank_to_subset_standard": 0.006944444
+            },
+            {
+              "category": "wood",
+              "config": "effb0_l23_g14_b125_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 125,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 0.789474,
+              "threshold": 0.81923,
+              "relative_nn_ops_to_subset_standard": 0.000289352,
+              "relative_bank_to_subset_standard": 0.003472222
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_wood_bank_switch",
+          "mean_good_pass": 0.806832,
+          "min_good_pass": 0.575758,
+          "mean_relative_nn_ops_to_subset_standard": 0.000482253,
+          "max_relative_nn_ops_to_subset_standard": 0.001085069,
+          "mean_relative_bank_to_subset_standard": 0.037037037,
+          "category_rows": [
+            {
+              "category": "bottle",
+              "config": "mobv3s_l23_g7_b250_topk0p05",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 250,
+              "feature_dim": 40,
+              "topk_fraction": 0.05,
+              "good_pass": 0.95,
+              "threshold": 0.486675,
+              "relative_nn_ops_to_subset_standard": 9.0422e-05,
+              "relative_bank_to_subset_standard": 0.006944444
+            },
+            {
+              "category": "tile",
+              "config": "mobv3s_l23_g7_b3000_topk0p05",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 3000,
+              "feature_dim": 40,
+              "topk_fraction": 0.05,
+              "good_pass": 0.575758,
+              "threshold": 0.432243,
+              "relative_nn_ops_to_subset_standard": 0.001085069,
+              "relative_bank_to_subset_standard": 0.083333333
+            },
+            {
+              "category": "wood",
+              "config": "mobv3s_l23_g7_b750_topk0p005",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 750,
+              "feature_dim": 40,
+              "topk_fraction": 0.005,
+              "good_pass": 0.894737,
+              "threshold": 0.342789,
+              "relative_nn_ops_to_subset_standard": 0.000271267,
+              "relative_bank_to_subset_standard": 0.020833333
+            }
+          ]
+        }
+      ],
+      "proposed_profile_and_bank_switch": {
+        "name": "proposed_profile_and_bank_switch",
+        "mean_good_pass": 0.947368,
+        "min_good_pass": 0.842105,
+        "mean_relative_nn_ops_to_subset_standard": 0.00040481,
+        "max_relative_nn_ops_to_subset_standard": 0.000590514,
+        "mean_relative_bank_to_subset_standard": 0.008101852,
+        "category_rows": [
+          {
+            "category": "bottle",
+            "config": "effb0_l23_g10_b500_topk0p05",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 10,
+            "patch_count": 100,
+            "bank_patches": 500,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 1.0,
+            "threshold": 0.710114,
+            "relative_nn_ops_to_subset_standard": 0.000590514,
+            "relative_bank_to_subset_standard": 0.013888889
+          },
+          {
+            "category": "tile",
+            "config": "effb0_l23_g14_b250_topk0p02",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 250,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 1.0,
+            "threshold": 0.826717,
+            "relative_nn_ops_to_subset_standard": 0.000578704,
+            "relative_bank_to_subset_standard": 0.006944444
+          },
+          {
+            "category": "wood",
+            "config": "mobv3s_l23_g7_b125_topk0p005",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "patch_count": 49,
+            "bank_patches": 125,
+            "feature_dim": 40,
+            "topk_fraction": null,
+            "good_pass": 0.842105,
+            "threshold": 0.395526,
+            "relative_nn_ops_to_subset_standard": 4.5211e-05,
+            "relative_bank_to_subset_standard": 0.003472222
+          }
+        ]
+      },
+      "screening_claim_metrics": {
+        "proposed_vs_subset_standard_nn_reduction": 0.999595,
+        "proposed_vs_bank_only_nn_reduction": 0.998786,
+        "proposed_mean_good_pass": 0.947368,
+        "proposed_min_good_pass": 0.842105,
+        "best_fixed_profile_mean_good_pass": 0.929825,
+        "best_fixed_profile_min_good_pass": 0.789474,
+        "proposed_min_good_advantage_over_best_fixed": 0.052631,
+        "screening_score": 132.554636
+      }
+    },
+    {
+      "subset": [
+        "leather",
+        "toothbrush",
+        "wood"
+      ],
+      "true_mixed_standard": {
+        "name": "subset_standard_true_merged_bank",
+        "subset": [
+          "leather",
+          "toothbrush",
+          "wood"
+        ],
+        "bank_patches_per_category": 12000,
+        "merged_bank_patches": 35760,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "denominator_per_image_nn_ops": 5382881280,
+        "mean_good_pass": 0.864035,
+        "min_good_pass": 0.75,
+        "category_rows": [
+          {
+            "category": "leather",
+            "good_pass": 1.0,
+            "threshold": 0.436109,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 35760,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "toothbrush",
+            "good_pass": 0.75,
+            "threshold": 0.426246,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 35760,
+            "relative_nn_ops_to_subset_standard": 1.0
+          },
+          {
+            "category": "wood",
+            "good_pass": 0.842105,
+            "threshold": 0.459943,
+            "false_pass_target": 0.03,
+            "patch_grid": 14,
+            "patch_count": 196,
+            "feature_dim": 768,
+            "merged_bank_patches": 35760,
+            "relative_nn_ops_to_subset_standard": 1.0
+          }
+        ],
+        "sample_counts": {
+          "leather": {
+            "train_normal": 245,
+            "test": 124,
+            "test_good": 32,
+            "test_defect": 92,
+            "bank_patches": 12000
+          },
+          "toothbrush": {
+            "train_normal": 60,
+            "test": 42,
+            "test_good": 12,
+            "test_defect": 30,
+            "bank_patches": 11760
+          },
+          "wood": {
+            "train_normal": 247,
+            "test": 79,
+            "test_good": 19,
+            "test_defect": 60,
+            "bank_patches": 12000
+          }
+        }
+      },
+      "bank_only_switch": {
+        "name": "bank_only_switch",
+        "mean_good_pass": 0.864035,
+        "min_good_pass": 0.75,
+        "mean_relative_nn_ops_to_subset_standard": 0.333333333,
+        "max_relative_nn_ops_to_subset_standard": 0.33557047,
+        "mean_relative_bank_to_subset_standard": 0.333333333,
+        "category_rows": [
+          {
+            "category": "leather",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 1.0,
+            "threshold": 0.436111,
+            "relative_nn_ops_to_subset_standard": 0.33557047,
+            "relative_bank_to_subset_standard": 0.33557047
+          },
+          {
+            "category": "toothbrush",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 11760,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.75,
+            "threshold": 0.426237,
+            "relative_nn_ops_to_subset_standard": 0.32885906,
+            "relative_bank_to_subset_standard": 0.32885906
+          },
+          {
+            "category": "wood",
+            "config": "wrn_l23_g14_b12000_topk0p01",
+            "backbone": "wide_resnet50_2",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 12000,
+            "feature_dim": 768,
+            "topk_fraction": 0.01,
+            "good_pass": 0.842105,
+            "threshold": 0.459923,
+            "relative_nn_ops_to_subset_standard": 0.33557047,
+            "relative_bank_to_subset_standard": 0.33557047
+          }
+        ]
+      },
+      "fixed_profile_systems": [
+        {
+          "name": "profile_fixed_to_leather_bank_switch",
+          "mean_good_pass": 0.929825,
+          "min_good_pass": 0.789474,
+          "mean_relative_nn_ops_to_subset_standard": 0.001747763,
+          "max_relative_nn_ops_to_subset_standard": 0.004660701,
+          "mean_relative_bank_to_subset_standard": 0.020973154,
+          "category_rows": [
+            {
+              "category": "leather",
+              "config": "effb0_l23_g14_b125_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 125,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 1.0,
+              "threshold": 0.748164,
+              "relative_nn_ops_to_subset_standard": 0.000291294,
+              "relative_bank_to_subset_standard": 0.003495526
+            },
+            {
+              "category": "toothbrush",
+              "config": "effb0_l23_g14_b2000_topk0p02",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 2000,
+              "feature_dim": 64,
+              "topk_fraction": 0.02,
+              "good_pass": 1.0,
+              "threshold": 0.686615,
+              "relative_nn_ops_to_subset_standard": 0.004660701,
+              "relative_bank_to_subset_standard": 0.055928412
+            },
+            {
+              "category": "wood",
+              "config": "effb0_l23_g14_b125_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 14,
+              "patch_count": 196,
+              "bank_patches": 125,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 0.789474,
+              "threshold": 0.81923,
+              "relative_nn_ops_to_subset_standard": 0.000291294,
+              "relative_bank_to_subset_standard": 0.003495526
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_toothbrush_bank_switch",
+          "mean_good_pass": 0.686038,
+          "min_good_pass": 0.5625,
+          "mean_relative_nn_ops_to_subset_standard": 0.001288034,
+          "max_relative_nn_ops_to_subset_standard": 0.002377909,
+          "mean_relative_bank_to_subset_standard": 0.030294556,
+          "category_rows": [
+            {
+              "category": "leather",
+              "config": "effb0_l23_g10_b250_topk0p005",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 250,
+              "feature_dim": 64,
+              "topk_fraction": 0.005,
+              "good_pass": 0.5625,
+              "threshold": 0.690049,
+              "relative_nn_ops_to_subset_standard": 0.000297239,
+              "relative_bank_to_subset_standard": 0.006991051
+            },
+            {
+              "category": "toothbrush",
+              "config": "effb0_l23_g10_b1000_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 1000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.916667,
+              "threshold": 0.715893,
+              "relative_nn_ops_to_subset_standard": 0.001188954,
+              "relative_bank_to_subset_standard": 0.027964206
+            },
+            {
+              "category": "wood",
+              "config": "effb0_l23_g10_b2000_topk0p05",
+              "backbone": "efficientnet_b0",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 10,
+              "patch_count": 100,
+              "bank_patches": 2000,
+              "feature_dim": 64,
+              "topk_fraction": 0.05,
+              "good_pass": 0.578947,
+              "threshold": 0.652876,
+              "relative_nn_ops_to_subset_standard": 0.002377909,
+              "relative_bank_to_subset_standard": 0.055928412
+            }
+          ]
+        },
+        {
+          "name": "profile_fixed_to_wood_bank_switch",
+          "mean_good_pass": 0.378107,
+          "min_good_pass": 0.083333,
+          "mean_relative_nn_ops_to_subset_standard": 0.000348946,
+          "max_relative_nn_ops_to_subset_standard": 0.000728235,
+          "mean_relative_bank_to_subset_standard": 0.026799031,
+          "category_rows": [
+            {
+              "category": "leather",
+              "config": "mobv3s_l23_g7_b2000_topk0p05",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 2000,
+              "feature_dim": 40,
+              "topk_fraction": 0.05,
+              "good_pass": 0.15625,
+              "threshold": 0.275597,
+              "relative_nn_ops_to_subset_standard": 0.000728235,
+              "relative_bank_to_subset_standard": 0.055928412
+            },
+            {
+              "category": "toothbrush",
+              "config": "mobv3s_l23_g7_b125_topk0p005",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 125,
+              "feature_dim": 40,
+              "topk_fraction": 0.005,
+              "good_pass": 0.083333,
+              "threshold": 0.433479,
+              "relative_nn_ops_to_subset_standard": 4.5515e-05,
+              "relative_bank_to_subset_standard": 0.003495526
+            },
+            {
+              "category": "wood",
+              "config": "mobv3s_l23_g7_b750_topk0p005",
+              "backbone": "mobilenetv3_small_100",
+              "out_indices": [
+                1,
+                2
+              ],
+              "patch_grid": 7,
+              "patch_count": 49,
+              "bank_patches": 750,
+              "feature_dim": 40,
+              "topk_fraction": 0.005,
+              "good_pass": 0.894737,
+              "threshold": 0.342789,
+              "relative_nn_ops_to_subset_standard": 0.000273088,
+              "relative_bank_to_subset_standard": 0.020973154
+            }
+          ]
+        }
+      ],
+      "proposed_profile_and_bank_switch": {
+        "name": "proposed_profile_and_bank_switch",
+        "mean_good_pass": 0.891813,
+        "min_good_pass": 0.833333,
+        "mean_relative_nn_ops_to_subset_standard": 0.000409508,
+        "max_relative_nn_ops_to_subset_standard": 0.000891716,
+        "mean_relative_bank_to_subset_standard": 0.009321402,
+        "category_rows": [
+          {
+            "category": "leather",
+            "config": "effb0_l23_g14_b125_topk0p005",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "patch_count": 196,
+            "bank_patches": 125,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 1.0,
+            "threshold": 0.748164,
+            "relative_nn_ops_to_subset_standard": 0.000291294,
+            "relative_bank_to_subset_standard": 0.003495526
+          },
+          {
+            "category": "toothbrush",
+            "config": "effb0_l23_g10_b750_topk0p05",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 10,
+            "patch_count": 100,
+            "bank_patches": 750,
+            "feature_dim": 64,
+            "topk_fraction": null,
+            "good_pass": 0.833333,
+            "threshold": 0.711949,
+            "relative_nn_ops_to_subset_standard": 0.000891716,
+            "relative_bank_to_subset_standard": 0.020973154
+          },
+          {
+            "category": "wood",
+            "config": "mobv3s_l23_g7_b125_topk0p005",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "patch_count": 49,
+            "bank_patches": 125,
+            "feature_dim": 40,
+            "topk_fraction": null,
+            "good_pass": 0.842105,
+            "threshold": 0.395526,
+            "relative_nn_ops_to_subset_standard": 4.5515e-05,
+            "relative_bank_to_subset_standard": 0.003495526
+          }
+        ]
+      },
+      "screening_claim_metrics": {
+        "proposed_vs_subset_standard_nn_reduction": 0.99959,
+        "proposed_vs_bank_only_nn_reduction": 0.998771,
+        "proposed_mean_good_pass": 0.891813,
+        "proposed_min_good_pass": 0.833333,
+        "best_fixed_profile_mean_good_pass": 0.929825,
+        "best_fixed_profile_min_good_pass": 0.789474,
+        "proposed_min_good_advantage_over_best_fixed": 0.043859,
+        "screening_score": 132.115143
+      }
+    }
+  ]
+}
