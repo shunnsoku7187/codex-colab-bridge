@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_fixed_bank_profile_switch_001",
-  "status": "running",
+  "status": "failed",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,6 +9,11 @@
   "max_runtime_sec": 43200,
   "result_file": "results/mvtec_patchcore_fixed_bank_profile_switch_001.json",
   "note": "Tests whether category-wise PatchCore profile switching remains useful when backbone and total bank count are fixed, so bank-size optimization is excluded.",
-  "updated_at": "2026-08-27T23:52:07.275995+00:00",
-  "started_at": "2026-08-27T23:52:07.275972+00:00"
+  "updated_at": "2026-08-27T23:52:28.062842+00:00",
+  "started_at": "2026-08-27T23:52:07.275972+00:00",
+  "returncode": 1,
+  "duration_sec": 14.628,
+  "stdout": "logs/mvtec_patchcore_fixed_bank_profile_switch_001.stdout.log",
+  "stderr": "logs/mvtec_patchcore_fixed_bank_profile_switch_001.stderr.log",
+  "finished_at": "2026-08-27T23:52:28.038679+00:00"
 }
