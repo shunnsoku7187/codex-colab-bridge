@@ -1,0 +1,3953 @@
+{
+  "purpose": "Use k-center coreset coverage to explain PatchCore bank-size reduction and A/B/ABC merged-bank scaling.",
+  "config": {
+    "candidates": "results/mvtec_patchcore_subset_mixed_bank_verify_001_summary.json",
+    "bank_sizes": [
+      25,
+      50,
+      100,
+      125,
+      250,
+      500,
+      750,
+      1000,
+      1500,
+      2000,
+      3000
+    ],
+    "coverage_slack": 0.05,
+    "candidate_pool": 8000,
+    "eval_pool": 8000,
+    "seed": 123,
+    "device": "cuda"
+  },
+  "subset_results": [
+    {
+      "subset": [
+        "toothbrush",
+        "wood"
+      ],
+      "standard_profile": {
+        "name": "standard_wrn_l23_g14",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "selected_bank_patches": 12000
+      },
+      "standard_single": {
+        "toothbrush": {
+          "label": "standard:toothbrush",
+          "normal_patch_pool": 11760,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.296521,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 2000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.518541,
+              "coverage_q90": 0.597535,
+              "coverage_q95": 0.616463,
+              "coverage_q99": 0.641596,
+              "coverage_max": 0.685206
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.486872,
+              "coverage_q90": 0.531399,
+              "coverage_q95": 0.548222,
+              "coverage_q99": 0.577636,
+              "coverage_max": 0.612943
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.422883,
+              "coverage_q90": 0.474828,
+              "coverage_q95": 0.486013,
+              "coverage_q99": 0.50869,
+              "coverage_max": 0.540361
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.405071,
+              "coverage_q90": 0.455963,
+              "coverage_q95": 0.468986,
+              "coverage_q99": 0.488924,
+              "coverage_max": 0.527336
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.361813,
+              "coverage_q90": 0.409918,
+              "coverage_q95": 0.422474,
+              "coverage_q99": 0.442435,
+              "coverage_max": 0.486234
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.328302,
+              "coverage_q90": 0.373368,
+              "coverage_q95": 0.384542,
+              "coverage_q99": 0.402707,
+              "coverage_max": 0.454619
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.30799,
+              "coverage_q90": 0.353211,
+              "coverage_q95": 0.364009,
+              "coverage_q99": 0.383681,
+              "coverage_max": 0.454619
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.292758,
+              "coverage_q90": 0.33868,
+              "coverage_q95": 0.349635,
+              "coverage_q99": 0.375822,
+              "coverage_max": 0.447965
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.262977,
+              "coverage_q90": 0.311401,
+              "coverage_q95": 0.324097,
+              "coverage_q99": 0.364075,
+              "coverage_max": 0.418046
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.238507,
+              "coverage_q90": 0.286097,
+              "coverage_q95": 0.306296,
+              "coverage_q99": 0.361595,
+              "coverage_max": 0.417557
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.199871,
+              "coverage_q90": 0.244557,
+              "coverage_q95": 0.296521,
+              "coverage_q99": 0.360079,
+              "coverage_max": 0.417557
+            }
+          ]
+        },
+        "wood": {
+          "label": "standard:wood",
+          "normal_patch_pool": 48412,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.393597,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.454759,
+              "coverage_q90": 0.501165,
+              "coverage_q95": 0.513548,
+              "coverage_q99": 0.535305,
+              "coverage_max": 0.620011
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.446167,
+              "coverage_q90": 0.483303,
+              "coverage_q95": 0.493022,
+              "coverage_q99": 0.512697,
+              "coverage_max": 0.611103
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.434855,
+              "coverage_q90": 0.465491,
+              "coverage_q95": 0.473262,
+              "coverage_q99": 0.489619,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.431521,
+              "coverage_q90": 0.460478,
+              "coverage_q95": 0.468894,
+              "coverage_q99": 0.484104,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.414784,
+              "coverage_q90": 0.440928,
+              "coverage_q95": 0.448046,
+              "coverage_q99": 0.463294,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.399208,
+              "coverage_q90": 0.424119,
+              "coverage_q95": 0.43108,
+              "coverage_q99": 0.448017,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.389991,
+              "coverage_q90": 0.414591,
+              "coverage_q95": 0.422181,
+              "coverage_q99": 0.438031,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.383525,
+              "coverage_q90": 0.407414,
+              "coverage_q95": 0.414957,
+              "coverage_q99": 0.433212,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.373292,
+              "coverage_q90": 0.398535,
+              "coverage_q95": 0.406622,
+              "coverage_q99": 0.426657,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.366336,
+              "coverage_q90": 0.392085,
+              "coverage_q95": 0.400946,
+              "coverage_q99": 0.422568,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.355743,
+              "coverage_q90": 0.383463,
+              "coverage_q95": 0.393597,
+              "coverage_q99": 0.416533,
+              "coverage_max": 0.54007
+            }
+          ]
+        }
+      },
+      "standard_merged": {
+        "label": "standard:toothbrush+wood",
+        "normal_patch_pool": 60172,
+        "candidate_pool": 8000,
+        "eval_pool": 8000,
+        "feature_dim": 768,
+        "reference_bank_size": 3000,
+        "reference_q95": 0.397044,
+        "coverage_slack": 0.05,
+        "required_bank_size_by_q95": 1500,
+        "rows": [
+          {
+            "bank_size": 25,
+            "coverage_q50": 0.473901,
+            "coverage_q90": 0.542458,
+            "coverage_q95": 0.568087,
+            "coverage_q99": 0.625651,
+            "coverage_max": 0.678726
+          },
+          {
+            "bank_size": 50,
+            "coverage_q50": 0.471155,
+            "coverage_q90": 0.530523,
+            "coverage_q95": 0.547317,
+            "coverage_q99": 0.582067,
+            "coverage_max": 0.659918
+          },
+          {
+            "bank_size": 100,
+            "coverage_q50": 0.455919,
+            "coverage_q90": 0.495612,
+            "coverage_q95": 0.506722,
+            "coverage_q99": 0.527885,
+            "coverage_max": 0.605584
+          },
+          {
+            "bank_size": 125,
+            "coverage_q50": 0.450081,
+            "coverage_q90": 0.486154,
+            "coverage_q95": 0.496576,
+            "coverage_q99": 0.51791,
+            "coverage_max": 0.586693
+          },
+          {
+            "bank_size": 250,
+            "coverage_q50": 0.426873,
+            "coverage_q90": 0.457923,
+            "coverage_q95": 0.466379,
+            "coverage_q99": 0.484498,
+            "coverage_max": 0.586693
+          },
+          {
+            "bank_size": 500,
+            "coverage_q50": 0.405377,
+            "coverage_q90": 0.432343,
+            "coverage_q95": 0.440253,
+            "coverage_q99": 0.458694,
+            "coverage_max": 0.576225
+          },
+          {
+            "bank_size": 750,
+            "coverage_q50": 0.393423,
+            "coverage_q90": 0.420173,
+            "coverage_q95": 0.428403,
+            "coverage_q99": 0.447877,
+            "coverage_max": 0.531023
+          },
+          {
+            "bank_size": 1000,
+            "coverage_q50": 0.384916,
+            "coverage_q90": 0.411981,
+            "coverage_q95": 0.42107,
+            "coverage_q99": 0.442803,
+            "coverage_max": 0.531023
+          },
+          {
+            "bank_size": 1500,
+            "coverage_q50": 0.372572,
+            "coverage_q90": 0.400804,
+            "coverage_q95": 0.411052,
+            "coverage_q99": 0.435004,
+            "coverage_max": 0.531023
+          },
+          {
+            "bank_size": 2000,
+            "coverage_q50": 0.364681,
+            "coverage_q90": 0.393957,
+            "coverage_q95": 0.403659,
+            "coverage_q99": 0.430611,
+            "coverage_max": 0.531023
+          },
+          {
+            "bank_size": 3000,
+            "coverage_q50": 0.352655,
+            "coverage_q90": 0.385412,
+            "coverage_q95": 0.397044,
+            "coverage_q99": 0.423982,
+            "coverage_max": 0.531023
+          }
+        ]
+      },
+      "standard_required_sum_single": 3500,
+      "standard_required_merged": 1500,
+      "merged_to_sum_required_ratio": 0.428571,
+      "proposed_single": {
+        "toothbrush": {
+          "profile": {
+            "name": "efficientnet_b0_out1:2_g10",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 10,
+            "selected_bank_patches_from_detection": 750
+          },
+          "label": "proposed:toothbrush",
+          "normal_patch_pool": 6000,
+          "candidate_pool": 6000,
+          "eval_pool": 6000,
+          "feature_dim": 64,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.160901,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 3000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.671505,
+              "coverage_q90": 0.905218,
+              "coverage_q95": 0.961229,
+              "coverage_q99": 1.010088,
+              "coverage_max": 1.075837
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.655127,
+              "coverage_q90": 0.796657,
+              "coverage_q95": 0.852451,
+              "coverage_q99": 0.908629,
+              "coverage_max": 0.948259
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.512428,
+              "coverage_q90": 0.696222,
+              "coverage_q95": 0.743626,
+              "coverage_q99": 0.797583,
+              "coverage_max": 0.830908
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.506411,
+              "coverage_q90": 0.654864,
+              "coverage_q95": 0.701658,
+              "coverage_q99": 0.769688,
+              "coverage_max": 0.803159
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.462956,
+              "coverage_q90": 0.586005,
+              "coverage_q95": 0.624347,
+              "coverage_q99": 0.670791,
+              "coverage_max": 0.69383
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.423428,
+              "coverage_q90": 0.506347,
+              "coverage_q95": 0.533034,
+              "coverage_q99": 0.572566,
+              "coverage_max": 0.586634
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.385307,
+              "coverage_q90": 0.455954,
+              "coverage_q95": 0.477914,
+              "coverage_q99": 0.507714,
+              "coverage_max": 0.519842
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.325882,
+              "coverage_q90": 0.393411,
+              "coverage_q95": 0.413554,
+              "coverage_q99": 0.454031,
+              "coverage_max": 0.462864
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.232511,
+              "coverage_q90": 0.281218,
+              "coverage_q95": 0.293008,
+              "coverage_q99": 0.317477,
+              "coverage_max": 0.330769
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.171557,
+              "coverage_q90": 0.210338,
+              "coverage_q95": 0.21794,
+              "coverage_q99": 0.229622,
+              "coverage_max": 0.235848
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.02874,
+              "coverage_q90": 0.155354,
+              "coverage_q95": 0.160901,
+              "coverage_q99": 0.167386,
+              "coverage_max": 0.169897
+            }
+          ]
+        },
+        "wood": {
+          "profile": {
+            "name": "mobilenetv3_small_100_out1:2_g7",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "selected_bank_patches_from_detection": 125
+          },
+          "label": "proposed:wood",
+          "normal_patch_pool": 12103,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 40,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.250039,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 2000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.37683,
+              "coverage_q90": 0.437967,
+              "coverage_q95": 0.453858,
+              "coverage_q99": 0.484844,
+              "coverage_max": 0.535516
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.357324,
+              "coverage_q90": 0.407102,
+              "coverage_q95": 0.420734,
+              "coverage_q99": 0.443607,
+              "coverage_max": 0.499192
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.33019,
+              "coverage_q90": 0.370763,
+              "coverage_q95": 0.382148,
+              "coverage_q99": 0.40427,
+              "coverage_max": 0.445622
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.323029,
+              "coverage_q90": 0.361277,
+              "coverage_q95": 0.371052,
+              "coverage_q99": 0.392706,
+              "coverage_max": 0.445622
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.300896,
+              "coverage_q90": 0.333322,
+              "coverage_q95": 0.342062,
+              "coverage_q99": 0.357684,
+              "coverage_max": 0.439474
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.277635,
+              "coverage_q90": 0.308106,
+              "coverage_q95": 0.31616,
+              "coverage_q99": 0.329433,
+              "coverage_max": 0.395314
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.261802,
+              "coverage_q90": 0.292032,
+              "coverage_q95": 0.299767,
+              "coverage_q99": 0.315341,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.252547,
+              "coverage_q90": 0.281473,
+              "coverage_q95": 0.288283,
+              "coverage_q99": 0.306412,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.23827,
+              "coverage_q90": 0.265598,
+              "coverage_q95": 0.272262,
+              "coverage_q99": 0.293776,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.227596,
+              "coverage_q90": 0.254823,
+              "coverage_q95": 0.261039,
+              "coverage_q99": 0.285363,
+              "coverage_max": 0.370903
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.210957,
+              "coverage_q90": 0.238271,
+              "coverage_q95": 0.250039,
+              "coverage_q99": 0.276201,
+              "coverage_max": 0.3703
+            }
+          ]
+        }
+      }
+    },
+    {
+      "subset": [
+        "leather",
+        "wood"
+      ],
+      "standard_profile": {
+        "name": "standard_wrn_l23_g14",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "selected_bank_patches": 12000
+      },
+      "standard_single": {
+        "leather": {
+          "label": "standard:leather",
+          "normal_patch_pool": 48020,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.339279,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.388291,
+              "coverage_q90": 0.423413,
+              "coverage_q95": 0.433497,
+              "coverage_q99": 0.451401,
+              "coverage_max": 0.522651
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.381659,
+              "coverage_q90": 0.411118,
+              "coverage_q95": 0.419151,
+              "coverage_q99": 0.435078,
+              "coverage_max": 0.504079
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.373043,
+              "coverage_q90": 0.39713,
+              "coverage_q95": 0.403784,
+              "coverage_q99": 0.418123,
+              "coverage_max": 0.476197
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.369981,
+              "coverage_q90": 0.392882,
+              "coverage_q95": 0.39962,
+              "coverage_q99": 0.413746,
+              "coverage_max": 0.476197
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.357985,
+              "coverage_q90": 0.378566,
+              "coverage_q95": 0.384793,
+              "coverage_q99": 0.397332,
+              "coverage_max": 0.475287
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.345173,
+              "coverage_q90": 0.36512,
+              "coverage_q95": 0.371035,
+              "coverage_q99": 0.383456,
+              "coverage_max": 0.440848
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.338469,
+              "coverage_q90": 0.357362,
+              "coverage_q95": 0.362801,
+              "coverage_q99": 0.377612,
+              "coverage_max": 0.435812
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.333171,
+              "coverage_q90": 0.35155,
+              "coverage_q95": 0.357644,
+              "coverage_q99": 0.372686,
+              "coverage_max": 0.435812
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.325542,
+              "coverage_q90": 0.344146,
+              "coverage_q95": 0.350401,
+              "coverage_q99": 0.365269,
+              "coverage_max": 0.435812
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.319828,
+              "coverage_q90": 0.339027,
+              "coverage_q95": 0.345734,
+              "coverage_q99": 0.359598,
+              "coverage_max": 0.435812
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.311142,
+              "coverage_q90": 0.332083,
+              "coverage_q95": 0.339279,
+              "coverage_q99": 0.354079,
+              "coverage_max": 0.417361
+            }
+          ]
+        },
+        "wood": {
+          "label": "standard:wood",
+          "normal_patch_pool": 48412,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.393597,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.454759,
+              "coverage_q90": 0.501165,
+              "coverage_q95": 0.513548,
+              "coverage_q99": 0.535305,
+              "coverage_max": 0.620011
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.446167,
+              "coverage_q90": 0.483303,
+              "coverage_q95": 0.493022,
+              "coverage_q99": 0.512697,
+              "coverage_max": 0.611103
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.434855,
+              "coverage_q90": 0.465491,
+              "coverage_q95": 0.473262,
+              "coverage_q99": 0.489619,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.431521,
+              "coverage_q90": 0.460478,
+              "coverage_q95": 0.468894,
+              "coverage_q99": 0.484104,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.414784,
+              "coverage_q90": 0.440928,
+              "coverage_q95": 0.448046,
+              "coverage_q99": 0.463294,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.399208,
+              "coverage_q90": 0.424119,
+              "coverage_q95": 0.43108,
+              "coverage_q99": 0.448017,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.389991,
+              "coverage_q90": 0.414591,
+              "coverage_q95": 0.422181,
+              "coverage_q99": 0.438031,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.383525,
+              "coverage_q90": 0.407414,
+              "coverage_q95": 0.414957,
+              "coverage_q99": 0.433212,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.373292,
+              "coverage_q90": 0.398535,
+              "coverage_q95": 0.406622,
+              "coverage_q99": 0.426657,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.366336,
+              "coverage_q90": 0.392085,
+              "coverage_q95": 0.400946,
+              "coverage_q99": 0.422568,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.355743,
+              "coverage_q90": 0.383463,
+              "coverage_q95": 0.393597,
+              "coverage_q99": 0.416533,
+              "coverage_max": 0.54007
+            }
+          ]
+        }
+      },
+      "standard_merged": {
+        "label": "standard:leather+wood",
+        "normal_patch_pool": 96432,
+        "candidate_pool": 8000,
+        "eval_pool": 8000,
+        "feature_dim": 768,
+        "reference_bank_size": 3000,
+        "reference_q95": 0.385769,
+        "coverage_slack": 0.05,
+        "required_bank_size_by_q95": 1500,
+        "rows": [
+          {
+            "bank_size": 25,
+            "coverage_q50": 0.460572,
+            "coverage_q90": 0.500632,
+            "coverage_q95": 0.510503,
+            "coverage_q99": 0.530109,
+            "coverage_max": 0.600274
+          },
+          {
+            "bank_size": 50,
+            "coverage_q50": 0.446724,
+            "coverage_q90": 0.480191,
+            "coverage_q95": 0.488382,
+            "coverage_q99": 0.503678,
+            "coverage_max": 0.593858
+          },
+          {
+            "bank_size": 100,
+            "coverage_q50": 0.427423,
+            "coverage_q90": 0.457335,
+            "coverage_q95": 0.466342,
+            "coverage_q99": 0.484656,
+            "coverage_max": 0.546341
+          },
+          {
+            "bank_size": 125,
+            "coverage_q50": 0.425016,
+            "coverage_q90": 0.453801,
+            "coverage_q95": 0.462005,
+            "coverage_q99": 0.477537,
+            "coverage_max": 0.546341
+          },
+          {
+            "bank_size": 250,
+            "coverage_q50": 0.40782,
+            "coverage_q90": 0.434813,
+            "coverage_q95": 0.442812,
+            "coverage_q99": 0.459163,
+            "coverage_max": 0.546341
+          },
+          {
+            "bank_size": 500,
+            "coverage_q50": 0.38873,
+            "coverage_q90": 0.416124,
+            "coverage_q95": 0.424,
+            "coverage_q99": 0.441016,
+            "coverage_max": 0.545282
+          },
+          {
+            "bank_size": 750,
+            "coverage_q50": 0.377341,
+            "coverage_q90": 0.405456,
+            "coverage_q95": 0.413843,
+            "coverage_q99": 0.433382,
+            "coverage_max": 0.541003
+          },
+          {
+            "bank_size": 1000,
+            "coverage_q50": 0.371651,
+            "coverage_q90": 0.398458,
+            "coverage_q95": 0.407149,
+            "coverage_q99": 0.424895,
+            "coverage_max": 0.541003
+          },
+          {
+            "bank_size": 1500,
+            "coverage_q50": 0.361534,
+            "coverage_q90": 0.38903,
+            "coverage_q95": 0.398664,
+            "coverage_q99": 0.418669,
+            "coverage_max": 0.540206
+          },
+          {
+            "bank_size": 2000,
+            "coverage_q50": 0.35395,
+            "coverage_q90": 0.382974,
+            "coverage_q95": 0.393739,
+            "coverage_q99": 0.414192,
+            "coverage_max": 0.539277
+          },
+          {
+            "bank_size": 3000,
+            "coverage_q50": 0.342718,
+            "coverage_q90": 0.374248,
+            "coverage_q95": 0.385769,
+            "coverage_q99": 0.408237,
+            "coverage_max": 0.522885
+          }
+        ]
+      },
+      "standard_required_sum_single": 3000,
+      "standard_required_merged": 1500,
+      "merged_to_sum_required_ratio": 0.5,
+      "proposed_single": {
+        "leather": {
+          "profile": {
+            "name": "efficientnet_b0_out1:2_g14",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "selected_bank_patches_from_detection": 125
+          },
+          "label": "proposed:leather",
+          "normal_patch_pool": 48020,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 64,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.464986,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.593537,
+              "coverage_q90": 0.652367,
+              "coverage_q95": 0.667969,
+              "coverage_q99": 0.698634,
+              "coverage_max": 0.745698
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.571366,
+              "coverage_q90": 0.625533,
+              "coverage_q95": 0.637944,
+              "coverage_q99": 0.662516,
+              "coverage_max": 0.733919
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.536494,
+              "coverage_q90": 0.582838,
+              "coverage_q95": 0.597101,
+              "coverage_q99": 0.623644,
+              "coverage_max": 0.668599
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.527828,
+              "coverage_q90": 0.573763,
+              "coverage_q95": 0.586429,
+              "coverage_q99": 0.611198,
+              "coverage_max": 0.652
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.503767,
+              "coverage_q90": 0.545592,
+              "coverage_q95": 0.557996,
+              "coverage_q99": 0.582572,
+              "coverage_max": 0.632194
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.477639,
+              "coverage_q90": 0.517204,
+              "coverage_q95": 0.529022,
+              "coverage_q99": 0.554189,
+              "coverage_max": 0.618665
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.462763,
+              "coverage_q90": 0.502367,
+              "coverage_q95": 0.512821,
+              "coverage_q99": 0.538384,
+              "coverage_max": 0.593977
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.45098,
+              "coverage_q90": 0.490237,
+              "coverage_q95": 0.502251,
+              "coverage_q99": 0.528139,
+              "coverage_max": 0.590305
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.435628,
+              "coverage_q90": 0.474301,
+              "coverage_q95": 0.487241,
+              "coverage_q99": 0.51396,
+              "coverage_max": 0.570436
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.423891,
+              "coverage_q90": 0.464396,
+              "coverage_q95": 0.477619,
+              "coverage_q99": 0.504533,
+              "coverage_max": 0.562673
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.407459,
+              "coverage_q90": 0.451201,
+              "coverage_q95": 0.464986,
+              "coverage_q99": 0.494445,
+              "coverage_max": 0.562673
+            }
+          ]
+        },
+        "wood": {
+          "profile": {
+            "name": "mobilenetv3_small_100_out1:2_g7",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "selected_bank_patches_from_detection": 125
+          },
+          "label": "proposed:wood",
+          "normal_patch_pool": 12103,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 40,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.250039,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 2000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.37683,
+              "coverage_q90": 0.437967,
+              "coverage_q95": 0.453858,
+              "coverage_q99": 0.484844,
+              "coverage_max": 0.535516
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.357324,
+              "coverage_q90": 0.407102,
+              "coverage_q95": 0.420734,
+              "coverage_q99": 0.443607,
+              "coverage_max": 0.499192
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.33019,
+              "coverage_q90": 0.370763,
+              "coverage_q95": 0.382148,
+              "coverage_q99": 0.40427,
+              "coverage_max": 0.445622
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.323029,
+              "coverage_q90": 0.361277,
+              "coverage_q95": 0.371052,
+              "coverage_q99": 0.392706,
+              "coverage_max": 0.445622
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.300896,
+              "coverage_q90": 0.333322,
+              "coverage_q95": 0.342062,
+              "coverage_q99": 0.357684,
+              "coverage_max": 0.439474
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.277635,
+              "coverage_q90": 0.308106,
+              "coverage_q95": 0.31616,
+              "coverage_q99": 0.329433,
+              "coverage_max": 0.395314
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.261802,
+              "coverage_q90": 0.292032,
+              "coverage_q95": 0.299767,
+              "coverage_q99": 0.315341,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.252547,
+              "coverage_q90": 0.281473,
+              "coverage_q95": 0.288283,
+              "coverage_q99": 0.306412,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.23827,
+              "coverage_q90": 0.265598,
+              "coverage_q95": 0.272262,
+              "coverage_q99": 0.293776,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.227596,
+              "coverage_q90": 0.254823,
+              "coverage_q95": 0.261039,
+              "coverage_q99": 0.285363,
+              "coverage_max": 0.370903
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.210957,
+              "coverage_q90": 0.238271,
+              "coverage_q95": 0.250039,
+              "coverage_q99": 0.276201,
+              "coverage_max": 0.3703
+            }
+          ]
+        }
+      }
+    },
+    {
+      "subset": [
+        "tile",
+        "wood"
+      ],
+      "standard_profile": {
+        "name": "standard_wrn_l23_g14",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "selected_bank_patches": 12000
+      },
+      "standard_single": {
+        "tile": {
+          "label": "standard:tile",
+          "normal_patch_pool": 45080,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.422934,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.474949,
+              "coverage_q90": 0.516605,
+              "coverage_q95": 0.526797,
+              "coverage_q99": 0.544116,
+              "coverage_max": 0.603161
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.466858,
+              "coverage_q90": 0.499759,
+              "coverage_q95": 0.508419,
+              "coverage_q99": 0.525598,
+              "coverage_max": 0.603161
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.458617,
+              "coverage_q90": 0.48703,
+              "coverage_q95": 0.494663,
+              "coverage_q99": 0.511042,
+              "coverage_max": 0.603161
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.453817,
+              "coverage_q90": 0.481671,
+              "coverage_q95": 0.489462,
+              "coverage_q99": 0.504035,
+              "coverage_max": 0.602683
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.442333,
+              "coverage_q90": 0.466656,
+              "coverage_q95": 0.474256,
+              "coverage_q99": 0.489317,
+              "coverage_max": 0.575866
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.428113,
+              "coverage_q90": 0.451046,
+              "coverage_q95": 0.458663,
+              "coverage_q99": 0.474454,
+              "coverage_max": 0.57156
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.419925,
+              "coverage_q90": 0.442801,
+              "coverage_q95": 0.449415,
+              "coverage_q99": 0.467142,
+              "coverage_max": 0.57156
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.413764,
+              "coverage_q90": 0.436603,
+              "coverage_q95": 0.443855,
+              "coverage_q99": 0.462019,
+              "coverage_max": 0.557842
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.404387,
+              "coverage_q90": 0.427396,
+              "coverage_q95": 0.435982,
+              "coverage_q99": 0.453727,
+              "coverage_max": 0.557842
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.397716,
+              "coverage_q90": 0.42154,
+              "coverage_q95": 0.430598,
+              "coverage_q99": 0.449492,
+              "coverage_max": 0.557842
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.388453,
+              "coverage_q90": 0.414295,
+              "coverage_q95": 0.422934,
+              "coverage_q99": 0.444676,
+              "coverage_max": 0.557842
+            }
+          ]
+        },
+        "wood": {
+          "label": "standard:wood",
+          "normal_patch_pool": 48412,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.393597,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.454759,
+              "coverage_q90": 0.501165,
+              "coverage_q95": 0.513548,
+              "coverage_q99": 0.535305,
+              "coverage_max": 0.620011
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.446167,
+              "coverage_q90": 0.483303,
+              "coverage_q95": 0.493022,
+              "coverage_q99": 0.512697,
+              "coverage_max": 0.611103
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.434855,
+              "coverage_q90": 0.465491,
+              "coverage_q95": 0.473262,
+              "coverage_q99": 0.489619,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.431521,
+              "coverage_q90": 0.460478,
+              "coverage_q95": 0.468894,
+              "coverage_q99": 0.484104,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.414784,
+              "coverage_q90": 0.440928,
+              "coverage_q95": 0.448046,
+              "coverage_q99": 0.463294,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.399208,
+              "coverage_q90": 0.424119,
+              "coverage_q95": 0.43108,
+              "coverage_q99": 0.448017,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.389991,
+              "coverage_q90": 0.414591,
+              "coverage_q95": 0.422181,
+              "coverage_q99": 0.438031,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.383525,
+              "coverage_q90": 0.407414,
+              "coverage_q95": 0.414957,
+              "coverage_q99": 0.433212,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.373292,
+              "coverage_q90": 0.398535,
+              "coverage_q95": 0.406622,
+              "coverage_q99": 0.426657,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.366336,
+              "coverage_q90": 0.392085,
+              "coverage_q95": 0.400946,
+              "coverage_q99": 0.422568,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.355743,
+              "coverage_q90": 0.383463,
+              "coverage_q95": 0.393597,
+              "coverage_q99": 0.416533,
+              "coverage_max": 0.54007
+            }
+          ]
+        }
+      },
+      "standard_merged": {
+        "label": "standard:tile+wood",
+        "normal_patch_pool": 93492,
+        "candidate_pool": 8000,
+        "eval_pool": 8000,
+        "feature_dim": 768,
+        "reference_bank_size": 3000,
+        "reference_q95": 0.422096,
+        "coverage_slack": 0.05,
+        "required_bank_size_by_q95": 1500,
+        "rows": [
+          {
+            "bank_size": 25,
+            "coverage_q50": 0.496171,
+            "coverage_q90": 0.535578,
+            "coverage_q95": 0.543979,
+            "coverage_q99": 0.559816,
+            "coverage_max": 0.605619
+          },
+          {
+            "bank_size": 50,
+            "coverage_q50": 0.476955,
+            "coverage_q90": 0.51088,
+            "coverage_q95": 0.518445,
+            "coverage_q99": 0.535566,
+            "coverage_max": 0.570626
+          },
+          {
+            "bank_size": 100,
+            "coverage_q50": 0.458266,
+            "coverage_q90": 0.489627,
+            "coverage_q95": 0.497913,
+            "coverage_q99": 0.513897,
+            "coverage_max": 0.569289
+          },
+          {
+            "bank_size": 125,
+            "coverage_q50": 0.454388,
+            "coverage_q90": 0.484766,
+            "coverage_q95": 0.493129,
+            "coverage_q99": 0.509,
+            "coverage_max": 0.544743
+          },
+          {
+            "bank_size": 250,
+            "coverage_q50": 0.441698,
+            "coverage_q90": 0.468673,
+            "coverage_q95": 0.476904,
+            "coverage_q99": 0.493892,
+            "coverage_max": 0.538912
+          },
+          {
+            "bank_size": 500,
+            "coverage_q50": 0.426502,
+            "coverage_q90": 0.451873,
+            "coverage_q95": 0.460149,
+            "coverage_q99": 0.478275,
+            "coverage_max": 0.538447
+          },
+          {
+            "bank_size": 750,
+            "coverage_q50": 0.416698,
+            "coverage_q90": 0.442457,
+            "coverage_q95": 0.450083,
+            "coverage_q99": 0.467687,
+            "coverage_max": 0.538447
+          },
+          {
+            "bank_size": 1000,
+            "coverage_q50": 0.409445,
+            "coverage_q90": 0.435149,
+            "coverage_q95": 0.444037,
+            "coverage_q99": 0.463163,
+            "coverage_max": 0.538447
+          },
+          {
+            "bank_size": 1500,
+            "coverage_q50": 0.399368,
+            "coverage_q90": 0.426185,
+            "coverage_q95": 0.435142,
+            "coverage_q99": 0.455795,
+            "coverage_max": 0.538447
+          },
+          {
+            "bank_size": 2000,
+            "coverage_q50": 0.392328,
+            "coverage_q90": 0.419986,
+            "coverage_q95": 0.429171,
+            "coverage_q99": 0.449813,
+            "coverage_max": 0.538447
+          },
+          {
+            "bank_size": 3000,
+            "coverage_q50": 0.382806,
+            "coverage_q90": 0.411479,
+            "coverage_q95": 0.422096,
+            "coverage_q99": 0.442398,
+            "coverage_max": 0.538447
+          }
+        ]
+      },
+      "standard_required_sum_single": 2500,
+      "standard_required_merged": 1500,
+      "merged_to_sum_required_ratio": 0.6,
+      "proposed_single": {
+        "tile": {
+          "profile": {
+            "name": "efficientnet_b0_out1:2_g14",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "selected_bank_patches_from_detection": 250
+          },
+          "label": "proposed:tile",
+          "normal_patch_pool": 45080,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 64,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.655017,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.810864,
+              "coverage_q90": 0.8825,
+              "coverage_q95": 0.900579,
+              "coverage_q99": 0.937476,
+              "coverage_max": 1.016417
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.778738,
+              "coverage_q90": 0.843072,
+              "coverage_q95": 0.859815,
+              "coverage_q99": 0.888927,
+              "coverage_max": 0.953156
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.744167,
+              "coverage_q90": 0.801382,
+              "coverage_q95": 0.816137,
+              "coverage_q99": 0.843252,
+              "coverage_max": 0.894422
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.73244,
+              "coverage_q90": 0.789226,
+              "coverage_q95": 0.803187,
+              "coverage_q99": 0.831095,
+              "coverage_max": 0.888753
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.702704,
+              "coverage_q90": 0.752882,
+              "coverage_q95": 0.767054,
+              "coverage_q99": 0.793839,
+              "coverage_max": 0.875358
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.66926,
+              "coverage_q90": 0.718786,
+              "coverage_q95": 0.731668,
+              "coverage_q99": 0.759322,
+              "coverage_max": 0.871616
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.651692,
+              "coverage_q90": 0.700195,
+              "coverage_q95": 0.713348,
+              "coverage_q99": 0.737716,
+              "coverage_max": 0.822236
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.639164,
+              "coverage_q90": 0.686523,
+              "coverage_q95": 0.699923,
+              "coverage_q99": 0.725066,
+              "coverage_max": 0.822236
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.621423,
+              "coverage_q90": 0.668915,
+              "coverage_q95": 0.682798,
+              "coverage_q99": 0.711703,
+              "coverage_max": 0.822236
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.608171,
+              "coverage_q90": 0.655953,
+              "coverage_q95": 0.670991,
+              "coverage_q99": 0.697894,
+              "coverage_max": 0.822236
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.588451,
+              "coverage_q90": 0.639096,
+              "coverage_q95": 0.655017,
+              "coverage_q99": 0.681778,
+              "coverage_max": 0.777369
+            }
+          ]
+        },
+        "wood": {
+          "profile": {
+            "name": "mobilenetv3_small_100_out1:2_g7",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "selected_bank_patches_from_detection": 125
+          },
+          "label": "proposed:wood",
+          "normal_patch_pool": 12103,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 40,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.250039,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 2000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.37683,
+              "coverage_q90": 0.437967,
+              "coverage_q95": 0.453858,
+              "coverage_q99": 0.484844,
+              "coverage_max": 0.535516
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.357324,
+              "coverage_q90": 0.407102,
+              "coverage_q95": 0.420734,
+              "coverage_q99": 0.443607,
+              "coverage_max": 0.499192
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.33019,
+              "coverage_q90": 0.370763,
+              "coverage_q95": 0.382148,
+              "coverage_q99": 0.40427,
+              "coverage_max": 0.445622
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.323029,
+              "coverage_q90": 0.361277,
+              "coverage_q95": 0.371052,
+              "coverage_q99": 0.392706,
+              "coverage_max": 0.445622
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.300896,
+              "coverage_q90": 0.333322,
+              "coverage_q95": 0.342062,
+              "coverage_q99": 0.357684,
+              "coverage_max": 0.439474
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.277635,
+              "coverage_q90": 0.308106,
+              "coverage_q95": 0.31616,
+              "coverage_q99": 0.329433,
+              "coverage_max": 0.395314
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.261802,
+              "coverage_q90": 0.292032,
+              "coverage_q95": 0.299767,
+              "coverage_q99": 0.315341,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.252547,
+              "coverage_q90": 0.281473,
+              "coverage_q95": 0.288283,
+              "coverage_q99": 0.306412,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.23827,
+              "coverage_q90": 0.265598,
+              "coverage_q95": 0.272262,
+              "coverage_q99": 0.293776,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.227596,
+              "coverage_q90": 0.254823,
+              "coverage_q95": 0.261039,
+              "coverage_q99": 0.285363,
+              "coverage_max": 0.370903
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.210957,
+              "coverage_q90": 0.238271,
+              "coverage_q95": 0.250039,
+              "coverage_q99": 0.276201,
+              "coverage_max": 0.3703
+            }
+          ]
+        }
+      }
+    },
+    {
+      "subset": [
+        "bottle",
+        "toothbrush",
+        "wood"
+      ],
+      "standard_profile": {
+        "name": "standard_wrn_l23_g14",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "selected_bank_patches": 12000
+      },
+      "standard_single": {
+        "bottle": {
+          "label": "standard:bottle",
+          "normal_patch_pool": 40964,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.276447,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 2000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.51821,
+              "coverage_q90": 0.601413,
+              "coverage_q95": 0.621296,
+              "coverage_q99": 0.642048,
+              "coverage_max": 0.687765
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.457631,
+              "coverage_q90": 0.531982,
+              "coverage_q95": 0.546793,
+              "coverage_q99": 0.575872,
+              "coverage_max": 0.610058
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.363151,
+              "coverage_q90": 0.454376,
+              "coverage_q95": 0.470212,
+              "coverage_q99": 0.492071,
+              "coverage_max": 0.544137
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.340515,
+              "coverage_q90": 0.435855,
+              "coverage_q95": 0.449839,
+              "coverage_q99": 0.478861,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.304078,
+              "coverage_q90": 0.374568,
+              "coverage_q95": 0.388234,
+              "coverage_q99": 0.415222,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.267628,
+              "coverage_q90": 0.328807,
+              "coverage_q95": 0.342505,
+              "coverage_q99": 0.377352,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.249421,
+              "coverage_q90": 0.309358,
+              "coverage_q95": 0.319973,
+              "coverage_q99": 0.357345,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.229972,
+              "coverage_q90": 0.290723,
+              "coverage_q95": 0.306796,
+              "coverage_q99": 0.350411,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.212981,
+              "coverage_q90": 0.272287,
+              "coverage_q95": 0.291351,
+              "coverage_q99": 0.346005,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.195995,
+              "coverage_q90": 0.263287,
+              "coverage_q95": 0.283531,
+              "coverage_q99": 0.340798,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.167794,
+              "coverage_q90": 0.251393,
+              "coverage_q95": 0.276447,
+              "coverage_q99": 0.338706,
+              "coverage_max": 0.507817
+            }
+          ]
+        },
+        "toothbrush": {
+          "label": "standard:toothbrush",
+          "normal_patch_pool": 11760,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.296521,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 2000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.518541,
+              "coverage_q90": 0.597535,
+              "coverage_q95": 0.616463,
+              "coverage_q99": 0.641596,
+              "coverage_max": 0.685206
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.486872,
+              "coverage_q90": 0.531399,
+              "coverage_q95": 0.548222,
+              "coverage_q99": 0.577636,
+              "coverage_max": 0.612943
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.422883,
+              "coverage_q90": 0.474828,
+              "coverage_q95": 0.486013,
+              "coverage_q99": 0.50869,
+              "coverage_max": 0.540361
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.405071,
+              "coverage_q90": 0.455963,
+              "coverage_q95": 0.468986,
+              "coverage_q99": 0.488924,
+              "coverage_max": 0.527336
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.361813,
+              "coverage_q90": 0.409918,
+              "coverage_q95": 0.422474,
+              "coverage_q99": 0.442435,
+              "coverage_max": 0.486234
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.328302,
+              "coverage_q90": 0.373368,
+              "coverage_q95": 0.384542,
+              "coverage_q99": 0.402707,
+              "coverage_max": 0.454619
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.30799,
+              "coverage_q90": 0.353211,
+              "coverage_q95": 0.364009,
+              "coverage_q99": 0.383681,
+              "coverage_max": 0.454619
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.292758,
+              "coverage_q90": 0.33868,
+              "coverage_q95": 0.349635,
+              "coverage_q99": 0.375822,
+              "coverage_max": 0.447965
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.262977,
+              "coverage_q90": 0.311401,
+              "coverage_q95": 0.324097,
+              "coverage_q99": 0.364075,
+              "coverage_max": 0.418046
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.238507,
+              "coverage_q90": 0.286097,
+              "coverage_q95": 0.306296,
+              "coverage_q99": 0.361595,
+              "coverage_max": 0.417557
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.199871,
+              "coverage_q90": 0.244557,
+              "coverage_q95": 0.296521,
+              "coverage_q99": 0.360079,
+              "coverage_max": 0.417557
+            }
+          ]
+        },
+        "wood": {
+          "label": "standard:wood",
+          "normal_patch_pool": 48412,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.393597,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.454759,
+              "coverage_q90": 0.501165,
+              "coverage_q95": 0.513548,
+              "coverage_q99": 0.535305,
+              "coverage_max": 0.620011
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.446167,
+              "coverage_q90": 0.483303,
+              "coverage_q95": 0.493022,
+              "coverage_q99": 0.512697,
+              "coverage_max": 0.611103
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.434855,
+              "coverage_q90": 0.465491,
+              "coverage_q95": 0.473262,
+              "coverage_q99": 0.489619,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.431521,
+              "coverage_q90": 0.460478,
+              "coverage_q95": 0.468894,
+              "coverage_q99": 0.484104,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.414784,
+              "coverage_q90": 0.440928,
+              "coverage_q95": 0.448046,
+              "coverage_q99": 0.463294,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.399208,
+              "coverage_q90": 0.424119,
+              "coverage_q95": 0.43108,
+              "coverage_q99": 0.448017,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.389991,
+              "coverage_q90": 0.414591,
+              "coverage_q95": 0.422181,
+              "coverage_q99": 0.438031,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.383525,
+              "coverage_q90": 0.407414,
+              "coverage_q95": 0.414957,
+              "coverage_q99": 0.433212,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.373292,
+              "coverage_q90": 0.398535,
+              "coverage_q95": 0.406622,
+              "coverage_q99": 0.426657,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.366336,
+              "coverage_q90": 0.392085,
+              "coverage_q95": 0.400946,
+              "coverage_q99": 0.422568,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.355743,
+              "coverage_q90": 0.383463,
+              "coverage_q95": 0.393597,
+              "coverage_q99": 0.416533,
+              "coverage_max": 0.54007
+            }
+          ]
+        }
+      },
+      "standard_merged": {
+        "label": "standard:bottle+toothbrush+wood",
+        "normal_patch_pool": 101136,
+        "candidate_pool": 8000,
+        "eval_pool": 8000,
+        "feature_dim": 768,
+        "reference_bank_size": 3000,
+        "reference_q95": 0.388318,
+        "coverage_slack": 0.05,
+        "required_bank_size_by_q95": 1500,
+        "rows": [
+          {
+            "bank_size": 25,
+            "coverage_q50": 0.594627,
+            "coverage_q90": 0.644528,
+            "coverage_q95": 0.659733,
+            "coverage_q99": 0.680726,
+            "coverage_max": 0.739038
+          },
+          {
+            "bank_size": 50,
+            "coverage_q50": 0.55503,
+            "coverage_q90": 0.598762,
+            "coverage_q95": 0.609457,
+            "coverage_q99": 0.628803,
+            "coverage_max": 0.662542
+          },
+          {
+            "bank_size": 100,
+            "coverage_q50": 0.475558,
+            "coverage_q90": 0.527945,
+            "coverage_q95": 0.539473,
+            "coverage_q99": 0.559735,
+            "coverage_max": 0.601528
+          },
+          {
+            "bank_size": 125,
+            "coverage_q50": 0.461194,
+            "coverage_q90": 0.508131,
+            "coverage_q95": 0.519082,
+            "coverage_q99": 0.543668,
+            "coverage_max": 0.583877
+          },
+          {
+            "bank_size": 250,
+            "coverage_q50": 0.427758,
+            "coverage_q90": 0.467817,
+            "coverage_q95": 0.477114,
+            "coverage_q99": 0.495119,
+            "coverage_max": 0.558059
+          },
+          {
+            "bank_size": 500,
+            "coverage_q50": 0.391494,
+            "coverage_q90": 0.430929,
+            "coverage_q95": 0.440659,
+            "coverage_q99": 0.461099,
+            "coverage_max": 0.558059
+          },
+          {
+            "bank_size": 750,
+            "coverage_q50": 0.375543,
+            "coverage_q90": 0.416102,
+            "coverage_q95": 0.425265,
+            "coverage_q99": 0.447782,
+            "coverage_max": 0.558059
+          },
+          {
+            "bank_size": 1000,
+            "coverage_q50": 0.364034,
+            "coverage_q90": 0.40526,
+            "coverage_q95": 0.415279,
+            "coverage_q99": 0.439738,
+            "coverage_max": 0.524404
+          },
+          {
+            "bank_size": 1500,
+            "coverage_q50": 0.351068,
+            "coverage_q90": 0.393021,
+            "coverage_q95": 0.403471,
+            "coverage_q99": 0.428533,
+            "coverage_max": 0.494622
+          },
+          {
+            "bank_size": 2000,
+            "coverage_q50": 0.341691,
+            "coverage_q90": 0.385298,
+            "coverage_q95": 0.396818,
+            "coverage_q99": 0.424023,
+            "coverage_max": 0.490289
+          },
+          {
+            "bank_size": 3000,
+            "coverage_q50": 0.325262,
+            "coverage_q90": 0.374958,
+            "coverage_q95": 0.388318,
+            "coverage_q99": 0.417494,
+            "coverage_max": 0.490289
+          }
+        ]
+      },
+      "standard_required_sum_single": 5500,
+      "standard_required_merged": 1500,
+      "merged_to_sum_required_ratio": 0.272727,
+      "proposed_single": {
+        "bottle": {
+          "profile": {
+            "name": "efficientnet_b0_out1:2_g10",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 10,
+            "selected_bank_patches_from_detection": 500
+          },
+          "label": "proposed:bottle",
+          "normal_patch_pool": 20900,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 64,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.352938,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 2000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.793386,
+              "coverage_q90": 0.899151,
+              "coverage_q95": 0.925507,
+              "coverage_q99": 0.965264,
+              "coverage_max": 1.048097
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.556894,
+              "coverage_q90": 0.739737,
+              "coverage_q95": 0.769718,
+              "coverage_q99": 0.823874,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.468459,
+              "coverage_q90": 0.643244,
+              "coverage_q95": 0.678233,
+              "coverage_q99": 0.715477,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.443222,
+              "coverage_q90": 0.620073,
+              "coverage_q95": 0.653205,
+              "coverage_q99": 0.696932,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.379377,
+              "coverage_q90": 0.516314,
+              "coverage_q95": 0.545797,
+              "coverage_q99": 0.595515,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.33465,
+              "coverage_q90": 0.439512,
+              "coverage_q95": 0.464966,
+              "coverage_q99": 0.518255,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.281612,
+              "coverage_q90": 0.397102,
+              "coverage_q95": 0.424611,
+              "coverage_q99": 0.491102,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.255339,
+              "coverage_q90": 0.369815,
+              "coverage_q95": 0.395983,
+              "coverage_q99": 0.469851,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.228159,
+              "coverage_q90": 0.33546,
+              "coverage_q95": 0.372648,
+              "coverage_q99": 0.458566,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.201454,
+              "coverage_q90": 0.309993,
+              "coverage_q95": 0.360907,
+              "coverage_q99": 0.453764,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.154896,
+              "coverage_q90": 0.290786,
+              "coverage_q95": 0.352938,
+              "coverage_q99": 0.450259,
+              "coverage_max": 0.986888
+            }
+          ]
+        },
+        "toothbrush": {
+          "profile": {
+            "name": "efficientnet_b0_out1:2_g10",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 10,
+            "selected_bank_patches_from_detection": 750
+          },
+          "label": "proposed:toothbrush",
+          "normal_patch_pool": 6000,
+          "candidate_pool": 6000,
+          "eval_pool": 6000,
+          "feature_dim": 64,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.160901,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 3000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.671505,
+              "coverage_q90": 0.905218,
+              "coverage_q95": 0.961229,
+              "coverage_q99": 1.010088,
+              "coverage_max": 1.075837
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.655127,
+              "coverage_q90": 0.796657,
+              "coverage_q95": 0.852451,
+              "coverage_q99": 0.908629,
+              "coverage_max": 0.948259
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.512428,
+              "coverage_q90": 0.696222,
+              "coverage_q95": 0.743626,
+              "coverage_q99": 0.797583,
+              "coverage_max": 0.830908
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.506411,
+              "coverage_q90": 0.654864,
+              "coverage_q95": 0.701658,
+              "coverage_q99": 0.769688,
+              "coverage_max": 0.803159
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.462956,
+              "coverage_q90": 0.586005,
+              "coverage_q95": 0.624347,
+              "coverage_q99": 0.670791,
+              "coverage_max": 0.69383
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.423428,
+              "coverage_q90": 0.506347,
+              "coverage_q95": 0.533034,
+              "coverage_q99": 0.572566,
+              "coverage_max": 0.586634
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.385307,
+              "coverage_q90": 0.455954,
+              "coverage_q95": 0.477914,
+              "coverage_q99": 0.507714,
+              "coverage_max": 0.519842
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.325882,
+              "coverage_q90": 0.393411,
+              "coverage_q95": 0.413554,
+              "coverage_q99": 0.454031,
+              "coverage_max": 0.462864
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.232511,
+              "coverage_q90": 0.281218,
+              "coverage_q95": 0.293008,
+              "coverage_q99": 0.317477,
+              "coverage_max": 0.330769
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.171557,
+              "coverage_q90": 0.210338,
+              "coverage_q95": 0.21794,
+              "coverage_q99": 0.229622,
+              "coverage_max": 0.235848
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.02874,
+              "coverage_q90": 0.155354,
+              "coverage_q95": 0.160901,
+              "coverage_q99": 0.167386,
+              "coverage_max": 0.169897
+            }
+          ]
+        },
+        "wood": {
+          "profile": {
+            "name": "mobilenetv3_small_100_out1:2_g7",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "selected_bank_patches_from_detection": 125
+          },
+          "label": "proposed:wood",
+          "normal_patch_pool": 12103,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 40,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.250039,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 2000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.37683,
+              "coverage_q90": 0.437967,
+              "coverage_q95": 0.453858,
+              "coverage_q99": 0.484844,
+              "coverage_max": 0.535516
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.357324,
+              "coverage_q90": 0.407102,
+              "coverage_q95": 0.420734,
+              "coverage_q99": 0.443607,
+              "coverage_max": 0.499192
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.33019,
+              "coverage_q90": 0.370763,
+              "coverage_q95": 0.382148,
+              "coverage_q99": 0.40427,
+              "coverage_max": 0.445622
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.323029,
+              "coverage_q90": 0.361277,
+              "coverage_q95": 0.371052,
+              "coverage_q99": 0.392706,
+              "coverage_max": 0.445622
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.300896,
+              "coverage_q90": 0.333322,
+              "coverage_q95": 0.342062,
+              "coverage_q99": 0.357684,
+              "coverage_max": 0.439474
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.277635,
+              "coverage_q90": 0.308106,
+              "coverage_q95": 0.31616,
+              "coverage_q99": 0.329433,
+              "coverage_max": 0.395314
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.261802,
+              "coverage_q90": 0.292032,
+              "coverage_q95": 0.299767,
+              "coverage_q99": 0.315341,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.252547,
+              "coverage_q90": 0.281473,
+              "coverage_q95": 0.288283,
+              "coverage_q99": 0.306412,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.23827,
+              "coverage_q90": 0.265598,
+              "coverage_q95": 0.272262,
+              "coverage_q99": 0.293776,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.227596,
+              "coverage_q90": 0.254823,
+              "coverage_q95": 0.261039,
+              "coverage_q99": 0.285363,
+              "coverage_max": 0.370903
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.210957,
+              "coverage_q90": 0.238271,
+              "coverage_q95": 0.250039,
+              "coverage_q99": 0.276201,
+              "coverage_max": 0.3703
+            }
+          ]
+        }
+      }
+    },
+    {
+      "subset": [
+        "leather",
+        "tile",
+        "wood"
+      ],
+      "standard_profile": {
+        "name": "standard_wrn_l23_g14",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "selected_bank_patches": 12000
+      },
+      "standard_single": {
+        "leather": {
+          "label": "standard:leather",
+          "normal_patch_pool": 48020,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.339279,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.388291,
+              "coverage_q90": 0.423413,
+              "coverage_q95": 0.433497,
+              "coverage_q99": 0.451401,
+              "coverage_max": 0.522651
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.381659,
+              "coverage_q90": 0.411118,
+              "coverage_q95": 0.419151,
+              "coverage_q99": 0.435078,
+              "coverage_max": 0.504079
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.373043,
+              "coverage_q90": 0.39713,
+              "coverage_q95": 0.403784,
+              "coverage_q99": 0.418123,
+              "coverage_max": 0.476197
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.369981,
+              "coverage_q90": 0.392882,
+              "coverage_q95": 0.39962,
+              "coverage_q99": 0.413746,
+              "coverage_max": 0.476197
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.357985,
+              "coverage_q90": 0.378566,
+              "coverage_q95": 0.384793,
+              "coverage_q99": 0.397332,
+              "coverage_max": 0.475287
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.345173,
+              "coverage_q90": 0.36512,
+              "coverage_q95": 0.371035,
+              "coverage_q99": 0.383456,
+              "coverage_max": 0.440848
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.338469,
+              "coverage_q90": 0.357362,
+              "coverage_q95": 0.362801,
+              "coverage_q99": 0.377612,
+              "coverage_max": 0.435812
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.333171,
+              "coverage_q90": 0.35155,
+              "coverage_q95": 0.357644,
+              "coverage_q99": 0.372686,
+              "coverage_max": 0.435812
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.325542,
+              "coverage_q90": 0.344146,
+              "coverage_q95": 0.350401,
+              "coverage_q99": 0.365269,
+              "coverage_max": 0.435812
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.319828,
+              "coverage_q90": 0.339027,
+              "coverage_q95": 0.345734,
+              "coverage_q99": 0.359598,
+              "coverage_max": 0.435812
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.311142,
+              "coverage_q90": 0.332083,
+              "coverage_q95": 0.339279,
+              "coverage_q99": 0.354079,
+              "coverage_max": 0.417361
+            }
+          ]
+        },
+        "tile": {
+          "label": "standard:tile",
+          "normal_patch_pool": 45080,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.422934,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.474949,
+              "coverage_q90": 0.516605,
+              "coverage_q95": 0.526797,
+              "coverage_q99": 0.544116,
+              "coverage_max": 0.603161
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.466858,
+              "coverage_q90": 0.499759,
+              "coverage_q95": 0.508419,
+              "coverage_q99": 0.525598,
+              "coverage_max": 0.603161
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.458617,
+              "coverage_q90": 0.48703,
+              "coverage_q95": 0.494663,
+              "coverage_q99": 0.511042,
+              "coverage_max": 0.603161
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.453817,
+              "coverage_q90": 0.481671,
+              "coverage_q95": 0.489462,
+              "coverage_q99": 0.504035,
+              "coverage_max": 0.602683
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.442333,
+              "coverage_q90": 0.466656,
+              "coverage_q95": 0.474256,
+              "coverage_q99": 0.489317,
+              "coverage_max": 0.575866
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.428113,
+              "coverage_q90": 0.451046,
+              "coverage_q95": 0.458663,
+              "coverage_q99": 0.474454,
+              "coverage_max": 0.57156
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.419925,
+              "coverage_q90": 0.442801,
+              "coverage_q95": 0.449415,
+              "coverage_q99": 0.467142,
+              "coverage_max": 0.57156
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.413764,
+              "coverage_q90": 0.436603,
+              "coverage_q95": 0.443855,
+              "coverage_q99": 0.462019,
+              "coverage_max": 0.557842
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.404387,
+              "coverage_q90": 0.427396,
+              "coverage_q95": 0.435982,
+              "coverage_q99": 0.453727,
+              "coverage_max": 0.557842
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.397716,
+              "coverage_q90": 0.42154,
+              "coverage_q95": 0.430598,
+              "coverage_q99": 0.449492,
+              "coverage_max": 0.557842
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.388453,
+              "coverage_q90": 0.414295,
+              "coverage_q95": 0.422934,
+              "coverage_q99": 0.444676,
+              "coverage_max": 0.557842
+            }
+          ]
+        },
+        "wood": {
+          "label": "standard:wood",
+          "normal_patch_pool": 48412,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.393597,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.454759,
+              "coverage_q90": 0.501165,
+              "coverage_q95": 0.513548,
+              "coverage_q99": 0.535305,
+              "coverage_max": 0.620011
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.446167,
+              "coverage_q90": 0.483303,
+              "coverage_q95": 0.493022,
+              "coverage_q99": 0.512697,
+              "coverage_max": 0.611103
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.434855,
+              "coverage_q90": 0.465491,
+              "coverage_q95": 0.473262,
+              "coverage_q99": 0.489619,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.431521,
+              "coverage_q90": 0.460478,
+              "coverage_q95": 0.468894,
+              "coverage_q99": 0.484104,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.414784,
+              "coverage_q90": 0.440928,
+              "coverage_q95": 0.448046,
+              "coverage_q99": 0.463294,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.399208,
+              "coverage_q90": 0.424119,
+              "coverage_q95": 0.43108,
+              "coverage_q99": 0.448017,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.389991,
+              "coverage_q90": 0.414591,
+              "coverage_q95": 0.422181,
+              "coverage_q99": 0.438031,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.383525,
+              "coverage_q90": 0.407414,
+              "coverage_q95": 0.414957,
+              "coverage_q99": 0.433212,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.373292,
+              "coverage_q90": 0.398535,
+              "coverage_q95": 0.406622,
+              "coverage_q99": 0.426657,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.366336,
+              "coverage_q90": 0.392085,
+              "coverage_q95": 0.400946,
+              "coverage_q99": 0.422568,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.355743,
+              "coverage_q90": 0.383463,
+              "coverage_q95": 0.393597,
+              "coverage_q99": 0.416533,
+              "coverage_max": 0.54007
+            }
+          ]
+        }
+      },
+      "standard_merged": {
+        "label": "standard:leather+tile+wood",
+        "normal_patch_pool": 141512,
+        "candidate_pool": 8000,
+        "eval_pool": 8000,
+        "feature_dim": 768,
+        "reference_bank_size": 3000,
+        "reference_q95": 0.413326,
+        "coverage_slack": 0.05,
+        "required_bank_size_by_q95": 1500,
+        "rows": [
+          {
+            "bank_size": 25,
+            "coverage_q50": 0.49188,
+            "coverage_q90": 0.536019,
+            "coverage_q95": 0.546327,
+            "coverage_q99": 0.567612,
+            "coverage_max": 0.607744
+          },
+          {
+            "bank_size": 50,
+            "coverage_q50": 0.472338,
+            "coverage_q90": 0.510681,
+            "coverage_q95": 0.519081,
+            "coverage_q99": 0.536675,
+            "coverage_max": 0.60201
+          },
+          {
+            "bank_size": 100,
+            "coverage_q50": 0.45314,
+            "coverage_q90": 0.48598,
+            "coverage_q95": 0.495069,
+            "coverage_q99": 0.512066,
+            "coverage_max": 0.549491
+          },
+          {
+            "bank_size": 125,
+            "coverage_q50": 0.449704,
+            "coverage_q90": 0.481063,
+            "coverage_q95": 0.490056,
+            "coverage_q99": 0.506221,
+            "coverage_max": 0.549491
+          },
+          {
+            "bank_size": 250,
+            "coverage_q50": 0.430796,
+            "coverage_q90": 0.461837,
+            "coverage_q95": 0.470747,
+            "coverage_q99": 0.487318,
+            "coverage_max": 0.549491
+          },
+          {
+            "bank_size": 500,
+            "coverage_q50": 0.415158,
+            "coverage_q90": 0.444542,
+            "coverage_q95": 0.452283,
+            "coverage_q99": 0.470427,
+            "coverage_max": 0.543976
+          },
+          {
+            "bank_size": 750,
+            "coverage_q50": 0.404506,
+            "coverage_q90": 0.434028,
+            "coverage_q95": 0.442638,
+            "coverage_q99": 0.463724,
+            "coverage_max": 0.543976
+          },
+          {
+            "bank_size": 1000,
+            "coverage_q50": 0.39757,
+            "coverage_q90": 0.427378,
+            "coverage_q95": 0.437003,
+            "coverage_q99": 0.456777,
+            "coverage_max": 0.543976
+          },
+          {
+            "bank_size": 1500,
+            "coverage_q50": 0.387149,
+            "coverage_q90": 0.417532,
+            "coverage_q95": 0.427285,
+            "coverage_q99": 0.448875,
+            "coverage_max": 0.543976
+          },
+          {
+            "bank_size": 2000,
+            "coverage_q50": 0.380483,
+            "coverage_q90": 0.410957,
+            "coverage_q95": 0.420904,
+            "coverage_q99": 0.44411,
+            "coverage_max": 0.522431
+          },
+          {
+            "bank_size": 3000,
+            "coverage_q50": 0.367949,
+            "coverage_q90": 0.402349,
+            "coverage_q95": 0.413326,
+            "coverage_q99": 0.438546,
+            "coverage_max": 0.522431
+          }
+        ]
+      },
+      "standard_required_sum_single": 4000,
+      "standard_required_merged": 1500,
+      "merged_to_sum_required_ratio": 0.375,
+      "proposed_single": {
+        "leather": {
+          "profile": {
+            "name": "efficientnet_b0_out1:2_g14",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "selected_bank_patches_from_detection": 125
+          },
+          "label": "proposed:leather",
+          "normal_patch_pool": 48020,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 64,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.464986,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.593537,
+              "coverage_q90": 0.652367,
+              "coverage_q95": 0.667969,
+              "coverage_q99": 0.698634,
+              "coverage_max": 0.745698
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.571366,
+              "coverage_q90": 0.625533,
+              "coverage_q95": 0.637944,
+              "coverage_q99": 0.662516,
+              "coverage_max": 0.733919
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.536494,
+              "coverage_q90": 0.582838,
+              "coverage_q95": 0.597101,
+              "coverage_q99": 0.623644,
+              "coverage_max": 0.668599
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.527828,
+              "coverage_q90": 0.573763,
+              "coverage_q95": 0.586429,
+              "coverage_q99": 0.611198,
+              "coverage_max": 0.652
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.503767,
+              "coverage_q90": 0.545592,
+              "coverage_q95": 0.557996,
+              "coverage_q99": 0.582572,
+              "coverage_max": 0.632194
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.477639,
+              "coverage_q90": 0.517204,
+              "coverage_q95": 0.529022,
+              "coverage_q99": 0.554189,
+              "coverage_max": 0.618665
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.462763,
+              "coverage_q90": 0.502367,
+              "coverage_q95": 0.512821,
+              "coverage_q99": 0.538384,
+              "coverage_max": 0.593977
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.45098,
+              "coverage_q90": 0.490237,
+              "coverage_q95": 0.502251,
+              "coverage_q99": 0.528139,
+              "coverage_max": 0.590305
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.435628,
+              "coverage_q90": 0.474301,
+              "coverage_q95": 0.487241,
+              "coverage_q99": 0.51396,
+              "coverage_max": 0.570436
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.423891,
+              "coverage_q90": 0.464396,
+              "coverage_q95": 0.477619,
+              "coverage_q99": 0.504533,
+              "coverage_max": 0.562673
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.407459,
+              "coverage_q90": 0.451201,
+              "coverage_q95": 0.464986,
+              "coverage_q99": 0.494445,
+              "coverage_max": 0.562673
+            }
+          ]
+        },
+        "tile": {
+          "profile": {
+            "name": "efficientnet_b0_out1:2_g14",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "selected_bank_patches_from_detection": 250
+          },
+          "label": "proposed:tile",
+          "normal_patch_pool": 45080,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 64,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.655017,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.810864,
+              "coverage_q90": 0.8825,
+              "coverage_q95": 0.900579,
+              "coverage_q99": 0.937476,
+              "coverage_max": 1.016417
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.778738,
+              "coverage_q90": 0.843072,
+              "coverage_q95": 0.859815,
+              "coverage_q99": 0.888927,
+              "coverage_max": 0.953156
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.744167,
+              "coverage_q90": 0.801382,
+              "coverage_q95": 0.816137,
+              "coverage_q99": 0.843252,
+              "coverage_max": 0.894422
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.73244,
+              "coverage_q90": 0.789226,
+              "coverage_q95": 0.803187,
+              "coverage_q99": 0.831095,
+              "coverage_max": 0.888753
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.702704,
+              "coverage_q90": 0.752882,
+              "coverage_q95": 0.767054,
+              "coverage_q99": 0.793839,
+              "coverage_max": 0.875358
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.66926,
+              "coverage_q90": 0.718786,
+              "coverage_q95": 0.731668,
+              "coverage_q99": 0.759322,
+              "coverage_max": 0.871616
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.651692,
+              "coverage_q90": 0.700195,
+              "coverage_q95": 0.713348,
+              "coverage_q99": 0.737716,
+              "coverage_max": 0.822236
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.639164,
+              "coverage_q90": 0.686523,
+              "coverage_q95": 0.699923,
+              "coverage_q99": 0.725066,
+              "coverage_max": 0.822236
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.621423,
+              "coverage_q90": 0.668915,
+              "coverage_q95": 0.682798,
+              "coverage_q99": 0.711703,
+              "coverage_max": 0.822236
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.608171,
+              "coverage_q90": 0.655953,
+              "coverage_q95": 0.670991,
+              "coverage_q99": 0.697894,
+              "coverage_max": 0.822236
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.588451,
+              "coverage_q90": 0.639096,
+              "coverage_q95": 0.655017,
+              "coverage_q99": 0.681778,
+              "coverage_max": 0.777369
+            }
+          ]
+        },
+        "wood": {
+          "profile": {
+            "name": "mobilenetv3_small_100_out1:2_g7",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "selected_bank_patches_from_detection": 125
+          },
+          "label": "proposed:wood",
+          "normal_patch_pool": 12103,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 40,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.250039,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 2000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.37683,
+              "coverage_q90": 0.437967,
+              "coverage_q95": 0.453858,
+              "coverage_q99": 0.484844,
+              "coverage_max": 0.535516
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.357324,
+              "coverage_q90": 0.407102,
+              "coverage_q95": 0.420734,
+              "coverage_q99": 0.443607,
+              "coverage_max": 0.499192
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.33019,
+              "coverage_q90": 0.370763,
+              "coverage_q95": 0.382148,
+              "coverage_q99": 0.40427,
+              "coverage_max": 0.445622
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.323029,
+              "coverage_q90": 0.361277,
+              "coverage_q95": 0.371052,
+              "coverage_q99": 0.392706,
+              "coverage_max": 0.445622
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.300896,
+              "coverage_q90": 0.333322,
+              "coverage_q95": 0.342062,
+              "coverage_q99": 0.357684,
+              "coverage_max": 0.439474
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.277635,
+              "coverage_q90": 0.308106,
+              "coverage_q95": 0.31616,
+              "coverage_q99": 0.329433,
+              "coverage_max": 0.395314
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.261802,
+              "coverage_q90": 0.292032,
+              "coverage_q95": 0.299767,
+              "coverage_q99": 0.315341,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.252547,
+              "coverage_q90": 0.281473,
+              "coverage_q95": 0.288283,
+              "coverage_q99": 0.306412,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.23827,
+              "coverage_q90": 0.265598,
+              "coverage_q95": 0.272262,
+              "coverage_q99": 0.293776,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.227596,
+              "coverage_q90": 0.254823,
+              "coverage_q95": 0.261039,
+              "coverage_q99": 0.285363,
+              "coverage_max": 0.370903
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.210957,
+              "coverage_q90": 0.238271,
+              "coverage_q95": 0.250039,
+              "coverage_q99": 0.276201,
+              "coverage_max": 0.3703
+            }
+          ]
+        }
+      }
+    },
+    {
+      "subset": [
+        "bottle",
+        "leather",
+        "wood"
+      ],
+      "standard_profile": {
+        "name": "standard_wrn_l23_g14",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "selected_bank_patches": 12000
+      },
+      "standard_single": {
+        "bottle": {
+          "label": "standard:bottle",
+          "normal_patch_pool": 40964,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.276447,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 2000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.51821,
+              "coverage_q90": 0.601413,
+              "coverage_q95": 0.621296,
+              "coverage_q99": 0.642048,
+              "coverage_max": 0.687765
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.457631,
+              "coverage_q90": 0.531982,
+              "coverage_q95": 0.546793,
+              "coverage_q99": 0.575872,
+              "coverage_max": 0.610058
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.363151,
+              "coverage_q90": 0.454376,
+              "coverage_q95": 0.470212,
+              "coverage_q99": 0.492071,
+              "coverage_max": 0.544137
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.340515,
+              "coverage_q90": 0.435855,
+              "coverage_q95": 0.449839,
+              "coverage_q99": 0.478861,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.304078,
+              "coverage_q90": 0.374568,
+              "coverage_q95": 0.388234,
+              "coverage_q99": 0.415222,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.267628,
+              "coverage_q90": 0.328807,
+              "coverage_q95": 0.342505,
+              "coverage_q99": 0.377352,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.249421,
+              "coverage_q90": 0.309358,
+              "coverage_q95": 0.319973,
+              "coverage_q99": 0.357345,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.229972,
+              "coverage_q90": 0.290723,
+              "coverage_q95": 0.306796,
+              "coverage_q99": 0.350411,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.212981,
+              "coverage_q90": 0.272287,
+              "coverage_q95": 0.291351,
+              "coverage_q99": 0.346005,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.195995,
+              "coverage_q90": 0.263287,
+              "coverage_q95": 0.283531,
+              "coverage_q99": 0.340798,
+              "coverage_max": 0.507817
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.167794,
+              "coverage_q90": 0.251393,
+              "coverage_q95": 0.276447,
+              "coverage_q99": 0.338706,
+              "coverage_max": 0.507817
+            }
+          ]
+        },
+        "leather": {
+          "label": "standard:leather",
+          "normal_patch_pool": 48020,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.339279,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.388291,
+              "coverage_q90": 0.423413,
+              "coverage_q95": 0.433497,
+              "coverage_q99": 0.451401,
+              "coverage_max": 0.522651
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.381659,
+              "coverage_q90": 0.411118,
+              "coverage_q95": 0.419151,
+              "coverage_q99": 0.435078,
+              "coverage_max": 0.504079
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.373043,
+              "coverage_q90": 0.39713,
+              "coverage_q95": 0.403784,
+              "coverage_q99": 0.418123,
+              "coverage_max": 0.476197
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.369981,
+              "coverage_q90": 0.392882,
+              "coverage_q95": 0.39962,
+              "coverage_q99": 0.413746,
+              "coverage_max": 0.476197
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.357985,
+              "coverage_q90": 0.378566,
+              "coverage_q95": 0.384793,
+              "coverage_q99": 0.397332,
+              "coverage_max": 0.475287
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.345173,
+              "coverage_q90": 0.36512,
+              "coverage_q95": 0.371035,
+              "coverage_q99": 0.383456,
+              "coverage_max": 0.440848
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.338469,
+              "coverage_q90": 0.357362,
+              "coverage_q95": 0.362801,
+              "coverage_q99": 0.377612,
+              "coverage_max": 0.435812
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.333171,
+              "coverage_q90": 0.35155,
+              "coverage_q95": 0.357644,
+              "coverage_q99": 0.372686,
+              "coverage_max": 0.435812
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.325542,
+              "coverage_q90": 0.344146,
+              "coverage_q95": 0.350401,
+              "coverage_q99": 0.365269,
+              "coverage_max": 0.435812
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.319828,
+              "coverage_q90": 0.339027,
+              "coverage_q95": 0.345734,
+              "coverage_q99": 0.359598,
+              "coverage_max": 0.435812
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.311142,
+              "coverage_q90": 0.332083,
+              "coverage_q95": 0.339279,
+              "coverage_q99": 0.354079,
+              "coverage_max": 0.417361
+            }
+          ]
+        },
+        "wood": {
+          "label": "standard:wood",
+          "normal_patch_pool": 48412,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 768,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.393597,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.454759,
+              "coverage_q90": 0.501165,
+              "coverage_q95": 0.513548,
+              "coverage_q99": 0.535305,
+              "coverage_max": 0.620011
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.446167,
+              "coverage_q90": 0.483303,
+              "coverage_q95": 0.493022,
+              "coverage_q99": 0.512697,
+              "coverage_max": 0.611103
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.434855,
+              "coverage_q90": 0.465491,
+              "coverage_q95": 0.473262,
+              "coverage_q99": 0.489619,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.431521,
+              "coverage_q90": 0.460478,
+              "coverage_q95": 0.468894,
+              "coverage_q99": 0.484104,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.414784,
+              "coverage_q90": 0.440928,
+              "coverage_q95": 0.448046,
+              "coverage_q99": 0.463294,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.399208,
+              "coverage_q90": 0.424119,
+              "coverage_q95": 0.43108,
+              "coverage_q99": 0.448017,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.389991,
+              "coverage_q90": 0.414591,
+              "coverage_q95": 0.422181,
+              "coverage_q99": 0.438031,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.383525,
+              "coverage_q90": 0.407414,
+              "coverage_q95": 0.414957,
+              "coverage_q99": 0.433212,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.373292,
+              "coverage_q90": 0.398535,
+              "coverage_q95": 0.406622,
+              "coverage_q99": 0.426657,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.366336,
+              "coverage_q90": 0.392085,
+              "coverage_q95": 0.400946,
+              "coverage_q99": 0.422568,
+              "coverage_max": 0.54007
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.355743,
+              "coverage_q90": 0.383463,
+              "coverage_q95": 0.393597,
+              "coverage_q99": 0.416533,
+              "coverage_max": 0.54007
+            }
+          ]
+        }
+      },
+      "standard_merged": {
+        "label": "standard:bottle+leather+wood",
+        "normal_patch_pool": 137396,
+        "candidate_pool": 8000,
+        "eval_pool": 8000,
+        "feature_dim": 768,
+        "reference_bank_size": 3000,
+        "reference_q95": 0.381907,
+        "coverage_slack": 0.05,
+        "required_bank_size_by_q95": 1500,
+        "rows": [
+          {
+            "bank_size": 25,
+            "coverage_q50": 0.477826,
+            "coverage_q90": 0.574941,
+            "coverage_q95": 0.599502,
+            "coverage_q99": 0.635331,
+            "coverage_max": 0.693165
+          },
+          {
+            "bank_size": 50,
+            "coverage_q50": 0.461775,
+            "coverage_q90": 0.529339,
+            "coverage_q95": 0.544913,
+            "coverage_q99": 0.571432,
+            "coverage_max": 0.693165
+          },
+          {
+            "bank_size": 100,
+            "coverage_q50": 0.441895,
+            "coverage_q90": 0.488766,
+            "coverage_q95": 0.499986,
+            "coverage_q99": 0.520671,
+            "coverage_max": 0.627274
+          },
+          {
+            "bank_size": 125,
+            "coverage_q50": 0.436426,
+            "coverage_q90": 0.478547,
+            "coverage_q95": 0.489358,
+            "coverage_q99": 0.50941,
+            "coverage_max": 0.627274
+          },
+          {
+            "bank_size": 250,
+            "coverage_q50": 0.404275,
+            "coverage_q90": 0.442055,
+            "coverage_q95": 0.45155,
+            "coverage_q99": 0.472056,
+            "coverage_max": 0.544683
+          },
+          {
+            "bank_size": 500,
+            "coverage_q50": 0.384884,
+            "coverage_q90": 0.418285,
+            "coverage_q95": 0.427158,
+            "coverage_q99": 0.448,
+            "coverage_max": 0.527728
+          },
+          {
+            "bank_size": 750,
+            "coverage_q50": 0.371061,
+            "coverage_q90": 0.405231,
+            "coverage_q95": 0.414401,
+            "coverage_q99": 0.438486,
+            "coverage_max": 0.527728
+          },
+          {
+            "bank_size": 1000,
+            "coverage_q50": 0.364416,
+            "coverage_q90": 0.396604,
+            "coverage_q95": 0.407216,
+            "coverage_q99": 0.430829,
+            "coverage_max": 0.494555
+          },
+          {
+            "bank_size": 1500,
+            "coverage_q50": 0.352687,
+            "coverage_q90": 0.385274,
+            "coverage_q95": 0.396769,
+            "coverage_q99": 0.421292,
+            "coverage_max": 0.492265
+          },
+          {
+            "bank_size": 2000,
+            "coverage_q50": 0.343522,
+            "coverage_q90": 0.378903,
+            "coverage_q95": 0.389766,
+            "coverage_q99": 0.415792,
+            "coverage_max": 0.492265
+          },
+          {
+            "bank_size": 3000,
+            "coverage_q50": 0.329729,
+            "coverage_q90": 0.369372,
+            "coverage_q95": 0.381907,
+            "coverage_q99": 0.410137,
+            "coverage_max": 0.492265
+          }
+        ]
+      },
+      "standard_required_sum_single": 5000,
+      "standard_required_merged": 1500,
+      "merged_to_sum_required_ratio": 0.3,
+      "proposed_single": {
+        "bottle": {
+          "profile": {
+            "name": "efficientnet_b0_out1:2_g10",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 10,
+            "selected_bank_patches_from_detection": 500
+          },
+          "label": "proposed:bottle",
+          "normal_patch_pool": 20900,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 64,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.352938,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 2000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.793386,
+              "coverage_q90": 0.899151,
+              "coverage_q95": 0.925507,
+              "coverage_q99": 0.965264,
+              "coverage_max": 1.048097
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.556894,
+              "coverage_q90": 0.739737,
+              "coverage_q95": 0.769718,
+              "coverage_q99": 0.823874,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.468459,
+              "coverage_q90": 0.643244,
+              "coverage_q95": 0.678233,
+              "coverage_q99": 0.715477,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.443222,
+              "coverage_q90": 0.620073,
+              "coverage_q95": 0.653205,
+              "coverage_q99": 0.696932,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.379377,
+              "coverage_q90": 0.516314,
+              "coverage_q95": 0.545797,
+              "coverage_q99": 0.595515,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.33465,
+              "coverage_q90": 0.439512,
+              "coverage_q95": 0.464966,
+              "coverage_q99": 0.518255,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.281612,
+              "coverage_q90": 0.397102,
+              "coverage_q95": 0.424611,
+              "coverage_q99": 0.491102,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.255339,
+              "coverage_q90": 0.369815,
+              "coverage_q95": 0.395983,
+              "coverage_q99": 0.469851,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.228159,
+              "coverage_q90": 0.33546,
+              "coverage_q95": 0.372648,
+              "coverage_q99": 0.458566,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.201454,
+              "coverage_q90": 0.309993,
+              "coverage_q95": 0.360907,
+              "coverage_q99": 0.453764,
+              "coverage_max": 0.986888
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.154896,
+              "coverage_q90": 0.290786,
+              "coverage_q95": 0.352938,
+              "coverage_q99": 0.450259,
+              "coverage_max": 0.986888
+            }
+          ]
+        },
+        "leather": {
+          "profile": {
+            "name": "efficientnet_b0_out1:2_g14",
+            "backbone": "efficientnet_b0",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 14,
+            "selected_bank_patches_from_detection": 125
+          },
+          "label": "proposed:leather",
+          "normal_patch_pool": 48020,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 64,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.464986,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 1500,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.593537,
+              "coverage_q90": 0.652367,
+              "coverage_q95": 0.667969,
+              "coverage_q99": 0.698634,
+              "coverage_max": 0.745698
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.571366,
+              "coverage_q90": 0.625533,
+              "coverage_q95": 0.637944,
+              "coverage_q99": 0.662516,
+              "coverage_max": 0.733919
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.536494,
+              "coverage_q90": 0.582838,
+              "coverage_q95": 0.597101,
+              "coverage_q99": 0.623644,
+              "coverage_max": 0.668599
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.527828,
+              "coverage_q90": 0.573763,
+              "coverage_q95": 0.586429,
+              "coverage_q99": 0.611198,
+              "coverage_max": 0.652
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.503767,
+              "coverage_q90": 0.545592,
+              "coverage_q95": 0.557996,
+              "coverage_q99": 0.582572,
+              "coverage_max": 0.632194
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.477639,
+              "coverage_q90": 0.517204,
+              "coverage_q95": 0.529022,
+              "coverage_q99": 0.554189,
+              "coverage_max": 0.618665
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.462763,
+              "coverage_q90": 0.502367,
+              "coverage_q95": 0.512821,
+              "coverage_q99": 0.538384,
+              "coverage_max": 0.593977
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.45098,
+              "coverage_q90": 0.490237,
+              "coverage_q95": 0.502251,
+              "coverage_q99": 0.528139,
+              "coverage_max": 0.590305
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.435628,
+              "coverage_q90": 0.474301,
+              "coverage_q95": 0.487241,
+              "coverage_q99": 0.51396,
+              "coverage_max": 0.570436
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.423891,
+              "coverage_q90": 0.464396,
+              "coverage_q95": 0.477619,
+              "coverage_q99": 0.504533,
+              "coverage_max": 0.562673
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.407459,
+              "coverage_q90": 0.451201,
+              "coverage_q95": 0.464986,
+              "coverage_q99": 0.494445,
+              "coverage_max": 0.562673
+            }
+          ]
+        },
+        "wood": {
+          "profile": {
+            "name": "mobilenetv3_small_100_out1:2_g7",
+            "backbone": "mobilenetv3_small_100",
+            "out_indices": [
+              1,
+              2
+            ],
+            "patch_grid": 7,
+            "selected_bank_patches_from_detection": 125
+          },
+          "label": "proposed:wood",
+          "normal_patch_pool": 12103,
+          "candidate_pool": 8000,
+          "eval_pool": 8000,
+          "feature_dim": 40,
+          "reference_bank_size": 3000,
+          "reference_q95": 0.250039,
+          "coverage_slack": 0.05,
+          "required_bank_size_by_q95": 2000,
+          "rows": [
+            {
+              "bank_size": 25,
+              "coverage_q50": 0.37683,
+              "coverage_q90": 0.437967,
+              "coverage_q95": 0.453858,
+              "coverage_q99": 0.484844,
+              "coverage_max": 0.535516
+            },
+            {
+              "bank_size": 50,
+              "coverage_q50": 0.357324,
+              "coverage_q90": 0.407102,
+              "coverage_q95": 0.420734,
+              "coverage_q99": 0.443607,
+              "coverage_max": 0.499192
+            },
+            {
+              "bank_size": 100,
+              "coverage_q50": 0.33019,
+              "coverage_q90": 0.370763,
+              "coverage_q95": 0.382148,
+              "coverage_q99": 0.40427,
+              "coverage_max": 0.445622
+            },
+            {
+              "bank_size": 125,
+              "coverage_q50": 0.323029,
+              "coverage_q90": 0.361277,
+              "coverage_q95": 0.371052,
+              "coverage_q99": 0.392706,
+              "coverage_max": 0.445622
+            },
+            {
+              "bank_size": 250,
+              "coverage_q50": 0.300896,
+              "coverage_q90": 0.333322,
+              "coverage_q95": 0.342062,
+              "coverage_q99": 0.357684,
+              "coverage_max": 0.439474
+            },
+            {
+              "bank_size": 500,
+              "coverage_q50": 0.277635,
+              "coverage_q90": 0.308106,
+              "coverage_q95": 0.31616,
+              "coverage_q99": 0.329433,
+              "coverage_max": 0.395314
+            },
+            {
+              "bank_size": 750,
+              "coverage_q50": 0.261802,
+              "coverage_q90": 0.292032,
+              "coverage_q95": 0.299767,
+              "coverage_q99": 0.315341,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 1000,
+              "coverage_q50": 0.252547,
+              "coverage_q90": 0.281473,
+              "coverage_q95": 0.288283,
+              "coverage_q99": 0.306412,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 1500,
+              "coverage_q50": 0.23827,
+              "coverage_q90": 0.265598,
+              "coverage_q95": 0.272262,
+              "coverage_q99": 0.293776,
+              "coverage_max": 0.382558
+            },
+            {
+              "bank_size": 2000,
+              "coverage_q50": 0.227596,
+              "coverage_q90": 0.254823,
+              "coverage_q95": 0.261039,
+              "coverage_q99": 0.285363,
+              "coverage_max": 0.370903
+            },
+            {
+              "bank_size": 3000,
+              "coverage_q50": 0.210957,
+              "coverage_q90": 0.238271,
+              "coverage_q95": 0.250039,
+              "coverage_q99": 0.276201,
+              "coverage_max": 0.3703
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
