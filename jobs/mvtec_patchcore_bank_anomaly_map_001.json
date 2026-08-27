@@ -1,0 +1,12 @@
+{
+  "id": "mvtec_patchcore_bank_anomaly_map_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt timm pyarrow && python -m scripts.mvtec_patchcore_bank_anomaly_map --source results/mvtec_patchcore_backbone_floor_probe_001_summary.json --output results/mvtec_patchcore_bank_anomaly_map_001_summary.json --markdown docs/mvtec_patchcore_bank_anomaly_map_001.md --figure results/mvtec_patchcore_bank_anomaly_map_001.png --materialized-root /home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2 --subset bottle,carpet --bank-sizes 100,125,250,500,1000,3000 --random-trials 10 --coreset-candidate-pool 12000 --false-pass-target 0.05 --curve-points 120 --batch-size 32 --nn-chunk-size 8192 --distance-batch-size 8192 --seed 123 --require-cuda",
+  "max_runtime_sec": 7200,
+  "result_file": "results/mvtec_patchcore_bank_anomaly_map_001.json",
+  "note": "Audits the surprising standard bottle+carpet case where N(A+B) was far smaller than N(A)+N(B), including selected-bank feature mapping and stability checks."
+}
