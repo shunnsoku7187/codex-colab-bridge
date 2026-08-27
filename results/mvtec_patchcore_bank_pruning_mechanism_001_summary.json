@@ -1,0 +1,552 @@
+{
+  "purpose": "Explain intentional PatchCore bank pruning through nearest-neighbor activity and pruning-method comparison.",
+  "config": {
+    "candidates": "results/mvtec_patchcore_subset_mixed_bank_verify_001_summary.json",
+    "false_pass_target": 0.05,
+    "full_bank_patches": 12000,
+    "calibration_fraction": 0.25,
+    "device": "cuda"
+  },
+  "category_results": [
+    {
+      "category": "toothbrush",
+      "profile": {
+        "name": "efficientnet_b0_out1:2_g10_b750",
+        "backbone": "efficientnet_b0",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 10,
+        "target_bank_patches": 750,
+        "topk_fraction": 0.05
+      },
+      "sample_counts": {
+        "train_base_normal": 45,
+        "train_calibration_normal": 15,
+        "test": 42,
+        "test_good": 12,
+        "test_defect": 30
+      },
+      "full_bank_patches": 4500,
+      "target_bank_patches": 750,
+      "target_bank_fraction": 0.166667,
+      "active_test_stats": {
+        "active_all_bank_points": 2415,
+        "active_all_fraction": 0.536667,
+        "active_score_bank_points": 187,
+        "active_score_fraction": 0.041556,
+        "topk_patches_per_image": 5
+      },
+      "evaluations": [
+        {
+          "name": "full_bank",
+          "bank_patches": 4500,
+          "relative_bank_size": 1.0,
+          "relative_nn_ops": 1.0,
+          "auc": {
+            "image_auroc": 0.969444,
+            "image_aupr": 0.986262
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.916667,
+            "good_loss_rate_good": 0.083333,
+            "threshold": 0.615716
+          },
+          "score_pearson_to_full": null,
+          "score_spearman_to_full": null
+        },
+        {
+          "name": "random_target_bank",
+          "bank_patches": 750,
+          "relative_bank_size": 0.166667,
+          "relative_nn_ops": 0.166667,
+          "auc": {
+            "image_auroc": 0.980556,
+            "image_aupr": 0.992284
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.916667,
+            "good_loss_rate_good": 0.083333,
+            "threshold": 0.723444
+          },
+          "score_pearson_to_full": 0.980019,
+          "score_spearman_to_full": 0.974556
+        },
+        {
+          "name": "kcenter_target_bank",
+          "bank_patches": 750,
+          "relative_bank_size": 0.166667,
+          "relative_nn_ops": 0.166667,
+          "auc": {
+            "image_auroc": 0.958333,
+            "image_aupr": 0.981022
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.833333,
+            "good_loss_rate_good": 0.166667,
+            "threshold": 0.62208
+          },
+          "score_pearson_to_full": 0.995,
+          "score_spearman_to_full": 0.989952
+        },
+        {
+          "name": "normal_activity_target_bank",
+          "bank_patches": 750,
+          "relative_bank_size": 0.166667,
+          "relative_nn_ops": 0.166667,
+          "auc": {
+            "image_auroc": 0.944444,
+            "image_aupr": 0.979996
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.5,
+            "good_loss_rate_good": 0.5,
+            "threshold": 0.679018
+          },
+          "score_pearson_to_full": 0.965524,
+          "score_spearman_to_full": 0.953812,
+          "calib_active_bank_points": 1183,
+          "calib_active_fraction": 0.262889,
+          "selected_from_activity": 750
+        }
+      ]
+    },
+    {
+      "category": "wood",
+      "profile": {
+        "name": "mobilenetv3_small_100_out1:2_g7_b125",
+        "backbone": "mobilenetv3_small_100",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 7,
+        "target_bank_patches": 125,
+        "topk_fraction": 0.005
+      },
+      "sample_counts": {
+        "train_base_normal": 185,
+        "train_calibration_normal": 62,
+        "test": 79,
+        "test_good": 19,
+        "test_defect": 60
+      },
+      "full_bank_patches": 9065,
+      "target_bank_patches": 125,
+      "target_bank_fraction": 0.013789,
+      "active_test_stats": {
+        "active_all_bank_points": 2858,
+        "active_all_fraction": 0.315279,
+        "active_score_bank_points": 70,
+        "active_score_fraction": 0.007722,
+        "topk_patches_per_image": 1
+      },
+      "evaluations": [
+        {
+          "name": "full_bank",
+          "bank_patches": 9065,
+          "relative_bank_size": 1.0,
+          "relative_nn_ops": 1.0,
+          "auc": {
+            "image_auroc": 0.97193,
+            "image_aupr": 0.990291
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.894737,
+            "good_loss_rate_good": 0.105263,
+            "threshold": 0.309068
+          },
+          "score_pearson_to_full": null,
+          "score_spearman_to_full": null
+        },
+        {
+          "name": "random_target_bank",
+          "bank_patches": 125,
+          "relative_bank_size": 0.013789,
+          "relative_nn_ops": 0.013789,
+          "auc": {
+            "image_auroc": 0.961404,
+            "image_aupr": 0.987354
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.842105,
+            "good_loss_rate_good": 0.157895,
+            "threshold": 0.414619
+          },
+          "score_pearson_to_full": 0.983819,
+          "score_spearman_to_full": 0.969645
+        },
+        {
+          "name": "kcenter_target_bank",
+          "bank_patches": 125,
+          "relative_bank_size": 0.013789,
+          "relative_nn_ops": 0.013789,
+          "auc": {
+            "image_auroc": 0.955263,
+            "image_aupr": 0.986733
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.842105,
+            "good_loss_rate_good": 0.157895,
+            "threshold": 0.405114
+          },
+          "score_pearson_to_full": 0.983937,
+          "score_spearman_to_full": 0.966991
+        },
+        {
+          "name": "normal_activity_target_bank",
+          "bank_patches": 125,
+          "relative_bank_size": 0.013789,
+          "relative_nn_ops": 0.013789,
+          "auc": {
+            "image_auroc": 0.955263,
+            "image_aupr": 0.985603
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.894737,
+            "good_loss_rate_good": 0.105263,
+            "threshold": 0.395119
+          },
+          "score_pearson_to_full": 0.988265,
+          "score_spearman_to_full": 0.97887,
+          "calib_active_bank_points": 2392,
+          "calib_active_fraction": 0.263872,
+          "selected_from_activity": 125
+        }
+      ]
+    },
+    {
+      "category": "leather",
+      "profile": {
+        "name": "efficientnet_b0_out1:2_g14_b125",
+        "backbone": "efficientnet_b0",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "target_bank_patches": 125,
+        "topk_fraction": 0.005
+      },
+      "sample_counts": {
+        "train_base_normal": 184,
+        "train_calibration_normal": 61,
+        "test": 124,
+        "test_good": 32,
+        "test_defect": 92
+      },
+      "full_bank_patches": 12000,
+      "target_bank_patches": 125,
+      "target_bank_fraction": 0.010417,
+      "active_test_stats": {
+        "active_all_bank_points": 7932,
+        "active_all_fraction": 0.661,
+        "active_score_bank_points": 111,
+        "active_score_fraction": 0.00925,
+        "topk_patches_per_image": 1
+      },
+      "evaluations": [
+        {
+          "name": "full_bank",
+          "bank_patches": 12000,
+          "relative_bank_size": 1.0,
+          "relative_nn_ops": 1.0,
+          "auc": {
+            "image_auroc": 0.998981,
+            "image_aupr": 0.999651
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 1.0,
+            "good_loss_rate_good": 0.0,
+            "threshold": 0.617044
+          },
+          "score_pearson_to_full": null,
+          "score_spearman_to_full": null
+        },
+        {
+          "name": "random_target_bank",
+          "bank_patches": 125,
+          "relative_bank_size": 0.010417,
+          "relative_nn_ops": 0.010417,
+          "auc": {
+            "image_auroc": 0.995245,
+            "image_aupr": 0.998508
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 1.0,
+            "good_loss_rate_good": 0.0,
+            "threshold": 0.751191
+          },
+          "score_pearson_to_full": 0.981892,
+          "score_spearman_to_full": 0.970153
+        },
+        {
+          "name": "kcenter_target_bank",
+          "bank_patches": 125,
+          "relative_bank_size": 0.010417,
+          "relative_nn_ops": 0.010417,
+          "auc": {
+            "image_auroc": 0.993886,
+            "image_aupr": 0.998187
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 1.0,
+            "good_loss_rate_good": 0.0,
+            "threshold": 0.708694
+          },
+          "score_pearson_to_full": 0.985569,
+          "score_spearman_to_full": 0.968548
+        },
+        {
+          "name": "normal_activity_target_bank",
+          "bank_patches": 125,
+          "relative_bank_size": 0.010417,
+          "relative_nn_ops": 0.010417,
+          "auc": {
+            "image_auroc": 0.985734,
+            "image_aupr": 0.995916
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 1.0,
+            "good_loss_rate_good": 0.0,
+            "threshold": 0.796583
+          },
+          "score_pearson_to_full": 0.983954,
+          "score_spearman_to_full": 0.967264,
+          "calib_active_bank_points": 6249,
+          "calib_active_fraction": 0.52075,
+          "selected_from_activity": 125
+        }
+      ]
+    },
+    {
+      "category": "tile",
+      "profile": {
+        "name": "efficientnet_b0_out1:2_g14_b250",
+        "backbone": "efficientnet_b0",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "target_bank_patches": 250,
+        "topk_fraction": 0.02
+      },
+      "sample_counts": {
+        "train_base_normal": 172,
+        "train_calibration_normal": 58,
+        "test": 117,
+        "test_good": 33,
+        "test_defect": 84
+      },
+      "full_bank_patches": 12000,
+      "target_bank_patches": 250,
+      "target_bank_fraction": 0.020833,
+      "active_test_stats": {
+        "active_all_bank_points": 8837,
+        "active_all_fraction": 0.736417,
+        "active_score_bank_points": 445,
+        "active_score_fraction": 0.037083,
+        "topk_patches_per_image": 4
+      },
+      "evaluations": [
+        {
+          "name": "full_bank",
+          "bank_patches": 12000,
+          "relative_bank_size": 1.0,
+          "relative_nn_ops": 1.0,
+          "auc": {
+            "image_auroc": 0.999278,
+            "image_aupr": 0.999718
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 1.0,
+            "good_loss_rate_good": 0.0,
+            "threshold": 0.699954
+          },
+          "score_pearson_to_full": null,
+          "score_spearman_to_full": null
+        },
+        {
+          "name": "random_target_bank",
+          "bank_patches": 250,
+          "relative_bank_size": 0.020833,
+          "relative_nn_ops": 0.020833,
+          "auc": {
+            "image_auroc": 0.992424,
+            "image_aupr": 0.9971
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.939394,
+            "good_loss_rate_good": 0.060606,
+            "threshold": 0.83296
+          },
+          "score_pearson_to_full": 0.929998,
+          "score_spearman_to_full": 0.925355
+        },
+        {
+          "name": "kcenter_target_bank",
+          "bank_patches": 250,
+          "relative_bank_size": 0.020833,
+          "relative_nn_ops": 0.020833,
+          "auc": {
+            "image_auroc": 0.987734,
+            "image_aupr": 0.996144
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 1.0,
+            "good_loss_rate_good": 0.0,
+            "threshold": 0.821834
+          },
+          "score_pearson_to_full": 0.930328,
+          "score_spearman_to_full": 0.911006
+        },
+        {
+          "name": "normal_activity_target_bank",
+          "bank_patches": 250,
+          "relative_bank_size": 0.020833,
+          "relative_nn_ops": 0.020833,
+          "auc": {
+            "image_auroc": 0.987734,
+            "image_aupr": 0.995156
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.939394,
+            "good_loss_rate_good": 0.060606,
+            "threshold": 0.834706
+          },
+          "score_pearson_to_full": 0.930839,
+          "score_spearman_to_full": 0.90878,
+          "calib_active_bank_points": 6409,
+          "calib_active_fraction": 0.534083,
+          "selected_from_activity": 250
+        }
+      ]
+    },
+    {
+      "category": "pill",
+      "profile": {
+        "name": "mobilenetv3_large_100_out1:2_g7_b2000",
+        "backbone": "mobilenetv3_large_100",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 7,
+        "target_bank_patches": 2000,
+        "topk_fraction": 0.05
+      },
+      "sample_counts": {
+        "train_base_normal": 200,
+        "train_calibration_normal": 67,
+        "test": 167,
+        "test_good": 26,
+        "test_defect": 141
+      },
+      "full_bank_patches": 9800,
+      "target_bank_patches": 2000,
+      "target_bank_fraction": 0.204082,
+      "active_test_stats": {
+        "active_all_bank_points": 4664,
+        "active_all_fraction": 0.475918,
+        "active_score_bank_points": 294,
+        "active_score_fraction": 0.03,
+        "topk_patches_per_image": 2
+      },
+      "evaluations": [
+        {
+          "name": "full_bank",
+          "bank_patches": 9800,
+          "relative_bank_size": 1.0,
+          "relative_nn_ops": 1.0,
+          "auc": {
+            "image_auroc": 0.845063,
+            "image_aupr": 0.967099
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.384615,
+            "good_loss_rate_good": 0.615385,
+            "threshold": 0.475011
+          },
+          "score_pearson_to_full": null,
+          "score_spearman_to_full": null
+        },
+        {
+          "name": "random_target_bank",
+          "bank_patches": 2000,
+          "relative_bank_size": 0.204082,
+          "relative_nn_ops": 0.204082,
+          "auc": {
+            "image_auroc": 0.82024,
+            "image_aupr": 0.96409
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.192308,
+            "good_loss_rate_good": 0.807692,
+            "threshold": 0.523459
+          },
+          "score_pearson_to_full": 0.94146,
+          "score_spearman_to_full": 0.873412
+        },
+        {
+          "name": "kcenter_target_bank",
+          "bank_patches": 2000,
+          "relative_bank_size": 0.204082,
+          "relative_nn_ops": 0.204082,
+          "auc": {
+            "image_auroc": 0.851609,
+            "image_aupr": 0.968544
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.346154,
+            "good_loss_rate_good": 0.653846,
+            "threshold": 0.484206
+          },
+          "score_pearson_to_full": 0.995256,
+          "score_spearman_to_full": 0.987408
+        },
+        {
+          "name": "normal_activity_target_bank",
+          "bank_patches": 2000,
+          "relative_bank_size": 0.204082,
+          "relative_nn_ops": 0.204082,
+          "auc": {
+            "image_auroc": 0.825968,
+            "image_aupr": 0.965343
+          },
+          "best_at_false_pass_target": {
+            "target": 0.05,
+            "good_pass_rate_good": 0.269231,
+            "good_loss_rate_good": 0.730769,
+            "threshold": 0.516832
+          },
+          "score_pearson_to_full": 0.956179,
+          "score_spearman_to_full": 0.896583,
+          "calib_active_bank_points": 2563,
+          "calib_active_fraction": 0.261531,
+          "selected_from_activity": 2000
+        }
+      ]
+    }
+  ]
+}

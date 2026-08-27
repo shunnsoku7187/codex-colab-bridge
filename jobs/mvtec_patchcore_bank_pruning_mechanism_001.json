@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_bank_pruning_mechanism_001",
-  "status": "running",
+  "status": "done",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,6 +9,11 @@
   "max_runtime_sec": 28800,
   "result_file": "results/mvtec_patchcore_bank_pruning_mechanism_001.json",
   "note": "Audits why intentional PatchCore bank pruning can work: nearest-neighbor active bank fraction, random vs k-center vs normal-calibration activity pruning, and score-rank preservation against the full bank.",
-  "updated_at": "2026-08-27T18:46:16.277826+00:00",
-  "started_at": "2026-08-27T18:46:16.277804+00:00"
+  "updated_at": "2026-08-27T18:47:21.086158+00:00",
+  "started_at": "2026-08-27T18:46:16.277804+00:00",
+  "returncode": 0,
+  "duration_sec": 58.675,
+  "stdout": "logs/mvtec_patchcore_bank_pruning_mechanism_001.stdout.log",
+  "stderr": "logs/mvtec_patchcore_bank_pruning_mechanism_001.stderr.log",
+  "finished_at": "2026-08-27T18:47:21.078763+00:00"
 }
