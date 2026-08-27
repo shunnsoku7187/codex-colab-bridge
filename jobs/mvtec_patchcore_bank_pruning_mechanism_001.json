@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_bank_pruning_mechanism_001",
-  "status": "pending",
+  "status": "running",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -8,5 +8,7 @@
   "command": "python -m pip install -r requirements-colab.txt timm pyarrow && python -m scripts.mvtec_patchcore_bank_pruning_mechanism --candidates results/mvtec_patchcore_subset_mixed_bank_verify_001_summary.json --output results/mvtec_patchcore_bank_pruning_mechanism_001_summary.json --markdown docs/mvtec_patchcore_bank_pruning_mechanism_001.md --figure results/mvtec_patchcore_bank_pruning_mechanism_001.png --materialized-root /home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2 --max-categories 5 --full-bank-patches 12000 --calibration-fraction 0.25 --false-pass-target 0.05 --curve-points 101 --batch-size 32 --nn-chunk-size 4096 --distance-batch-size 8192 --seed 123 --require-cuda",
   "max_runtime_sec": 28800,
   "result_file": "results/mvtec_patchcore_bank_pruning_mechanism_001.json",
-  "note": "Audits why intentional PatchCore bank pruning can work: nearest-neighbor active bank fraction, random vs k-center vs normal-calibration activity pruning, and score-rank preservation against the full bank."
+  "note": "Audits why intentional PatchCore bank pruning can work: nearest-neighbor active bank fraction, random vs k-center vs normal-calibration activity pruning, and score-rank preservation against the full bank.",
+  "updated_at": "2026-08-27T18:46:16.277826+00:00",
+  "started_at": "2026-08-27T18:46:16.277804+00:00"
 }
