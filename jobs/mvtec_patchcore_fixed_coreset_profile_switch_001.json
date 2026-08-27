@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_fixed_coreset_profile_switch_001",
-  "status": "running",
+  "status": "done",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,6 +9,11 @@
   "max_runtime_sec": 28800,
   "result_file": "results/mvtec_patchcore_fixed_coreset_profile_switch_001.json",
   "note": "Redo fair AB/ABC comparison. Memory bank pruning is not hand-optimized: every standard, bank-only, fixed-profile, and proposed system uses the same fixed k-center coreset ratio. This isolates the value of category-wise profile switching.",
-  "updated_at": "2026-08-27T19:34:15.865096+00:00",
-  "started_at": "2026-08-27T19:34:15.865073+00:00"
+  "updated_at": "2026-08-27T20:17:08.861941+00:00",
+  "started_at": "2026-08-27T19:34:15.865073+00:00",
+  "returncode": 0,
+  "duration_sec": 2566.556,
+  "stdout": "logs/mvtec_patchcore_fixed_coreset_profile_switch_001.stdout.log",
+  "stderr": "logs/mvtec_patchcore_fixed_coreset_profile_switch_001.stderr.log",
+  "finished_at": "2026-08-27T20:17:08.807983+00:00"
 }

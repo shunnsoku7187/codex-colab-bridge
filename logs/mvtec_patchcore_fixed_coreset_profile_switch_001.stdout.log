@@ -2612,3 +2612,10 @@ wood mobv3s_l23_g7_b1000_topk0p005 train:  88%|████████▊ | 7/8
 wood mobv3s_l23_g7_b1000_topk0p005 test:   0%|          | 0/3 [00:00<?, ?it/s]
 wood mobv3s_l23_g7_b1000_topk0p005 test:  33%|███▎      | 1/3 [00:01<00:02,  1.19s/it]
 wood mobv3s_l23_g7_b1000_topk0p005 test: 100%|██████████| 3/3 [00:01<00:00,  2.12it/s]
+                                                                                      
+{
+  "wrote": "results/mvtec_patchcore_fixed_coreset_profile_switch_001_summary.json",
+  "pairs": 105,
+  "triples": 455,
+  "device": "cuda"
+}
