@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_subset_mixed_bank_verify_001",
-  "status": "pending",
+  "status": "running",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -8,5 +8,7 @@
   "command": "python -m pip install -r requirements-colab.txt timm pyarrow && python -m scripts.mvtec_patchcore_subset_mixed_bank_verify --candidates results/mvtec_patchcore_subset_switch_search_001_summary.json --output results/mvtec_patchcore_subset_mixed_bank_verify_001_summary.json --markdown docs/mvtec_patchcore_subset_mixed_bank_verify_001.md --figure results/mvtec_patchcore_subset_mixed_bank_verify_001.png --materialized-root /home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2 --top-pairs 5 --top-triples 5 --false-pass-target 0.03 --bank-patches-per-category 12000 --topk-fraction 0.01 --score-name topk_score --seed 123 --batch-size 32 --nn-chunk-size 16384 --curve-points 180 --require-cuda",
   "max_runtime_sec": 21600,
   "result_file": "results/mvtec_patchcore_subset_mixed_bank_verify_001_summary.json",
-  "note": "Fair AB/ABC comparison verification. Recomputes the standard profile with true merged memory banks for top pair/triple candidates, then compares against bank-only, fixed-profile, and proposed profile+bank switching systems."
+  "note": "Fair AB/ABC comparison verification. Recomputes the standard profile with true merged memory banks for top pair/triple candidates, then compares against bank-only, fixed-profile, and proposed profile+bank switching systems.",
+  "updated_at": "2026-08-27T15:58:42.705758+00:00",
+  "started_at": "2026-08-27T15:58:42.705736+00:00"
 }
