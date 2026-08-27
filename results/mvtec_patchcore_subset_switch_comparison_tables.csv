@@ -1,0 +1,56 @@
+﻿subset,system,mean_good_pass,min_good_pass,mean_nn,max_nn,mean_bank,bank_factor,profile_factor,recomposed_nn,note
+toothbrush + wood,① 標準profile + 混合bank,79.61%,75.00%,1.000000x,1.000000x,1.000000x,-,-,-,対象カテゴリだけの正常bankを結合した標準構成
+toothbrush + wood,② 標準profile + bank切替,79.61%,75.00%,0.500000x,0.505051x,0.500000x,0.500000x,1.000000x,0.500000x,CNN/層/gridは標準のままbankのみカテゴリ別
+toothbrush + wood,固定profile(toothbrush) + bank切替,74.78%,57.89%,0.002684x,0.003579x,0.063131x,0.063131x,0.042517x,0.002684x,toothbrush用profileを全カテゴリに固定
+toothbrush + wood,固定profile(wood) + bank切替,48.90%,8.33%,0.000240x,0.000411x,0.018413x,0.018413x,0.013021x,0.000240x,wood用profileを全カテゴリに固定
+toothbrush + wood,★ profile + bank両切替,83.77%,83.33%,0.000705x,0.001342x,0.018413x,0.018413x,0.027769x,0.000511x,カテゴリごとにprofileとbankを両方切替
+leather + wood,① 標準profile + 混合bank,92.11%,84.21%,1.000000x,1.000000x,1.000000x,-,-,-,対象カテゴリだけの正常bankを結合した標準構成
+leather + wood,② 標準profile + bank切替,92.11%,84.21%,0.500000x,0.500000x,0.500000x,0.500000x,1.000000x,0.500000x,CNN/層/gridは標準のままbankのみカテゴリ別
+leather + wood,固定profile(leather) + bank切替,89.47%,78.95%,0.000434x,0.000434x,0.005208x,0.005208x,0.083333x,0.000434x,leather用profileを全カテゴリに固定
+leather + wood,固定profile(wood) + bank切替,52.55%,15.62%,0.000746x,0.001085x,0.057292x,0.057292x,0.013021x,0.000746x,wood用profileを全カテゴリに固定
+leather + wood,★ profile + bank両切替,92.11%,84.21%,0.000251x,0.000434x,0.005208x,0.005208x,0.048177x,0.000251x,カテゴリごとにprofileとbankを両方切替
+tile + wood,① 標準profile + 混合bank,87.56%,84.21%,1.000000x,1.000000x,1.000000x,-,-,-,対象カテゴリだけの正常bankを結合した標準構成
+tile + wood,② 標準profile + bank切替,87.56%,84.21%,0.500000x,0.500000x,0.500000x,0.500000x,1.000000x,0.500000x,CNN/層/gridは標準のままbankのみカテゴリ別
+tile + wood,固定profile(tile) + bank切替,89.47%,78.95%,0.000651x,0.000868x,0.007812x,0.007812x,0.083333x,0.000651x,tile用profileを全カテゴリに固定
+tile + wood,固定profile(wood) + bank切替,73.52%,57.58%,0.001017x,0.001628x,0.078125x,0.078125x,0.013021x,0.001017x,wood用profileを全カテゴリに固定
+tile + wood,★ profile + bank両切替,92.11%,84.21%,0.000468x,0.000868x,0.007812x,0.007812x,0.048177x,0.000376x,カテゴリごとにprofileとbankを両方切替
+pill + toothbrush,① 標準profile + 混合bank,58.65%,42.31%,1.000000x,1.000000x,1.000000x,-,-,-,対象カテゴリだけの正常bankを結合した標準構成
+pill + toothbrush,② 標準profile + bank切替,58.65%,42.31%,0.500000x,0.505051x,0.500000x,0.500000x,1.000000x,0.500000x,CNN/層/gridは標準のままbankのみカテゴリ別
+pill + toothbrush,固定profile(pill) + bank切替,39.74%,33.33%,0.001206x,0.001754x,0.057870x,0.057870x,0.020833x,0.001206x,pill用profileを全カテゴリに固定
+pill + toothbrush,固定profile(toothbrush) + bank切替,66.99%,42.31%,0.008947x,0.016105x,0.210438x,0.210438x,0.042517x,0.008947x,toothbrush用profileを全カテゴリに固定
+pill + toothbrush,★ profile + bank両切替,64.74%,46.15%,0.001548x,0.001754x,0.057870x,0.057870x,0.031675x,0.001833x,カテゴリごとにprofileとbankを両方切替
+hazelnut + tile,① 標準profile + 混合bank,95.45%,90.91%,1.000000x,1.000000x,1.000000x,-,-,-,対象カテゴリだけの正常bankを結合した標準構成
+hazelnut + tile,② 標準profile + bank切替,95.45%,90.91%,0.500000x,0.500000x,0.500000x,0.500000x,1.000000x,0.500000x,CNN/層/gridは標準のままbankのみカテゴリ別
+hazelnut + tile,固定profile(hazelnut) + bank切替,98.48%,96.97%,0.049479x,0.093750x,0.197917x,0.197917x,0.250000x,0.049479x,hazelnut用profileを全カテゴリに固定
+hazelnut + tile,固定profile(tile) + bank切替,86.25%,72.50%,0.021267x,0.041667x,0.255208x,0.255208x,0.083333x,0.021267x,tile用profileを全カテゴリに固定
+hazelnut + tile,★ profile + bank両切替,100.00%,100.00%,0.003038x,0.005208x,0.015625x,0.015625x,0.166667x,0.002604x,カテゴリごとにprofileとbankを両方切替
+bottle + toothbrush + wood,① 標準profile + 混合bank,86.40%,75.00%,1.000000x,1.000000x,1.000000x,-,-,-,対象カテゴリだけの正常bankを結合した標準構成
+bottle + toothbrush + wood,② 標準profile + bank切替,86.40%,75.00%,0.333333x,0.335570x,0.333333x,0.333333x,1.000000x,0.333333x,CNN/層/gridは標準のままbankのみカテゴリ別
+bottle + toothbrush + wood,固定profile(bottle) + bank切替,83.19%,57.89%,0.001387x,0.002378x,0.032625x,0.032625x,0.042517x,0.001387x,bottle用profileを全カテゴリに固定
+bottle + toothbrush + wood,固定profile(toothbrush) + bank切替,83.19%,57.89%,0.001387x,0.002378x,0.032625x,0.032625x,0.042517x,0.001387x,toothbrush用profileを全カテゴリに固定
+bottle + toothbrush + wood,固定profile(wood) + bank切替,64.27%,8.33%,0.000137x,0.000273x,0.010487x,0.010487x,0.013021x,0.000137x,wood用profileを全カテゴリに固定
+bottle + toothbrush + wood,★ profile + bank両切替,89.18%,83.33%,0.000511x,0.000892x,0.012817x,0.012817x,0.032685x,0.000419x,カテゴリごとにprofileとbankを両方切替
+leather + tile + wood,① 標準profile + 混合bank,91.71%,84.21%,1.000000x,1.000000x,1.000000x,-,-,-,対象カテゴリだけの正常bankを結合した標準構成
+leather + tile + wood,② 標準profile + bank切替,91.71%,84.21%,0.333333x,0.333333x,0.333333x,0.333333x,1.000000x,0.333333x,CNN/層/gridは標準のままbankのみカテゴリ別
+leather + tile + wood,固定profile(leather) + bank切替,92.98%,78.95%,0.000386x,0.000579x,0.004630x,0.004630x,0.083333x,0.000386x,leather用profileを全カテゴリに固定
+leather + tile + wood,固定profile(tile) + bank切替,92.98%,78.95%,0.000386x,0.000579x,0.004630x,0.004630x,0.083333x,0.000386x,tile用profileを全カテゴリに固定
+leather + tile + wood,固定profile(wood) + bank切替,54.22%,15.62%,0.000693x,0.001085x,0.053241x,0.053241x,0.013021x,0.000693x,wood用profileを全カテゴリに固定
+leather + tile + wood,★ profile + bank両切替,94.74%,84.21%,0.000304x,0.000579x,0.004630x,0.004630x,0.059896x,0.000277x,カテゴリごとにprofileとbankを両方切替
+bottle + leather + wood,① 標準profile + 混合bank,94.74%,84.21%,1.000000x,1.000000x,1.000000x,-,-,-,対象カテゴリだけの正常bankを結合した標準構成
+bottle + leather + wood,② 標準profile + bank切替,94.74%,84.21%,0.333333x,0.333333x,0.333333x,0.333333x,1.000000x,0.333333x,CNN/層/gridは標準のままbankのみカテゴリ別
+bottle + leather + wood,固定profile(bottle) + bank切替,71.38%,56.25%,0.001083x,0.002362x,0.025463x,0.025463x,0.042517x,0.001083x,bottle用profileを全カテゴリに固定
+bottle + leather + wood,固定profile(leather) + bank切替,92.98%,78.95%,0.001350x,0.003472x,0.016204x,0.016204x,0.083333x,0.001350x,leather用profileを全カテゴリに固定
+bottle + leather + wood,固定profile(wood) + bank切替,66.70%,15.62%,0.000362x,0.000723x,0.027778x,0.027778x,0.013021x,0.000362x,wood用profileを全カテゴリに固定
+bottle + leather + wood,★ profile + bank両切替,94.74%,84.21%,0.000308x,0.000591x,0.006944x,0.006944x,0.046290x,0.000321x,カテゴリごとにprofileとbankを両方切替
+bottle + tile + wood,① 標準profile + 混合bank,91.71%,84.21%,1.000000x,1.000000x,1.000000x,-,-,-,対象カテゴリだけの正常bankを結合した標準構成
+bottle + tile + wood,② 標準profile + bank切替,91.71%,84.21%,0.333333x,0.333333x,0.333333x,0.333333x,1.000000x,0.333333x,CNN/層/gridは標準のままbankのみカテゴリ別
+bottle + tile + wood,固定profile(bottle) + bank切替,80.91%,57.89%,0.003346x,0.007086x,0.078704x,0.078704x,0.042517x,0.003346x,bottle用profileを全カテゴリに固定
+bottle + tile + wood,固定profile(tile) + bank切替,92.98%,78.95%,0.001447x,0.003472x,0.017361x,0.017361x,0.083333x,0.001447x,tile用profileを全カテゴリに固定
+bottle + tile + wood,固定profile(wood) + bank切替,80.68%,57.58%,0.000482x,0.001085x,0.037037x,0.037037x,0.013021x,0.000482x,wood用profileを全カテゴリに固定
+bottle + tile + wood,★ profile + bank両切替,94.74%,84.21%,0.000405x,0.000591x,0.008102x,0.008102x,0.046290x,0.000375x,カテゴリごとにprofileとbankを両方切替
+leather + toothbrush + wood,① 標準profile + 混合bank,86.40%,75.00%,1.000000x,1.000000x,1.000000x,-,-,-,対象カテゴリだけの正常bankを結合した標準構成
+leather + toothbrush + wood,② 標準profile + bank切替,86.40%,75.00%,0.333333x,0.335570x,0.333333x,0.333333x,1.000000x,0.333333x,CNN/層/gridは標準のままbankのみカテゴリ別
+leather + toothbrush + wood,固定profile(leather) + bank切替,92.98%,78.95%,0.001748x,0.004661x,0.020973x,0.020973x,0.083333x,0.001748x,leather用profileを全カテゴリに固定
+leather + toothbrush + wood,固定profile(toothbrush) + bank切替,68.60%,56.25%,0.001288x,0.002378x,0.030295x,0.030295x,0.042517x,0.001288x,toothbrush用profileを全カテゴリに固定
+leather + toothbrush + wood,固定profile(wood) + bank切替,37.81%,8.33%,0.000349x,0.000728x,0.026799x,0.026799x,0.013021x,0.000349x,wood用profileを全カテゴリに固定
+leather + toothbrush + wood,★ profile + bank両切替,89.18%,83.33%,0.000410x,0.000892x,0.009321x,0.009321x,0.046290x,0.000431x,カテゴリごとにprofileとbankを両方切替

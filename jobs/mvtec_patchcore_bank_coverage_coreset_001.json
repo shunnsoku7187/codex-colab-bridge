@@ -1,0 +1,12 @@
+{
+  "id": "mvtec_patchcore_bank_coverage_coreset_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt timm pyarrow && python -m scripts.mvtec_patchcore_bank_coverage_coreset --candidates results/mvtec_patchcore_subset_mixed_bank_verify_001_summary.json --output results/mvtec_patchcore_bank_coverage_coreset_001_summary.json --markdown docs/mvtec_patchcore_bank_coverage_coreset_001.md --figure results/mvtec_patchcore_bank_coverage_coreset_001.png --materialized-root /home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2 --top-pairs 3 --top-triples 3 --bank-sizes 25,50,100,125,250,500,750,1000,1500,2000,3000 --coverage-slack 0.05 --candidate-pool 8000 --eval-pool 8000 --distance-batch-size 8192 --seed 123 --batch-size 32 --require-cuda",
+  "max_runtime_sec": 28800,
+  "result_file": "results/mvtec_patchcore_bank_coverage_coreset_001_summary.json",
+  "note": "Coreset/k-center coverage audit for PatchCore memory-bank reduction. Estimates how many representative normal patch samples are needed to cover A-only, B-only, and A+B/ABC normal distributions, and whether merged-bank size scales additively."
+}
