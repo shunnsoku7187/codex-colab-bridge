@@ -1534,3 +1534,294 @@ carpet mobv3l_l23_g7_b6000_topk0p005 test:  75%|███████▌  | 3/4 
 
 screw wrn_l3_g14_b12000_topk0p02 train:   0%|          | 0/10 [00:00<?, ?it/s]
 s$ git add jobs logs results artifacts docs
+$ git diff --cached --quiet
+$ git commit -m 'caviar9: heartbeat mvtec_patchcore_fixed_coreset_profile_switch_001'
+[main 2041938] caviar9: heartbeat mvtec_patchcore_fixed_coreset_profile_switch_001
+ 3 files changed, 502 insertions(+)
+$ git push origin main
+To github.com:shunnsoku7187/codex-colab-bridge.git
+   0326c86..2041938  main -> main
+crew wrn_l3_g14_b12000_topk0p02 train:  10%|█         | 1/10 [00:01<00:09,  1.02s/it]
+screw wrn_l3_g14_b12000_topk0p02 train:  30%|███       | 3/10 [00:01<00:04,  1.69it/s]
+screw wrn_l3_g14_b12000_topk0p02 train:  50%|█████     | 5/10 [00:02<00:02,  1.99it/s]
+screw wrn_l3_g14_b12000_topk0p02 train:  70%|███████   | 7/10 [00:03<00:01,  2.13it/s]
+screw wrn_l3_g14_b12000_topk0p02 train:  90%|█████████ | 9/10 [00:04<00:00,  2.21it/s]
+                                                                                      
+
+screw wrn_l3_g14_b12000_topk0p02 test:   0%|          | 0/5 [00:00<?, ?it/s]
+screw wrn_l3_g14_b12000_topk0p02 test:  20%|██        | 1/5 [00:01<00:04,  1.01s/it]
+screw wrn_l3_g14_b12000_topk0p02 test:  60%|██████    | 3/5 [00:01<00:01,  1.74it/s]
+screw wrn_l3_g14_b12000_topk0p02 test: 100%|██████████| 5/5 [00:02<00:00,  2.04it/s]
+                                                                                    
+
+tile wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/8 [00:00<?, ?it/s]
+tile wrn_l3_g14_b12000_topk0p005 train:  12%|█▎        | 1/8 [00:00<00:06,  1.03it/s]
+tile wrn_l3_g14_b12000_topk0p005 train:  38%|███▊      | 3/8 [00:01<00:02,  1.84it/s]
+tile wrn_l3_g14_b12000_topk0p005 train:  62%|██████▎   | 5/8 [00:02<00:01,  2.13it/s]
+tile wrn_l3_g14_b12000_topk0p005 train:  88%|████████▊ | 7/8 [00:03<00:00,  2.30it/s]
+                                                                                     
+
+tile wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/4 [00:00<?, ?it/s]
+tile wrn_l3_g14_b12000_topk0p005 test:  25%|██▌       | 1/4 [00:00<00:02,  1.04it/s]
+tile wrn_l3_g14_b12000_topk0p005 test:  75%|███████▌  | 3/4 [00:01<00:00,  1.86it/s]
+                                                                                    
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+
+carpet mobv3l_l23_g10_b6000_topk0p005 train:   0%|          | 0/9 [00:00<?, ?it/s]
+carpet mobv3l_l23_g10_b6000_topk0p005 train:  11%|█         | 1/9 [00:01<00:09,  1.15s/it]
+carpet mobv3l_l23_g10_b6000_topk0p005 train:  33%|███▎      | 3/9 [00:02<00:03,  1.50it/s]
+carpet mobv3l_l23_g10_b6000_topk0p005 train:  56%|█████▌    | 5/9 [00:03<00:02,  1.72it/s]
+carpet mobv3l_l23_g10_b6000_topk0p005 train:  78%|███████▊  | 7/9 [00:04<00:01,  1.82it/s]
+carpet mobv3l_l23_g10_b6000_topk0p005 train: 100%|██████████| 9/9 [00:04<00:00,  2.13it/s]
+                                                                                          
+
+carpet mobv3l_l23_g10_b6000_topk0p005 test:   0%|          | 0/4 [00:00<?, ?it/s]
+carpet mobv3l_l23_g10_b6000_topk0p005 test:  25%|██▌       | 1/4 [00:01<00:03,  1.15s/it]
+carpet mobv3l_l23_g10_b6000_topk0p005 test:  75%|███████▌  | 3/4 [00:02<00:00,  1.52it/s]
+                                                                                         
+
+toothbrush wrn_l3_g14_b4000_topk0p05 train:   0%|          | 0/2 [00:00<?, ?it/s]
+toothbrush wrn_l3_g14_b4000_topk0p05 train:  50%|█████     | 1/2 [00:01<00:01,  1.28s/it]
+                                                                                         
+
+toothbrush wrn_l3_g14_b4000_topk0p05 test:   0%|          | 0/2 [00:00<?, ?it/s]
+toothbrush wrn_l3_g14_b4000_topk0p05 test:  50%|█████     | 1/2 [00:01<00:01,  1.23s/it]
+                                                                                        
+
+carpet res18_l23_g5_b2000_topk0p005 train:   0%|          | 0/9 [00:00<?, ?it/s]
+carpet res18_l23_g5_b2000_topk0p005 train:  11%|█         | 1/9 [00:01<00:09,  1.15s/it]
+carpet res18_l23_g5_b2000_topk0p005 train:  33%|███▎      | 3/9 [00:02<00:04,  1.49it/s]
+carpet res18_l23_g5_b2000_topk0p005 train:  56%|█████▌    | 5/9 [00:03<00:02,  1.71it/s]
+carpet res18_l23_g5_b2000_topk0p005 train:  78%|███████▊  | 7/9 [00:04<00:01,  1.82it/s]
+carpet res18_l23_g5_b2000_topk0p005 train: 100%|██████████| 9/9 [00:04<00:00,  2.12it/s]
+                                                                                        
+
+carpet res18_l23_g5_b2000_topk0p005 test:   0%|          | 0/4 [00:00<?, ?it/s]
+carpet res18_l23_g5_b2000_topk0p005 test:  25%|██▌       | 1/4 [00:01<00:03,  1.15s/it]
+carpet res18_l23_g5_b2000_topk0p005 test:  75%|███████▌  | 3/4 [00:02<00:00,  1.52it/s]
+                                                                                       
+
+wood wrn_l3_g14_b2000_topk0p02 train:   0%|          | 0/8 [00:00<?, ?it/s]
+wood wrn_l3_g14_b2000_topk0p02 train:  12%|█▎        | 1/8 [00:01<00:09,  1.29s/it]
+wood wrn_l3_g14_b2000_topk0p02 train:  38%|███▊      | 3/8 [00:02<00:03,  1.35it/s]
+wood wrn_l3_g14_b2000_topk0p02 train:  62%|██████▎   | 5/8 [00:03<00:01,  1.55it/s]
+wood wrn_l3_g14_b2000_topk0p02 train:  88%|████████▊ | 7/8 [00:04<00:00,  1.66it/s]
+                                                                                   
+
+wood wrn_l3_g14_b2000_topk0p02 test:   0%|          | 0/3 [00:00<?, ?it/s]
+wood wrn_l3_g14_b2000_topk0p02 test:  33%|███▎      | 1/3 [00:01<00:02,  1.27s/it]
+wood wrn_l3_g14_b2000_topk0p02 test: 100%|██████████| 3/3 [00:01<00:00,  1.98it/s]
+                                                                                  
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+
+carpet mobv3s_l23_g14_b6000_topk0p05 train:   0%|          | 0/9 [00:00<?, ?it/s]
+carpet mobv3s_l23_g14_b6000_topk0p05 train:  11%|█         | 1/9 [00:01<00:09,  1.15s/it]
+carpet mobv3s_l23_g14_b6000_topk0p05 train:  33%|███▎      | 3/9 [00:02<00:04,  1.50it/s]
+carpet mobv3s_l23_g14_b6000_topk0p05 train:  56%|█████▌    | 5/9 [00:03<00:02,  1.71it/s]
+carpet mobv3s_l23_g14_b6000_topk0p05 train:  78%|███████▊  | 7/9 [00:04<00:01,  1.83it/s]
+carpet mobv3s_l23_g14_b6000_topk0p05 train: 100%|██████████| 9/9 [00:04<00:00,  2.10it/s]
+                                                                                         
+
+carpet mobv3s_l23_g14_b6000_topk0p05 test:   0%|          | 0/4 [00:00<?, ?it/s]
+carpet mobv3s_l23_g14_b6000_topk0p05 test:  25%|██▌       | 1/4 [00:01<00:03,  1.14s/it]
+carpet mobv3s_l23_g14_b6000_topk0p05 test:  75%|███████▌  | 3/4 [00:02<00:00,  1.52it/s]
+                                                                                        
+
+zipper wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/8 [00:00<?, ?it/s]
+zipper wrn_l3_g14_b12000_topk0p005 train:  12%|█▎        | 1/8 [00:00<00:06,  1.02it/s]
+zipper wrn_l3_g14_b12000_topk0p005 train:  38%|███▊      | 3/8 [00:01<00:02,  1.82it/s]
+zipper wrn_l3_g14_b12000_topk0p005 train:  62%|██████▎   | 5/8 [00:02<00:01,  2.11it/s]
+zipper wrn_l3_g14_b12000_topk0p005 train:  88%|████████▊ | 7/8 [00:03<00:00,  2.27it/s]
+                                                                                       
+
+zipper wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/5 [00:00<?, ?it/s]
+zipper wrn_l3_g14_b12000_topk0p005 test:  20%|██        | 1/5 [00:00<00:03,  1.03it/s]
+zipper wrn_l3_g14_b12000_topk0p005 test:  60%|██████    | 3/5 [00:01<00:01,  1.84it/s]
+zipper wrn_l3_g14_b12000_topk0p005 test: 100%|██████████| 5/5 [00:02<00:00,  2.47it/s]
+                                                                                      
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+
+carpet mobv3s_l23_g7_b12000_topk0p005 train:   0%|          | 0/9 [00:00<?, ?it/s]
+carpet mobv3s_l23_g7_b12000_topk0p005 train:  11%|█         | 1/9 [00:01<00:09,  1.14s/it]
+carpet mobv3s_l23_g7_b12000_topk0p005 train:  33%|███▎      | 3/9 [00:02<00:03,  1.50it/s]
+carpet mobv3s_l23_g7_b12000_topk0p005 train:  56%|█████▌    | 5/9 [00:03<00:02,  1.73it/s]
+carpet mobv3s_l23_g7_b12000_topk0p005 train:  78%|███████▊  | 7/9 [00:04<00:01,  1.83it/s]
+carpet mobv3s_l23_g7_b12000_topk0p005 train: 100%|██████████| 9/9 [00:04<00:00,  2.12it/s]
+                                                                                          
+
+carpet mobv3s_l23_g7_b12000_topk0p005 test:   0%|          | 0/4 [00:00<?, ?it/s]
+carpet mobv3s_l23_g7_b12000_topk0p005 test:  25%|██▌       | 1/4 [00:01<00:03,  1.15s/it]
+carpet mobv3s_l23_g7_b12000_topk0p005 test:  75%|███████▌  | 3/4 [00:02<00:00,  1.52it/s]
+                                                                                         
+
+hazelnut res34_l23_g7_b6000_topk0p05 train:   0%|          | 0/13 [00:00<?, ?it/s]
+hazelnut res34_l23_g7_b6000_topk0p05 train:   8%|▊         | 1/13 [00:01<00:16,  1.34s/it]
+hazelnut res34_l23_g7_b6000_topk0p05 train:  23%|██▎       | 3/13 [00:02<00:07,  1.27it/s]
+hazelnut res34_l23_g7_b6000_topk0p05 train:  38%|███▊      | 5/13 [00:03<00:05,  1.45it/s]
+hazelnut res34_l23_g7_b6000_topk0p05 train:  54%|█████▍    | 7/13 [00:04<00:03,  1.55it/s]
+hazelnut res34_l23_g7_b6000_topk0p05 train:  69%|██████▉   | 9/13 [00:06<00:02,  1.60it/s]
+hazelnut res34_l23_g7_b6000_topk0p05 train:  85%|████████▍ | 11/13 [00:07<00:01,  1.63it/s]
+hazelnut res34_l23_g7_b6000_topk0p05 train: 100%|██████████| 13/13 [00:07<00:00,  2.24it/s]
+                                                                                           
+
+hazelnut res34_l23_g7_b6000_topk0p05 test:   0%|          | 0/4 [00:00<?, ?it/s]
+hazelnut res34_l23_g7_b6000_topk0p05 test:  25%|██▌       | 1/4 [00:01<00:03,  1.32s/it]
+hazelnut res34_l23_g7_b6000_topk0p05 test:  75%|███████▌  | 3/4 [00:02<00:00,  1.30it/s]
+                                                                                        
+
+grid res34_l23_g14_b12000_topk0p005 train:   0%|          | 0/9 [00:00<?, ?it/s]
+grid res34_l23_g14_b12000_topk0p005 train:  11%|█         | 1/9 [00:00<00:07,  1.01it/s]
+grid res34_l23_g14_b12000_topk0p005 train:  33%|███▎      | 3/9 [00:01<00:03,  1.76it/s]
+grid res34_l23_g14_b12000_topk0p005 train:  56%|█████▌    | 5/9 [00:02<00:01,  2.04it/s]
+grid res34_l23_g14_b12000_topk0p005 train:  78%|███████▊  | 7/9 [00:03<00:00,  2.19it/s]
+grid res34_l23_g14_b12000_topk0p005 train: 100%|██████████| 9/9 [00:03<00:00,  3.12it/s]
+                                                                                        
+
+grid res34_l23_g14_b12000_topk0p005 test:   0%|          | 0/3 [00:00<?, ?it/s]
+grid res34_l23_g14_b12000_topk0p005 test:  33%|███▎      | 1/3 [00:00<00:01,  1.02it/s]
+grid res34_l23_g14_b12000_topk0p005 test: 100%|██████████| 3/3 [00:01<00:00,  2.63it/s]
+                                                                                       
+
+leather res34_l23_g7_b2000_topk0p05 train:   0%|          | 0/8 [00:00<?, ?it/s]
+leather res34_l23_g7_b2000_topk0p05 train:  12%|█▎        | 1/8 [00:01<00:09,  1.29s/it]
+leather res34_l23_g7_b2000_topk0p05 train:  38%|███▊      | 3/8 [00:02<00:03,  1.33it/s]
+leather res34_l23_g7_b2000_topk0p05 train:  62%|██████▎   | 5/8 [00:03<00:01,  1.52it/s]
+leather res34_l23_g7_b2000_topk0p05 train:  88%|████████▊ | 7/8 [00:04<00:00,  1.62it/s]
+                                                                                        
+
+leather res34_l23_g7_b2000_topk0p05 test:   0%|          | 0/4 [00:00<?, ?it/s]
+leather res34_l23_g7_b2000_topk0p05 test:  25%|██▌       | 1/4 [00:01<00:03,  1.26s/it]
+leather res34_l23_g7_b2000_topk0p05 test:  75%|███████▌  | 3/4 [00:02<00:00,  1.35it/s]
+                                                                                       
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+
+grid effb0_l23_g14_b9000_topk0p005 train:   0%|          | 0/9 [00:00<?, ?it/s]
+grid effb0_l23_g14_b9000_topk0p005 train:  11%|█         | 1/9 [00:00<00:07,  1.08it/s]
+grid effb0_l23_g14_b9000_topk0p005 train:  33%|███▎      | 3/9 [00:01<00:03,  1.90it/s]
+grid effb0_l23_g14_b9000_topk0p005 train:  56%|█████▌    | 5/9 [00:02<00:01,  2.20it/s]
+grid effb0_l23_g14_b9000_topk0p005 train:  78%|███████▊  | 7/9 [00:03<00:00,  2.36it/s]
+grid effb0_l23_g14_b9000_topk0p005 train: 100%|██████████| 9/9 [00:03<00:00,  3.38it/s]
+                                                                                       
+
+grid effb0_l23_g14_b9000_topk0p005 test:   0%|          | 0/3 [00:00<?, ?it/s]
+grid effb0_l23_g14_b9000_topk0p005 test:  33%|███▎      | 1/3 [00:00<00:01,  1.09it/s]
+grid effb0_l23_g14_b9000_topk0p005 test: 100%|██████████| 3/3 [00:01<00:00,  2.86it/s]
+                                                                                      
+
+metal_nut res34_l23_g7_b4000_topk0p05 train:   0%|          | 0/7 [00:00<?, ?it/s]
+metal_nut res34_l23_g7_b4000_topk0p05 train:  14%|█▍        | 1/7 [00:00<00:04,  1.43it/s]
+metal_nut res34_l23_g7_b4000_topk0p05 train:  43%|████▎     | 3/7 [00:01<00:01,  2.57it/s]
+metal_nut res34_l23_g7_b4000_topk0p05 train:  71%|███████▏  | 5/7 [00:01<00:00,  3.03it/s]
+metal_nut res34_l23_g7_b4000_topk0p05 train: 100%|██████████| 7/7 [00:02<00:00,  3.45it/s]
+                                                                                          
+
+metal_nut res34_l23_g7_b4000_topk0p05 test:   0%|          | 0/4 [00:00<?, ?it/s]
+metal_nut res34_l23_g7_b4000_topk0p05 test:  25%|██▌       | 1/4 [00:00<00:02,  1.46it/s]
+metal_nut res34_l23_g7_b4000_topk0p05 test:  75%|███████▌  | 3/4 [00:01<00:00,  2.61it/s]
+                                                                                         
+
+pill res34_l23_g7_b6000_topk0p05 train:   0%|          | 0/9 [00:00<?, ?it/s]
+pill res34_l23_g7_b6000_topk0p05 train:  11%|█         | 1/9 [00:00<00:07,  1.14it/s]
+pill res34_l23_g7_b6000_topk0p05 train:  33%|███▎      | 3/9 [00:01<00:02,  2.00it/s]
+pill res34_l23_g7_b6000_topk0p05 train:  56%|█████▌    | 5/9 [00:02<00:01,  2.33it/s]
+pill res34_l23_g7_b6000_topk0p05 train:  78%|███████▊  | 7/9 [00:03<00:00,  2.51it/s]
+pill res34_l23_g7_b6000_topk0p05 train: 100%|██████████| 9/9 [00:03<00:00,  3.43it/s]
+                                                                                     
+
+pill res34_l23_g7_b6000_topk0p05 test:   0%|          | 0/6 [00:00<?, ?it/s]
+pill res34_l23_g7_b6000_topk0p05 test:  17%|█▋        | 1/6 [00:00<00:04,  1.16it/s]
+pill res34_l23_g7_b6000_topk0p05 test:  50%|█████     | 3/6 [00:01<00:01,  2.04it/s]
+pill res34_l23_g7_b6000_topk0p05 test:  83%|████████▎ | 5/6 [00:02<00:00,  2.37it/s]
+                                                                                    
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+
+grid mobv3l_l23_g7_b1000_topk0p005 train:   0%|          | 0/9 [00:00<?, ?it/s]
+grid mobv3l_l23_g7_b1000_topk0p005 train:  11%|█         | 1/9 [00:00<00:07,  1.08it/s]
+grid mobv3l_l23_g7_b1000_topk0p005 train:  33%|███▎      | 3/9 [00:01<00:03,  1.90it/s]
+grid mobv3l_l23_g7_b1000_topk0p005 train:  56%|█████▌    | 5/9 [00:02<00:01,  2.20it/s]
+grid mobv3l_l23_g7_b1000_topk0p005 train:  78%|███████▊  | 7/9 [00:03<00:00,  2.36it/s]
+grid mobv3l_l23_g7_b1000_topk0p005 train: 100%|██████████| 9/9 [00:03<00:00,  3.37it/s]
+                                                                                       
+
+grid mobv3l_l23_g7_b1000_topk0p005 test:   0%|          | 0/3 [00:00<?, ?it/s]
+grid mobv3l_l23_g7_b1000_topk0p005 test:  33%|███▎      | 1/3 [00:00<00:01,  1.10it/s]
+grid mobv3l_l23_g7_b1000_topk0p005 test: 100%|██████████| 3/3 [00:01<00:00,  2.86it/s]
+                                                                                      
+
+screw res34_l23_g7_b12000_topk0p05 train:   0%|          | 0/10 [00:00<?, ?it/s]
+screw res34_l23_g7_b12000_topk0p05 train:  10%|█         | 1/10 [00:00<00:08,  1.01it/s]
+screw res34_l23_g7_b12000_topk0p05 train:  30%|███       | 3/10 [00:01<00:03,  1.76it/s]
+screw res34_l23_g7_b12000_topk0p05 train:  50%|█████     | 5/10 [00:02<00:02,  2.02it/s]
+screw res34_l23_g7_b12000_topk0p05 train:  70%|███████   | 7/10 [00:03<00:01,  2.15it/s]
+screw res34_l23_g7_b12000_topk0p05 train:  90%|█████████ | 9/10 [00:04<00:00,  2.23it/s]
+                                                                                        
+
+screw res34_l23_g7_b12000_topk0p05 test:   0%|          | 0/5 [00:00<?, ?it/s]
+screw res34_l23_g7_b12000_topk0p05 test:  20%|██        | 1/5 [00:00<00:03,  1.02it/s]
+screw res34_l23_g7_b12000_topk0p05 test:  60%|██████    | 3/5 [00:01<00:01,  1.76it/s]
+screw res34_l23_g7_b12000_topk0p05 test: 100%|██████████| 5/5 [00:02<00:00,  2.05it/s]
+                                                                                      
+
+tile res34_l23_g7_b12000_topk0p05 train:   0%|          | 0/8 [00:00<?, ?it/s]
+tile res34_l23_g7_b12000_topk0p05 train:  12%|█▎        | 1/8 [00:00<00:06,  1.06it/s]
+tile res34_l23_g7_b12000_topk0p05 train:  38%|███▊      | 3/8 [00:01<00:02,  1.85it/s]
+tile res34_l23_g7_b12000_topk0p05 train:  62%|██████▎   | 5/8 [00:02<00:01,  2.13it/s]
+tile res34_l23_g7_b12000_topk0p05 train:  88%|████████▊ | 7/8 [00:03<00:00,  2.31it/s]
+                                                                                      
+
+tile res34_l23_g7_b12000_topk0p05 test:   0%|          | 0/4 [00:00<?, ?it/s]
+tile res34_l23_g7_b12000_topk0p05 test:  25%|██▌       | 1/4 [00:00<00:02,  1.07it/s]
+tile res34_l23_g7_b12000_topk0p05 test:  75%|███████▌  | 3/4 [00:01<00:00,  1.87it/s]
+                                                                                     
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+
+grid mobv3l_l23_g10_b4000_topk0p005 train:   0%|          | 0/9 [00:00<?, ?it/s]
+grid mobv3l_l23_g10_b4000_topk0p005 train:  11%|█         | 1/9 [00:00<00:07,  1.08it/s]
+grid mobv3l_l23_g10_b4000_topk0p005 train:  33%|███▎      | 3/9 [00:01<00:03,  1.91it/s]
+grid mobv3l_l23_g10_b4000_topk0p005 train:  56%|█████▌    | 5/9 [00:02<00:01,  2.22it/s]
+grid mobv3l_l23_g10_b4000_topk0p005 train:  78%|███████▊  | 7/9 [00:03<00:00,  2.37it/s]
+grid mobv3l_l23_g10_b4000_topk0p005 train: 100%|██████████| 9/9 [00:03<00:00,  3.39it/s]
+                                                                                        
+
+grid mobv3l_l23_g10_b4000_topk0p005 test:   0%|          | 0/3 [00:00<?, ?it/s]
+grid mobv3l_l23_g10_b4000_topk0p005 test:  33%|███▎      | 1/3 [00:00<00:01,  1.10it/s]
+grid mobv3l_l23_g10_b4000_topk0p005 test: 100%|██████████| 3/3 [00:01<00:00,  2.87it/s]
+                                                                                       
+
+toothbrush res34_l23_g7_b1500_topk0p005 train:   0%|          | 0/2 [00:00<?, ?it/s]
+toothbrush res34_l23_g7_b1500_topk0p005 train:  50%|█████     | 1/2 [00:01<00:01,  1.24s/it]
+                                                                                            
+
+toothbrush res34_l23_g7_b1500_topk0p005 test:   0%|          | 0/2 [00:00<?, ?it/s]
+toothbrush res34_l23_g7_b1500_topk0p005 test:  50%|█████     | 1/2 [00:01<00:01,  1.20s/it]
+                                                                                           
+
+grid res18_l23_g5_b1500_topk0p005 train:   0%|          | 0/9 [00:00<?, ?it/s]
+grid res18_l23_g5_b1500_topk0p005 train:  11%|█         | 1/9 [00:00<00:07,  1.08it/s]
+grid res18_l23_g5_b1500_topk0p005 train:  33%|███▎      | 3/9 [00:01<00:03,  1.91it/s]
+grid res18_l23_g5_b1500_topk0p005 train:  56%|█████▌    | 5/9 [00:02<00:01,  2.21it/s]
+grid res18_l23_g5_b1500_topk0p005 train:  78%|███████▊  | 7/9 [00:03<00:00,  2.36it/s]
+grid res18_l23_g5_b1500_topk0p005 train: 100%|██████████| 9/9 [00:03<00:00,  3.38it/s]
+                                                                                      
+
+grid res18_l23_g5_b1500_topk0p005 test:   0%|          | 0/3 [00:00<?, ?it/s]
+grid res18_l23_g5_b1500_topk0p005 test:  33%|███▎      | 1/3 [00:00<00:01,  1.10it/s]
+grid res18_l23_g5_b1500_topk0p005 test: 100%|██████████| 3/3 [00:01<00:00,  2.86it/s]
+                                                                                     
+
+transistor res34_l23_g7_b12000_topk0p05 train:   0%|          | 0/7 [00:00<?, ?it/s]
+transistor res34_l23_g7_b12000_topk0p05 train:  14%|█▍        | 1/7 [00:01<00:07,  1.33s/it]
+transistor res34_l23_g7_b12000_topk0p05 train:  43%|████▎     | 3/7 [00:02<00:03,  1.28it/s]
+transistor res34_l23_g7_b12000_topk0p05 train:  71%|███████▏  | 5/7 [00:03<00:01,  1.46it/s]
+transistor res34_l23_g7_b12000_topk0p05 train: 100%|██████████| 7/7 [00:04<00:00,  1.82it/s]
+                                                                                            
+
+transistor res34_l23_g7_b12000_topk0p05 test:   0%|          | 0/4 [00:00<?, ?it/s]
+transistor res34_l23_g7_b12000_topk0p05 test:  25%|██▌       | 1/4 [00:01<00:03,  1.32s/it]
+transistor res34_l23_g7_b12000_topk0p05 test:  75%|███████▌  | 3/4 [00:02<00:00,  1.32it/s]
+                                                                                           
+
+wood res34_l23_g7_b125_topk0p05 train:   0%|          | 0/8 [00:00<?, ?it/s]
+wood res34_l23_g7_b125_topk0p05 train:  12%|█▎        | 1/8 [00:01<00:08,  1.27s/it]
+wood res34_l23_g7_b125_topk0p05 train:  38%|███▊      | 3/8 [00:02<00:03,  1.35it/s]
+$ git add jobs logs results artifacts docs
