@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_min_bank_additivity_001",
-  "status": "running",
+  "status": "done",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,6 +9,11 @@
   "max_runtime_sec": 28800,
   "result_file": "results/mvtec_patchcore_min_bank_additivity_001.json",
   "note": "Finds the smallest deterministic k-center bank that preserves full-bank good-pass at the false-pass target, then compares N(A+B/ABC) against N(A)+N(B)+... under the same profile.",
-  "updated_at": "2026-08-27T21:18:25.499921+00:00",
-  "started_at": "2026-08-27T21:18:25.499899+00:00"
+  "updated_at": "2026-08-27T22:39:15.622100+00:00",
+  "started_at": "2026-08-27T21:18:25.499899+00:00",
+  "returncode": 0,
+  "duration_sec": 4843.803,
+  "stdout": "logs/mvtec_patchcore_min_bank_additivity_001.stdout.log",
+  "stderr": "logs/mvtec_patchcore_min_bank_additivity_001.stderr.log",
+  "finished_at": "2026-08-27T22:39:15.587550+00:00"
 }

@@ -1241,3 +1241,10 @@ screw mobv3l_l23_g14_b9000_topk0p05 test:   0%|          | 0/5 [00:00<?, ?it/s]
 screw mobv3l_l23_g14_b9000_topk0p05 test:  20%|██        | 1/5 [00:00<00:03,  1.02it/s]
 screw mobv3l_l23_g14_b9000_topk0p05 test:  60%|██████    | 3/5 [00:01<00:01,  1.76it/s]
 screw mobv3l_l23_g14_b9000_topk0p05 test: 100%|██████████| 5/5 [00:02<00:00,  2.06it/s]
+                                                                                       
+{
+  "wrote": "results/mvtec_patchcore_min_bank_additivity_001_summary.json",
+  "singles": 30,
+  "merged": 140,
+  "device": "cuda"
+}
