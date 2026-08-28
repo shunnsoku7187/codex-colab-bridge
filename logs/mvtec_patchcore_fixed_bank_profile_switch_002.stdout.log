@@ -440,3 +440,9 @@ zipper wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/5 [00:00<?, ?it/s]
 zipper wrn_l3_g14_b12000_topk0p005 test:  20%|██        | 1/5 [00:00<00:03,  1.11it/s]
 zipper wrn_l3_g14_b12000_topk0p005 test:  60%|██████    | 3/5 [00:01<00:01,  1.99it/s]
 zipper wrn_l3_g14_b12000_topk0p005 test: 100%|██████████| 5/5 [00:02<00:00,  2.72it/s]
+                                                                                      
+{
+  "wrote": "results/mvtec_patchcore_fixed_bank_profile_switch_002_summary.json",
+  "device": "cuda",
+  "subsets": 225
+}
