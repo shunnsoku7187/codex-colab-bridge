@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_fixed_bank_profile_switch_002",
-  "status": "pending",
+  "status": "running",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -8,5 +8,7 @@
   "command": "python -m pip install -r requirements-colab.txt timm pyarrow && python -m scripts.mvtec_patchcore_fixed_bank_profile_switch --source results/mvtec_patchcore_backbone_floor_probe_001_summary.json --output results/mvtec_patchcore_fixed_bank_profile_switch_002_summary.json --markdown docs/mvtec_patchcore_fixed_bank_profile_switch_002.md --figure results/mvtec_patchcore_fixed_bank_profile_switch_002.png --materialized-root /home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2 --backbone wide_resnet50_2 --profile-selection-bank 12000 --bank-per-category 500,1500,3000 --false-pass-target 0.03 --allowed-good-pass-drop 0.02 --pair-limit 105 --triple-limit 120 --coreset-candidate-pool 12000 --curve-points 120 --batch-size 32 --nn-chunk-size 8192 --distance-batch-size 8192 --seed 123 --require-cuda",
   "max_runtime_sec": 43200,
   "result_file": "results/mvtec_patchcore_fixed_bank_profile_switch_002.json",
-  "note": "Retry of fixed-backbone fixed-total-bank profile-switch comparison after fixing the standard_cfg name collision."
+  "note": "Retry of fixed-backbone fixed-total-bank profile-switch comparison after fixing the standard_cfg name collision.",
+  "updated_at": "2026-08-28T05:27:54.072816+00:00",
+  "started_at": "2026-08-28T05:27:54.072793+00:00"
 }
