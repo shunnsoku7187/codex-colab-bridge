@@ -208,14 +208,14 @@ def evaluate_subset(
         for category in subset_list
     ]
     baseline_ops = [row["nn_ops_per_image"] for row in standard_common_rows]
-    systems = [summarize_system("common standard profile + common bank", standard_common_rows, baseline_ops, total_bank)]
+    systems = [summarize_system("standard profile + k-center common bank", standard_common_rows, baseline_ops, total_bank)]
 
     # Common standard profile + category bank switching.
     standard_switch_rows = []
     for category in subset_list:
         bank = build_bank(std_train, [category], bank_per_category, args, device)
         standard_switch_rows.append(evaluate_category(category, standard_cfg, bank, cache, args, device))
-    systems.append(summarize_system("common standard profile + category bank switch", standard_switch_rows, baseline_ops, total_bank))
+    systems.append(summarize_system("standard profile + k-center category-bank switch", standard_switch_rows, baseline_ops, total_bank))
 
     # One category's profile is fixed and reused for every category.
     for owner in subset_list:
@@ -225,7 +225,7 @@ def evaluate_subset(
         for category in subset_list:
             bank = build_bank(fixed_train, [category], bank_per_category, args, device)
             fixed_rows.append(evaluate_category(category, fixed_cfg, bank, cache, args, device))
-        systems.append(summarize_system(f"fixed profile={owner} + category bank switch", fixed_rows, baseline_ops, total_bank))
+        systems.append(summarize_system(f"fixed profile={owner} + k-center category-bank switch", fixed_rows, baseline_ops, total_bank))
 
     # Proposed category profile switching.
     proposed_rows = []
@@ -236,7 +236,7 @@ def evaluate_subset(
         bank = build_bank({category: train_features}, [category], bank_per_category, args, device)
         proposed_rows.append(evaluate_category(category, cfg, bank, cache, args, device))
         stored_feature_values += feature_values(cfg, bank_per_category)
-    proposed = summarize_system("proposed profile switch + category bank switch", proposed_rows, baseline_ops, total_bank)
+    proposed = summarize_system("proposed profile switch + k-center category-bank switch", proposed_rows, baseline_ops, total_bank)
     proposed["total_stored_feature_values"] = int(stored_feature_values)
     systems.append(proposed)
 
@@ -260,17 +260,18 @@ def evaluate_subset(
 
 def write_markdown(payload: dict, path: Path) -> None:
     lines = [
-        "# 固定bank数・固定backboneでのprofile切替比較",
+        "# k-centerを標準適用したprofile切替比較",
         "",
         "## 目的",
         "",
-        "bank数を最適化変数から外し，総bank数を揃えた状態で，特徴層・grid・top-k・閾値のカテゴリ別切替だけに効果が残るかを確認する。",
+        "全方式でk-center coresetによるbank選択を標準適用し，bank数を最適化変数から外した状態で，特徴層・grid・top-k・閾値のカテゴリ別切替だけに効果が残るかを確認する。",
         "",
         "## 条件",
         "",
         f"- backbone: `{payload['config']['backbone']}` 固定",
         f"- 欠陥誤通過率上限: {pct(payload['config']['false_pass_target'])}",
         f"- profile選択時のbank数: {payload['config']['profile_selection_bank']}",
+        "- bank選択: 全方式でk-center coresetを使用する。",
         "- ABでは `{A+B}` と `{A}+{B}` の総bank数を同じにする。",
         "- ABCでは `{A+B+C}` と `{A}+{B}+{C}` の総bank数を同じにする。",
         "",
@@ -300,8 +301,8 @@ def write_markdown(payload: dict, path: Path) -> None:
         "",
         "## 読み取り方",
         "",
-        "- `common standard profile + common bank` は，対象カテゴリ全体のbankを毎回探索する基準方式。",
-        "- `common standard profile + category bank switch` は，総保存bank数は同じだが，検品対象カテゴリのbankだけを探索する方式。",
+        "- `standard profile + k-center common bank` は，対象カテゴリ全体のk-center bankを毎回探索する実装baselineである。",
+        "- `standard profile + k-center category-bank switch` は，総保存bank数は同じだが，検品対象カテゴリのk-center bankだけを探索する方式である。",
         "- `fixed profile=X` は，X向けprofileを他カテゴリにも流用した場合の劣化を確認する対照実験。",
         "- `proposed` が `bank-only` よりさらに軽ければ，bank数ではなくprofile切替自体に効果がある。",
         "- `proposed` が `fixed profile=X` より良品通過率で勝てば，単一軽量profileの使い回しではなくカテゴリ別profileが必要である。",
