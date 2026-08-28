@@ -288,3 +288,195 @@ metal_nut standard_wrn_l23_g14_topk0p01 test:   0%|          | 0/4 [00:00<?, ?it
 metal_nut standard_wrn_l23_g14_topk0p01 test:  25%|██▌       | 1/4 [00:00<00:02,  1.37it/s]
 metal_nut standard_wrn_l23_g14_topk0p01 test:  75%|███████▌  | 3/4 [00:01<00:00,  2.58it/s]
 $ git add jobs logs results artifacts docs
+$ git diff --cached --quiet
+$ git commit -m 'caviar9: heartbeat mvtec_patchcore_kcenter_default_system_compare_001'
+[main 427c358] caviar9: heartbeat mvtec_patchcore_kcenter_default_system_compare_001
+ 4 files changed, 529 insertions(+)
+ create mode 100644 logs/mvtec_patchcore_kcenter_default_system_compare_001.stderr.log
+ create mode 100644 logs/mvtec_patchcore_kcenter_default_system_compare_001.stdout.log
+$ git push origin main
+To github.com:shunnsoku7187/codex-colab-bridge.git
+   a763330..427c358  main -> main
+                                                                                           
+
+metal_nut wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/7 [00:00<?, ?it/s]
+metal_nut wrn_l3_g14_b12000_topk0p005 train:  14%|█▍        | 1/7 [00:00<00:03,  1.53it/s]
+metal_nut wrn_l3_g14_b12000_topk0p005 train:  43%|████▎     | 3/7 [00:01<00:01,  2.84it/s]
+metal_nut wrn_l3_g14_b12000_topk0p005 train:  71%|███████▏  | 5/7 [00:01<00:00,  3.38it/s]
+metal_nut wrn_l3_g14_b12000_topk0p005 train: 100%|██████████| 7/7 [00:02<00:00,  3.92it/s]
+                                                                                          
+
+metal_nut wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/4 [00:00<?, ?it/s]
+metal_nut wrn_l3_g14_b12000_topk0p005 test:  25%|██▌       | 1/4 [00:00<00:01,  1.54it/s]
+metal_nut wrn_l3_g14_b12000_topk0p005 test:  75%|███████▌  | 3/4 [00:01<00:00,  2.91it/s]
+                                                                                         
+
+pill standard_wrn_l23_g14_topk0p01 train:   0%|          | 0/9 [00:00<?, ?it/s]
+pill standard_wrn_l23_g14_topk0p01 train:  11%|█         | 1/9 [00:00<00:07,  1.12it/s]
+pill standard_wrn_l23_g14_topk0p01 train:  33%|███▎      | 3/9 [00:01<00:02,  2.00it/s]
+pill standard_wrn_l23_g14_topk0p01 train:  56%|█████▌    | 5/9 [00:02<00:01,  2.33it/s]
+pill standard_wrn_l23_g14_topk0p01 train:  78%|███████▊  | 7/9 [00:03<00:00,  2.50it/s]
+pill standard_wrn_l23_g14_topk0p01 train: 100%|██████████| 9/9 [00:03<00:00,  3.44it/s]
+                                                                                       
+
+pill standard_wrn_l23_g14_topk0p01 test:   0%|          | 0/6 [00:00<?, ?it/s]
+pill standard_wrn_l23_g14_topk0p01 test:  17%|█▋        | 1/6 [00:00<00:04,  1.09it/s]
+pill standard_wrn_l23_g14_topk0p01 test:  50%|█████     | 3/6 [00:01<00:01,  2.00it/s]
+pill standard_wrn_l23_g14_topk0p01 test:  83%|████████▎ | 5/6 [00:02<00:00,  2.36it/s]
+                                                                                      
+
+pill wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/9 [00:00<?, ?it/s]
+pill wrn_l3_g14_b12000_topk0p005 train:  11%|█         | 1/9 [00:00<00:06,  1.23it/s]
+pill wrn_l3_g14_b12000_topk0p005 train:  33%|███▎      | 3/9 [00:01<00:02,  2.20it/s]
+pill wrn_l3_g14_b12000_topk0p005 train:  56%|█████▌    | 5/9 [00:02<00:01,  2.56it/s]
+pill wrn_l3_g14_b12000_topk0p005 train:  78%|███████▊  | 7/9 [00:02<00:00,  2.74it/s]
+pill wrn_l3_g14_b12000_topk0p005 train: 100%|██████████| 9/9 [00:02<00:00,  3.81it/s]
+                                                                                     
+
+pill wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/6 [00:00<?, ?it/s]
+pill wrn_l3_g14_b12000_topk0p005 test:  17%|█▋        | 1/6 [00:00<00:04,  1.23it/s]
+pill wrn_l3_g14_b12000_topk0p005 test:  50%|█████     | 3/6 [00:01<00:01,  2.20it/s]
+pill wrn_l3_g14_b12000_topk0p005 test:  83%|████████▎ | 5/6 [00:02<00:00,  2.63it/s]
+                                                                                    
+
+screw standard_wrn_l23_g14_topk0p01 train:   0%|          | 0/10 [00:00<?, ?it/s]
+screw standard_wrn_l23_g14_topk0p01 train:  10%|█         | 1/10 [00:01<00:09,  1.02s/it]
+screw standard_wrn_l23_g14_topk0p01 train:  30%|███       | 3/10 [00:01<00:04,  1.74it/s]
+screw standard_wrn_l23_g14_topk0p01 train:  50%|█████     | 5/10 [00:02<00:02,  2.01it/s]
+screw standard_wrn_l23_g14_topk0p01 train:  70%|███████   | 7/10 [00:03<00:01,  2.14it/s]
+screw standard_wrn_l23_g14_topk0p01 train:  90%|█████████ | 9/10 [00:04<00:00,  2.21it/s]
+                                                                                         
+
+screw standard_wrn_l23_g14_topk0p01 test:   0%|          | 0/5 [00:00<?, ?it/s]
+screw standard_wrn_l23_g14_topk0p01 test:  20%|██        | 1/5 [00:01<00:04,  1.01s/it]
+screw standard_wrn_l23_g14_topk0p01 test:  60%|██████    | 3/5 [00:01<00:01,  1.74it/s]
+screw standard_wrn_l23_g14_topk0p01 test: 100%|██████████| 5/5 [00:02<00:00,  2.05it/s]
+                                                                                       
+
+screw wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/10 [00:00<?, ?it/s]
+screw wrn_l3_g14_b12000_topk0p005 train:  10%|█         | 1/10 [00:00<00:08,  1.05it/s]
+screw wrn_l3_g14_b12000_topk0p005 train:  30%|███       | 3/10 [00:01<00:03,  1.85it/s]
+screw wrn_l3_g14_b12000_topk0p005 train:  50%|█████     | 5/10 [00:02<00:02,  2.16it/s]
+screw wrn_l3_g14_b12000_topk0p005 train:  70%|███████   | 7/10 [00:03<00:01,  2.31it/s]
+screw wrn_l3_g14_b12000_topk0p005 train:  90%|█████████ | 9/10 [00:04<00:00,  2.39it/s]
+                                                                                       
+
+screw wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/5 [00:00<?, ?it/s]
+screw wrn_l3_g14_b12000_topk0p005 test:  20%|██        | 1/5 [00:00<00:03,  1.06it/s]
+screw wrn_l3_g14_b12000_topk0p005 test:  60%|██████    | 3/5 [00:01<00:01,  1.88it/s]
+screw wrn_l3_g14_b12000_topk0p005 test: 100%|██████████| 5/5 [00:02<00:00,  2.24it/s]
+                                                                                     
+
+tile standard_wrn_l23_g14_topk0p01 train:   0%|          | 0/8 [00:00<?, ?it/s]
+tile standard_wrn_l23_g14_topk0p01 train:  12%|█▎        | 1/8 [00:00<00:06,  1.02it/s]
+tile standard_wrn_l23_g14_topk0p01 train:  38%|███▊      | 3/8 [00:01<00:02,  1.81it/s]
+tile standard_wrn_l23_g14_topk0p01 train:  62%|██████▎   | 5/8 [00:02<00:01,  2.11it/s]
+tile standard_wrn_l23_g14_topk0p01 train:  88%|████████▊ | 7/8 [00:03<00:00,  2.29it/s]
+                                                                                       
+
+tile standard_wrn_l23_g14_topk0p01 test:   0%|          | 0/4 [00:00<?, ?it/s]
+tile standard_wrn_l23_g14_topk0p01 test:  25%|██▌       | 1/4 [00:00<00:02,  1.04it/s]
+tile standard_wrn_l23_g14_topk0p01 test:  75%|███████▌  | 3/4 [00:01<00:00,  1.86it/s]
+                                                                                      
+
+tile wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/8 [00:00<?, ?it/s]
+tile wrn_l3_g14_b12000_topk0p005 train:  12%|█▎        | 1/8 [00:00<00:06,  1.10it/s]
+tile wrn_l3_g14_b12000_topk0p005 train:  38%|███▊      | 3/8 [00:01<00:02,  1.97it/s]
+tile wrn_l3_g14_b12000_topk0p005 train:  62%|██████▎   | 5/8 [00:02<00:01,  2.31it/s]
+tile wrn_l3_g14_b12000_topk0p005 train:  88%|████████▊ | 7/8 [00:03<00:00,  2.53it/s]
+                                                                                     
+
+tile wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/4 [00:00<?, ?it/s]
+tile wrn_l3_g14_b12000_topk0p005 test:  25%|██▌       | 1/4 [00:00<00:02,  1.12it/s]
+tile wrn_l3_g14_b12000_topk0p005 test:  75%|███████▌  | 3/4 [00:01<00:00,  2.01it/s]
+                                                                                    
+
+toothbrush standard_wrn_l23_g14_topk0p01 train:   0%|          | 0/2 [00:00<?, ?it/s]
+toothbrush standard_wrn_l23_g14_topk0p01 train:  50%|█████     | 1/2 [00:01<00:01,  1.29s/it]
+                                                                                             
+
+toothbrush standard_wrn_l23_g14_topk0p01 test:   0%|          | 0/2 [00:00<?, ?it/s]
+toothbrush standard_wrn_l23_g14_topk0p01 test:  50%|█████     | 1/2 [00:01<00:01,  1.23s/it]
+                                                                                            
+
+toothbrush wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/2 [00:00<?, ?it/s]
+toothbrush wrn_l3_g14_b12000_topk0p005 train:  50%|█████     | 1/2 [00:01<00:01,  1.22s/it]
+                                                                                           
+
+toothbrush wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/2 [00:00<?, ?it/s]
+toothbrush wrn_l3_g14_b12000_topk0p005 test:  50%|█████     | 1/2 [00:01<00:01,  1.15s/it]
+                                                                                          
+
+transistor standard_wrn_l23_g14_topk0p01 train:   0%|          | 0/7 [00:00<?, ?it/s]
+transistor standard_wrn_l23_g14_topk0p01 train:  14%|█▍        | 1/7 [00:01<00:08,  1.36s/it]
+transistor standard_wrn_l23_g14_topk0p01 train:  43%|████▎     | 3/7 [00:02<00:03,  1.28it/s]
+transistor standard_wrn_l23_g14_topk0p01 train:  71%|███████▏  | 5/7 [00:03<00:01,  1.47it/s]
+transistor standard_wrn_l23_g14_topk0p01 train: 100%|██████████| 7/7 [00:04<00:00,  1.83it/s]
+                                                                                             
+
+transistor standard_wrn_l23_g14_topk0p01 test:   0%|          | 0/4 [00:00<?, ?it/s]
+transistor standard_wrn_l23_g14_topk0p01 test:  25%|██▌       | 1/4 [00:01<00:04,  1.36s/it]
+transistor standard_wrn_l23_g14_topk0p01 test:  75%|███████▌  | 3/4 [00:02<00:00,  1.30it/s]
+                                                                                            
+
+transistor wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/7 [00:00<?, ?it/s]
+transistor wrn_l3_g14_b12000_topk0p005 train:  14%|█▍        | 1/7 [00:01<00:07,  1.28s/it]
+transistor wrn_l3_g14_b12000_topk0p005 train:  43%|████▎     | 3/7 [00:02<00:02,  1.35it/s]
+transistor wrn_l3_g14_b12000_topk0p005 train:  71%|███████▏  | 5/7 [00:03<00:01,  1.55it/s]
+transistor wrn_l3_g14_b12000_topk0p005 train: 100%|██████████| 7/7 [00:04<00:00,  1.95it/s]
+                                                                                           
+
+transistor wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/4 [00:00<?, ?it/s]
+transistor wrn_l3_g14_b12000_topk0p005 test:  25%|██▌       | 1/4 [00:01<00:03,  1.28s/it]
+transistor wrn_l3_g14_b12000_topk0p005 test:  75%|███████▌  | 3/4 [00:02<00:00,  1.40it/s]
+                                                                                          
+
+wood standard_wrn_l23_g14_topk0p01 train:   0%|          | 0/8 [00:00<?, ?it/s]
+wood standard_wrn_l23_g14_topk0p01 train:  12%|█▎        | 1/8 [00:01<00:08,  1.28s/it]
+wood standard_wrn_l23_g14_topk0p01 train:  38%|███▊      | 3/8 [00:02<00:03,  1.34it/s]
+wood standard_wrn_l23_g14_topk0p01 train:  62%|██████▎   | 5/8 [00:03<00:01,  1.55it/s]
+wood standard_wrn_l23_g14_topk0p01 train:  88%|████████▊ | 7/8 [00:04<00:00,  1.66it/s]
+                                                                                       
+
+wood standard_wrn_l23_g14_topk0p01 test:   0%|          | 0/3 [00:00<?, ?it/s]
+wood standard_wrn_l23_g14_topk0p01 test:  33%|███▎      | 1/3 [00:01<00:02,  1.27s/it]
+wood standard_wrn_l23_g14_topk0p01 test: 100%|██████████| 3/3 [00:01<00:00,  1.96it/s]
+                                                                                      
+
+wood wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/8 [00:00<?, ?it/s]
+wood wrn_l3_g14_b12000_topk0p005 train:  12%|█▎        | 1/8 [00:01<00:08,  1.22s/it]
+wood wrn_l3_g14_b12000_topk0p005 train:  38%|███▊      | 3/8 [00:02<00:03,  1.43it/s]
+wood wrn_l3_g14_b12000_topk0p005 train:  62%|██████▎   | 5/8 [00:03<00:01,  1.65it/s]
+wood wrn_l3_g14_b12000_topk0p005 train:  88%|████████▊ | 7/8 [00:04<00:00,  1.77it/s]
+                                                                                     
+
+wood wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/3 [00:00<?, ?it/s]
+wood wrn_l3_g14_b12000_topk0p005 test:  33%|███▎      | 1/3 [00:01<00:02,  1.21s/it]
+wood wrn_l3_g14_b12000_topk0p005 test: 100%|██████████| 3/3 [00:01<00:00,  2.12it/s]
+                                                                                    
+
+zipper standard_wrn_l23_g14_topk0p01 train:   0%|          | 0/8 [00:00<?, ?it/s]
+zipper standard_wrn_l23_g14_topk0p01 train:  12%|█▎        | 1/8 [00:00<00:06,  1.01it/s]
+zipper standard_wrn_l23_g14_topk0p01 train:  38%|███▊      | 3/8 [00:01<00:02,  1.81it/s]
+zipper standard_wrn_l23_g14_topk0p01 train:  62%|██████▎   | 5/8 [00:02<00:01,  2.10it/s]
+zipper standard_wrn_l23_g14_topk0p01 train:  88%|████████▊ | 7/8 [00:03<00:00,  2.28it/s]
+                                                                                         
+
+zipper standard_wrn_l23_g14_topk0p01 test:   0%|          | 0/5 [00:00<?, ?it/s]
+zipper standard_wrn_l23_g14_topk0p01 test:  20%|██        | 1/5 [00:00<00:03,  1.02it/s]
+zipper standard_wrn_l23_g14_topk0p01 test:  60%|██████    | 3/5 [00:01<00:01,  1.84it/s]
+zipper standard_wrn_l23_g14_topk0p01 test: 100%|██████████| 5/5 [00:02<00:00,  2.47it/s]
+                                                                                        
+
+zipper wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/8 [00:00<?, ?it/s]
+zipper wrn_l3_g14_b12000_topk0p005 train:  12%|█▎        | 1/8 [00:00<00:06,  1.10it/s]
+zipper wrn_l3_g14_b12000_topk0p005 train:  38%|███▊      | 3/8 [00:01<00:02,  1.97it/s]
+zipper wrn_l3_g14_b12000_topk0p005 train:  62%|██████▎   | 5/8 [00:02<00:01,  2.31it/s]
+zipper wrn_l3_g14_b12000_topk0p005 train:  88%|████████▊ | 7/8 [00:03<00:00,  2.49it/s]
+                                                                                       
+
+zipper wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/5 [00:00<?, ?it/s]
+zipper wrn_l3_g14_b12000_topk0p005 test:  20%|██        | 1/5 [00:00<00:03,  1.11it/s]
+zipper wrn_l3_g14_b12000_topk0p005 test:  60%|██████    | 3/5 [00:01<00:01,  1.98it/s]
+zipper wrn_l3_g14_b12000_topk0p005 test: 100%|██████████| 5/5 [00:02<00:00,  2.72it/s]
+$ git add jobs logs results artifacts docs
