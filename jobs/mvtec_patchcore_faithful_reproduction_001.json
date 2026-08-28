@@ -1,0 +1,12 @@
+{
+  "id": "mvtec_patchcore_faithful_reproduction_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt timm pyarrow && python -m scripts.mvtec_patchcore_faithful_reproduction --materialized-root /home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2 --categories bottle cable capsule screw zipper --max-bank-patches 12000 --coreset-candidate-pool 30000 --false-pass-targets 0.01 0.03 0.05 --report-false-pass-target 0.03 --score-name topk_score --batch-size 32 --nn-chunk-size 8192 --distance-batch-size 8192 --curve-points 180 --seed 123 --require-cuda",
+  "max_runtime_sec": 43200,
+  "result_file": "results/mvtec_patchcore_faithful_reproduction_001.json",
+  "note": "Diagnose why current PatchCore-lite scores are below prior-art expectations by comparing the old shallow profile against more faithful WideResNet layer2/layer3 profiles, resize+center-crop preprocessing, grid 14/28, and 10 percent k-center coreset on representative MVTec AD categories."
+}
