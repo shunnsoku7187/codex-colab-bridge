@@ -27,6 +27,8 @@ SYSTEM_LABELS = [
     "proposed profile + category bank switch",
 ]
 
+STANDARD_FEATURE_DIM = 768
+
 
 def pct(value: float | None) -> str:
     if value is None:
@@ -58,6 +60,10 @@ def category_feature_values(system: dict, common_bank: bool) -> int:
         first = rows[0]
         return int(first["bank_patches_searched"] * first["feature_dim"])
     return int(sum(row["bank_patches_searched"] * row["feature_dim"] for row in rows))
+
+
+def searched_bank_patches(system: dict) -> float:
+    return float(mean(row["bank_patches_searched"] for row in system["category_rows"]))
 
 
 def category_max_dim(system: dict) -> int:
@@ -105,6 +111,8 @@ def summarize_bank(items: list[dict], args: argparse.Namespace) -> list[dict]:
         common_bank = system_index == 0
         memory_values = [category_feature_values(system, common_bank) for system in systems]
         bits = [value * args.feature_bits for value in memory_values]
+        bank_patch_values = [system["total_stored_bank_patches"] for system in systems]
+        fixed_width_bits = [value * STANDARD_FEATURE_DIM * args.feature_bits for value in bank_patch_values]
         nn_ops = [system["mean_nn_ops_per_image"] for system in systems]
         good_min = [system["min_good_pass"] for system in systems if system["min_good_pass"] is not None]
         good_mean = [system["mean_good_pass"] for system in systems if system["mean_good_pass"] is not None]
@@ -116,10 +124,15 @@ def summarize_bank(items: list[dict], args: argparse.Namespace) -> list[dict]:
                 "mean_good_pass": round_float(mean(good_mean)) if good_mean else None,
                 "mean_nn_ops": round_float(mean(nn_ops)),
                 "relative_nn_ops": None,
+                "mean_total_bank_patches": round_float(mean(bank_patch_values)),
+                "mean_searched_bank_patches_per_image": round_float(mean(searched_bank_patches(system) for system in systems)),
                 "mean_stored_feature_values": round_float(mean(memory_values)),
-                "mean_bank_memory_mib": round_float(mib(mean(bits) / 8.0)),
-                "mean_bram36": round_float(mean(bram36(int(bit)) for bit in bits)),
-                "mean_uram288": round_float(mean(uram288(int(bit)) for bit in bits)),
+                "mean_compact_feature_memory_mib": round_float(mib(mean(bits) / 8.0)),
+                "mean_fixed_width_bank_memory_mib": round_float(mib(mean(fixed_width_bits) / 8.0)),
+                "mean_compact_bram36": round_float(mean(bram36(int(bit)) for bit in bits)),
+                "mean_compact_uram288": round_float(mean(uram288(int(bit)) for bit in bits)),
+                "mean_fixed_width_bram36": round_float(mean(bram36(int(bit)) for bit in fixed_width_bits)),
+                "mean_fixed_width_uram288": round_float(mean(uram288(int(bit)) for bit in fixed_width_bits)),
                 "max_feature_dim": int(max(category_max_dim(system) for system in systems)),
                 "mean_feature_dim_per_mode": round_float(mean(category_mean_dim(system) for system in systems)),
                 "mean_patch_count_per_mode": round_float(mean(category_mean_patch_count(system) for system in systems)),
@@ -142,7 +155,7 @@ def write_markdown(payload: dict, path: Path) -> None:
         "",
         "## 目的",
         "",
-        "性能評価で有利でも，FPGA実装時に大きな回路・メモリコストが必要なら利点は弱くなる。ここでは実測ではなく，固定bank数実験の結果を用いて，メモリ量・NN探索サイクル・切替オーバーヘッドを理論値で比較する。",
+        "性能評価で有利でも，FPGA実装時に大きな回路・メモリコストが必要なら利点は弱くなる。ここでは実測ではなく，固定bank数実験の結果を用いて，NN探索量・メモリ量・切替オーバーヘッドを理論値で比較する。",
         "",
         "## 前提",
         "",
@@ -152,7 +165,9 @@ def write_markdown(payload: dict, path: Path) -> None:
         f"{cfg['feature_bits']} bit として見積もる。",
         "- BRAM36は36 Kbit，URAM288は288 Kbitとして概算する。",
         f"- NN探索器は1サイクルに {cfg['distance_lanes']} 個の特徴差分を処理する単純モデルとする。",
-        "- mode切替に必要な設定値は，bank本体に比べて十分小さいため，主コストはbankメモリとNN探索で評価する。",
+        "- 本実験では総bank点数を固定する。したがってbank点数の削減は主張しない。",
+        "- メモリ量は，768次元固定幅でbank RAMを組む場合と，profileごとの有効特徴次元だけを保持する場合を分けて示す。",
+        "- mode切替に必要な設定値は，bank本体に比べて十分小さいため，主コストはbank特徴量メモリとNN探索で評価する。",
         "",
         "## 比較対象",
         "",
@@ -168,14 +183,15 @@ def write_markdown(payload: dict, path: Path) -> None:
         lines += [
             f"## bank/category = {bank_size}",
             "",
-            "| 方式 | 最低良品通過率 | 平均良品通過率 | NN演算量 | NNサイクル | bankメモリ | BRAM36 | URAM288 | 最大特徴次元 |",
+            "| 方式 | 最低良品通過率 | 平均良品通過率 | 平均総bank点数 | 平均探索bank点数/画像 | NN演算量 | 固定幅bankメモリ | 有効特徴量メモリ | 最大特徴次元 |",
             "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
         ]
         for row in rows:
             lines.append(
                 f"| {row['system']} | {pct(row['mean_min_good_pass'])} | {pct(row['mean_good_pass'])} | "
-                f"{row['relative_nn_ops']:.3f}x | {row['relative_cycles_at_lanes']:.3f}x | "
-                f"{row['mean_bank_memory_mib']:.3f} MiB | {row['mean_bram36']:.1f} | {row['mean_uram288']:.1f} | {row['max_feature_dim']} |"
+                f"{row['mean_total_bank_patches']:.0f} | {row['mean_searched_bank_patches_per_image']:.0f} | "
+                f"{row['relative_nn_ops']:.3f}x | {row['mean_fixed_width_bank_memory_mib']:.3f} MiB | "
+                f"{row['mean_compact_feature_memory_mib']:.3f} MiB | {row['max_feature_dim']} |"
             )
         prop = rows[-1]
         bank_only = rows[1]
@@ -186,7 +202,7 @@ def write_markdown(payload: dict, path: Path) -> None:
             "",
             f"- ②に対して④は，NN演算量を {pct(1.0 - prop['relative_nn_ops'] / bank_only['relative_nn_ops'])} 追加削減する。",
             f"- ③に対して④は，平均コストは近いが，カテゴリ別profileを使うためprofile選択ミスによる性能下振れを避ける設計である。",
-            f"- ④のbankメモリは①より小さいか同程度であり，切替機構がメモリ面で利点を帳消しにする構造ではない。",
+            f"- 総bank点数は同じなので，bank点数を削った効果ではない。固定幅RAMなら保存メモリは同じで，有効特徴次元だけを詰めて持つ設計なら特徴量メモリも減る。",
             "",
         ]
     lines += [
@@ -195,13 +211,16 @@ def write_markdown(payload: dict, path: Path) -> None:
         "1. **複数CNNを載せない**: backboneを固定するため，profile切替のためにCNN回路を複製しない。",
         "2. **切替コストが小さい**: category IDでbank開始アドレス，探索長，特徴マスク，top-k数，閾値を切り替えるだけなので，追加制御は小さい。",
         "3. **NN探索の削減が直接効く**: PatchCoreの重い部分はpatch特徴とbankの距離計算であり，探索bank長と特徴次元の削減はサイクル数・メモリアクセス量・消費電力に直接効く。",
-        "4. **未使用次元を止められる**: 提案方式では512次元profileのカテゴリでは768次元全体を使わず，距離演算器の一部をクロックゲートまたは無効化できる。",
-        "5. **再構成不要**: カテゴリ変更はbitstream再構成ではなくmode registerの更新として扱えるため，検品ラインの段取り替えに合わせやすい。",
+        "4. **bank点数削減とは分ける**: 本比較では総bank点数は固定であり，提案方式の利点は探索対象bankの切替と有効特徴次元の削減である。",
+        "5. **未使用次元を止められる**: 提案方式では512次元profileのカテゴリでは768次元全体を使わず，距離演算器の一部をクロックゲートまたは無効化できる。",
+        "6. **再構成不要**: カテゴリ変更はbitstream再構成ではなくmode registerの更新として扱えるため，検品ラインの段取り替えに合わせやすい。",
         "",
         "## 注意点",
         "",
         "- CNN本体の畳み込み計算は固定backboneなので，本見積もりの主対象はPatchCore後段の特徴保持・NN探索である。",
         "- 実際の速度・消費電力はメモリ帯域，量子化方式，距離演算器の並列度，bank配置に依存するため，最終的にはRTLまたはHLSで実測する必要がある。",
+        "- 固定幅768次元のRAM構成では，総bank点数固定のため保存メモリ量は方式間でほぼ同じになる。この場合の利点は，探索bank点数と有効特徴次元を減らせることによるサイクル数・読み出し量・演算器稼働率の低下である。",
+        "- 有効特徴次元だけを詰めて格納する可変幅または分割bank構成なら，保存メモリ量も減る。ただしこれは実装方式に依存するため，固定幅メモリ削減としては主張しない。",
         "- ただし理論値上，提案方式は大きな追加メモリや複数CNNを要求しないため，性能面の利点をFPGA実装コストが帳消しにする構造ではない。",
         "",
     ]
@@ -224,7 +243,7 @@ def write_figure(payload: dict, path: Path) -> bool:
     rows = payload["summary_by_bank_per_category"][bank_size]
     labels = ["①", "②", "③", "④"]
     ops = [row["relative_nn_ops"] for row in rows]
-    mem = [row["mean_bank_memory_mib"] for row in rows]
+    mem = [row["mean_compact_feature_memory_mib"] for row in rows]
     good = [row["mean_min_good_pass"] for row in rows]
 
     fig, axes = plt.subplots(1, 3, figsize=(13.5, 4.2))
@@ -235,7 +254,7 @@ def write_figure(payload: dict, path: Path) -> bool:
     axes[0].set_ylim(0, 1.08)
     axes[0].grid(True, axis="y", alpha=0.3)
     axes[1].bar(labels, mem, color=colors)
-    axes[1].set_title("Stored bank memory")
+    axes[1].set_title("Compact feature storage")
     axes[1].set_ylabel("MiB")
     axes[1].grid(True, axis="y", alpha=0.3)
     axes[2].bar(labels, good, color=colors)
