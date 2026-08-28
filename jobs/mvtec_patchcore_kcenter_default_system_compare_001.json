@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_kcenter_default_system_compare_001",
-  "status": "running",
+  "status": "done",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,6 +9,11 @@
   "max_runtime_sec": 43200,
   "result_file": "results/mvtec_patchcore_kcenter_default_system_compare_001.json",
   "note": "Re-run the AB/ABC system comparison with k-center coreset treated as the default for every bank. Full-bank PatchCore is only an upper reference; implemented baselines are k-center common bank, k-center category-bank switch, fixed specialized profile, and proposed profile+bank switch.",
-  "updated_at": "2026-08-28T12:17:42.922819+00:00",
-  "started_at": "2026-08-28T12:17:42.922798+00:00"
+  "updated_at": "2026-08-28T14:20:57.906745+00:00",
+  "started_at": "2026-08-28T12:17:42.922798+00:00",
+  "returncode": 0,
+  "duration_sec": 7388.725,
+  "stdout": "logs/mvtec_patchcore_kcenter_default_system_compare_001.stdout.log",
+  "stderr": "logs/mvtec_patchcore_kcenter_default_system_compare_001.stderr.log",
+  "finished_at": "2026-08-28T14:20:57.816688+00:00"
 }
