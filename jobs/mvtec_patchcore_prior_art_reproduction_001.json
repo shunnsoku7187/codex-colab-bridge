@@ -1,0 +1,12 @@
+{
+  "id": "mvtec_patchcore_prior_art_reproduction_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt timm pyarrow && python -m scripts.mvtec_patchcore_prior_art_reproduction --materialized-root /home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2 --full-bank-patches 6000 --bank-sizes 3000,1500,750,600 --quant-bits 32,8,4 --false-pass-targets 0.01 0.03 0.05 --report-target-false-pass 0.03 --random-repeats 2 --batch-size 32 --nn-chunk-size 8192 --distance-batch-size 8192 --curve-points 120 --seed 123 --require-cuda",
+  "max_runtime_sec": 43200,
+  "result_file": "results/mvtec_patchcore_prior_art_reproduction_001.json",
+  "note": "Reproduce prior-art PatchCore reduction baselines on all MVTec AD categories: random pruning vs k-center coreset and fp32/int8/int4 score preservation under inspection false-pass constraints."
+}
