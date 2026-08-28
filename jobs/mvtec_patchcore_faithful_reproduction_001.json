@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_faithful_reproduction_001",
-  "status": "running",
+  "status": "done",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,6 +9,11 @@
   "max_runtime_sec": 43200,
   "result_file": "results/mvtec_patchcore_faithful_reproduction_001.json",
   "note": "Diagnose why current PatchCore-lite scores are below prior-art expectations by comparing the old shallow profile against more faithful WideResNet layer2/layer3 profiles, resize+center-crop preprocessing, grid 14/28, and 10 percent k-center coreset on representative MVTec AD categories.",
-  "updated_at": "2026-08-28T15:30:51.426017+00:00",
-  "started_at": "2026-08-28T15:30:51.425996+00:00"
+  "updated_at": "2026-08-28T15:38:12.422033+00:00",
+  "started_at": "2026-08-28T15:30:51.425996+00:00",
+  "returncode": 0,
+  "duration_sec": 434.832,
+  "stdout": "logs/mvtec_patchcore_faithful_reproduction_001.stdout.log",
+  "stderr": "logs/mvtec_patchcore_faithful_reproduction_001.stderr.log",
+  "finished_at": "2026-08-28T15:38:12.413648+00:00"
 }

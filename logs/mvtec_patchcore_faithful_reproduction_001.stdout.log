@@ -335,3 +335,49 @@ patchcore_l23_g28_core10 capsule test:  20%|██        | 1/5 [00:01<00:05,  1
 patchcore_l23_g28_core10 capsule test:  40%|████      | 2/5 [00:01<00:01,  1.57it/s]
 patchcore_l23_g28_core10 capsule test:  60%|██████    | 3/5 [00:02<00:01,  1.25it/s]
 patchcore_l23_g28_core10 capsule test:  80%|████████  | 4/5 [00:02<00:00,  1.88it/s]
+                                                                                    
+
+patchcore_l23_g28_core10 screw train:   0%|          | 0/10 [00:00<?, ?it/s]
+patchcore_l23_g28_core10 screw train:  10%|█         | 1/10 [00:01<00:09,  1.09s/it]
+patchcore_l23_g28_core10 screw train:  20%|██        | 2/10 [00:01<00:04,  1.92it/s]
+patchcore_l23_g28_core10 screw train:  30%|███       | 3/10 [00:01<00:04,  1.60it/s]
+patchcore_l23_g28_core10 screw train:  40%|████      | 4/10 [00:02<00:02,  2.35it/s]
+patchcore_l23_g28_core10 screw train:  50%|█████     | 5/10 [00:02<00:02,  1.85it/s]
+patchcore_l23_g28_core10 screw train:  60%|██████    | 6/10 [00:02<00:01,  2.51it/s]
+patchcore_l23_g28_core10 screw train:  70%|███████   | 7/10 [00:03<00:01,  1.96it/s]
+patchcore_l23_g28_core10 screw train:  80%|████████  | 8/10 [00:03<00:00,  2.59it/s]
+patchcore_l23_g28_core10 screw train:  90%|█████████ | 9/10 [00:04<00:00,  2.02it/s]
+patchcore_l23_g28_core10 screw train: 100%|██████████| 10/10 [00:04<00:00,  2.65it/s]
+                                                                                     
+
+patchcore_l23_g28_core10 screw test:   0%|          | 0/5 [00:00<?, ?it/s]
+patchcore_l23_g28_core10 screw test:  20%|██        | 1/5 [00:01<00:04,  1.07s/it]
+patchcore_l23_g28_core10 screw test:  40%|████      | 2/5 [00:01<00:01,  1.95it/s]
+patchcore_l23_g28_core10 screw test:  60%|██████    | 3/5 [00:01<00:01,  1.63it/s]
+patchcore_l23_g28_core10 screw test:  80%|████████  | 4/5 [00:02<00:00,  2.38it/s]
+patchcore_l23_g28_core10 screw test: 100%|██████████| 5/5 [00:02<00:00,  1.90it/s]
+                                                                                  
+
+patchcore_l23_g28_core10 zipper train:   0%|          | 0/8 [00:00<?, ?it/s]
+patchcore_l23_g28_core10 zipper train:  12%|█▎        | 1/8 [00:01<00:07,  1.05s/it]
+patchcore_l23_g28_core10 zipper train:  25%|██▌       | 2/8 [00:01<00:03,  1.98it/s]
+patchcore_l23_g28_core10 zipper train:  38%|███▊      | 3/8 [00:01<00:02,  1.69it/s]
+patchcore_l23_g28_core10 zipper train:  50%|█████     | 4/8 [00:01<00:01,  2.47it/s]
+patchcore_l23_g28_core10 zipper train:  62%|██████▎   | 5/8 [00:02<00:01,  1.96it/s]
+patchcore_l23_g28_core10 zipper train:  75%|███████▌  | 6/8 [00:02<00:00,  2.65it/s]
+patchcore_l23_g28_core10 zipper train:  88%|████████▊ | 7/8 [00:03<00:00,  2.12it/s]
+                                                                                    
+
+patchcore_l23_g28_core10 zipper test:   0%|          | 0/5 [00:00<?, ?it/s]
+patchcore_l23_g28_core10 zipper test:  20%|██        | 1/5 [00:01<00:04,  1.03s/it]
+patchcore_l23_g28_core10 zipper test:  40%|████      | 2/5 [00:01<00:01,  2.02it/s]
+patchcore_l23_g28_core10 zipper test:  60%|██████    | 3/5 [00:01<00:01,  1.70it/s]
+patchcore_l23_g28_core10 zipper test:  80%|████████  | 4/5 [00:01<00:00,  2.48it/s]
+patchcore_l23_g28_core10 zipper test: 100%|██████████| 5/5 [00:02<00:00,  2.45it/s]
+                                                                                   
+{
+  "wrote": "results/mvtec_patchcore_faithful_reproduction_001_summary.json",
+  "profiles": 4,
+  "categories": 5,
+  "device": "cuda"
+}

@@ -1,0 +1,1156 @@
+{
+  "purpose": "Diagnose whether previous MVTec PatchCore-lite scores were low because the baseline was not faithful to standard PatchCore settings.",
+  "config": {
+    "materialized_root": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2",
+    "categories": [
+      "bottle",
+      "cable",
+      "capsule",
+      "screw",
+      "zipper"
+    ],
+    "profile": [],
+    "max_bank_patches": 12000,
+    "coreset_candidate_pool": 30000,
+    "false_pass_targets": [
+      0.01,
+      0.03,
+      0.05
+    ],
+    "report_false_pass_target": 0.03,
+    "score_name": "topk_score",
+    "batch_size": 32,
+    "nn_chunk_size": 8192,
+    "distance_batch_size": 8192,
+    "curve_points": 180,
+    "seed": 123,
+    "output": "results/mvtec_patchcore_faithful_reproduction_001_summary.json",
+    "markdown": "docs/mvtec_patchcore_faithful_reproduction_001.md",
+    "figure": "results/mvtec_patchcore_faithful_reproduction_001.png",
+    "require_cuda": true,
+    "device": "cuda"
+  },
+  "profiles": [
+    {
+      "name": "current_lite_out12_g14_b6000",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        1,
+        2
+      ],
+      "resize": 224,
+      "crop": 224,
+      "grid": 14,
+      "topk_fraction": 0.01,
+      "bank_policy": "fixed",
+      "bank_value": 6000.0
+    },
+    {
+      "name": "patchcore_l23_g14_b6000",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2,
+        3
+      ],
+      "resize": 256,
+      "crop": 224,
+      "grid": 14,
+      "topk_fraction": 0.01,
+      "bank_policy": "fixed",
+      "bank_value": 6000.0
+    },
+    {
+      "name": "patchcore_l23_g28_b6000",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2,
+        3
+      ],
+      "resize": 256,
+      "crop": 224,
+      "grid": 28,
+      "topk_fraction": 0.01,
+      "bank_policy": "fixed",
+      "bank_value": 6000.0
+    },
+    {
+      "name": "patchcore_l23_g28_core10",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2,
+        3
+      ],
+      "resize": 256,
+      "crop": 224,
+      "grid": 28,
+      "topk_fraction": 0.01,
+      "bank_policy": "ratio",
+      "bank_value": 0.1
+    }
+  ],
+  "category_results": [
+    {
+      "category": "bottle",
+      "profile": "current_lite_out12_g14_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 209,
+        "test": 83,
+        "test_good": 20,
+        "test_defect": 63
+      },
+      "footprint": {
+        "normal_patch_candidates": 40964,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.14647,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "nn_ops_per_image": 903168000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "topk_score": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.40434
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.40434
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.40434
+        }
+      ]
+    },
+    {
+      "category": "cable",
+      "profile": "current_lite_out12_g14_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 224,
+        "test": 150,
+        "test_good": 58,
+        "test_defect": 92
+      },
+      "footprint": {
+        "normal_patch_candidates": 43904,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.136662,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "nn_ops_per_image": 903168000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.972451,
+          "image_aupr": 0.984266
+        },
+        "topk_score": {
+          "image_auroc": 0.980322,
+          "image_aupr": 0.98902
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.465517,
+          "good_loss_rate_good": 0.534483,
+          "threshold": 0.501252
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.758621,
+          "good_loss_rate_good": 0.241379,
+          "threshold": 0.517324
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.913793,
+          "good_loss_rate_good": 0.086207,
+          "threshold": 0.523791
+        }
+      ]
+    },
+    {
+      "category": "capsule",
+      "profile": "current_lite_out12_g14_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 219,
+        "test": 132,
+        "test_good": 23,
+        "test_defect": 109
+      },
+      "footprint": {
+        "normal_patch_candidates": 42924,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.139782,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "nn_ops_per_image": 903168000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.970483,
+          "image_aupr": 0.993347
+        },
+        "topk_score": {
+          "image_auroc": 0.974073,
+          "image_aupr": 0.994172
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.782609,
+          "good_loss_rate_good": 0.217391,
+          "threshold": 0.309152
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.826087,
+          "good_loss_rate_good": 0.173913,
+          "threshold": 0.320553
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.869565,
+          "good_loss_rate_good": 0.130435,
+          "threshold": 0.332056
+        }
+      ]
+    },
+    {
+      "category": "screw",
+      "profile": "current_lite_out12_g14_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 320,
+        "test": 160,
+        "test_good": 41,
+        "test_defect": 119
+      },
+      "footprint": {
+        "normal_patch_candidates": 62720,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.095663,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "nn_ops_per_image": 903168000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.905923,
+          "image_aupr": 0.955181
+        },
+        "topk_score": {
+          "image_auroc": 0.917401,
+          "image_aupr": 0.961803
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.609756,
+          "good_loss_rate_good": 0.390244,
+          "threshold": 0.394597
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.609756,
+          "good_loss_rate_good": 0.390244,
+          "threshold": 0.394597
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.682927,
+          "good_loss_rate_good": 0.317073,
+          "threshold": 0.400416
+        }
+      ]
+    },
+    {
+      "category": "zipper",
+      "profile": "current_lite_out12_g14_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 240,
+        "test": 151,
+        "test_good": 32,
+        "test_defect": 119
+      },
+      "footprint": {
+        "normal_patch_candidates": 47040,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.127551,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "nn_ops_per_image": 903168000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.978992,
+          "image_aupr": 0.994129
+        },
+        "topk_score": {
+          "image_auroc": 0.987132,
+          "image_aupr": 0.996548
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.875,
+          "good_loss_rate_good": 0.125,
+          "threshold": 0.361699
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.96875,
+          "good_loss_rate_good": 0.03125,
+          "threshold": 0.372143
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.96875,
+          "good_loss_rate_good": 0.03125,
+          "threshold": 0.372143
+        }
+      ]
+    },
+    {
+      "category": "bottle",
+      "profile": "patchcore_l23_g14_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 209,
+        "test": 83,
+        "test_good": 20,
+        "test_defect": 63
+      },
+      "footprint": {
+        "normal_patch_candidates": 40964,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.14647,
+        "patch_count": 196,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 1806336000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "topk_score": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.524229
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.524229
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.524229
+        }
+      ]
+    },
+    {
+      "category": "cable",
+      "profile": "patchcore_l23_g14_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 224,
+        "test": 150,
+        "test_good": 58,
+        "test_defect": 92
+      },
+      "footprint": {
+        "normal_patch_candidates": 43904,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.136662,
+        "patch_count": 196,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 1806336000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.994753,
+          "image_aupr": 0.996958
+        },
+        "topk_score": {
+          "image_auroc": 0.996064,
+          "image_aupr": 0.997742
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.775862,
+          "good_loss_rate_good": 0.224138,
+          "threshold": 0.642411
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.982759,
+          "good_loss_rate_good": 0.017241,
+          "threshold": 0.690781
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.699479
+        }
+      ]
+    },
+    {
+      "category": "capsule",
+      "profile": "patchcore_l23_g14_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 219,
+        "test": 132,
+        "test_good": 23,
+        "test_defect": 109
+      },
+      "footprint": {
+        "normal_patch_candidates": 42924,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.139782,
+        "patch_count": 196,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 1806336000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.9286,
+          "image_aupr": 0.977993
+        },
+        "topk_score": {
+          "image_auroc": 0.937774,
+          "image_aupr": 0.981338
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.73913,
+          "good_loss_rate_good": 0.26087,
+          "threshold": 0.43437
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.73913,
+          "good_loss_rate_good": 0.26087,
+          "threshold": 0.43437
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.782609,
+          "good_loss_rate_good": 0.217391,
+          "threshold": 0.460853
+        }
+      ]
+    },
+    {
+      "category": "screw",
+      "profile": "patchcore_l23_g14_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 320,
+        "test": 160,
+        "test_good": 41,
+        "test_defect": 119
+      },
+      "footprint": {
+        "normal_patch_candidates": 62720,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.095663,
+        "patch_count": 196,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 1806336000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.818815,
+          "image_aupr": 0.922438
+        },
+        "topk_score": {
+          "image_auroc": 0.84751,
+          "image_aupr": 0.940751
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.170732,
+          "good_loss_rate_good": 0.829268,
+          "threshold": 0.530435
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.292683,
+          "good_loss_rate_good": 0.707317,
+          "threshold": 0.540951
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.365854,
+          "good_loss_rate_good": 0.634146,
+          "threshold": 0.545231
+        }
+      ]
+    },
+    {
+      "category": "zipper",
+      "profile": "patchcore_l23_g14_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 240,
+        "test": 151,
+        "test_good": 32,
+        "test_defect": 119
+      },
+      "footprint": {
+        "normal_patch_candidates": 47040,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.127551,
+        "patch_count": 196,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 1806336000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.975053,
+          "image_aupr": 0.992982
+        },
+        "topk_score": {
+          "image_auroc": 0.980305,
+          "image_aupr": 0.994509
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.875,
+          "good_loss_rate_good": 0.125,
+          "threshold": 0.472962
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.875,
+          "good_loss_rate_good": 0.125,
+          "threshold": 0.472962
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.875,
+          "good_loss_rate_good": 0.125,
+          "threshold": 0.472962
+        }
+      ]
+    },
+    {
+      "category": "bottle",
+      "profile": "patchcore_l23_g28_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 209,
+        "test": 83,
+        "test_good": 20,
+        "test_defect": 63
+      },
+      "footprint": {
+        "normal_patch_candidates": 163856,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.036618,
+        "patch_count": 784,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 7225344000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "topk_score": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.606258
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.606258
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.606258
+        }
+      ]
+    },
+    {
+      "category": "cable",
+      "profile": "patchcore_l23_g28_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 224,
+        "test": 150,
+        "test_good": 58,
+        "test_defect": 92
+      },
+      "footprint": {
+        "normal_patch_candidates": 175616,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.034165,
+        "patch_count": 784,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 7225344000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.98913,
+          "image_aupr": 0.993597
+        },
+        "topk_score": {
+          "image_auroc": 0.995877,
+          "image_aupr": 0.99757
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.775862,
+          "good_loss_rate_good": 0.224138,
+          "threshold": 0.716508
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.982759,
+          "good_loss_rate_good": 0.017241,
+          "threshold": 0.732199
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.982759,
+          "good_loss_rate_good": 0.017241,
+          "threshold": 0.732199
+        }
+      ]
+    },
+    {
+      "category": "capsule",
+      "profile": "patchcore_l23_g28_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 219,
+        "test": 132,
+        "test_good": 23,
+        "test_defect": 109
+      },
+      "footprint": {
+        "normal_patch_candidates": 171696,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.034945,
+        "patch_count": 784,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 7225344000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.912246,
+          "image_aupr": 0.971636
+        },
+        "topk_score": {
+          "image_auroc": 0.934184,
+          "image_aupr": 0.978938
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.565217,
+          "good_loss_rate_good": 0.434783,
+          "threshold": 0.51262
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.782609,
+          "good_loss_rate_good": 0.217391,
+          "threshold": 0.525229
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.869565,
+          "good_loss_rate_good": 0.130435,
+          "threshold": 0.551975
+        }
+      ]
+    },
+    {
+      "category": "screw",
+      "profile": "patchcore_l23_g28_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 320,
+        "test": 160,
+        "test_good": 41,
+        "test_defect": 119
+      },
+      "footprint": {
+        "normal_patch_candidates": 250880,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.023916,
+        "patch_count": 784,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 7225344000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.924165,
+          "image_aupr": 0.970824
+        },
+        "topk_score": {
+          "image_auroc": 0.926419,
+          "image_aupr": 0.97255
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.292683,
+          "good_loss_rate_good": 0.707317,
+          "threshold": 0.603726
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.365854,
+          "good_loss_rate_good": 0.634146,
+          "threshold": 0.606865
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.487805,
+          "good_loss_rate_good": 0.512195,
+          "threshold": 0.609274
+        }
+      ]
+    },
+    {
+      "category": "zipper",
+      "profile": "patchcore_l23_g28_b6000",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 240,
+        "test": 151,
+        "test_good": 32,
+        "test_defect": 119
+      },
+      "footprint": {
+        "normal_patch_candidates": 188160,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 6000,
+        "bank_fraction_of_normal_patches": 0.031888,
+        "patch_count": 784,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 7225344000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.948004,
+          "image_aupr": 0.984399
+        },
+        "topk_score": {
+          "image_auroc": 0.979517,
+          "image_aupr": 0.994092
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.8125,
+          "good_loss_rate_good": 0.1875,
+          "threshold": 0.537093
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.84375,
+          "good_loss_rate_good": 0.15625,
+          "threshold": 0.544664
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.84375,
+          "good_loss_rate_good": 0.15625,
+          "threshold": 0.544664
+        }
+      ]
+    },
+    {
+      "category": "bottle",
+      "profile": "patchcore_l23_g28_core10",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 209,
+        "test": 83,
+        "test_good": 20,
+        "test_defect": 63
+      },
+      "footprint": {
+        "normal_patch_candidates": 163856,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 12000,
+        "bank_fraction_of_normal_patches": 0.073235,
+        "patch_count": 784,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 14450688000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "topk_score": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.605105
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.605105
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.605105
+        }
+      ]
+    },
+    {
+      "category": "cable",
+      "profile": "patchcore_l23_g28_core10",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 224,
+        "test": 150,
+        "test_good": 58,
+        "test_defect": 92
+      },
+      "footprint": {
+        "normal_patch_candidates": 175616,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 12000,
+        "bank_fraction_of_normal_patches": 0.068331,
+        "patch_count": 784,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 14450688000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.988568,
+          "image_aupr": 0.993109
+        },
+        "topk_score": {
+          "image_auroc": 0.996814,
+          "image_aupr": 0.998197
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.775862,
+          "good_loss_rate_good": 0.224138,
+          "threshold": 0.697557
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.72896
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 1.0,
+          "good_loss_rate_good": 0.0,
+          "threshold": 0.72896
+        }
+      ]
+    },
+    {
+      "category": "capsule",
+      "profile": "patchcore_l23_g28_core10",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 219,
+        "test": 132,
+        "test_good": 23,
+        "test_defect": 109
+      },
+      "footprint": {
+        "normal_patch_candidates": 171696,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 12000,
+        "bank_fraction_of_normal_patches": 0.069891,
+        "patch_count": 784,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 14450688000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.905465,
+          "image_aupr": 0.970446
+        },
+        "topk_score": {
+          "image_auroc": 0.926606,
+          "image_aupr": 0.977606
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.565217,
+          "good_loss_rate_good": 0.434783,
+          "threshold": 0.505056
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.782609,
+          "good_loss_rate_good": 0.217391,
+          "threshold": 0.519789
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.782609,
+          "good_loss_rate_good": 0.217391,
+          "threshold": 0.519789
+        }
+      ]
+    },
+    {
+      "category": "screw",
+      "profile": "patchcore_l23_g28_core10",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 320,
+        "test": 160,
+        "test_good": 41,
+        "test_defect": 119
+      },
+      "footprint": {
+        "normal_patch_candidates": 250880,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 12000,
+        "bank_fraction_of_normal_patches": 0.047832,
+        "patch_count": 784,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 14450688000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.912072,
+          "image_aupr": 0.965042
+        },
+        "topk_score": {
+          "image_auroc": 0.92232,
+          "image_aupr": 0.96963
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.219512,
+          "good_loss_rate_good": 0.780488,
+          "threshold": 0.584341
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.463415,
+          "good_loss_rate_good": 0.536585,
+          "threshold": 0.596587
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.512195,
+          "good_loss_rate_good": 0.487805,
+          "threshold": 0.598758
+        }
+      ]
+    },
+    {
+      "category": "zipper",
+      "profile": "patchcore_l23_g28_core10",
+      "status": "done",
+      "sample_counts": {
+        "train_normal": 240,
+        "test": 151,
+        "test_good": 32,
+        "test_defect": 119
+      },
+      "footprint": {
+        "normal_patch_candidates": 188160,
+        "coreset_candidate_pool": 30000,
+        "bank_patches": 12000,
+        "bank_fraction_of_normal_patches": 0.063776,
+        "patch_count": 784,
+        "feature_dim": 1536,
+        "nn_ops_per_image": 14450688000
+      },
+      "auc": {
+        "max_score": {
+          "image_auroc": 0.947479,
+          "image_aupr": 0.984238
+        },
+        "topk_score": {
+          "image_auroc": 0.977153,
+          "image_aupr": 0.9934
+        }
+      },
+      "selected_score": "topk_score",
+      "best_rows": [
+        {
+          "target": 0.01,
+          "good_pass_rate_good": 0.78125,
+          "good_loss_rate_good": 0.21875,
+          "threshold": 0.516527
+        },
+        {
+          "target": 0.03,
+          "good_pass_rate_good": 0.8125,
+          "good_loss_rate_good": 0.1875,
+          "threshold": 0.533396
+        },
+        {
+          "target": 0.05,
+          "good_pass_rate_good": 0.84375,
+          "good_loss_rate_good": 0.15625,
+          "threshold": 0.538893
+        }
+      ]
+    }
+  ],
+  "figure": "results/mvtec_patchcore_faithful_reproduction_001.png",
+  "aggregate_rows": [
+    {
+      "profile": "current_lite_out12_g14_b6000",
+      "categories": 5,
+      "mean_good_pass_rate_good": 0.832643,
+      "min_good_pass_rate_good": 0.609756,
+      "mean_image_auroc": 0.971786,
+      "mean_nn_ops_per_image": 903168000.0,
+      "mean_bank_patches": 6000.0,
+      "relative_nn_ops_to_first_profile": 1.0
+    },
+    {
+      "profile": "patchcore_l23_g14_b6000",
+      "categories": 5,
+      "mean_good_pass_rate_good": 0.777914,
+      "min_good_pass_rate_good": 0.292683,
+      "mean_image_auroc": 0.952331,
+      "mean_nn_ops_per_image": 1806336000.0,
+      "mean_bank_patches": 6000.0,
+      "relative_nn_ops_to_first_profile": 2.0
+    },
+    {
+      "profile": "patchcore_l23_g28_b6000",
+      "categories": 5,
+      "mean_good_pass_rate_good": 0.794994,
+      "min_good_pass_rate_good": 0.365854,
+      "mean_image_auroc": 0.967199,
+      "mean_nn_ops_per_image": 7225344000.0,
+      "mean_bank_patches": 6000.0,
+      "relative_nn_ops_to_first_profile": 8.0
+    },
+    {
+      "profile": "patchcore_l23_g28_core10",
+      "categories": 5,
+      "mean_good_pass_rate_good": 0.811705,
+      "min_good_pass_rate_good": 0.463415,
+      "mean_image_auroc": 0.964579,
+      "mean_nn_ops_per_image": 14450688000.0,
+      "mean_bank_patches": 12000.0,
+      "relative_nn_ops_to_first_profile": 16.0
+    }
+  ]
+}
