@@ -1,52 +1,82 @@
-# FPGA cost model for profiled PatchCore
+# FPGA実装に向けた理論コスト比較
 
-Purpose: translate the current PatchCore reduction evidence into FPGA-facing resource and latency proxies.
+## 目的
 
-## Scope
+性能評価で有利でも，FPGA実装時に大きな回路・メモリコストが必要なら利点は弱くなる。ここでは実測ではなく，固定bank数実験の結果を用いて，メモリ量・NN探索サイクル・切替オーバーヘッドを理論値で比較する。
 
-This is a pre-RTL estimate.  It does not claim final FPGA power or timing.
-It separates the parts that must be implemented and measured next:
+## 前提
 
-- CNN feature extraction MACs
-- PatchCore nearest-neighbor distance operations
-- Memory-bank storage
-- Memory-bank read traffic
-- KNN latency under several parallel distance-lane counts
+- CNN本体は `wide_resnet50_2` で固定し，複数CNNをFPGAに載せる構成にはしない。
+- 切り替えるのは，使用する中間特徴，特徴次元，grid，top-k，bankのベースアドレス，探索bank長，閾値である。
+- bank値は量子化後に保持する想定で，ここでは1特徴値を 8 bit として見積もる。
+- BRAM36は36 Kbit，URAM288は288 Kbitとして概算する。
+- NN探索器は1サイクルに 64 個の特徴差分を処理する単純モデルとする。
+- mode切替に必要な設定値は，bank本体に比べて十分小さいため，主コストはbankメモリとNN探索で評価する。
 
-## Aggregate ratios
+## 比較対象
 
-- mean CNN MAC ratio: `0.5492x`
-- mean NN operation ratio: `0.0109x`
-- mean total proxy ratio: `0.2687x`
-- mean memory-bank ratio: `0.0249x`
-- mean streamed-bank traffic ratio: `0.0109x`
+| 記号 | 方式 | 実装上の意味 |
+|---|---|---|
+| ① | デフォルトprofile + 共通bank | 対象カテゴリ集合のbankを毎回すべて探索する。実装は単純だが探索量が最大。 |
+| ② | デフォルトprofile + category bank切替 | 総bank数は同じだが，検品対象カテゴリのbankだけを探索する。 |
+| ③ | どれか1つの専用profile固定 + category bank切替 | 軽いprofileを1つだけ採用する。回路は単純だが，カテゴリ相性を外すと性能が下振れる。 |
+| ④ | 提案: category別profile + category bank切替 | CNNは共通のまま，カテゴリごとに特徴抽出profileとbankを切り替える。 |
 
-## Category table
+## bank/category = 500
 
-| category | selected config | good-pass | false-pass | CNN MAC | NN ops | total proxy | bank | streamed traffic |
-|---|---|---:|---:|---:|---:|---:|---:|---:|
-| bottle | `res18_l23_g5_b250_topk0p005` | 94.00% | 5.16% | 0.1994x | 0.0007x | 0.0958x | 0.0052x | 0.0007x |
-| cable | `res18_l23_g7_b1500_topk0p05` | 33.79% | 2.61% | 0.1994x | 0.0078x | 0.0995x | 0.0312x | 0.0078x |
-| capsule | `wrn_l2_g14_b125_topk0p05` | 21.82% | 5.45% | 0.4215x | 0.0035x | 0.2035x | 0.0035x | 0.0035x |
-| carpet | `wrn_l3_g8_b125_topk0p005` | 68.57% | 4.89% | 1.0000x | 0.0023x | 0.4797x | 0.0069x | 0.0023x |
-| grid | `res18_l23_g7_b6000_topk0p005` | 38.18% | 4.14% | 0.1994x | 0.0312x | 0.1117x | 0.1250x | 0.0312x |
-| hazelnut | `res18_l23_g14_b500_topk0p02` | 92.00% | 1.14% | 0.1994x | 0.0104x | 0.1008x | 0.0104x | 0.0104x |
-| leather | `wrn_l3_g10_b125_topk0p005` | 93.75% | 3.91% | 1.0000x | 0.0035x | 0.4804x | 0.0069x | 0.0035x |
-| metal_nut | `wrn_l3_g6_b1000_topk0p005` | 40.00% | 6.38% | 1.0000x | 0.0102x | 0.4839x | 0.0556x | 0.0102x |
-| pill | `res18_l23_g5_b125_topk0p005` | 18.46% | 2.82% | 0.1994x | 0.0003x | 0.0956x | 0.0026x | 0.0003x |
-| screw | `res18_l23_g14_b125_topk0p05` | 3.81% | 5.76% | 0.1994x | 0.0026x | 0.0968x | 0.0026x | 0.0026x |
-| tile | `wrn_l3_g7_b125_topk0p005` | 77.65% | 3.81% | 1.0000x | 0.0017x | 0.4795x | 0.0069x | 0.0017x |
-| toothbrush | `wrn_l2_g5_b125_topk0p005` | 43.33% | 6.67% | 0.4215x | 0.0005x | 0.2041x | 0.0035x | 0.0005x |
-| transistor | `wrn_l3_g6_b500_topk0p005` | 47.33% | 11.00% | 1.0000x | 0.0051x | 0.4812x | 0.0278x | 0.0051x |
-| wood | `res18_l23_g7_b125_topk0p005` | 71.11% | 2.00% | 0.1994x | 0.0007x | 0.0957x | 0.0026x | 0.0007x |
-| zipper | `wrn_l3_g14_b1500_topk0p05` | 75.00% | 2.71% | 1.0000x | 0.0833x | 0.5220x | 0.0833x | 0.0833x |
+| 方式 | 最低良品通過率 | 平均良品通過率 | NN演算量 | NNサイクル | bankメモリ | BRAM36 | URAM288 | 最大特徴次元 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| default profile + common bank | 52.99% | 73.60% | 1.000x | 1.000x | 0.928 MiB | 211.3 | 26.9 | 768 |
+| default profile + category bank switch | 57.67% | 77.54% | 0.395x | 0.395x | 0.928 MiB | 211.3 | 26.9 | 768 |
+| best fixed profile + category bank switch | 65.10% | 80.38% | 0.309x | 0.309x | 0.723 MiB | 164.9 | 20.8 | 768 |
+| proposed profile + category bank switch | 65.18% | 80.90% | 0.293x | 0.293x | 0.685 MiB | 156.4 | 19.9 | 768 |
 
-## Interpretation for thesis lock
+読み取り:
 
-- The nearest-neighbor search reduction is mathematically explained by patch count, bank size, and feature dimension.
-- After the NN search is reduced, CNN feature extraction becomes the dominant remaining compute block.
-- Therefore the FPGA thesis should not claim only `PatchCore is 98% lighter`.
-- The defensible claim is: category profiling can shrink the memory-bank search engine dramatically, and the final FPGA implementation must measure how much of that reduction survives after CNN and memory-system costs are included.
+- ②に対して④は，NN演算量を 25.88% 追加削減する。
+- ③に対して④は，平均コストは近いが，カテゴリ別profileを使うためprofile選択ミスによる性能下振れを避ける設計である。
+- ④のbankメモリは①より小さいか同程度であり，切替機構がメモリ面で利点を帳消しにする構造ではない。
 
-CSV: `results/mvtec_patchcore_fpga_cost_model_001.csv`
-Figure: `results/mvtec_patchcore_fpga_cost_model_001.png`
+## bank/category = 1500
+
+| 方式 | 最低良品通過率 | 平均良品通過率 | NN演算量 | NNサイクル | bankメモリ | BRAM36 | URAM288 | 最大特徴次元 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| default profile + common bank | 61.99% | 78.81% | 1.000x | 1.000x | 2.783 MiB | 633.3 | 79.5 | 768 |
+| default profile + category bank switch | 64.46% | 80.28% | 0.395x | 0.395x | 2.783 MiB | 633.3 | 79.5 | 768 |
+| best fixed profile + category bank switch | 70.29% | 84.02% | 0.291x | 0.291x | 2.043 MiB | 465.0 | 58.5 | 768 |
+| proposed profile + category bank switch | 68.98% | 83.86% | 0.293x | 0.293x | 2.056 MiB | 468.2 | 58.9 | 768 |
+
+読み取り:
+
+- ②に対して④は，NN演算量を 25.88% 追加削減する。
+- ③に対して④は，平均コストは近いが，カテゴリ別profileを使うためprofile選択ミスによる性能下振れを避ける設計である。
+- ④のbankメモリは①より小さいか同程度であり，切替機構がメモリ面で利点を帳消しにする構造ではない。
+
+## bank/category = 3000
+
+| 方式 | 最低良品通過率 | 平均良品通過率 | NN演算量 | NNサイクル | bankメモリ | BRAM36 | URAM288 | 最大特徴次元 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| default profile + common bank | 65.92% | 80.45% | 1.000x | 1.000x | 5.566 MiB | 1266.7 | 158.6 | 768 |
+| default profile + category bank switch | 69.90% | 82.87% | 0.395x | 0.395x | 5.566 MiB | 1266.7 | 158.6 | 768 |
+| best fixed profile + category bank switch | 74.63% | 85.59% | 0.309x | 0.309x | 4.342 MiB | 988.2 | 123.8 | 768 |
+| proposed profile + category bank switch | 74.82% | 86.36% | 0.293x | 0.293x | 4.111 MiB | 935.9 | 117.3 | 768 |
+
+読み取り:
+
+- ②に対して④は，NN演算量を 25.88% 追加削減する。
+- ③に対して④は，平均コストは近いが，カテゴリ別profileを使うためprofile選択ミスによる性能下振れを避ける設計である。
+- ④のbankメモリは①より小さいか同程度であり，切替機構がメモリ面で利点を帳消しにする構造ではない。
+
+## FPGA実装上の主張
+
+1. **複数CNNを載せない**: backboneを固定するため，profile切替のためにCNN回路を複製しない。
+2. **切替コストが小さい**: category IDでbank開始アドレス，探索長，特徴マスク，top-k数，閾値を切り替えるだけなので，追加制御は小さい。
+3. **NN探索の削減が直接効く**: PatchCoreの重い部分はpatch特徴とbankの距離計算であり，探索bank長と特徴次元の削減はサイクル数・メモリアクセス量・消費電力に直接効く。
+4. **未使用次元を止められる**: 提案方式では512次元profileのカテゴリでは768次元全体を使わず，距離演算器の一部をクロックゲートまたは無効化できる。
+5. **再構成不要**: カテゴリ変更はbitstream再構成ではなくmode registerの更新として扱えるため，検品ラインの段取り替えに合わせやすい。
+
+## 注意点
+
+- CNN本体の畳み込み計算は固定backboneなので，本見積もりの主対象はPatchCore後段の特徴保持・NN探索である。
+- 実際の速度・消費電力はメモリ帯域，量子化方式，距離演算器の並列度，bank配置に依存するため，最終的にはRTLまたはHLSで実測する必要がある。
+- ただし理論値上，提案方式は大きな追加メモリや複数CNNを要求しないため，性能面の利点をFPGA実装コストが帳消しにする構造ではない。

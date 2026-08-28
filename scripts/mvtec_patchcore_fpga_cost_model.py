@@ -1,321 +1,294 @@
-"""FPGA-facing cost model for profiled minimal PatchCore configurations.
+"""FPGA-facing cost model for fixed-bank PatchCore profile switching.
 
-This script converts the current experimental evidence into hardware-facing
-numbers: feature-extractor MACs, nearest-neighbor operations, memory-bank size,
-bank traffic, and estimated KNN latency for several parallel distance-engine
-widths.  It is intentionally an estimate, not a substitute for RTL/HLS
-implementation.  Its purpose is to decide whether the thesis can move into
-"implement and measure on FPGA" mode.
+The previous experiment showed algorithmic performance.  This script translates
+the same systems into implementation-facing quantities: stored feature memory,
+nearest-neighbor search work, expected cycles for a simple parallel distance
+engine, and mode-switch metadata.
 """
 
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import math
-from functools import lru_cache
 from pathlib import Path
+from statistics import mean, median
 
-import matplotlib
-
-matplotlib.use("Agg")
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-from scripts.mvtec_patchcore_cost_credibility_audit import parse_profile_from_config
-from scripts.train_kolektor_strong_final import round_float
-from src.experiment_paths import ensure_dirs
+DEFAULT_SOURCE = Path("results/mvtec_patchcore_fixed_bank_profile_switch_002_summary.json")
+DEFAULT_OUTPUT = Path("results/mvtec_patchcore_fpga_cost_model_001_summary.json")
+DEFAULT_MARKDOWN = Path("docs/mvtec_patchcore_fpga_cost_model_001.md")
+DEFAULT_FIGURE = Path("results/mvtec_patchcore_fpga_cost_model_001.png")
 
 
-def estimate_profile_macs(profile: dict, image_size: tuple[int, int]) -> int:
-    """Return approximate multiply-adds for the timm feature extractor."""
-    import torch
-    import timm
-    from torchinfo import summary
-
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = timm.create_model(
-        profile["backbone"],
-        pretrained=False,
-        features_only=True,
-        out_indices=tuple(profile["out_indices"]),
-    ).eval().to(device)
-    info = summary(
-        model,
-        input_size=(1, 3, image_size[0], image_size[1]),
-        verbose=0,
-        col_names=("mult_adds",),
-        device=str(device),
-    )
-    del model
-    if device.type == "cuda":
-        torch.cuda.empty_cache()
-    return int(info.total_mult_adds or 0)
+SYSTEM_LABELS = [
+    "default profile + common bank",
+    "default profile + category bank switch",
+    "best fixed profile + category bank switch",
+    "proposed profile + category bank switch",
+]
 
 
-@lru_cache(maxsize=None)
-def profile_macs_from_config(config_name: str, image_height: int, image_width: int) -> int:
-    profile, _bank, _topk = parse_profile_from_config(config_name)
-    return estimate_profile_macs(profile, (image_height, image_width))
+def pct(value: float | None) -> str:
+    if value is None:
+        return "-"
+    return f"{100.0 * value:.2f}%"
 
 
-def cycles_to_ms(cycles: int, clock_mhz: float) -> float:
-    return 1000.0 * cycles / (clock_mhz * 1_000_000.0)
+def round_float(value: float | None, digits: int = 6) -> float | None:
+    if value is None:
+        return None
+    return round(float(value), digits)
 
 
-def build_rows(args: argparse.Namespace, cost_payload: dict, holdout_payload: dict) -> list[dict]:
-    holdout_by_category = {
-        row["category"]: row
-        for row in holdout_payload["category_summary"]
-        if row["runs"] > 0
+def mib(bytes_value: float) -> float:
+    return bytes_value / (1024.0 * 1024.0)
+
+
+def bram36(bits: int) -> int:
+    return math.ceil(bits / 36_864)
+
+
+def uram288(bits: int) -> int:
+    return math.ceil(bits / 294_912)
+
+
+def category_feature_values(system: dict, common_bank: bool) -> int:
+    rows = system["category_rows"]
+    if common_bank:
+        first = rows[0]
+        return int(first["bank_patches_searched"] * first["feature_dim"])
+    return int(sum(row["bank_patches_searched"] * row["feature_dim"] for row in rows))
+
+
+def category_max_dim(system: dict) -> int:
+    return int(max(row["feature_dim"] for row in system["category_rows"]))
+
+
+def category_mean_dim(system: dict) -> float:
+    return float(mean(row["feature_dim"] for row in system["category_rows"]))
+
+
+def category_mean_patch_count(system: dict) -> float:
+    return float(mean(row["patch_count"] for row in system["category_rows"]))
+
+
+def nn_cycles(row: dict, lanes: int) -> int:
+    return int(row["patch_count"] * row["bank_patches_searched"] * math.ceil(row["feature_dim"] / lanes))
+
+
+def system_cycles(system: dict, lanes: int) -> dict:
+    cycles = [nn_cycles(row, lanes) for row in system["category_rows"]]
+    return {
+        "mean_cycles": round_float(mean(cycles)),
+        "median_cycles": round_float(median(cycles)),
+        "max_cycles": int(max(cycles)),
     }
+
+
+def best_fixed_system(item: dict) -> dict:
+    return max(item["systems"][2:-1], key=lambda system: system["min_good_pass"] if system["min_good_pass"] is not None else -1.0)
+
+
+def normalized_systems(item: dict) -> list[dict]:
+    return [
+        item["systems"][0],
+        item["systems"][1],
+        best_fixed_system(item),
+        item["systems"][-1],
+    ]
+
+
+def summarize_bank(items: list[dict], args: argparse.Namespace) -> list[dict]:
     rows = []
-    for row in cost_payload["rows"]:
-        category = row["category"]
-        base = cost_payload["baseline_details"][category]
-        selected = cost_payload["selected_details"][category]
-        holdout = holdout_by_category.get(category, {})
-        base_fp = base["footprint"]
-        sel_fp = selected["footprint"]
-
-        base_cnn_macs = profile_macs_from_config(
-            row["baseline_config"], args.image_height, args.image_width
-        )
-        sel_cnn_macs = profile_macs_from_config(
-            row["selected_config"], args.image_height, args.image_width
-        )
-        base_nn_ops = int(base_fp["per_image_nn_ops"])
-        sel_nn_ops = int(sel_fp["per_image_nn_ops"])
-        base_total_ops = base_cnn_macs + args.distance_op_weight * base_nn_ops
-        sel_total_ops = sel_cnn_macs + args.distance_op_weight * sel_nn_ops
-
-        base_bank_bytes_int8 = int(base_fp["bank_bytes_int8"])
-        sel_bank_bytes_int8 = int(sel_fp["bank_bytes_int8"])
-        base_stream_bytes_int8 = int(base_fp["patch_count"] * base_bank_bytes_int8)
-        sel_stream_bytes_int8 = int(sel_fp["patch_count"] * sel_bank_bytes_int8)
-        base_cached_bytes_int8 = int(base_bank_bytes_int8 + base_fp["per_image_feature_values"])
-        sel_cached_bytes_int8 = int(sel_bank_bytes_int8 + sel_fp["per_image_feature_values"])
-
-        lane_estimates = {}
-        for lanes in args.knn_lanes:
-            base_cycles = math.ceil(base_nn_ops / lanes)
-            sel_cycles = math.ceil(sel_nn_ops / lanes)
-            lane_estimates[str(lanes)] = {
-                "baseline_knn_cycles": base_cycles,
-                "selected_knn_cycles": sel_cycles,
-                "baseline_knn_ms": round_float(cycles_to_ms(base_cycles, args.clock_mhz)),
-                "selected_knn_ms": round_float(cycles_to_ms(sel_cycles, args.clock_mhz)),
-            }
-
+    for system_index, label in enumerate(SYSTEM_LABELS):
+        systems = [normalized_systems(item)[system_index] for item in items]
+        common_bank = system_index == 0
+        memory_values = [category_feature_values(system, common_bank) for system in systems]
+        bits = [value * args.feature_bits for value in memory_values]
+        nn_ops = [system["mean_nn_ops_per_image"] for system in systems]
+        good_min = [system["min_good_pass"] for system in systems if system["min_good_pass"] is not None]
+        good_mean = [system["mean_good_pass"] for system in systems if system["mean_good_pass"] is not None]
+        cycle_rows = [system_cycles(system, args.distance_lanes)["mean_cycles"] for system in systems]
         rows.append(
             {
-                "category": category,
-                "selected_config": row["selected_config"],
-                "holdout_baseline_good_pass": holdout.get("baseline_holdout_good_pass_mean"),
-                "holdout_selected_good_pass": holdout.get("selected_holdout_good_pass_mean"),
-                "holdout_selected_false_pass": holdout.get("selected_holdout_false_pass_mean"),
-                "baseline_cnn_macs": base_cnn_macs,
-                "selected_cnn_macs": sel_cnn_macs,
-                "relative_cnn_macs": round_float(sel_cnn_macs / base_cnn_macs) if base_cnn_macs else None,
-                "baseline_nn_ops_per_image": base_nn_ops,
-                "selected_nn_ops_per_image": sel_nn_ops,
-                "relative_nn_ops": round_float(sel_nn_ops / base_nn_ops) if base_nn_ops else None,
-                "baseline_total_proxy_ops": int(base_total_ops),
-                "selected_total_proxy_ops": int(sel_total_ops),
-                "relative_total_proxy_ops": round_float(sel_total_ops / base_total_ops) if base_total_ops else None,
-                "baseline_bank_bytes_int8": base_bank_bytes_int8,
-                "selected_bank_bytes_int8": sel_bank_bytes_int8,
-                "relative_bank_bytes_int8": round_float(sel_bank_bytes_int8 / base_bank_bytes_int8)
-                if base_bank_bytes_int8
-                else None,
-                "baseline_stream_bytes_int8_per_image": base_stream_bytes_int8,
-                "selected_stream_bytes_int8_per_image": sel_stream_bytes_int8,
-                "relative_stream_bytes_int8": round_float(sel_stream_bytes_int8 / base_stream_bytes_int8)
-                if base_stream_bytes_int8
-                else None,
-                "baseline_cached_bytes_int8_per_image": base_cached_bytes_int8,
-                "selected_cached_bytes_int8_per_image": sel_cached_bytes_int8,
-                "relative_cached_bytes_int8": round_float(sel_cached_bytes_int8 / base_cached_bytes_int8)
-                if base_cached_bytes_int8
-                else None,
-                "lane_estimates": lane_estimates,
+                "system": label,
+                "mean_min_good_pass": round_float(mean(good_min)) if good_min else None,
+                "mean_good_pass": round_float(mean(good_mean)) if good_mean else None,
+                "mean_nn_ops": round_float(mean(nn_ops)),
+                "relative_nn_ops": None,
+                "mean_stored_feature_values": round_float(mean(memory_values)),
+                "mean_bank_memory_mib": round_float(mib(mean(bits) / 8.0)),
+                "mean_bram36": round_float(mean(bram36(int(bit)) for bit in bits)),
+                "mean_uram288": round_float(mean(uram288(int(bit)) for bit in bits)),
+                "max_feature_dim": int(max(category_max_dim(system) for system in systems)),
+                "mean_feature_dim_per_mode": round_float(mean(category_mean_dim(system) for system in systems)),
+                "mean_patch_count_per_mode": round_float(mean(category_mean_patch_count(system) for system in systems)),
+                "mean_cycles_at_lanes": round_float(mean(cycle_rows)),
+                "relative_cycles_at_lanes": None,
             }
         )
+    base_ops = rows[0]["mean_nn_ops"]
+    base_cycles = rows[0]["mean_cycles_at_lanes"]
+    for row in rows:
+        row["relative_nn_ops"] = round_float(row["mean_nn_ops"] / base_ops)
+        row["relative_cycles_at_lanes"] = round_float(row["mean_cycles_at_lanes"] / base_cycles)
     return rows
 
 
-def summarize(rows: list[dict]) -> dict:
-    keys = [
-        "relative_cnn_macs",
-        "relative_nn_ops",
-        "relative_total_proxy_ops",
-        "relative_bank_bytes_int8",
-        "relative_stream_bytes_int8",
-        "relative_cached_bytes_int8",
+def write_markdown(payload: dict, path: Path) -> None:
+    cfg = payload["config"]
+    lines = [
+        "# FPGA実装に向けた理論コスト比較",
+        "",
+        "## 目的",
+        "",
+        "性能評価で有利でも，FPGA実装時に大きな回路・メモリコストが必要なら利点は弱くなる。ここでは実測ではなく，固定bank数実験の結果を用いて，メモリ量・NN探索サイクル・切替オーバーヘッドを理論値で比較する。",
+        "",
+        "## 前提",
+        "",
+        "- CNN本体は `wide_resnet50_2` で固定し，複数CNNをFPGAに載せる構成にはしない。",
+        "- 切り替えるのは，使用する中間特徴，特徴次元，grid，top-k，bankのベースアドレス，探索bank長，閾値である。",
+        "- bank値は量子化後に保持する想定で，ここでは1特徴値を "
+        f"{cfg['feature_bits']} bit として見積もる。",
+        "- BRAM36は36 Kbit，URAM288は288 Kbitとして概算する。",
+        f"- NN探索器は1サイクルに {cfg['distance_lanes']} 個の特徴差分を処理する単純モデルとする。",
+        "- mode切替に必要な設定値は，bank本体に比べて十分小さいため，主コストはbankメモリとNN探索で評価する。",
+        "",
+        "## 比較対象",
+        "",
+        "| 記号 | 方式 | 実装上の意味 |",
+        "|---|---|---|",
+        "| ① | デフォルトprofile + 共通bank | 対象カテゴリ集合のbankを毎回すべて探索する。実装は単純だが探索量が最大。 |",
+        "| ② | デフォルトprofile + category bank切替 | 総bank数は同じだが，検品対象カテゴリのbankだけを探索する。 |",
+        "| ③ | どれか1つの専用profile固定 + category bank切替 | 軽いprofileを1つだけ採用する。回路は単純だが，カテゴリ相性を外すと性能が下振れる。 |",
+        "| ④ | 提案: category別profile + category bank切替 | CNNは共通のまま，カテゴリごとに特徴抽出profileとbankを切り替える。 |",
+        "",
     ]
-    out = {}
-    for key in keys:
-        values = [row[key] for row in rows if row[key] is not None]
-        out[f"mean_{key}"] = round_float(float(np.mean(values))) if values else None
-        out[f"median_{key}"] = round_float(float(np.median(values))) if values else None
-    return out
-
-
-def write_csv(rows: list[dict], path: Path) -> None:
-    columns = [
-        "category",
-        "selected_config",
-        "holdout_baseline_good_pass",
-        "holdout_selected_good_pass",
-        "holdout_selected_false_pass",
-        "relative_cnn_macs",
-        "relative_nn_ops",
-        "relative_total_proxy_ops",
-        "relative_bank_bytes_int8",
-        "relative_stream_bytes_int8",
-        "relative_cached_bytes_int8",
+    for bank_size, rows in payload["summary_by_bank_per_category"].items():
+        lines += [
+            f"## bank/category = {bank_size}",
+            "",
+            "| 方式 | 最低良品通過率 | 平均良品通過率 | NN演算量 | NNサイクル | bankメモリ | BRAM36 | URAM288 | 最大特徴次元 |",
+            "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
+        ]
+        for row in rows:
+            lines.append(
+                f"| {row['system']} | {pct(row['mean_min_good_pass'])} | {pct(row['mean_good_pass'])} | "
+                f"{row['relative_nn_ops']:.3f}x | {row['relative_cycles_at_lanes']:.3f}x | "
+                f"{row['mean_bank_memory_mib']:.3f} MiB | {row['mean_bram36']:.1f} | {row['mean_uram288']:.1f} | {row['max_feature_dim']} |"
+            )
+        prop = rows[-1]
+        bank_only = rows[1]
+        fixed = rows[2]
+        lines += [
+            "",
+            "読み取り:",
+            "",
+            f"- ②に対して④は，NN演算量を {pct(1.0 - prop['relative_nn_ops'] / bank_only['relative_nn_ops'])} 追加削減する。",
+            f"- ③に対して④は，平均コストは近いが，カテゴリ別profileを使うためprofile選択ミスによる性能下振れを避ける設計である。",
+            f"- ④のbankメモリは①より小さいか同程度であり，切替機構がメモリ面で利点を帳消しにする構造ではない。",
+            "",
+        ]
+    lines += [
+        "## FPGA実装上の主張",
+        "",
+        "1. **複数CNNを載せない**: backboneを固定するため，profile切替のためにCNN回路を複製しない。",
+        "2. **切替コストが小さい**: category IDでbank開始アドレス，探索長，特徴マスク，top-k数，閾値を切り替えるだけなので，追加制御は小さい。",
+        "3. **NN探索の削減が直接効く**: PatchCoreの重い部分はpatch特徴とbankの距離計算であり，探索bank長と特徴次元の削減はサイクル数・メモリアクセス量・消費電力に直接効く。",
+        "4. **未使用次元を止められる**: 提案方式では512次元profileのカテゴリでは768次元全体を使わず，距離演算器の一部をクロックゲートまたは無効化できる。",
+        "5. **再構成不要**: カテゴリ変更はbitstream再構成ではなくmode registerの更新として扱えるため，検品ラインの段取り替えに合わせやすい。",
+        "",
+        "## 注意点",
+        "",
+        "- CNN本体の畳み込み計算は固定backboneなので，本見積もりの主対象はPatchCore後段の特徴保持・NN探索である。",
+        "- 実際の速度・消費電力はメモリ帯域，量子化方式，距離演算器の並列度，bank配置に依存するため，最終的にはRTLまたはHLSで実測する必要がある。",
+        "- ただし理論値上，提案方式は大きな追加メモリや複数CNNを要求しないため，性能面の利点をFPGA実装コストが帳消しにする構造ではない。",
+        "",
     ]
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=columns)
-        writer.writeheader()
-        for row in rows:
-            writer.writerow({key: row.get(key) for key in columns})
+    path.write_text("\n".join(lines), encoding="utf-8")
 
 
-def plot_summary(payload: dict, path: Path) -> None:
-    rows = payload["rows"]
-    labels = [row["category"] for row in rows]
-    x = np.arange(len(labels))
-    width = 0.22
-    rel_cnn = [100.0 * row["relative_cnn_macs"] for row in rows]
-    rel_nn = [100.0 * row["relative_nn_ops"] for row in rows]
-    rel_total = [100.0 * row["relative_total_proxy_ops"] for row in rows]
-    rel_bank = [100.0 * row["relative_bank_bytes_int8"] for row in rows]
+def write_figure(payload: dict, path: Path) -> bool:
+    try:
+        import matplotlib
 
-    fig, axes = plt.subplots(2, 1, figsize=(12.2, 7.4), sharex=True)
-    axes[0].bar(x - width, rel_cnn, width=width, label="CNN MAC", color="#4c78a8")
-    axes[0].bar(x, rel_nn, width=width, label="NN ops", color="#f58518")
-    axes[0].bar(x + width, rel_total, width=width, label="total proxy", color="#54a24b")
-    axes[0].set_ylabel("selected / baseline [%]")
-    axes[0].set_title("FPGA-facing compute proxy")
+        matplotlib.use("Agg")
+
+        import matplotlib.pyplot as plt
+        import numpy as np
+    except ModuleNotFoundError:
+        return False
+
+    bank_size = "3000" if "3000" in payload["summary_by_bank_per_category"] else sorted(payload["summary_by_bank_per_category"])[-1]
+    rows = payload["summary_by_bank_per_category"][bank_size]
+    labels = ["①", "②", "③", "④"]
+    ops = [row["relative_nn_ops"] for row in rows]
+    mem = [row["mean_bank_memory_mib"] for row in rows]
+    good = [row["mean_min_good_pass"] for row in rows]
+
+    fig, axes = plt.subplots(1, 3, figsize=(13.5, 4.2))
+    colors = ["#4e79a7", "#59a14f", "#f28e2b", "#e15759"]
+    axes[0].bar(labels, ops, color=colors)
+    axes[0].set_title("NN search work")
+    axes[0].set_ylabel("relative to ①")
+    axes[0].set_ylim(0, 1.08)
     axes[0].grid(True, axis="y", alpha=0.3)
-    axes[0].legend()
-
-    axes[1].bar(x - 0.16, rel_bank, width=0.32, label="bank storage", color="#b279a2")
-    axes[1].bar(
-        x + 0.16,
-        [100.0 * row["relative_stream_bytes_int8"] for row in rows],
-        width=0.32,
-        label="streamed bank traffic",
-        color="#e45756",
-    )
-    axes[1].set_ylabel("selected / baseline [%]")
-    axes[1].set_title("FPGA-facing memory proxy")
+    axes[1].bar(labels, mem, color=colors)
+    axes[1].set_title("Stored bank memory")
+    axes[1].set_ylabel("MiB")
     axes[1].grid(True, axis="y", alpha=0.3)
-    axes[1].set_xticks(x)
-    axes[1].set_xticklabels(labels, rotation=35, ha="right")
-    axes[1].legend()
+    axes[2].bar(labels, good, color=colors)
+    axes[2].set_title("Minimum good-pass")
+    axes[2].set_ylabel("rate")
+    axes[2].set_ylim(0, 1.0)
+    axes[2].grid(True, axis="y", alpha=0.3)
+    fig.suptitle(f"FPGA-facing cost model, bank/category={bank_size}")
     fig.tight_layout()
     path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(path, dpi=180)
     plt.close(fig)
+    return True
 
 
-def pct(value: float | None) -> str:
-    return "" if value is None else f"{100.0 * value:.2f}%"
-
-
-def write_markdown(payload: dict, path: Path) -> None:
-    agg = payload["aggregate"]
-    lines = [
-        "# FPGA cost model for profiled PatchCore",
-        "",
-        "Purpose: translate the current PatchCore reduction evidence into FPGA-facing resource and latency proxies.",
-        "",
-        "## Scope",
-        "",
-        "This is a pre-RTL estimate.  It does not claim final FPGA power or timing.",
-        "It separates the parts that must be implemented and measured next:",
-        "",
-        "- CNN feature extraction MACs",
-        "- PatchCore nearest-neighbor distance operations",
-        "- Memory-bank storage",
-        "- Memory-bank read traffic",
-        "- KNN latency under several parallel distance-lane counts",
-        "",
-        "## Aggregate ratios",
-        "",
-        f"- mean CNN MAC ratio: `{agg['mean_relative_cnn_macs']:.4f}x`",
-        f"- mean NN operation ratio: `{agg['mean_relative_nn_ops']:.4f}x`",
-        f"- mean total proxy ratio: `{agg['mean_relative_total_proxy_ops']:.4f}x`",
-        f"- mean memory-bank ratio: `{agg['mean_relative_bank_bytes_int8']:.4f}x`",
-        f"- mean streamed-bank traffic ratio: `{agg['mean_relative_stream_bytes_int8']:.4f}x`",
-        "",
-        "## Category table",
-        "",
-        "| category | selected config | good-pass | false-pass | CNN MAC | NN ops | total proxy | bank | streamed traffic |",
-        "|---|---|---:|---:|---:|---:|---:|---:|---:|",
-    ]
-    for row in payload["rows"]:
-        lines.append(
-            f"| {row['category']} | `{row['selected_config']}` | "
-            f"{pct(row['holdout_selected_good_pass'])} | {pct(row['holdout_selected_false_pass'])} | "
-            f"{row['relative_cnn_macs']:.4f}x | {row['relative_nn_ops']:.4f}x | "
-            f"{row['relative_total_proxy_ops']:.4f}x | {row['relative_bank_bytes_int8']:.4f}x | "
-            f"{row['relative_stream_bytes_int8']:.4f}x |"
-        )
-    lines += [
-        "",
-        "## Interpretation for thesis lock",
-        "",
-        "- The nearest-neighbor search reduction is mathematically explained by patch count, bank size, and feature dimension.",
-        "- After the NN search is reduced, CNN feature extraction becomes the dominant remaining compute block.",
-        "- Therefore the FPGA thesis should not claim only `PatchCore is 98% lighter`.",
-        "- The defensible claim is: category profiling can shrink the memory-bank search engine dramatically, and the final FPGA implementation must measure how much of that reduction survives after CNN and memory-system costs are included.",
-        "",
-        f"CSV: `{payload['csv']}`",
-        f"Figure: `{payload['figure']}`",
-    ]
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--markdown", type=Path, default=DEFAULT_MARKDOWN)
+    parser.add_argument("--figure", type=Path, default=DEFAULT_FIGURE)
+    parser.add_argument("--feature-bits", type=int, default=8)
+    parser.add_argument("--distance-lanes", type=int, default=64)
+    return parser.parse_args()
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--cost-summary", default="results/mvtec_patchcore_cost_credibility_audit_002_summary.json")
-    parser.add_argument("--holdout-summary", default="results/mvtec_patchcore_profiled_holdout_validation_001_summary.json")
-    parser.add_argument("--output", default="results/mvtec_patchcore_fpga_cost_model_001_summary.json")
-    parser.add_argument("--csv", default="results/mvtec_patchcore_fpga_cost_model_001.csv")
-    parser.add_argument("--markdown", default="docs/mvtec_patchcore_fpga_cost_model_001.md")
-    parser.add_argument("--figure", default="results/mvtec_patchcore_fpga_cost_model_001.png")
-    parser.add_argument("--image-height", type=int, default=224)
-    parser.add_argument("--image-width", type=int, default=224)
-    parser.add_argument("--clock-mhz", type=float, default=200.0)
-    parser.add_argument("--distance-op-weight", type=float, default=3.0)
-    parser.add_argument("--knn-lanes", nargs="*", type=int, default=[64, 128, 256, 512, 1024, 2048])
-    args = parser.parse_args()
-
-    ensure_dirs()
-    cost_payload = json.loads(Path(args.cost_summary).read_text(encoding="utf-8"))
-    holdout_payload = json.loads(Path(args.holdout_summary).read_text(encoding="utf-8"))
-    rows = build_rows(args, cost_payload, holdout_payload)
-    payload = {
-        "purpose": "FPGA-facing cost model for category-profiled minimal PatchCore.",
-        "config": vars(args),
-        "aggregate": summarize(rows),
-        "rows": rows,
-        "csv": args.csv,
-        "figure": args.figure,
+    args = parse_args()
+    source = json.loads(args.source.read_text(encoding="utf-8"))
+    summary_by_bank = {
+        bank_size: summarize_bank(items, args)
+        for bank_size, items in source["results_by_bank_per_category"].items()
     }
-    Path(args.output).parent.mkdir(parents=True, exist_ok=True)
-    Path(args.output).write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    write_csv(rows, Path(args.csv))
-    plot_summary(payload, Path(args.figure))
-    write_markdown(payload, Path(args.markdown))
-    print(json.dumps({"wrote": args.output, "csv": args.csv, "markdown": args.markdown, "figure": args.figure}, indent=2))
+    payload = {
+        "purpose": "FPGA-facing theoretical cost model for category-wise PatchCore profile and bank switching.",
+        "config": {
+            "source": str(args.source),
+            "feature_bits": args.feature_bits,
+            "distance_lanes": args.distance_lanes,
+        },
+        "summary_by_bank_per_category": summary_by_bank,
+    }
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_markdown(payload, args.markdown)
+    wrote_figure = write_figure(payload, args.figure)
+    print(
+        json.dumps(
+            {"wrote": str(args.output), "markdown": str(args.markdown), "figure": str(args.figure) if wrote_figure else None},
+            ensure_ascii=False,
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":
