@@ -80,7 +80,7 @@ def parse_ints(text: str) -> list[int]:
     return [int(part) for part in text.split(",") if part.strip()]
 
 
-def standard_cfg() -> dict:
+def make_standard_cfg() -> dict:
     return {
         "config": "standard_wrn_l23_g14_topk0p01",
         "backbone": "wide_resnet50_2",
@@ -113,7 +113,7 @@ def choose_category_profile(
         ops = int(footprint["patch_count"] * footprint["feature_dim"])
         candidates.append((ops, -good, cfg))
     if not candidates:
-        return standard_cfg()
+        return make_standard_cfg()
     return min(candidates, key=lambda item: item[:2])[2]
 
 
@@ -392,7 +392,7 @@ def main() -> None:
         category: choose_category_profile(category, by_category, baseline_good[category], args)
         for category in categories
     }
-    standard_cfg = standard_cfg()
+    standard_cfg = make_standard_cfg()
     cache = FeatureCache(args.materialized_root, args, device)
 
     subsets = []
