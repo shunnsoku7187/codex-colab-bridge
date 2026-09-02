@@ -1,0 +1,13 @@
+{
+  "id": "mvtec_patchcore_kcenter_default_system_compare_002",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -m pip install -r requirements-colab.txt timm pyarrow && python -m scripts.mvtec_patchcore_fixed_bank_profile_switch --source results/mvtec_patchcore_backbone_floor_probe_001_summary.json --output results/mvtec_patchcore_kcenter_default_system_compare_002_summary.json --markdown docs/mvtec_patchcore_kcenter_default_system_compare_002.md --figure results/mvtec_patchcore_kcenter_default_system_compare_002.png --materialized-root /home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2 --backbone wide_resnet50_2 --profile-selection-bank 12000 --bank-per-category 600,1500,3000 --false-pass-target 0.03 --allowed-good-pass-drop 0.02 --pair-limit 105 --triple-limit 455 --coreset-candidate-pool 12000 --curve-points 120 --batch-size 32 --nn-chunk-size 8192 --distance-batch-size 8192 --seed 123 --require-cuda",
+  "max_runtime_sec": 86400,
+  "result_file": "results/mvtec_patchcore_kcenter_default_system_compare_002.json",
+  "note": "Full rerun of the k-center default system comparison. The prior _001 job evaluated all 105 AB subsets but only 120 of 455 ABC subsets. This job evaluates all 105 AB and all 455 ABC subsets under the same conditions.",
+  "created_at": "2026-09-03T00:00:00+09:00"
+}
