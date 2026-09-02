@@ -1,6 +1,6 @@
 {
   "id": "mvtec_patchcore_kcenter_default_system_compare_002",
-  "status": "pending",
+  "status": "running",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,5 +9,7 @@
   "max_runtime_sec": 86400,
   "result_file": "results/mvtec_patchcore_kcenter_default_system_compare_002.json",
   "note": "Full rerun of the k-center default system comparison. The prior _001 job evaluated all 105 AB subsets but only 120 of 455 ABC subsets. This job evaluates all 105 AB and all 455 ABC subsets under the same conditions.",
-  "created_at": "2026-09-03T00:00:00+09:00"
+  "created_at": "2026-09-03T00:00:00+09:00",
+  "updated_at": "2026-09-02T21:52:53.733800+00:00",
+  "started_at": "2026-09-02T21:52:53.733780+00:00"
 }
