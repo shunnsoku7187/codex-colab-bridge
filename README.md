@@ -1,5 +1,11 @@
 # Codex Colab GPU Bridge
 
+## Research Handoff / 研究引き継ぎ
+
+**まず [研究引き継ぎ](docs/RESEARCH_HANDOFF.md) を読んでください。**
+現在の主題はカテゴリ別profile・bank切り替えを備えたPatchCore-liteのFPGA実装です。
+以下は実験実行基盤の説明です。研究の現状・最新版資料・結果の条件・次の作業は引き継ぎ文書を正とします。
+
 This repository is the shared surface between Codex and a Google Colab GPU
 runtime.
 
