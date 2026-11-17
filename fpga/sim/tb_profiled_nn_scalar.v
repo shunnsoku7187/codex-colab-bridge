@@ -32,18 +32,20 @@ module tb_profiled_nn_scalar;
     endtask
     initial begin
       bank[0]=1; bank[1]=2; bank[2]=4; bank[3]=5;
-      bank[4]=2; bank[5]=2; bank[6]=3; bank[7]=3;
-      bank[8]=-2; bank[9]=-1; bank[10]=0; bank[11]=1;
+      bank[4]=2; bank[5]=2; bank[6]=3;
+      bank[7]=3; bank[8]=3; bank[9]=3;
+      bank[10]=-2; bank[11]=-1; bank[12]=0; bank[13]=1;
       repeat(3) @(negedge clk); rst=0;
       load_query(0,2); load_query(1,3);
       configure(0,2,2); run_check(2); // min of [1,2] and [4,5]
-      configure(4,2,2); run_check(1); // min of [2,2] and [3,3]
+      load_query(2,4);
+      configure(4,2,3); run_check(2); // three-dimensional profile
       load_query(0,-2); load_query(1,0);
-      configure(8,2,2); run_check(1); // signed data and changed bank
-      configure(8,0,2);
+      configure(10,2,2); run_check(1); // signed data and changed bank
+      configure(10,0,2);
       @(negedge clk); start=1; @(negedge clk); start=0;
       if (!done || !error || busy) $fatal(1,"zero-point bank should fail");
-      configure(8,2,9);
+      configure(10,2,9);
       @(negedge clk); start=1; @(negedge clk); start=0;
       if (!done || !error || busy) $fatal(1,"oversize dimension should fail");
       $display("PROFILED_NN_SIM_PASS"); $finish;
