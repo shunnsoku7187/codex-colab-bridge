@@ -1,5 +1,7 @@
 # Codex Colab GPU Bridge
 
+FPGA/Ultra96-V2 boardless implementation status and missing inputs: [fpga/BOARDLESS_GAPS.md](fpga/BOARDLESS_GAPS.md). The runnable NN control-path simulation is documented in [fpga/README.md](fpga/README.md).
+
 ## Research Handoff / 研究引き継ぎ
 
 **まず [研究引き継ぎ](docs/RESEARCH_HANDOFF.md) を読んでください。**

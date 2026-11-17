@@ -19,3 +19,5 @@ results/local_*.json
 *.zip
 *.tar
 *.tar.gz
+fpga/sim/build/
+fpga/vivado/build/
