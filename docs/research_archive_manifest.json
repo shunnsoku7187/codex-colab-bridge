@@ -1,11 +1,16 @@
 {
-  "inventory_date": "2026-11-18",
+  "inventory_date": "2026-11-20",
   "entry_point": "docs/RESEARCH_HANDOFF.md",
   "files": [
     {
+      "path": "docs/ARCHIVE_GAP_AUDIT.md",
+      "bytes": 2850,
+      "sha256": "348c659f72a567277e4767fad990b2f68b77645769298976ce099aff443e8e63"
+    },
+    {
       "path": "docs/RESEARCH_HANDOFF.md",
-      "bytes": 10742,
-      "sha256": "e4c10b03e7a3cb0966f01011bb67c70e0277176bfc777f54604baa08bf78d2b0"
+      "bytes": 11037,
+      "sha256": "d266ddae0f321f37114d1e8ea4e076b40e997d92d3de8385024eece5894a7af1"
     },
     {
       "path": "docs/approach_pruning.md",
@@ -571,6 +576,41 @@
       "path": "docs/virtual_deadline_simulation_findings.md",
       "bytes": 5009,
       "sha256": "5d1ed03d447af9f54ace6a245133f353148d7700fd30212f4cbe695f1b198254"
+    },
+    {
+      "path": "fpga/BOARDLESS_GAPS.md",
+      "bytes": 2754,
+      "sha256": "c7834ea148bb1894ed38a6dd79b19f8cce18cc79a20047ed35e2b362d0c55afe"
+    },
+    {
+      "path": "fpga/README.md",
+      "bytes": 2593,
+      "sha256": "06e7994726e4f708cf146c0e8c0674642c5d4dedc22e88fe9ab8af79730a1943"
+    },
+    {
+      "path": "fpga/evidence/scalar_sim_2026-11-20.log",
+      "bytes": 470,
+      "sha256": "4a5b42a437110b35679e1ee569e60ad10c0d08d3af0735fe3d54b85cab0dc2fb"
+    },
+    {
+      "path": "fpga/rtl/profiled_nn_scalar.v",
+      "bytes": 2741,
+      "sha256": "53c6fc6165f84def3c66e645cd8da28627a40a523986d779b4bcfa6edff70b8c"
+    },
+    {
+      "path": "fpga/sim/run_scalar_sim.sh",
+      "bytes": 325,
+      "sha256": "2dc2473c171c385b3e8a3fc4fe1fbc30ec4698f36e3ca0cc1a440742741e24f1"
+    },
+    {
+      "path": "fpga/sim/tb_profiled_nn_scalar.v",
+      "bytes": 2325,
+      "sha256": "9567d2684f29aca4a67dc16946604e364d1f79d442f99c3182cb47b4a0ac042c"
+    },
+    {
+      "path": "fpga/vivado/implement_profiled_nn.tcl",
+      "bytes": 358,
+      "sha256": "70597e9620d149517839c1d31803e2c75ec0b249d71d81bf5820496b9a65c30f"
     },
     {
       "path": "jobs/0000_branchynet_reproduce_resnet_cifar10_retry.json",
@@ -4779,8 +4819,8 @@
     },
     {
       "path": "tools/build_poster_pptx.mjs",
-      "bytes": 9512,
-      "sha256": "7dff1fed75be3d9192546dd8f5eb3f634de685d94f7da3b683d6a1ce607a02ca"
+      "bytes": 9788,
+      "sha256": "61c4d098349f8377b6bf68c51bbb5241097088fa849e0040286db663f371a93e"
     },
     {
       "path": "tools/build_qa_cheatsheet.py",
@@ -4789,8 +4829,8 @@
     },
     {
       "path": "tools/build_research_archive_manifest.py",
-      "bytes": 1701,
-      "sha256": "630cc567a158483ef95ac752f85847d8caaa6182cb7156ecdfadf2293b0d1e54"
+      "bytes": 1748,
+      "sha256": "16a13a9d927eef288452d4fc3d0ccfe1171abb7a43857df444be5a8ba1a1a389"
     },
     {
       "path": "tools/build_sympo_patchcore_summary.py",

@@ -3,6 +3,7 @@ import hashlib
 import json
 import re
 import subprocess
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,7 +24,7 @@ for name in staged:
 
 entries = []
 for name in paths('ls-files'):
-    if not name.startswith(('docs/', 'results/', 'jobs/', 'scripts/', 'src/', 'tools/', 'output/', 'logs/')):
+    if not name.startswith(('docs/', 'results/', 'jobs/', 'scripts/', 'src/', 'tools/', 'output/', 'logs/', 'fpga/')):
         continue
     if name == 'docs/research_archive_manifest.json':
         continue
@@ -32,6 +33,6 @@ for name in paths('ls-files'):
         data = path.read_bytes()
         entries.append({'path': name, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
 out = ROOT / 'docs/research_archive_manifest.json'
-out.write_text(json.dumps({'inventory_date': '2026-11-18', 'entry_point': 'docs/RESEARCH_HANDOFF.md',
+out.write_text(json.dumps({'inventory_date': date.today().isoformat(), 'entry_point': 'docs/RESEARCH_HANDOFF.md',
                           'files': entries}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print(f'Inventoried {len(entries)} files; checked {len(staged)} staged files for size and credential patterns.')

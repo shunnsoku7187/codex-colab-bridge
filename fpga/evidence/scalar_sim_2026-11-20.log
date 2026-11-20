@@ -1,0 +1,8 @@
+Fri Nov 20 12:08:51 UTC 2026
+Icarus Verilog version 12.0 (stable) ()
+
+83d70ad4c67e25ed8e4419849da086cb464d8d6a
+53c6fc6165f84def3c66e645cd8da28627a40a523986d779b4bcfa6edff70b8c  fpga/rtl/profiled_nn_scalar.v
+9567d2684f29aca4a67dc16946604e364d1f79d442f99c3182cb47b4a0ac042c  fpga/sim/tb_profiled_nn_scalar.v
+PROFILED_NN_SIM_PASS
+/mnt/c/Users/shun7/Documents/Codex/2026-07-01/goo/work/colab-github-bridge/fpga/sim/tb_profiled_nn_scalar.v:51: $finish called at 470000 (1ps)

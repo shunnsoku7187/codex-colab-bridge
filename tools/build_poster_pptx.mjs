@@ -1,13 +1,13 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
-import {pathToFileURL} from 'node:url';
+import {pathToFileURL, fileURLToPath} from 'node:url';
 
-const ROOT = 'C:/Users/shun7/Documents/Codex/2026-07-01/goo/work/colab-github-bridge';
-const RUNTIME = 'C:/Users/shun7/.cache/codex-runtimes/codex-primary-runtime/dependencies';
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const RUNTIME = process.env.POSTER_RUNTIME || 'C:/Users/shun7/.cache/codex-runtimes/codex-primary-runtime/dependencies';
 process.env.RUNTIME_NODE_MODULES=`${RUNTIME}/node/node_modules`;
 process.env.RUNTIME_NODE=`${RUNTIME}/node/bin/node.exe`;
-const SKILL = 'C:/Users/shun7/.codex/plugins/cache/openai-primary-runtime/presentations/26.909.12148/skills/presentations';
+const SKILL = process.env.POSTER_PRESENTATIONS_SKILL || 'C:/Users/shun7/.codex/plugins/cache/openai-primary-runtime/presentations/26.909.12148/skills/presentations';
 const {Presentation, PresentationFile, FileBlob} = await import(pathToFileURL(`${RUNTIME}/node/node_modules/@oai/artifact-tool/dist/artifact_tool.mjs`));
 const {finalizePresentation,makeNativeBulletParagraphs} = await import(pathToFileURL(`${SKILL}/container_tools/artifact_tool_utils.mjs`));
 const BUILD = `${ROOT}/tmp/poster_pptx`;
@@ -18,7 +18,10 @@ const BLUE='#205B80', GREEN='#087763', INK='#18252C';
 await fs.mkdir(OUTPUT,{recursive:true});
 
 for(const lang of ['en','ja']){
-  const data=JSON.parse(await fs.readFile(`${BUILD}/content_${lang}.json`,'utf8'));
+  const contentPath = `${BUILD}/content_${lang}.json`;
+  const sourcePath = `${OUTPUT}/source/content_${lang}.json`;
+  const selectedContentPath = await fs.access(contentPath).then(()=>contentPath).catch(()=>sourcePath);
+  const data=JSON.parse(await fs.readFile(selectedContentPath,'utf8'));
   const font=lang==='ja'?'Meiryo':'Arial';
   const pres=Presentation.create({slideSize:{width:841/25.4*96,height:1189/25.4*96}});
   const slide=pres.slides.add();slide.background.fill='#FFFFFF';
@@ -115,7 +118,7 @@ for(const lang of ['en','ja']){
   slide.speakerNotes.textFrame.setText('Sources: output/sympo/patchcore_profile_switch_summary_en.tex; poster results AB/ABC. K. Roth et al., Towards Total Recall in Industrial Anomaly Detection, CVPR 2022. P. Bergmann et al., MVTec AD, CVPR 2019. Results are software evaluation and NN work estimates, not measured FPGA latency or power. Design references inspected visually on 2026-09-10: https://cvpr.thecvf.com/virtual/2024/poster/30320 ; https://cvpr.thecvf.com/virtual/2024/poster/30615 ; https://icml.cc/virtual/2024/poster/33454 . References informed heading hierarchy, local figure explanations and selective emphasis only. No figures, logos or research results were copied.');
   const candidate=`${BUILD}/candidate_${lang}.pptx`;
   await (await PresentationFile.exportPptx(pres)).save(candidate);
-  execFileSync(`${RUNTIME}/python/python.exe`,[`${ROOT}/tools/repair_poster_bullets.py`,candidate,`${BUILD}/content_${lang}.json`]);
+  execFileSync(`${RUNTIME}/python/python.exe`,[`${ROOT}/tools/repair_poster_bullets.py`,candidate,selectedContentPath]);
   const preview=await pres.export({slide,format:'png',scale:.42});
   await fs.writeFile(`${BUILD}/preview_${lang}.png`,new Uint8Array(await preview.arrayBuffer()));
   const finalPath=`${OUTPUT}/patchcore_profile_switch_poster_${lang}_A0_color_v25.pptx`;
