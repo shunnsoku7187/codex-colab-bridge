@@ -17811,6 +17811,186 @@
         196
       ],
       "dtype": "float32"
+    },
+    "banks/4c2e91bee21b71fc9ed314b71e3d5ae0df212515e6cf016f92295082d81d4c65.npy": {
+      "bytes": 27648128,
+      "sha256": "9c69850e3772fe5773e84a3824739855085cf8ba7f9d55900aaf283e3bbf9328",
+      "shape": [
+        9000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/9ec1a9f9757314ac7af87012c3ce47f4b55f8e5575a2ed6072a26d683b8ca2ce.npy": {
+      "bytes": 97344,
+      "sha256": "e0718d05eb3c6a525bb56a331f664dc57fdb489b651081dfe8cbc4d5de5ab681",
+      "shape": [
+        124,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/b299320daae4400adfd959d4e1f96b6512654b5fa3e75a3f39a80497341e8630.npy": {
+      "bytes": 90288,
+      "sha256": "a7c9b4db598e9a526e04b19a2eb737b3bf3e7272a0e7551ce953c3d9319b0fd9",
+      "shape": [
+        115,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/99bc87915189e6f48d2f66592fbcdc03d4124800d4283aecfc16f1bca25cff08.npy": {
+      "bytes": 131056,
+      "sha256": "5bb2ec0ad172ad52aa94465b58ee5fa7a64009e6fe0992567f34ca971c2e7fb0",
+      "shape": [
+        167,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/97bd3a438cec7e1a9eb3f3c79aa13d3dd1a75560f193fedacebc7f877ee01b54.npy": {
+      "bytes": 27648128,
+      "sha256": "77f3d6a14c405d0210e9640ac1bc3a96b16e7780996c11ae80ddd26788701e8d",
+      "shape": [
+        9000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/5ea12cd667b5ce7eb922030f7cbf0fbd4509dd5522157918d8d27713da9960c4.npy": {
+      "bytes": 97344,
+      "sha256": "4b23b0bfb82fd52844b2cc7af8cdee0ed5b31400419b5d1ab761aa1e673599e5",
+      "shape": [
+        124,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/02be5af5fe8b4776a06ad0958d8e45ee6eb838092cfb4c2714bc70fce7ad77ad.npy": {
+      "bytes": 90288,
+      "sha256": "159bfad0a5706e233c55a50511a3ecbd4edd6db060a2b13de5fd8bea350d6c86",
+      "shape": [
+        115,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/e37f453d2674cd44d7bbbfc2de7b3c51b7dc2581e315a41351070d34df050e36.npy": {
+      "bytes": 125568,
+      "sha256": "7bce0d5d4447cc47315329ca0abfcb126f9de0d91ddba95dc8c1c76ccad62577",
+      "shape": [
+        160,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/9010eeb2e5aededb2d2762e799accbc7c782716424671096b2de52e6e6ff3bb5.npy": {
+      "bytes": 27648128,
+      "sha256": "112aa04a10f93263cf2db49a8ab1286b4caba3b0462d436c2f57ac8bfa32fcc5",
+      "shape": [
+        9000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/f99fc5c30d23f5319a574d549b983dcda4e9e4478c5f96335d5f8cee084421dc.npy": {
+      "bytes": 97344,
+      "sha256": "6b036c8a75ce8e480b14d7e85748d116335794a8d7fdf237f40e8f2a812e4448",
+      "shape": [
+        124,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/0153dbdb62143a224ce3dba3e5ac5bae01e254437f57423e73404e2602e346c2.npy": {
+      "bytes": 90288,
+      "sha256": "bf3e80fc6d2ee7b54fbe7cd39bb7bfdd3b4325083725d9d47f7c72c1ff0d88ca",
+      "shape": [
+        115,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/27064ee92deafd1b102360ca329490846abb1b584605032c1391c32c2f86cbc3.npy": {
+      "bytes": 91856,
+      "sha256": "216dae18287dbb7f13286629b3e314b6d14e93a10343078820921e6a89493aec",
+      "shape": [
+        117,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/06f8d2029dd3a4fdae708b426c515c958ecea50cee07ae00b6b2badee26b2ac3.npy": {
+      "bytes": 27648128,
+      "sha256": "e35bab4c01eb1ff20d909ec71a041b83126877e58d8c89a18184d2938ff0fdc8",
+      "shape": [
+        9000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/99c5988a2613aaf97fe2f5ae05df961446fe70d9685bad9a1ac6c598ff6b3741.npy": {
+      "bytes": 97344,
+      "sha256": "de481575b14377c2ef52fe30d1994e4d48b700ebf6488a5d2dd6e107cdbcde10",
+      "shape": [
+        124,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/daa8bba6b2475d8bc48201b7be8ed89c413efb32787f76971b44b05b846209df.npy": {
+      "bytes": 90288,
+      "sha256": "985009a29abf77759b93ec3cbce92b0543aee6e8c2b0b7937369eea60c16e223",
+      "shape": [
+        115,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/13ae53c8a87dee6b4d043efc56f9e3958699d9f95d79ff418dd1f020055368aa.npy": {
+      "bytes": 33056,
+      "sha256": "18d152bfcb65436fa4e5493033f045a2835c6473e0480b929e8167d331fb0028",
+      "shape": [
+        42,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/7d483ac54229b17d86378686e37c2e46304b89fa0cf3046087ed65b4439e4825.npy": {
+      "bytes": 27648128,
+      "sha256": "de49f842adac8570a9fd75dad31b89ea050a9de3eed9bf5dd5860a4da377d002",
+      "shape": [
+        9000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/a39842882161b088d3dc8b0cdc61131d3bf408ae5d0226c2101e26655ab64f10.npy": {
+      "bytes": 97344,
+      "sha256": "e2037a83a7e8287c3badff65dff05ae8d0fbb41321a0b3761874a86b421de6c0",
+      "shape": [
+        124,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/8d02956c299244834752cd07476ac616b44928e8234fe68c1089c655c945a510.npy": {
+      "bytes": 90288,
+      "sha256": "de0e125047c73ae63ce6c111a9e6eafe13c00d55d5cad49e35bdd6ab96b54f1e",
+      "shape": [
+        115,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/e79f95b0f07111ed15a6c9c3353384bbe04b7812bc207828ccd2a3edd6584666.npy": {
+      "bytes": 78528,
+      "sha256": "ebea1359646ca37f55e3d0fbc6e89d76b527e4530a6fc4564c33ca5ea5164a59",
+      "shape": [
+        100,
+        196
+      ],
+      "dtype": "float32"
     }
   },
   "evaluations": [
@@ -357983,6 +358163,3952 @@
           "test": 151,
           "test_good": 32,
           "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "ee46aa9d287a4f8c227d1f7cd32c902d5a8e13c3d91846418e6187b2dd91cc72",
+      "patch_scores": "patch_scores/9ec1a9f9757314ac7af87012c3ce47f4b55f8e5575a2ed6072a26d683b8ca2ce.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.41039,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "ee46aa9d287a4f8c227d1f7cd32c902d5a8e13c3d91846418e6187b2dd91cc72",
+      "patch_scores": "patch_scores/b299320daae4400adfd959d4e1f96b6512654b5fa3e75a3f39a80497341e8630.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.992669,
+          "image_aupr": 0.998507
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.509578,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "ee46aa9d287a4f8c227d1f7cd32c902d5a8e13c3d91846418e6187b2dd91cc72",
+      "patch_scores": "patch_scores/99bc87915189e6f48d2f66592fbcdc03d4124800d4283aecfc16f1bca25cff08.npy",
+      "result": {
+        "category": "pill",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.956628,
+          "image_aupr": 0.992155
+        },
+        "good_pass": 0.615385,
+        "good_loss": 0.384615,
+        "threshold": 0.432684,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "aeab7576e7409680c9196687f2b2f7d1d2e3f4b51623a7802ca7b8197b7d5f21",
+      "patch_scores": "patch_scores/430aa3ff01667ab1b5f464dde24fb39ce680efef8d4294a8682199332f47a589.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.401902,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "665e826ba2657df334d6d04ee3f79c9ce976967119dcce104fdf85e25a4601ca",
+      "patch_scores": "patch_scores/1ce28496887d719edc62f8bd084cd6b13b6008d2170aa79216c3b10d11068bda.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.999511,
+          "image_aupr": 0.999886
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.509579,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e15f6941f34e6bc02626464de74904aec46f86b6c562da19850ad09531e6e888",
+      "patch_scores": "patch_scores/45939ab68b817e077f3a3d81f1c264c07453721c88d957394c9ca1ff49d9d5bb.npy",
+      "result": {
+        "category": "pill",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.960447,
+          "image_aupr": 0.992771
+        },
+        "good_pass": 0.730769,
+        "good_loss": 0.269231,
+        "threshold": 0.433991,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "58500017000057275a660bbc5557fef41a43137768701cde3664b91025ae845e",
+      "patch_scores": "patch_scores/c1f69b289ff1bbd2604db4534d3a655074dac5d06a88657d09f6b80b3406acb4.npy",
+      "result": {
+        "category": "pill",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.950355,
+          "image_aupr": 0.990493
+        },
+        "good_pass": 0.615385,
+        "good_loss": 0.384615,
+        "threshold": 0.50763,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "58500017000057275a660bbc5557fef41a43137768701cde3664b91025ae845e",
+      "patch_scores": "patch_scores/c1f69b289ff1bbd2604db4534d3a655074dac5d06a88657d09f6b80b3406acb4.npy",
+      "result": {
+        "category": "pill",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.950355,
+          "image_aupr": 0.990493
+        },
+        "good_pass": 0.615385,
+        "good_loss": 0.384615,
+        "threshold": 0.50763,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "aeab7576e7409680c9196687f2b2f7d1d2e3f4b51623a7802ca7b8197b7d5f21",
+      "patch_scores": "patch_scores/430aa3ff01667ab1b5f464dde24fb39ce680efef8d4294a8682199332f47a589.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.401902,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "665e826ba2657df334d6d04ee3f79c9ce976967119dcce104fdf85e25a4601ca",
+      "patch_scores": "patch_scores/1ce28496887d719edc62f8bd084cd6b13b6008d2170aa79216c3b10d11068bda.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.999511,
+          "image_aupr": 0.999886
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.509579,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e15f6941f34e6bc02626464de74904aec46f86b6c562da19850ad09531e6e888",
+      "patch_scores": "patch_scores/45939ab68b817e077f3a3d81f1c264c07453721c88d957394c9ca1ff49d9d5bb.npy",
+      "result": {
+        "category": "pill",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.960447,
+          "image_aupr": 0.992771
+        },
+        "good_pass": 0.730769,
+        "good_loss": 0.269231,
+        "threshold": 0.433991,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e15f6941f34e6bc02626464de74904aec46f86b6c562da19850ad09531e6e888",
+      "patch_scores": "patch_scores/45939ab68b817e077f3a3d81f1c264c07453721c88d957394c9ca1ff49d9d5bb.npy",
+      "result": {
+        "category": "pill",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.960447,
+          "image_aupr": 0.992771
+        },
+        "good_pass": 0.730769,
+        "good_loss": 0.269231,
+        "threshold": 0.433991,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "ac4674b05b9eeb3c8af1bdcc6ee15c852471808f427056fa43c212682ed179c5",
+      "patch_scores": "patch_scores/5ea12cd667b5ce7eb922030f7cbf0fbd4509dd5522157918d8d27713da9960c4.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.41039,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "ac4674b05b9eeb3c8af1bdcc6ee15c852471808f427056fa43c212682ed179c5",
+      "patch_scores": "patch_scores/02be5af5fe8b4776a06ad0958d8e45ee6eb838092cfb4c2714bc70fce7ad77ad.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.994624,
+          "image_aupr": 0.998822
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.512172,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "ac4674b05b9eeb3c8af1bdcc6ee15c852471808f427056fa43c212682ed179c5",
+      "patch_scores": "patch_scores/e37f453d2674cd44d7bbbfc2de7b3c51b7dc2581e315a41351070d34df050e36.npy",
+      "result": {
+        "category": "screw",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.751793,
+          "image_aupr": 0.893545
+        },
+        "good_pass": 0.268293,
+        "good_loss": 0.731707,
+        "threshold": 0.431352,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "aeab7576e7409680c9196687f2b2f7d1d2e3f4b51623a7802ca7b8197b7d5f21",
+      "patch_scores": "patch_scores/430aa3ff01667ab1b5f464dde24fb39ce680efef8d4294a8682199332f47a589.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.401902,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "665e826ba2657df334d6d04ee3f79c9ce976967119dcce104fdf85e25a4601ca",
+      "patch_scores": "patch_scores/1ce28496887d719edc62f8bd084cd6b13b6008d2170aa79216c3b10d11068bda.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.999511,
+          "image_aupr": 0.999886
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.509579,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "4866e84075526588e50d15a385eaef6e785c35ee05b7985427cabfbdf82574ae",
+      "patch_scores": "patch_scores/33c58bd1105a3fc8f631603dcdc6bd5203040b338e0403fb3efd7973f6fbd0ff.npy",
+      "result": {
+        "category": "screw",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.744005,
+          "image_aupr": 0.882155
+        },
+        "good_pass": 0.390244,
+        "good_loss": 0.609756,
+        "threshold": 0.430736,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "1b78a5e7dc011204bd2a6eab313bfa80487a784a0fae42ce3e23b1b158ce6c75",
+      "patch_scores": "patch_scores/3eadc4c600288e43f9d167cbc68a400ba0b187e6e73f38a7377027aba74dbfc4.npy",
+      "result": {
+        "category": "screw",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.781103,
+          "image_aupr": 0.90162
+        },
+        "good_pass": 0.317073,
+        "good_loss": 0.682927,
+        "threshold": 0.494527,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "1b78a5e7dc011204bd2a6eab313bfa80487a784a0fae42ce3e23b1b158ce6c75",
+      "patch_scores": "patch_scores/3eadc4c600288e43f9d167cbc68a400ba0b187e6e73f38a7377027aba74dbfc4.npy",
+      "result": {
+        "category": "screw",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.781103,
+          "image_aupr": 0.90162
+        },
+        "good_pass": 0.317073,
+        "good_loss": 0.682927,
+        "threshold": 0.494527,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.443421,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.997556,
+          "image_aupr": 0.999451
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.582448,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "1b78a5e7dc011204bd2a6eab313bfa80487a784a0fae42ce3e23b1b158ce6c75",
+      "patch_scores": "patch_scores/3eadc4c600288e43f9d167cbc68a400ba0b187e6e73f38a7377027aba74dbfc4.npy",
+      "result": {
+        "category": "screw",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.79463,
+          "image_aupr": 0.897865
+        },
+        "good_pass": 0.390244,
+        "good_loss": 0.609756,
+        "threshold": 0.491996,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "1b78a5e7dc011204bd2a6eab313bfa80487a784a0fae42ce3e23b1b158ce6c75",
+      "patch_scores": "patch_scores/3eadc4c600288e43f9d167cbc68a400ba0b187e6e73f38a7377027aba74dbfc4.npy",
+      "result": {
+        "category": "screw",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.79463,
+          "image_aupr": 0.897865
+        },
+        "good_pass": 0.390244,
+        "good_loss": 0.609756,
+        "threshold": 0.491996,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "c5f6e0ebecd4452aabb49a274f5ecfbd82392f581d5349b2b90982ed67ce883c",
+      "patch_scores": "patch_scores/f99fc5c30d23f5319a574d549b983dcda4e9e4478c5f96335d5f8cee084421dc.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.432026,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "c5f6e0ebecd4452aabb49a274f5ecfbd82392f581d5349b2b90982ed67ce883c",
+      "patch_scores": "patch_scores/0153dbdb62143a224ce3dba3e5ac5bae01e254437f57423e73404e2602e346c2.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.999511,
+          "image_aupr": 0.999886
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.509578,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "c5f6e0ebecd4452aabb49a274f5ecfbd82392f581d5349b2b90982ed67ce883c",
+      "patch_scores": "patch_scores/27064ee92deafd1b102360ca329490846abb1b584605032c1391c32c2f86cbc3.npy",
+      "result": {
+        "category": "tile",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.997835,
+          "image_aupr": 0.999166
+        },
+        "good_pass": 0.969697,
+        "good_loss": 0.030303,
+        "threshold": 0.471938,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "aeab7576e7409680c9196687f2b2f7d1d2e3f4b51623a7802ca7b8197b7d5f21",
+      "patch_scores": "patch_scores/430aa3ff01667ab1b5f464dde24fb39ce680efef8d4294a8682199332f47a589.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.401902,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "665e826ba2657df334d6d04ee3f79c9ce976967119dcce104fdf85e25a4601ca",
+      "patch_scores": "patch_scores/1ce28496887d719edc62f8bd084cd6b13b6008d2170aa79216c3b10d11068bda.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.999511,
+          "image_aupr": 0.999886
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.509579,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "1cf337cad91f2f09a0953b58d1e57672a34ca1d43ffd975fb2b0f66c68108573",
+      "patch_scores": "patch_scores/f9bc5b9eecfa244bd9441827cb03303692ff7cfffb265f4796a5b741b3262370.npy",
+      "result": {
+        "category": "tile",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.997835,
+          "image_aupr": 0.999174
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.484045,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "80b250612a04d02bcd58ce1483dca094350718ff942689e1d91f47b28d9ba120",
+      "patch_scores": "patch_scores/53fb9d23d1908c3df2a545b78613f6d341eadbd466565c2b15f49e7ceb400e9c.npy",
+      "result": {
+        "category": "tile",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999278,
+          "image_aupr": 0.999718
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.561533,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "80b250612a04d02bcd58ce1483dca094350718ff942689e1d91f47b28d9ba120",
+      "patch_scores": "patch_scores/53fb9d23d1908c3df2a545b78613f6d341eadbd466565c2b15f49e7ceb400e9c.npy",
+      "result": {
+        "category": "tile",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999278,
+          "image_aupr": 0.999718
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.561533,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "80b250612a04d02bcd58ce1483dca094350718ff942689e1d91f47b28d9ba120",
+      "patch_scores": "patch_scores/53fb9d23d1908c3df2a545b78613f6d341eadbd466565c2b15f49e7ceb400e9c.npy",
+      "result": {
+        "category": "tile",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999278,
+          "image_aupr": 0.999718
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.561533,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "80b250612a04d02bcd58ce1483dca094350718ff942689e1d91f47b28d9ba120",
+      "patch_scores": "patch_scores/53fb9d23d1908c3df2a545b78613f6d341eadbd466565c2b15f49e7ceb400e9c.npy",
+      "result": {
+        "category": "tile",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999278,
+          "image_aupr": 0.999718
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.561533,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "d1bc1e16b916e630770193bd2cd56c8d3fdb66ed34f42c6d86363dd2e83b8c9e",
+      "patch_scores": "patch_scores/99c5988a2613aaf97fe2f5ae05df961446fe70d9685bad9a1ac6c598ff6b3741.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.410321,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "d1bc1e16b916e630770193bd2cd56c8d3fdb66ed34f42c6d86363dd2e83b8c9e",
+      "patch_scores": "patch_scores/daa8bba6b2475d8bc48201b7be8ed89c413efb32787f76971b44b05b846209df.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.994624,
+          "image_aupr": 0.99884
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.512172,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "d1bc1e16b916e630770193bd2cd56c8d3fdb66ed34f42c6d86363dd2e83b8c9e",
+      "patch_scores": "patch_scores/13ae53c8a87dee6b4d043efc56f9e3958699d9f95d79ff418dd1f020055368aa.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.969444,
+          "image_aupr": 0.988194
+        },
+        "good_pass": 0.75,
+        "good_loss": 0.25,
+        "threshold": 0.436173,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "aeab7576e7409680c9196687f2b2f7d1d2e3f4b51623a7802ca7b8197b7d5f21",
+      "patch_scores": "patch_scores/430aa3ff01667ab1b5f464dde24fb39ce680efef8d4294a8682199332f47a589.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.401902,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "665e826ba2657df334d6d04ee3f79c9ce976967119dcce104fdf85e25a4601ca",
+      "patch_scores": "patch_scores/1ce28496887d719edc62f8bd084cd6b13b6008d2170aa79216c3b10d11068bda.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.999511,
+          "image_aupr": 0.999886
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.509579,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "b0b88baedae0aa4bc3cd046a32190161b58ea58ca40feeb9d3bd6066dcf5be87",
+      "patch_scores": "patch_scores/4efc465d32ff3755506325370f78eaa27b15f274509232a9b2b14e287e2e44e4.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.963889,
+          "image_aupr": 0.985939
+        },
+        "good_pass": 0.75,
+        "good_loss": 0.25,
+        "threshold": 0.430997,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "eb983c6cb056fd72191a1e65a095d282e0820182e77e6c853e228193ba71002f",
+      "patch_scores": "patch_scores/857afb4d992057fc794014cf05226b385cfb4e8706afc22d5aa7751aba0216ec.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.894444,
+          "image_aupr": 0.952323
+        },
+        "good_pass": 0.75,
+        "good_loss": 0.25,
+        "threshold": 0.491356,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "eb983c6cb056fd72191a1e65a095d282e0820182e77e6c853e228193ba71002f",
+      "patch_scores": "patch_scores/857afb4d992057fc794014cf05226b385cfb4e8706afc22d5aa7751aba0216ec.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.894444,
+          "image_aupr": 0.952323
+        },
+        "good_pass": 0.75,
+        "good_loss": 0.25,
+        "threshold": 0.491356,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "aeab7576e7409680c9196687f2b2f7d1d2e3f4b51623a7802ca7b8197b7d5f21",
+      "patch_scores": "patch_scores/430aa3ff01667ab1b5f464dde24fb39ce680efef8d4294a8682199332f47a589.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.37843,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "665e826ba2657df334d6d04ee3f79c9ce976967119dcce104fdf85e25a4601ca",
+      "patch_scores": "patch_scores/1ce28496887d719edc62f8bd084cd6b13b6008d2170aa79216c3b10d11068bda.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.985826,
+          "image_aupr": 0.99679
+        },
+        "good_pass": 0.818182,
+        "good_loss": 0.181818,
+        "threshold": 0.470811,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "b0b88baedae0aa4bc3cd046a32190161b58ea58ca40feeb9d3bd6066dcf5be87",
+      "patch_scores": "patch_scores/4efc465d32ff3755506325370f78eaa27b15f274509232a9b2b14e287e2e44e4.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.991667,
+          "image_aupr": 0.996664
+        },
+        "good_pass": 0.916667,
+        "good_loss": 0.083333,
+        "threshold": 0.386632,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "b0b88baedae0aa4bc3cd046a32190161b58ea58ca40feeb9d3bd6066dcf5be87",
+      "patch_scores": "patch_scores/4efc465d32ff3755506325370f78eaa27b15f274509232a9b2b14e287e2e44e4.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.991667,
+          "image_aupr": 0.996664
+        },
+        "good_pass": 0.916667,
+        "good_loss": 0.083333,
+        "threshold": 0.386632,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "b4130ca890073fb1d95b2bffbb95243e9034007f73ebf79ea0cf213b9a08077d",
+      "patch_scores": "patch_scores/a39842882161b088d3dc8b0cdc61131d3bf408ae5d0226c2101e26655ab64f10.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.408527,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "b4130ca890073fb1d95b2bffbb95243e9034007f73ebf79ea0cf213b9a08077d",
+      "patch_scores": "patch_scores/8d02956c299244834752cd07476ac616b44928e8234fe68c1089c655c945a510.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.509544,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "b4130ca890073fb1d95b2bffbb95243e9034007f73ebf79ea0cf213b9a08077d",
+      "patch_scores": "patch_scores/e79f95b0f07111ed15a6c9c3353384bbe04b7812bc207828ccd2a3edd6584666.npy",
+      "result": {
+        "category": "transistor",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.979167,
+          "image_aupr": 0.977898
+        },
+        "good_pass": 0.65,
+        "good_loss": 0.35,
+        "threshold": 0.454929,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "aeab7576e7409680c9196687f2b2f7d1d2e3f4b51623a7802ca7b8197b7d5f21",
+      "patch_scores": "patch_scores/430aa3ff01667ab1b5f464dde24fb39ce680efef8d4294a8682199332f47a589.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.401902,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "665e826ba2657df334d6d04ee3f79c9ce976967119dcce104fdf85e25a4601ca",
+      "patch_scores": "patch_scores/1ce28496887d719edc62f8bd084cd6b13b6008d2170aa79216c3b10d11068bda.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.999511,
+          "image_aupr": 0.999886
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.509579,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "8977912bd7f19cd460cb424282a3a769c2d5e1c58bba700ce1bfb20da5bf8789",
+      "patch_scores": "patch_scores/d444841847409c7c63240ff0d116bc09ffec06be30edc868f518ac5c1edb0a28.npy",
+      "result": {
+        "category": "transistor",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.984167,
+          "image_aupr": 0.981994
+        },
+        "good_pass": 0.883333,
+        "good_loss": 0.116667,
+        "threshold": 0.481668,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "0d7948949d031e52ca620267d7a7ffe690c02bf831ea5d94a672a346bc6ce56f",
+      "patch_scores": "patch_scores/1ce0596b1302c2b38d4e4068a407258d122c952ecdf6b778883fbb0c81fd7c1e.npy",
+      "result": {
+        "category": "transistor",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.995417,
+          "image_aupr": 0.993529
+        },
+        "good_pass": 0.95,
+        "good_loss": 0.05,
+        "threshold": 0.549875,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "0d7948949d031e52ca620267d7a7ffe690c02bf831ea5d94a672a346bc6ce56f",
+      "patch_scores": "patch_scores/1ce0596b1302c2b38d4e4068a407258d122c952ecdf6b778883fbb0c81fd7c1e.npy",
+      "result": {
+        "category": "transistor",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.995417,
+          "image_aupr": 0.993529
+        },
+        "good_pass": 0.95,
+        "good_loss": 0.05,
+        "threshold": 0.549875,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.443421,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.997556,
+          "image_aupr": 0.999451
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.582448,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "0d7948949d031e52ca620267d7a7ffe690c02bf831ea5d94a672a346bc6ce56f",
+      "patch_scores": "patch_scores/1ce0596b1302c2b38d4e4068a407258d122c952ecdf6b778883fbb0c81fd7c1e.npy",
+      "result": {
+        "category": "transistor",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.995,
+          "image_aupr": 0.993234
+        },
+        "good_pass": 0.983333,
+        "good_loss": 0.016667,
+        "threshold": 0.535599,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "0d7948949d031e52ca620267d7a7ffe690c02bf831ea5d94a672a346bc6ce56f",
+      "patch_scores": "patch_scores/1ce0596b1302c2b38d4e4068a407258d122c952ecdf6b778883fbb0c81fd7c1e.npy",
+      "result": {
+        "category": "transistor",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.995,
+          "image_aupr": 0.993234
+        },
+        "good_pass": 0.983333,
+        "good_loss": 0.016667,
+        "threshold": 0.535599,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
         }
       }
     }
