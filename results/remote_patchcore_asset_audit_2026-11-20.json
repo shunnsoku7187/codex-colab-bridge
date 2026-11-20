@@ -1,0 +1,162 @@
+{
+  "checked_at": "2026-11-20T12:38:25.641200+00:00",
+  "host": "caviar9.arch.info.mie-u.ac.jp",
+  "image_root": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2",
+  "categories": {
+    "bottle": {
+      "image_files": 355
+    },
+    "cable": {
+      "image_files": 466
+    },
+    "capsule": {
+      "image_files": 460
+    },
+    "carpet": {
+      "image_files": 486
+    },
+    "grid": {
+      "image_files": 399
+    },
+    "hazelnut": {
+      "image_files": 571
+    },
+    "leather": {
+      "image_files": 461
+    },
+    "metal_nut": {
+      "image_files": 428
+    },
+    "pill": {
+      "image_files": 575
+    },
+    "screw": {
+      "image_files": 599
+    },
+    "tile": {
+      "image_files": 431
+    },
+    "toothbrush": {
+      "image_files": 132
+    },
+    "transistor": {
+      "image_files": 353
+    },
+    "wood": {
+      "image_files": 386
+    },
+    "zipper": {
+      "image_files": 510
+    }
+  },
+  "wide_resnet_weights": [
+    {
+      "path": "/home/shunya/.cache/huggingface/hub/models--timm--wide_resnet50_2.racm_in1k/snapshots/30f73aceaaa1911830a9795b83ab1908dba18719/model.safetensors",
+      "bytes": 275835296,
+      "sha256": "03b71d65fb2c73bb0de079a1781009f27a782ec481d2f64ab3bde9b1cdec3000"
+    }
+  ],
+  "saved_arrays_in_results_and_artifacts": [
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/0000b_branchynet_reproduce_resnet56_cifar10.npz",
+      "bytes": 119834
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/0002b_branchynet_resnet56_cifar100.npz",
+      "bytes": 131498
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/branchynet_mobilenet_cifar100_002.npz",
+      "bytes": 131094
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/deadline_vs_small_model_001_small_outputs.npz",
+      "bytes": 117422
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/0003_branchynet_mobilenet_cifar100_retry.npz",
+      "bytes": 131242
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/branchynet_mobilenet_cifar100_001.npz",
+      "bytes": 258929
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/0001_branchynet_mobilenet_cifar10_retry.npz",
+      "bytes": 118080
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/ksdd2_industrial_anomaly_baselines_caviar9_001_scores/seed_123_labels.npz",
+      "bytes": 735
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/ksdd2_industrial_anomaly_baselines_caviar9_001_scores/seed_456_labels.npz",
+      "bytes": 728
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_scores/seed_123_scores.npz",
+      "bytes": 11936
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001_scores/seed_456_scores.npz",
+      "bytes": 11926
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/ksdd2_unet_resnet50_foundation_recheck_caviar9_001_scores/seed_123_scores.npz",
+      "bytes": 11998
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/ksdd2_unet_resnet50_foundation_recheck_caviar9_001_scores/seed_456_scores.npz",
+      "bytes": 11758
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/ksdd2_unet_resnet50_foundation_recheck_caviar9_001_scores/seed_789_scores.npz",
+      "bytes": 11707
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/ksdd2_smp_final_inspection_baseline_caviar9_fpn_resnet50_001_scores/seed_123_scores.npz",
+      "bytes": 12149
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/results/ksdd2_smp_final_inspection_baseline_caviar9_fpn_resnet50_001_scores/seed_456_scores.npz",
+      "bytes": 11993
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/artifacts/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001/unet_resnet50/seed_456/model.pt",
+      "bytes": 130416131
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/artifacts/ksdd2_smp_final_inspection_baseline_caviar9_unet_resnet50_001/unet_resnet50/seed_123/model.pt",
+      "bytes": 130416131
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/artifacts/ksdd2_smp_final_inspection_baseline_caviar9_001/unetplusplus_resnet34/seed_456/model.pt",
+      "bytes": 104504443
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/artifacts/ksdd2_smp_final_inspection_baseline_caviar9_001/unetplusplus_resnet34/seed_123/model.pt",
+      "bytes": 104504443
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/artifacts/ksdd2_smp_final_inspection_baseline_caviar9_fpn_resnet50_001/fpn_resnet50/seed_456/model.pt",
+      "bytes": 104779071
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/artifacts/ksdd2_smp_final_inspection_baseline_caviar9_fpn_resnet50_001/fpn_resnet50/seed_123/model.pt",
+      "bytes": 104779071
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/artifacts/ksdd2_unet_resnet50_foundation_recheck_caviar9_001/unet_resnet50/seed_456/model.pt",
+      "bytes": 130416131
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/artifacts/ksdd2_unet_resnet50_foundation_recheck_caviar9_001/unet_resnet50/seed_789/model.pt",
+      "bytes": 130416131
+    },
+    {
+      "path": "/home/shunya/codex-gpu-work/colab-github-bridge/artifacts/ksdd2_unet_resnet50_foundation_recheck_caviar9_001/unet_resnet50/seed_123/model.pt",
+      "bytes": 130416131
+    }
+  ],
+  "scope": "Known work repository results/artifacts and WideResNet Hugging Face cache; not a whole-disk search. Image count includes masks if stored inside category directories."
+}

@@ -29,3 +29,12 @@
 最終比較 `scripts/mvtec_patchcore_fixed_bank_profile_switch.py` は、実画像由来の正常特徴を `FeatureCache.get()` で取得し、`build_bank()` でk-center選択し、`evaluate_category()`で実画像の検知評価に使っている。FeatureCacheの実体は `scripts/mvtec_patchcore_fixed_coreset_profile_switch.py` のメモリ内辞書で、永続キャッシュではない。最終出力はJSON集計・Markdown・図であり、bank配列・選択インデックス・個々の特徴は保存していない。したがって「未使用」ではなく「使用した中間データの永続保存が不足」が正確な状態である。
 
 元画像の設定パスは `/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2`。元画像・使用重みが残っていれば条件とseedを合わせた再生成を試せるが、当時の配列ハッシュがないため、元bankとのビット単位の一致は証明できない。別実験で保存されたbankの有無はリモート保管先を調べるまで未確認。
+
+## caviar9実在確認（2026-11-20追記）
+
+SSH経由で読み取り専用の監査を実施。記録は `results/remote_patchcore_asset_audit_2026-11-20.json`、再確認用コードは `tools/audit_remote_patchcore_assets.py`。
+
+- `mvtec_ad_materialized_v2` に15カテゴリすべての画像ファイルが存在した。件数はJSONを参照（マスク画像があれば件数に含まれる）。
+- WideResNet50-2重みはHugging Faceキャッシュに存在。`timm/wide_resnet50_2.racm_in1k` snapshot `30f73aceaaa1911830a9795b83ab1908dba18719`、275,835,296 bytes、SHA-256 `03b71d65fb2c73bb0de079a1781009f27a782ec481d2f64ab3bde9b1cdec3000`。
+- 既知のwork配下とtorch/Hugging Faceキャッシュを調査した範囲ではPatchCoreの保存済みbank配列・特徴配列は見つからなかった。results/artifactsにある配列・モデルはJSONに列挙。これはディスク全域の不存在証明ではない。
+- 元画像とbackbone重みが残っているため再生成の主要入力は確保されている。ただし再生成はまだ実行しておらず、当時のbankとの同一性も未確認。今回の確認でGPU実験は起動していない。

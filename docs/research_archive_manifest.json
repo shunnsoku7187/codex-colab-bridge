@@ -4,8 +4,8 @@
   "files": [
     {
       "path": "docs/ARCHIVE_GAP_AUDIT.md",
-      "bytes": 4154,
-      "sha256": "266fcfb672427b13d3638c4d3a1620dffee76fdd7cbb1f1e49879eec905347cc"
+      "bytes": 5351,
+      "sha256": "f09ddc93fa7bb336b79dd301644da5ee2a9ae33dd02db9381d308485629cea3f"
     },
     {
       "path": "docs/RESEARCH_HANDOFF.md",
@@ -4008,6 +4008,11 @@
       "sha256": "d25c64cce0791ef8d37e2527b8544443a57bec7684935952ddeb87bfb022e80f"
     },
     {
+      "path": "results/remote_patchcore_asset_audit_2026-11-20.json",
+      "bytes": 6191,
+      "sha256": "5d063d2bbfab63f613682b71ace8edd8d22247511076d08011a9c915aa76c94c"
+    },
+    {
       "path": "results/resnet_dual_threshold_sweep_001.json",
       "bytes": 298,
       "sha256": "6e617b6192d4c1785e2f19a95b3cf008b283027eed2e9e5a7dbebb2979b2e3c4"
@@ -4801,6 +4806,11 @@
       "path": "src/train.py",
       "bytes": 1315,
       "sha256": "2a6277bd0016e64259cf35ec301183e892ccaa1731aba548d46f5006d4dcae48"
+    },
+    {
+      "path": "tools/audit_remote_patchcore_assets.py",
+      "bytes": 1810,
+      "sha256": "4631a71aad50ebf6d23fe37c8c6f0a85e14a3952a52a5b8d174926e74ca8c031"
     },
     {
       "path": "tools/bootstrap_colab_runner_cell.py",
