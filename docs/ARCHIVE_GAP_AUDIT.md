@@ -12,7 +12,7 @@
 | FPGAの索引 | manifestの対象にfpga/が入っていなかったため修正して再作成 |
 | 390 LUT / 151 FF / 2 DSP / +3.165nsの原レポート | 既存fpga/READMEに記載はあるが、対応する原レポートは今回のローカル検索範囲で未発見。Git保存済みの原レポートで検証できた値として扱わない |
 | ローカルTemp内のVivadoレポート | `codex_vivado_synth_check`で発見したがDesign=synth_check、69 LUTの別回路。NN試作の証拠として流用しない |
-| 画像・重み・実特徴bank | Gitにはない。既知のリモートデータ場所は引き継ぎ文書に記載。今回リモート端末の実在・ハッシュは未確認 |
+| 画像・重み・実特徴bank | 実画像から特徴とbankを生成して最終実験で使用した。FeatureCacheはメモリ内dictであり、最終比較コードには特徴・bank配列をファイル保存する処理がない。Gitには数値結果・profile・条件があるがbankそのものはない。元画像・重みのリモート現存確認は未実施 |
 | int8校正・実画像由来の数値検証 | 未作成。合成入力のPASSで検知精度や量子化精度を証明しない |
 | 共有CNN、64-lane NN、メモリ接続、全画像制御 | 未完成。`fpga/BOARDLESS_GAPS.md`参照 |
 
@@ -23,3 +23,9 @@
 3. NN試作のVivado合成・配置配線を再実行するか、対応する原レポートを回収する。対象RTLのコミット、part、クロック条件と合わせて保存する。
 
 以前の研究引き継ぎは2026-11-18のソフト成果整理を基準にしている。その後に追加されたスカラーNN試作は実装の一部であり、PatchCore全体のFPGA完成を意味しない。
+
+## 実験で使ったbankの保存状況の訂正
+
+最終比較 `scripts/mvtec_patchcore_fixed_bank_profile_switch.py` は、実画像由来の正常特徴を `FeatureCache.get()` で取得し、`build_bank()` でk-center選択し、`evaluate_category()`で実画像の検知評価に使っている。FeatureCacheの実体は `scripts/mvtec_patchcore_fixed_coreset_profile_switch.py` のメモリ内辞書で、永続キャッシュではない。最終出力はJSON集計・Markdown・図であり、bank配列・選択インデックス・個々の特徴は保存していない。したがって「未使用」ではなく「使用した中間データの永続保存が不足」が正確な状態である。
+
+元画像の設定パスは `/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2`。元画像・使用重みが残っていれば条件とseedを合わせた再生成を試せるが、当時の配列ハッシュがないため、元bankとのビット単位の一致は証明できない。別実験で保存されたbankの有無はリモート保管先を調べるまで未確認。
