@@ -9027,6 +9027,294 @@
         196
       ],
       "dtype": "float32"
+    },
+    "banks/1def6fedb6872926bdb73c07d439897b752f2a2075137593000da30ce88aad5b.npy": {
+      "bytes": 27648128,
+      "sha256": "8a665e75cd6fb562b9403b854e802d1d76fae07190100aa7adf70be7e2586102",
+      "shape": [
+        9000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/a426b0318aa46fa0e554ee3c36dc729277c8d0f747bfe182d10309f8b903d575.npy": {
+      "bytes": 117728,
+      "sha256": "3dd04b312a0054254d6fd3746a507ab26a5467f5ff16ca6986f4215abd88af54",
+      "shape": [
+        150,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/3b739ef685524d66feea10033c09c8aece2a8adb018f634fda1e7b447270130c.npy": {
+      "bytes": 86368,
+      "sha256": "2ee0f5267fae0cd1defee0d856a8cde02bca9be70550e5b7fd68b6b7fa70031f",
+      "shape": [
+        110,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/35d32cfbcfe9a5122e71428bdcbe79d0a309c386077cbcb9abba7c4de31ce520.npy": {
+      "bytes": 125568,
+      "sha256": "2388e49f4a3f4415370e516671c4d00eb6538c5745d07e482df04afd56419514",
+      "shape": [
+        160,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/a7d133a7796c906724b1beb885c737b84695db9dfc4414514fe2cb8fa143ddda.npy": {
+      "bytes": 27648128,
+      "sha256": "b5d20e8128d98a71e3c36b57ba430963145bcef4037dfb220227ae8f205bbab2",
+      "shape": [
+        9000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/0a141dcdc2cf6ad5fee484743544aafc64c13fafcae633f67e5b08c04693d8a6.npy": {
+      "bytes": 117728,
+      "sha256": "c91dcb9b21569edb404f97c49f8b538545e4ac36c7724660a013be3c54c97f1c",
+      "shape": [
+        150,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/2dd2ecbf120d560addeb74837867989d9d94277d679e61468357a04eb0a9b66a.npy": {
+      "bytes": 86368,
+      "sha256": "eae3d8e30eeceb1ad104dfb7d3288fb240f1027b000484d93de93959f2285d9b",
+      "shape": [
+        110,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/3b6269c637d2375a6c3518824ba21b7f33f13a4910957abab7980902d3b021a2.npy": {
+      "bytes": 91856,
+      "sha256": "6f93cde8568b297edb24cd3107b188840ba6b63ba330aa7265c1d31728a36baf",
+      "shape": [
+        117,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/14cfef6928bcc36b3ce2c1f0a9cc8eb92b5b3175f840cc6b78ca7ce4b8e46625.npy": {
+      "bytes": 27648128,
+      "sha256": "f89e052dd5751a32111f435b046689dcd60cc499ffbbfc217661656c8f7dd270",
+      "shape": [
+        9000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/2a44b20014f7e4dda0b14981719a3a078f10f2391daa1e4ad801a95dffbf49be.npy": {
+      "bytes": 117728,
+      "sha256": "fe7f12bd25465c5bc5666f3dcea9c7a9d637c15167d698f18e5a455b587570bf",
+      "shape": [
+        150,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/56195505e5a651c4e0e5b19131c7444cb89599e420d040d93dbb5f2056e6c3ac.npy": {
+      "bytes": 86368,
+      "sha256": "0f00824c50a1a02faf22e8b9d14a937dcd147e6e70038cf4a748b512b4af1ca6",
+      "shape": [
+        110,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/50a17bcc95e9315e40b40ed543288ed2f01c433267d2dbf1ddb19034b50a2420.npy": {
+      "bytes": 33056,
+      "sha256": "1c7f7497557347c024ad9235c2691827371e41b1551dd6590de05621cca4e46c",
+      "shape": [
+        42,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/67fa748e23b8cfd80854c654c58897ed8bcd9530d11febf3b771e5381b04b485.npy": {
+      "bytes": 27648128,
+      "sha256": "049b6899ae8674abf7b32963de291aa2c4eddad745ec85eb0109103213044f0e",
+      "shape": [
+        9000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/19cdd174635e9006a17fd6f8fc218827cb0e7139088dd5bf9b6482bacfde1834.npy": {
+      "bytes": 117728,
+      "sha256": "48b186b8e43a37b83183e6c0fcc0f5a6db25dce0d5fa03040d432208498b3c18",
+      "shape": [
+        150,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/89b95ee844cb5d6b7231f9fcd7114abbed0881318a15103532419972b9c93df5.npy": {
+      "bytes": 86368,
+      "sha256": "88a22159cb3c636e57b6ad70f5770932c434625bace716b8cae0aa5a789d4e90",
+      "shape": [
+        110,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/e1c346d51b30e3097dd31c2b7fadf6d9c82da44f3ed7b62a3d31f6352385d00b.npy": {
+      "bytes": 78528,
+      "sha256": "f004270213b74f335a2e1eaf422bfff142f2eb96c7fdc57534d7fd70a2b0e9b0",
+      "shape": [
+        100,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/e196561df8a1d61aa74896ed15ace6fc54c2f54d719769b0d3827b05c6bda980.npy": {
+      "bytes": 27648128,
+      "sha256": "adfe3bc921d89ccf8851c83e6d3306fbda427b6d735eefcbdb30b9f4fc894b13",
+      "shape": [
+        9000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/f5fd16eab19c7fbe917b830fef6bb47a438f4a4c0243a35ffc8529b992d1f592.npy": {
+      "bytes": 117728,
+      "sha256": "eb39d06ba85ac6f836c76054ce6666cc5ca95763406f7f3e481d1376dc268ad0",
+      "shape": [
+        150,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/7ebfeaa352d26350501110bf5222aac270deeac174ffd57668f1ffebe918fe7b.npy": {
+      "bytes": 86368,
+      "sha256": "6f10e59e2b6d9ae1cf66693eef64c1785abd7f225f8cefea83cd4a60d52af9e1",
+      "shape": [
+        110,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/e572f4edd538475416001224254bbca57c3e86da82f33a7b9f5c7dcfc47fb9b8.npy": {
+      "bytes": 62064,
+      "sha256": "4571506452b79477c8c5599d5bcdad2aa5c0cbb102911fb7d5d3d46da3330b18",
+      "shape": [
+        79,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/487c319d025938c1a07e512f5264c62bca054cae14fa0b7cba1f25d9260a7777.npy": {
+      "bytes": 27648128,
+      "sha256": "291af20909548b5db441f664c34a01e94f2ebcbf2c7665b25693641d9c67fde6",
+      "shape": [
+        9000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/7a9c1f8a78f99ad9ae33eb49f1913aed494200f57f3de8f54a9afb723b928255.npy": {
+      "bytes": 117728,
+      "sha256": "9917039768517ad08a886d9f1a4edd71a6923a695b7929e2e5c0f0832e4d8cba",
+      "shape": [
+        150,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/df0d1b4d1c9abf4489f4699ff9d3efe39d051722c3ea958548466924cde8f647.npy": {
+      "bytes": 86368,
+      "sha256": "b42575d48783819bd11e9deb3fed808601c8db4ca8c27bc6dd34433006ec465b",
+      "shape": [
+        110,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/36467d1bc2df5b285de12c11573eb800709651069f69ebb5f0b918bff54ae269.npy": {
+      "bytes": 118512,
+      "sha256": "86b7efb836cdf5609f64199b95abae822daa97b37f09e6429236736dc3af6ea9",
+      "shape": [
+        151,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/9e573e2d6c4dbc6d49cd72ae77dc7dae9e8072e9f4cb36df025a1ad72f2cea2f.npy": {
+      "bytes": 27648128,
+      "sha256": "3a3b82fbf5c9df26176ca2c828a58dec97d3f284fd27cb19197182f1bd1d1f40",
+      "shape": [
+        9000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/9f9688b5e252704afd8d7e1511a8f45041d7d7b5e202a79c7aa962085826e686.npy": {
+      "bytes": 117728,
+      "sha256": "5776d0f9afd605af8dc46538df2d9a73df85fdb160da458e5d143f5c90d17d76",
+      "shape": [
+        150,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/5b11f615113f024eea04ac659af207440dc95803b6987ad4bdb10ef6fc2f7f0e.npy": {
+      "bytes": 97344,
+      "sha256": "eceefd1d2bbfd3428215b299e9ae5ca884281b9a6fea505da9930b8c626d6e9a",
+      "shape": [
+        124,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/a28fa849dc254309be877b367394c1a648a46ea9ce85cab47f05c76b49597527.npy": {
+      "bytes": 90288,
+      "sha256": "ffe65c5a1738a93ba309d61de857fceafb5e5b26d3bf31c231b8abc28ce9200c",
+      "shape": [
+        115,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/21f7318c3071531b1764c6ab9eca147342086a1a9095e6d8c8032b2205dfa993.npy": {
+      "bytes": 27648128,
+      "sha256": "92cb07a07f88416e4da264e4fd99b9f1d8c26ef727f4d258cbc3f9e66bd6bd93",
+      "shape": [
+        9000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/033e4e7805958412a298628937d0024bfe545755647e2ab9711115941f1f26b2.npy": {
+      "bytes": 117728,
+      "sha256": "30d28d25e371ab9eeb94bf63e4d5bc27c3956330d9b457dae739d5bfa1ca9621",
+      "shape": [
+        150,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/ce85accd2660b303ffd3cf07d09f9406d04c92aac0cf95a3b130936ce2c6584e.npy": {
+      "bytes": 97344,
+      "sha256": "19884e5f6f5c2771089b255db8ee306f2e774a8d092171a41f6c68834e0a404a",
+      "shape": [
+        124,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/c673f5f9d677174ac41d312585495de42fe220bc2d116dd0085da42f0a479d02.npy": {
+      "bytes": 131056,
+      "sha256": "c76f05da542fbd5e6872b542f52515f3b1950af0b19620e6616314e7ab90bad3",
+      "shape": [
+        167,
+        196
+      ],
+      "dtype": "float32"
     }
   },
   "evaluations": [
@@ -155722,6 +156010,6318 @@
           "test": 110,
           "test_good": 40,
           "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e15f6941f34e6bc02626464de74904aec46f86b6c562da19850ad09531e6e888",
+      "patch_scores": "patch_scores/45939ab68b817e077f3a3d81f1c264c07453721c88d957394c9ca1ff49d9d5bb.npy",
+      "result": {
+        "category": "pill",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.960447,
+          "image_aupr": 0.992771
+        },
+        "good_pass": 0.730769,
+        "good_loss": 0.269231,
+        "threshold": 0.433991,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "faa392afe4be4edd30dda14359879508d64deac481392d828d49905f6c1eedfc",
+      "patch_scores": "patch_scores/a426b0318aa46fa0e554ee3c36dc729277c8d0f747bfe182d10309f8b903d575.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.965705,
+          "image_aupr": 0.980007
+        },
+        "good_pass": 0.810345,
+        "good_loss": 0.189655,
+        "threshold": 0.53157,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "faa392afe4be4edd30dda14359879508d64deac481392d828d49905f6c1eedfc",
+      "patch_scores": "patch_scores/3b739ef685524d66feea10033c09c8aece2a8adb018f634fda1e7b447270130c.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.545773,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "faa392afe4be4edd30dda14359879508d64deac481392d828d49905f6c1eedfc",
+      "patch_scores": "patch_scores/35d32cfbcfe9a5122e71428bdcbe79d0a309c386077cbcb9abba7c4de31ce520.npy",
+      "result": {
+        "category": "screw",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.761836,
+          "image_aupr": 0.890527
+        },
+        "good_pass": 0.268293,
+        "good_loss": 0.731707,
+        "threshold": 0.447656,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "c0937cd6da6178f314a839196750343335b011eefd78536796a36bf51f91af04",
+      "patch_scores": "patch_scores/e754b4f07f9fbea66819781e340782f7ebd1122bd56a0451c4cebc0eeb7361f4.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.966267,
+          "image_aupr": 0.981058
+        },
+        "good_pass": 0.672414,
+        "good_loss": 0.327586,
+        "threshold": 0.532148,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e02293857f83db1f1c6cd97a3e41d343b39e9a1b06350f160e4fbc13c9971e50",
+      "patch_scores": "patch_scores/971e45745a2e035fabc80504ea173da8ea4da5df4523887844775782d040da9b.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.540691,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "4866e84075526588e50d15a385eaef6e785c35ee05b7985427cabfbdf82574ae",
+      "patch_scores": "patch_scores/33c58bd1105a3fc8f631603dcdc6bd5203040b338e0403fb3efd7973f6fbd0ff.npy",
+      "result": {
+        "category": "screw",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.744005,
+          "image_aupr": 0.882155
+        },
+        "good_pass": 0.390244,
+        "good_loss": 0.609756,
+        "threshold": 0.430736,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.580697,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "1b78a5e7dc011204bd2a6eab313bfa80487a784a0fae42ce3e23b1b158ce6c75",
+      "patch_scores": "patch_scores/3eadc4c600288e43f9d167cbc68a400ba0b187e6e73f38a7377027aba74dbfc4.npy",
+      "result": {
+        "category": "screw",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.836852,
+          "image_aupr": 0.921455
+        },
+        "good_pass": 0.439024,
+        "good_loss": 0.560976,
+        "threshold": 0.456704,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.968141,
+          "image_aupr": 0.982582
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.582603,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "1b78a5e7dc011204bd2a6eab313bfa80487a784a0fae42ce3e23b1b158ce6c75",
+      "patch_scores": "patch_scores/3eadc4c600288e43f9d167cbc68a400ba0b187e6e73f38a7377027aba74dbfc4.npy",
+      "result": {
+        "category": "screw",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.781103,
+          "image_aupr": 0.90162
+        },
+        "good_pass": 0.317073,
+        "good_loss": 0.682927,
+        "threshold": 0.494527,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.971889,
+          "image_aupr": 0.984913
+        },
+        "good_pass": 0.810345,
+        "good_loss": 0.189655,
+        "threshold": 0.579138,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.620289,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "1b78a5e7dc011204bd2a6eab313bfa80487a784a0fae42ce3e23b1b158ce6c75",
+      "patch_scores": "patch_scores/3eadc4c600288e43f9d167cbc68a400ba0b187e6e73f38a7377027aba74dbfc4.npy",
+      "result": {
+        "category": "screw",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.79463,
+          "image_aupr": 0.897865
+        },
+        "good_pass": 0.390244,
+        "good_loss": 0.609756,
+        "threshold": 0.491996,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "1b78a5e7dc011204bd2a6eab313bfa80487a784a0fae42ce3e23b1b158ce6c75",
+      "patch_scores": "patch_scores/3eadc4c600288e43f9d167cbc68a400ba0b187e6e73f38a7377027aba74dbfc4.npy",
+      "result": {
+        "category": "screw",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.79463,
+          "image_aupr": 0.897865
+        },
+        "good_pass": 0.390244,
+        "good_loss": 0.609756,
+        "threshold": 0.491996,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "7831df23842069854548af1733f641152bc35ff9accc54bf5d110a2caf38d816",
+      "patch_scores": "patch_scores/0a141dcdc2cf6ad5fee484743544aafc64c13fafcae633f67e5b08c04693d8a6.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.963456,
+          "image_aupr": 0.979259
+        },
+        "good_pass": 0.551724,
+        "good_loss": 0.448276,
+        "threshold": 0.521708,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "7831df23842069854548af1733f641152bc35ff9accc54bf5d110a2caf38d816",
+      "patch_scores": "patch_scores/2dd2ecbf120d560addeb74837867989d9d94277d679e61468357a04eb0a9b66a.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.545773,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "7831df23842069854548af1733f641152bc35ff9accc54bf5d110a2caf38d816",
+      "patch_scores": "patch_scores/3b6269c637d2375a6c3518824ba21b7f33f13a4910957abab7980902d3b021a2.npy",
+      "result": {
+        "category": "tile",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.997114,
+          "image_aupr": 0.998912
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.494437,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "c0937cd6da6178f314a839196750343335b011eefd78536796a36bf51f91af04",
+      "patch_scores": "patch_scores/e754b4f07f9fbea66819781e340782f7ebd1122bd56a0451c4cebc0eeb7361f4.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.966267,
+          "image_aupr": 0.981058
+        },
+        "good_pass": 0.672414,
+        "good_loss": 0.327586,
+        "threshold": 0.532148,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e02293857f83db1f1c6cd97a3e41d343b39e9a1b06350f160e4fbc13c9971e50",
+      "patch_scores": "patch_scores/971e45745a2e035fabc80504ea173da8ea4da5df4523887844775782d040da9b.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.540691,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "1cf337cad91f2f09a0953b58d1e57672a34ca1d43ffd975fb2b0f66c68108573",
+      "patch_scores": "patch_scores/f9bc5b9eecfa244bd9441827cb03303692ff7cfffb265f4796a5b741b3262370.npy",
+      "result": {
+        "category": "tile",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.997835,
+          "image_aupr": 0.999174
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.484045,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.580697,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "80b250612a04d02bcd58ce1483dca094350718ff942689e1d91f47b28d9ba120",
+      "patch_scores": "patch_scores/53fb9d23d1908c3df2a545b78613f6d341eadbd466565c2b15f49e7ceb400e9c.npy",
+      "result": {
+        "category": "tile",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.511315,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.968141,
+          "image_aupr": 0.982582
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.582603,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "80b250612a04d02bcd58ce1483dca094350718ff942689e1d91f47b28d9ba120",
+      "patch_scores": "patch_scores/53fb9d23d1908c3df2a545b78613f6d341eadbd466565c2b15f49e7ceb400e9c.npy",
+      "result": {
+        "category": "tile",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999278,
+          "image_aupr": 0.999718
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.561533,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.968141,
+          "image_aupr": 0.982582
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.582603,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "80b250612a04d02bcd58ce1483dca094350718ff942689e1d91f47b28d9ba120",
+      "patch_scores": "patch_scores/53fb9d23d1908c3df2a545b78613f6d341eadbd466565c2b15f49e7ceb400e9c.npy",
+      "result": {
+        "category": "tile",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999278,
+          "image_aupr": 0.999718
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.561533,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "80b250612a04d02bcd58ce1483dca094350718ff942689e1d91f47b28d9ba120",
+      "patch_scores": "patch_scores/53fb9d23d1908c3df2a545b78613f6d341eadbd466565c2b15f49e7ceb400e9c.npy",
+      "result": {
+        "category": "tile",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999278,
+          "image_aupr": 0.999718
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.561533,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "47a2d15bd00b79f315a9defe3f523a62bf87c606767cd50d0abc09ad23ec18a2",
+      "patch_scores": "patch_scores/2a44b20014f7e4dda0b14981719a3a078f10f2391daa1e4ad801a95dffbf49be.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.954085,
+          "image_aupr": 0.973355
+        },
+        "good_pass": 0.551724,
+        "good_loss": 0.448276,
+        "threshold": 0.5209,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "47a2d15bd00b79f315a9defe3f523a62bf87c606767cd50d0abc09ad23ec18a2",
+      "patch_scores": "patch_scores/56195505e5a651c4e0e5b19131c7444cb89599e420d040d93dbb5f2056e6c3ac.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.540691,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "47a2d15bd00b79f315a9defe3f523a62bf87c606767cd50d0abc09ad23ec18a2",
+      "patch_scores": "patch_scores/50a17bcc95e9315e40b40ed543288ed2f01c433267d2dbf1ddb19034b50a2420.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.969444,
+          "image_aupr": 0.988537
+        },
+        "good_pass": 0.666667,
+        "good_loss": 0.333333,
+        "threshold": 0.445143,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "c0937cd6da6178f314a839196750343335b011eefd78536796a36bf51f91af04",
+      "patch_scores": "patch_scores/e754b4f07f9fbea66819781e340782f7ebd1122bd56a0451c4cebc0eeb7361f4.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.966267,
+          "image_aupr": 0.981058
+        },
+        "good_pass": 0.672414,
+        "good_loss": 0.327586,
+        "threshold": 0.532148,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e02293857f83db1f1c6cd97a3e41d343b39e9a1b06350f160e4fbc13c9971e50",
+      "patch_scores": "patch_scores/971e45745a2e035fabc80504ea173da8ea4da5df4523887844775782d040da9b.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.540691,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "b0b88baedae0aa4bc3cd046a32190161b58ea58ca40feeb9d3bd6066dcf5be87",
+      "patch_scores": "patch_scores/4efc465d32ff3755506325370f78eaa27b15f274509232a9b2b14e287e2e44e4.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.963889,
+          "image_aupr": 0.985939
+        },
+        "good_pass": 0.75,
+        "good_loss": 0.25,
+        "threshold": 0.430997,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.580697,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "eb983c6cb056fd72191a1e65a095d282e0820182e77e6c853e228193ba71002f",
+      "patch_scores": "patch_scores/857afb4d992057fc794014cf05226b385cfb4e8706afc22d5aa7751aba0216ec.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.986111,
+          "image_aupr": 0.994819
+        },
+        "good_pass": 0.75,
+        "good_loss": 0.25,
+        "threshold": 0.419602,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.968141,
+          "image_aupr": 0.982582
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.582603,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "eb983c6cb056fd72191a1e65a095d282e0820182e77e6c853e228193ba71002f",
+      "patch_scores": "patch_scores/857afb4d992057fc794014cf05226b385cfb4e8706afc22d5aa7751aba0216ec.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.894444,
+          "image_aupr": 0.952323
+        },
+        "good_pass": 0.75,
+        "good_loss": 0.25,
+        "threshold": 0.491356,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "c0937cd6da6178f314a839196750343335b011eefd78536796a36bf51f91af04",
+      "patch_scores": "patch_scores/e754b4f07f9fbea66819781e340782f7ebd1122bd56a0451c4cebc0eeb7361f4.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.967016,
+          "image_aupr": 0.981118
+        },
+        "good_pass": 0.603448,
+        "good_loss": 0.396552,
+        "threshold": 0.50188,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "e02293857f83db1f1c6cd97a3e41d343b39e9a1b06350f160e4fbc13c9971e50",
+      "patch_scores": "patch_scores/971e45745a2e035fabc80504ea173da8ea4da5df4523887844775782d040da9b.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.503608,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "b0b88baedae0aa4bc3cd046a32190161b58ea58ca40feeb9d3bd6066dcf5be87",
+      "patch_scores": "patch_scores/4efc465d32ff3755506325370f78eaa27b15f274509232a9b2b14e287e2e44e4.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.991667,
+          "image_aupr": 0.996664
+        },
+        "good_pass": 0.916667,
+        "good_loss": 0.083333,
+        "threshold": 0.386632,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "b0b88baedae0aa4bc3cd046a32190161b58ea58ca40feeb9d3bd6066dcf5be87",
+      "patch_scores": "patch_scores/4efc465d32ff3755506325370f78eaa27b15f274509232a9b2b14e287e2e44e4.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.991667,
+          "image_aupr": 0.996664
+        },
+        "good_pass": 0.916667,
+        "good_loss": 0.083333,
+        "threshold": 0.386632,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "438984f7d2b44793939e416b535b02dd54efcc55476bdd71746c1151a68ab453",
+      "patch_scores": "patch_scores/19cdd174635e9006a17fd6f8fc218827cb0e7139088dd5bf9b6482bacfde1834.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.965142,
+          "image_aupr": 0.980002
+        },
+        "good_pass": 0.586207,
+        "good_loss": 0.413793,
+        "threshold": 0.520349,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "438984f7d2b44793939e416b535b02dd54efcc55476bdd71746c1151a68ab453",
+      "patch_scores": "patch_scores/89b95ee844cb5d6b7231f9fcd7114abbed0881318a15103532419972b9c93df5.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.998214,
+          "image_aupr": 0.999048
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.542752,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "438984f7d2b44793939e416b535b02dd54efcc55476bdd71746c1151a68ab453",
+      "patch_scores": "patch_scores/e1c346d51b30e3097dd31c2b7fadf6d9c82da44f3ed7b62a3d31f6352385d00b.npy",
+      "result": {
+        "category": "transistor",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.978333,
+          "image_aupr": 0.975169
+        },
+        "good_pass": 0.833333,
+        "good_loss": 0.166667,
+        "threshold": 0.494776,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "c0937cd6da6178f314a839196750343335b011eefd78536796a36bf51f91af04",
+      "patch_scores": "patch_scores/e754b4f07f9fbea66819781e340782f7ebd1122bd56a0451c4cebc0eeb7361f4.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.966267,
+          "image_aupr": 0.981058
+        },
+        "good_pass": 0.672414,
+        "good_loss": 0.327586,
+        "threshold": 0.532148,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e02293857f83db1f1c6cd97a3e41d343b39e9a1b06350f160e4fbc13c9971e50",
+      "patch_scores": "patch_scores/971e45745a2e035fabc80504ea173da8ea4da5df4523887844775782d040da9b.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.540691,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "8977912bd7f19cd460cb424282a3a769c2d5e1c58bba700ce1bfb20da5bf8789",
+      "patch_scores": "patch_scores/d444841847409c7c63240ff0d116bc09ffec06be30edc868f518ac5c1edb0a28.npy",
+      "result": {
+        "category": "transistor",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.984167,
+          "image_aupr": 0.981994
+        },
+        "good_pass": 0.883333,
+        "good_loss": 0.116667,
+        "threshold": 0.481668,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.580697,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "0d7948949d031e52ca620267d7a7ffe690c02bf831ea5d94a672a346bc6ce56f",
+      "patch_scores": "patch_scores/1ce0596b1302c2b38d4e4068a407258d122c952ecdf6b778883fbb0c81fd7c1e.npy",
+      "result": {
+        "category": "transistor",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.968333,
+          "image_aupr": 0.964913
+        },
+        "good_pass": 0.816667,
+        "good_loss": 0.183333,
+        "threshold": 0.473705,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.968141,
+          "image_aupr": 0.982582
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.582603,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "0d7948949d031e52ca620267d7a7ffe690c02bf831ea5d94a672a346bc6ce56f",
+      "patch_scores": "patch_scores/1ce0596b1302c2b38d4e4068a407258d122c952ecdf6b778883fbb0c81fd7c1e.npy",
+      "result": {
+        "category": "transistor",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.995417,
+          "image_aupr": 0.993529
+        },
+        "good_pass": 0.95,
+        "good_loss": 0.05,
+        "threshold": 0.549875,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.971889,
+          "image_aupr": 0.984913
+        },
+        "good_pass": 0.810345,
+        "good_loss": 0.189655,
+        "threshold": 0.579138,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.620289,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "0d7948949d031e52ca620267d7a7ffe690c02bf831ea5d94a672a346bc6ce56f",
+      "patch_scores": "patch_scores/1ce0596b1302c2b38d4e4068a407258d122c952ecdf6b778883fbb0c81fd7c1e.npy",
+      "result": {
+        "category": "transistor",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.995,
+          "image_aupr": 0.993234
+        },
+        "good_pass": 0.983333,
+        "good_loss": 0.016667,
+        "threshold": 0.535599,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "0d7948949d031e52ca620267d7a7ffe690c02bf831ea5d94a672a346bc6ce56f",
+      "patch_scores": "patch_scores/1ce0596b1302c2b38d4e4068a407258d122c952ecdf6b778883fbb0c81fd7c1e.npy",
+      "result": {
+        "category": "transistor",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.995,
+          "image_aupr": 0.993234
+        },
+        "good_pass": 0.983333,
+        "good_loss": 0.016667,
+        "threshold": 0.535599,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e1165d8b33528d31994f34a2cbfc7d10795c3ba22e017fbaa28a2c69a46e632d",
+      "patch_scores": "patch_scores/f5fd16eab19c7fbe917b830fef6bb47a438f4a4c0243a35ffc8529b992d1f592.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.966642,
+          "image_aupr": 0.980977
+        },
+        "good_pass": 0.551724,
+        "good_loss": 0.448276,
+        "threshold": 0.520115,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e1165d8b33528d31994f34a2cbfc7d10795c3ba22e017fbaa28a2c69a46e632d",
+      "patch_scores": "patch_scores/7ebfeaa352d26350501110bf5222aac270deeac174ffd57668f1ffebe918fe7b.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.545773,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "wood",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e1165d8b33528d31994f34a2cbfc7d10795c3ba22e017fbaa28a2c69a46e632d",
+      "patch_scores": "patch_scores/e572f4edd538475416001224254bbca57c3e86da82f33a7b9f5c7dcfc47fb9b8.npy",
+      "result": {
+        "category": "wood",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.991228,
+          "image_aupr": 0.997329
+        },
+        "good_pass": 0.894737,
+        "good_loss": 0.105263,
+        "threshold": 0.491644,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 247,
+          "test": 79,
+          "test_good": 19,
+          "test_defect": 60
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "c0937cd6da6178f314a839196750343335b011eefd78536796a36bf51f91af04",
+      "patch_scores": "patch_scores/e754b4f07f9fbea66819781e340782f7ebd1122bd56a0451c4cebc0eeb7361f4.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.966267,
+          "image_aupr": 0.981058
+        },
+        "good_pass": 0.672414,
+        "good_loss": 0.327586,
+        "threshold": 0.532148,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e02293857f83db1f1c6cd97a3e41d343b39e9a1b06350f160e4fbc13c9971e50",
+      "patch_scores": "patch_scores/971e45745a2e035fabc80504ea173da8ea4da5df4523887844775782d040da9b.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.540691,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "wood",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "8623f04ab3c523cfc9b1b314d8e9fede766905b204c1dd06a097286e2bda5b4f",
+      "patch_scores": "patch_scores/be36abc03df379e22da9e357b5749bcb5b0f6e83260187f35699c8a68266ccf8.npy",
+      "result": {
+        "category": "wood",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.992982,
+          "image_aupr": 0.997856
+        },
+        "good_pass": 0.894737,
+        "good_loss": 0.105263,
+        "threshold": 0.480103,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 247,
+          "test": 79,
+          "test_good": 19,
+          "test_defect": 60
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.580697,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "wood",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "a81ac80fd6f96844d032a3a7fe0e1d6fd9b3ff5cdc729ad437a3fffd135e9782",
+      "patch_scores": "patch_scores/12b0b168ec0d0fb6ff84e9ce6a7bb9689608f9f7c8fe2335b58a159faa79fb38.npy",
+      "result": {
+        "category": "wood",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.988596,
+          "image_aupr": 0.996425
+        },
+        "good_pass": 0.842105,
+        "good_loss": 0.157895,
+        "threshold": 0.508931,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 247,
+          "test": 79,
+          "test_good": 19,
+          "test_defect": 60
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.968141,
+          "image_aupr": 0.982582
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.582603,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "wood",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "a81ac80fd6f96844d032a3a7fe0e1d6fd9b3ff5cdc729ad437a3fffd135e9782",
+      "patch_scores": "patch_scores/12b0b168ec0d0fb6ff84e9ce6a7bb9689608f9f7c8fe2335b58a159faa79fb38.npy",
+      "result": {
+        "category": "wood",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.985965,
+          "image_aupr": 0.995651
+        },
+        "good_pass": 0.842105,
+        "good_loss": 0.157895,
+        "threshold": 0.566571,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 247,
+          "test": 79,
+          "test_good": 19,
+          "test_defect": 60
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "c0937cd6da6178f314a839196750343335b011eefd78536796a36bf51f91af04",
+      "patch_scores": "patch_scores/e754b4f07f9fbea66819781e340782f7ebd1122bd56a0451c4cebc0eeb7361f4.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.966267,
+          "image_aupr": 0.981058
+        },
+        "good_pass": 0.672414,
+        "good_loss": 0.327586,
+        "threshold": 0.532148,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e02293857f83db1f1c6cd97a3e41d343b39e9a1b06350f160e4fbc13c9971e50",
+      "patch_scores": "patch_scores/971e45745a2e035fabc80504ea173da8ea4da5df4523887844775782d040da9b.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.540691,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "wood",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "8623f04ab3c523cfc9b1b314d8e9fede766905b204c1dd06a097286e2bda5b4f",
+      "patch_scores": "patch_scores/be36abc03df379e22da9e357b5749bcb5b0f6e83260187f35699c8a68266ccf8.npy",
+      "result": {
+        "category": "wood",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.992982,
+          "image_aupr": 0.997856
+        },
+        "good_pass": 0.894737,
+        "good_loss": 0.105263,
+        "threshold": 0.480103,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 247,
+          "test": 79,
+          "test_good": 19,
+          "test_defect": 60
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "wood",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "8623f04ab3c523cfc9b1b314d8e9fede766905b204c1dd06a097286e2bda5b4f",
+      "patch_scores": "patch_scores/be36abc03df379e22da9e357b5749bcb5b0f6e83260187f35699c8a68266ccf8.npy",
+      "result": {
+        "category": "wood",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.992982,
+          "image_aupr": 0.997856
+        },
+        "good_pass": 0.894737,
+        "good_loss": 0.105263,
+        "threshold": 0.480103,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 247,
+          "test": 79,
+          "test_good": 19,
+          "test_defect": 60
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "5a1eda9fdbec822ebe4388ea207c9bff719d4e94e9ff6d9dcf600c7ae530e6ff",
+      "patch_scores": "patch_scores/7a9c1f8a78f99ad9ae33eb49f1913aed494200f57f3de8f54a9afb723b928255.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.960457,
+          "image_aupr": 0.977211
+        },
+        "good_pass": 0.551724,
+        "good_loss": 0.448276,
+        "threshold": 0.520115,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "5a1eda9fdbec822ebe4388ea207c9bff719d4e94e9ff6d9dcf600c7ae530e6ff",
+      "patch_scores": "patch_scores/df0d1b4d1c9abf4489f4699ff9d3efe39d051722c3ea958548466924cde8f647.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.540691,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "zipper",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "5a1eda9fdbec822ebe4388ea207c9bff719d4e94e9ff6d9dcf600c7ae530e6ff",
+      "patch_scores": "patch_scores/36467d1bc2df5b285de12c11573eb800709651069f69ebb5f0b918bff54ae269.npy",
+      "result": {
+        "category": "zipper",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.978729,
+          "image_aupr": 0.994253
+        },
+        "good_pass": 0.90625,
+        "good_loss": 0.09375,
+        "threshold": 0.426093,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 240,
+          "test": 151,
+          "test_good": 32,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "c0937cd6da6178f314a839196750343335b011eefd78536796a36bf51f91af04",
+      "patch_scores": "patch_scores/e754b4f07f9fbea66819781e340782f7ebd1122bd56a0451c4cebc0eeb7361f4.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.966267,
+          "image_aupr": 0.981058
+        },
+        "good_pass": 0.672414,
+        "good_loss": 0.327586,
+        "threshold": 0.532148,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e02293857f83db1f1c6cd97a3e41d343b39e9a1b06350f160e4fbc13c9971e50",
+      "patch_scores": "patch_scores/971e45745a2e035fabc80504ea173da8ea4da5df4523887844775782d040da9b.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.540691,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "zipper",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "9fbe236a596e2c710ee9c471521cef21fb04e3c9d82c7e97df8a353f60282f08",
+      "patch_scores": "patch_scores/71375f30e092af51a8e670dfca3f7cb21874fb496fd26fe625e3c6aabc39dbef.npy",
+      "result": {
+        "category": "zipper",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.978204,
+          "image_aupr": 0.993782
+        },
+        "good_pass": 0.90625,
+        "good_loss": 0.09375,
+        "threshold": 0.370943,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 240,
+          "test": 151,
+          "test_good": 32,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.580697,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "zipper",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "81410b62f84f6d1a33802fe654874933262aa0baa9764b8e7ffde6f647775573",
+      "patch_scores": "patch_scores/33f998e62a9c91eca685213b0e2ae45992c2b01095e5b31c22c913494010f106.npy",
+      "result": {
+        "category": "zipper",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.985557,
+          "image_aupr": 0.996042
+        },
+        "good_pass": 0.875,
+        "good_loss": 0.125,
+        "threshold": 0.368729,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 240,
+          "test": 151,
+          "test_good": 32,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.968141,
+          "image_aupr": 0.982582
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.582603,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "zipper",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "81410b62f84f6d1a33802fe654874933262aa0baa9764b8e7ffde6f647775573",
+      "patch_scores": "patch_scores/33f998e62a9c91eca685213b0e2ae45992c2b01095e5b31c22c913494010f106.npy",
+      "result": {
+        "category": "zipper",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.97584,
+          "image_aupr": 0.993246
+        },
+        "good_pass": 0.8125,
+        "good_loss": 0.1875,
+        "threshold": 0.434369,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 240,
+          "test": 151,
+          "test_good": 32,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.968141,
+          "image_aupr": 0.982582
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.582603,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "zipper",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "81410b62f84f6d1a33802fe654874933262aa0baa9764b8e7ffde6f647775573",
+      "patch_scores": "patch_scores/33f998e62a9c91eca685213b0e2ae45992c2b01095e5b31c22c913494010f106.npy",
+      "result": {
+        "category": "zipper",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.97584,
+          "image_aupr": 0.993246
+        },
+        "good_pass": 0.8125,
+        "good_loss": 0.1875,
+        "threshold": 0.434369,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 240,
+          "test": 151,
+          "test_good": 32,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "hazelnut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+      "patch_scores": "patch_scores/c3ac8ac768276cb082504e759a828cdd53b0ca4ecf67af71b09f166d7beb87cf.npy",
+      "result": {
+        "category": "hazelnut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999286,
+          "image_aupr": 0.999603
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.640482,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 391,
+          "test": 110,
+          "test_good": 40,
+          "test_defect": 70
+        }
+      }
+    },
+    {
+      "category": "zipper",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "81410b62f84f6d1a33802fe654874933262aa0baa9764b8e7ffde6f647775573",
+      "patch_scores": "patch_scores/33f998e62a9c91eca685213b0e2ae45992c2b01095e5b31c22c913494010f106.npy",
+      "result": {
+        "category": "zipper",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.97584,
+          "image_aupr": 0.993246
+        },
+        "good_pass": 0.8125,
+        "good_loss": 0.1875,
+        "threshold": 0.434369,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 240,
+          "test": 151,
+          "test_good": 32,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e8957dbbcfd51f6a2d80df94e1e134f179bc8f70e1284017ed4dead574919bfc",
+      "patch_scores": "patch_scores/9f9688b5e252704afd8d7e1511a8f45041d7d7b5e202a79c7aa962085826e686.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.943216,
+          "image_aupr": 0.967448
+        },
+        "good_pass": 0.534483,
+        "good_loss": 0.465517,
+        "threshold": 0.517777,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e8957dbbcfd51f6a2d80df94e1e134f179bc8f70e1284017ed4dead574919bfc",
+      "patch_scores": "patch_scores/5b11f615113f024eea04ac659af207440dc95803b6987ad4bdb10ef6fc2f7f0e.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.441751,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e8957dbbcfd51f6a2d80df94e1e134f179bc8f70e1284017ed4dead574919bfc",
+      "patch_scores": "patch_scores/a28fa849dc254309be877b367394c1a648a46ea9ce85cab47f05c76b49597527.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.510089,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "c0937cd6da6178f314a839196750343335b011eefd78536796a36bf51f91af04",
+      "patch_scores": "patch_scores/e754b4f07f9fbea66819781e340782f7ebd1122bd56a0451c4cebc0eeb7361f4.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.966267,
+          "image_aupr": 0.981058
+        },
+        "good_pass": 0.672414,
+        "good_loss": 0.327586,
+        "threshold": 0.532148,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "aeab7576e7409680c9196687f2b2f7d1d2e3f4b51623a7802ca7b8197b7d5f21",
+      "patch_scores": "patch_scores/430aa3ff01667ab1b5f464dde24fb39ce680efef8d4294a8682199332f47a589.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.401902,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "665e826ba2657df334d6d04ee3f79c9ce976967119dcce104fdf85e25a4601ca",
+      "patch_scores": "patch_scores/1ce28496887d719edc62f8bd084cd6b13b6008d2170aa79216c3b10d11068bda.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.999511,
+          "image_aupr": 0.999886
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.509579,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.418921,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.98827,
+          "image_aupr": 0.997249
+        },
+        "good_pass": 0.863636,
+        "good_loss": 0.136364,
+        "threshold": 0.534674,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.968141,
+          "image_aupr": 0.982582
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.582603,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.968141,
+          "image_aupr": 0.982582
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.582603,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "metal_nut",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+      "patch_scores": "patch_scores/5b3d3abe552a1676e95b1ee3d1fac9679de6e6071b525fc976dd30bf730c388a.npy",
+      "result": {
+        "category": "metal_nut",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999022,
+          "image_aupr": 0.999774
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.59821,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 220,
+          "test": 115,
+          "test_good": 22,
+          "test_defect": 93
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "fc16c84fdd4b6dd62f9a8fcdeddd30a78d160d0f966c63a1985973d943186538",
+      "patch_scores": "patch_scores/033e4e7805958412a298628937d0024bfe545755647e2ab9711115941f1f26b2.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.953711,
+          "image_aupr": 0.972831
+        },
+        "good_pass": 0.603448,
+        "good_loss": 0.396552,
+        "threshold": 0.520534,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "fc16c84fdd4b6dd62f9a8fcdeddd30a78d160d0f966c63a1985973d943186538",
+      "patch_scores": "patch_scores/ce85accd2660b303ffd3cf07d09f9406d04c92aac0cf95a3b130936ce2c6584e.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.421082,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "fc16c84fdd4b6dd62f9a8fcdeddd30a78d160d0f966c63a1985973d943186538",
+      "patch_scores": "patch_scores/c673f5f9d677174ac41d312585495de42fe220bc2d116dd0085da42f0a479d02.npy",
+      "result": {
+        "category": "pill",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 9000,
+        "nn_ops_per_image": 1354752000,
+        "auc": {
+          "image_auroc": 0.958265,
+          "image_aupr": 0.992324
+        },
+        "good_pass": 0.615385,
+        "good_loss": 0.384615,
+        "threshold": 0.439958,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "c0937cd6da6178f314a839196750343335b011eefd78536796a36bf51f91af04",
+      "patch_scores": "patch_scores/e754b4f07f9fbea66819781e340782f7ebd1122bd56a0451c4cebc0eeb7361f4.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.966267,
+          "image_aupr": 0.981058
+        },
+        "good_pass": 0.672414,
+        "good_loss": 0.327586,
+        "threshold": 0.532148,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "aeab7576e7409680c9196687f2b2f7d1d2e3f4b51623a7802ca7b8197b7d5f21",
+      "patch_scores": "patch_scores/430aa3ff01667ab1b5f464dde24fb39ce680efef8d4294a8682199332f47a589.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.401902,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e15f6941f34e6bc02626464de74904aec46f86b6c562da19850ad09531e6e888",
+      "patch_scores": "patch_scores/45939ab68b817e077f3a3d81f1c264c07453721c88d957394c9ca1ff49d9d5bb.npy",
+      "result": {
+        "category": "pill",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.960447,
+          "image_aupr": 0.992771
+        },
+        "good_pass": 0.730769,
+        "good_loss": 0.269231,
+        "threshold": 0.433991,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.418921,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "58500017000057275a660bbc5557fef41a43137768701cde3664b91025ae845e",
+      "patch_scores": "patch_scores/c1f69b289ff1bbd2604db4534d3a655074dac5d06a88657d09f6b80b3406acb4.npy",
+      "result": {
+        "category": "pill",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.932624,
+          "image_aupr": 0.987443
+        },
+        "good_pass": 0.230769,
+        "good_loss": 0.769231,
+        "threshold": 0.455396,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.968141,
+          "image_aupr": 0.982582
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.582603,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "58500017000057275a660bbc5557fef41a43137768701cde3664b91025ae845e",
+      "patch_scores": "patch_scores/c1f69b289ff1bbd2604db4534d3a655074dac5d06a88657d09f6b80b3406acb4.npy",
+      "result": {
+        "category": "pill",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.950355,
+          "image_aupr": 0.990493
+        },
+        "good_pass": 0.615385,
+        "good_loss": 0.384615,
+        "threshold": 0.50763,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "c0937cd6da6178f314a839196750343335b011eefd78536796a36bf51f91af04",
+      "patch_scores": "patch_scores/e754b4f07f9fbea66819781e340782f7ebd1122bd56a0451c4cebc0eeb7361f4.npy",
+      "result": {
+        "category": "cable",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.966267,
+          "image_aupr": 0.981058
+        },
+        "good_pass": 0.672414,
+        "good_loss": 0.327586,
+        "threshold": 0.532148,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "aeab7576e7409680c9196687f2b2f7d1d2e3f4b51623a7802ca7b8197b7d5f21",
+      "patch_scores": "patch_scores/430aa3ff01667ab1b5f464dde24fb39ce680efef8d4294a8682199332f47a589.npy",
+      "result": {
+        "category": "leather",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.401902,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e15f6941f34e6bc02626464de74904aec46f86b6c562da19850ad09531e6e888",
+      "patch_scores": "patch_scores/45939ab68b817e077f3a3d81f1c264c07453721c88d957394c9ca1ff49d9d5bb.npy",
+      "result": {
+        "category": "pill",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.960447,
+          "image_aupr": 0.992771
+        },
+        "good_pass": 0.730769,
+        "good_loss": 0.269231,
+        "threshold": 0.433991,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "cable",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+      "patch_scores": "patch_scores/bd1d57496e1ff8900311966c3f345e7523971852f9691adab79cd6e5a39fb209.npy",
+      "result": {
+        "category": "cable",
+        "config": "wrn_l3_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.978823,
+          "image_aupr": 0.98789
+        },
+        "good_pass": 0.706897,
+        "good_loss": 0.293103,
+        "threshold": 0.548398,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 224,
+          "test": 150,
+          "test_good": 58,
+          "test_defect": 92
+        }
+      }
+    },
+    {
+      "category": "leather",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+      "patch_scores": "patch_scores/dd6b7ea2a4f90036940f06121a8bb1453e4c594cb35d071b9bb72c923bfd930a.npy",
+      "result": {
+        "category": "leather",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.452699,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 245,
+          "test": 124,
+          "test_good": 32,
+          "test_defect": 92
         }
       }
     },
