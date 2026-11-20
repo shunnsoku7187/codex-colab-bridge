@@ -21,3 +21,160 @@ $ git push origin main
 To github.com:shunnsoku7187/codex-colab-bridge.git
    f2c7fdc..c9d1a4e  main -> main
 $ git add jobs logs results artifacts docs
+$ git diff --cached --quiet
+$ git commit -m 'caviar9: prepared patchcore_publication_assets_001'
+[main 8d09176] caviar9: prepared patchcore_publication_assets_001
+ 2 files changed, 12 insertions(+)
+$ git push origin main
+To github.com:shunnsoku7187/codex-colab-bridge.git
+   c9d1a4e..8d09176  main -> main
+
+bottle standard_wrn_l23_g14_topk0p01 train:   0%|          | 0/7 [00:00<?, ?it/s]
+bottle standard_wrn_l23_g14_topk0p01 train:  14%|█▍        | 1/7 [00:02<00:12,  2.17s/it]
+bottle standard_wrn_l23_g14_topk0p01 train:  57%|█████▋    | 4/7 [00:02<00:01,  2.26it/s]
+bottle standard_wrn_l23_g14_topk0p01 train:  86%|████████▌ | 6/7 [00:02<00:00,  2.60it/s]
+                                                                                         
+
+bottle standard_wrn_l23_g14_topk0p01 test:   0%|          | 0/3 [00:00<?, ?it/s]
+bottle standard_wrn_l23_g14_topk0p01 test:  33%|███▎      | 1/3 [00:00<00:01,  1.24it/s]
+bottle standard_wrn_l23_g14_topk0p01 test: 100%|██████████| 3/3 [00:01<00:00,  2.82it/s]
+                                                                                        
+EXPORTED FEATURES bottle 094dfb939626222bfdb8
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+cable standard_wrn_l23_g14_topk0p01 train:   0%|          | 0/7 [00:00<?, ?it/s]
+cable standard_wrn_l23_g14_topk0p01 train:  14%|█▍        | 1/7 [00:01<00:07,  1.27s/it]
+cable standard_wrn_l23_g14_topk0p01 train:  43%|████▎     | 3/7 [00:02<00:03,  1.26it/s]
+cable standard_wrn_l23_g14_topk0p01 train:  71%|███████▏  | 5/7 [00:03<00:01,  1.47it/s]
+cable standard_wrn_l23_g14_topk0p01 train: 100%|██████████| 7/7 [00:04<00:00,  1.60it/s]
+                                                                                        
+
+cable standard_wrn_l23_g14_topk0p01 test:   0%|          | 0/5 [00:00<?, ?it/s]
+cable standard_wrn_l23_g14_topk0p01 test:  20%|██        | 1/5 [00:01<00:05,  1.27s/it]
+cable standard_wrn_l23_g14_topk0p01 test:  60%|██████    | 3/5 [00:02<00:01,  1.32it/s]
+cable standard_wrn_l23_g14_topk0p01 test: 100%|██████████| 5/5 [00:03<00:00,  1.78it/s]
+                                                                                       
+EXPORTED FEATURES cable af9684cd2057148c9add
+BANK ['bottle', 'cable'] size=6000 sha256=fd28da06cf63b9f986a0158da18e70a68008f5637b5b584c3712c33e924a384a
+BANK ['bottle'] size=3000 sha256=f813bc524bce1b33bea8b3e205c19c68f12b069a93f96c8ad797fa01cd2c4d4d
+BANK ['cable'] size=3000 sha256=feecafdb60d0d83e07446bbf22719c93d2ffab4e2896c7181f4768b169fabb8c
+
+bottle wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/7 [00:00<?, ?it/s]
+bottle wrn_l3_g14_b12000_topk0p005 train:  14%|█▍        | 1/7 [00:00<00:04,  1.31it/s]
+bottle wrn_l3_g14_b12000_topk0p005 train:  43%|████▎     | 3/7 [00:01<00:01,  2.31it/s]
+bottle wrn_l3_g14_b12000_topk0p005 train:  71%|███████▏  | 5/7 [00:02<00:00,  2.67it/s]
+bottle wrn_l3_g14_b12000_topk0p005 train: 100%|██████████| 7/7 [00:02<00:00,  3.58it/s]
+                                                                                       
+
+bottle wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/3 [00:00<?, ?it/s]
+bottle wrn_l3_g14_b12000_topk0p005 test:  33%|███▎      | 1/3 [00:00<00:01,  1.32it/s]
+bottle wrn_l3_g14_b12000_topk0p005 test: 100%|██████████| 3/3 [00:01<00:00,  3.12it/s]
+                                                                                      
+EXPORTED FEATURES bottle 57a5945c8b59abe92bbb
+
+cable wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/7 [00:00<?, ?it/s]
+cable wrn_l3_g14_b12000_topk0p005 train:  14%|█▍        | 1/7 [00:01<00:07,  1.21s/it]
+cable wrn_l3_g14_b12000_topk0p005 train:  43%|████▎     | 3/7 [00:02<00:02,  1.39it/s]
+cable wrn_l3_g14_b12000_topk0p005 train:  71%|███████▏  | 5/7 [00:03<00:01,  1.59it/s]
+cable wrn_l3_g14_b12000_topk0p005 train: 100%|██████████| 7/7 [00:04<00:00,  1.74it/s]
+                                                                                      
+
+cable wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/5 [00:00<?, ?it/s]
+cable wrn_l3_g14_b12000_topk0p005 test:  20%|██        | 1/5 [00:01<00:04,  1.22s/it]
+cable wrn_l3_g14_b12000_topk0p005 test:  60%|██████    | 3/5 [00:02<00:01,  1.39it/s]
+cable wrn_l3_g14_b12000_topk0p005 test: 100%|██████████| 5/5 [00:02<00:00,  1.90it/s]
+                                                                                     
+EXPORTED FEATURES cable bbbee5dd4bf17f2a7252
+BANK ['bottle'] size=3000 sha256=e71beb1f7acfae28ef541149a8dc107454c73c5f25f6f3aad379a9187ec37a01
+BANK ['cable'] size=3000 sha256=320315e22f3e79e74d8d7c61519f493355aad1a2faa356667c1d4ed2ba301c3e
+BANK ['bottle'] size=3000 sha256=e71beb1f7acfae28ef541149a8dc107454c73c5f25f6f3aad379a9187ec37a01
+BANK ['cable'] size=3000 sha256=320315e22f3e79e74d8d7c61519f493355aad1a2faa356667c1d4ed2ba301c3e
+BANK ['bottle'] size=3000 sha256=e71beb1f7acfae28ef541149a8dc107454c73c5f25f6f3aad379a9187ec37a01
+BANK ['cable'] size=3000 sha256=320315e22f3e79e74d8d7c61519f493355aad1a2faa356667c1d4ed2ba301c3e
+
+capsule standard_wrn_l23_g14_topk0p01 train:   0%|          | 0/7 [00:00<?, ?it/s]
+capsule standard_wrn_l23_g14_topk0p01 train:  14%|█▍        | 1/7 [00:01<00:07,  1.25s/it]
+capsule standard_wrn_l23_g14_topk0p01 train:  43%|████▎     | 3/7 [00:02<00:02,  1.36it/s]
+capsule standard_wrn_l23_g14_topk0p01 train:  71%|███████▏  | 5/7 [00:03<00:01,  1.56it/s]
+capsule standard_wrn_l23_g14_topk0p01 train: 100%|██████████| 7/7 [00:04<00:00,  1.79it/s]
+                                                                                          
+
+capsule standard_wrn_l23_g14_topk0p01 test:   0%|          | 0/5 [00:00<?, ?it/s]
+capsule standard_wrn_l23_g14_topk0p01 test:  20%|██        | 1/5 [00:01<00:04,  1.25s/it]
+capsule standard_wrn_l23_g14_topk0p01 test:  60%|██████    | 3/5 [00:02<00:01,  1.37it/s]
+capsule standard_wrn_l23_g14_topk0p01 test: 100%|██████████| 5/5 [00:02<00:00,  2.61it/s]
+                                                                                         
+EXPORTED FEATURES capsule bcad32f6c01d4e5336d2
+BANK ['bottle', 'capsule'] size=6000 sha256=7579d887f3492d19b72f450d8a6167c5e23fa553328b337fb11067c2c0e8d4cf
+BANK ['bottle'] size=3000 sha256=f813bc524bce1b33bea8b3e205c19c68f12b069a93f96c8ad797fa01cd2c4d4d
+BANK ['capsule'] size=3000 sha256=3c9d3448aff2c3d7c0ffa47e2a509f59ffce9aa9a61f57431affb2894538adb9
+
+capsule wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/7 [00:00<?, ?it/s]
+capsule wrn_l3_g14_b12000_topk0p005 train:  14%|█▍        | 1/7 [00:01<00:07,  1.17s/it]
+capsule wrn_l3_g14_b12000_topk0p005 train:  43%|████▎     | 3/7 [00:02<00:02,  1.45it/s]
+capsule wrn_l3_g14_b12000_topk0p005 train:  71%|███████▏  | 5/7 [00:03<00:01,  1.66it/s]
+capsule wrn_l3_g14_b12000_topk0p005 train: 100%|██████████| 7/7 [00:04<00:00,  1.92it/s]
+                                                                                        
+
+capsule wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/5 [00:00<?, ?it/s]
+capsule wrn_l3_g14_b12000_topk0p005 test:  20%|██        | 1/5 [00:01<00:04,  1.17s/it]
+capsule wrn_l3_g14_b12000_topk0p005 test:  60%|██████    | 3/5 [00:02<00:01,  1.46it/s]
+                                                                                       
+EXPORTED FEATURES capsule 77367abec5dadc5e79ad
+BANK ['bottle'] size=3000 sha256=e71beb1f7acfae28ef541149a8dc107454c73c5f25f6f3aad379a9187ec37a01
+BANK ['capsule'] size=3000 sha256=49d68b185c468ab538290be8508510311a5d084be793baef5815deb9ca645426
+BANK ['bottle'] size=3000 sha256=e71beb1f7acfae28ef541149a8dc107454c73c5f25f6f3aad379a9187ec37a01
+BANK ['capsule'] size=3000 sha256=49d68b185c468ab538290be8508510311a5d084be793baef5815deb9ca645426
+BANK ['bottle'] size=3000 sha256=e71beb1f7acfae28ef541149a8dc107454c73c5f25f6f3aad379a9187ec37a01
+BANK ['capsule'] size=3000 sha256=49d68b185c468ab538290be8508510311a5d084be793baef5815deb9ca645426
+
+carpet standard_wrn_l23_g14_topk0p01 train:   0%|          | 0/9 [00:00<?, ?it/s]
+carpet standard_wrn_l23_g14_topk0p01 train:  11%|█         | 1/9 [00:01<00:13,  1.66s/it]
+carpet standard_wrn_l23_g14_topk0p01 train:  33%|███▎      | 3/9 [00:02<00:04,  1.22it/s]
+carpet standard_wrn_l23_g14_topk0p01 train:  56%|█████▌    | 5/9 [00:03<00:02,  1.49it/s]
+carpet standard_wrn_l23_g14_topk0p01 train:  78%|███████▊  | 7/9 [00:04<00:01,  1.65it/s]
+carpet standard_wrn_l23_g14_topk0p01 train: 100%|██████████| 9/9 [00:05<00:00,  1.92it/s]
+                                                                                         
+
+carpet standard_wrn_l23_g14_topk0p01 test:   0%|          | 0/4 [00:00<?, ?it/s]
+carpet standard_wrn_l23_g14_topk0p01 test:  25%|██▌       | 1/4 [00:01<00:03,  1.21s/it]
+carpet standard_wrn_l23_g14_topk0p01 test:  75%|███████▌  | 3/4 [00:02<00:00,  1.44it/s]
+                                                                                        
+EXPORTED FEATURES carpet 808159e1d9ba8cd00986
+BANK ['bottle', 'carpet'] size=6000 sha256=a30306e5dbc4402e3c9d3a5b5257b1dd1b01acc712f9332652580558264f66e8
+BANK ['bottle'] size=3000 sha256=f813bc524bce1b33bea8b3e205c19c68f12b069a93f96c8ad797fa01cd2c4d4d
+BANK ['carpet'] size=3000 sha256=fc5da2d0107bf2645a7a7199d00b6ced0bd5d9c1c7383f4b550624af697e9c1a
+
+carpet wrn_l3_g14_b12000_topk0p005 train:   0%|          | 0/9 [00:00<?, ?it/s]
+carpet wrn_l3_g14_b12000_topk0p005 train:  11%|█         | 1/9 [00:01<00:09,  1.13s/it]
+carpet wrn_l3_g14_b12000_topk0p005 train:  33%|███▎      | 3/9 [00:02<00:03,  1.52it/s]
+carpet wrn_l3_g14_b12000_topk0p005 train:  56%|█████▌    | 5/9 [00:03<00:02,  1.73it/s]
+carpet wrn_l3_g14_b12000_topk0p005 train:  78%|███████▊  | 7/9 [00:04<00:01,  1.84it/s]
+carpet wrn_l3_g14_b12000_topk0p005 train: 100%|██████████| 9/9 [00:04<00:00,  2.14it/s]
+                                                                                       
+
+carpet wrn_l3_g14_b12000_topk0p005 test:   0%|          | 0/4 [00:00<?, ?it/s]
+carpet wrn_l3_g14_b12000_topk0p005 test:  25%|██▌       | 1/4 [00:01<00:03,  1.13s/it]
+carpet wrn_l3_g14_b12000_topk0p005 test:  75%|███████▌  | 3/4 [00:02<00:00,  1.54it/s]
+                                                                                      
+EXPORTED FEATURES carpet afccf83e122e4d9e686f
+BANK ['bottle'] size=3000 sha256=e71beb1f7acfae28ef541149a8dc107454c73c5f25f6f3aad379a9187ec37a01
+BANK ['carpet'] size=3000 sha256=c114a2c195269416308bea3630b19eabc5f51f6d64589ea7653fe434280f8c5f
+BANK ['bottle'] size=3000 sha256=e71beb1f7acfae28ef541149a8dc107454c73c5f25f6f3aad379a9187ec37a01
+BANK ['carpet'] size=3000 sha256=c114a2c195269416308bea3630b19eabc5f51f6d64589ea7653fe434280f8c5f
+BANK ['bottle'] size=3000 sha256=e71beb1f7acfae28ef541149a8dc107454c73c5f25f6f3aad379a9187ec37a01
+BANK ['carpet'] size=3000 sha256=c114a2c195269416308bea3630b19eabc5f51f6d64589ea7653fe434280f8c5f
+
+grid standard_wrn_l23_g14_topk0p01 train:   0%|          | 0/9 [00:00<?, ?it/s]
+grid standard_wrn_l23_g14_topk0p01 train:  11%|█         | 1/9 [00:00<00:07,  1.03it/s]
+grid standard_wrn_l23_g14_topk0p01 train:  33%|███▎      | 3/9 [00:01<00:03,  1.79it/s]
+grid standard_wrn_l23_g14_topk0p01 train:  56%|█████▌    | 5/9 [00:02<00:01,  2.07it/s]
+grid standard_wrn_l23_g14_topk0p01 train:  78%|███████▊  | 7/9 [00:03<00:00,  2.20it/s]
+grid standard_wrn_l23_g14_topk0p01 train: 100%|██████████| 9/9 [00:03<00:00,  3.15it/s]
+                                                                                       
+
+grid standard_wrn_l23_g14_topk0p01 test:   0%|          | 0/3 [00:00<?, ?it/s]
+grid standard_wrn_l23_g14_topk0p01 test:  33%|███▎      | 1/3 [00:00<00:01,  1.03it/s]
+grid standard_wrn_l23_g14_topk0p01 test: 100%|██████████| 3/3 [00:01<00:00,  2.66it/s]
+                                                                                      
+$ git add jobs logs results artifacts docs
