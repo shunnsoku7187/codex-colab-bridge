@@ -8386,3 +8386,163 @@ BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6
 BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
 BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
 B$ git add jobs logs results artifacts docs
+$ git diff --cached --quiet
+$ git commit -m 'caviar9: heartbeat patchcore_publication_assets_001'
+[main e572305] caviar9: heartbeat patchcore_publication_assets_001
+ 4 files changed, 4568 insertions(+), 288 deletions(-)
+$ git push origin main
+To github.com:shunnsoku7187/codex-colab-bridge.git
+   6edf590..e572305  main -> main
+ANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['metal_nut', 'screw', 'toothbrush'] size=9000 sha256=a9b41825bb94b2ac21192a70093110944b77281c270104799be123e13be0f2d4
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['screw'] size=3000 sha256=35450d0565e6cd1c3fa28c4a684634a96e5f1a80d7df54d8d9825d468ccb9800
+BANK ['toothbrush'] size=3000 sha256=d294a5cf8623a9dc28b54dd4bb7196897df04157c9ab6d21a97a47594d329f28
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['toothbrush'] size=3000 sha256=3a7c63086350e9b01baad6d8ba0c5bae9b04de75746a854e96698955828c2f32
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['toothbrush'] size=3000 sha256=3a7c63086350e9b01baad6d8ba0c5bae9b04de75746a854e96698955828c2f32
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['screw'] size=3000 sha256=35450d0565e6cd1c3fa28c4a684634a96e5f1a80d7df54d8d9825d468ccb9800
+BANK ['toothbrush'] size=3000 sha256=d294a5cf8623a9dc28b54dd4bb7196897df04157c9ab6d21a97a47594d329f28
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['toothbrush'] size=3000 sha256=d294a5cf8623a9dc28b54dd4bb7196897df04157c9ab6d21a97a47594d329f28
+BANK ['metal_nut', 'screw', 'transistor'] size=9000 sha256=ac49a459d75e4ddd6195c9c02120dac61c9f9441c77d8dab2710e8c6bc3cc41b
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['screw'] size=3000 sha256=35450d0565e6cd1c3fa28c4a684634a96e5f1a80d7df54d8d9825d468ccb9800
+BANK ['transistor'] size=3000 sha256=53b9a67e6aa58d99603e766d10f233993c93659f1d517562c12e1b761244b4fc
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['transistor'] size=3000 sha256=f3dd80e4560ff8bd1d2aa8df37bff8480b261ced6a6e21775fcddb26f4a4a17b
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['transistor'] size=3000 sha256=f3dd80e4560ff8bd1d2aa8df37bff8480b261ced6a6e21775fcddb26f4a4a17b
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['transistor'] size=3000 sha256=f3dd80e4560ff8bd1d2aa8df37bff8480b261ced6a6e21775fcddb26f4a4a17b
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['transistor'] size=3000 sha256=f3dd80e4560ff8bd1d2aa8df37bff8480b261ced6a6e21775fcddb26f4a4a17b
+BANK ['metal_nut', 'screw', 'wood'] size=9000 sha256=26904a6b7c5e7824d9d9dcdf2cbd63985dc8023409f2633e6f41ef15bb5d5f9a
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['screw'] size=3000 sha256=35450d0565e6cd1c3fa28c4a684634a96e5f1a80d7df54d8d9825d468ccb9800
+BANK ['wood'] size=3000 sha256=efc3dfd7ebe88db14b5c1af6d405b6108f7bd7a5fba23cec878327996494781b
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['wood'] size=3000 sha256=80d0d3ecdee8eb5b72c777f741bd2e1867c74b7a9a824e5aa072e8b439dc10ce
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['wood'] size=3000 sha256=80d0d3ecdee8eb5b72c777f741bd2e1867c74b7a9a824e5aa072e8b439dc10ce
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['screw'] size=3000 sha256=35450d0565e6cd1c3fa28c4a684634a96e5f1a80d7df54d8d9825d468ccb9800
+BANK ['wood'] size=3000 sha256=efc3dfd7ebe88db14b5c1af6d405b6108f7bd7a5fba23cec878327996494781b
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['wood'] size=3000 sha256=efc3dfd7ebe88db14b5c1af6d405b6108f7bd7a5fba23cec878327996494781b
+BANK ['metal_nut', 'screw', 'zipper'] size=9000 sha256=429cead5396585a8afd73290cc48fa4033c42300cb359f7a61f7ef8cb09ea70e
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['screw'] size=3000 sha256=35450d0565e6cd1c3fa28c4a684634a96e5f1a80d7df54d8d9825d468ccb9800
+BANK ['zipper'] size=3000 sha256=220ba2894fa145ca2bc889d14da0e5046b4a67478de2e38ac5ef031c3a7da375
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['zipper'] size=3000 sha256=aa05881b056c392d51001cf9ecede003ab6889e5300dc00e73b4e096e1882fde
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['zipper'] size=3000 sha256=aa05881b056c392d51001cf9ecede003ab6889e5300dc00e73b4e096e1882fde
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['zipper'] size=3000 sha256=aa05881b056c392d51001cf9ecede003ab6889e5300dc00e73b4e096e1882fde
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['screw'] size=3000 sha256=9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283
+BANK ['zipper'] size=3000 sha256=aa05881b056c392d51001cf9ecede003ab6889e5300dc00e73b4e096e1882fde
+BANK ['metal_nut', 'tile', 'toothbrush'] size=9000 sha256=43cd6f071ae11447a57075f5a7c716e61ed138af34ba003e57e8cb0a714274d2
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['tile'] size=3000 sha256=da0f962804bee8e332caf17fcdbda7137356ea06ac220b43e075989b2926f2c9
+BANK ['toothbrush'] size=3000 sha256=d294a5cf8623a9dc28b54dd4bb7196897df04157c9ab6d21a97a47594d329f28
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['toothbrush'] size=3000 sha256=3a7c63086350e9b01baad6d8ba0c5bae9b04de75746a854e96698955828c2f32
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+B$ git add jobs logs results artifacts docs
+fatal: unable to stat 'results/patchcore_publication_assets_001_manifest.tmp': そのようなファイルやディレクトリはありません
+Heartbeat push failed: command failed with 128: git add jobs logs results artifacts docs
+ANK ['toothbrush'] size=3000 sha256=3a7c63086350e9b01baad6d8ba0c5bae9b04de75746a854e96698955828c2f32
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['tile'] size=3000 sha256=da0f962804bee8e332caf17fcdbda7137356ea06ac220b43e075989b2926f2c9
+BANK ['toothbrush'] size=3000 sha256=d294a5cf8623a9dc28b54dd4bb7196897df04157c9ab6d21a97a47594d329f28
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['toothbrush'] size=3000 sha256=d294a5cf8623a9dc28b54dd4bb7196897df04157c9ab6d21a97a47594d329f28
+BANK ['metal_nut', 'tile', 'transistor'] size=9000 sha256=f146cfe8af03250f47b860434ce7c8b1b145618d8afb4a3946111075ee02272d
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['tile'] size=3000 sha256=da0f962804bee8e332caf17fcdbda7137356ea06ac220b43e075989b2926f2c9
+BANK ['transistor'] size=3000 sha256=53b9a67e6aa58d99603e766d10f233993c93659f1d517562c12e1b761244b4fc
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['transistor'] size=3000 sha256=f3dd80e4560ff8bd1d2aa8df37bff8480b261ced6a6e21775fcddb26f4a4a17b
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['transistor'] size=3000 sha256=f3dd80e4560ff8bd1d2aa8df37bff8480b261ced6a6e21775fcddb26f4a4a17b
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['transistor'] size=3000 sha256=f3dd80e4560ff8bd1d2aa8df37bff8480b261ced6a6e21775fcddb26f4a4a17b
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['transistor'] size=3000 sha256=f3dd80e4560ff8bd1d2aa8df37bff8480b261ced6a6e21775fcddb26f4a4a17b
+BANK ['metal_nut', 'tile', 'wood'] size=9000 sha256=98c682d05a0678ffc076dfdfb8ff876c7fd4328c5146e17b8d21903537a35d34
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['tile'] size=3000 sha256=da0f962804bee8e332caf17fcdbda7137356ea06ac220b43e075989b2926f2c9
+BANK ['wood'] size=3000 sha256=efc3dfd7ebe88db14b5c1af6d405b6108f7bd7a5fba23cec878327996494781b
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['wood'] size=3000 sha256=80d0d3ecdee8eb5b72c777f741bd2e1867c74b7a9a824e5aa072e8b439dc10ce
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['wood'] size=3000 sha256=80d0d3ecdee8eb5b72c777f741bd2e1867c74b7a9a824e5aa072e8b439dc10ce
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['tile'] size=3000 sha256=da0f962804bee8e332caf17fcdbda7137356ea06ac220b43e075989b2926f2c9
+BANK ['wood'] size=3000 sha256=efc3dfd7ebe88db14b5c1af6d405b6108f7bd7a5fba23cec878327996494781b
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['wood'] size=3000 sha256=efc3dfd7ebe88db14b5c1af6d405b6108f7bd7a5fba23cec878327996494781b
+BANK ['metal_nut', 'tile', 'zipper'] size=9000 sha256=dcc6bebc881c1a0583d9df2071de72941697e94a3a7f7bad105c345ea78a5da6
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['tile'] size=3000 sha256=da0f962804bee8e332caf17fcdbda7137356ea06ac220b43e075989b2926f2c9
+BANK ['zipper'] size=3000 sha256=220ba2894fa145ca2bc889d14da0e5046b4a67478de2e38ac5ef031c3a7da375
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['zipper'] size=3000 sha256=aa05881b056c392d51001cf9ecede003ab6889e5300dc00e73b4e096e1882fde
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['zipper'] size=3000 sha256=aa05881b056c392d51001cf9ecede003ab6889e5300dc00e73b4e096e1882fde
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['zipper'] size=3000 sha256=aa05881b056c392d51001cf9ecede003ab6889e5300dc00e73b4e096e1882fde
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['tile'] size=3000 sha256=d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81
+BANK ['zipper'] size=3000 sha256=aa05881b056c392d51001cf9ecede003ab6889e5300dc00e73b4e096e1882fde
+BANK ['metal_nut', 'toothbrush', 'transistor'] size=9000 sha256=a77f73410b31f9dd4912e3b17a48164971097c96773f634507f8bb6029b16a60
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['toothbrush'] size=3000 sha256=d294a5cf8623a9dc28b54dd4bb7196897df04157c9ab6d21a97a47594d329f28
+BANK ['transistor'] size=3000 sha256=53b9a67e6aa58d99603e766d10f233993c93659f1d517562c12e1b761244b4fc
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['toothbrush'] size=3000 sha256=3a7c63086350e9b01baad6d8ba0c5bae9b04de75746a854e96698955828c2f32
+BANK ['transistor'] size=3000 sha256=f3dd80e4560ff8bd1d2aa8df37bff8480b261ced6a6e21775fcddb26f4a4a17b
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+BANK ['toothbrush'] size=3000 sha256=d294a5cf8623a9dc28b54dd4bb7196897df04157c9ab6d21a97a47594d329f28
+BANK ['transistor'] size=3000 sha256=53b9a67e6aa58d99603e766d10f233993c93659f1d517562c12e1b761244b4fc
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['toothbrush'] size=3000 sha256=3a7c63086350e9b01baad6d8ba0c5bae9b04de75746a854e96698955828c2f32
+BANK ['transistor'] size=3000 sha256=f3dd80e4560ff8bd1d2aa8df37bff8480b261ced6a6e21775fcddb26f4a4a17b
+BANK ['metal_nut'] size=3000 sha256=c032d62c2b0c620a6fc7bf8252af86cb3673d94acea6f839640234da974fc757
+BANK ['toothbrush'] size=3000 sha256=d294a5cf8623a9dc28b54dd4bb7196897df04157c9ab6d21a97a47594d329f28
+BANK ['transistor'] size=3000 sha256=f3dd80e4560ff8bd1d2aa8df37bff8480b261ced6a6e21775fcddb26f4a4a17b
+BANK ['metal_nut', 'toothbrush', 'wood'] size=9000 sha256=ff06d6790db51e27853c2bca3a533085e9afa79c3d334935446d0c340284fa71
+BANK ['metal_nut'] size=3000 sha256=4a8bc332a6a967801cc88ca2159dc5d7134ad4c0a69558fa3a3bef14ce852c9d
+B$ git add jobs logs results artifacts docs
