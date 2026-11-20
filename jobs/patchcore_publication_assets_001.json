@@ -1,6 +1,6 @@
 {
   "id": "patchcore_publication_assets_001",
-  "status": "running",
+  "status": "done",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,6 +9,11 @@
   "max_runtime_sec": 86400,
   "result_file": "results/patchcore_publication_assets_001.json",
   "note": "Regenerate publication K=3000 full AB/ABC comparison; persist float features/banks/patch scores under data/patchcore_publication_assets_001 and return SHA256 manifest via Git. No int8 conversion or original-array identity guarantee.",
-  "updated_at": "2026-11-20T12:46:43.676894+00:00",
-  "started_at": "2026-11-20T12:46:43.676872+00:00"
+  "updated_at": "2026-11-20T16:44:26.603891+00:00",
+  "started_at": "2026-11-20T12:46:43.676872+00:00",
+  "returncode": 0,
+  "duration_sec": 14256.446,
+  "stdout": "logs/patchcore_publication_assets_001.stdout.log",
+  "stderr": "logs/patchcore_publication_assets_001.stderr.log",
+  "finished_at": "2026-11-20T16:44:26.573907+00:00"
 }
