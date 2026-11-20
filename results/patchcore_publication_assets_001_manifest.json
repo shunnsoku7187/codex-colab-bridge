@@ -1134,6 +1134,636 @@
         196
       ],
       "dtype": "float32"
+    },
+    "features/pill/5c4d5297c99318c30457/train.npy": {
+      "bytes": 107176064,
+      "sha256": "edd107fa219c816341e3b82a7b8ba20621dfee04998e99d17ab6bc71fef3d25e",
+      "shape": [
+        267,
+        196,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "features/pill/5c4d5297c99318c30457/test.npy": {
+      "bytes": 67035264,
+      "sha256": "6edad0495d4b78b71e13e44d383a18da91f7220e7f08847fc427fac61040f082",
+      "shape": [
+        167,
+        196,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "features/pill/5c4d5297c99318c30457/test_labels.npy": {
+      "bytes": 1464,
+      "sha256": "412fe2b3fc00d54d3c7dfab6d1c626382b446fee8d1a0159874c7066be8b1f29",
+      "shape": [
+        167
+      ],
+      "dtype": "int64"
+    },
+    "features/pill/5c4d5297c99318c30457/train_labels.npy": {
+      "bytes": 2264,
+      "sha256": "0061fd7ff3801b306e8dbe1687777c4b09192b23d369e8b70f361935ce5ab37a",
+      "shape": [
+        267
+      ],
+      "dtype": "int64"
+    },
+    "banks/2917e2b0bfb5ed965f556c23cdf4decf2085f82d7b93ae7c48950a37db45643d.npy": {
+      "bytes": 6144128,
+      "sha256": "550c62b3e92b24930f3451e2b1b6df488f01bb4409cb7719d6cb4dfbde0e95cd",
+      "shape": [
+        3000,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/c1f69b289ff1bbd2604db4534d3a655074dac5d06a88657d09f6b80b3406acb4.npy": {
+      "bytes": 131056,
+      "sha256": "c29b23e450b98416b71e144742b473d81dd3739f7f27e2b525282c5d7c1f7b80",
+      "shape": [
+        167,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "features/screw/d6dfd6ec065f07752045/train.npy": {
+      "bytes": 192675968,
+      "sha256": "90194c257da6d4551a34391e20aae8fa26c4e7fe59cda998230b3a526cc7c323",
+      "shape": [
+        320,
+        196,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "features/screw/d6dfd6ec065f07752045/test.npy": {
+      "bytes": 96338048,
+      "sha256": "a7bbc4c05d97dc9dff7df1c457303ba3867e4e1a8e568c928e0aa270bd519219",
+      "shape": [
+        160,
+        196,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "features/screw/d6dfd6ec065f07752045/test_labels.npy": {
+      "bytes": 1408,
+      "sha256": "8b47868597af99405d8f22ba1398ee76a25e61b9374bf151437579544d3f65d4",
+      "shape": [
+        160
+      ],
+      "dtype": "int64"
+    },
+    "features/screw/d6dfd6ec065f07752045/train_labels.npy": {
+      "bytes": 2688,
+      "sha256": "dc2c3d6a8b0dd771389c60d6e616507c14746117731b75de5cab20cfce427aa0",
+      "shape": [
+        320
+      ],
+      "dtype": "int64"
+    },
+    "banks/086712c536e51b70774bf11f0b09c75313379546dcc6c618ac8ee1b4a6c8078f.npy": {
+      "bytes": 18432128,
+      "sha256": "ce82d81f780ccc4f39d794be3d79423e4806628b5546868e94d6d5ad24bee56d",
+      "shape": [
+        6000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/5322c50bad05d1a5d56742df85ce330f309e2822850268dc58bb2609504ab3b8.npy": {
+      "bytes": 65200,
+      "sha256": "917ccaf36895e579b11621f28f12a459d6db8275a0b966a3d4d5f4253161bf83",
+      "shape": [
+        83,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/57e880273b01d87534f7a4f5c980dafd88e3e89429eaeae4056f2c4b067ac19d.npy": {
+      "bytes": 125568,
+      "sha256": "867cd5ef46b3f6b7b5b110057bd9c84e7b2a0ab262b46b1ad276616c1e040f25",
+      "shape": [
+        160,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/a4a487f3d631225dcf289a11dd88337ccece70969ee6fd0735aa4dd5630f6420.npy": {
+      "bytes": 9216128,
+      "sha256": "35450d0565e6cd1c3fa28c4a684634a96e5f1a80d7df54d8d9825d468ccb9800",
+      "shape": [
+        3000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/33c58bd1105a3fc8f631603dcdc6bd5203040b338e0403fb3efd7973f6fbd0ff.npy": {
+      "bytes": 125568,
+      "sha256": "95410d7dc0c0ff3ff09ed9bc99bc1dd8cf6e2da4dc8727b03a9856a64e0b0cbe",
+      "shape": [
+        160,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "features/screw/d9b5087d0486c949ae42/train.npy": {
+      "bytes": 128450688,
+      "sha256": "165ca3d5283a7f6d430e8e459091c33ac762d0b385a2e234e1ffd87c0e5833d4",
+      "shape": [
+        320,
+        196,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "features/screw/d9b5087d0486c949ae42/test.npy": {
+      "bytes": 64225408,
+      "sha256": "672b06211a882516376c8e235d62d489cee565b9a939082e2f3b3be38c6c2bd1",
+      "shape": [
+        160,
+        196,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "features/screw/d9b5087d0486c949ae42/test_labels.npy": {
+      "bytes": 1408,
+      "sha256": "8b47868597af99405d8f22ba1398ee76a25e61b9374bf151437579544d3f65d4",
+      "shape": [
+        160
+      ],
+      "dtype": "int64"
+    },
+    "features/screw/d9b5087d0486c949ae42/train_labels.npy": {
+      "bytes": 2688,
+      "sha256": "dc2c3d6a8b0dd771389c60d6e616507c14746117731b75de5cab20cfce427aa0",
+      "shape": [
+        320
+      ],
+      "dtype": "int64"
+    },
+    "banks/96e741707a8b026746096cb218b7e73a517c6e3f850066632a4bb0ef6516137d.npy": {
+      "bytes": 6144128,
+      "sha256": "9b6cf515a7be3fd454dd5957ecdfafd50d95b834d0d6a6729094d154b04d5283",
+      "shape": [
+        3000,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/3eadc4c600288e43f9d167cbc68a400ba0b187e6e73f38a7377027aba74dbfc4.npy": {
+      "bytes": 125568,
+      "sha256": "9b55d17df21cd40beccf97f0f5c3e30a881d48aaa2730a19b943220f3b3e0c09",
+      "shape": [
+        160,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "features/tile/ed45dec67f3cf4e7ee0f/train.npy": {
+      "bytes": 138485888,
+      "sha256": "0a085e008cf6df45d5770d67e93aa78e0b75f8ee5cd6d5b66231b11eeacd16b4",
+      "shape": [
+        230,
+        196,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "features/tile/ed45dec67f3cf4e7ee0f/test.npy": {
+      "bytes": 70447232,
+      "sha256": "5675dc642c433f4f16810054dc9e23df0c951a2dd0ee986e5e2674e5c5d8e013",
+      "shape": [
+        117,
+        196,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "features/tile/ed45dec67f3cf4e7ee0f/test_labels.npy": {
+      "bytes": 1064,
+      "sha256": "86c056fb185178e4f9728a3ebca59ce41bec00d6a08a600dd8bdf36538b397f1",
+      "shape": [
+        117
+      ],
+      "dtype": "int64"
+    },
+    "features/tile/ed45dec67f3cf4e7ee0f/train_labels.npy": {
+      "bytes": 1968,
+      "sha256": "8ce0ddb2747bbee0db563d6474140e6a09c520bb91d7d3143033301b4fe15865",
+      "shape": [
+        230
+      ],
+      "dtype": "int64"
+    },
+    "banks/6602026c37f8dffcc93375b1e065226a76256366a1b26783a1e76becd0e6472c.npy": {
+      "bytes": 18432128,
+      "sha256": "5b796fbff951261a48c4b61a4c94f1457acd4901e5294ccdaef369f1fccb0a61",
+      "shape": [
+        6000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/f1de551805d81bb1d7b8afcc79cfec28c781c5b5c7b5d1fbdbcd30f64869c227.npy": {
+      "bytes": 65200,
+      "sha256": "a8908c0d3056827b0832a7e3328d9eeb12e9857b74e0dbe25b13e3d447302db9",
+      "shape": [
+        83,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/79676a333bb45882bf64f7213e5ec1c28dd7e5639f05318f1199e324365bf399.npy": {
+      "bytes": 91856,
+      "sha256": "2c1c6e91998ea6c1c80799c5a393eb9532e5a3a181cb50b189010b81a270f21f",
+      "shape": [
+        117,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/7e51fe0ced8821194f0b5e99819157a1b936659ce7d5a214d5ad08e1bc6fa23a.npy": {
+      "bytes": 9216128,
+      "sha256": "da0f962804bee8e332caf17fcdbda7137356ea06ac220b43e075989b2926f2c9",
+      "shape": [
+        3000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/f9bc5b9eecfa244bd9441827cb03303692ff7cfffb265f4796a5b741b3262370.npy": {
+      "bytes": 91856,
+      "sha256": "6679990b3c26788cbef29e9de9c74cbc2d272b2131b4737204a23d12d7bda65e",
+      "shape": [
+        117,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "features/tile/fc37eacd271594215e11/train.npy": {
+      "bytes": 92323968,
+      "sha256": "291b7dd0630e92a52f72871ca3d2eb4dd76f2fce437b6036acc9c98b7fb32b91",
+      "shape": [
+        230,
+        196,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "features/tile/fc37eacd271594215e11/test.npy": {
+      "bytes": 46964864,
+      "sha256": "57160ced1c24b18682a61e473a62caf82450e1ad1d5d7fe22c43146db22232b5",
+      "shape": [
+        117,
+        196,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "features/tile/fc37eacd271594215e11/test_labels.npy": {
+      "bytes": 1064,
+      "sha256": "86c056fb185178e4f9728a3ebca59ce41bec00d6a08a600dd8bdf36538b397f1",
+      "shape": [
+        117
+      ],
+      "dtype": "int64"
+    },
+    "features/tile/fc37eacd271594215e11/train_labels.npy": {
+      "bytes": 1968,
+      "sha256": "8ce0ddb2747bbee0db563d6474140e6a09c520bb91d7d3143033301b4fe15865",
+      "shape": [
+        230
+      ],
+      "dtype": "int64"
+    },
+    "banks/862690205aeb7848c1c7be3551e48e9d0e4198fd37bdf48e1d3430f5da7200e5.npy": {
+      "bytes": 6144128,
+      "sha256": "d98b50cac4f6dc634eabcc2174246dfe7b1fccae6fa492de54015bd1823c0e81",
+      "shape": [
+        3000,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/53fb9d23d1908c3df2a545b78613f6d341eadbd466565c2b15f49e7ceb400e9c.npy": {
+      "bytes": 91856,
+      "sha256": "aebab7e3a3c8d61bc8aa0d70b36d7c1263d3d6dbfed35bfdccd7596c38842fe3",
+      "shape": [
+        117,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "features/toothbrush/6fca5d52fdcda059428e/train.npy": {
+      "bytes": 36126848,
+      "sha256": "5d4c9dc8e6a4e1bfc9b0ce2c4851190c101d6098587dfb991730cc66f8eb3edb",
+      "shape": [
+        60,
+        196,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "features/toothbrush/6fca5d52fdcda059428e/test.npy": {
+      "bytes": 25288832,
+      "sha256": "e0313186863cb739ded3694d577afc987ec481e5276dc56f93d3dfa41a26ab36",
+      "shape": [
+        42,
+        196,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "features/toothbrush/6fca5d52fdcda059428e/test_labels.npy": {
+      "bytes": 464,
+      "sha256": "b2c14e2291a789d87b46f236018e4881706952b684a038dbeb6034ed49f5bb83",
+      "shape": [
+        42
+      ],
+      "dtype": "int64"
+    },
+    "features/toothbrush/6fca5d52fdcda059428e/train_labels.npy": {
+      "bytes": 608,
+      "sha256": "34edb641e0d91d23621f68172f7ff4c96bdc9001ca18f89b46252c84dea64e68",
+      "shape": [
+        60
+      ],
+      "dtype": "int64"
+    },
+    "banks/a3f138ee0a9da475963660d0e4bf39c70eba5b1603d362bde4702d5db3dfc301.npy": {
+      "bytes": 18432128,
+      "sha256": "cac5eb1877b898c0f6e72b53e4eb26ebdc05302f6f35a28631362f41219d4bea",
+      "shape": [
+        6000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/2e9f9096f57627bb65e014ec2fe983bb436d41a850408cd1817dc8ef066593cb.npy": {
+      "bytes": 65200,
+      "sha256": "edcf7268dd88b46e2f8066d18cb25b290ffac2e97c0a7aa95809e0ba962c1648",
+      "shape": [
+        83,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/542f01956ea60c32a1f13ae97dce08d7447023ba40a117773f717425ecd9f279.npy": {
+      "bytes": 33056,
+      "sha256": "7f12044046dfbf1cb730d24a856732be39f387bc1ecdad216e1639ee3fa90a09",
+      "shape": [
+        42,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/acf15fb25b4dfe9fd55449f0eb5cb73d92ab814006fa4508918252e0bd1d76ed.npy": {
+      "bytes": 9216128,
+      "sha256": "d294a5cf8623a9dc28b54dd4bb7196897df04157c9ab6d21a97a47594d329f28",
+      "shape": [
+        3000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/4efc465d32ff3755506325370f78eaa27b15f274509232a9b2b14e287e2e44e4.npy": {
+      "bytes": 33056,
+      "sha256": "1009858ad8aa1b59069e2c57d96a3c13f354ccf4b236c684b4d1ef6ef6334e97",
+      "shape": [
+        42,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "features/toothbrush/154f78267f8097a7fb0b/train.npy": {
+      "bytes": 24084608,
+      "sha256": "c3c868d7f90a52b04b667a238412a229bcfb8e6941c69753d75870666ead6894",
+      "shape": [
+        60,
+        196,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "features/toothbrush/154f78267f8097a7fb0b/test.npy": {
+      "bytes": 16859264,
+      "sha256": "d9135b9fb89c1760bc1699b09f7edc5431d620845e4d6d645e336d40a9366c72",
+      "shape": [
+        42,
+        196,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "features/toothbrush/154f78267f8097a7fb0b/test_labels.npy": {
+      "bytes": 464,
+      "sha256": "b2c14e2291a789d87b46f236018e4881706952b684a038dbeb6034ed49f5bb83",
+      "shape": [
+        42
+      ],
+      "dtype": "int64"
+    },
+    "features/toothbrush/154f78267f8097a7fb0b/train_labels.npy": {
+      "bytes": 608,
+      "sha256": "34edb641e0d91d23621f68172f7ff4c96bdc9001ca18f89b46252c84dea64e68",
+      "shape": [
+        60
+      ],
+      "dtype": "int64"
+    },
+    "banks/616dc974e9d3cf5b320d81680757241f4dd12abd5c51818ff8665aefad8013fb.npy": {
+      "bytes": 6144128,
+      "sha256": "3a7c63086350e9b01baad6d8ba0c5bae9b04de75746a854e96698955828c2f32",
+      "shape": [
+        3000,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/857afb4d992057fc794014cf05226b385cfb4e8706afc22d5aa7751aba0216ec.npy": {
+      "bytes": 33056,
+      "sha256": "31a798dbfd141260e79c757841689a03b8b3bde2ece9a412f4c625386a1940a4",
+      "shape": [
+        42,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "features/transistor/19692bd407edc6521ead/train.npy": {
+      "bytes": 128249984,
+      "sha256": "1866677b41cd4d2c23fb0cf96b2c6009e81bf6c445fde7787fc17835b5adec0a",
+      "shape": [
+        213,
+        196,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "features/transistor/19692bd407edc6521ead/test.npy": {
+      "bytes": 60211328,
+      "sha256": "eb23697eea8ef3d2085fa2eb16db2e8836e3148b8cd126f3b77c9660804baca7",
+      "shape": [
+        100,
+        196,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "features/transistor/19692bd407edc6521ead/test_labels.npy": {
+      "bytes": 928,
+      "sha256": "5d9e25e32c4a27493c63a3b9b052bc7a16815cbd58a61f779d50d6b2e2c1f513",
+      "shape": [
+        100
+      ],
+      "dtype": "int64"
+    },
+    "features/transistor/19692bd407edc6521ead/train_labels.npy": {
+      "bytes": 1832,
+      "sha256": "12fc9c417909b5c92e7525f1b42e4e0efe58a7472e70834185f00bb453221a5b",
+      "shape": [
+        213
+      ],
+      "dtype": "int64"
+    },
+    "banks/80714a059abda87357bb07118bc2163d0a87a760f6dd2119f6864426dbbc6033.npy": {
+      "bytes": 18432128,
+      "sha256": "294003ecfad49bb6a0e0f09219ef395484d810f32a99bfd430dcacea11b0a49a",
+      "shape": [
+        6000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/ccb1fd0d0cdcb01d337b5041adf37fd434ccd28cb4d3063ae7e51d91e3ec4744.npy": {
+      "bytes": 65200,
+      "sha256": "30c33b6750e6c78d9c75627b96cdd879924a339b1532543c2674cffb941ed74e",
+      "shape": [
+        83,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/1f0cbfe52c8c32fbe37c12e09c174868041a8dd2c28ac6e5afa36855fd7370de.npy": {
+      "bytes": 78528,
+      "sha256": "287c7ef1531bc37ca6e911d6bf6792ff6b1d251b908aa702f3ad3ca2ca9d3af0",
+      "shape": [
+        100,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "banks/e2e2b68b46aed46483c9e7ced564423b79323c1c8686ceb6ecff59422b9feaad.npy": {
+      "bytes": 9216128,
+      "sha256": "53b9a67e6aa58d99603e766d10f233993c93659f1d517562c12e1b761244b4fc",
+      "shape": [
+        3000,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/d444841847409c7c63240ff0d116bc09ffec06be30edc868f518ac5c1edb0a28.npy": {
+      "bytes": 78528,
+      "sha256": "cabc11d66f3d27bb2ccd00c17620b6a7f2acd89c8e59c9038eaf68a887ec9387",
+      "shape": [
+        100,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "features/transistor/09527ef2bfac8337e115/train.npy": {
+      "bytes": 85500032,
+      "sha256": "ae4d0148a48a96800eec385f36e2ec2c6184701ac40096a1365761430552d416",
+      "shape": [
+        213,
+        196,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "features/transistor/09527ef2bfac8337e115/test.npy": {
+      "bytes": 40140928,
+      "sha256": "192e69a2fdd99f370bc2e2813e2473847da73268d83c3d3e0df6558451998f0e",
+      "shape": [
+        100,
+        196,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "features/transistor/09527ef2bfac8337e115/test_labels.npy": {
+      "bytes": 928,
+      "sha256": "5d9e25e32c4a27493c63a3b9b052bc7a16815cbd58a61f779d50d6b2e2c1f513",
+      "shape": [
+        100
+      ],
+      "dtype": "int64"
+    },
+    "features/transistor/09527ef2bfac8337e115/train_labels.npy": {
+      "bytes": 1832,
+      "sha256": "12fc9c417909b5c92e7525f1b42e4e0efe58a7472e70834185f00bb453221a5b",
+      "shape": [
+        213
+      ],
+      "dtype": "int64"
+    },
+    "banks/4992fdca098941a6a765423dacf5d5f8eb910335073b599451999279b6bfc812.npy": {
+      "bytes": 6144128,
+      "sha256": "f3dd80e4560ff8bd1d2aa8df37bff8480b261ced6a6e21775fcddb26f4a4a17b",
+      "shape": [
+        3000,
+        512
+      ],
+      "dtype": "float32"
+    },
+    "patch_scores/1ce0596b1302c2b38d4e4068a407258d122c952ecdf6b778883fbb0c81fd7c1e.npy": {
+      "bytes": 78528,
+      "sha256": "ca995395412b815e6c7bb9b82821a72fe30bb982a67171f8b07cb9b1814851ba",
+      "shape": [
+        100,
+        196
+      ],
+      "dtype": "float32"
+    },
+    "features/wood/f71987c53e0be001064f/train.npy": {
+      "bytes": 148721792,
+      "sha256": "f79ff83ccf21f1c76c208199d72563f6c54496e9564b70089e8d0a3443cab5a1",
+      "shape": [
+        247,
+        196,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "features/wood/f71987c53e0be001064f/test.npy": {
+      "bytes": 47566976,
+      "sha256": "24a46dfb799cf7a7332bdd2c253f51460cb671362e746d9b60edb00bb57a5f2d",
+      "shape": [
+        79,
+        196,
+        768
+      ],
+      "dtype": "float32"
+    },
+    "features/wood/f71987c53e0be001064f/test_labels.npy": {
+      "bytes": 760,
+      "sha256": "ab181474ff78c02d722e21c2b97009eaf0a36161bb11238796d943b1fa4a6690",
+      "shape": [
+        79
+      ],
+      "dtype": "int64"
+    },
+    "features/wood/f71987c53e0be001064f/train_labels.npy": {
+      "bytes": 2104,
+      "sha256": "d8ded48e67b7a4f1177ed7c0b2485b9ba431333a23f27efed8da7b877451ff83",
+      "shape": [
+        247
+      ],
+      "dtype": "int64"
     }
   },
   "evaluations": [
@@ -4386,6 +5016,2028 @@
           "test": 167,
           "test_good": 26,
           "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+      "patch_scores": "patch_scores/c90cf8ac7cc467ee9a414cef286cbd93929035987be96d5a926a7b800c916725.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.505228,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "58500017000057275a660bbc5557fef41a43137768701cde3664b91025ae845e",
+      "patch_scores": "patch_scores/c1f69b289ff1bbd2604db4534d3a655074dac5d06a88657d09f6b80b3406acb4.npy",
+      "result": {
+        "category": "pill",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.950355,
+          "image_aupr": 0.990493
+        },
+        "good_pass": 0.615385,
+        "good_loss": 0.384615,
+        "threshold": 0.50763,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "eb20cd74903899d20898fed90e61f52966a7ce4c2fd53ad8a3c2d4ab147ad4c1",
+      "patch_scores": "patch_scores/7dc83492c1e5cd8bce3cc31d0e3b70bb78a29879edda32717e748f0814049b87.npy",
+      "result": {
+        "category": "bottle",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.454655,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e15f6941f34e6bc02626464de74904aec46f86b6c562da19850ad09531e6e888",
+      "patch_scores": "patch_scores/45939ab68b817e077f3a3d81f1c264c07453721c88d957394c9ca1ff49d9d5bb.npy",
+      "result": {
+        "category": "pill",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.960447,
+          "image_aupr": 0.992771
+        },
+        "good_pass": 0.730769,
+        "good_loss": 0.269231,
+        "threshold": 0.433991,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+      "patch_scores": "patch_scores/c90cf8ac7cc467ee9a414cef286cbd93929035987be96d5a926a7b800c916725.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.505228,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "pill",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "e15f6941f34e6bc02626464de74904aec46f86b6c562da19850ad09531e6e888",
+      "patch_scores": "patch_scores/45939ab68b817e077f3a3d81f1c264c07453721c88d957394c9ca1ff49d9d5bb.npy",
+      "result": {
+        "category": "pill",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.960447,
+          "image_aupr": 0.992771
+        },
+        "good_pass": 0.730769,
+        "good_loss": 0.269231,
+        "threshold": 0.433991,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 267,
+          "test": 167,
+          "test_good": 26,
+          "test_defect": 141
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "f38028cb926cf93a5dfb289f2050ea9c44378a009150e8864cbe3ac0e01850cd",
+      "patch_scores": "patch_scores/5322c50bad05d1a5d56742df85ce330f309e2822850268dc58bb2609504ab3b8.npy",
+      "result": {
+        "category": "bottle",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 6000,
+        "nn_ops_per_image": 903168000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.462359,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "f38028cb926cf93a5dfb289f2050ea9c44378a009150e8864cbe3ac0e01850cd",
+      "patch_scores": "patch_scores/57e880273b01d87534f7a4f5c980dafd88e3e89429eaeae4056f2c4b067ac19d.npy",
+      "result": {
+        "category": "screw",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 6000,
+        "nn_ops_per_image": 903168000,
+        "auc": {
+          "image_auroc": 0.752408,
+          "image_aupr": 0.888416
+        },
+        "good_pass": 0.390244,
+        "good_loss": 0.609756,
+        "threshold": 0.429885,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "eb20cd74903899d20898fed90e61f52966a7ce4c2fd53ad8a3c2d4ab147ad4c1",
+      "patch_scores": "patch_scores/7dc83492c1e5cd8bce3cc31d0e3b70bb78a29879edda32717e748f0814049b87.npy",
+      "result": {
+        "category": "bottle",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.454655,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "4866e84075526588e50d15a385eaef6e785c35ee05b7985427cabfbdf82574ae",
+      "patch_scores": "patch_scores/33c58bd1105a3fc8f631603dcdc6bd5203040b338e0403fb3efd7973f6fbd0ff.npy",
+      "result": {
+        "category": "screw",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.744005,
+          "image_aupr": 0.882155
+        },
+        "good_pass": 0.390244,
+        "good_loss": 0.609756,
+        "threshold": 0.430736,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+      "patch_scores": "patch_scores/c90cf8ac7cc467ee9a414cef286cbd93929035987be96d5a926a7b800c916725.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.505228,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "1b78a5e7dc011204bd2a6eab313bfa80487a784a0fae42ce3e23b1b158ce6c75",
+      "patch_scores": "patch_scores/3eadc4c600288e43f9d167cbc68a400ba0b187e6e73f38a7377027aba74dbfc4.npy",
+      "result": {
+        "category": "screw",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.781103,
+          "image_aupr": 0.90162
+        },
+        "good_pass": 0.317073,
+        "good_loss": 0.682927,
+        "threshold": 0.494527,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+      "patch_scores": "patch_scores/c90cf8ac7cc467ee9a414cef286cbd93929035987be96d5a926a7b800c916725.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.496612,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "1b78a5e7dc011204bd2a6eab313bfa80487a784a0fae42ce3e23b1b158ce6c75",
+      "patch_scores": "patch_scores/3eadc4c600288e43f9d167cbc68a400ba0b187e6e73f38a7377027aba74dbfc4.npy",
+      "result": {
+        "category": "screw",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.79463,
+          "image_aupr": 0.897865
+        },
+        "good_pass": 0.390244,
+        "good_loss": 0.609756,
+        "threshold": 0.491996,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+      "patch_scores": "patch_scores/c90cf8ac7cc467ee9a414cef286cbd93929035987be96d5a926a7b800c916725.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.505228,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "screw",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "1b78a5e7dc011204bd2a6eab313bfa80487a784a0fae42ce3e23b1b158ce6c75",
+      "patch_scores": "patch_scores/3eadc4c600288e43f9d167cbc68a400ba0b187e6e73f38a7377027aba74dbfc4.npy",
+      "result": {
+        "category": "screw",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.79463,
+          "image_aupr": 0.897865
+        },
+        "good_pass": 0.390244,
+        "good_loss": 0.609756,
+        "threshold": 0.491996,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 320,
+          "test": 160,
+          "test_good": 41,
+          "test_defect": 119
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "f6ea0dfd4930d616870edccbee4bbc901b8f3abb5ac0a4fa5daf518970ff2fd7",
+      "patch_scores": "patch_scores/f1de551805d81bb1d7b8afcc79cfec28c781c5b5c7b5d1fbdbcd30f64869c227.npy",
+      "result": {
+        "category": "bottle",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 6000,
+        "nn_ops_per_image": 903168000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.487,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "f6ea0dfd4930d616870edccbee4bbc901b8f3abb5ac0a4fa5daf518970ff2fd7",
+      "patch_scores": "patch_scores/79676a333bb45882bf64f7213e5ec1c28dd7e5639f05318f1199e324365bf399.npy",
+      "result": {
+        "category": "tile",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 6000,
+        "nn_ops_per_image": 903168000,
+        "auc": {
+          "image_auroc": 0.997114,
+          "image_aupr": 0.998908
+        },
+        "good_pass": 0.969697,
+        "good_loss": 0.030303,
+        "threshold": 0.471308,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "eb20cd74903899d20898fed90e61f52966a7ce4c2fd53ad8a3c2d4ab147ad4c1",
+      "patch_scores": "patch_scores/7dc83492c1e5cd8bce3cc31d0e3b70bb78a29879edda32717e748f0814049b87.npy",
+      "result": {
+        "category": "bottle",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.454655,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "1cf337cad91f2f09a0953b58d1e57672a34ca1d43ffd975fb2b0f66c68108573",
+      "patch_scores": "patch_scores/f9bc5b9eecfa244bd9441827cb03303692ff7cfffb265f4796a5b741b3262370.npy",
+      "result": {
+        "category": "tile",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.997835,
+          "image_aupr": 0.999174
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.484045,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+      "patch_scores": "patch_scores/c90cf8ac7cc467ee9a414cef286cbd93929035987be96d5a926a7b800c916725.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.505228,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "80b250612a04d02bcd58ce1483dca094350718ff942689e1d91f47b28d9ba120",
+      "patch_scores": "patch_scores/53fb9d23d1908c3df2a545b78613f6d341eadbd466565c2b15f49e7ceb400e9c.npy",
+      "result": {
+        "category": "tile",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999278,
+          "image_aupr": 0.999718
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.561533,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+      "patch_scores": "patch_scores/c90cf8ac7cc467ee9a414cef286cbd93929035987be96d5a926a7b800c916725.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.505228,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "80b250612a04d02bcd58ce1483dca094350718ff942689e1d91f47b28d9ba120",
+      "patch_scores": "patch_scores/53fb9d23d1908c3df2a545b78613f6d341eadbd466565c2b15f49e7ceb400e9c.npy",
+      "result": {
+        "category": "tile",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999278,
+          "image_aupr": 0.999718
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.561533,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+      "patch_scores": "patch_scores/c90cf8ac7cc467ee9a414cef286cbd93929035987be96d5a926a7b800c916725.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.505228,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "tile",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "80b250612a04d02bcd58ce1483dca094350718ff942689e1d91f47b28d9ba120",
+      "patch_scores": "patch_scores/53fb9d23d1908c3df2a545b78613f6d341eadbd466565c2b15f49e7ceb400e9c.npy",
+      "result": {
+        "category": "tile",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.999278,
+          "image_aupr": 0.999718
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.561533,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 230,
+          "test": 117,
+          "test_good": 33,
+          "test_defect": 84
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "f61c02f1003d807c11b4f71ebd4e15edd236fcca82c2fb67619e84128377ac05",
+      "patch_scores": "patch_scores/2e9f9096f57627bb65e014ec2fe983bb436d41a850408cd1817dc8ef066593cb.npy",
+      "result": {
+        "category": "bottle",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 6000,
+        "nn_ops_per_image": 903168000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.455445,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "f61c02f1003d807c11b4f71ebd4e15edd236fcca82c2fb67619e84128377ac05",
+      "patch_scores": "patch_scores/542f01956ea60c32a1f13ae97dce08d7447023ba40a117773f717425ecd9f279.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 6000,
+        "nn_ops_per_image": 903168000,
+        "auc": {
+          "image_auroc": 0.972222,
+          "image_aupr": 0.989197
+        },
+        "good_pass": 0.75,
+        "good_loss": 0.25,
+        "threshold": 0.430997,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "eb20cd74903899d20898fed90e61f52966a7ce4c2fd53ad8a3c2d4ab147ad4c1",
+      "patch_scores": "patch_scores/7dc83492c1e5cd8bce3cc31d0e3b70bb78a29879edda32717e748f0814049b87.npy",
+      "result": {
+        "category": "bottle",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.454655,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "b0b88baedae0aa4bc3cd046a32190161b58ea58ca40feeb9d3bd6066dcf5be87",
+      "patch_scores": "patch_scores/4efc465d32ff3755506325370f78eaa27b15f274509232a9b2b14e287e2e44e4.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.963889,
+          "image_aupr": 0.985939
+        },
+        "good_pass": 0.75,
+        "good_loss": 0.25,
+        "threshold": 0.430997,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+      "patch_scores": "patch_scores/c90cf8ac7cc467ee9a414cef286cbd93929035987be96d5a926a7b800c916725.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.505228,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "eb983c6cb056fd72191a1e65a095d282e0820182e77e6c853e228193ba71002f",
+      "patch_scores": "patch_scores/857afb4d992057fc794014cf05226b385cfb4e8706afc22d5aa7751aba0216ec.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.894444,
+          "image_aupr": 0.952323
+        },
+        "good_pass": 0.75,
+        "good_loss": 0.25,
+        "threshold": 0.491356,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "eb20cd74903899d20898fed90e61f52966a7ce4c2fd53ad8a3c2d4ab147ad4c1",
+      "patch_scores": "patch_scores/7dc83492c1e5cd8bce3cc31d0e3b70bb78a29879edda32717e748f0814049b87.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.36569,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "b0b88baedae0aa4bc3cd046a32190161b58ea58ca40feeb9d3bd6066dcf5be87",
+      "patch_scores": "patch_scores/4efc465d32ff3755506325370f78eaa27b15f274509232a9b2b14e287e2e44e4.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.991667,
+          "image_aupr": 0.996664
+        },
+        "good_pass": 0.916667,
+        "good_loss": 0.083333,
+        "threshold": 0.386632,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+      "patch_scores": "patch_scores/c90cf8ac7cc467ee9a414cef286cbd93929035987be96d5a926a7b800c916725.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.505228,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "toothbrush",
+      "config": {
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.05
+      },
+      "bank_array_sha256": "b0b88baedae0aa4bc3cd046a32190161b58ea58ca40feeb9d3bd6066dcf5be87",
+      "patch_scores": "patch_scores/4efc465d32ff3755506325370f78eaa27b15f274509232a9b2b14e287e2e44e4.npy",
+      "result": {
+        "category": "toothbrush",
+        "config": "wrn_l23_g14_b12000_topk0p05",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.05,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.991667,
+          "image_aupr": 0.996664
+        },
+        "good_pass": 0.916667,
+        "good_loss": 0.083333,
+        "threshold": 0.386632,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 60,
+          "test": 42,
+          "test_good": 12,
+          "test_defect": 30
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "b959aa032dbfb8f5470d6be920f609c296b23a03327c0b9f96677f90617a17bd",
+      "patch_scores": "patch_scores/ccb1fd0d0cdcb01d337b5041adf37fd434ccd28cb4d3063ae7e51d91e3ec4744.npy",
+      "result": {
+        "category": "bottle",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 6000,
+        "nn_ops_per_image": 903168000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.463683,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "b959aa032dbfb8f5470d6be920f609c296b23a03327c0b9f96677f90617a17bd",
+      "patch_scores": "patch_scores/1f0cbfe52c8c32fbe37c12e09c174868041a8dd2c28ac6e5afa36855fd7370de.npy",
+      "result": {
+        "category": "transistor",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 6000,
+        "nn_ops_per_image": 903168000,
+        "auc": {
+          "image_auroc": 0.98,
+          "image_aupr": 0.976978
+        },
+        "good_pass": 0.7,
+        "good_loss": 0.3,
+        "threshold": 0.453742,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "eb20cd74903899d20898fed90e61f52966a7ce4c2fd53ad8a3c2d4ab147ad4c1",
+      "patch_scores": "patch_scores/7dc83492c1e5cd8bce3cc31d0e3b70bb78a29879edda32717e748f0814049b87.npy",
+      "result": {
+        "category": "bottle",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.454655,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 768,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "8977912bd7f19cd460cb424282a3a769c2d5e1c58bba700ce1bfb20da5bf8789",
+      "patch_scores": "patch_scores/d444841847409c7c63240ff0d116bc09ffec06be30edc868f518ac5c1edb0a28.npy",
+      "result": {
+        "category": "transistor",
+        "config": "standard_wrn_l23_g14_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          1,
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 768,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 451584000,
+        "auc": {
+          "image_auroc": 0.984167,
+          "image_aupr": 0.981994
+        },
+        "good_pass": 0.883333,
+        "good_loss": 0.116667,
+        "threshold": 0.481668,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+      "patch_scores": "patch_scores/c90cf8ac7cc467ee9a414cef286cbd93929035987be96d5a926a7b800c916725.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.505228,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "0d7948949d031e52ca620267d7a7ffe690c02bf831ea5d94a672a346bc6ce56f",
+      "patch_scores": "patch_scores/1ce0596b1302c2b38d4e4068a407258d122c952ecdf6b778883fbb0c81fd7c1e.npy",
+      "result": {
+        "category": "transistor",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.995417,
+          "image_aupr": 0.993529
+        },
+        "good_pass": 0.95,
+        "good_loss": 0.05,
+        "threshold": 0.549875,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+      "patch_scores": "patch_scores/c90cf8ac7cc467ee9a414cef286cbd93929035987be96d5a926a7b800c916725.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.496612,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "0d7948949d031e52ca620267d7a7ffe690c02bf831ea5d94a672a346bc6ce56f",
+      "patch_scores": "patch_scores/1ce0596b1302c2b38d4e4068a407258d122c952ecdf6b778883fbb0c81fd7c1e.npy",
+      "result": {
+        "category": "transistor",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.995,
+          "image_aupr": 0.993234
+        },
+        "good_pass": 0.983333,
+        "good_loss": 0.016667,
+        "threshold": 0.535599,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
+        }
+      }
+    },
+    {
+      "category": "bottle",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.005
+      },
+      "bank_array_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+      "patch_scores": "patch_scores/c90cf8ac7cc467ee9a414cef286cbd93929035987be96d5a926a7b800c916725.npy",
+      "result": {
+        "category": "bottle",
+        "config": "wrn_l3_g14_b12000_topk0p005",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.005,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 1.0,
+          "image_aupr": 1.0
+        },
+        "good_pass": 1.0,
+        "good_loss": 0.0,
+        "threshold": 0.505228,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 209,
+          "test": 83,
+          "test_good": 20,
+          "test_defect": 63
+        }
+      }
+    },
+    {
+      "category": "transistor",
+      "config": {
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "feature_dim": 512,
+        "topk_fraction": 0.01
+      },
+      "bank_array_sha256": "0d7948949d031e52ca620267d7a7ffe690c02bf831ea5d94a672a346bc6ce56f",
+      "patch_scores": "patch_scores/1ce0596b1302c2b38d4e4068a407258d122c952ecdf6b778883fbb0c81fd7c1e.npy",
+      "result": {
+        "category": "transistor",
+        "config": "wrn_l3_g14_b12000_topk0p01",
+        "backbone": "wide_resnet50_2",
+        "out_indices": [
+          2
+        ],
+        "patch_grid": 14,
+        "patch_count": 196,
+        "feature_dim": 512,
+        "topk_fraction": 0.01,
+        "bank_patches_searched": 3000,
+        "nn_ops_per_image": 301056000,
+        "auc": {
+          "image_auroc": 0.995,
+          "image_aupr": 0.993234
+        },
+        "good_pass": 0.983333,
+        "good_loss": 0.016667,
+        "threshold": 0.535599,
+        "false_pass_target": 0.03,
+        "sample_counts": {
+          "train_normal": 213,
+          "test": 100,
+          "test_good": 60,
+          "test_defect": 40
         }
       }
     }
