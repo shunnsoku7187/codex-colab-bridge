@@ -1,0 +1,12 @@
+{
+  "id": "patchcore_int8_preparation_001",
+  "status": "pending",
+  "backend": "caviar9",
+  "requires_gpu": true,
+  "type": "shell",
+  "cwd": ".",
+  "command": "python -u -m scripts.prepare_patchcore_int8",
+  "max_runtime_sec": 86400,
+  "result_file": "results/patchcore_int8_preparation_001.json",
+  "note": "All 15 selected profiles: train-only scalar int8 calibration, float/int8 score comparison at frozen and reselected thresholds, full 3000-point bank and good/defect patch fixtures. Local orchestrator then runs RTL and Vivado."
+}
