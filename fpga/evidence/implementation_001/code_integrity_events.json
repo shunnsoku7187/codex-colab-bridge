@@ -1,0 +1,12 @@
+[
+  {
+    "Id": 3077,
+    "TimeCreated": "2026-11-24T08:53:03.4324289+09:00",
+    "Message": "Code Integrity determined that a process (\\Device\\HarddiskVolume3\\AMDDesignTools\\2025.2\\Vivado\\bin\\unwrapped\\win64.o\\vivado.exe) attempted to load \\Device\\HarddiskVolume3\\AMDDesignTools\\2025.2\\Vivado\\lib\\win64.o\\veam\\zynquplus\\zynquplus.dll that did not meet the Enterprise signing level requirements or violated code integrity policy (Policy ID:{0283ac0f-fff1-49ae-ada1-8a933130cad6})."
+  },
+  {
+    "Id": 3033,
+    "TimeCreated": "2026-11-24T08:53:03.0174539+09:00",
+    "Message": "Code Integrity determined that a process (\\Device\\HarddiskVolume3\\AMDDesignTools\\2025.2\\Vivado\\bin\\unwrapped\\win64.o\\vivado.exe) attempted to load \\Device\\HarddiskVolume3\\AMDDesignTools\\2025.2\\Vivado\\lib\\win64.o\\veam\\zynquplus\\zynquplus.dll that did not meet the Enterprise signing level requirements."
+  }
+]
