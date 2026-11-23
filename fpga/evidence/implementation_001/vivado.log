@@ -1,0 +1,291 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Nov 24 08:51:37 2026
+# Process ID         : 25828
+# Current directory  : C:/Users/shun7/Documents/Codex/2026-07-01/goo/work/colab-github-bridge/fpga/vivado/build
+# Command line       : vivado.exe -mode batch -source C:\Users\shun7\Documents\Codex\2026-07-01\goo\work\colab-github-bridge\fpga\vivado\implement_profiled_nn.tcl -log vivado.log -journal vivado.jou
+# Log file           : C:/Users/shun7/Documents/Codex/2026-07-01/goo/work/colab-github-bridge/fpga/vivado/build/vivado.log
+# Journal file       : C:/Users/shun7/Documents/Codex/2026-07-01/goo/work/colab-github-bridge/fpga/vivado/build\vivado.jou
+# Running On         : shunya251120
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 8845HS w/ Radeon 780M Graphics
+# CPU Frequency      : 3793 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 29860 MB
+# Swap memory        : 1879 MB
+# Total Virtual      : 31739 MB
+# Available Virtual  : 5616 MB
+#-----------------------------------------------------------
+source {C:\Users\shun7\Documents\Codex\2026-07-01\goo\work\colab-github-bridge\fpga\vivado\implement_profiled_nn.tcl}
+# set fpga_root [file normalize [file join [file dirname [info script]] ..]]
+# read_verilog [file join $fpga_root rtl profiled_nn_scalar.v]
+read_verilog: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 532.312 ; gain = 218.117
+# synth_design -mode out_of_context -top profiled_nn_scalar -part xczu3eg-sbva484-1-e
+Command: synth_design -mode out_of_context -top profiled_nn_scalar -part xczu3eg-sbva484-1-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 29092
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1076.133 ; gain = 538.887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'profiled_nn_scalar' [C:/Users/shun7/Documents/Codex/2026-07-01/goo/work/colab-github-bridge/fpga/rtl/profiled_nn_scalar.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'profiled_nn_scalar' (0#1) [C:/Users/shun7/Documents/Codex/2026-07-01/goo/work/colab-github-bridge/fpga/rtl/profiled_nn_scalar.v:2]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1195.566 ; gain = 658.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1195.566 ; gain = 658.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1195.566 ; gain = 658.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1195.566 ; gain = 658.320
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 2     
+	   3 Input    9 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	               6K Bit	(768 X 8 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP bank_addr2, operation Mode is: A2*B2.
+DSP Report: register dim_reg is absorbed into DSP bank_addr2.
+DSP Report: register point_idx_reg is absorbed into DSP bank_addr2.
+DSP Report: operator bank_addr2 is absorbed into DSP bank_addr2.
+DSP Report: Generating DSP bank_addr0, operation Mode is: PCIN+(A:0x0):B2+C'.
+DSP Report: register dim_idx_reg is absorbed into DSP bank_addr0.
+DSP Report: register base_reg is absorbed into DSP bank_addr0.
+DSP Report: operator bank_addr0 is absorbed into DSP bank_addr0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1942.805 ; gain = 1405.559
+---------------------------------------------------------------------------------
+ Sort Area is  bank_addr2_0 : 0 0 : 1115 1334 : Used 1 time 0
+ Sort Area is  bank_addr2_0 : 0 1 : 219 1334 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-------------------+------------+-----------+----------------------+---------------+
+|Module Name        | RTL Object | Inference | Size (Depth x Width) | Primitives    | 
++-------------------+------------+-----------+----------------------+---------------+
+|profiled_nn_scalar | query_reg  | Implied   | 1 K x 8              | RAM64M8 x 24  | 
++-------------------+------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|profiled_nn_scalar | A2*B2              | 16     | 10     | -      | -      | 26     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|profiled_nn_scalar | PCIN+(A:0x0):B2+C' | 30     | 10     | 32     | -      | -1     | 0    | 1    | 1    | -    | -     | 0    | 0    | 
++-------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1942.805 ; gain = 1405.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-------------------+------------+-----------+----------------------+---------------+
+|Module Name        | RTL Object | Inference | Size (Depth x Width) | Primitives    | 
++-------------------+------------+-----------+----------------------+---------------+
+|profiled_nn_scalar | query_reg  | Implied   | 1 K x 8              | RAM64M8 x 24  | 
++-------------------+------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1942.805 ; gain = 1405.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2109.047 ; gain = 1571.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2109.047 ; gain = 1571.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2109.047 ; gain = 1571.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2109.047 ; gain = 1571.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2109.047 ; gain = 1571.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2109.047 ; gain = 1571.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|profiled_nn_scalar | A'*B'        | 16     | 10     | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|profiled_nn_scalar | PCIN+A:B'+C' | 0      | 10     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 0    | 
++-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY8   |    28|
+|2     |DSP48E2  |     2|
+|3     |LUT1     |     3|
+|4     |LUT2     |    68|
+|5     |LUT3     |    50|
+|6     |LUT4     |    63|
+|7     |LUT5     |    50|
+|8     |LUT6     |   109|
+|9     |RAM64M8  |    12|
+|10    |RAM64X1D |    12|
+|11    |FDRE     |   119|
+|12    |FDSE     |    32|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   548|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2109.047 ; gain = 1571.801
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2109.047 ; gain = 1571.801
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2109.047 ; gain = 1571.801
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2122.633 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2228.336 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 26 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 2 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 12 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 12 instances
+
+Synth Design complete | Checksum: 15462fcd
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 2228.336 ; gain = 1696.023
+# create_clock -period 10.000 -name test_clk [get_ports clk]
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2228.336 ; gain = 0.000
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu3eg'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.840 . Memory (MB): peak = 2228.336 ; gain = 0.000
+
+Starting Cache Timing Information Task

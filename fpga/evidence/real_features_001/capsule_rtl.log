@@ -1,0 +1,4 @@
+REAL_QUERY_PASS q=0 dim=512 points=3000 cycles=1536000 distance=16847
+REAL_QUERY_PASS q=1 dim=512 points=3000 cycles=1536000 distance=40208
+REAL_FEATURE_SIM_PASS
+/mnt/c/Users/shun7/Documents/Codex/2026-07-01/goo/work/colab-github-bridge/fpga/sim/tb_real_features.v:40: $finish called at 30730300000 (1ps)
