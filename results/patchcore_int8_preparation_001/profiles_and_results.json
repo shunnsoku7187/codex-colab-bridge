@@ -1,0 +1,951 @@
+[
+  {
+    "category": "bottle",
+    "profile": {
+      "config": "wrn_l3_g14_b12000_topk0p005",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 512,
+      "topk_fraction": 0.005
+    },
+    "scale": 0.0028753386238428553,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/1f5e8a42b91d6a21fca1fe20e00fd0527915e6a94883e8b7d591183f91a72423.npy",
+    "bank_raw_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/bottle/57a5945c8b59abe92bbb",
+    "clipped_test_values": 2,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/bottle/test/good/bottle_000042_ab41806460c9.png",
+        "sha256": "4931edb84fc75687f953199ec778641b0f71dd18cb2837d04a074cd5c4281dce",
+        "image_index": 63,
+        "patch_index": 123,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/bottle/test/broken_large/bottle_000022_daa334934d7e.png",
+        "sha256": "8be8fc2bc662f56698d016479dc36e0b7345d2d0c62a07769f3d424419dfa0b6",
+        "image_index": 0,
+        "patch_index": 109,
+        "label": 1
+      }
+    ],
+    "test_values": 8329216,
+    "frozen_threshold": 0.505228,
+    "float_frozen": {
+      "good_pass": 1.0,
+      "defect_pass": 0.0
+    },
+    "int8_frozen": {
+      "good_pass": 1.0,
+      "defect_pass": 0.0
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 1.0,
+      "good_loss_rate_good": 0.0,
+      "threshold": 0.505228
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 1.0,
+      "good_loss_rate_good": 0.0,
+      "threshold": 0.507726
+    },
+    "max_image_score_error": 0.0037605762481689453,
+    "rtl_expected": [
+      21793,
+      69265
+    ],
+    "fixture_sha256": "8bdb62251d201cf9b5a49459f7a2eb1eced20e50e718bab56a77f5a2ab78690a"
+  },
+  {
+    "category": "cable",
+    "profile": {
+      "config": "wrn_l3_g14_b12000_topk0p05",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 512,
+      "topk_fraction": 0.05
+    },
+    "scale": 0.003491104118467316,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/9c18770cd7f411ef09e2436e8ebb80ba4d726658d17d630b3695246a677e45ca.npy",
+    "bank_raw_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/cable/bbbee5dd4bf17f2a7252",
+    "clipped_test_values": 0,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/cable/test/good/cable_000032_f2944589cd64.png",
+        "sha256": "11e5ffab934e01e13191b62bc5b7ebdc7f4e961c4ee823a1dbae7a67ed3e8bd7",
+        "image_index": 60,
+        "patch_index": 78,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/cable/test/bent_wire/cable_000112_9273929fc82f.png",
+        "sha256": "0d38ca0cb4eaa64948252e669ecab5e214930742c76cf5a3360e3e311b991218",
+        "image_index": 0,
+        "patch_index": 62,
+        "label": 1
+      }
+    ],
+    "test_values": 15052800,
+    "frozen_threshold": 0.548398,
+    "float_frozen": {
+      "good_pass": 0.7068965517241379,
+      "defect_pass": 0.021739130434782608
+    },
+    "int8_frozen": {
+      "good_pass": 0.6896551724137931,
+      "defect_pass": 0.021739130434782608
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.706897,
+      "good_loss_rate_good": 0.293103,
+      "threshold": 0.548398
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.724138,
+      "good_loss_rate_good": 0.275862,
+      "threshold": 0.550773
+    },
+    "max_image_score_error": 0.00220334529876709,
+    "rtl_expected": [
+      25971,
+      44648
+    ],
+    "fixture_sha256": "42b37f786a23f67f8b2a683118cef682b6d4f86f7894067cf33b6a6068df76d5"
+  },
+  {
+    "category": "capsule",
+    "profile": {
+      "config": "wrn_l3_g14_b12000_topk0p02",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 512,
+      "topk_fraction": 0.02
+    },
+    "scale": 0.0029619040451650544,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/c9e8f63f5757a05210285045ef28b1337a3502f5fbfd2c2068016b245a6edbe0.npy",
+    "bank_raw_sha256": "fe62228ebee07728c18530eb5a061ba14e6cad52f375344994f21102239ad611",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/capsule/77367abec5dadc5e79ad",
+    "clipped_test_values": 0,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/capsule/test/good/capsule_000067_468ce364979a.png",
+        "sha256": "89fec99f8f5955ef27042050409bfb35903e3de5599bacf2d568462992e77ced",
+        "image_index": 45,
+        "patch_index": 103,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/capsule/test/crack/capsule_000000_45875a72acaf.png",
+        "sha256": "f43c74e2d9744ff668ac186ebdf0893d50b54d9a79453bd8e66e1ae0029662e0",
+        "image_index": 0,
+        "patch_index": 86,
+        "label": 1
+      }
+    ],
+    "test_values": 13246464,
+    "frozen_threshold": 0.384472,
+    "float_frozen": {
+      "good_pass": 0.7391304347826086,
+      "defect_pass": 0.01834862385321101
+    },
+    "int8_frozen": {
+      "good_pass": 0.6956521739130435,
+      "defect_pass": 0.01834862385321101
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.73913,
+      "good_loss_rate_good": 0.26087,
+      "threshold": 0.384472
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.782609,
+      "good_loss_rate_good": 0.217391,
+      "threshold": 0.385666
+    },
+    "max_image_score_error": 0.002568483352661133,
+    "rtl_expected": [
+      16847,
+      40208
+    ],
+    "fixture_sha256": "93d3b17888f4e65c91bb9bc0a925c6b47eefc778d0d58fbaf2a09c8ad54fef3c"
+  },
+  {
+    "category": "carpet",
+    "profile": {
+      "config": "wrn_l3_g14_b12000_topk0p005",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 512,
+      "topk_fraction": 0.005
+    },
+    "scale": 0.0021616309646546373,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/532bdf9b3c16fdafcb5ddbbfcede2dbe34fb312eabbbcd28bf7f4fd2539f3ce3.npy",
+    "bank_raw_sha256": "38dbf216ad3861f06015ea84b2998ed4858621b6c04362c0cb4c410e3fca9867",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/carpet/afccf83e122e4d9e686f",
+    "clipped_test_values": 15,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/carpet/test/good/carpet_000036_6732f467f316.png",
+        "sha256": "638a9a228edce710a2b64a1434addf6d25cad7cb94bd8bafacc1e5726e7d5311",
+        "image_index": 36,
+        "patch_index": 138,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/carpet/test/color/carpet_000000_e99820e33445.png",
+        "sha256": "d660e02994fc219f540b6a02618b6670ce7c4d70d707bd90978ba0b56d04719b",
+        "image_index": 0,
+        "patch_index": 45,
+        "label": 1
+      }
+    ],
+    "test_values": 11741184,
+    "frozen_threshold": 0.457331,
+    "float_frozen": {
+      "good_pass": 0.8928571428571429,
+      "defect_pass": 0.02247191011235955
+    },
+    "int8_frozen": {
+      "good_pass": 0.8928571428571429,
+      "defect_pass": 0.02247191011235955
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.892857,
+      "good_loss_rate_good": 0.107143,
+      "threshold": 0.457331
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.892857,
+      "good_loss_rate_good": 0.107143,
+      "threshold": 0.457828
+    },
+    "max_image_score_error": 0.008414804935455322,
+    "rtl_expected": [
+      40636,
+      67765
+    ],
+    "fixture_sha256": "569a5acf3bed37a2cacfddf2b14d40f1d70acffd55fbc84d6dedbb72d6e48578"
+  },
+  {
+    "category": "grid",
+    "profile": {
+      "config": "wrn_l23_g14_b12000_topk0p005",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        1,
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 768,
+      "topk_fraction": 0.005
+    },
+    "scale": 0.0031480172018366536,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/8ce88191e9af15211adc7d4ced1e1e76e9d7cf50a3e1f84659eb210472945763.npy",
+    "bank_raw_sha256": "8ec87ea22efac040da15f5b989e1a837ba6d7c2c57a85c54d2bb71a1bf0228c2",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/grid/1154d4ef8675bf327e49",
+    "clipped_test_values": 0,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/grid/test/good/grid_000034_a1c355da84eb.png",
+        "sha256": "680d16d8d8ab150aabb0a4823392d0e52b884ff6a461caded3e7e29f7f2aea34",
+        "image_index": 35,
+        "patch_index": 13,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/grid/test/bent/grid_000055_5a78e12d05d8.png",
+        "sha256": "314e495afdf86b95af591be3db79577716695c5b1fae8736af7a1df22ea2b833",
+        "image_index": 0,
+        "patch_index": 48,
+        "label": 1
+      }
+    ],
+    "test_values": 11741184,
+    "frozen_threshold": 0.415857,
+    "float_frozen": {
+      "good_pass": 0.7619047619047619,
+      "defect_pass": 0.017543859649122806
+    },
+    "int8_frozen": {
+      "good_pass": 0.7619047619047619,
+      "defect_pass": 0.017543859649122806
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.761905,
+      "good_loss_rate_good": 0.238095,
+      "threshold": 0.415857
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.761905,
+      "good_loss_rate_good": 0.238095,
+      "threshold": 0.415518
+    },
+    "max_image_score_error": 0.004215717315673828,
+    "rtl_expected": [
+      14393,
+      26070
+    ],
+    "fixture_sha256": "7bd2ab862cbbb41a0944307a1bb8164b7e08fb09fc4e1d572d1a175890735522"
+  },
+  {
+    "category": "hazelnut",
+    "profile": {
+      "config": "wrn_l3_g14_b12000_topk0p005",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 512,
+      "topk_fraction": 0.005
+    },
+    "scale": 0.004073128925533746,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/da365eb115253e974f682e6cf507e211668c39d5393224dca172e1db39f2cca3.npy",
+    "bank_raw_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/hazelnut/4f4fea4c65457b3ae07c",
+    "clipped_test_values": 0,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/hazelnut/test/good/hazelnut_000035_2802c8e04b8c.png",
+        "sha256": "7ea246d303b9cb626b39f522262f6a7c155311183873a3d2ea4474d1a7d38d48",
+        "image_index": 35,
+        "patch_index": 60,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/hazelnut/test/crack/hazelnut_000000_52689017cce1.png",
+        "sha256": "f665cadf214a877819b78892cd7c5517b4e29775a58d47e8c5987618c1eb375f",
+        "image_index": 0,
+        "patch_index": 90,
+        "label": 1
+      }
+    ],
+    "test_values": 11038720,
+    "frozen_threshold": 0.640482,
+    "float_frozen": {
+      "good_pass": 1.0,
+      "defect_pass": 0.014285714285714285
+    },
+    "int8_frozen": {
+      "good_pass": 1.0,
+      "defect_pass": 0.014285714285714285
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 1.0,
+      "good_loss_rate_good": 0.0,
+      "threshold": 0.640482
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 1.0,
+      "good_loss_rate_good": 0.0,
+      "threshold": 0.640674
+    },
+    "max_image_score_error": 0.005396842956542969,
+    "rtl_expected": [
+      22852,
+      25189
+    ],
+    "fixture_sha256": "73cfdb65bc883aaba10d2665d329bc6531fbac0bb6acb64772d7967ed2dc85cc"
+  },
+  {
+    "category": "leather",
+    "profile": {
+      "config": "wrn_l3_g14_b12000_topk0p005",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 512,
+      "topk_fraction": 0.005
+    },
+    "scale": 0.002770305149198517,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/ffc1a93d342a71cb5f6fdf3133ebc317b040634c107d956fad4e6931955c40e7.npy",
+    "bank_raw_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/leather/ae394a6e0195e7477df9",
+    "clipped_test_values": 7,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/leather/test/good/leather_000056_dbd1c6df09c9.png",
+        "sha256": "59fd71e0d3f4c4ad18bf82a6899ffddcaab58854b7f46531c5ede600137f2d38",
+        "image_index": 74,
+        "patch_index": 194,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/leather/test/color/leather_000019_8615774ca18f.png",
+        "sha256": "a0c13c4463aaf19c924f4c809de7b320ca49dcc1f2ffd8aba2b62f86a558c691",
+        "image_index": 0,
+        "patch_index": 163,
+        "label": 1
+      }
+    ],
+    "test_values": 12443648,
+    "frozen_threshold": 0.452699,
+    "float_frozen": {
+      "good_pass": 1.0,
+      "defect_pass": 0.0
+    },
+    "int8_frozen": {
+      "good_pass": 1.0,
+      "defect_pass": 0.0
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 1.0,
+      "good_loss_rate_good": 0.0,
+      "threshold": 0.452699
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 1.0,
+      "good_loss_rate_good": 0.0,
+      "threshold": 0.453318
+    },
+    "max_image_score_error": 0.003230363130569458,
+    "rtl_expected": [
+      22388,
+      74987
+    ],
+    "fixture_sha256": "f6d1d0ae899a936e3a78dde8d55f13730e5a17841f60d54ce50393ebbb7cad86"
+  },
+  {
+    "category": "metal_nut",
+    "profile": {
+      "config": "wrn_l3_g14_b12000_topk0p005",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 512,
+      "topk_fraction": 0.005
+    },
+    "scale": 0.0033394274279827207,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/cd6e8fb5182ea3d7fd95222d35c0c268feab940ba36a88da14c1040fa80c2a54.npy",
+    "bank_raw_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/metal_nut/867f6bec542ad39e55c1",
+    "clipped_test_values": 0,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/metal_nut/test/good/metal_nut_000068_38a436e96306.png",
+        "sha256": "9b11254e93e6a87f2553e1719ee78c4f7c7621132a7b4a2a6b50a14b5c694564",
+        "image_index": 70,
+        "patch_index": 66,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/metal_nut/test/bent/metal_nut_000090_2d4af4e111fc.png",
+        "sha256": "b05c34ebf0a87bc2c7641b049d22c2791fbafb946ff13af0de8acabdd20aa8a6",
+        "image_index": 0,
+        "patch_index": 114,
+        "label": 1
+      }
+    ],
+    "test_values": 11540480,
+    "frozen_threshold": 0.59821,
+    "float_frozen": {
+      "good_pass": 1.0,
+      "defect_pass": 0.010752688172043012
+    },
+    "int8_frozen": {
+      "good_pass": 0.9545454545454546,
+      "defect_pass": 0.010752688172043012
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 1.0,
+      "good_loss_rate_good": 0.0,
+      "threshold": 0.59821
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 1.0,
+      "good_loss_rate_good": 0.0,
+      "threshold": 0.599491
+    },
+    "max_image_score_error": 0.0043305158615112305,
+    "rtl_expected": [
+      26576,
+      45011
+    ],
+    "fixture_sha256": "0d42ec007645151fe32f7f582d0cdd0bd1ce09b0c8f82ed235369da055ef381a"
+  },
+  {
+    "category": "pill",
+    "profile": {
+      "config": "standard_wrn_l23_g14_topk0p01",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        1,
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 768,
+      "topk_fraction": 0.01
+    },
+    "scale": 0.0021361743840645616,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/6ed00d8946eb74dc37854f5ea4362e881215786582709f0bcbd2e6be2b93c562.npy",
+    "bank_raw_sha256": "e15f6941f34e6bc02626464de74904aec46f86b6c562da19850ad09531e6e888",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/pill/03ebe2d91b9359ac27bd",
+    "clipped_test_values": 1,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/pill/test/good/pill_000075_7d9ac9a9aa6f.png",
+        "sha256": "cd6b28391c89582c3d5312f104b2dab62a4d74065237de4b83744131d651ad12",
+        "image_index": 108,
+        "patch_index": 108,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/pill/test/color/pill_000026_5e0fe266afb5.png",
+        "sha256": "5944d0e744f524412c10c58e98dc6812cef180b8c1d8a0e80d92d8c6f4b3253e",
+        "image_index": 0,
+        "patch_index": 79,
+        "label": 1
+      }
+    ],
+    "test_values": 25138176,
+    "frozen_threshold": 0.433991,
+    "float_frozen": {
+      "good_pass": 0.7307692307692307,
+      "defect_pass": 0.028368794326241134
+    },
+    "int8_frozen": {
+      "good_pass": 0.7307692307692307,
+      "defect_pass": 0.02127659574468085
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.730769,
+      "good_loss_rate_good": 0.269231,
+      "threshold": 0.433991
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.730769,
+      "good_loss_rate_good": 0.269231,
+      "threshold": 0.435104
+    },
+    "max_image_score_error": 0.0018006563186645508,
+    "rtl_expected": [
+      44514,
+      45648
+    ],
+    "fixture_sha256": "2dad86f82bcf0e192c99d85211d8df4ecdde4c04f61de6b7168e40eae23bb35b"
+  },
+  {
+    "category": "screw",
+    "profile": {
+      "config": "wrn_l3_g14_b12000_topk0p01",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 512,
+      "topk_fraction": 0.01
+    },
+    "scale": 0.0036452093462305745,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/96e741707a8b026746096cb218b7e73a517c6e3f850066632a4bb0ef6516137d.npy",
+    "bank_raw_sha256": "1b78a5e7dc011204bd2a6eab313bfa80487a784a0fae42ce3e23b1b158ce6c75",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/screw/d9b5087d0486c949ae42",
+    "clipped_test_values": 0,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/screw/test/good/screw_000072_aff8e516b539.png",
+        "sha256": "289968148aa884e92bb6d4702de1ca946ef7a97ed7b5fe62849285a99ce8777f",
+        "image_index": 0,
+        "patch_index": 103,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/screw/test/manipulated_front/screw_000048_336ea0760d3b.png",
+        "sha256": "409692b9a6417df414857b227fcfa8998bfb0e803f948fd90a0df322ddf48c0b",
+        "image_index": 41,
+        "patch_index": 90,
+        "label": 1
+      }
+    ],
+    "test_values": 16056320,
+    "frozen_threshold": 0.491996,
+    "float_frozen": {
+      "good_pass": 0.3902439024390244,
+      "defect_pass": 0.025210084033613446
+    },
+    "int8_frozen": {
+      "good_pass": 0.36585365853658536,
+      "defect_pass": 0.025210084033613446
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.390244,
+      "good_loss_rate_good": 0.609756,
+      "threshold": 0.491996
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.390244,
+      "good_loss_rate_good": 0.609756,
+      "threshold": 0.49307
+    },
+    "max_image_score_error": 0.003451704978942871,
+    "rtl_expected": [
+      21338,
+      23115
+    ],
+    "fixture_sha256": "c42157b71df32ddfb5b8cb4405573630cd2365075d8547d397dd7d5bb6178f53"
+  },
+  {
+    "category": "tile",
+    "profile": {
+      "config": "wrn_l3_g14_b12000_topk0p005",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 512,
+      "topk_fraction": 0.005
+    },
+    "scale": 0.0023776593170766755,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/862690205aeb7848c1c7be3551e48e9d0e4198fd37bdf48e1d3430f5da7200e5.npy",
+    "bank_raw_sha256": "80b250612a04d02bcd58ce1483dca094350718ff942689e1d91f47b28d9ba120",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/tile/fc37eacd271594215e11",
+    "clipped_test_values": 18,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/tile/test/good/tile_000032_774fb05ecea2.png",
+        "sha256": "0a4aebba611f162aafc91d7e250303521a7c6bea471b6af17bf4242b074e5d5b",
+        "image_index": 35,
+        "patch_index": 6,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/tile/test/crack/tile_000000_2737ac454aae.png",
+        "sha256": "0efad0f1c1fca04f85a456fd0a7fddf78d36ce690ada8982b12c33fcd99291ae",
+        "image_index": 0,
+        "patch_index": 49,
+        "label": 1
+      }
+    ],
+    "test_values": 11741184,
+    "frozen_threshold": 0.561533,
+    "float_frozen": {
+      "good_pass": 1.0,
+      "defect_pass": 0.023809523809523808
+    },
+    "int8_frozen": {
+      "good_pass": 0.9696969696969697,
+      "defect_pass": 0.023809523809523808
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 1.0,
+      "good_loss_rate_good": 0.0,
+      "threshold": 0.561533
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 1.0,
+      "good_loss_rate_good": 0.0,
+      "threshold": 0.563405
+    },
+    "max_image_score_error": 0.008115887641906738,
+    "rtl_expected": [
+      45631,
+      105012
+    ],
+    "fixture_sha256": "c18dabaf190d675b90a9a74d8d1d1bd5da690364d09bf23286b339188becba6e"
+  },
+  {
+    "category": "toothbrush",
+    "profile": {
+      "config": "wrn_l23_g14_b12000_topk0p05",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        1,
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 768,
+      "topk_fraction": 0.05
+    },
+    "scale": 0.0021361542029643622,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/acf15fb25b4dfe9fd55449f0eb5cb73d92ab814006fa4508918252e0bd1d76ed.npy",
+    "bank_raw_sha256": "b0b88baedae0aa4bc3cd046a32190161b58ea58ca40feeb9d3bd6066dcf5be87",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/toothbrush/6fca5d52fdcda059428e",
+    "clipped_test_values": 6,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/toothbrush/test/good/toothbrush_000030_7f4190207812.png",
+        "sha256": "89f04b5258ee3602dffeed4322fdd4064e7c0e07b749ce75557c428a1ae6527f",
+        "image_index": 30,
+        "patch_index": 148,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/toothbrush/test/defective/toothbrush_000000_de2278322791.png",
+        "sha256": "302e006317f07eec99266bd18d1a8947d869d956be4a96a7f972b315c2e6d434",
+        "image_index": 0,
+        "patch_index": 149,
+        "label": 1
+      }
+    ],
+    "test_values": 6322176,
+    "frozen_threshold": 0.386632,
+    "float_frozen": {
+      "good_pass": 0.9166666666666666,
+      "defect_pass": 0.0
+    },
+    "int8_frozen": {
+      "good_pass": 0.9166666666666666,
+      "defect_pass": 0.0
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.916667,
+      "good_loss_rate_good": 0.083333,
+      "threshold": 0.386632
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.916667,
+      "good_loss_rate_good": 0.083333,
+      "threshold": 0.387087
+    },
+    "max_image_score_error": 0.0013331174850463867,
+    "rtl_expected": [
+      33218,
+      69081
+    ],
+    "fixture_sha256": "ea71a0137f1410ae6bc11aafe22b85e89ec26b6b877e96f1d3e5c7d444a16e07"
+  },
+  {
+    "category": "transistor",
+    "profile": {
+      "config": "wrn_l3_g14_b12000_topk0p01",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 512,
+      "topk_fraction": 0.01
+    },
+    "scale": 0.002998877698042261,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/4992fdca098941a6a765423dacf5d5f8eb910335073b599451999279b6bfc812.npy",
+    "bank_raw_sha256": "0d7948949d031e52ca620267d7a7ffe690c02bf831ea5d94a672a346bc6ce56f",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/transistor/09527ef2bfac8337e115",
+    "clipped_test_values": 0,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/transistor/test/good/transistor_000040_6d216caa3d94.png",
+        "sha256": "26a5f0c48f4725e17297622d2a3c01aec7fd107a9d5d0214e138878dee39ff31",
+        "image_index": 30,
+        "patch_index": 1,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/transistor/test/bent_lead/transistor_000020_c14665420fe8.png",
+        "sha256": "19baaf8db216b6de29f81c07950e4c07d1c170574f0f8fda2208e32b8b73657b",
+        "image_index": 0,
+        "patch_index": 143,
+        "label": 1
+      }
+    ],
+    "test_values": 10035200,
+    "frozen_threshold": 0.535599,
+    "float_frozen": {
+      "good_pass": 0.9833333333333333,
+      "defect_pass": 0.025
+    },
+    "int8_frozen": {
+      "good_pass": 0.9666666666666667,
+      "defect_pass": 0.025
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.983333,
+      "good_loss_rate_good": 0.016667,
+      "threshold": 0.535599
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.983333,
+      "good_loss_rate_good": 0.016667,
+      "threshold": 0.535788
+    },
+    "max_image_score_error": 0.0027635693550109863,
+    "rtl_expected": [
+      30742,
+      35371
+    ],
+    "fixture_sha256": "722ebbed911c9635e2c67dff8c7ab4b01bd74e8d0c7cf750a8862ccd441bb66a"
+  },
+  {
+    "category": "wood",
+    "profile": {
+      "config": "standard_wrn_l23_g14_topk0p01",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        1,
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 768,
+      "topk_fraction": 0.01
+    },
+    "scale": 0.0025101857861195963,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/b790e7577ccf1a2fe9c5278cdb170000ce777082b649519899a1fd62fef7e960.npy",
+    "bank_raw_sha256": "8623f04ab3c523cfc9b1b314d8e9fede766905b204c1dd06a097286e2bda5b4f",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/wood/f71987c53e0be001064f",
+    "clipped_test_values": 1,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/wood/test/good/wood_000039_eb8e9a0df4d9.png",
+        "sha256": "e2c4fc7a80356d216240e401ee93606d80d39203d05362ff039f81f501dea68c",
+        "image_index": 19,
+        "patch_index": 64,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/wood/test/color/wood_000000_8e82209afc57.png",
+        "sha256": "ac20efe8969c48617174978d3455ac71d594bdd1b1f66542de7ccb782bb0484b",
+        "image_index": 0,
+        "patch_index": 88,
+        "label": 1
+      }
+    ],
+    "test_values": 11891712,
+    "frozen_threshold": 0.480103,
+    "float_frozen": {
+      "good_pass": 0.8947368421052632,
+      "defect_pass": 0.016666666666666666
+    },
+    "int8_frozen": {
+      "good_pass": 0.8421052631578947,
+      "defect_pass": 0.016666666666666666
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.894737,
+      "good_loss_rate_good": 0.105263,
+      "threshold": 0.480103
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.894737,
+      "good_loss_rate_good": 0.105263,
+      "threshold": 0.481137
+    },
+    "max_image_score_error": 0.002195805311203003,
+    "rtl_expected": [
+      25099,
+      56184
+    ],
+    "fixture_sha256": "b9188538a5a42e332c6581ecea708a93f771a9a88bbd9509d9cf28acb85ab5fe"
+  },
+  {
+    "category": "zipper",
+    "profile": {
+      "config": "wrn_l3_g14_b12000_topk0p005",
+      "backbone": "wide_resnet50_2",
+      "out_indices": [
+        2
+      ],
+      "patch_grid": 14,
+      "feature_dim": 512,
+      "topk_fraction": 0.005
+    },
+    "scale": 0.002990116519252146,
+    "zero_point": 0,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/77933c1a573d99c9f55ff16c636186d599be24b5c73ff17b11f597318234ad84.npy",
+    "bank_raw_sha256": "81410b62f84f6d1a33802fe654874933262aa0baa9764b8e7ffde6f647775573",
+    "feature_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/features/zipper/d6c6f9c677ec5fb0fab7",
+    "clipped_test_values": 2,
+    "fixture_images": [
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/zipper/test/good/zipper_000086_e5ea118e69d8.png",
+        "sha256": "abb156dc908fe850719f17489101c9e033046bf2273bd866501310ef1e706e17",
+        "image_index": 68,
+        "patch_index": 134,
+        "label": 0
+      },
+      {
+        "path": "/home/shunya/codex-gpu-work/data/mvtec_ad_materialized_v2/zipper/test/broken_teeth/zipper_000000_2c48c026e597.png",
+        "sha256": "96db9d380f685d0dfaa11ce66733bf40fec8fa76e2dd4fbf564ff9da76b01ba7",
+        "image_index": 0,
+        "patch_index": 161,
+        "label": 1
+      }
+    ],
+    "test_values": 15153152,
+    "frozen_threshold": 0.434369,
+    "float_frozen": {
+      "good_pass": 0.8125,
+      "defect_pass": 0.01680672268907563
+    },
+    "int8_frozen": {
+      "good_pass": 0.8125,
+      "defect_pass": 0.01680672268907563
+    },
+    "float_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.8125,
+      "good_loss_rate_good": 0.1875,
+      "threshold": 0.434369
+    },
+    "int8_reselected": {
+      "target": 0.03,
+      "good_pass_rate_good": 0.8125,
+      "good_loss_rate_good": 0.1875,
+      "threshold": 0.434147
+    },
+    "max_image_score_error": 0.003534644842147827,
+    "rtl_expected": [
+      23867,
+      23251
+    ],
+    "fixture_sha256": "0e10a312458d66cf4aa2433e3c45ba44dc272c05a546dca80b2c5c2b7ebd1412"
+  }
+]

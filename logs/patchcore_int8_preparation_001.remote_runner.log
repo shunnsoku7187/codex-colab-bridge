@@ -21,3 +21,42 @@ $ git push origin main
 To github.com:shunnsoku7187/codex-colab-bridge.git
    f969f30..064e4df  main -> main
 $ git add jobs logs results artifacts docs
+$ git diff --cached --quiet
+$ git commit -m 'caviar9: prepared patchcore_int8_preparation_001'
+[main 66cd412] caviar9: prepared patchcore_int8_preparation_001
+ 2 files changed, 12 insertions(+)
+$ git push origin main
+To github.com:shunnsoku7187/codex-colab-bridge.git
+   064e4df..66cd412  main -> main
+START bottle
+SAVED bottle scale 0.0028753386238428553 frozen {'good_pass': 1.0, 'defect_pass': 0.0}
+START cable
+SAVED cable scale 0.003491104118467316 frozen {'good_pass': 0.6896551724137931, 'defect_pass': 0.021739130434782608}
+START capsule
+SAVED capsule scale 0.0029619040451650544 frozen {'good_pass': 0.6956521739130435, 'defect_pass': 0.01834862385321101}
+START carpet
+SAVED carpet scale 0.0021616309646546373 frozen {'good_pass': 0.8928571428571429, 'defect_pass': 0.02247191011235955}
+START grid
+SAVED grid scale 0.0031480172018366536 frozen {'good_pass': 0.7619047619047619, 'defect_pass': 0.017543859649122806}
+START hazelnut
+SAVED hazelnut scale 0.004073128925533746 frozen {'good_pass': 1.0, 'defect_pass': 0.014285714285714285}
+START leather
+SAVED leather scale 0.002770305149198517 frozen {'good_pass': 1.0, 'defect_pass': 0.0}
+START metal_nut
+SAVED metal_nut scale 0.0033394274279827207 frozen {'good_pass': 0.9545454545454546, 'defect_pass': 0.010752688172043012}
+START pill
+SAVED pill scale 0.0021361743840645616 frozen {'good_pass': 0.7307692307692307, 'defect_pass': 0.02127659574468085}
+START screw
+SAVED screw scale 0.0036452093462305745 frozen {'good_pass': 0.36585365853658536, 'defect_pass': 0.025210084033613446}
+START tile
+SAVED tile scale 0.0023776593170766755 frozen {'good_pass': 0.9696969696969697, 'defect_pass': 0.023809523809523808}
+START toothbrush
+SAVED toothbrush scale 0.0021361542029643622 frozen {'good_pass': 0.9166666666666666, 'defect_pass': 0.0}
+START transistor
+SAVED transistor scale 0.002998877698042261 frozen {'good_pass': 0.9666666666666667, 'defect_pass': 0.025}
+START wood
+SAVED wood scale 0.0025101857861195963 frozen {'good_pass': 0.8421052631578947, 'defect_pass': 0.016666666666666666}
+START zipper
+SAVED zipper scale 0.002990116519252146 frozen {'good_pass': 0.8125, 'defect_pass': 0.01680672268907563}
+INT8_PREPARATION_COMPLETE 15
+$ git add jobs logs results artifacts docs

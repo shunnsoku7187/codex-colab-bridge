@@ -1,6 +1,6 @@
 {
   "id": "patchcore_int8_preparation_001",
-  "status": "running",
+  "status": "done",
   "backend": "caviar9",
   "requires_gpu": true,
   "type": "shell",
@@ -9,6 +9,11 @@
   "max_runtime_sec": 86400,
   "result_file": "results/patchcore_int8_preparation_001.json",
   "note": "All 15 selected profiles: train-only scalar int8 calibration, float/int8 score comparison at frozen and reselected thresholds, full 3000-point bank and good/defect patch fixtures. Local orchestrator then runs RTL and Vivado.",
-  "updated_at": "2026-11-23T23:52:03.524133+00:00",
-  "started_at": "2026-11-23T23:52:03.524111+00:00"
+  "updated_at": "2026-11-23T23:53:15.752686+00:00",
+  "started_at": "2026-11-23T23:52:03.524111+00:00",
+  "returncode": 0,
+  "duration_sec": 64.917,
+  "stdout": "logs/patchcore_int8_preparation_001.stdout.log",
+  "stderr": "logs/patchcore_int8_preparation_001.stderr.log",
+  "finished_at": "2026-11-23T23:53:15.745727+00:00"
 }
