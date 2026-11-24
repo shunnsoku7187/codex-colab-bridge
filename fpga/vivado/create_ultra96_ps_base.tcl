@@ -5,7 +5,11 @@ set board_part avnet-tria:ultra96v2:part0:1.3
 if {[llength [get_board_parts -quiet $board_part]] != 1} {
     error "Ultra96-V2 board part not found: $board_part"
 }
-set out_dir [file join $fpga_root vivado build ultra96_ps_base]
+set run_name ultra96_ps_base
+if {[info exists ::env(FPGA_VIVADO_RUN_TAG)]} {
+    set run_name "${run_name}_$::env(FPGA_VIVADO_RUN_TAG)"
+}
+set out_dir [file join $fpga_root vivado build $run_name]
 create_project -force ultra96_ps_base $out_dir -part xczu3eg-sbva484-1-i
 set_property board_part $board_part [current_project]
 create_bd_design system

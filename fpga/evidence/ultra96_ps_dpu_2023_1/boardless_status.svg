@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="630" viewBox="0 0 1120 630" role="img" aria-label="Ultra96-V2の実機なし検証状況">
+  <rect width="1120" height="630" fill="#f8fafc"/>
+  <text x="50" y="67" font-family="Yu Gothic, Meiryo, sans-serif" font-size="32" font-weight="bold" fill="#152238">Ultra96-V2：実機なしでどこまで確認できたか</text>
+  <text x="50" y="100" font-family="Yu Gothic, Meiryo, sans-serif" font-size="18" fill="#526176">2026-11-24 時点  ・  FPGAは小さな計算機、PLはその中の書き換え可能な回路部分</text>
+
+  <rect x="50" y="140" width="310" height="144" rx="16" fill="#e3f5ea" stroke="#42a56c" stroke-width="2"/>
+  <text x="76" y="181" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23" font-weight="bold" fill="#19663e">✓ 開発ツール</text>
+  <text x="76" y="218" font-family="Yu Gothic, Meiryo, sans-serif" font-size="18" fill="#244534">Vivado / Vitis 2023.1</text>
+  <text x="76" y="247" font-family="Yu Gothic, Meiryo, sans-serif" font-size="18" fill="#244534">Vitis AI 3.5 起動確認</text>
+
+  <rect x="405" y="140" width="310" height="144" rx="16" fill="#e3f5ea" stroke="#42a56c" stroke-width="2"/>
+  <text x="431" y="181" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23" font-weight="bold" fill="#19663e">✓ ボードの土台</text>
+  <text x="431" y="218" font-family="Yu Gothic, Meiryo, sans-serif" font-size="18" fill="#244534">Ultra96-V2の定義を認識</text>
+  <text x="431" y="247" font-family="Yu Gothic, Meiryo, sans-serif" font-size="18" fill="#244534">PS設計を生成・検証</text>
+
+  <rect x="760" y="140" width="310" height="144" rx="16" fill="#e3f5ea" stroke="#42a56c" stroke-width="2"/>
+  <text x="786" y="181" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23" font-weight="bold" fill="#19663e">✓ NN計算の試作品</text>
+  <text x="786" y="218" font-family="Yu Gothic, Meiryo, sans-serif" font-size="18" fill="#244534">実データ由来30点で一致</text>
+  <text x="786" y="247" font-family="Yu Gothic, Meiryo, sans-serif" font-size="18" fill="#244534">2023.1で配置配線合格</text>
+
+  <rect x="50" y="320" width="490" height="132" rx="16" fill="#fff3d9" stroke="#dfaa38" stroke-width="2"/>
+  <text x="76" y="361" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23" font-weight="bold" fill="#8b5b09">△ CNN用DPU</text>
+  <text x="76" y="398" font-family="Yu Gothic, Meiryo, sans-serif" font-size="18" fill="#6f541d">IP部品は読み込み・配置まで確認</text>
+  <text x="76" y="427" font-family="Yu Gothic, Meiryo, sans-serif" font-size="18" fill="#6f541d">接続・合成・CNN実行はこれから</text>
+
+  <rect x="580" y="320" width="490" height="132" rx="16" fill="#fff3d9" stroke="#dfaa38" stroke-width="2"/>
+  <text x="606" y="361" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23" font-weight="bold" fill="#8b5b09">△ 画像全体の判定</text>
+  <text x="606" y="398" font-family="Yu Gothic, Meiryo, sans-serif" font-size="18" fill="#6f541d">CNN → 特徴 → NN → 判定の連結</text>
+  <text x="606" y="427" font-family="Yu Gothic, Meiryo, sans-serif" font-size="18" fill="#6f541d">全体シミュレーションはこれから</text>
+
+  <rect x="50" y="486" width="1020" height="88" rx="16" fill="#e9edf3" stroke="#a2acb8" stroke-width="2"/>
+  <text x="76" y="525" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23" font-weight="bold" fill="#40526a">○ 実機が届いてから</text>
+  <text x="338" y="525" font-family="Yu Gothic, Meiryo, sans-serif" font-size="18" fill="#40526a">起動・接続・速度・消費電力の実測</text>
+  <text x="76" y="554" font-family="Yu Gothic, Meiryo, sans-serif" font-size="16" fill="#526176">緑＝確認済みの範囲　　黄＝未完成　　灰＝ボードが必要　　※ NN試作品の合格はシステム全体の合格ではありません</text>
+</svg>
