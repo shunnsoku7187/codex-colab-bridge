@@ -1,5 +1,7 @@
 # Git保存内容の不足監査（2026-11-20）
 
+2026-11-24追加：GPUでの全15カテゴリint8評価と実特徴RTL照合が完了（`results/patchcore_int8_preparation_001/`、`fpga/evidence/real_features_001/`）。WindowsのSmart App ControlによるDLLブロックはユーザーの設定変更後に解消し、スカラーNNの配置配線まで正常終了。原レポートは `fpga/evidence/implementation_retry_002/` に保存済み。以下の原レポート未回収という旧不足は、新規再実行の証拠保存によって解消した。全CNN・メモリ接続などの未完成項目は引き続き残る。
+
 ## 2026-11-24更新：実特徴・bankの再生成完了
 
 `patchcore_publication_assets_001` は2026-11-21 01:44 JSTに正常終了（returncode 0、14,256秒、約3時間58分）。各カテゴリ3,000点条件で全105ペア・455トリプルの結果行が、発表時 `_002` の同条件と完全一致した。選択profileも一致。これは数値結果の一致であり、未保存だった当時のbank配列とのビット単位比較ではない。

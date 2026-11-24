@@ -1,8 +1,11 @@
 {
   "gpu_job": "done",
   "rtl": "pass",
-  "vivado_returncode": 3221225477,
+  "vivado_returncode": 0,
   "rtl_scope": "Selected-profile signed-int8 squared-L2 for two real patches per category; not full-image RTL or CNN.",
   "rtl_source_commit": "de96ee4689399db0007a50d31906e1bfc7a9d02c",
-  "completed_at": "2026-11-23T23:59:02.722525+00:00"
+  "completed_at": "2026-11-24T08:59:02.722525+09:00",
+  "prior_vivado_returncode": 3221225477,
+  "implementation_evidence": "fpga/evidence/implementation_retry_002",
+  "retried_at": "2026-11-24T00:09:10.5866336Z"
 }

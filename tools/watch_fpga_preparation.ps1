@@ -53,6 +53,8 @@ while ($true) {
     Tail-Log (Join-Path $build 'preparation.log') 8
     Write-Host "`n--- VIVADO ---" -ForegroundColor Cyan
     $vivadoLog = Join-Path $repo 'fpga/evidence/implementation_001/console.log'
+    $retryLog = Join-Path $repo 'fpga/evidence/implementation_retry_002/console.log'
+    if (Test-Path $retryLog) { $vivadoLog = $retryLog }
     $errors = if (Test-Path $vivadoLog) { Get-Content $vivadoLog -Tail 30 | Select-String 'ERROR|EXCEPTION|Abnormal' }
     if ($errors) { $errors | ForEach-Object { Write-Host $_ -ForegroundColor Red } }
     else { Tail-Log $vivadoLog 4 }

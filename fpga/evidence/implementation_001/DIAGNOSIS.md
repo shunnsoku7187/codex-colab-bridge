@@ -1,5 +1,7 @@
 # Vivado implementation failure: 2026-11-24
 
+Resolved on 2026-11-24 after the user changed Smart App Control through Windows settings. A fresh run completed successfully; reports are retained in `../implementation_retry_002/`. This file preserves the earlier failure evidence.
+
 Synthesis completed successfully. `opt_design` stopped during timing-cache initialization while loading `C:/AMDDesignTools/2025.2/Vivado/lib/win64.o/veam/zynquplus/zynquplus.dll`.
 
 Windows Code Integrity events 3077 and 3033 at 2026-11-24 08:53:03 JST identify vivado.exe and this DLL as failing the signing requirements of policy `{0283ac0f-fff1-49ae-ada1-8a933130cad6}`. The DLL exists and its Authenticode status is NotSigned. This is direct evidence of an application-control block, not merely an inference from a DLL-loading message. Exported events are in `code_integrity_events.json`.
