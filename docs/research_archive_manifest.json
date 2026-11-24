@@ -8,6 +8,11 @@
       "sha256": "76c17c0d018c97c758be04365882bcb9c2038cfa1244d8eb29033ad4ea4c1519"
     },
     {
+      "path": "docs/FPGA_HARDWARE_HANDOFF.md",
+      "bytes": 11303,
+      "sha256": "191b7748a043e8e58d2c78262ca957f7f6dcf70f96a72b758922b4e61e47c739"
+    },
+    {
       "path": "docs/FPGA_PREPARATION_PIPELINE.md",
       "bytes": 3107,
       "sha256": "361d79254084003aafea2b7df62d006e5d66f2d6d9659198e896eefcca637bd5"
@@ -594,8 +599,8 @@
     },
     {
       "path": "fpga/README.md",
-      "bytes": 2593,
-      "sha256": "06e7994726e4f708cf146c0e8c0674642c5d4dedc22e88fe9ab8af79730a1943"
+      "bytes": 2811,
+      "sha256": "040a03c7405dbfc397d6337f1a50e0657e9f52305536fe32936832462a168903"
     },
     {
       "path": "fpga/evidence/implementation_001/DIAGNOSIS.md",
@@ -5226,6 +5231,11 @@
       "path": "tools/bootstrap_colab_runner_cell.py",
       "bytes": 1724,
       "sha256": "a0bce468da4491c77d87ad3eb16b3fe174b63e7650b57186675c780be58e7acb"
+    },
+    {
+      "path": "tools/build_fpga_handoff_bundle.py",
+      "bytes": 2269,
+      "sha256": "d727317dd71c0ea9fa970b4425e4f0a988fffbd4341981ec24559cdf7859981f"
     },
     {
       "path": "tools/build_patchcore_profile_switch_poster.py",

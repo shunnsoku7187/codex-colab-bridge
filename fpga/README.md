@@ -1,5 +1,7 @@
 # Ultra96-V2 boardless FPGA work
 
+For circuit improvement and place-and-route handoff, start with [`../docs/FPGA_HARDWARE_HANDOFF.md`](../docs/FPGA_HARDWARE_HANDOFF.md). The latest successful raw reports are in `evidence/implementation_retry_002/`.
+
 This directory is the first hardware feasibility slice for the current category-wise PatchCore-lite study. It does **not** implement the shared WideResNet50-2, feature resize/concatenation, top-k image aggregation, thresholding, or board I/O.
 
 `rtl/profiled_nn_scalar.v` accepts a preloaded signed-int8 query vector and a streamed signed-int8 bank. The control registers select bank base, point count, and dimension for one category. It computes minimum squared L2 distance for one patch. Bank storage is deliberately external to the module, so no MVTec data or weights are embedded in RTL. The implementation is scalar and is a correctness/control prototype, not the 64-lane cost model used in the paper.
