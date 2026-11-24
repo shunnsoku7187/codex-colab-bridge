@@ -21,7 +21,8 @@
 | Vivado再現Tcl | `fpga/vivado/implement_profiled_nn.tcl` |
 | 配置配線原レポート | `fpga/evidence/implementation_retry_002/` |
 | 実特徴RTLの合格ログ | `fpga/evidence/real_features_001/` |
-| 未完成の全体構成 | `fpga/BOARDLESS_GAPS.md`（古い不足記述は最新監査と合わせて読む） |
+| 未完成の全体構成 | `fpga/BOARDLESS_GAPS.md` |
+| Ultra96-V2ボード定義とPSベース | `fpga/board/AVNET_BDF_SOURCE.md`、`fpga/vivado/create_ultra96_ps_base.tcl` |
 
 `*_rtl.npz` は実画像由来の正常・欠陥各1パッチと、切り詰めていない3,000点のカテゴリbank。全15カテゴリで30パッチ。各配列は `bank`、`queries`、`expected`、`labels`、`image_indices`、`patch_indices`。画像全体・全パッチをRTLで検証した結果ではない。元画像そのものはZIP/Gitに含めていない。
 
@@ -41,7 +42,7 @@
                               （RTL未実装）
 ```
 
-FPGA候補はUltra96-V2のXCZU3EG。今回のフローは `xczu3eg-sbva484-1-e` のOOC実装。ボードピン・PS/PL・DDR・AXI・実クロックは未設計。NN用のbank容量をBRAM 0で実現したのではなく、bank自体を現回路に含めていない。
+FPGA候補はUltra96-V2のXCZU3EG。既存のOOCフローは `xczu3eg-sbva484-1-e` で実施したが、Avnetボード定義が指定する実機品番は `xczu3eg-sbva484-1-i`。OOC結果を実機品番で再評価する必要がある。Vivado 2025.2ではボード定義を使ったPSのみの設計生成と検証が通った。DPU・NN・AXI・DDRの接続、実クロック、ビットストリームは未完成。NN用のbank容量をBRAM 0で実現したのではなく、bank自体を現回路に含めていない。
 
 ## RTLのインターフェースとタイミング
 
