@@ -1,0 +1,50 @@
+{
+  "graph": "FeatureExtractor",
+  "subgraphs": [
+    {
+      "name": "subgraph_FeatureExtractor__input_0",
+      "device": "USER",
+      "outputs": [
+        {
+          "name": "FeatureExtractor__input_0_fix",
+          "dims": [
+            1,
+            224,
+            224,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "name": "subgraph_FeatureExtractor__FeatureExtractor_FeatureListNet_backbone__Conv2d_conv1__ret_3",
+      "device": "DPU",
+      "outputs": [
+        {
+          "name": "FeatureExtractor__FeatureExtractor_ret_fix",
+          "dims": [
+            1,
+            56,
+            56,
+            768
+          ]
+        }
+      ]
+    },
+    {
+      "name": "subgraph_FeatureExtractor__FeatureExtractor_ret_fix_",
+      "device": "CPU",
+      "outputs": [
+        {
+          "name": "FeatureExtractor__FeatureExtractor_ret_fix_",
+          "dims": [
+            1,
+            56,
+            56,
+            768
+          ]
+        }
+      ]
+    }
+  ]
+}

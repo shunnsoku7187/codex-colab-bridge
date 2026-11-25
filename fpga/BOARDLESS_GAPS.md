@@ -1,10 +1,12 @@
 # Boardless completion gaps
 
-Status: 2026-11-24. Target: Ultra96-V2 (`xczu3eg-sbva484-1-i`), shared CNN on a PL DPU. Source of truth for the research claim: `docs/RESEARCH_HANDOFF.md` and `results/mvtec_patchcore_kcenter_default_system_compare_002_summary.json`.
+Status: 2026-11-26. Target: Ultra96-V2 (`xczu3eg-sbva484-1-i`), shared CNN on a PL DPU. Source of truth for the research claim: `docs/RESEARCH_HANDOFF.md` and `results/mvtec_patchcore_kcenter_default_system_compare_002_summary.json`.
 
 ## Present
 
 - Vivado ML Standard 2025.2 on the Windows PC, with XCZU3EG part support.
+- Vivado/Vitis 2023.1 and Vitis AI 3.5 CPU container are installed. DPUCZDX8G B512 was synthesized alone and in a PS+DPU base design. The latter used 34,443 LUT, 42,776 registers, 72 BRAM tiles, and 134 DSP before placement; this is a capacity check.
+- A shared WideResNet50-2 feature extractor was quantized with 30 normal training images and compiled for B512 as a toolchain check. Its first compiled graph exposed only one of two needed intermediate outputs. The small calibration set does not establish detection accuracy.
 - A self-checking synthetic simulation of category bank/profile register switching and scalar signed-int8 squared-L2 nearest-neighbor search (`sim/tb_profiled_nn_scalar.v`).
 - A target-part Vivado synthesis/implementation script (`vivado/implement_profiled_nn.tcl`).
 - The scalar prototype passed out-of-context placement and routing on XCZU3EG. This is a module feasibility result, not a complete system or bitstream.
@@ -15,14 +17,14 @@ Status: 2026-11-24. Target: Ultra96-V2 (`xczu3eg-sbva484-1-i`), shared CNN on a 
 
 | Input or work | Why it is needed | Evidence required |
 |---|---|---|
-| Full-image DPU input and feature export | Git has representative patch vectors/banks, but no full MVTec images or deployable CNN weights | Source/weight hashes, preprocessing contract, layer2/layer3 outputs and all-patch test vectors |
+| Full-image DPU input and feature export | MVTec images and model weights are available outside Git, but both intermediate outputs and all-patch numerical matching remain unverified | Source/weight hashes, preprocessing contract, both layer outputs and all-patch test vectors |
 | Numeric contract | Floating-point PatchCore result cannot be assumed to survive int8 conversion | Scaling/zero-point, rounding/saturation, distance accumulator width, score aggregation, threshold rule; software-vs-hardware score/error report |
-| Shared CNN on PL DPU | The current RTL starts after feature extraction; Vivado 2025.2 is not the validated Vitis AI 3.5 DPUCZDX8G flow | Install/validate Vivado/Vitis 2023.1 plus Vitis AI 3.5, quantize/compile WideResNet50-2 feature extractor, prove supported layer outputs, integrate DPU and account for latency/resources |
+| Shared CNN on PL DPU | The RTL starts after feature extraction; B512 IP and a first compiled model passed isolated checks, but the complete data path is unproved | Resolve AXI width warnings, verify the packed feature outputs numerically, integrate DPU and NN, and account for latency/resources |
 | 64-lane or chosen parallel NN engine | Scalar prototype does not test the paper's 64-dimension/cycle estimate | Cycle-accurate RTL, randomized oracle tests, post-route timing/resource report |
 | Complete profile controller | The prototype changes base/count/dimension for one patch only | Layer/grid/top-k/threshold configuration, multi-patch image sequencing, switching between images, invalid/busy/reset behavior |
 | Memory architecture | Bank storage and bandwidth determine latency | DDR/BRAM plan, addressing/transfer RTL, stall model, bank residency and switch-cost measurement |
 | I–IV equivalent hardware comparison | Needed to support the research claim under a common implementation | Same precision, clocks, memory and category workloads; performance/area report for all four configurations |
-| Ultra96-V2 full board design | PS-only board preset now validates; no DPU, AXI datapath, NN bank storage or Linux integration | DPU+NN+PS/DDR integration, address map, board I/O constraints, DRC-clean bitstream, XSA, boot image and full-system simulation |
+| Ultra96-V2 full board design | A PS+DPU block design validates and synthesizes, but AXI width warnings remain and no NN, bank storage or Linux integration exists | Resolve interface warnings; add NN and bank storage; check address map, board I/O constraints, DRC-clean bitstream, XSA, boot image and full-system simulation |
 
 ## Board-only acceptance after hardware arrives
 

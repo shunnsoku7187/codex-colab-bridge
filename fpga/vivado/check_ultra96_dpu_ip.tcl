@@ -1,6 +1,6 @@
 set fpga_root [file normalize [file join [file dirname [info script]] ..]]
 set board_repo [file join $fpga_root board avnet]
-set dpu_repo C:/AMDDesignTools/DPUCZDX8G_ip_repo_VAI_v3.0
+set dpu_repo C:/AMDDesignTools/DPUCZDX8G_ip_repo_VAI_v3.0_ultra96_patch
 if {![file exists [file join $dpu_repo DPUCZDX8G_v4_1_0 component.xml]]} {
     error "DPU IP repository missing: $dpu_repo"
 }
@@ -16,7 +16,14 @@ if {[llength $ipdef] != 1} {
 }
 create_bd_design dpu_probe
 create_bd_cell -type ip -vlnv xilinx.com:ip:dpuczdx8g:4.1 dpu
+set_property CONFIG.ARCH 512 [get_bd_cells dpu]
 save_bd_design
-puts "ULTRA96_DPU_IP_DISCOVERY_PASS"
+close_project
+open_project [file join $out_dir ultra96_dpu_ip_check.xpr]
+open_bd_design [get_files dpu_probe.bd]
+if {[get_property CONFIG.ARCH [get_bd_cells dpu]] != 512} {
+    error "DPU architecture did not survive project reopen"
+}
+puts "ULTRA96_DPU_IP_REOPEN_PASS"
 close_project
 exit

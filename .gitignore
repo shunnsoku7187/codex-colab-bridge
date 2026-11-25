@@ -21,3 +21,7 @@ results/local_*.json
 *.tar.gz
 fpga/sim/build/
 fpga/vivado/build/
+.Xil/
+fpga/evidence/dpu_ooc_2023_1/
+fpga/evidence/ps_dpu_wrn_2023_1/*.log
+fpga/evidence/ps_dpu_wrn_2023_1/*.rpt
