@@ -27,6 +27,11 @@ if ($Force) { $arguments += ' --force' }
 $stdout = Join-Path $build 'boardless_pipeline_stdout.log'
 $stderr = Join-Path $build 'boardless_pipeline_stderr.log'
 $process = Start-Process -FilePath $python -ArgumentList $arguments -WorkingDirectory $repo -WindowStyle Hidden -RedirectStandardOutput $stdout -RedirectStandardError $stderr -PassThru
+if ($Only -eq 'full_eval') {
+    $helper = Join-Path $PSScriptRoot 'keep_awake_until_exit.py'
+    $helperArgs = '"' + $helper + '" ' + $process.Id
+    Start-Process -FilePath $python -ArgumentList $helperArgs -WorkingDirectory $repo -WindowStyle Hidden -RedirectStandardOutput (Join-Path $build 'keep_awake.log') -RedirectStandardError (Join-Path $build 'keep_awake_err.log') | Out-Null
+}
 @{
     pid = $process.Id
     started_utc = $process.StartTime.ToUniversalTime().ToString('o')
@@ -35,4 +40,5 @@ $process = Start-Process -FilePath $python -ArgumentList $arguments -WorkingDire
     only = $Only
 } | ConvertTo-Json | Set-Content -LiteralPath $pidFile -Encoding utf8
 Write-Output "Started boardless pipeline (PID $($process.Id)). The chat can now be closed."
+if ($Only -eq 'full_eval') { Write-Output 'Windows automatic sleep is inhibited while this worker runs; the display may turn off.' }
 Write-Output "Resume with: & '$PSScriptRoot\resume.ps1'"

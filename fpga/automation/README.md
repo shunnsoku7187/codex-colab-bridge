@@ -26,3 +26,5 @@ Stages currently automated: PS+DPU block design, static AXI ID/LOCK wiring check
 Phase-1 quality stages also include a source-checked 30-image good/defect pilot, a separate 20-normal-images-per-category calibration, and reevaluation on the unchanged pilot. Their success markers mean reports were produced; they are **not** detection-accuracy acceptance criteria.
 
 For the larger overnight job, start `& fpga/automation/start.ps1 -Only full_eval`. It processes the 15 categories one at a time, saves completed category results, and retries university SSH failures at 15-minute intervals for at most 10 hours. `resume.ps1` adds a one-line count of completed categories. A source/evaluation error stops the run and leaves the raw log; it is not auto-retried. The output under `C:\AMDDesignTools\Downloads\fpga_dpu_model_prep_001\quantized\full_eval_20pc` is outside Git until reviewed.
+
+The `full_eval` launcher holds a Windows system-awake request until that worker exits, without keeping the display on. This avoids ordinary idle sleep; shutting down, restarting, or manually sleeping the PC still interrupts the job.
