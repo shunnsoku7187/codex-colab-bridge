@@ -151,6 +151,7 @@ def main() -> int:
     parser.add_argument("action", choices=("plan", "status", "adopt", "run"))
     parser.add_argument("--only", choices=list(stages()))
     parser.add_argument("--force", action="store_true", help="Explicitly rerun a previously passed stage")
+    parser.add_argument("--verbose", action="store_true", help="Include log paths in status")
     args = parser.parse_args()
     names = [args.only] if args.only else list(stages())
     if args.action == "plan":
@@ -163,11 +164,13 @@ def main() -> int:
         for name in names:
             item = state.get(name, {})
             if item:
-                print(f"{name}: {item['status']}; log={item['log']}")
+                log = f"; log={item['log']}" if args.verbose and item.get("log") else ""
+                print(f"{name}: {item['status']}{log}")
             else:
                 old_log = EXISTING_LOGS[name]
                 if old_log.exists() and stages()[name]["marker"] in old_log.read_text(encoding="utf-8", errors="replace"):
-                    print(f"{name}: existing pass (outside runner); log={old_log}")
+                    log = f"; log={old_log}" if args.verbose else ""
+                    print(f"{name}: existing pass (outside runner){log}")
                 else:
                     print(f"{name}: not-run by runner")
         return 0
