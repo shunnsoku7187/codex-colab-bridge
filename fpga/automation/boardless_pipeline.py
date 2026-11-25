@@ -107,6 +107,12 @@ def stages() -> dict[str, dict]:
             "inputs": [AI / "evaluate_quantized_pilot_20pc.py", AI / "evaluate_quantized_pilot.py", AI / "evaluation_spec.json", AI / "quantize_wrn_features.py", WEIGHTS / "evaluation_pilot_1good_1defect_per_category.tar.gz", WEIGHTS / "wrn50_2_l12_timm_1.0.28.pth", QUANT / "quantize_result_packed_20pc" / "quant_info.json"],
             "log": BUILD / "pipeline_evaluation_pilot_20pc.log",
         },
+        "full_eval": {
+            "command": [sys.executable, str(ROOT / "fpga" / "automation" / "overnight_full_eval.py")],
+            "marker": "FULL_EVAL_COMPLETE",
+            "inputs": [ROOT / "fpga" / "automation" / "overnight_full_eval.py", AI / "stream_full_category_remote.py", AI / "evaluate_full_category.py", AI / "evaluate_quantized_pilot.py", AI / "evaluation_spec.json", ROOT / "results" / "patchcore_int8_preparation_001" / "profiles_and_results.json", QUANT / "quantize_result_packed_20pc" / "quant_info.json"],
+            "log": BUILD / "pipeline_full_eval.log",
+        },
         "compile": {
             "command": docker("vai_c_xir -x /out/quantize_result_packed/FeatureExtractor_int.xmodel -a /work/arch_b512_ultra96.json -o /out/compiled_packed -n wrn_l12_packed_b512"),
             "marker": "Compile done.", "inputs": [AI / "quantize_wrn_features.py", AI / "arch_b512_ultra96.json", QUANT / "quantize_result_packed" / "FeatureExtractor_int.xmodel"],

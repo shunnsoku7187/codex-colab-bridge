@@ -28,3 +28,7 @@ if (-not $running -and (Test-Path -LiteralPath $stateFile)) {
 
 & python (Join-Path $PSScriptRoot 'boardless_pipeline.py') status
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+$fullState = Join-Path $build 'full_eval_20pc_state.json'
+if (Test-Path -LiteralPath $fullState) {
+    & python (Join-Path $PSScriptRoot 'overnight_full_eval.py') status
+}

@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('bd','axi_wiring','profile_coverage','synth','route','calib','quant_test','feature_compare','calib_20pc','quant_test_20pc','evaluation_pilot','evaluation_pilot_20pc','compile')]
+    [ValidateSet('bd','axi_wiring','profile_coverage','synth','route','calib','quant_test','feature_compare','calib_20pc','quant_test_20pc','evaluation_pilot','evaluation_pilot_20pc','full_eval','compile')]
     [string]$Only,
     [switch]$Force
 )
