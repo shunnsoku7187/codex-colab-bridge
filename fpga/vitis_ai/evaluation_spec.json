@@ -1,0 +1,171 @@
+[
+  {
+    "category": "bottle",
+    "out_indices": [
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.005,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/1f5e8a42b91d6a21fca1fe20e00fd0527915e6a94883e8b7d591183f91a72423.npy",
+    "bank_raw_sha256": "056370697f95d0b1f84c5bb7c2acc4fe18763e47762ec69edd55e2ac6c519b16",
+    "frozen_threshold": 0.505228
+  },
+  {
+    "category": "cable",
+    "out_indices": [
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.05,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/9c18770cd7f411ef09e2436e8ebb80ba4d726658d17d630b3695246a677e45ca.npy",
+    "bank_raw_sha256": "91240f2eb51e740ac4f85001f41150274fa8f26bf86560ca8d00e93376436d67",
+    "frozen_threshold": 0.548398
+  },
+  {
+    "category": "capsule",
+    "out_indices": [
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.02,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/c9e8f63f5757a05210285045ef28b1337a3502f5fbfd2c2068016b245a6edbe0.npy",
+    "bank_raw_sha256": "fe62228ebee07728c18530eb5a061ba14e6cad52f375344994f21102239ad611",
+    "frozen_threshold": 0.384472
+  },
+  {
+    "category": "carpet",
+    "out_indices": [
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.005,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/532bdf9b3c16fdafcb5ddbbfcede2dbe34fb312eabbbcd28bf7f4fd2539f3ce3.npy",
+    "bank_raw_sha256": "38dbf216ad3861f06015ea84b2998ed4858621b6c04362c0cb4c410e3fca9867",
+    "frozen_threshold": 0.457331
+  },
+  {
+    "category": "grid",
+    "out_indices": [
+      1,
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.005,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/8ce88191e9af15211adc7d4ced1e1e76e9d7cf50a3e1f84659eb210472945763.npy",
+    "bank_raw_sha256": "8ec87ea22efac040da15f5b989e1a837ba6d7c2c57a85c54d2bb71a1bf0228c2",
+    "frozen_threshold": 0.415857
+  },
+  {
+    "category": "hazelnut",
+    "out_indices": [
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.005,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/da365eb115253e974f682e6cf507e211668c39d5393224dca172e1db39f2cca3.npy",
+    "bank_raw_sha256": "78c3646553bdb874ca6a287c5f85982d447bf42847242f43732af18700c5d1d0",
+    "frozen_threshold": 0.640482
+  },
+  {
+    "category": "leather",
+    "out_indices": [
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.005,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/ffc1a93d342a71cb5f6fdf3133ebc317b040634c107d956fad4e6931955c40e7.npy",
+    "bank_raw_sha256": "8648a01368bea73fb2b387a0cedf1239ef3377026e235349b407bd278fa57a1b",
+    "frozen_threshold": 0.452699
+  },
+  {
+    "category": "metal_nut",
+    "out_indices": [
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.005,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/cd6e8fb5182ea3d7fd95222d35c0c268feab940ba36a88da14c1040fa80c2a54.npy",
+    "bank_raw_sha256": "5f8068cb47ca677177f102bcd9b233ec16325d250dd80983dabb7afbd5888dba",
+    "frozen_threshold": 0.59821
+  },
+  {
+    "category": "pill",
+    "out_indices": [
+      1,
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.01,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/6ed00d8946eb74dc37854f5ea4362e881215786582709f0bcbd2e6be2b93c562.npy",
+    "bank_raw_sha256": "e15f6941f34e6bc02626464de74904aec46f86b6c562da19850ad09531e6e888",
+    "frozen_threshold": 0.433991
+  },
+  {
+    "category": "screw",
+    "out_indices": [
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.01,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/96e741707a8b026746096cb218b7e73a517c6e3f850066632a4bb0ef6516137d.npy",
+    "bank_raw_sha256": "1b78a5e7dc011204bd2a6eab313bfa80487a784a0fae42ce3e23b1b158ce6c75",
+    "frozen_threshold": 0.491996
+  },
+  {
+    "category": "tile",
+    "out_indices": [
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.005,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/862690205aeb7848c1c7be3551e48e9d0e4198fd37bdf48e1d3430f5da7200e5.npy",
+    "bank_raw_sha256": "80b250612a04d02bcd58ce1483dca094350718ff942689e1d91f47b28d9ba120",
+    "frozen_threshold": 0.561533
+  },
+  {
+    "category": "toothbrush",
+    "out_indices": [
+      1,
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.05,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/acf15fb25b4dfe9fd55449f0eb5cb73d92ab814006fa4508918252e0bd1d76ed.npy",
+    "bank_raw_sha256": "b0b88baedae0aa4bc3cd046a32190161b58ea58ca40feeb9d3bd6066dcf5be87",
+    "frozen_threshold": 0.386632
+  },
+  {
+    "category": "transistor",
+    "out_indices": [
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.01,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/4992fdca098941a6a765423dacf5d5f8eb910335073b599451999279b6bfc812.npy",
+    "bank_raw_sha256": "0d7948949d031e52ca620267d7a7ffe690c02bf831ea5d94a672a346bc6ce56f",
+    "frozen_threshold": 0.535599
+  },
+  {
+    "category": "wood",
+    "out_indices": [
+      1,
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.01,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/b790e7577ccf1a2fe9c5278cdb170000ce777082b649519899a1fd62fef7e960.npy",
+    "bank_raw_sha256": "8623f04ab3c523cfc9b1b314d8e9fede766905b204c1dd06a097286e2bda5b4f",
+    "frozen_threshold": 0.480103
+  },
+  {
+    "category": "zipper",
+    "out_indices": [
+      2
+    ],
+    "patch_grid": 14,
+    "topk_fraction": 0.005,
+    "bank_source": "/home/shunya/codex-gpu-work/data/patchcore_publication_assets_001/banks/77933c1a573d99c9f55ff16c636186d599be24b5c73ff17b11f597318234ad84.npy",
+    "bank_raw_sha256": "81410b62f84f6d1a33802fe654874933262aa0baa9764b8e7ffde6f647775573",
+    "frozen_threshold": 0.434369
+  }
+]

@@ -22,3 +22,5 @@ To leave the chat while a tool job continues, use the detached launcher:
 The existing successful runs on this PC were recorded with `adopt`, so the first `run` now skips them. `adopt` reads previously completed logs; it does not execute the tools. The state file is local evidence, not a Git artifact. For a concise update, use `status` once after the job finishes. There is no need for chat-side polling.
 
 Stages currently automated: PS+DPU block design, static AXI ID/LOCK wiring check, selected-profile coverage, synthesis, route, CNN calibration, quantized model export, 15-image feature-drift report, and DPU compilation. The script does **not** claim AXI transaction correctness, numerical PatchCore accuracy, or a full-image decision simulation. Those require additional implementations and test oracles before they can be added as passing stages.
+
+Phase-1 quality stages also include a source-checked 30-image good/defect pilot, a separate 20-normal-images-per-category calibration, and reevaluation on the unchanged pilot. Their success markers mean reports were produced; they are **not** detection-accuracy acceptance criteria.

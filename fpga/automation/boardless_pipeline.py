@@ -83,6 +83,30 @@ def stages() -> dict[str, dict]:
             "inputs": [AI / "compare_quant_features.py", AI / "quantize_wrn_features.py", WEIGHTS / "wrn50_2_l12_timm_1.0.28.pth", WEIGHTS / "calibration_train_good_2percategory.tar.gz", QUANT / "quantize_result_packed" / "quant_info.json"],
             "log": BUILD / "pipeline_feature_compare.log",
         },
+        "calib_20pc": {
+            "command": docker("python /work/quantize_wrn_20pc.py --mode calib"),
+            "marker": "WRN_20PC_CALIB_PASS",
+            "inputs": [AI / "quantize_wrn_20pc.py", AI / "quantize_wrn_features.py", AI / "Dockerfile", WEIGHTS / "wrn50_2_l12_timm_1.0.28.pth", WEIGHTS / "calibration_train_good_20percategory.tar.gz"],
+            "log": BUILD / "pipeline_calib_20pc.log",
+        },
+        "quant_test_20pc": {
+            "command": docker("python /work/quantize_wrn_20pc.py --mode test"),
+            "marker": "WRN_20PC_TEST_PASS",
+            "inputs": [AI / "quantize_wrn_20pc.py", AI / "quantize_wrn_features.py", QUANT / "quantize_result_packed_20pc" / "quant_info.json"],
+            "log": BUILD / "pipeline_quant_test_20pc.log",
+        },
+        "evaluation_pilot": {
+            "command": docker("python /work/evaluate_quantized_pilot.py"),
+            "marker": "EVALUATION_PILOT_REPORT_PASS",
+            "inputs": [AI / "evaluate_quantized_pilot.py", AI / "evaluation_spec.json", AI / "quantize_wrn_features.py", WEIGHTS / "evaluation_pilot_1good_1defect_per_category.tar.gz", WEIGHTS / "wrn50_2_l12_timm_1.0.28.pth", QUANT / "quantize_result_packed" / "quant_info.json"],
+            "log": BUILD / "pipeline_evaluation_pilot.log",
+        },
+        "evaluation_pilot_20pc": {
+            "command": docker("python /work/evaluate_quantized_pilot_20pc.py"),
+            "marker": "EVALUATION_PILOT_REPORT_PASS",
+            "inputs": [AI / "evaluate_quantized_pilot_20pc.py", AI / "evaluate_quantized_pilot.py", AI / "evaluation_spec.json", AI / "quantize_wrn_features.py", WEIGHTS / "evaluation_pilot_1good_1defect_per_category.tar.gz", WEIGHTS / "wrn50_2_l12_timm_1.0.28.pth", QUANT / "quantize_result_packed_20pc" / "quant_info.json"],
+            "log": BUILD / "pipeline_evaluation_pilot_20pc.log",
+        },
         "compile": {
             "command": docker("vai_c_xir -x /out/quantize_result_packed/FeatureExtractor_int.xmodel -a /work/arch_b512_ultra96.json -o /out/compiled_packed -n wrn_l12_packed_b512"),
             "marker": "Compile done.", "inputs": [AI / "quantize_wrn_features.py", AI / "arch_b512_ultra96.json", QUANT / "quantize_result_packed" / "FeatureExtractor_int.xmodel"],
@@ -95,7 +119,9 @@ def digest(paths: list[Path]) -> str:
     h = hashlib.sha256()
     for path in paths:
         h.update(str(path).encode())
-        h.update(path.read_bytes())
+        with path.open("rb") as source:
+            for block in iter(lambda: source.read(1024 * 1024), b""):
+                h.update(block)
     return h.hexdigest()
 
 
@@ -149,9 +175,9 @@ def adopt(names: list[str]) -> int:
     state = read_state()
     for name in names:
         item = stages()[name]
-        old_log = EXISTING_LOGS[name]
+        old_log = EXISTING_LOGS.get(name)
         missing = [path for path in item["inputs"] if not path.exists()]
-        if missing or not old_log.exists():
+        if missing or old_log is None or not old_log.exists():
             print(f"{name}: NOT ADOPTED (missing input or log)")
             continue
         output = old_log.read_text(encoding="utf-8", errors="replace")
@@ -185,8 +211,8 @@ def main() -> int:
                 log = f"; log={item['log']}" if args.verbose and item.get("log") else ""
                 print(f"{name}: {item['status']}{log}")
             else:
-                old_log = EXISTING_LOGS[name]
-                if old_log.exists() and stages()[name]["marker"] in old_log.read_text(encoding="utf-8", errors="replace"):
+                old_log = EXISTING_LOGS.get(name)
+                if old_log is not None and old_log.exists() and stages()[name]["marker"] in old_log.read_text(encoding="utf-8", errors="replace"):
                     log = f"; log={old_log}" if args.verbose else ""
                     print(f"{name}: existing pass (outside runner){log}")
                 else:
