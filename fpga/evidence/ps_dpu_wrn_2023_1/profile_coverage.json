@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "1+2": 4,
+    "2": 11
+  },
+  "packed_output": "56x56x768: first 256 channels index 1; remaining 512 channels index 2",
+  "invalid_categories": [],
+  "scope": "profile layer/grid/dimension coverage only; feature values and scoring are not checked"
+}

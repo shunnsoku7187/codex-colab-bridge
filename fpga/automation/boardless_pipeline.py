@@ -59,6 +59,12 @@ def stages() -> dict[str, dict]:
             "inputs": [ROOT / "fpga" / "automation" / "check_axi_wiring.py", BUILD / "ultra96_ps_dpu_base_2023_1" / "ultra96_ps_dpu_base.gen" / "sources_1" / "bd" / "system" / "synth" / "system.v", BUILD / ("pipeline_bd.log" if (BUILD / "pipeline_bd.log").exists() else "ps_dpu_rebuild_2023_1.log")],
             "log": BUILD / "pipeline_axi_wiring.log",
         },
+        "profile_coverage": {
+            "command": [sys.executable, str(ROOT / "fpga" / "automation" / "check_profile_coverage.py")],
+            "marker": "PROFILE_COVERAGE_PASS",
+            "inputs": [ROOT / "fpga" / "automation" / "check_profile_coverage.py", ROOT / "results" / "patchcore_int8_preparation_001" / "profiles_and_results.json"],
+            "log": BUILD / "pipeline_profile_coverage.log",
+        },
         "synth": vivado("synth", "synth_ultra96_ps_dpu_base.tcl", "ULTRA96_PS_DPU_SYNTH_PASS", ["create_ultra96_ps_dpu_base.tcl", "synth_ultra96_ps_dpu_base.tcl"]),
         "route": vivado("route", "route_ultra96_ps_dpu_base.tcl", "ULTRA96_PS_DPU_ROUTE_PASS", ["create_ultra96_ps_dpu_base.tcl", "synth_ultra96_ps_dpu_base.tcl", "route_ultra96_ps_dpu_base.tcl"]),
         "calib": {

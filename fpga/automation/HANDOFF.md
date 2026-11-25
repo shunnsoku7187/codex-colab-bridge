@@ -7,5 +7,6 @@ At the start of a new chat or after a break, run `fpga\automation\resume.ps1` on
 Current verified milestones (2026-11-26): PS+DPU block design, synthesis, and route completed; route WNS +4.706 ns. Packed WRN feature model compiled for B512 with one DPU subgraph and a 56x56x768 output. AXI width warnings and 98 warning-level DRC findings remain. NN and memory-bank integration, feature numerical equivalence, and full-image PatchCore decision simulation are incomplete.
 
 The next run added a static AXI ID/LOCK wiring check (five assertions passed, USER and transaction behavior unresolved) and a 15-normal-image float/quantized feature comparison. Lowest cosine similarity was 0.9369 for layer 1 and 0.8442 for layer 2; these are not accuracy acceptance results. See `fpga/evidence/ps_dpu_wrn_2023_1/` for concise JSON results. The pipeline now covers eight stages.
+The selected profile contract was also checked: 11 categories use layer index 2 alone and four use indices 1+2, all on grid 14; the packed output contains both. The pipeline now covers nine stages.
 
 If a new long tool job is needed, start it through `fpga\automation\start.ps1` and close the chat if desired. On return, use `resume.ps1` once. Keep new checks as scripts with a small pass/fail state and raw local logs, then update the Git status documents. Do not poll a long-running tool continuously.

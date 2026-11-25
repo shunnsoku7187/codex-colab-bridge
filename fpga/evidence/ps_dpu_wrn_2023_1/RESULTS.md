@@ -10,6 +10,7 @@ Target: Vivado/Vitis 2023.1, Vitis AI 3.5, Ultra96-V2 `xczu3eg-sbva484-1-i`, DPU
 - Quantized xmodel SHA256: `337C71FF19FCD9666F0A580395BF6D556BD27CCC9AE29B7E9D5AACA25C1EB6F5`. Compiled xmodel SHA256: `1E618D0C5FD9E2B3C111C7B096AC5A74D3E34D38658F2E7237B72978ABA5AA17`. Large binaries are kept outside Git under `C:\AMDDesignTools\Downloads\fpga_dpu_model_prep_001\quantized`.
 - A generated-HDL structural check passed five ID/LOCK wiring assertions. The instruction response IDs and control lock bits are zero-extended; the data IDs are padded into the interconnect. Eight unique width warnings and four unique USER-width warnings remain (`axi_wiring_check.json`). This does not prove AXI transaction behavior.
 - On 15 normal training images (one per category), float versus quantized feature comparison produced lowest cosine similarity 0.9369 for layer 1 and 0.8442 for expanded layer 2. Mean absolute errors were 0.5962 and 0.7040 respectively (`feature_compare_15_normal.json`). These are descriptive results, not pass thresholds or detection accuracy.
+- All 15 selected research profiles are covered by the packed layer output: 11 use only index 2 (512 dimensions), and four use indices 1+2 (768 dimensions), all on grid 14 (`profile_coverage.json`). This checks channel availability, not score equivalence.
 
 ## Open before a complete boardless system claim
 
