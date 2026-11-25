@@ -1,0 +1,17 @@
+{
+  "scope": "generated HDL ID and LOCK mapping only; no AXI transaction proof",
+  "checks": {
+    "instruction_read_id_zero_extended": true,
+    "instruction_write_id_zero_extended": true,
+    "control_read_lock_zero_extended": true,
+    "control_write_lock_zero_extended": true,
+    "data_ids_padded_into_xbar": true
+  },
+  "unique_width_warnings": 8,
+  "unique_user_width_warnings": 4,
+  "unresolved": [
+    "AXI USER propagation",
+    "overlapping-read/write response simulation",
+    "DPU runtime"
+  ]
+}

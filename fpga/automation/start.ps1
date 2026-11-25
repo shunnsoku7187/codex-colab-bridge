@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('bd','synth','route','calib','quant_test','compile')]
+    [ValidateSet('bd','axi_wiring','synth','route','calib','quant_test','feature_compare','compile')]
     [string]$Only,
     [switch]$Force
 )
@@ -14,7 +14,7 @@ New-Item -ItemType Directory -Force -Path $build | Out-Null
 if (Test-Path -LiteralPath $pidFile) {
     $record = Get-Content -LiteralPath $pidFile -Raw | ConvertFrom-Json
     $old = Get-Process -Id $record.pid -ErrorAction SilentlyContinue
-    if ($old -and $old.StartTime.ToUniversalTime().ToString('o') -eq $record.started_utc) {
+    if ($old -and [math]::Abs(($old.StartTime.ToUniversalTime() - ([datetime]$record.started_utc).ToUniversalTime()).TotalSeconds) -lt 1) {
         throw "Pipeline is already running (PID $($record.pid)). Use resume.ps1 to check it."
     }
 }

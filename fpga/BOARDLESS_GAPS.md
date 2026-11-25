@@ -7,6 +7,8 @@ Status: 2026-11-26. Target: Ultra96-V2 (`xczu3eg-sbva484-1-i`), shared CNN on a 
 - Vivado ML Standard 2025.2 on the Windows PC, with XCZU3EG part support.
 - Vivado/Vitis 2023.1 and Vitis AI 3.5 CPU container are installed. DPUCZDX8G B512 was synthesized alone and in a PS+DPU base design. The latter used 34,443 LUT, 42,776 registers, 72 BRAM tiles, and 134 DSP at synthesis. The same PS+DPU base routed with WNS +4.706 ns but 98 warning-level DRC findings; this is a component capacity/timing check, not a full-system result.
 - A shared WideResNet50-2 feature extractor was quantized with 30 normal training images and compiled for B512 as a toolchain check. Its first compiled graph exposed only one of two needed intermediate outputs. The small calibration set does not establish detection accuracy.
+- The packed-output revision exposes both feature maps. A 15-normal-image comparison found lowest float/quantized cosine similarity 0.9369 for layer 1 and 0.8442 for layer 2. These measurements expose drift; they are not detection-accuracy acceptance results.
+- Generated-HDL checks found the expected ID/LOCK zero-extension and padding at five sites. AXI USER and overlapping transaction behavior remain unverified.
 - A self-checking synthetic simulation of category bank/profile register switching and scalar signed-int8 squared-L2 nearest-neighbor search (`sim/tb_profiled_nn_scalar.v`).
 - A target-part Vivado synthesis/implementation script (`vivado/implement_profiled_nn.tcl`).
 - The scalar prototype passed out-of-context placement and routing on XCZU3EG. This is a module feasibility result, not a complete system or bitstream.

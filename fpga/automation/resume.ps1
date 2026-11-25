@@ -7,7 +7,7 @@ $running = $false
 if (Test-Path -LiteralPath $pidFile) {
     $record = Get-Content -LiteralPath $pidFile -Raw | ConvertFrom-Json
     $process = Get-Process -Id $record.pid -ErrorAction SilentlyContinue
-    if ($process -and $process.StartTime.ToUniversalTime().ToString('o') -eq $record.started_utc) {
+    if ($process -and [math]::Abs(($process.StartTime.ToUniversalTime() - ([datetime]$record.started_utc).ToUniversalTime()).TotalSeconds) -lt 1) {
         $running = $true
         Write-Output "PROCESS: running (PID $($record.pid))"
     } else {

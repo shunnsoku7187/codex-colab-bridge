@@ -53,6 +53,12 @@ def stages() -> dict[str, dict]:
 
     return {
         "bd": vivado("bd", "create_ultra96_ps_dpu_base.tcl", "ULTRA96_PS_DPU_BASE_PASS", ["create_ultra96_ps_dpu_base.tcl", "prepare_dpu_ip.ps1"]),
+        "axi_wiring": {
+            "command": [sys.executable, str(ROOT / "fpga" / "automation" / "check_axi_wiring.py")],
+            "marker": "AXI_STATIC_ID_LOCK_PASS",
+            "inputs": [ROOT / "fpga" / "automation" / "check_axi_wiring.py", BUILD / "ultra96_ps_dpu_base_2023_1" / "ultra96_ps_dpu_base.gen" / "sources_1" / "bd" / "system" / "synth" / "system.v", BUILD / ("pipeline_bd.log" if (BUILD / "pipeline_bd.log").exists() else "ps_dpu_rebuild_2023_1.log")],
+            "log": BUILD / "pipeline_axi_wiring.log",
+        },
         "synth": vivado("synth", "synth_ultra96_ps_dpu_base.tcl", "ULTRA96_PS_DPU_SYNTH_PASS", ["create_ultra96_ps_dpu_base.tcl", "synth_ultra96_ps_dpu_base.tcl"]),
         "route": vivado("route", "route_ultra96_ps_dpu_base.tcl", "ULTRA96_PS_DPU_ROUTE_PASS", ["create_ultra96_ps_dpu_base.tcl", "synth_ultra96_ps_dpu_base.tcl", "route_ultra96_ps_dpu_base.tcl"]),
         "calib": {
@@ -64,6 +70,12 @@ def stages() -> dict[str, dict]:
             "command": docker("python /work/quantize_wrn_features.py --mode test"),
             "marker": "WRN_QUANT_TEST_PASS", "inputs": [AI / "quantize_wrn_features.py", AI / "Dockerfile", QUANT / "quantize_result_packed" / "quant_info.json"],
             "log": BUILD / "pipeline_quant_test.log",
+        },
+        "feature_compare": {
+            "command": docker("python /work/compare_quant_features.py"),
+            "marker": "FEATURE_COMPARE_REPORT_PASS",
+            "inputs": [AI / "compare_quant_features.py", AI / "quantize_wrn_features.py", WEIGHTS / "wrn50_2_l12_timm_1.0.28.pth", WEIGHTS / "calibration_train_good_2percategory.tar.gz", QUANT / "quantize_result_packed" / "quant_info.json"],
+            "log": BUILD / "pipeline_feature_compare.log",
         },
         "compile": {
             "command": docker("vai_c_xir -x /out/quantize_result_packed/FeatureExtractor_int.xmodel -a /work/arch_b512_ultra96.json -o /out/compiled_packed -n wrn_l12_packed_b512"),
